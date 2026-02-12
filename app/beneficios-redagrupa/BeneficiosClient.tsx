@@ -10,19 +10,19 @@ import {
   MessageCircle,
   Lock,
   ChevronDown,
-  Heart,
-  BedDouble,
-  Stethoscope,
-  Pill,
-  ShieldAlert,
-  Smile,
   CheckCircle2,
+  Dumbbell,
+  Eye,
+  Syringe,
+  Heart,
+  Smartphone,
   Users,
+  Handshake,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import MobileMenu from "@/components/MobileMenu"
 
-export default function SegurosSaludClient() {
+export default function BeneficiosClient() {
   const scrollToForm = () => {
     document.getElementById("formulario-contacto")?.scrollIntoView({ behavior: "smooth" })
   }
@@ -114,21 +114,25 @@ export default function SegurosSaludClient() {
         <section className="py-32">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center space-y-6">
-              <h1 className="text-4xl font-bold text-[#cc0033]">Seguro Complementario de Salud</h1>
+              <p className="text-xs sm:text-sm uppercase tracking-wider text-[#666666]">
+                Eficiencia operativa y bienestar como ventaja competitiva
+              </p>
+              <h1 className="text-4xl font-bold text-[#cc0033]">
+                Beneficios de Salud para Empresas Clientes de RedAgrupa
+              </h1>
               <p className="text-base text-gray-700 leading-[1.1]">
-                El Seguro Complementario de Salud es un beneficio altamente valorado por las empresas que buscan
-                entregar una mejor protección a sus trabajadores frente a gastos médicos no cubiertos completamente
-                por el sistema previsional de salud. Este tipo de seguro cubre, en la proporción y hasta los montos
-                establecidos en la póliza, los gastos que exceden la cobertura base de Fonasa o Isapre.
+                Los Beneficios de Salud de RedAgrupa están diseñados para empresas que buscan optimizar la gestión
+                de personas, reducir tiempos administrativos y mejorar la productividad, sin aumentar la complejidad
+                operativa interna.
               </p>
               <p className="text-base text-gray-700 leading-[1.1]">
-                Para pymes y empresas medianas, el Seguro Complementario de Salud representa una herramienta
-                estratégica para fortalecer la propuesta de valor hacia sus colaboradores, mejorar la retención de
-                talento y respaldar a los equipos ante eventos de salud imprevistos.
+                Al ser clientes de RedAgrupa, las empresas acceden a una red estructurada de convenios, servicios
+                enfocados en la salud, bienestar y beneficios corporativos, orientados a impactar positivamente en
+                la continuidad operativa y el desempeño de los equipos de trabajo.
               </p>
               <div className="pt-4">
                 <Button onClick={scrollToForm} className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3">
-                  Solicitar Asesoría
+                  Conoce los Beneficios
                 </Button>
               </div>
             </div>
@@ -164,94 +168,54 @@ export default function SegurosSaludClient() {
           </div>
         </section>
 
-        {/* ¿Qué es un Seguro Complementario de Salud? */}
+        {/* Convenios y Beneficios Corporativos */}
         <section className="py-32 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto space-y-8">
+              <p className="text-xs sm:text-sm uppercase tracking-wider text-[#666666] text-center">
+                Beneficios exclusivos para empresas clientes de RedAgrupa
+              </p>
               <h2 className="text-2xl font-bold text-gray-900 text-center">
-                ¿Qué es un Seguro Complementario de Salud?
+                Convenios y Beneficios Corporativos en Salud y Bienestar
               </h2>
               <p className="text-base text-gray-700 leading-[1.1]">
-                En Chile, todas las personas cuentan por ley con un sistema de salud previsional, ya sea Fonasa o
-                Isapre, el cual cubre solo un porcentaje del costo total de las prestaciones médicas, generando un
-                copago que debe ser asumido por la persona.
+                RedAgrupa asesora e implementa convenios y beneficios corporativos en salud y bienestar, disponibles
+                para empresas de todos los tamaños y rubros, con un modelo de gestión centralizado que reduce la
+                carga administrativa para el área de Personas y Administración.
               </p>
               <p className="text-base text-gray-700 leading-[1.1]">
-                El Seguro Complementario de Salud está diseñado para cubrir total o parcialmente ese copago, de
-                acuerdo con los porcentajes, topes y condiciones definidos en la póliza contratada por la empresa,
-                reduciendo significativamente el gasto de bolsillo del trabajador.
-              </p>
-              <p className="text-base text-gray-700 leading-[1.1]">
-                Desde un punto de vista técnico, este seguro actúa como una ampliación de la cobertura del sistema
-                previsional, aplicable a distintas prestaciones médicas.
+                Estos beneficios complementan los esquemas tradicionales de compensaciones, aumentando el valor
+                percibido por los trabajadores sin requerir una gestión operativa compleja por parte de la empresa.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Coberturas */}
+        {/* Tipos de convenios */}
         <section className="py-32">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <div className="text-center space-y-4 mb-16">
-                <h2 className="text-2xl font-bold text-gray-900">
-                  Coberturas de un Seguro Complementario de Salud
-                </h2>
-                <p className="text-base text-gray-700 max-w-4xl mx-auto leading-[1.1]">
-                  Las pólizas contemplan un conjunto de coberturas orientadas a responder a las principales
-                  necesidades de salud de los trabajadores.
-                </p>
-              </div>
+              <h2 className="text-2xl font-bold text-gray-900 text-center mb-16">
+                Tipos de convenios de salud disponibles
+              </h2>
 
-              {/* Coberturas principales */}
-              <p className="text-xs sm:text-sm uppercase tracking-wider text-[#666666] mb-8 text-center">
-                Coberturas principales
-              </p>
-              <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8 mb-16">
-                <div className="text-center space-y-3">
-                  <Heart className="w-12 h-12 text-[#cc0033] mx-auto" strokeWidth={1.5} />
-                  <h3 className="text-lg font-semibold text-gray-900 leading-snug">Vida</h3>
-                </div>
-                <div className="text-center space-y-3">
-                  <BedDouble className="w-12 h-12 text-[#cc0033] mx-auto" strokeWidth={1.5} />
-                  <h3 className="text-lg font-semibold text-gray-900 leading-snug">Hospitalización</h3>
-                  <p className="text-sm text-gray-600 leading-snug">
-                    Incluyendo cirugías y estadías clínicas
-                  </p>
-                </div>
-                <div className="text-center space-y-3">
-                  <Stethoscope className="w-12 h-12 text-[#cc0033] mx-auto" strokeWidth={1.5} />
-                  <h3 className="text-lg font-semibold text-gray-900 leading-snug">Atención ambulatoria</h3>
-                  <p className="text-sm text-gray-600 leading-snug">
-                    Consultas médicas, exámenes y procedimientos
-                  </p>
-                </div>
-                <div className="text-center space-y-3">
-                  <Pill className="w-12 h-12 text-[#cc0033] mx-auto" strokeWidth={1.5} />
-                  <h3 className="text-lg font-semibold text-gray-900 leading-snug">Medicamentos</h3>
-                  <p className="text-sm text-gray-600 leading-snug">
-                    Farmacia según receta médica
-                  </p>
-                </div>
-                <div className="text-center space-y-3">
-                  <ShieldAlert className="w-12 h-12 text-[#cc0033] mx-auto" strokeWidth={1.5} />
-                  <h3 className="text-lg font-semibold text-gray-900 leading-snug">Catastrófica</h3>
-                  <p className="text-sm text-gray-600 leading-snug">
-                    Para eventos de alto costo
-                  </p>
-                </div>
-              </div>
-
-              {/* Coberturas adicionales */}
-              <div className="border-l-4 border-[#cc0033] pl-6 max-w-4xl mx-auto">
-                <p className="text-xs sm:text-sm uppercase tracking-wider text-[#666666] mb-3">
-                  Coberturas adicionales
-                </p>
-                <div className="flex items-start gap-4">
-                  <Smile className="w-10 h-10 text-[#cc0033] flex-shrink-0 mt-1" strokeWidth={1.5} />
+              <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                <div className="space-y-4">
+                  <Dumbbell className="w-12 h-12 text-[#cc0033]" strokeWidth={1.5} />
+                  <h3 className="text-2xl font-bold text-gray-900">Convenios con gimnasios y actividad física</h3>
                   <p className="text-base text-gray-700 leading-[1.1]">
-                    De forma opcional, las pólizas pueden incorporar <strong className="text-[#cc0033]">cobertura dental</strong>,
-                    ya sea mediante redes de prestadores en convenio o bajo modalidad de libre elección con topes definidos.
+                    Acceso a convenios preferenciales con gimnasios y centros deportivos, promoviendo hábitos
+                    saludables que contribuyen a reducir licencias médicas y mejorar el rendimiento laboral.
+                  </p>
+                </div>
+
+                <div className="space-y-4">
+                  <Eye className="w-12 h-12 text-[#cc0033]" strokeWidth={1.5} />
+                  <h3 className="text-2xl font-bold text-gray-900">Operativos oftalmológicos en terreno</h3>
+                  <p className="text-base text-gray-700 leading-[1.1]">
+                    Convenios con redes oftalmológicas que operan tanto en centros externos como mediante operativos
+                    en oficinas del cliente, optimizando tiempos del trabajador y evitando ausencias prolongadas por
+                    gestiones médicas.
                   </p>
                 </div>
               </div>
@@ -259,46 +223,46 @@ export default function SegurosSaludClient() {
           </div>
         </section>
 
-        {/* Beneficios para Empresas */}
+        {/* Impacto de los convenios */}
         <section className="py-32 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-2xl font-bold text-gray-900 text-center mb-4">
-                Beneficios del Seguro Complementario de Salud para Empresas
+                Impacto de los convenios corporativos en la empresa
               </h2>
               <p className="text-base text-gray-700 leading-[1.1] text-center mb-12">
-                Contratar un Seguro Complementario de Salud permite a las empresas:
+                Implementar beneficios de salud a través de RedAgrupa permite:
               </p>
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
                   <p className="text-base text-gray-700 leading-[1.1]">
-                    Reducir el impacto financiero de gastos médicos en sus colaboradores
+                    Optimizar el tiempo de gestión del área de RRHH
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
                   <p className="text-base text-gray-700 leading-[1.1]">
-                    Mejorar el bienestar y la percepción del beneficio laboral
+                    Reducir costos indirectos asociados a ausentismo
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
                   <p className="text-base text-gray-700 leading-[1.1]">
-                    Aumentar la fidelización y retención de trabajadores
+                    Aumentar el valor del paquete de beneficios laborales
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
                   <p className="text-base text-gray-700 leading-[1.1]">
-                    Ofrecer un beneficio competitivo frente al mercado laboral
+                    Facilitar el acceso a prestaciones de salud para los equipos
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
                   <p className="text-base text-gray-700 leading-[1.1]">
-                    Ajustar coberturas y capitales a la realidad de la empresa
+                    Mejorar la percepción del empleador sin aumentar dotación administrativa
                   </p>
                 </div>
               </div>
@@ -306,20 +270,168 @@ export default function SegurosSaludClient() {
           </div>
         </section>
 
-        {/* Asesoría especializada */}
+        {/* Vacunación Corporativa */}
         <section className="py-32">
           <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center space-y-4 mb-16">
+                <p className="text-xs sm:text-sm uppercase tracking-wider text-[#666666]">
+                  Salud preventiva orientada a continuidad operativa
+                </p>
+                <h2 className="text-2xl font-bold text-gray-900">
+                  Coordinación de Vacunación para Empresas
+                </h2>
+                <p className="text-base text-gray-700 leading-[1.1] max-w-3xl mx-auto">
+                  RedAgrupa coordina productos y servicios de vacunación corporativa, como parte de una estrategia
+                  preventiva que busca reducir riesgos sanitarios, ausentismo y contingencias operativas. Este
+                  servicio es especialmente valorado por empresas que priorizan la planificación y la productividad
+                  de sus equipos.
+                </p>
+              </div>
+
+              <div className="border-l-4 border-[#cc0033] pl-6">
+                <p className="text-xs sm:text-sm uppercase tracking-wider text-[#666666] mb-6">
+                  Beneficios de la vacunación corporativa
+                </p>
+                <div className="space-y-5">
+                  <div className="flex items-start gap-4">
+                    <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
+                    <p className="text-base text-gray-700 leading-[1.1]">Reducción de licencias médicas</p>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
+                    <p className="text-base text-gray-700 leading-[1.1]">Prevención de contagios masivos</p>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
+                    <p className="text-base text-gray-700 leading-[1.1]">Mayor continuidad operativa</p>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
+                    <p className="text-base text-gray-700 leading-[1.1]">Mejora en la gestión de riesgos laborales</p>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
+                    <p className="text-base text-gray-700 leading-[1.1]">
+                      Ahorro de tiempo para trabajadores y equipos administrativos
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Entretención y Bienestar Familiar */}
+        <section className="py-32 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center space-y-4 mb-16">
+                <p className="text-xs sm:text-sm uppercase tracking-wider text-[#666666]">
+                  Bienestar integral con impacto en clima y productividad
+                </p>
+                <h2 className="text-2xl font-bold text-gray-900">
+                  Beneficios de Entretención y Bienestar Familiar
+                </h2>
+                <p className="text-base text-gray-700 leading-[1.1] max-w-3xl mx-auto">
+                  Como parte de los beneficios disponibles para clientes de RedAgrupa, las empresas pueden ofrecer
+                  beneficios de entretención y bienestar familiar, fortaleciendo el equilibrio entre vida laboral y
+                  personal. Este tipo de beneficios incide directamente en el compromiso, motivación y clima
+                  organizacional.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
+                  <p className="text-base text-gray-700 leading-[1.1]">Mejora del clima laboral</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
+                  <p className="text-base text-gray-700 leading-[1.1]">Aumento del compromiso del trabajador</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
+                  <p className="text-base text-gray-700 leading-[1.1]">Reducción de rotación</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
+                  <p className="text-base text-gray-700 leading-[1.1]">Mayor fidelización hacia la empresa</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
+                  <p className="text-base text-gray-700 leading-[1.1]">Alto valor percibido con bajo costo operativo</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Plataforma Digital */}
+        <section className="py-32">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center space-y-4 mb-16">
+                <p className="text-xs sm:text-sm uppercase tracking-wider text-[#666666]">
+                  Gestión simple, escalable y sin carga administrativa
+                </p>
+                <h2 className="text-2xl font-bold text-gray-900">
+                  Plataforma Digital de Beneficios para Trabajadores
+                </h2>
+                <p className="text-base text-gray-700 leading-[1.1] max-w-3xl mx-auto">
+                  Gracias a una alianza estratégica con un proveedor local, los clientes de RedAgrupa acceden a una
+                  plataforma digital de beneficios, con más de 1.500 beneficios disponibles mediante aplicación
+                  móvil. Esta solución permite a la empresa ofrecer un amplio abanico de beneficios sin necesidad de
+                  gestión interna adicional.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+                <div className="flex items-start gap-4">
+                  <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
+                  <p className="text-base text-gray-700 leading-[1.1]">
+                    Ahorro significativo de tiempo en gestión de beneficios
+                  </p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
+                  <p className="text-base text-gray-700 leading-[1.1]">
+                    Escalabilidad sin impacto en estructura interna
+                  </p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
+                  <p className="text-base text-gray-700 leading-[1.1]">
+                    Alto valor percibido por los colaboradores
+                  </p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
+                  <p className="text-base text-gray-700 leading-[1.1]">
+                    Solución transversal, independiente del tamaño de la empresa
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Final */}
+        <section className="py-32 bg-gray-50">
+          <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center space-y-6">
-              <Users className="w-12 h-12 text-[#cc0033] mx-auto" strokeWidth={1.5} />
-              <h2 className="text-2xl font-bold text-gray-900">Asesoría especializada para empresas</h2>
+              <Handshake className="w-12 h-12 text-[#cc0033] mx-auto" strokeWidth={1.5} />
+              <h2 className="text-2xl font-bold text-gray-900">
+                Beneficios de Salud gestionados por RedAgrupa
+              </h2>
               <p className="text-base text-gray-700 leading-[1.1] max-w-3xl mx-auto">
-                Cada empresa tiene necesidades distintas según su tamaño, rubro y presupuesto. Contar con asesoría
-                especializada permite diseñar una solución alineada con los objetivos del negocio y el perfil de
-                los trabajadores.
+                Centralizar los beneficios de salud y bienestar con RedAgrupa permite a la empresa enfocarse en su
+                negocio, mientras un equipo especializado gestiona la coordinación, implementación y operación de
+                estos servicios.
               </p>
               <div className="pt-4">
                 <Button onClick={scrollToForm} className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3">
-                  Recibe una propuesta para tu empresa
+                  Accede a los Beneficios para tu empresa
                 </Button>
               </div>
             </div>
@@ -425,12 +537,11 @@ export default function SegurosSaludClient() {
 
               <div className="space-y-6">
                 <h2 className="text-4xl font-bold text-white">
-                  Recibe información técnica y una propuesta adecuada para tu empresa
+                  Conoce cómo acceder a los Beneficios de Salud exclusivos para clientes de RedAgrupa
                 </h2>
                 <p className="text-base text-white/90 leading-[1.1]">
-                  Cada empresa tiene necesidades distintas según su tamaño, rubro y presupuesto. Contar con asesoría
-                  especializada permite diseñar una solución alineada con los objetivos del negocio y el perfil de
-                  los trabajadores.
+                  Optimiza tiempo, productividad y gestión de personas centralizando los beneficios de salud y
+                  bienestar de tu empresa con RedAgrupa.
                 </p>
               </div>
             </div>

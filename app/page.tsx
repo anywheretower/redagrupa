@@ -46,7 +46,13 @@ export default function HomePage() {
               href="/seguros-salud"
               className="text-white hover:text-white/80 transition-colors font-medium text-sm"
             >
-              Seguros de Salud
+              Seguro Complementario Salud
+            </Link>
+            <Link
+              href="/beneficios-redagrupa"
+              className="text-white hover:text-white/80 transition-colors font-medium text-sm"
+            >
+              Beneficios RedAgrupa
             </Link>
           </nav>
           {/* Desktop Buttons - Hidden on mobile */}

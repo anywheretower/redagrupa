@@ -1,9 +1,9 @@
 import SegurosSaludClient from "./SegurosSaludClient"
 
 export const metadata = {
-  title: "Seguro de Salud Fonasa e Isapre | RedAgrupa",
+  title: "Seguro Complementario de Salud para Empresas | RedAgrupa",
   description:
-    "Seguros de salud complementarios Fonasa e Isapre para tu empresa. Protege a tus colaboradores con coberturas dentales, médicas y complementarias.",
+    "El Seguro Complementario de Salud cubre los gastos que exceden la cobertura de Fonasa o Isapre. Asesoría especializada para pymes en Chile.",
 }
 
 export default function SegurosSaludPage() {

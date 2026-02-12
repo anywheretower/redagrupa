@@ -37,7 +37,14 @@ export default function MobileMenu() {
               className="text-white text-lg py-3 border-b border-white/20"
               onClick={() => setIsOpen(false)}
             >
-              Seguros de Salud
+              Seguro Complementario Salud
+            </Link>
+            <Link
+              href="/beneficios-redagrupa"
+              className="text-white text-lg py-3 border-b border-white/20"
+              onClick={() => setIsOpen(false)}
+            >
+              Beneficios RedAgrupa
             </Link>
             <ScrollButton
               targetId="formulario-contacto"

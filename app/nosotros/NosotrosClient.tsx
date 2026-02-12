@@ -4,9 +4,6 @@ import Image from "next/image"
 import Link from "next/link"
 import {
   UsersIcon,
-  Smile,
-  Heart,
-  Shield,
   Building2,
   Users,
   TrendingUp,
@@ -41,7 +38,10 @@ export default function NosotrosClient() {
               Nosotros
             </Link>
             <Link href="/seguros-salud" className="text-white font-medium text-sm">
-              Seguros de Salud
+              Seguro Complementario Salud
+            </Link>
+            <Link href="/beneficios-redagrupa" className="text-white font-medium text-sm">
+              Beneficios RedAgrupa
             </Link>
           </nav>
           {/* Desktop Buttons - Hidden on mobile */}
@@ -179,78 +179,6 @@ export default function NosotrosClient() {
                 <div className="text-4xl font-bold text-[#cc0033]">+1,400</div>
                 <div className="text-base text-gray-700 font-medium">Alianzas</div>
                 <div className="text-base text-gray-600 leading-[1.1]">Conforman nuestra red de convenios</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-32">
-          <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto space-y-12">
-              <div className="text-center space-y-4">
-                <h2 className="text-4xl font-bold text-gray-900">Seguro Complementario de Salud para Empresas</h2>
-                <p className="text-base text-gray-700 max-w-3xl mx-auto leading-[1.1]">
-                  RedAgrupa facilita el encontrar la mejor cobertura de seguro complementario de salud para la pequeña y
-                  mediana empresa. Simplifica la gestión de cada procedimiento de sus clientes respecto a sus reembolsos
-                  de atenciones médicas.
-                </p>
-              </div>
-
-              <div className="grid md:grid-cols-3 gap-8">
-                <div className="space-y-4">
-                  <Smile className="w-12 h-12 text-[#cc0033]" strokeWidth={1.5} />
-                  <h3 className="text-2xl font-bold text-gray-900">Seguro Dental</h3>
-                  <p className="text-base text-gray-700 leading-[1.1]">
-                    El seguro complementario dental permite a los asegurados y sus familiares disponer de una ayuda
-                    adicional para tratamientos y atenciones dentales. Generando consigo una mejor calidad de vida.
-                  </p>
-                </div>
-
-                <div className="space-y-4">
-                  <Heart className="w-12 h-12 text-[#cc0033]" strokeWidth={1.5} />
-                  <h3 className="text-2xl font-bold text-gray-900">Seguro Médico</h3>
-                  <p className="text-base text-gray-700 leading-[1.1]">
-                    Cuando los colaboradores cuentan con un seguro médico complementario, pueden sentirse tranquilos al
-                    saber que disponen de una cobertura ante enfermedades, tratamientos médicos y hospitalizaciones.
-                  </p>
-                </div>
-
-                <div className="space-y-4">
-                  <Shield className="w-12 h-12 text-[#cc0033]" strokeWidth={1.5} />
-                  <h3 className="text-2xl font-bold text-gray-900">Seguro Complementario</h3>
-                  <p className="text-base text-gray-700 leading-[1.1]">
-                    El seguro de salud complementario es la mejor manera de extender una red de ayuda a los empleados de
-                    pequeñas empresas, en las atenciones médicas ambulatorias, hospitalizaciones y medicamentos
-                    recetados.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-32 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto space-y-8">
-              <div className="text-center space-y-4">
-                <h2 className="text-4xl font-bold text-gray-900">Conoce un Ejemplo de Seguros Complementarios</h2>
-              </div>
-              <div className="space-y-6">
-                <p className="text-base text-gray-700 leading-[1.1]">
-                  En general, la mejor forma de explicar cómo funciona un seguro complementario de salud para empresas
-                  es utilizando un ejemplo práctico.
-                </p>
-                <div className="border-l-4 border-[#cc0033] pl-6 space-y-4">
-                  <h3 className="text-2xl font-bold text-gray-900">Caso: Pyme de Outsourcing</h3>
-                  <p className="text-base text-gray-700 leading-[1.1]">
-                    Gerente de una pyme de 7 personas donde el rubro es el outsourcing de encuestas telefónicas.
-                  </p>
-                  <p className="text-base text-gray-700 leading-[1.1]">
-                    <strong className="text-[#cc0033]">Solución:</strong> El seguro complementario más pertinente sería
-                    una cobertura para consultas médicas y tratamientos, considerando una actividad más bien sedentaria,
-                    ya que esto se adapta más a las condiciones y acciones del empleado según su función.
-                  </p>
-                </div>
               </div>
             </div>
           </div>
