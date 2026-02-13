@@ -18,9 +18,13 @@ import {
   Smile,
   CheckCircle2,
   Users,
+  MapPin,
+  Mail,
+  Phone,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import MobileMenu from "@/components/MobileMenu"
+import Footer from "@/components/Footer"
 
 export default function SegurosSaludClient() {
   const scrollToForm = () => {
@@ -49,6 +53,12 @@ export default function SegurosSaludClient() {
             </Link>
             <Link href="/beneficios-redagrupa" className="text-white font-medium text-sm">
               Beneficios RedAgrupa
+            </Link>
+            <Link href="/seguro-complementario-bice-pyme" className="text-white font-medium text-sm">
+              Seguro BICE Pyme
+            </Link>
+            <Link href="/seguro-complementario-bice-personas" className="text-white font-medium text-sm">
+              Seguro BICE Personas
             </Link>
           </nav>
           <div className="hidden lg:flex items-center gap-3">
@@ -416,7 +426,7 @@ export default function SegurosSaludClient() {
                   <p className="text-xs text-center text-gray-600 flex items-center justify-center gap-1">
                     <Lock className="w-3 h-3" />
                     Tus datos están 100% protegidos.{" "}
-                    <a href="#" className="text-[#cc0033] underline hover:no-underline">
+                    <a href="/politicas-de-privacidad" className="text-[#cc0033] underline hover:no-underline">
                       Ver políticas
                     </a>
                   </p>
@@ -437,47 +447,7 @@ export default function SegurosSaludClient() {
           </div>
         </section>
 
-        <footer className="bg-[#cc0033] text-white py-24">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-6xl mx-auto">
-              <div className="flex items-center justify-center md:justify-start">
-                <Image
-                  src="/images/logo-20redagrupa-3.png"
-                  alt="RedAgrupa"
-                  width={160}
-                  height={40}
-                  className="h-10 w-auto object-contain"
-                />
-              </div>
-              <div></div>
-              <div></div>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <svg className="w-5 h-5 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      fillRule="evenodd"
-                      d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  <span className="text-sm">Los Militares 5620, of 1011, Las Condes, Santiago, Chile.</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <svg className="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V14a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                  </svg>
-                  <span className="text-sm">Casilla de Reembolsos</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <svg className="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V14a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                  </svg>
-                  <span className="text-sm">+56 (22) 813 2245</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </main>
   )

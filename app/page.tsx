@@ -21,6 +21,7 @@ import {
 import ScrollButton from "@/components/ScrollButton" // Declare the ScrollButton variable before using it
 import MobileMenu from "@/components/MobileMenu" // Declare the MobileMenu variable before using it
 import ScrollHeader from "@/components/ScrollHeader" // Declare the ScrollHeader variable before using it
+import Footer from "@/components/Footer"
 
 export default function HomePage() {
   return (
@@ -53,6 +54,18 @@ export default function HomePage() {
               className="text-white hover:text-white/80 transition-colors font-medium text-sm"
             >
               Beneficios RedAgrupa
+            </Link>
+            <Link
+              href="/seguro-complementario-bice-pyme"
+              className="text-white hover:text-white/80 transition-colors font-medium text-sm"
+            >
+              Seguro BICE Pyme
+            </Link>
+            <Link
+              href="/seguro-complementario-bice-personas"
+              className="text-white hover:text-white/80 transition-colors font-medium text-sm"
+            >
+              Seguro BICE Personas
             </Link>
           </nav>
           {/* Desktop Buttons - Hidden on mobile */}
@@ -119,7 +132,7 @@ export default function HomePage() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/images/hero-redagrupa.jpeg" 
+            src="/images/hero-redagrupa.webp" 
             alt="Fondo hero" 
             fill 
             className="object-cover" 
@@ -176,7 +189,7 @@ export default function HomePage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/images/proyecto-nuevo-1-3.png"
+            src="/images/proyecto-nuevo-1-3.webp"
             alt="Chrome stopwatch on red gradient background"
             fill
             className="object-cover"
@@ -384,7 +397,7 @@ export default function HomePage() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/proyecto-nuevo-1-4.png"
+            src="/images/proyecto-nuevo-1-4.webp"
             alt="Medical equipment on red background"
             fill
             className="object-cover"
@@ -751,7 +764,7 @@ export default function HomePage() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/proyecto-nuevo-1-1.png"
+            src="/images/proyecto-nuevo-1-1.webp"
             alt="Modern laptop on red gradient background"
             fill
             className="object-cover"
@@ -889,7 +902,7 @@ export default function HomePage() {
                   </svg>
                   <span>
                     Tus datos estan 100% protegidos.{" "}
-                    <a href="#" className="underline hover:text-[#cc0033]">
+                    <a href="/politicas-de-privacidad" className="underline hover:text-[#cc0033]">
                       Ver políticas
                     </a>
                   </span>
@@ -901,46 +914,7 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#cc0033] text-white py-12 lg:py-24">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col items-center gap-8 lg:grid lg:grid-cols-4 lg:gap-12 lg:items-start">
-            {/* Column 1 - Logo only */}
-            <div className="flex justify-center lg:justify-start lg:col-span-1">
-              <Image
-                src="/images/logo-20redagrupa-3.png"
-                alt="RedAgrupa Logo"
-                width={160}
-                height={40}
-                className="h-8 w-auto"
-              />
-            </div>
-
-            {/* Column 2 - Empty (desktop only) */}
-            <div className="hidden lg:block"></div>
-
-            {/* Column 3 - Empty (desktop only) */}
-            <div className="hidden lg:block"></div>
-
-            {/* Column 4 - Contact info with icons */}
-            <div className="space-y-4 text-center lg:text-left lg:col-span-1">
-              <div className="flex items-start gap-3 justify-center lg:justify-start">
-                <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                <p className="text-sm leading-relaxed">Los Militares 5620, of 1011, Las Condes, Santiago, Chile.</p>
-              </div>
-
-              <div className="flex items-center gap-3 justify-center lg:justify-start">
-                <Mail className="w-5 h-5 flex-shrink-0" />
-                <p className="text-sm">Casilla de Reembolsos</p>
-              </div>
-
-              <div className="flex items-center gap-3 justify-center lg:justify-start">
-                <Phone className="w-5 h-5 flex-shrink-0" />
-                <p className="text-sm">+56 (22) 813 2245</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

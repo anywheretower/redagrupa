@@ -46,6 +46,20 @@ export default function MobileMenu() {
             >
               Beneficios RedAgrupa
             </Link>
+            <Link
+              href="/seguro-complementario-bice-pyme"
+              className="text-white text-lg py-3 border-b border-white/20"
+              onClick={() => setIsOpen(false)}
+            >
+              Seguro BICE Pyme
+            </Link>
+            <Link
+              href="/seguro-complementario-bice-personas"
+              className="text-white text-lg py-3 border-b border-white/20"
+              onClick={() => setIsOpen(false)}
+            >
+              Seguro BICE Personas
+            </Link>
             <ScrollButton
               targetId="formulario-contacto"
               variant="outline"
