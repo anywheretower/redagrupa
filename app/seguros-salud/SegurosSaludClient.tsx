@@ -7,7 +7,6 @@ import {
   Facebook,
   Instagram,
   Linkedin,
-  MessageCircle,
   Lock,
   ChevronDown,
   Heart,
@@ -25,6 +24,9 @@ import {
 import { Button } from "@/components/ui/button"
 import MobileMenu from "@/components/MobileMenu"
 import Footer from "@/components/Footer"
+import RevealOnScroll from "@/components/RevealOnScroll"
+import { motion } from "motion/react"
+import { staggerContainer, staggerItem } from "@/lib/animations"
 
 export default function SegurosSaludClient() {
   const scrollToForm = () => {
@@ -109,21 +111,13 @@ export default function SegurosSaludClient() {
         >
           <Linkedin className="w-4 h-4 text-white" strokeWidth={1.5} />
         </a>
-        <a
-          href="https://wa.me/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-9 h-9 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
-        >
-          <MessageCircle className="w-4 h-4 text-white" strokeWidth={1.5} />
-        </a>
       </div>
 
       <div className="pt-20">
         {/* Hero Section */}
         <section className="py-32">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center space-y-6">
+            <RevealOnScroll className="max-w-4xl mx-auto text-center space-y-6">
               <h1 className="text-4xl font-bold text-[#cc0033]">Seguro Complementario de Salud</h1>
               <p className="text-base text-gray-700 leading-[1.1]">
                 El Seguro Complementario de Salud es un beneficio altamente valorado por las empresas que buscan
@@ -141,7 +135,7 @@ export default function SegurosSaludClient() {
                   Solicitar Asesoría
                 </Button>
               </div>
-            </div>
+            </RevealOnScroll>
 
             {/* Marquee */}
             <div className="relative overflow-hidden mt-16 py-4">
@@ -177,7 +171,7 @@ export default function SegurosSaludClient() {
         {/* ¿Qué es un Seguro Complementario de Salud? */}
         <section className="py-32 bg-gray-50">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto space-y-8">
+            <RevealOnScroll className="max-w-4xl mx-auto space-y-8">
               <h2 className="text-2xl font-bold text-gray-900 text-center">
                 ¿Qué es un Seguro Complementario de Salud?
               </h2>
@@ -195,7 +189,7 @@ export default function SegurosSaludClient() {
                 Desde un punto de vista técnico, este seguro actúa como una ampliación de la cobertura del sistema
                 previsional, aplicable a distintas prestaciones médicas.
               </p>
-            </div>
+            </RevealOnScroll>
           </div>
         </section>
 
@@ -203,7 +197,7 @@ export default function SegurosSaludClient() {
         <section className="py-32">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <div className="text-center space-y-4 mb-16">
+              <RevealOnScroll className="text-center space-y-4 mb-16">
                 <h2 className="text-2xl font-bold text-gray-900">
                   Coberturas de un Seguro Complementario de Salud
                 </h2>
@@ -211,46 +205,46 @@ export default function SegurosSaludClient() {
                   Las pólizas contemplan un conjunto de coberturas orientadas a responder a las principales
                   necesidades de salud de los trabajadores.
                 </p>
-              </div>
+              </RevealOnScroll>
 
               {/* Coberturas principales */}
               <p className="text-xs sm:text-sm uppercase tracking-wider text-[#666666] mb-8 text-center">
                 Coberturas principales
               </p>
-              <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8 mb-16">
-                <div className="text-center space-y-3">
+              <motion.div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8 mb-16" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={staggerContainer}>
+                <motion.div variants={staggerItem} className="text-center space-y-3">
                   <Heart className="w-12 h-12 text-[#cc0033] mx-auto" strokeWidth={1.5} />
                   <h3 className="text-lg font-semibold text-gray-900 leading-snug">Vida</h3>
-                </div>
-                <div className="text-center space-y-3">
+                </motion.div>
+                <motion.div variants={staggerItem} className="text-center space-y-3">
                   <BedDouble className="w-12 h-12 text-[#cc0033] mx-auto" strokeWidth={1.5} />
                   <h3 className="text-lg font-semibold text-gray-900 leading-snug">Hospitalización</h3>
                   <p className="text-sm text-gray-600 leading-snug">
                     Incluyendo cirugías y estadías clínicas
                   </p>
-                </div>
-                <div className="text-center space-y-3">
+                </motion.div>
+                <motion.div variants={staggerItem} className="text-center space-y-3">
                   <Stethoscope className="w-12 h-12 text-[#cc0033] mx-auto" strokeWidth={1.5} />
                   <h3 className="text-lg font-semibold text-gray-900 leading-snug">Atención ambulatoria</h3>
                   <p className="text-sm text-gray-600 leading-snug">
                     Consultas médicas, exámenes y procedimientos
                   </p>
-                </div>
-                <div className="text-center space-y-3">
+                </motion.div>
+                <motion.div variants={staggerItem} className="text-center space-y-3">
                   <Pill className="w-12 h-12 text-[#cc0033] mx-auto" strokeWidth={1.5} />
                   <h3 className="text-lg font-semibold text-gray-900 leading-snug">Medicamentos</h3>
                   <p className="text-sm text-gray-600 leading-snug">
                     Farmacia según receta médica
                   </p>
-                </div>
-                <div className="text-center space-y-3">
+                </motion.div>
+                <motion.div variants={staggerItem} className="text-center space-y-3">
                   <ShieldAlert className="w-12 h-12 text-[#cc0033] mx-auto" strokeWidth={1.5} />
                   <h3 className="text-lg font-semibold text-gray-900 leading-snug">Catastrófica</h3>
                   <p className="text-sm text-gray-600 leading-snug">
                     Para eventos de alto costo
                   </p>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
 
               {/* Coberturas adicionales */}
               <div className="border-l-4 border-[#cc0033] pl-6 max-w-4xl mx-auto">
@@ -273,14 +267,16 @@ export default function SegurosSaludClient() {
         <section className="py-32 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl font-bold text-gray-900 text-center mb-4">
-                Beneficios del Seguro Complementario de Salud para Empresas
-              </h2>
-              <p className="text-base text-gray-700 leading-[1.1] text-center mb-12">
-                Contratar un Seguro Complementario de Salud permite a las empresas:
-              </p>
+              <RevealOnScroll>
+                <h2 className="text-2xl font-bold text-gray-900 text-center mb-4">
+                  Beneficios del Seguro Complementario de Salud para Empresas
+                </h2>
+                <p className="text-base text-gray-700 leading-[1.1] text-center mb-12">
+                  Contratar un Seguro Complementario de Salud permite a las empresas:
+                </p>
+              </RevealOnScroll>
 
-              <div className="space-y-6">
+              <RevealOnScroll className="space-y-6">
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
                   <p className="text-base text-gray-700 leading-[1.1]">
@@ -311,7 +307,7 @@ export default function SegurosSaludClient() {
                     Ajustar coberturas y capitales a la realidad de la empresa
                   </p>
                 </div>
-              </div>
+              </RevealOnScroll>
             </div>
           </div>
         </section>
@@ -319,7 +315,7 @@ export default function SegurosSaludClient() {
         {/* Asesoría especializada */}
         <section className="py-32">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center space-y-6">
+            <RevealOnScroll className="max-w-4xl mx-auto text-center space-y-6">
               <Users className="w-12 h-12 text-[#cc0033] mx-auto" strokeWidth={1.5} />
               <h2 className="text-2xl font-bold text-gray-900">Asesoría especializada para empresas</h2>
               <p className="text-base text-gray-700 leading-[1.1] max-w-3xl mx-auto">
@@ -332,7 +328,7 @@ export default function SegurosSaludClient() {
                   Recibe una propuesta para tu empresa
                 </Button>
               </div>
-            </div>
+            </RevealOnScroll>
           </div>
         </section>
 
@@ -340,7 +336,7 @@ export default function SegurosSaludClient() {
         <section className="py-32 bg-[#cc0033]" id="formulario-contacto">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto items-center">
-              <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 lg:p-8 shadow-2xl">
+              <RevealOnScroll className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 lg:p-8 shadow-2xl">
                 <h2 className="text-xl lg:text-2xl font-bold text-[#333333] text-center mb-6 leading-snug">
                   Tranquilo, sabemos cómo hacer simples los seguros complementarios, ¡Conversemos!
                 </h2>
@@ -431,7 +427,7 @@ export default function SegurosSaludClient() {
                     </a>
                   </p>
                 </form>
-              </div>
+              </RevealOnScroll>
 
               <div className="space-y-6">
                 <h2 className="text-4xl font-bold text-white">

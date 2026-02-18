@@ -7,7 +7,6 @@ import {
   Facebook,
   Instagram,
   Linkedin,
-  MessageCircle,
   Lock,
   ChevronDown,
   CheckCircle2,
@@ -25,6 +24,9 @@ import {
 import { Button } from "@/components/ui/button"
 import MobileMenu from "@/components/MobileMenu"
 import Footer from "@/components/Footer"
+import RevealOnScroll from "@/components/RevealOnScroll"
+import { motion } from "motion/react"
+import { staggerContainer, staggerItem } from "@/lib/animations"
 
 export default function BeneficiosClient() {
   const scrollToForm = () => {
@@ -109,21 +111,13 @@ export default function BeneficiosClient() {
         >
           <Linkedin className="w-4 h-4 text-white" strokeWidth={1.5} />
         </a>
-        <a
-          href="https://wa.me/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-9 h-9 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
-        >
-          <MessageCircle className="w-4 h-4 text-white" strokeWidth={1.5} />
-        </a>
       </div>
 
       <div className="pt-20">
         {/* Hero Section */}
         <section className="py-32">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center space-y-6">
+            <RevealOnScroll className="max-w-4xl mx-auto text-center space-y-6">
               <p className="text-xs sm:text-sm uppercase tracking-wider text-[#666666]">
                 Eficiencia operativa y bienestar como ventaja competitiva
               </p>
@@ -145,7 +139,7 @@ export default function BeneficiosClient() {
                   Conoce los Beneficios
                 </Button>
               </div>
-            </div>
+            </RevealOnScroll>
 
             {/* Marquee */}
             <div className="relative overflow-hidden mt-16 py-4">
@@ -181,7 +175,7 @@ export default function BeneficiosClient() {
         {/* Convenios y Beneficios Corporativos */}
         <section className="py-32 bg-gray-50">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto space-y-8">
+            <RevealOnScroll className="max-w-4xl mx-auto space-y-8">
               <p className="text-xs sm:text-sm uppercase tracking-wider text-[#666666] text-center">
                 Beneficios exclusivos para empresas clientes de RedAgrupa
               </p>
@@ -197,7 +191,7 @@ export default function BeneficiosClient() {
                 Estos beneficios complementan los esquemas tradicionales de compensaciones, aumentando el valor
                 percibido por los trabajadores sin requerir una gestión operativa compleja por parte de la empresa.
               </p>
-            </div>
+            </RevealOnScroll>
           </div>
         </section>
 
@@ -205,21 +199,23 @@ export default function BeneficiosClient() {
         <section className="py-32">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-2xl font-bold text-gray-900 text-center mb-16">
-                Tipos de convenios de salud disponibles
-              </h2>
+              <RevealOnScroll>
+                <h2 className="text-2xl font-bold text-gray-900 text-center mb-16">
+                  Tipos de convenios de salud disponibles
+                </h2>
+              </RevealOnScroll>
 
-              <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-                <div className="space-y-4">
+              <motion.div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={staggerContainer}>
+                <motion.div variants={staggerItem} className="space-y-4">
                   <Dumbbell className="w-12 h-12 text-[#cc0033]" strokeWidth={1.5} />
                   <h3 className="text-2xl font-bold text-gray-900">Convenios con gimnasios y actividad física</h3>
                   <p className="text-base text-gray-700 leading-[1.1]">
                     Acceso a convenios preferenciales con gimnasios y centros deportivos, promoviendo hábitos
                     saludables que contribuyen a reducir licencias médicas y mejorar el rendimiento laboral.
                   </p>
-                </div>
+                </motion.div>
 
-                <div className="space-y-4">
+                <motion.div variants={staggerItem} className="space-y-4">
                   <Eye className="w-12 h-12 text-[#cc0033]" strokeWidth={1.5} />
                   <h3 className="text-2xl font-bold text-gray-900">Operativos oftalmológicos en terreno</h3>
                   <p className="text-base text-gray-700 leading-[1.1]">
@@ -227,8 +223,8 @@ export default function BeneficiosClient() {
                     en oficinas del cliente, optimizando tiempos del trabajador y evitando ausencias prolongadas por
                     gestiones médicas.
                   </p>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -237,13 +233,16 @@ export default function BeneficiosClient() {
         <section className="py-32 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl font-bold text-gray-900 text-center mb-4">
-                Impacto de los convenios corporativos en la empresa
-              </h2>
-              <p className="text-base text-gray-700 leading-[1.1] text-center mb-12">
-                Implementar beneficios de salud a través de RedAgrupa permite:
-              </p>
+              <RevealOnScroll>
+                <h2 className="text-2xl font-bold text-gray-900 text-center mb-4">
+                  Impacto de los convenios corporativos en la empresa
+                </h2>
+                <p className="text-base text-gray-700 leading-[1.1] text-center mb-12">
+                  Implementar beneficios de salud a través de RedAgrupa permite:
+                </p>
+              </RevealOnScroll>
 
+              <RevealOnScroll>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
@@ -276,6 +275,7 @@ export default function BeneficiosClient() {
                   </p>
                 </div>
               </div>
+              </RevealOnScroll>
             </div>
           </div>
         </section>
@@ -284,6 +284,7 @@ export default function BeneficiosClient() {
         <section className="py-32">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
+              <RevealOnScroll>
               <div className="text-center space-y-4 mb-16">
                 <p className="text-xs sm:text-sm uppercase tracking-wider text-[#666666]">
                   Salud preventiva orientada a continuidad operativa
@@ -298,7 +299,9 @@ export default function BeneficiosClient() {
                   de sus equipos.
                 </p>
               </div>
+              </RevealOnScroll>
 
+              <RevealOnScroll>
               <div className="border-l-4 border-[#cc0033] pl-6">
                 <p className="text-xs sm:text-sm uppercase tracking-wider text-[#666666] mb-6">
                   Beneficios de la vacunación corporativa
@@ -328,6 +331,7 @@ export default function BeneficiosClient() {
                   </div>
                 </div>
               </div>
+              </RevealOnScroll>
             </div>
           </div>
         </section>
@@ -336,6 +340,7 @@ export default function BeneficiosClient() {
         <section className="py-32 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
+              <RevealOnScroll>
               <div className="text-center space-y-4 mb-16">
                 <p className="text-xs sm:text-sm uppercase tracking-wider text-[#666666]">
                   Bienestar integral con impacto en clima y productividad
@@ -350,7 +355,9 @@ export default function BeneficiosClient() {
                   organizacional.
                 </p>
               </div>
+              </RevealOnScroll>
 
+              <RevealOnScroll>
               <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
@@ -373,6 +380,7 @@ export default function BeneficiosClient() {
                   <p className="text-base text-gray-700 leading-[1.1]">Alto valor percibido con bajo costo operativo</p>
                 </div>
               </div>
+              </RevealOnScroll>
             </div>
           </div>
         </section>
@@ -381,6 +389,7 @@ export default function BeneficiosClient() {
         <section className="py-32">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
+              <RevealOnScroll>
               <div className="text-center space-y-4 mb-16">
                 <p className="text-xs sm:text-sm uppercase tracking-wider text-[#666666]">
                   Gestión simple, escalable y sin carga administrativa
@@ -395,7 +404,9 @@ export default function BeneficiosClient() {
                   gestión interna adicional.
                 </p>
               </div>
+              </RevealOnScroll>
 
+              <RevealOnScroll>
               <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
@@ -422,6 +433,7 @@ export default function BeneficiosClient() {
                   </p>
                 </div>
               </div>
+              </RevealOnScroll>
             </div>
           </div>
         </section>
@@ -429,7 +441,7 @@ export default function BeneficiosClient() {
         {/* CTA Final */}
         <section className="py-32 bg-gray-50">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center space-y-6">
+            <RevealOnScroll className="max-w-4xl mx-auto text-center space-y-6">
               <Handshake className="w-12 h-12 text-[#cc0033] mx-auto" strokeWidth={1.5} />
               <h2 className="text-2xl font-bold text-gray-900">
                 Beneficios de Salud gestionados por RedAgrupa
@@ -444,7 +456,7 @@ export default function BeneficiosClient() {
                   Accede a los Beneficios para tu empresa
                 </Button>
               </div>
-            </div>
+            </RevealOnScroll>
           </div>
         </section>
 
@@ -452,7 +464,7 @@ export default function BeneficiosClient() {
         <section className="py-32 bg-[#cc0033]" id="formulario-contacto">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto items-center">
-              <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 lg:p-8 shadow-2xl">
+              <RevealOnScroll className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 lg:p-8 shadow-2xl">
                 <h2 className="text-xl lg:text-2xl font-bold text-[#333333] text-center mb-6 leading-snug">
                   Tranquilo, sabemos cómo hacer simples los seguros complementarios, ¡Conversemos!
                 </h2>
@@ -543,7 +555,7 @@ export default function BeneficiosClient() {
                     </a>
                   </p>
                 </form>
-              </div>
+              </RevealOnScroll>
 
               <div className="space-y-6">
                 <h2 className="text-4xl font-bold text-white">

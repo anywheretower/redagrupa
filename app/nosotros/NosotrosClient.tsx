@@ -11,7 +11,6 @@ import {
   Facebook,
   Instagram,
   Linkedin,
-  MessageCircle,
   Lock,
   ChevronDown,
   MapPin,
@@ -21,6 +20,9 @@ import {
 import { Button } from "@/components/ui/button"
 import MobileMenu from "@/components/MobileMenu"
 import Footer from "@/components/Footer"
+import RevealOnScroll from "@/components/RevealOnScroll"
+import { motion } from "motion/react"
+import { staggerContainer, staggerItem } from "@/lib/animations"
 
 export default function NosotrosClient() {
   return (
@@ -101,20 +103,12 @@ export default function NosotrosClient() {
         >
           <Linkedin className="w-4 h-4 text-white" strokeWidth={1.5} />
         </a>
-        <a
-          href="https://wa.me/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-9 h-9 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
-        >
-          <MessageCircle className="w-4 h-4 text-white" strokeWidth={1.5} />
-        </a>
       </div>
 
       <div className="pt-20">
         <section className="py-32">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center space-y-6">
+            <RevealOnScroll className="max-w-4xl mx-auto text-center space-y-6">
               <h1 className="text-4xl font-bold text-[#cc0033]">
                 Seguros Complementarios de Salud para Pequeñas Empresas
               </h1>
@@ -137,13 +131,14 @@ export default function NosotrosClient() {
                   Solicitar Asesoría
                 </Button>
               </div>
-            </div>
+            </RevealOnScroll>
           </div>
         </section>
 
         <section className="bg-[#cc0033] py-32">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
+              <RevealOnScroll>
               <blockquote className="text-white space-y-6">
                 <p className="text-base leading-[1.1] italic">
                   "Hace 10 años quisimos apoyar a las micro y pequeñas empresas, como un soporte fundamental y
@@ -157,40 +152,41 @@ export default function NosotrosClient() {
                   <div className="text-white/80 text-base">Socio Fundador y Gerente General de RedAgrupa</div>
                 </footer>
               </blockquote>
+              </RevealOnScroll>
             </div>
           </div>
         </section>
 
         <section className="py-32 bg-white">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-              <div className="text-center space-y-3">
+            <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={staggerContainer}>
+              <motion.div variants={staggerItem} className="text-center space-y-3">
                 <TrendingUp className="w-12 h-12 text-[#cc0033] mx-auto" strokeWidth={1.5} />
                 <div className="text-4xl font-bold text-[#cc0033]">+10</div>
                 <div className="text-base text-gray-700 font-medium">Años de experiencia</div>
                 <div className="text-base text-gray-600 leading-[1.1]">Enfocados en las necesidades de las pymes</div>
-              </div>
-              <div className="text-center space-y-3">
+              </motion.div>
+              <motion.div variants={staggerItem} className="text-center space-y-3">
                 <Building2 className="w-12 h-12 text-[#cc0033] mx-auto" strokeWidth={1.5} />
                 <div className="text-4xl font-bold text-[#cc0033]">+300</div>
                 <div className="text-base text-gray-700 font-medium">Empresas</div>
                 <div className="text-base text-gray-600 leading-[1.1]">
                   Que confían en nuestro equipo de profesionales
                 </div>
-              </div>
-              <div className="text-center space-y-3">
+              </motion.div>
+              <motion.div variants={staggerItem} className="text-center space-y-3">
                 <Users className="w-12 h-12 text-[#cc0033] mx-auto" strokeWidth={1.5} />
                 <div className="text-4xl font-bold text-[#cc0033]">+9,000</div>
                 <div className="text-base text-gray-700 font-medium">Familias</div>
                 <div className="text-base text-gray-600 leading-[1.1]">Cubiertas en Chile y el extranjero</div>
-              </div>
-              <div className="text-center space-y-3">
+              </motion.div>
+              <motion.div variants={staggerItem} className="text-center space-y-3">
                 <HandshakeIcon className="w-12 h-12 text-[#cc0033] mx-auto" strokeWidth={1.5} />
                 <div className="text-4xl font-bold text-[#cc0033]">+1,400</div>
                 <div className="text-base text-gray-700 font-medium">Alianzas</div>
                 <div className="text-base text-gray-600 leading-[1.1]">Conforman nuestra red de convenios</div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </div>
         </section>
 
@@ -198,7 +194,7 @@ export default function NosotrosClient() {
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto items-center">
               {/* Left: Contact Form */}
-              <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 lg:p-8 shadow-2xl">
+              <RevealOnScroll className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 lg:p-8 shadow-2xl">
                 <h2 className="text-xl lg:text-2xl font-bold text-[#333333] text-center mb-6 leading-snug">
                   Tranquilo, sabemos cómo hacer simples los seguros complementarios, ¡Conversemos!
                 </h2>
@@ -294,7 +290,7 @@ export default function NosotrosClient() {
                     </a>
                   </p>
                 </form>
-              </div>
+              </RevealOnScroll>
 
               {/* Right: CTA Content */}
               <div className="space-y-6">

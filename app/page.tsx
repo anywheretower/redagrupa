@@ -16,7 +16,6 @@ import {
   Facebook,
   Instagram,
   Linkedin,
-  MessageCircle,
 } from "lucide-react"
 import ScrollButton from "@/components/ScrollButton" // Declare the ScrollButton variable before using it
 import MobileMenu from "@/components/MobileMenu" // Declare the MobileMenu variable before using it
@@ -25,6 +24,9 @@ import Footer from "@/components/Footer"
 import { useState, useEffect, useCallback } from "react"
 import useEmblaCarousel from "embla-carousel-react"
 import Autoplay from "embla-carousel-autoplay"
+import { motion } from "motion/react"
+import RevealOnScroll from "@/components/RevealOnScroll"
+import { staggerContainer, staggerItem, fadeUp } from "@/lib/animations"
 
 const problemaCards = [
   {
@@ -284,12 +286,6 @@ export default function HomePage() {
         >
           <Linkedin className="w-4 h-4 text-white" strokeWidth={1.5} />
         </Link>
-        <button
-          className="w-9 h-9 bg-[#cc0033] rounded-full flex items-center justify-center hover:bg-[#a00028] transition-colors shadow-lg cursor-not-allowed opacity-70"
-          disabled
-        >
-          <MessageCircle className="w-4 h-4 text-white" strokeWidth={1.5} />
-        </button>
       </div>
 
       {/* Hero Section */}
@@ -320,15 +316,20 @@ export default function HomePage() {
         {/* Content */}
         <div className="container mx-auto px-6 h-full relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-end lg:items-center min-h-[calc(100vh-6rem)]">
-            <div className="space-y-6 md:space-y-8 pb-10 lg:py-12 mobile-text-shadow">
-              <h1 className="text-2xl sm:text-[2rem] md:text-[2.5rem] lg:text-[3.75rem] font-normal leading-[0.95] text-balance tracking-tight">
+            <motion.div
+              className="space-y-6 md:space-y-8 pb-10 lg:py-12 mobile-text-shadow"
+              initial="hidden"
+              animate="visible"
+              variants={staggerContainer}
+            >
+              <motion.h1 variants={staggerItem} className="text-2xl sm:text-[2rem] md:text-[2.5rem] lg:text-[3.75rem] font-normal leading-[0.95] text-balance tracking-tight">
                 ¿Listo para Simplificar tus Seguros Complementarios?
-              </h1>
-              <p className="text-base sm:text-lg lg:text-xl text-white/90 leading-[1.3] max-w-2xl">
+              </motion.h1>
+              <motion.p variants={staggerItem} className="text-base sm:text-lg lg:text-xl text-white/90 leading-[1.3] max-w-2xl">
                 RedAgrupa gestiona tus seguros complementarios de salud para que tu pyme y tu equipo estén protegidos,
                 sin trámites eternos ni lenguaje técnico imposible.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 pt-2">
+              </motion.p>
+              <motion.div variants={staggerItem} className="flex flex-col sm:flex-row gap-4 pt-2">
                 <ScrollButton
                   targetId="formulario-contacto"
                   className="bg-[#cc0033] text-white hover:bg-[#a30029] px-6 sm:px-8 py-3 text-sm sm:text-base font-normal w-full sm:w-64"
@@ -342,8 +343,8 @@ export default function HomePage() {
                 >
                   Descarga Formularios
                 </ScrollButton>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
             <div className="relative hidden lg:block lg:h-[700px]">{/* Empty space to maintain layout balance */}</div>
           </div>
         </div>
@@ -392,7 +393,7 @@ export default function HomePage() {
         </div>
 
         <div className="container mx-auto px-6 relative z-10 flex-1 flex flex-col lg:justify-between mobile-text-shadow">
-          <div className="text-center max-w-3xl mx-auto pt-0 lg:pt-8 px-4">
+          <RevealOnScroll className="text-center max-w-3xl mx-auto pt-0 lg:pt-8 px-4">
             <h2 className="text-2xl sm:text-[2rem] md:text-[2.5rem] lg:text-[3.75rem] font-normal leading-[0.95] text-white mb-2 text-balance tracking-tight">
               Porque la vida no espera
             </h2>
@@ -402,7 +403,7 @@ export default function HomePage() {
             <h3 className="text-lg sm:text-xl lg:text-2xl font-bold leading-snug text-white text-balance">
               Hoy mismo te ayudamos con:
             </h3>
-          </div>
+          </RevealOnScroll>
 
           {/* Spacer for stopwatch visibility - Mobile only */}
           <div className="flex-1 min-h-[50vh] lg:hidden" />
@@ -413,8 +414,14 @@ export default function HomePage() {
             <ProblemaCarousel />
           </div>
           {/* Desktop Grid */}
-          <div className="hidden lg:grid grid-cols-3 gap-6 max-w-6xl mx-auto pb-4 mt-20">
-            <div className="p-6 space-y-3">
+          <motion.div
+            className="hidden lg:grid grid-cols-3 gap-6 max-w-6xl mx-auto pb-4 mt-20"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={staggerContainer}
+          >
+            <motion.div variants={staggerItem} className="p-6 space-y-3">
               <div className="w-10 h-10 bg-[#cc0033] rounded-lg flex items-center justify-center mb-2">
                 <FileText className="w-5 h-5 text-white" />
               </div>
@@ -425,9 +432,9 @@ export default function HomePage() {
                 Formularios, correos con la aseguradora, llamadas de colaboradores y plazos que nadie recuerda. Cada
                 reembolso o incorporación termina siendo una mini-operación administrativa dentro de tu negocio.
               </p>
-            </div>
+            </motion.div>
 
-            <div className="p-6 space-y-3">
+            <motion.div variants={staggerItem} className="p-6 space-y-3">
               <div className="w-10 h-10 bg-[#cc0033] rounded-lg flex items-center justify-center mb-2">
                 <Shield className="w-5 h-5 text-white" />
               </div>
@@ -436,9 +443,9 @@ export default function HomePage() {
                 Una urgencia médica puede transformarse en deuda familiar si nadie sabe cómo usar el seguro o qué cubre
                 realmente el plan complementario. El beneficio existe, pero no se usa a tiempo.
               </p>
-            </div>
+            </motion.div>
 
-            <div className="p-6 space-y-3">
+            <motion.div variants={staggerItem} className="p-6 space-y-3">
               <div className="w-10 h-10 bg-[#cc0033] rounded-lg flex items-center justify-center mb-2">
                 <AlertCircle className="w-5 h-5 text-white" />
               </div>
@@ -449,15 +456,15 @@ export default function HomePage() {
                 Colaboradores que sienten que 'tienen un seguro', pero no saben dónde llamar, qué papeles guardar o cómo
                 hacer un reclamo. Resultado: pagan de su bolsillo algo que la empresa ya está financiando.
               </p>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
       {/* Beneficios / Pilares Section */}
       <section className="py-16 md:py-24 bg-white">
         <div className="p-2 px-4">
-          <div className="text-center mb-12">
+          <RevealOnScroll className="text-center mb-12">
             <p className="text-xs sm:text-sm uppercase tracking-wider text-[#666666] mb-4">
               PORQUE ESTAR CUBIERTO NO BASTA… HAY QUE SENTIRSE PROTEGIDO
             </p>
@@ -476,7 +483,7 @@ export default function HomePage() {
                 Quiero simplificar mi seguro ahora
               </ScrollButton>
             </div>
-          </div>
+          </RevealOnScroll>
 
           <div className="max-w-6xl mx-auto mt-24">
             <div className="relative w-full overflow-hidden mb-4">
@@ -505,9 +512,15 @@ export default function HomePage() {
             </div>
 
             {/* Testimonials Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+            <motion.div
+              className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={staggerContainer}
+            >
               {/* Testimonio 1 - Marcela Lorenzo */}
-              <div className="flex flex-col justify-between space-y-6">
+              <motion.div variants={staggerItem} className="flex flex-col justify-between space-y-6">
                 <div>
                   <div className="text-4xl md:text-6xl text-[#cc0033] leading-none">"</div>
                   <p className="text-[#666666] text-base leading-snug mt-6">
@@ -529,10 +542,10 @@ export default function HomePage() {
                     <p className="text-sm text-[#666666]">Partner CEO en JSTL</p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
               {/* Testimonio 2 - Manuel Pamplona */}
-              <div className="flex flex-col justify-between space-y-6">
+              <motion.div variants={staggerItem} className="flex flex-col justify-between space-y-6">
                 <div>
                   <div className="text-4xl md:text-6xl text-[#cc0033] leading-none">"</div>
                   <p className="text-[#666666] text-base leading-snug mt-6">
@@ -554,10 +567,10 @@ export default function HomePage() {
                     <p className="text-sm text-[#666666]">Gerente Regional en EngMe</p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
               {/* Testimonio 3 - Roberto Allaro */}
-              <div className="flex flex-col justify-between space-y-6">
+              <motion.div variants={staggerItem} className="flex flex-col justify-between space-y-6">
                 <div>
                   <div className="text-4xl md:text-6xl text-[#cc0033] leading-none">"</div>
                   <p className="text-[#666666] text-base leading-snug mt-6">
@@ -579,8 +592,8 @@ export default function HomePage() {
                     <p className="text-sm text-[#666666]">Gerente General en SCLatam</p>
                   </div>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -628,7 +641,7 @@ export default function HomePage() {
 
         <div className="container mx-auto px-6 relative z-10 flex-1 flex flex-col lg:justify-between mobile-text-shadow">
           {/* Top content - centered */}
-          <div className="text-center max-w-3xl mx-auto pt-4 lg:pt-20">
+          <RevealOnScroll className="text-center max-w-3xl mx-auto pt-4 lg:pt-20">
             <p className="text-xs uppercase tracking-widest text-white mb-6">¿POR QUÉ REDAGRUPA?</p>
             <h2 className="text-[1.5rem] sm:text-[2rem] lg:text-[2.5rem] font-normal mb-8 leading-[0.9] text-white px-4">
               Cuando delegas bien, tu equipo gana confianza… y tú recuperas foco.
@@ -639,7 +652,7 @@ export default function HomePage() {
             >
               ¿Quieres una asesoría personalizada?
             </ScrollButton>
-          </div>
+          </RevealOnScroll>
 
           {/* Spacer for image visibility - Mobile only */}
           <div className="flex-1 min-h-[50vh] lg:hidden" />
@@ -648,8 +661,14 @@ export default function HomePage() {
           <div className="lg:hidden pb-4">
             <StatsCarousel />
           </div>
-          <div className="hidden lg:grid grid-cols-4 gap-8 max-w-6xl mx-auto pb-16">
-            <div className="pl-6 space-y-3">
+          <motion.div
+            className="hidden lg:grid grid-cols-4 gap-8 max-w-6xl mx-auto pb-16"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={staggerContainer}
+          >
+            <motion.div variants={staggerItem} className="pl-6 space-y-3">
               <div className="w-10 h-10 rounded-full bg-[#cc0033] flex items-center justify-center mb-4">
                 <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -658,8 +677,8 @@ export default function HomePage() {
               <div className="text-6xl font-bold text-white">+10</div>
               <h3 className="text-xl font-semibold text-white">Años de experiencia</h3>
               <p className="text-sm text-white leading-snug">Enfocados en las necesidades de las pymes</p>
-            </div>
-            <div className="pl-6 space-y-3">
+            </motion.div>
+            <motion.div variants={staggerItem} className="pl-6 space-y-3">
               <div className="w-10 h-10 rounded-full bg-[#cc0033] flex items-center justify-center mb-4">
                 <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -668,8 +687,8 @@ export default function HomePage() {
               <div className="text-6xl font-bold text-white">+300</div>
               <h3 className="text-xl font-semibold text-white">Empresas</h3>
               <p className="text-sm text-white leading-snug">Que confían en nuestro equipo de profesionales</p>
-            </div>
-            <div className="pl-6 space-y-3">
+            </motion.div>
+            <motion.div variants={staggerItem} className="pl-6 space-y-3">
               <div className="w-10 h-10 rounded-full bg-[#cc0033] flex items-center justify-center mb-4">
                 <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -678,8 +697,8 @@ export default function HomePage() {
               <div className="text-6xl font-bold text-white">+9,000</div>
               <h3 className="text-xl font-semibold text-white">Familias</h3>
               <p className="text-sm text-white leading-snug">Cubiertas en Chile y el extranjero</p>
-            </div>
-            <div className="pl-6 space-y-3">
+            </motion.div>
+            <motion.div variants={staggerItem} className="pl-6 space-y-3">
               <div className="w-10 h-10 rounded-full bg-[#cc0033] flex items-center justify-center mb-4">
                 <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -688,23 +707,29 @@ export default function HomePage() {
               <div className="text-6xl font-bold text-white">+1,400</div>
               <h3 className="text-xl font-semibold text-white">Alianzas</h3>
               <p className="text-sm text-white leading-snug">Conforman nuestra red de convenios</p>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
       {/* Todos los Seguros Section */}
       <section id="seccion-aseguradoras" className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-8 md:mb-12">
+          <RevealOnScroll className="text-center mb-8 md:mb-12">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight text-[#cc0033] px-4">
               Formularios de reembolso e incorporación.
             </h2>
-          </div>
+          </RevealOnScroll>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
+          <motion.div
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            variants={staggerContainer}
+          >
             {/* Bupa */}
-            <div className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
+            <motion.div variants={staggerItem} className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
               <Image
                 src="/images/bupa.png"
                 alt="Seguros Bupa"
@@ -727,10 +752,10 @@ export default function HomePage() {
                   <span>Reembolso de salud</span>
                 </a>
               </div>
-            </div>
+            </motion.div>
 
             {/* Bice Vida */}
-            <div className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
+            <motion.div variants={staggerItem} className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
               <Image
                 src="/images/logo-bicevida-e1674133440155.png"
                 alt="Bice Vida"
@@ -753,10 +778,10 @@ export default function HomePage() {
                   <span>Reembolso de salud</span>
                 </a>
               </div>
-            </div>
+            </motion.div>
 
             {/* Sura */}
-            <div className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
+            <motion.div variants={staggerItem} className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
               <Image
                 src="/images/sura-seguros300-e1674133176152.png"
                 alt="Seguros Sura"
@@ -779,10 +804,10 @@ export default function HomePage() {
                   <span>Reembolso de salud</span>
                 </a>
               </div>
-            </div>
+            </motion.div>
 
             {/* Consorcio */}
-            <div className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
+            <motion.div variants={staggerItem} className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
               <Image
                 src="/images/consorcio300-e1674133353916.png"
                 alt="Consorcio"
@@ -805,10 +830,10 @@ export default function HomePage() {
                   <span>Reembolso de salud</span>
                 </a>
               </div>
-            </div>
+            </motion.div>
 
             {/* MetLife */}
-            <div className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
+            <motion.div variants={staggerItem} className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
               <Image
                 src="/images/metlife-logo-e1674133505895.png"
                 alt="MetLife"
@@ -831,10 +856,10 @@ export default function HomePage() {
                   <span>Reembolso de salud</span>
                 </a>
               </div>
-            </div>
+            </motion.div>
 
             {/* BCI */}
-            <div className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
+            <motion.div variants={staggerItem} className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
               <Image
                 src="/images/bci-seguros300.png"
                 alt="BCI Seguros"
@@ -857,10 +882,10 @@ export default function HomePage() {
                   <span>Reembolso de salud</span>
                 </a>
               </div>
-            </div>
+            </motion.div>
 
             {/* Vida Security */}
-            <div className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
+            <motion.div variants={staggerItem} className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
               <Image
                 src="/images/security.png"
                 alt="Vida Security"
@@ -887,10 +912,10 @@ export default function HomePage() {
                   <span>Reembolso de salud</span>
                 </a>
               </div>
-            </div>
+            </motion.div>
 
             {/* Help */}
-            <div className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
+            <motion.div variants={staggerItem} className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
               <Image
                 src="/images/logo-help1-e1674133566493.png"
                 alt="Help Seguros"
@@ -913,10 +938,10 @@ export default function HomePage() {
                   <span>Reembolso de salud</span>
                 </a>
               </div>
-            </div>
+            </motion.div>
 
             {/* Chilena Consolidada */}
-            <div className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
+            <motion.div variants={staggerItem} className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
               <Image
                 src="/images/logo-chilena-consolidada2-e1674133731697.png"
                 alt="Chilena Consolidada"
@@ -943,8 +968,8 @@ export default function HomePage() {
                   <span>Reembolso de salud</span>
                 </a>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
@@ -981,7 +1006,7 @@ export default function HomePage() {
         {/* Content */}
         <div className="container mx-auto px-4 sm:px-6 h-full relative z-10">
           <div className="flex items-center min-h-0 lg:min-h-[700px] py-12">
-            <div className="max-w-lg w-full bg-white/95 backdrop-blur-sm rounded-2xl p-5 sm:p-6 lg:p-8 shadow-2xl">
+            <RevealOnScroll className="max-w-lg w-full bg-white/95 backdrop-blur-sm rounded-2xl p-5 sm:p-6 lg:p-8 shadow-2xl">
               <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-[#333333] text-center mb-6 leading-snug">
                 Tranquilo, sabemos cómo hacer simples los seguros complementarios, ¡Conversemos!
               </h2>
@@ -1097,7 +1122,7 @@ export default function HomePage() {
                   </span>
                 </div>
               </form>
-            </div>
+            </RevealOnScroll>
           </div>
         </div>
       </section>

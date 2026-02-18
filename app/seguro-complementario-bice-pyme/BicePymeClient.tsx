@@ -7,7 +7,6 @@ import {
   Facebook,
   Instagram,
   Linkedin,
-  MessageCircle,
   Lock,
   ChevronDown,
   CheckCircle2,
@@ -19,6 +18,9 @@ import {
 import { Button } from "@/components/ui/button"
 import MobileMenu from "@/components/MobileMenu"
 import Footer from "@/components/Footer"
+import RevealOnScroll from "@/components/RevealOnScroll"
+import { motion } from "motion/react"
+import { staggerContainer, staggerItem } from "@/lib/animations"
 
 const planes = [
   {
@@ -169,30 +171,22 @@ export default function BicePymeClient() {
         >
           <Linkedin className="w-4 h-4 text-white" strokeWidth={1.5} />
         </a>
-        <a
-          href="https://wa.me/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-9 h-9 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
-        >
-          <MessageCircle className="w-4 h-4 text-white" strokeWidth={1.5} />
-        </a>
       </div>
 
       <div className="pt-20">
         {/* Hero Section */}
         <section className="py-32">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center space-y-6">
+            <RevealOnScroll className="max-w-4xl mx-auto text-center space-y-6">
               <h1 className="text-4xl font-bold text-[#cc0033]">
                 Seguro Complementario BICE Pyme
               </h1>
               <Image
                 src="/images/logo-bice-vida.avif"
                 alt="BICE Vida"
-                width={320}
-                height={80}
-                className="mx-auto h-20 w-auto object-contain"
+                width={200}
+                height={50}
+                className="mx-auto h-14 w-auto object-contain -mt-2 mb-1"
               />
               <p className="text-base text-gray-700 leading-[1.1]">
                 BICE Vida ofrece planes de seguro complementario de salud especialmente
@@ -205,13 +199,13 @@ export default function BicePymeClient() {
                 con la posibilidad de agregar coberturas opcionales dental y catastrofica.
               </p>
               <div className="pt-4">
-                <Button asChild className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3">
+                <Button asChild className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3 w-full sm:w-64">
                   <a href={CONTRATA_URL} target="_blank" rel="noopener noreferrer">
                     Contrata Aqui
                   </a>
                 </Button>
               </div>
-            </div>
+            </RevealOnScroll>
           </div>
         </section>
 
@@ -219,23 +213,26 @@ export default function BicePymeClient() {
         <section className="py-32 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <div className="text-center space-y-4 mb-16">
-                <p className="text-xs sm:text-sm uppercase tracking-wider text-[#666666]">
-                  Seguro de Salud + Seguro de Vida
-                </p>
-                <h2 className="text-2xl font-bold text-gray-900">
-                  Planes BICE Vida para Pymes
-                </h2>
-                <p className="text-base text-gray-700 max-w-3xl mx-auto leading-[1.1]">
-                  Elige el plan que mejor se adapte a las necesidades de tu empresa y tus
-                  trabajadores. Todos los precios son mensuales por trabajador, con IVA incluido.
-                </p>
-              </div>
+              <RevealOnScroll>
+                <div className="text-center space-y-4 mb-16">
+                  <p className="text-xs sm:text-sm uppercase tracking-wider text-[#666666]">
+                    Seguro de Salud + Seguro de Vida
+                  </p>
+                  <h2 className="text-2xl font-bold text-gray-900">
+                    Planes BICE Vida para Pymes
+                  </h2>
+                  <p className="text-base text-gray-700 max-w-3xl mx-auto leading-[1.1]">
+                    Elige el plan que mejor se adapte a las necesidades de tu empresa y tus
+                    trabajadores. Todos los precios son mensuales por trabajador, con IVA incluido.
+                  </p>
+                </div>
+              </RevealOnScroll>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} variants={staggerContainer}>
                 {planes.map((plan) => (
-                  <div
+                  <motion.div
                     key={plan.nombre}
+                    variants={staggerItem}
                     className={`rounded-2xl p-6 flex flex-col justify-between ${
                       plan.destacado
                         ? "bg-[#1a1a2e] text-white shadow-2xl"
@@ -369,9 +366,9 @@ export default function BicePymeClient() {
                       Contrata Aqui
                       <ExternalLink className="w-4 h-4" />
                     </a>
-                  </div>
+                  </motion.div>
                 ))}
-              </div>
+              </motion.div>
 
               <p className="text-sm text-gray-500 text-center mt-8">
                 Precios de planes con IVA incluido. Valor UF: $39.705,63 al 13/02/2026.
@@ -384,14 +381,17 @@ export default function BicePymeClient() {
         <section className="py-32">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl font-bold text-gray-900 text-center mb-4">
-                ¿Por que elegir un seguro BICE Vida para tu pyme?
-              </h2>
-              <p className="text-base text-gray-700 leading-[1.1] text-center mb-12">
-                BICE Vida es una de las aseguradoras mas reconocidas de Chile, respaldada por el
-                grupo financiero BICE. Contratar un seguro complementario con BICE Vida permite:
-              </p>
+              <RevealOnScroll>
+                <h2 className="text-2xl font-bold text-gray-900 text-center mb-4">
+                  ¿Por que elegir un seguro BICE Vida para tu pyme?
+                </h2>
+                <p className="text-base text-gray-700 leading-[1.1] text-center mb-12">
+                  BICE Vida es una de las aseguradoras mas reconocidas de Chile, respaldada por el
+                  grupo financiero BICE. Contratar un seguro complementario con BICE Vida permite:
+                </p>
+              </RevealOnScroll>
 
+              <RevealOnScroll>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
@@ -424,6 +424,7 @@ export default function BicePymeClient() {
                   </p>
                 </div>
               </div>
+              </RevealOnScroll>
             </div>
           </div>
         </section>
@@ -431,6 +432,7 @@ export default function BicePymeClient() {
         {/* CTA */}
         <section className="py-32 bg-gray-50">
           <div className="container mx-auto px-4">
+            <RevealOnScroll>
             <div className="max-w-4xl mx-auto text-center space-y-6">
               <Image
                 src="/images/logo-bice-vida.avif"
@@ -447,20 +449,21 @@ export default function BicePymeClient() {
                 para tu empresa. Proceso 100% online, rapido y sin papeleos.
               </p>
               <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3">
+                <Button asChild className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3 w-full sm:w-64">
                   <a href={CONTRATA_URL} target="_blank" rel="noopener noreferrer">
                     Contrata Aqui
                   </a>
                 </Button>
                 <Button
                   variant="outline"
-                  className="border-[#cc0033] text-[#cc0033] hover:bg-red-50 px-8 py-3"
+                  className="border-[#cc0033] text-[#cc0033] hover:bg-red-50 px-8 py-3 w-full sm:w-64"
                   onClick={scrollToForm}
                 >
                   Necesito asesoria
                 </Button>
               </div>
             </div>
+            </RevealOnScroll>
           </div>
         </section>
 
@@ -468,7 +471,7 @@ export default function BicePymeClient() {
         <section className="py-32 bg-[#cc0033]" id="formulario-contacto">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto items-center">
-              <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 lg:p-8 shadow-2xl">
+              <RevealOnScroll className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 lg:p-8 shadow-2xl">
                 <h2 className="text-xl lg:text-2xl font-bold text-[#333333] text-center mb-6 leading-snug">
                   Tranquilo, sabemos como hacer simples los seguros complementarios, ¡Conversemos!
                 </h2>
@@ -559,7 +562,7 @@ export default function BicePymeClient() {
                     </a>
                   </p>
                 </form>
-              </div>
+              </RevealOnScroll>
 
               <div className="space-y-6">
                 <h2 className="text-4xl font-bold text-white">

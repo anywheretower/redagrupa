@@ -22,12 +22,6 @@ export default function Footer() {
 
           <div className="space-y-4 text-center lg:text-left lg:col-span-1 flex flex-col items-center lg:items-start">
             <div className="flex items-center gap-3 max-w-[280px] w-full">
-              <MapPin className="w-5 h-5 flex-shrink-0" />
-              <p className="text-sm leading-relaxed text-left">
-                Los Militares 5620, of 1011, Las Condes, Santiago, Chile.
-              </p>
-            </div>
-            <div className="flex items-center gap-3 max-w-[280px] w-full">
               <Mail className="w-5 h-5 flex-shrink-0" />
               <p className="text-sm text-left">Casilla de Reembolsos</p>
             </div>
@@ -41,6 +35,12 @@ export default function Footer() {
               <BookOpen className="w-5 h-5 flex-shrink-0" />
               <span className="text-sm text-left">Blog RedAgrupa</span>
             </Link>
+            <div className="flex items-center gap-3 max-w-[280px] w-full">
+              <MapPin className="w-5 h-5 flex-shrink-0" />
+              <p className="text-sm leading-relaxed text-left">
+                Los Militares 5620, of 1011, Las Condes, Santiago, Chile.
+              </p>
+            </div>
           </div>
         </div>
       </div>

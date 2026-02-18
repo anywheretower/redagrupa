@@ -7,7 +7,6 @@ import {
   Facebook,
   Instagram,
   Linkedin,
-  MessageCircle,
   Lock,
   ChevronDown,
   CheckCircle2,
@@ -29,6 +28,9 @@ import {
 import { Button } from "@/components/ui/button"
 import MobileMenu from "@/components/MobileMenu"
 import Footer from "@/components/Footer"
+import RevealOnScroll from "@/components/RevealOnScroll"
+import { motion } from "motion/react"
+import { staggerContainer, staggerItem } from "@/lib/animations"
 
 export default function BicePersonasClient() {
   const scrollToForm = () => {
@@ -113,30 +115,22 @@ export default function BicePersonasClient() {
         >
           <Linkedin className="w-4 h-4 text-white" strokeWidth={1.5} />
         </a>
-        <a
-          href="https://wa.me/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-9 h-9 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
-        >
-          <MessageCircle className="w-4 h-4 text-white" strokeWidth={1.5} />
-        </a>
       </div>
 
       <div className="pt-20">
         {/* Hero Section */}
         <section className="py-32">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center space-y-6">
+            <RevealOnScroll className="max-w-4xl mx-auto text-center space-y-6">
               <h1 className="text-4xl font-bold text-[#cc0033]">
                 Seguro de Salud Complementario para Personas
               </h1>
               <Image
                 src="/images/logo-bice-vida.avif"
                 alt="BICE Vida"
-                width={320}
-                height={80}
-                className="mx-auto h-20 w-auto object-contain"
+                width={200}
+                height={50}
+                className="mx-auto h-14 w-auto object-contain -mt-2 mb-1"
               />
               <p className="text-base text-gray-700 leading-[1.1]">
                 Protege tu salud y la de tu familia con la seguridad y solidez de BICE Vida,
@@ -148,18 +142,20 @@ export default function BicePersonasClient() {
                 al azar, con RedAgrupa y BICE Vida te respaldamos cada dia.
               </p>
               <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3">
-                  Contrata Aqui
+                <Button asChild className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3 w-full sm:w-64">
+                  <a href="https://segurocomplementariosalud.bicevida.cl/?negocio=aEd0TFolRnQjQzY17OVzwP1NaCN6_V6AdjkZ9TXI5bnYVyiV0rM" target="_blank" rel="noopener noreferrer">
+                    Contrata Aqui
+                  </a>
                 </Button>
                 <Button
                   variant="outline"
-                  className="border-[#cc0033] text-[#cc0033] hover:bg-red-50 px-8 py-3"
+                  className="border-[#cc0033] text-[#cc0033] hover:bg-red-50 px-8 py-3 w-full sm:w-64"
                   onClick={scrollToForm}
                 >
                   Necesito asesoria
                 </Button>
               </div>
-            </div>
+            </RevealOnScroll>
           </div>
         </section>
 
@@ -167,49 +163,51 @@ export default function BicePersonasClient() {
         <section className="py-32 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <div className="text-center space-y-4 mb-16">
-                <p className="text-xs sm:text-sm uppercase tracking-wider text-[#666666]">
-                  Coberturas principales
-                </p>
-                <h2 className="text-2xl font-bold text-gray-900">
-                  ¿Que cubre este seguro de salud?
-                </h2>
-                <p className="text-base text-gray-700 max-w-3xl mx-auto leading-[1.1]">
-                  Reembolsa gastos por hospitalizacion, consultas, urgencias y medicamentos
-                  que tu Isapre o Fonasa no cubren del todo.
-                </p>
-              </div>
+              <RevealOnScroll>
+                <div className="text-center space-y-4 mb-16">
+                  <p className="text-xs sm:text-sm uppercase tracking-wider text-[#666666]">
+                    Coberturas principales
+                  </p>
+                  <h2 className="text-2xl font-bold text-gray-900">
+                    ¿Que cubre este seguro de salud?
+                  </h2>
+                  <p className="text-base text-gray-700 max-w-3xl mx-auto leading-[1.1]">
+                    Reembolsa gastos por hospitalizacion, consultas, urgencias y medicamentos
+                    que tu Isapre o Fonasa no cubren del todo.
+                  </p>
+                </div>
+              </RevealOnScroll>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
-                <div className="text-center space-y-3">
+              <motion.div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={staggerContainer}>
+                <motion.div variants={staggerItem} className="text-center space-y-3">
                   <BedDouble className="w-12 h-12 text-[#cc0033] mx-auto" strokeWidth={1.5} />
                   <h3 className="text-lg font-semibold text-gray-900 leading-snug">Hospitalizacion</h3>
                   <p className="text-sm text-gray-600 leading-snug">
                     Cobertura para cirugias, estadias clinicas y procedimientos hospitalarios
                   </p>
-                </div>
-                <div className="text-center space-y-3">
+                </motion.div>
+                <motion.div variants={staggerItem} className="text-center space-y-3">
                   <Stethoscope className="w-12 h-12 text-[#cc0033] mx-auto" strokeWidth={1.5} />
                   <h3 className="text-lg font-semibold text-gray-900 leading-snug">Consultas medicas</h3>
                   <p className="text-sm text-gray-600 leading-snug">
                     Atencion ambulatoria, consultas con especialistas y examenes
                   </p>
-                </div>
-                <div className="text-center space-y-3">
+                </motion.div>
+                <motion.div variants={staggerItem} className="text-center space-y-3">
                   <Siren className="w-12 h-12 text-[#cc0033] mx-auto" strokeWidth={1.5} />
                   <h3 className="text-lg font-semibold text-gray-900 leading-snug">Urgencias</h3>
                   <p className="text-sm text-gray-600 leading-snug">
                     Atencion de emergencia en clinicas y hospitales
                   </p>
-                </div>
-                <div className="text-center space-y-3">
+                </motion.div>
+                <motion.div variants={staggerItem} className="text-center space-y-3">
                   <Pill className="w-12 h-12 text-[#cc0033] mx-auto" strokeWidth={1.5} />
                   <h3 className="text-lg font-semibold text-gray-900 leading-snug">Medicamentos</h3>
                   <p className="text-sm text-gray-600 leading-snug">
                     Reembolso en farmacia segun receta medica
                   </p>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -218,19 +216,21 @@ export default function BicePersonasClient() {
         <section className="py-32">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <div className="text-center space-y-4 mb-16">
-                <Users className="w-12 h-12 text-[#cc0033] mx-auto" strokeWidth={1.5} />
-                <h2 className="text-2xl font-bold text-gray-900">
-                  ¿Para quien es?
-                </h2>
-                <p className="text-base text-gray-700 leading-[1.1] max-w-3xl mx-auto">
-                  Pueden acceder personas entre 18 y 64 anos, sus parejas e hijos, esten en
-                  Isapre o Fonasa. Un seguro pensado para proteger a toda tu familia.
-                </p>
-              </div>
+              <RevealOnScroll>
+                <div className="text-center space-y-4 mb-16">
+                  <Users className="w-12 h-12 text-[#cc0033] mx-auto" strokeWidth={1.5} />
+                  <h2 className="text-2xl font-bold text-gray-900">
+                    ¿Para quien es?
+                  </h2>
+                  <p className="text-base text-gray-700 leading-[1.1] max-w-3xl mx-auto">
+                    Pueden acceder personas entre 18 y 64 anos, sus parejas e hijos, esten en
+                    Isapre o Fonasa. Un seguro pensado para proteger a toda tu familia.
+                  </p>
+                </div>
+              </RevealOnScroll>
 
-              <div className="grid md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-                <div className="text-center space-y-3">
+              <motion.div className="grid md:grid-cols-3 gap-8 max-w-3xl mx-auto" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={staggerContainer}>
+                <motion.div variants={staggerItem} className="text-center space-y-3">
                   <div className="w-16 h-16 bg-[#cc0033] rounded-full flex items-center justify-center mx-auto">
                     <ShieldCheck className="w-8 h-8 text-white" strokeWidth={1.5} />
                   </div>
@@ -238,8 +238,8 @@ export default function BicePersonasClient() {
                   <p className="text-sm text-gray-600 leading-snug">
                     Personas entre 18 y 64 anos
                   </p>
-                </div>
-                <div className="text-center space-y-3">
+                </motion.div>
+                <motion.div variants={staggerItem} className="text-center space-y-3">
                   <div className="w-16 h-16 bg-[#cc0033] rounded-full flex items-center justify-center mx-auto">
                     <Heart className="w-8 h-8 text-white" strokeWidth={1.5} />
                   </div>
@@ -247,8 +247,8 @@ export default function BicePersonasClient() {
                   <p className="text-sm text-gray-600 leading-snug">
                     Conyuges o convivientes
                   </p>
-                </div>
-                <div className="text-center space-y-3">
+                </motion.div>
+                <motion.div variants={staggerItem} className="text-center space-y-3">
                   <div className="w-16 h-16 bg-[#cc0033] rounded-full flex items-center justify-center mx-auto">
                     <Users className="w-8 h-8 text-white" strokeWidth={1.5} />
                   </div>
@@ -256,8 +256,8 @@ export default function BicePersonasClient() {
                   <p className="text-sm text-gray-600 leading-snug">
                     Hijos dependientes del titular
                   </p>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -266,21 +266,23 @@ export default function BicePersonasClient() {
         <section className="py-32 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <div className="text-center space-y-4 mb-16">
-                <p className="text-xs sm:text-sm uppercase tracking-wider text-[#666666]">
-                  Proceso simple y transparente
-                </p>
-                <h2 className="text-2xl font-bold text-gray-900">
-                  ¿Como funciona el reembolso?
-                </h2>
-                <p className="text-base text-gray-700 leading-[1.1] max-w-3xl mx-auto">
-                  En simples pasos, te devolvemos un porcentaje de lo que no cubrio tu prevision.
-                  Sencillo y transparente.
-                </p>
-              </div>
+              <RevealOnScroll>
+                <div className="text-center space-y-4 mb-16">
+                  <p className="text-xs sm:text-sm uppercase tracking-wider text-[#666666]">
+                    Proceso simple y transparente
+                  </p>
+                  <h2 className="text-2xl font-bold text-gray-900">
+                    ¿Como funciona el reembolso?
+                  </h2>
+                  <p className="text-base text-gray-700 leading-[1.1] max-w-3xl mx-auto">
+                    En simples pasos, te devolvemos un porcentaje de lo que no cubrio tu prevision.
+                    Sencillo y transparente.
+                  </p>
+                </div>
+              </RevealOnScroll>
 
-              <div className="grid md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-                <div className="text-center space-y-3">
+              <motion.div className="grid md:grid-cols-3 gap-8 max-w-3xl mx-auto" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={staggerContainer}>
+                <motion.div variants={staggerItem} className="text-center space-y-3">
                   <div className="w-12 h-12 bg-[#cc0033] rounded-lg flex items-center justify-center mx-auto">
                     <span className="text-white text-xl font-bold">1</span>
                   </div>
@@ -288,8 +290,8 @@ export default function BicePersonasClient() {
                   <p className="text-sm text-gray-600 leading-snug">
                     Acude a tu consulta, hospitalizacion o urgencia como lo haces habitualmente
                   </p>
-                </div>
-                <div className="text-center space-y-3">
+                </motion.div>
+                <motion.div variants={staggerItem} className="text-center space-y-3">
                   <div className="w-12 h-12 bg-[#cc0033] rounded-lg flex items-center justify-center mx-auto">
                     <span className="text-white text-xl font-bold">2</span>
                   </div>
@@ -297,8 +299,8 @@ export default function BicePersonasClient() {
                   <p className="text-sm text-gray-600 leading-snug">
                     Presenta los documentos de respaldo para solicitar el reembolso de tus gastos
                   </p>
-                </div>
-                <div className="text-center space-y-3">
+                </motion.div>
+                <motion.div variants={staggerItem} className="text-center space-y-3">
                   <div className="w-12 h-12 bg-[#cc0033] rounded-lg flex items-center justify-center mx-auto">
                     <span className="text-white text-xl font-bold">3</span>
                   </div>
@@ -306,8 +308,8 @@ export default function BicePersonasClient() {
                   <p className="text-sm text-gray-600 leading-snug">
                     Te devolvemos el porcentaje correspondiente segun tu plan de forma rapida
                   </p>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -316,21 +318,23 @@ export default function BicePersonasClient() {
         <section className="py-32">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <div className="text-center space-y-4 mb-16">
-                <p className="text-xs sm:text-sm uppercase tracking-wider text-[#666666]">
-                  Desde cobertura estandar a elite
-                </p>
-                <h2 className="text-2xl font-bold text-gray-900">
-                  Planes y beneficios adicionales
-                </h2>
-                <p className="text-base text-gray-700 leading-[1.1] max-w-3xl mx-auto">
-                  Desde cobertura estandar a elite, puedes sumar asistencia dental y veterinaria
-                  segun el plan que elijas. Elige la proteccion que mejor se adapte a tu necesidad.
-                </p>
-              </div>
+              <RevealOnScroll>
+                <div className="text-center space-y-4 mb-16">
+                  <p className="text-xs sm:text-sm uppercase tracking-wider text-[#666666]">
+                    Desde cobertura estandar a elite
+                  </p>
+                  <h2 className="text-2xl font-bold text-gray-900">
+                    Planes y beneficios adicionales
+                  </h2>
+                  <p className="text-base text-gray-700 leading-[1.1] max-w-3xl mx-auto">
+                    Desde cobertura estandar a elite, puedes sumar asistencia dental y veterinaria
+                    segun el plan que elijas. Elige la proteccion que mejor se adapte a tu necesidad.
+                  </p>
+                </div>
+              </RevealOnScroll>
 
-              <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-                <div className="flex items-start gap-4">
+              <motion.div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={staggerContainer}>
+                <motion.div variants={staggerItem} className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-[#cc0033] rounded-lg flex items-center justify-center flex-shrink-0">
                     <Smile className="w-5 h-5 text-white" strokeWidth={1.5} />
                   </div>
@@ -340,8 +344,8 @@ export default function BicePersonasClient() {
                       Cobertura dental opcional para consultas, tratamientos y procedimientos
                     </p>
                   </div>
-                </div>
-                <div className="flex items-start gap-4">
+                </motion.div>
+                <motion.div variants={staggerItem} className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-[#cc0033] rounded-lg flex items-center justify-center flex-shrink-0">
                     <PawPrint className="w-5 h-5 text-white" strokeWidth={1.5} />
                   </div>
@@ -351,8 +355,8 @@ export default function BicePersonasClient() {
                       Proteccion para tu mascota incluida en los planes Elite
                     </p>
                   </div>
-                </div>
-                <div className="flex items-start gap-4">
+                </motion.div>
+                <motion.div variants={staggerItem} className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-[#cc0033] rounded-lg flex items-center justify-center flex-shrink-0">
                     <ArrowRightLeft className="w-5 h-5 text-white" strokeWidth={1.5} />
                   </div>
@@ -362,8 +366,8 @@ export default function BicePersonasClient() {
                       Proceso agil de devolucion sin tramites complicados
                     </p>
                   </div>
-                </div>
-                <div className="flex items-start gap-4">
+                </motion.div>
+                <motion.div variants={staggerItem} className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-[#cc0033] rounded-lg flex items-center justify-center flex-shrink-0">
                     <FileCheck className="w-5 h-5 text-white" strokeWidth={1.5} />
                   </div>
@@ -373,8 +377,8 @@ export default function BicePersonasClient() {
                       Contratacion y uso simple, sin papeleos innecesarios
                     </p>
                   </div>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -382,7 +386,7 @@ export default function BicePersonasClient() {
         {/* CTA */}
         <section className="py-32 bg-gray-50">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center space-y-6">
+            <RevealOnScroll className="max-w-4xl mx-auto text-center space-y-6">
               <Image
                 src="/images/logo-bice-vida.avif"
                 alt="BICE Vida"
@@ -398,18 +402,20 @@ export default function BicePersonasClient() {
                 tranquilidad para ti y tu familia.
               </p>
               <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3">
-                  Contrata Aqui
+                <Button asChild className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3 w-full sm:w-64">
+                  <a href="https://segurocomplementariosalud.bicevida.cl/?negocio=aEd0TFolRnQjQzY17OVzwP1NaCN6_V6AdjkZ9TXI5bnYVyiV0rM" target="_blank" rel="noopener noreferrer">
+                    Contrata Aqui
+                  </a>
                 </Button>
                 <Button
                   variant="outline"
-                  className="border-[#cc0033] text-[#cc0033] hover:bg-red-50 px-8 py-3"
+                  className="border-[#cc0033] text-[#cc0033] hover:bg-red-50 px-8 py-3 w-full sm:w-64"
                   onClick={scrollToForm}
                 >
                   Necesito asesoria
                 </Button>
               </div>
-            </div>
+            </RevealOnScroll>
           </div>
         </section>
 
@@ -417,7 +423,7 @@ export default function BicePersonasClient() {
         <section className="py-32 bg-[#cc0033]" id="formulario-contacto">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto items-center">
-              <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 lg:p-8 shadow-2xl">
+              <RevealOnScroll className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 lg:p-8 shadow-2xl">
                 <h2 className="text-xl lg:text-2xl font-bold text-[#333333] text-center mb-6 leading-snug">
                   Solicita mas informacion sobre el seguro complementario BICE Vida
                 </h2>
@@ -491,7 +497,7 @@ export default function BicePersonasClient() {
                     </a>
                   </p>
                 </form>
-              </div>
+              </RevealOnScroll>
 
               <div className="space-y-6">
                 <h2 className="text-4xl font-bold text-white">
