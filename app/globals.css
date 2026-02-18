@@ -150,6 +150,10 @@
     animation: scroll-left 60s linear infinite;
   }
 
+  .related-track {
+    animation: scroll-left 40s linear infinite;
+  }
+
   /* Adding marquee animation for infinite scrolling text banner */
   @keyframes marquee {
     0% {

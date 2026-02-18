@@ -2,12 +2,14 @@
 
 import Image from "next/image"
 import Link from "next/link"
+import type { Components } from "react-markdown"
 import {
   UsersIcon,
   Facebook,
   Instagram,
   Linkedin,
   ArrowLeft,
+  Check,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import MobileMenu from "@/components/MobileMenu"
@@ -32,6 +34,90 @@ interface RelatedPost {
   date: string
   heroImage: string
   excerpt: string
+}
+
+const mdComponents: Components = {
+  h1: ({ children }) => (
+    <h1 className="text-3xl md:text-4xl font-bold text-[#333333] mt-10 mb-6">
+      {children}
+    </h1>
+  ),
+  h2: ({ children }) => (
+    <h2 className="text-xl md:text-2xl font-bold text-[#333333] mt-12 mb-8 pb-6 border-b border-[#cc0033]">
+      {children}
+    </h2>
+  ),
+  h3: ({ children }) => (
+    <h3 className="text-lg md:text-xl font-semibold text-[#cc0033] mt-8 mb-3">
+      {children}
+    </h3>
+  ),
+  ul: ({ children }) => (
+    <ul className="my-4 space-y-2 list-none pl-0">{children}</ul>
+  ),
+  ol: ({ children }) => (
+    <ol className="my-4 space-y-2 list-none pl-0">{children}</ol>
+  ),
+  li: (props: Record<string, unknown>) => {
+    const { children, ordered, index } = props as {
+      children: React.ReactNode
+      ordered?: boolean
+      index?: number
+    }
+    return (
+      <li className="flex items-start gap-3 text-gray-700 leading-relaxed">
+        {ordered && typeof index === "number" ? (
+          <span className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-full bg-[#cc0033] flex items-center justify-center text-white text-xs font-bold">
+            {index + 1}
+          </span>
+        ) : (
+          <span className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-[#cc0033] flex items-center justify-center">
+            <Check className="w-3 h-3 text-white" strokeWidth={3} />
+          </span>
+        )}
+        <span className="flex-1">{children}</span>
+      </li>
+    )
+  },
+  table: ({ children }) => (
+    <div className="my-6 overflow-x-auto rounded-lg border border-gray-200">
+      <table className="w-full text-sm">{children}</table>
+    </div>
+  ),
+  thead: ({ children }) => (
+    <thead className="bg-[#cc0033] text-white">{children}</thead>
+  ),
+  th: ({ children }) => (
+    <th className="px-4 py-3 text-left font-semibold text-sm">{children}</th>
+  ),
+  tr: ({ children, node }) => {
+    // We can't easily detect even/odd here so we use CSS even selector via className
+    return <tr className="border-b border-gray-100 even:bg-gray-50">{children}</tr>
+  },
+  td: ({ children }) => (
+    <td className="px-4 py-3 text-gray-700">{children}</td>
+  ),
+  blockquote: ({ children }) => (
+    <blockquote className="my-6 border-l-4 border-[#cc0033] bg-gray-50 rounded-r-lg py-4 px-6 text-gray-700 italic">
+      {children}
+    </blockquote>
+  ),
+  a: ({ href, children }) => (
+    <a
+      href={href}
+      className="text-[#cc0033] hover:text-[#a30029] underline underline-offset-2 transition-colors"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {children}
+    </a>
+  ),
+  strong: ({ children }) => (
+    <strong className="font-semibold text-[#333333]">{children}</strong>
+  ),
+  p: ({ children }) => (
+    <p className="text-gray-700 leading-relaxed my-4">{children}</p>
+  ),
 }
 
 export default function BlogPostClient({
@@ -172,8 +258,11 @@ export default function BlogPostClient({
               </div>
 
               {/* Markdown Content */}
-              <div className="prose prose-lg max-w-none prose-headings:text-[#333333] prose-a:text-[#cc0033] hover:prose-a:text-[#a30029] prose-p:text-gray-700 prose-p:leading-relaxed prose-li:text-gray-700 prose-strong:text-[#333333] prose-table:text-sm">
-                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+              <div className="max-w-none">
+                <ReactMarkdown
+                  remarkPlugins={[remarkGfm]}
+                  components={mdComponents}
+                >
                   {post.content}
                 </ReactMarkdown>
               </div>
@@ -192,19 +281,23 @@ export default function BlogPostClient({
           </div>
         </article>
 
-        {/* Related Posts */}
+        {/* Related Posts Carousel */}
         {relatedPosts.length > 0 && (
-          <section className="py-16 md:py-24 bg-[#f5f5f5]">
-            <div className="container mx-auto px-4">
-              <h2 className="text-2xl font-bold text-[#333333] text-center mb-12">
-                Artículos relacionados
-              </h2>
-              <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                {relatedPosts.map((related) => (
+          <section className="py-16 md:py-24 bg-[#f5f5f5] overflow-hidden">
+            <h2 className="text-2xl font-bold text-[#333333] text-center mb-16 mt-4">
+              Artículos relacionados
+            </h2>
+            <div className="relative">
+              {/* Fade edges */}
+              <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[#f5f5f5] to-transparent z-10" />
+              <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#f5f5f5] to-transparent z-10" />
+              {/* Scrolling track: duplicate items for seamless loop */}
+              <div className="flex gap-6 related-track hover:[animation-play-state:paused]">
+                {[...relatedPosts, ...relatedPosts].map((related, i) => (
                   <Link
-                    key={related.slug}
+                    key={`${related.slug}-${i}`}
                     href={`/blog/${related.slug}`}
-                    className="group block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
+                    className="group flex-shrink-0 w-[280px] bg-white rounded-xl overflow-hidden"
                   >
                     <div className="relative aspect-[4/3] overflow-hidden">
                       <Image
@@ -212,10 +305,10 @@ export default function BlogPostClient({
                         alt={related.title}
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-300"
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                        sizes="280px"
                       />
                     </div>
-                    <div className="p-4">
+                    <div className="px-4 py-5">
                       <h3 className="text-sm font-semibold text-[#333333] leading-[1.1] group-hover:text-[#cc0033] transition-colors line-clamp-2">
                         {related.title}
                       </h3>

@@ -135,7 +135,7 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
                 <Link
                   key={post.slug}
                   href={`/blog/${post.slug}`}
-                  className="group grid grid-rows-subgrid row-span-4 bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow border border-gray-100"
+                  className="group grid grid-rows-subgrid row-span-4 bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
                 >
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <Image

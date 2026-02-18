@@ -37,7 +37,7 @@ export default async function BlogPostPage({
   const post = getPostBySlug(slug)
   if (!post) notFound()
 
-  const relatedPosts = getRelatedPosts(slug, 4)
+  const relatedPosts = getRelatedPosts(slug, 8)
 
   return <BlogPostClient post={post} relatedPosts={relatedPosts} />
 }
