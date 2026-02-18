@@ -262,8 +262,8 @@ function ProblemaCarouselCard({ icon: Icon, title, text }: { icon: React.Compone
   const [open, setOpen] = useState(false)
 
   return (
-    <div className="min-w-0 shrink-0 grow-0 basis-full px-6">
-      <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-5 space-y-3">
+    <div className="min-w-0 shrink-0 grow-0 basis-full px-6 py-6">
+      <div className="rounded-2xl p-5 space-y-3">
         <button onClick={() => setOpen(!open)} className="flex items-center gap-3 text-left w-full">
           <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center flex-shrink-0">
             <Icon className="w-6 h-6 text-[#cc0033]" />
@@ -324,7 +324,7 @@ export default function HomePage() {
       {/* Header */}
       <ScrollHeader>
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center -ml-2 lg:ml-0">
             <Image
               src="/images/logo-20redagrupa-3.png"
               alt="RedAgrupa Logo"
@@ -450,10 +450,10 @@ export default function HomePage() {
               animate="visible"
               variants={staggerContainer}
             >
-              <motion.h1 variants={staggerItem} className="text-2xl sm:text-[2rem] md:text-[2.5rem] lg:text-[3.75rem] font-normal leading-[0.95] text-balance tracking-tight">
+              <motion.h1 variants={staggerItem} className="text-3xl sm:text-2xl md:text-[2rem] lg:text-[2.75rem] font-normal leading-[0.95] text-balance tracking-tight">
                 ¿Listo para Simplificar tus Seguros Complementarios?
               </motion.h1>
-              <motion.p variants={staggerItem} className="text-base sm:text-lg lg:text-xl text-white/90 leading-[1.3] max-w-2xl">
+              <motion.p variants={staggerItem} className="text-base sm:text-base lg:text-lg text-white/90 leading-[1.3] max-w-2xl">
                 RedAgrupa gestiona tus seguros complementarios de salud para que tu pyme y tu equipo estén protegidos,
                 sin trámites eternos ni lenguaje técnico imposible.
               </motion.p>
@@ -486,10 +486,10 @@ export default function HomePage() {
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal leading-[1.1] text-white mb-2">
               Porque la vida no espera
             </h2>
-            <p className="text-base sm:text-lg lg:text-xl text-white/90 leading-[1.3] mb-1 whitespace-nowrap">
+            <p className="hidden lg:block text-base sm:text-lg lg:text-xl text-white/90 leading-[1.3] mb-1 whitespace-nowrap">
               El mejor beneficio es el que se usa. El mejor partner, el que te ayuda a que eso pase
             </p>
-            <h3 className="text-xs sm:text-sm uppercase tracking-wider text-white/90 mt-6">
+            <h3 className="text-xs sm:text-sm uppercase tracking-wider text-white/90 mt-2 lg:mt-6">
               Hoy mismo te ayudamos con:
             </h3>
           </RevealOnScroll>
@@ -520,7 +520,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left: Content */}
-            <RevealOnScroll>
+            <RevealOnScroll className="text-center lg:text-left">
               <p className="text-xs sm:text-sm uppercase tracking-wider text-[#666666] mb-4">
                 PORQUE ESTAR CUBIERTO NO BASTA… HAY QUE SENTIRSE PROTEGIDO
               </p>

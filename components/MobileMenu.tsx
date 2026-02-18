@@ -75,15 +75,6 @@ export default function MobileMenu() {
             >
               Agendar orientación
             </ScrollButton>
-            <Button
-              variant="outline"
-              className="bg-transparent border-white text-white hover:bg-white/10 w-full py-3"
-              asChild
-            >
-              <a href="https://redagrupa.vercel.app/dashboard" target="_blank" rel="noopener noreferrer">
-                Acceder a CRM
-              </a>
-            </Button>
           </div>
         </div>
       )}

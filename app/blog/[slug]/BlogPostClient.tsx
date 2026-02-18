@@ -65,7 +65,7 @@ const mdComponents: Components = {
       index?: number
     }
     return (
-      <li className="flex items-start gap-3 text-gray-700 leading-relaxed">
+      <li className="flex items-start gap-3 text-gray-700 leading-relaxed [&_p]:my-0 [&_p]:inline">
         {ordered && typeof index === "number" ? (
           <span className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-full bg-[#cc0033] flex items-center justify-center text-white text-xs font-bold">
             {index + 1}
@@ -132,7 +132,7 @@ export default function BlogPostClient({
       {/* Fixed Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#cc0033] text-white shadow-md">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center -ml-2 lg:ml-0">
             <Image
               src="/images/logo-20redagrupa-3.png"
               alt="RedAgrupa Logo"
@@ -283,9 +283,9 @@ export default function BlogPostClient({
 
         {/* Related Posts Carousel */}
         {relatedPosts.length > 0 && (
-          <section className="py-16 md:py-24 bg-[#f5f5f5] overflow-hidden">
-            <h2 className="text-2xl font-bold text-[#333333] text-center mb-16 mt-4">
-              Artículos relacionados
+          <section className="py-12 md:py-16 bg-[#f5f5f5] overflow-hidden">
+            <h2 className="text-2xl font-normal text-[#333333] text-center mb-16">
+              Más Artículos RedAgrupa
             </h2>
             <div className="relative">
               {/* Fade edges */}
