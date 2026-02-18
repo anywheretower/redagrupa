@@ -1,5 +1,6 @@
 import Image from "next/image"
-import { MapPin, Mail, Phone } from "lucide-react"
+import Link from "next/link"
+import { MapPin, Mail, Phone, BookOpen } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -36,6 +37,10 @@ export default function Footer() {
                 +56 (22) 813 2245
               </a>
             </div>
+            <Link href="/blog" className="flex items-center gap-3 max-w-[280px] w-full hover:underline">
+              <BookOpen className="w-5 h-5 flex-shrink-0" />
+              <span className="text-sm text-left">Blog RedAgrupa</span>
+            </Link>
           </div>
         </div>
       </div>

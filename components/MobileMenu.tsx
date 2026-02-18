@@ -60,6 +60,13 @@ export default function MobileMenu() {
             >
               Seguro BICE Personas
             </Link>
+            <Link
+              href="/blog"
+              className="text-white text-lg py-3 border-b border-white/20"
+              onClick={() => setIsOpen(false)}
+            >
+              Blog
+            </Link>
             <ScrollButton
               targetId="formulario-contacto"
               variant="outline"

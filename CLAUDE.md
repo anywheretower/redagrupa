@@ -21,15 +21,24 @@ Sitio enfocado en captacion de clientes (marketing + formulario de contacto).
 ## Estructura del Proyecto
 ```
 app/
-  layout.tsx          # Layout raiz (lang="es", Geist font, Vercel Analytics)
-  page.tsx            # Landing page principal (~940 lineas)
-  globals.css         # Estilos globales + variables CSS
-  nosotros/           # Pagina "Sobre Nosotros"
-    page.tsx
-  seguros-salud/      # Pagina de seguros de salud
-    page.tsx
+  layout.tsx                        # Layout raiz (lang="es", Geist font, Vercel Analytics)
+  page.tsx                          # Landing page principal
+  globals.css                       # Estilos globales + variables CSS
+  nosotros/                         # Pagina "Sobre Nosotros"
+    page.tsx + NosotrosClient.tsx
+  seguros-salud/                    # Pagina de seguros de salud
+    page.tsx + SegurosSaludClient.tsx
+  beneficios-redagrupa/             # Pagina de beneficios corporativos
+    page.tsx + BeneficiosClient.tsx
+  seguro-complementario-bice-pyme/  # Planes BICE Vida para pymes (4 planes)
+    page.tsx + BicePymeClient.tsx
+  seguro-complementario-bice-personas/ # Seguro BICE Vida individual/familiar
+    page.tsx + BicePersonasClient.tsx
+  politicas-de-privacidad/          # Politica de privacidad (Ley 19.628)
+    page.tsx + PoliticasClient.tsx
 
 components/
+  Footer.tsx          # Footer compartido (componente unico, usado en todas las paginas)
   MobileMenu.tsx      # Menu hamburguesa responsive
   ScrollButton.tsx    # Boton con scroll suave a seccion
   ScrollHeader.tsx    # Header que cambia con scroll
@@ -44,8 +53,8 @@ lib/
   utils.ts            # Utilidad cn() para class merging
 
 public/
-  images/             # Imagenes del sitio (logos, equipo, hero, etc.)
-  *.png, *.jpg, *.svg # Logos de aseguradoras, favicons, placeholders
+  images/             # Imagenes optimizadas (WebP/AVIF, ~345 KB total)
+  *.png, *.svg        # Favicons e iconos
 ```
 
 ## Aseguradoras Partners
@@ -209,10 +218,11 @@ Las subpaginas siguen esta estructura consistente:
 ---
 
 ## Configuracion Importante
-- `next.config.mjs`: TypeScript ignoreBuildErrors: true, images unoptimized: true
+- `next.config.mjs`: TypeScript ignoreBuildErrors: true, images optimizadas (AVIF/WebP)
 - `components.json`: shadcn style "new-york", RSC habilitado, CSS variables
 - `tsconfig.json`: strict mode, path alias @/* -> ./*
 - Idioma: Espanol (lang="es")
+- Dominio: www.redagrupa.cl
 
 ## Convenciones de Codigo
 - Componentes en PascalCase
@@ -222,6 +232,7 @@ Las subpaginas siguen esta estructura consistente:
 - Componentes UI de shadcn en components/ui/
 - Componentes custom en components/ (raiz)
 - Subpaginas: page.tsx (server, metadata) + NombreClient.tsx (client, UI)
+- Footer compartido: components/Footer.tsx (un solo componente, no duplicar)
 
 ## Notas de Desarrollo
 - Proyecto generado originalmente con v0.app
@@ -230,10 +241,12 @@ Las subpaginas siguen esta estructura consistente:
 - Sin .env configurado (en .gitignore)
 - Dashboard referenciado en redagrupa.vercel.app/dashboard (app separada)
 - Todas las paginas son Server Components por defecto (usar "use client" cuando sea necesario)
+- Imagenes optimizadas: WebP para fotos, AVIF para logos. Next.js sirve formato optimo automaticamente
+- sharp instalado para optimizacion de imagenes en build
+- Pagina BICE Pyme: link contratacion -> mipymesegura.bicevida.cl
+- Pagina BICE Personas: link contratacion pendiente (sin URL asignada)
 
 ## Pendientes / Areas de Mejora
 - Conectar formulario de contacto con backend/API
-- Implementar paginas adicionales segun necesidad
-- Agregar SEO meta tags por pagina
-- Optimizar imagenes (actualmente unoptimized)
+- Agregar URL de contratacion para pagina BICE Personas
 - Agregar tests
