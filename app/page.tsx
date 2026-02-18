@@ -24,14 +24,14 @@ import Footer from "@/components/Footer"
 import { useState, useEffect, useCallback } from "react"
 import useEmblaCarousel from "embla-carousel-react"
 import Autoplay from "embla-carousel-autoplay"
-import { motion } from "motion/react"
+import { motion, AnimatePresence } from "motion/react"
 import RevealOnScroll from "@/components/RevealOnScroll"
 import { staggerContainer, staggerItem, fadeUp } from "@/lib/animations"
 
 const problemaCards = [
   {
     icon: FileText,
-    title: "Complejidad administrativa que te consume",
+    title: "Complejidad administrativa que abruma",
     text: "Formularios, correos con la aseguradora, llamadas de colaboradores y plazos que nadie recuerda. Cada reembolso o incorporación termina siendo una mini-operación administrativa dentro de tu negocio.",
   },
   {
@@ -88,6 +88,85 @@ const statsCards = [
     text: "Conforman nuestra red de convenios",
   },
 ]
+
+const testimonios = [
+  {
+    texto: "Levábamos años encontrando un seguro que permitiese como empresa pequeña poder tener cobertura adicional. Hemos encontrado asesoría confiable, con profesionales atentos capacitados para resolver cualquier duda. Excelente servicio, recomiendo Redagrupa a ojos cerrados.",
+    nombre: "Marcela Lorenzo",
+    cargo: "Partner CEO en JSTL",
+    foto: "/images/marcela-lorenzo-ceo-just4u-baja.jpg",
+  },
+  {
+    texto: "Contratamos Redagrupa como beneficio extra para trabajadores, pero al poco tiempo nos dimos cuenta que es un gran aliado, tanto clientes como empleados. Es el agregado bien servicio indiscutible con ellos.",
+    nombre: "Manuel Pamplona",
+    cargo: "Gerente Regional en EngMe",
+    foto: "/images/manuel-pamplona-baja.jpg",
+  },
+  {
+    texto: "Antes no había sido posible conseguir seguro complementario para mis colaboradores, ya que para tratar de una compañía de pocos empleados no cumplíamos con los requisitos. Pero gracias a Redagrupa lo conseguimos.",
+    nombre: "Roberto Allaro",
+    cargo: "Gerente General en SCLatam",
+    foto: "/images/roberto-alfaro-gerente-genera-scm-latam-baja.jpg",
+  },
+]
+
+function TestimonialCarousel() {
+  const [current, setCurrent] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % testimonios.length)
+    }, 6000)
+    return () => clearInterval(timer)
+  }, [])
+
+  const t = testimonios[current]
+
+  return (
+    <div>
+      <div className="relative min-h-[280px]">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={current}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className="flex flex-col items-center text-center space-y-6"
+          >
+            <div className="text-4xl md:text-6xl text-[#cc0033] leading-none">"</div>
+            <p className="text-[#666666] text-base leading-snug">{t.texto}</p>
+            <div className="pt-4 border-t border-gray-200 flex items-center gap-4">
+              <Image
+                src={t.foto}
+                alt={t.nombre}
+                width={56}
+                height={56}
+                className="w-14 h-14 rounded-full object-cover flex-shrink-0"
+              />
+              <div className="text-left">
+                <p className="font-semibold text-[#333333]">{t.nombre}</p>
+                <p className="text-sm text-[#666666]">{t.cargo}</p>
+              </div>
+            </div>
+          </motion.div>
+        </AnimatePresence>
+      </div>
+      {/* Dots */}
+      <div className="flex justify-center gap-2 mt-6">
+        {testimonios.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setCurrent(i)}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              i === current ? "bg-[#cc0033] w-6" : "bg-gray-300"
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  )
+}
 
 function StatsCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
@@ -160,20 +239,9 @@ function ProblemaCarousel() {
     <div>
       <div ref={emblaRef} className="overflow-hidden">
         <div className="flex">
-          {problemaCards.map((card, i) => {
-            const Icon = card.icon
-            return (
-              <div key={i} className="min-w-0 shrink-0 grow-0 basis-full px-6">
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-5 space-y-3">
-                  <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
-                    <Icon className="w-5 h-5 text-white" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white leading-snug">{card.title}</h3>
-                  <p className="text-white/80 text-sm leading-snug">{card.text}</p>
-                </div>
-              </div>
-            )
-          })}
+          {problemaCards.map((card, i) => (
+            <ProblemaCarouselCard key={i} icon={card.icon} title={card.title} text={card.text} />
+          ))}
         </div>
       </div>
       {/* Dots */}
@@ -187,6 +255,66 @@ function ProblemaCarousel() {
         ))}
       </div>
     </div>
+  )
+}
+
+function ProblemaCarouselCard({ icon: Icon, title, text }: { icon: React.ComponentType<{ className?: string }>; title: string; text: string }) {
+  const [open, setOpen] = useState(false)
+
+  return (
+    <div className="min-w-0 shrink-0 grow-0 basis-full px-6">
+      <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-5 space-y-3">
+        <button onClick={() => setOpen(!open)} className="flex items-center gap-3 text-left w-full">
+          <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center flex-shrink-0">
+            <Icon className="w-6 h-6 text-[#cc0033]" />
+          </div>
+          <h3 className="text-lg font-normal text-white leading-tight flex-1">{title}</h3>
+          <ChevronDown className={`w-5 h-5 text-white/70 transition-transform duration-300 flex-shrink-0 ${open ? "rotate-180" : ""}`} />
+        </button>
+        <AnimatePresence>
+          {open && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className="overflow-hidden"
+            >
+              <p className="text-white/80 text-sm leading-snug pt-1">{text}</p>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    </div>
+  )
+}
+
+function ProblemaCardExpandable({ icon: Icon, title, text }: { icon: React.ComponentType<{ className?: string }>; title: string; text: string }) {
+  const [open, setOpen] = useState(false)
+
+  return (
+    <motion.div variants={staggerItem} className="p-6 space-y-3">
+      <button onClick={() => setOpen(!open)} className="flex items-center gap-3 text-left w-full">
+        <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center flex-shrink-0">
+          <Icon className="w-6 h-6 text-[#cc0033]" />
+        </div>
+        <h3 className="text-lg font-normal text-white leading-tight flex-1">{title}</h3>
+        <ChevronDown className={`w-5 h-5 text-white/70 transition-transform duration-300 flex-shrink-0 ${open ? "rotate-180" : ""}`} />
+      </button>
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="overflow-hidden"
+          >
+            <p className="text-white/80 text-sm leading-snug pt-1">{text}</p>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
   )
 }
 
@@ -351,62 +479,21 @@ export default function HomePage() {
       </section>
 
       {/* El Problema Section */}
-      <section className="py-8 lg:py-16 relative bg-[#cc0033] lg:bg-[#333333] overflow-hidden min-h-0 lg:min-h-screen flex flex-col">
-        {/* Background Image - Mobile */}
-        <div className="absolute inset-0 lg:hidden">
-          <Image
-            src="/images/reloj-movil.png"
-            alt="Reloj cronómetro"
-            fill
-            className="object-cover object-top"
-            quality={85}
-            sizes="100vw"
-          />
-          <div
-            className="absolute inset-0"
-            style={{ background: "linear-gradient(to bottom, #cc0033 0%, transparent 20%)" }}
-          />
-          <div
-            className="absolute inset-0"
-            style={{ background: "linear-gradient(to top, #cc0033 0%, #cc0033 35%, transparent 55%)" }}
-          />
-        </div>
-        {/* Background Image - Desktop only */}
-        <div className="absolute inset-0 hidden lg:block">
-          <Image
-            src="/images/proyecto-nuevo-1-3.webp"
-            alt="Chrome stopwatch on red gradient background"
-            fill
-            className="object-cover"
-            priority
-            quality={85}
-            sizes="100vw"
-          />
-          <div
-            className="absolute inset-0 bg-gradient-to-b from-[#cc0033] via-transparent to-transparent"
-            style={{ backgroundSize: "100% 50%", backgroundRepeat: "no-repeat", backgroundPosition: "top" }}
-          />
-          <div
-            className="absolute inset-0 bg-gradient-to-t from-[#cc0033] via-transparent to-transparent"
-            style={{ backgroundSize: "100% 80%", backgroundRepeat: "no-repeat", backgroundPosition: "bottom" }}
-          />
-        </div>
+      <section className="py-8 lg:py-16 relative bg-[#cc0033] overflow-hidden min-h-0 flex flex-col">
 
-        <div className="container mx-auto px-6 relative z-10 flex-1 flex flex-col lg:justify-between mobile-text-shadow">
-          <RevealOnScroll className="text-center max-w-3xl mx-auto pt-0 lg:pt-8 px-4">
-            <h2 className="text-2xl sm:text-[2rem] md:text-[2.5rem] lg:text-[3.75rem] font-normal leading-[0.95] text-white mb-2 text-balance tracking-tight">
+        <div className="container mx-auto px-6 relative z-10 flex-1 flex flex-col lg:justify-between">
+          <RevealOnScroll className="text-center max-w-4xl mx-auto pt-0 lg:pt-8 px-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal leading-[1.1] text-white mb-2">
               Porque la vida no espera
             </h2>
-            <p className="text-base sm:text-lg lg:text-xl text-white/90 leading-[1.3] mb-1 max-w-6xl mx-auto">
-              El mejor beneficio es el que se usa. El mejor partner, el que te ayuda a que eso pase.
+            <p className="text-base sm:text-lg lg:text-xl text-white/90 leading-[1.3] mb-1 whitespace-nowrap">
+              El mejor beneficio es el que se usa. El mejor partner, el que te ayuda a que eso pase
             </p>
-            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold leading-snug text-white text-balance">
+            <h3 className="text-xs sm:text-sm uppercase tracking-wider text-white/90 mt-6">
               Hoy mismo te ayudamos con:
             </h3>
           </RevealOnScroll>
 
-          {/* Spacer for stopwatch visibility - Mobile only */}
-          <div className="flex-1 min-h-[50vh] lg:hidden" />
 
           {/* Cards - Mobile: auto-sliding carousel / Desktop: 3-column grid */}
           {/* Mobile Carousel */}
@@ -415,191 +502,74 @@ export default function HomePage() {
           </div>
           {/* Desktop Grid */}
           <motion.div
-            className="hidden lg:grid grid-cols-3 gap-6 max-w-6xl mx-auto pb-4 mt-20"
+            className="hidden lg:grid grid-cols-3 gap-6 max-w-6xl mx-auto pb-16 mt-6"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={staggerContainer}
           >
-            <motion.div variants={staggerItem} className="p-6 space-y-3">
-              <div className="w-10 h-10 bg-[#cc0033] rounded-lg flex items-center justify-center mb-2">
-                <FileText className="w-5 h-5 text-white" />
-              </div>
-              <h3 className="text-lg font-semibold text-white leading-snug">
-                Complejidad administrativa que te consume
-              </h3>
-              <p className="text-white/80 text-sm leading-snug">
-                Formularios, correos con la aseguradora, llamadas de colaboradores y plazos que nadie recuerda. Cada
-                reembolso o incorporación termina siendo una mini-operación administrativa dentro de tu negocio.
-              </p>
-            </motion.div>
-
-            <motion.div variants={staggerItem} className="p-6 space-y-3">
-              <div className="w-10 h-10 bg-[#cc0033] rounded-lg flex items-center justify-center mb-2">
-                <Shield className="w-5 h-5 text-white" />
-              </div>
-              <h3 className="text-lg font-semibold text-white leading-snug">Equipos expuestos a gastos imprevistos</h3>
-              <p className="text-white/80 text-sm leading-snug">
-                Una urgencia médica puede transformarse en deuda familiar si nadie sabe cómo usar el seguro o qué cubre
-                realmente el plan complementario. El beneficio existe, pero no se usa a tiempo.
-              </p>
-            </motion.div>
-
-            <motion.div variants={staggerItem} className="p-6 space-y-3">
-              <div className="w-10 h-10 bg-[#cc0033] rounded-lg flex items-center justify-center mb-2">
-                <AlertCircle className="w-5 h-5 text-white" />
-              </div>
-              <h3 className="text-lg font-semibold text-white leading-snug">
-                Beneficios que se pagan, pero no se entienden
-              </h3>
-              <p className="text-white/80 text-sm leading-snug">
-                Colaboradores que sienten que 'tienen un seguro', pero no saben dónde llamar, qué papeles guardar o cómo
-                hacer un reclamo. Resultado: pagan de su bolsillo algo que la empresa ya está financiando.
-              </p>
-            </motion.div>
+            {problemaCards.map((card, i) => (
+              <ProblemaCardExpandable key={i} icon={card.icon} title={card.title} text={card.text} />
+            ))}
           </motion.div>
         </div>
       </section>
 
       {/* Beneficios / Pilares Section */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="p-2 px-4">
-          <RevealOnScroll className="text-center mb-12">
-            <p className="text-xs sm:text-sm uppercase tracking-wider text-[#666666] mb-4">
-              PORQUE ESTAR CUBIERTO NO BASTA… HAY QUE SENTIRSE PROTEGIDO
-            </p>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight text-[#cc0033]">
-              Simplificar no es quitar cobertura. Es quitar obstáculos.
-            </h2>
-            <p className="text-[#666666] text-base sm:text-lg max-w-3xl mx-auto">
-              Nos integramos como el área de seguros complementarios de salud de tu empresa: diseñamos el plan,
-              acompañamos a tu equipo y nos hacemos cargo de la relación con las aseguradoras de principio a fin.
-            </p>
-            <div className="mt-6">
-              <ScrollButton
-                targetId="formulario-contacto"
-                className="bg-[#cc0033] text-white px-8 py-3"
-              >
-                Quiero simplificar mi seguro ahora
-              </ScrollButton>
-            </div>
-          </RevealOnScroll>
+      <section className="py-32 md:py-40 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left: Content */}
+            <RevealOnScroll>
+              <p className="text-xs sm:text-sm uppercase tracking-wider text-[#666666] mb-4">
+                PORQUE ESTAR CUBIERTO NO BASTA… HAY QUE SENTIRSE PROTEGIDO
+              </p>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-[1.1] text-[#cc0033]">
+                Simplificar no es quitar cobertura. Es quitar obstáculos.
+              </h2>
+              <p className="text-[#666666] text-base sm:text-lg mt-4 leading-snug">
+                Nos integramos como el área de seguros complementarios de salud de tu empresa: diseñamos el plan,
+                acompañamos a tu equipo y nos hacemos cargo de la relación con las aseguradoras de principio a fin.
+              </p>
+              <div className="mt-6">
+                <ScrollButton
+                  targetId="formulario-contacto"
+                  className="bg-[#cc0033] text-white px-8 py-3"
+                >
+                  Quiero simplificar mi seguro ahora
+                </ScrollButton>
+              </div>
+            </RevealOnScroll>
 
-          <div className="max-w-6xl mx-auto mt-24">
-            <div className="relative w-full overflow-hidden mb-4">
-              {/* Gradient fade masks on both sides */}
+            {/* Right: Testimonials Carousel */}
+            <RevealOnScroll delay={0.2}>
+              <TestimonialCarousel />
+            </RevealOnScroll>
+          </div>
+
+          {/* Marquee below */}
+          <div className="max-w-6xl mx-auto mt-16">
+            <div className="relative w-full overflow-hidden">
               <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-white to-transparent z-10" />
               <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-white to-transparent z-10" />
-
-              {/* Scrolling content */}
               <div className="flex whitespace-nowrap animate-marquee lg:animate-marquee-desktop">
                 <span className="inline-block text-[#cc0033] text-base md:text-xl font-medium px-8">
-                  Pymes que hoy respiran más tranquilas | Recuperar hasta 40 horas anuales del tiempo de un profesional
-                  para retención talento y estrategia. | ¿Sabías que el 70% de los colaboradores no entiende su
-                  cobertura?
+                  Pymes que hoy respiran más tranquilas | Recuperar hasta 40 horas anuales del tiempo de un profesional para retención talento y estrategia |
                 </span>
                 <span className="inline-block text-[#cc0033] text-base md:text-xl font-medium px-8">
-                  Pymes que hoy respiran más tranquilas | Recuperar hasta 40 horas anuales del tiempo de un profesional
-                  para retención talento y estrategia. | ¿Sabías que el 70% de los colaboradores no entiende su
-                  cobertura?
+                  Pymes que hoy respiran más tranquilas | Recuperar hasta 40 horas anuales del tiempo de un profesional para retención talento y estrategia |
                 </span>
                 <span className="inline-block text-[#cc0033] text-base md:text-xl font-medium px-8">
-                  Pymes que hoy respiran más tranquilas | Recuperar hasta 40 horas anuales del tiempo de un profesional
-                  para retención talento y estrategia. | ¿Sabías que el 70% de los colaboradores no entiende su
-                  cobertura?
+                  Pymes que hoy respiran más tranquilas | Recuperar hasta 40 horas anuales del tiempo de un profesional para retención talento y estrategia |
                 </span>
               </div>
             </div>
-
-            {/* Testimonials Grid */}
-            <motion.div
-              className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              variants={staggerContainer}
-            >
-              {/* Testimonio 1 - Marcela Lorenzo */}
-              <motion.div variants={staggerItem} className="flex flex-col justify-between space-y-6">
-                <div>
-                  <div className="text-4xl md:text-6xl text-[#cc0033] leading-none">"</div>
-                  <p className="text-[#666666] text-base leading-snug mt-6">
-                    Levábamos años encontrando un seguro que permitiese como empresa pequeña poder tener cobertura
-                    adicional. Hemos encontrado asesoría confiable, con profesionales atentos capacitados para resolver
-                    cualquier duda. Excelente servicio, recomiendo Redagrupa a ojos cerrados.
-                  </p>
-                </div>
-                <div className="pt-4 border-t border-gray-200 flex items-center gap-4">
-                  <Image
-                    src="/images/marcela-lorenzo-ceo-just4u-baja.jpg"
-                    alt="Marcela Lorenzo"
-                    width={56}
-                    height={56}
-                    className="w-14 h-14 rounded-full object-cover flex-shrink-0"
-                  />
-                  <div>
-                    <p className="font-semibold text-[#333333]">Marcela Lorenzo</p>
-                    <p className="text-sm text-[#666666]">Partner CEO en JSTL</p>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Testimonio 2 - Manuel Pamplona */}
-              <motion.div variants={staggerItem} className="flex flex-col justify-between space-y-6">
-                <div>
-                  <div className="text-4xl md:text-6xl text-[#cc0033] leading-none">"</div>
-                  <p className="text-[#666666] text-base leading-snug mt-6">
-                    Contratamos Redagrupa como beneficio extra para trabajadores, pero al poco tiempo nos dimos cuenta
-                    que es un gran aliado, tanto clientes como empleados. Es el agregado bien servicio indiscutible con
-                    ellos.
-                  </p>
-                </div>
-                <div className="pt-4 border-t border-gray-200 flex items-center gap-4">
-                  <Image
-                    src="/images/manuel-pamplona-baja.jpg"
-                    alt="Manuel Pamplona"
-                    width={56}
-                    height={56}
-                    className="w-14 h-14 rounded-full object-cover flex-shrink-0"
-                  />
-                  <div>
-                    <p className="font-semibold text-[#333333]">Manuel Pamplona</p>
-                    <p className="text-sm text-[#666666]">Gerente Regional en EngMe</p>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Testimonio 3 - Roberto Allaro */}
-              <motion.div variants={staggerItem} className="flex flex-col justify-between space-y-6">
-                <div>
-                  <div className="text-4xl md:text-6xl text-[#cc0033] leading-none">"</div>
-                  <p className="text-[#666666] text-base leading-snug mt-6">
-                    Antes no había sido posible conseguir seguro complementario para mis colaboradores, ya que para
-                    tratar de una compañía de pocos empleados no cumplíamos con los requisitos. Pero gracias a Redagrupa
-                    lo conseguimos.
-                  </p>
-                </div>
-                <div className="pt-4 border-t border-gray-200 flex items-center gap-4">
-                  <Image
-                    src="/images/roberto-alfaro-gerente-genera-scm-latam-baja.jpg"
-                    alt="Roberto Allaro"
-                    width={56}
-                    height={56}
-                    className="w-14 h-14 rounded-full object-cover flex-shrink-0"
-                  />
-                  <div>
-                    <p className="font-semibold text-[#333333]">Roberto Allaro</p>
-                    <p className="text-sm text-[#666666]">Gerente General en SCLatam</p>
-                  </div>
-                </div>
-              </motion.div>
-            </motion.div>
           </div>
         </div>
       </section>
 
       {/* Impact Section - Lo que pasa cuando los seguros dejan de ser un problema */}
-      <section className="relative text-white overflow-hidden min-h-0 lg:min-h-screen flex flex-col bg-[#cc0033] lg:bg-transparent py-8 lg:py-0">
+      <section className="relative text-white overflow-hidden min-h-0 lg:min-h-screen flex flex-col bg-[#cc0033] lg:bg-transparent py-12 lg:py-4">
         {/* Background Image - Mobile */}
         <div className="absolute inset-0 z-0 lg:hidden">
           <Image
@@ -713,11 +683,11 @@ export default function HomePage() {
       </section>
 
       {/* Todos los Seguros Section */}
-      <section id="seccion-aseguradoras" className="py-12 md:py-16 bg-white">
+      <section id="seccion-aseguradoras" className="pt-24 md:pt-32 pb-24 md:pb-32 bg-white">
         <div className="container mx-auto px-6">
-          <RevealOnScroll className="text-center mb-8 md:mb-12">
+          <RevealOnScroll className="text-center mb-12 md:mb-20">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight text-[#cc0033] px-4">
-              Formularios de reembolso e incorporación.
+              Formularios de reembolso e incorporación
             </h2>
           </RevealOnScroll>
 
@@ -1083,7 +1053,7 @@ export default function HomePage() {
                       <option value="informacion">Más información</option>
                       <option value="otro">Otro</option>
                     </select>
-                    <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-[#cc0033] pointer-events-none" />
+                    <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-6 h-6 text-[#cc0033] pointer-events-none" />
                   </div>
                 </div>
 
