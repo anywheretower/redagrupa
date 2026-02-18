@@ -113,17 +113,42 @@ export default function BeneficiosClient() {
         </a>
       </div>
 
-      <div className="pt-20">
+      <div>
         {/* Hero Section */}
-        <section className="py-32">
+        <section className="relative min-h-[50vh] lg:min-h-[70vh] flex items-center pt-20">
+          <Image
+            src="/beneficios-hero.jpg"
+            alt="Equipo de trabajo con beneficios corporativos RedAgrupa"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 z-[1] hidden lg:block" style={{ background: "linear-gradient(to right, white 0%, white 25%, transparent 60%)" }} />
+          <div className="container mx-auto px-4 relative z-10 hidden lg:block">
+            <RevealOnScroll className="max-w-4xl ml-8 lg:ml-16 space-y-3">
+              <h1 className="text-4xl font-bold text-[#cc0033] drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)]">Beneficios de Salud<br />para Empresas</h1>
+              <div>
+                <Button onClick={scrollToForm} className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3 shadow-lg">
+                  Conoce los Beneficios
+                </Button>
+              </div>
+            </RevealOnScroll>
+          </div>
+        </section>
+
+        {/* Introducción */}
+        <section className="py-16 lg:py-32">
           <div className="container mx-auto px-4">
-            <RevealOnScroll className="max-w-4xl mx-auto text-center space-y-6">
-              <p className="text-xs sm:text-sm uppercase tracking-wider text-[#666666]">
-                Eficiencia operativa y bienestar como ventaja competitiva
-              </p>
-              <h1 className="text-4xl font-bold text-[#cc0033]">
-                Beneficios de Salud para Empresas Clientes de RedAgrupa
-              </h1>
+            {/* Título y botón solo en móvil */}
+            <div className="lg:hidden max-w-4xl mx-auto space-y-3 mb-8">
+              <h1 className="text-3xl font-bold text-[#cc0033]">Beneficios de Salud<br />para Empresas</h1>
+              <div>
+                <Button onClick={scrollToForm} className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3">
+                  Conoce los Beneficios
+                </Button>
+              </div>
+            </div>
+            <RevealOnScroll className="max-w-4xl mx-auto space-y-6">
               <p className="text-base text-gray-700 leading-[1.1]">
                 Los Beneficios de Salud de RedAgrupa están diseñados para empresas que buscan optimizar la gestión
                 de personas, reducir tiempos administrativos y mejorar la productividad, sin aumentar la complejidad
@@ -134,11 +159,6 @@ export default function BeneficiosClient() {
                 enfocados en la salud, bienestar y beneficios corporativos, orientados a impactar positivamente en
                 la continuidad operativa y el desempeño de los equipos de trabajo.
               </p>
-              <div className="pt-4">
-                <Button onClick={scrollToForm} className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3">
-                  Conoce los Beneficios
-                </Button>
-              </div>
             </RevealOnScroll>
 
             {/* Marquee */}

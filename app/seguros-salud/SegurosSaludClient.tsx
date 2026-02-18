@@ -113,12 +113,42 @@ export default function SegurosSaludClient() {
         </a>
       </div>
 
-      <div className="pt-20">
+      <div>
         {/* Hero Section */}
-        <section className="py-32">
+        <section className="relative min-h-[50vh] lg:min-h-[70vh] flex items-center pt-20">
+          <Image
+            src="/seguros-salud-hero.jpg"
+            alt="Familia protegida con seguro complementario de salud"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 z-[1] hidden lg:block" style={{ background: "linear-gradient(to right, white 0%, white 25%, transparent 60%)" }} />
+          <div className="container mx-auto px-4 relative z-10 hidden lg:block">
+            <RevealOnScroll className="max-w-4xl ml-8 lg:ml-16 space-y-3">
+              <h1 className="text-4xl font-bold text-[#cc0033] drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)]">Seguro Complementario<br />de Salud</h1>
+              <div>
+                <Button onClick={scrollToForm} className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3 shadow-lg">
+                  Solicitar Asesoría
+                </Button>
+              </div>
+            </RevealOnScroll>
+          </div>
+        </section>
+
+        {/* Introducción */}
+        <section className="py-16 lg:py-32">
           <div className="container mx-auto px-4">
-            <RevealOnScroll className="max-w-4xl mx-auto text-center space-y-6">
-              <h1 className="text-4xl font-bold text-[#cc0033]">Seguro Complementario de Salud</h1>
+            {/* Título y botón solo en móvil */}
+            <div className="lg:hidden max-w-4xl mx-auto space-y-3 mb-8">
+              <h1 className="text-3xl font-bold text-[#cc0033]">Seguro Complementario<br />de Salud</h1>
+              <div>
+                <Button onClick={scrollToForm} className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3">
+                  Solicitar Asesoría
+                </Button>
+              </div>
+            </div>
+            <RevealOnScroll className="max-w-4xl mx-auto space-y-6">
               <p className="text-base text-gray-700 leading-[1.1]">
                 El Seguro Complementario de Salud es un beneficio altamente valorado por las empresas que buscan
                 entregar una mejor protección a sus trabajadores frente a gastos médicos no cubiertos completamente
@@ -130,11 +160,6 @@ export default function SegurosSaludClient() {
                 estratégica para fortalecer la propuesta de valor hacia sus colaboradores, mejorar la retención de
                 talento y respaldar a los equipos ante eventos de salud imprevistos.
               </p>
-              <div className="pt-4">
-                <Button onClick={scrollToForm} className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3">
-                  Solicitar Asesoría
-                </Button>
-              </div>
             </RevealOnScroll>
 
             {/* Marquee */}
