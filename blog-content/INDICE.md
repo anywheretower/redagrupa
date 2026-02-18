@@ -1,0 +1,61 @@
+# Índice del Blog RedAgrupa
+
+55 artículos ordenados por fecha de publicación (más reciente primero).
+
+| # | Fecha | Slug | Archivo |
+|---|-------|------|---------|
+| 1 | 2024-06-28 | espacio-trabajo | [espacio-trabajo.md](./espacio-trabajo.md) |
+| 2 | 2024-06-28 | imagen-corporativa | [imagen-corporativa.md](./imagen-corporativa.md) |
+| 3 | 2024-06-27 | elementos-proteccion-personal | [elementos-proteccion-personal.md](./elementos-proteccion-personal.md) |
+| 4 | 2024-06-27 | reclutamiento-seleccion-personal | [reclutamiento-seleccion-personal.md](./reclutamiento-seleccion-personal.md) |
+| 5 | 2024-06-24 | pausas-activas | [pausas-activas.md](./pausas-activas.md) |
+| 6 | 2024-06-24 | canal-denuncias | [canal-denuncias.md](./canal-denuncias.md) |
+| 7 | 2024-06-24 | multas-direccion-trabajo | [multas-direccion-trabajo.md](./multas-direccion-trabajo.md) |
+| 8 | 2024-06-24 | entrevista-laboral | [entrevista-laboral.md](./entrevista-laboral.md) |
+| 9 | 2024-06-22 | proyecto-pretensiones-renta | [proyecto-pretensiones-renta.md](./proyecto-pretensiones-renta.md) |
+| 10 | 2024-06-22 | accidentes-laborales | [accidentes-laborales.md](./accidentes-laborales.md) |
+| 11 | 2024-06-22 | carta-aviso-despido | [carta-aviso-despido.md](./carta-aviso-despido.md) |
+| 12 | 2024-06-21 | causales-de-despido | [causales-de-despido.md](./causales-de-despido.md) |
+| 13 | 2024-06-07 | carta-oferta-laboral | [carta-oferta-laboral.md](./carta-oferta-laboral.md) |
+| 14 | 2024-06-07 | gestion-personal | [gestion-personal.md](./gestion-personal.md) |
+| 15 | 2024-06-07 | otec-cursos | [otec-cursos.md](./otec-cursos.md) |
+| 16 | 2024-06-07 | teletrabajo | [teletrabajo.md](./teletrabajo.md) |
+| 17 | 2024-06-05 | descuento-afc | [descuento-afc.md](./descuento-afc.md) |
+| 18 | 2024-06-05 | licencias-medicas | [licencias-medicas.md](./licencias-medicas.md) |
+| 19 | 2024-06-05 | ley-de-conciliacion | [ley-de-conciliacion.md](./ley-de-conciliacion.md) |
+| 20 | 2024-06-05 | capacitaciones-laborales | [capacitaciones-laborales.md](./capacitaciones-laborales.md) |
+| 21 | 2024-05-27 | ley-corta-de-isapres | [ley-corta-de-isapres.md](./ley-corta-de-isapres.md) |
+| 22 | 2024-05-27 | contrato-de-prestacion-de-servicios | [contrato-de-prestacion-de-servicios.md](./contrato-de-prestacion-de-servicios.md) |
+| 23 | 2024-05-27 | ley-de-inclusion-laboral | [ley-de-inclusion-laboral.md](./ley-de-inclusion-laboral.md) |
+| 24 | 2024-05-27 | ley-karin | [ley-karin.md](./ley-karin.md) |
+| 25 | 2024-01-10 | correccion-monetaria | [correccion-monetaria.md](./correccion-monetaria.md) |
+| 26 | 2024-01-10 | libro-de-asistencia | [libro-de-asistencia.md](./libro-de-asistencia.md) |
+| 27 | 2024-01-10 | situacion-tributaria-de-terceros | [situacion-tributaria-de-terceros.md](./situacion-tributaria-de-terceros.md) |
+| 28 | 2024-01-09 | pago-de-remuneraciones | [pago-de-remuneraciones.md](./pago-de-remuneraciones.md) |
+| 29 | 2023-12-27 | inicio-de-actividades | [inicio-de-actividades.md](./inicio-de-actividades.md) |
+| 30 | 2023-12-26 | feriados-chile-2024 | [feriados-chile-2024.md](./feriados-chile-2024.md) |
+| 31 | 2023-12-26 | carpeta-tributaria | [carpeta-tributaria.md](./carpeta-tributaria.md) |
+| 32 | 2023-12-23 | como-crear-una-empresa | [como-crear-una-empresa.md](./como-crear-una-empresa.md) |
+| 33 | 2023-11-28 | calcular-finiquito | [calcular-finiquito.md](./calcular-finiquito.md) |
+| 34 | 2023-11-28 | perfil-de-cargo | [perfil-de-cargo.md](./perfil-de-cargo.md) |
+| 35 | 2023-10-03 | tope-imponible | [tope-imponible.md](./tope-imponible.md) |
+| 36 | 2023-10-03 | valor-hora-extra | [valor-hora-extra.md](./valor-hora-extra.md) |
+| 37 | 2023-10-03 | hora-extra | [hora-extra.md](./hora-extra.md) |
+| 38 | 2023-10-03 | jornada-laboral | [jornada-laboral.md](./jornada-laboral.md) |
+| 39 | 2023-10-03 | cotizaciones-previsionales | [cotizaciones-previsionales.md](./cotizaciones-previsionales.md) |
+| 40 | 2023-10-03 | pago-finiquito | [pago-finiquito.md](./pago-finiquito.md) |
+| 41 | 2023-09-04 | aguinaldo | [aguinaldo.md](./aguinaldo.md) |
+| 42 | 2023-09-04 | sueldo-bruto-a-liquido | [sueldo-bruto-a-liquido.md](./sueldo-bruto-a-liquido.md) |
+| 43 | 2023-09-04 | gratificacion-legal | [gratificacion-legal.md](./gratificacion-legal.md) |
+| 44 | 2023-09-04 | jornada-de-trabajo | [jornada-de-trabajo.md](./jornada-de-trabajo.md) |
+| 45 | 2023-07-11 | liquidaciones-de-sueldo | [liquidaciones-de-sueldo.md](./liquidaciones-de-sueldo.md) |
+| 46 | 2023-07-11 | evaluacion-de-desempeno | [evaluacion-de-desempeno.md](./evaluacion-de-desempeno.md) |
+| 47 | 2023-07-11 | gestion-del-desempeno | [gestion-del-desempeno.md](./gestion-del-desempeno.md) |
+| 48 | 2023-06-09 | alza-isapre | [alza-isapre.md](./alza-isapre.md) |
+| 49 | 2023-06-08 | beneficios-laborales | [beneficios-laborales.md](./beneficios-laborales.md) |
+| 50 | 2023-06-08 | incentivos-laborales | [incentivos-laborales.md](./incentivos-laborales.md) |
+| 51 | 2023-06-08 | rotacion-de-personal | [rotacion-de-personal.md](./rotacion-de-personal.md) |
+| 52 | 2023-05-05 | enfermedades-preexistentes | [enfermedades-preexistentes.md](./enfermedades-preexistentes.md) |
+| 53 | 2023-02-07 | fonasa-o-isapre | [fonasa-o-isapre.md](./fonasa-o-isapre.md) |
+| 54 | 2023-02-07 | proyecto-40-horas | [proyecto-40-horas.md](./proyecto-40-horas.md) |
+| 55 | 2023-01-06 | calculo-vacaciones-proporcionales | [calculo-vacaciones-proporcionales.md](./calculo-vacaciones-proporcionales.md) |
