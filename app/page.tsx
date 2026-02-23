@@ -21,6 +21,7 @@ import ScrollButton from "@/components/ScrollButton" // Declare the ScrollButton
 import MobileMenu from "@/components/MobileMenu" // Declare the MobileMenu variable before using it
 import ScrollHeader from "@/components/ScrollHeader" // Declare the ScrollHeader variable before using it
 import Footer from "@/components/Footer"
+import ContactForm from "@/components/ContactForm"
 import { useState, useEffect, useCallback } from "react"
 import useEmblaCarousel from "embla-carousel-react"
 import Autoplay from "embla-carousel-autoplay"
@@ -977,121 +978,10 @@ export default function HomePage() {
         <div className="container mx-auto px-4 sm:px-6 h-full relative z-10">
           <div className="flex items-center min-h-0 lg:min-h-[700px] py-12">
             <RevealOnScroll className="max-w-lg w-full bg-white/95 backdrop-blur-sm rounded-2xl p-5 sm:p-6 lg:p-8 shadow-2xl">
-              <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-[#333333] text-center mb-6 leading-snug">
-                Tranquilo, sabemos cómo hacer simples los seguros complementarios, ¡Conversemos!
-              </h2>
-
-              <form className="space-y-4">
-                {/* Nombre completo - Full width */}
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Nombre Completo"
-                    className="w-full px-4 py-3 text-sm bg-gray-100 text-[#333333] placeholder-gray-400 rounded-lg border-none focus:outline-none focus:ring-2 focus:ring-[#cc0033] transition-all"
-                    required
-                  />
-                </div>
-
-                {/* Email and Phone - Two columns */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <input
-                      type="email"
-                      placeholder="Email"
-                      className="w-full px-4 py-3 text-sm bg-gray-100 text-[#333333] placeholder-gray-400 rounded-lg border-none focus:outline-none focus:ring-2 focus:ring-[#cc0033] transition-all"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="tel"
-                      placeholder="Teléfono"
-                      className="w-full px-4 py-3 text-sm bg-gray-100 text-[#333333] placeholder-gray-400 rounded-lg border-none focus:outline-none focus:ring-2 focus:ring-[#cc0033] transition-all"
-                      required
-                    />
-                  </div>
-                </div>
-
-                {/* Company Name and Industry - Two columns */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <input
-                      type="text"
-                      placeholder="Nombre Empresa"
-                      className="w-full px-4 py-3 text-sm bg-gray-100 text-[#333333] placeholder-gray-400 rounded-lg border-none focus:outline-none focus:ring-2 focus:ring-[#cc0033] transition-all"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="text"
-                      placeholder="Rubro"
-                      className="w-full px-4 py-3 text-sm bg-gray-100 text-[#333333] placeholder-gray-400 rounded-lg border-none focus:outline-none focus:ring-2 focus:ring-[#cc0033] transition-all"
-                      required
-                    />
-                  </div>
-                </div>
-
-                {/* Number of Employees and Reason - Two columns */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <input
-                      type="number"
-                      placeholder="Cantidad de Empleados"
-                      className="w-full px-4 py-3 text-sm bg-gray-100 text-[#333333] placeholder-gray-400 rounded-lg border-none focus:outline-none focus:ring-2 focus:ring-[#cc0033] transition-all"
-                      required
-                    />
-                  </div>
-                  <div className="relative">
-                    <select
-                      className="w-full px-4 py-3 text-sm bg-gray-100 text-gray-600 rounded-lg border-none focus:outline-none focus:ring-2 focus:ring-[#cc0033] transition-all appearance-none cursor-pointer"
-                      required
-                    >
-                      <option value="">Motivo</option>
-                      <option value="cotizacion">Cotización</option>
-                      <option value="consulta">Consulta</option>
-                      <option value="informacion">Más información</option>
-                      <option value="otro">Otro</option>
-                    </select>
-                    <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-6 h-6 text-[#cc0033] pointer-events-none" />
-                  </div>
-                </div>
-
-                {/* Message - Full width */}
-                <div>
-                  <textarea
-                    placeholder="Mensaje"
-                    rows={4}
-                    className="w-full px-4 py-3 text-sm bg-gray-100 text-[#333333] placeholder-gray-400 rounded-lg border-none focus:outline-none focus:ring-2 focus:ring-[#cc0033] transition-all resize-none"
-                    required
-                  ></textarea>
-                </div>
-
-                {/* Submit Button */}
-                <button
-                  type="submit"
-                  className="w-full bg-[#cc0033] text-white font-semibold py-3 min-h-[48px] rounded-full hover:bg-[#a00029] transition-colors text-sm"
-                >
-                  Enviar Mensaje
-                </button>
-
-                {/* Privacy Notice */}
-                <div className="flex items-center justify-center gap-2 text-xs text-gray-500 pt-2">
-                  <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      fillRule="evenodd"
-                      d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  <span>
-                    Tus datos estan 100% protegidos.{" "}
-                    <a href="/politicas-de-privacidad" className="underline hover:text-[#cc0033]">
-                      Ver políticas
-                    </a>
-                  </span>
-                </div>
-              </form>
+              <ContactForm
+                pagina="landing"
+                heading="Tranquilo, sabemos cómo hacer simples los seguros complementarios, ¡Conversemos!"
+              />
             </RevealOnScroll>
           </div>
         </div>

@@ -7,8 +7,6 @@ import {
   Facebook,
   Instagram,
   Linkedin,
-  Lock,
-  ChevronDown,
   CheckCircle2,
   ExternalLink,
   MapPin,
@@ -18,6 +16,7 @@ import {
 import { Button } from "@/components/ui/button"
 import MobileMenu from "@/components/MobileMenu"
 import Footer from "@/components/Footer"
+import ContactForm from "@/components/ContactForm"
 import RevealOnScroll from "@/components/RevealOnScroll"
 import { motion } from "motion/react"
 import { staggerContainer, staggerItem } from "@/lib/animations"
@@ -472,96 +471,10 @@ export default function BicePymeClient() {
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto items-center">
               <RevealOnScroll className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 lg:p-8 shadow-2xl">
-                <h2 className="text-xl lg:text-2xl font-bold text-[#333333] text-center mb-6 leading-snug">
-                  Tranquilo, sabemos como hacer simples los seguros complementarios, ¡Conversemos!
-                </h2>
-
-                <form className="space-y-4">
-                  <div>
-                    <input
-                      type="text"
-                      placeholder="Nombre Completo"
-                      className="w-full px-4 py-2.5 bg-gray-100 border-0 rounded-lg text-sm text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#cc0033]"
-                    />
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                      <input
-                        type="email"
-                        placeholder="Email"
-                        className="w-full px-4 py-2.5 bg-gray-100 border-0 rounded-lg text-sm text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#cc0033]"
-                      />
-                    </div>
-                    <div>
-                      <input
-                        type="tel"
-                        placeholder="Telefono"
-                        className="w-full px-4 py-2.5 bg-gray-100 border-0 rounded-lg text-sm text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#cc0033]"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                      <input
-                        type="text"
-                        placeholder="Nombre Empresa"
-                        className="w-full px-4 py-2.5 bg-gray-100 border-0 rounded-lg text-sm text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#cc0033]"
-                      />
-                    </div>
-                    <div>
-                      <input
-                        type="text"
-                        placeholder="Rubro"
-                        className="w-full px-4 py-2.5 bg-gray-100 border-0 rounded-lg text-sm text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#cc0033]"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                      <input
-                        type="number"
-                        placeholder="Cantidad de Empleados"
-                        className="w-full px-4 py-2.5 bg-gray-100 border-0 rounded-lg text-sm text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#cc0033]"
-                      />
-                    </div>
-                    <div className="relative">
-                      <select className="w-full px-4 py-2.5 bg-gray-100 border-0 rounded-lg text-sm text-gray-700 appearance-none focus:outline-none focus:ring-2 focus:ring-[#cc0033]">
-                        <option value="">Motivo</option>
-                        <option value="cotizacion">Cotizacion</option>
-                        <option value="consulta">Consulta</option>
-                        <option value="informacion">Mas informacion</option>
-                        <option value="otro">Otro</option>
-                      </select>
-                      <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#cc0033] pointer-events-none" />
-                    </div>
-                  </div>
-
-                  <div>
-                    <textarea
-                      placeholder="Mensaje"
-                      rows={4}
-                      className="w-full px-4 py-2.5 bg-gray-100 border-0 rounded-lg text-sm text-gray-900 placeholder-gray-500 resize-none focus:outline-none focus:ring-2 focus:ring-[#cc0033]"
-                    ></textarea>
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full bg-[#cc0033] text-white py-3 rounded-full text-sm font-medium hover:bg-[#b30029] transition-colors shadow-lg"
-                  >
-                    Enviar Mensaje
-                  </button>
-
-                  <p className="text-xs text-center text-gray-600 flex items-center justify-center gap-1">
-                    <Lock className="w-3 h-3" />
-                    Tus datos estan 100% protegidos.{" "}
-                    <a href="/politicas-de-privacidad" className="text-[#cc0033] underline hover:no-underline">
-                      Ver politicas
-                    </a>
-                  </p>
-                </form>
+                <ContactForm
+                  pagina="bice-pyme"
+                  heading="Tranquilo, sabemos cómo hacer simples los seguros complementarios, ¡Conversemos!"
+                />
               </RevealOnScroll>
 
               <div className="space-y-6">
