@@ -709,15 +709,15 @@ export default function HomePage() {
               />
               <h3 className="text-lg font-semibold text-[#333333]">Seguros Bupa</h3>
               <div className="space-y-2 pt-2">
-                <a href="https://redagrupa.cl/bupa-incorporacion/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="/formularios/bupa-incorporacion.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Incorporación</span>
                 </a>
-                <a href="https://redagrupa.cl/bupa-reembolso-dental/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="/formularios/bupa-reembolso-dental.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Reembolso dental</span>
                 </a>
-                <a href="https://redagrupa.cl/bupa-reembolso-salud/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="/formularios/bupa-reembolso-salud.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Reembolso de salud</span>
                 </a>
@@ -735,15 +735,15 @@ export default function HomePage() {
               />
               <h3 className="text-lg font-semibold text-[#333333]">Bice Vida</h3>
               <div className="space-y-2 pt-2">
-                <a href="https://redagrupa.cl/bicevida-incorporacion/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="/formularios/bicevida-incorporacion.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Incorporación</span>
                 </a>
-                <a href="https://redagrupa.cl/bicevida-reembolso-dental/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="/formularios/bicevida-reembolso-dental.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Reembolso dental</span>
                 </a>
-                <a href="https://redagrupa.cl/bicevida-reembolso-salud/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="/formularios/bicevida-reembolso-salud.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Reembolso de salud</span>
                 </a>
@@ -761,15 +761,15 @@ export default function HomePage() {
               />
               <h3 className="text-lg font-semibold text-[#333333]">Seguros Sura</h3>
               <div className="space-y-2 pt-2">
-                <a href="https://redagrupa.cl/sura-incorporacion/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="/formularios/sura-incorporacion.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Incorporación</span>
                 </a>
-                <a href="https://redagrupa.cl/sura-reembolso-dental/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="/formularios/sura-reembolso-dental.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Reembolso dental</span>
                 </a>
-                <a href="https://redagrupa.cl/sura-reembolso-salud/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="/formularios/sura-reembolso-salud.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Reembolso de salud</span>
                 </a>
@@ -787,15 +787,15 @@ export default function HomePage() {
               />
               <h3 className="text-lg font-semibold text-[#333333]">Consorcio</h3>
               <div className="space-y-2 pt-2">
-                <a href="https://redagrupa.cl/consorcio-incorporacion/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="/formularios/consorcio-incorporacion.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Incorporación</span>
                 </a>
-                <a href="https://redagrupa.cl/consorcio-reembolso-dental/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="/formularios/consorcio-reembolso-dental.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Reembolso dental</span>
                 </a>
-                <a href="https://redagrupa.cl/consorcio-reembolso-salud/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="/formularios/consorcio-reembolso-salud.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Reembolso de salud</span>
                 </a>
@@ -813,15 +813,15 @@ export default function HomePage() {
               />
               <h3 className="text-lg font-semibold text-[#333333]">MetLife</h3>
               <div className="space-y-2 pt-2">
-                <a href="https://redagrupa.cl/metlife-incorporacion/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="/formularios/metlife-incorporacion.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Incorporación</span>
                 </a>
-                <a href="https://redagrupa.cl/metlife-reembolso-dental/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="/formularios/metlife-reembolso-dental.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Reembolso dental</span>
                 </a>
-                <a href="https://redagrupa.cl/metlife-reembolso-salud/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="/formularios/metlife-reembolso-salud.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Reembolso de salud</span>
                 </a>
@@ -839,15 +839,15 @@ export default function HomePage() {
               />
               <h3 className="text-lg font-semibold text-[#333333]">BCI Seguros</h3>
               <div className="space-y-2 pt-2">
-                <a href="https://redagrupa.cl/bci-incorporacion/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="/formularios/bci-incorporacion.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Incorporación</span>
                 </a>
-                <a href="https://redagrupa.cl/bci-reembolso-dental/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="/formularios/bci-reembolso-dental.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Reembolso dental</span>
                 </a>
-                <a href="https://redagrupa.cl/bci-reembolso-salud/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="/formularios/bci-reembolso-salud.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Reembolso de salud</span>
                 </a>
@@ -865,19 +865,19 @@ export default function HomePage() {
               />
               <h3 className="text-lg font-semibold text-[#333333]">Vida Security</h3>
               <div className="space-y-2 pt-2">
-                <a href="https://redagrupa.cl/vidasecurity-incorporacion/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="/formularios/vidasecurity-incorporacion.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Incorporación</span>
                 </a>
-                <a href="https://redagrupa.cl/vidasecurity-informe-medico-tratante/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="/formularios/vidasecurity-informe-medico-tratante.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Informe médico tratante</span>
                 </a>
-                <a href="https://redagrupa.cl/vidasecurity-reembolso-dental/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="/formularios/vidasecurity-reembolso-dental.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Reembolso dental</span>
                 </a>
-                <a href="https://redagrupa.cl/vidasecurity-reembolso-salud/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="/formularios/vidasecurity-reembolso-salud.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Reembolso de salud</span>
                 </a>
@@ -895,15 +895,15 @@ export default function HomePage() {
               />
               <h3 className="text-lg font-semibold text-[#333333]">Help Seguros</h3>
               <div className="space-y-2 pt-2">
-                <a href="https://redagrupa.cl/help-incorporacion/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="/formularios/help-incorporacion.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Incorporación</span>
                 </a>
-                <a href="https://redagrupa.cl/help-reembolso-dental/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="/formularios/help-reembolso-dental.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Reembolso dental</span>
                 </a>
-                <a href="https://redagrupa.cl/help-reembolso-salud/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="/formularios/help-reembolso-salud.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Reembolso de salud</span>
                 </a>
@@ -921,19 +921,19 @@ export default function HomePage() {
               />
               <h3 className="text-lg font-semibold text-[#333333]">Chilena Consolidada</h3>
               <div className="space-y-2 pt-2">
-                <a href="https://redagrupa.cl/chilenaconsolidada-incorporacion/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="/formularios/chilenaconsolidada-incorporacion.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Incorporación</span>
                 </a>
-                <a href="https://redagrupa.cl/chilenaconsolidada-informe-medico-tratante/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="/formularios/chilenaconsolidada-informe-medico-tratante.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Informe médico tratante</span>
                 </a>
-                <a href="https://redagrupa.cl/chilenaconsolidada-reembolso-dental/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="/formularios/chilenaconsolidada-reembolso-dental.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Reembolso dental</span>
                 </a>
-                <a href="https://redagrupa.cl/chilenaconsolidada-reembolso-salud/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="/formularios/chilenaconsolidada-reembolso-salud.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Reembolso de salud</span>
                 </a>
