@@ -174,8 +174,11 @@ export default function BlogPostClient({
             <Button
               variant="outline"
               className="bg-transparent border-white text-white hover:bg-white/10 w-[180px]"
+              asChild
             >
-              Agendar orientación
+              <Link href="/#formulario-contacto">
+                Solicitar Asesoría
+              </Link>
             </Button>
             <Button
               variant="outline"
@@ -199,7 +202,7 @@ export default function BlogPostClient({
       {/* Fixed RRSS Sidebar */}
       <div className="fixed right-6 top-1/2 -translate-y-1/2 z-40 flex flex-col gap-2">
         <a
-          href="https://facebook.com"
+          href="https://www.facebook.com/RedAgrupa/"
           target="_blank"
           rel="noopener noreferrer"
           className="w-9 h-9 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
@@ -207,7 +210,7 @@ export default function BlogPostClient({
           <Facebook className="w-4 h-4 text-white" strokeWidth={1.5} />
         </a>
         <a
-          href="https://instagram.com"
+          href="https://www.instagram.com/redagrupa/"
           target="_blank"
           rel="noopener noreferrer"
           className="w-9 h-9 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
@@ -215,7 +218,7 @@ export default function BlogPostClient({
           <Instagram className="w-4 h-4 text-white" strokeWidth={1.5} />
         </a>
         <a
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/company/redagrupa"
           target="_blank"
           rel="noopener noreferrer"
           className="w-9 h-9 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"

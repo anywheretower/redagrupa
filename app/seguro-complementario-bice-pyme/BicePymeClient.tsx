@@ -129,7 +129,7 @@ export default function BicePymeClient() {
               className="bg-transparent border-white text-white hover:bg-white/10 w-[180px]"
               onClick={scrollToForm}
             >
-              Agendar orientacion
+              Solicitar Asesoría
             </Button>
             <Button
               variant="outline"
@@ -459,7 +459,7 @@ export default function BicePymeClient() {
                   className="border-[#cc0033] text-[#cc0033] hover:bg-red-50 px-8 py-3 w-full sm:w-64"
                   onClick={scrollToForm}
                 >
-                  Necesito asesoria
+                  Solicitar Asesoría
                 </Button>
               </div>
             </div>

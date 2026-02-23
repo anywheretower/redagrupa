@@ -370,7 +370,7 @@ export default function HomePage() {
               variant="outline"
               className="bg-transparent border-white text-white hover:bg-white/10 w-[180px]"
             >
-              Agendar orientación
+              Solicitar Asesoría
             </ScrollButton>
             <Button
               variant="outline"
@@ -462,7 +462,7 @@ export default function HomePage() {
                   targetId="formulario-contacto"
                   className="bg-[#cc0033] text-white hover:bg-[#a30029] px-6 sm:px-8 py-3 text-sm sm:text-base font-normal w-full sm:w-64"
                 >
-                  Solicita Orientación Sin Costo
+                  Solicitar Asesoría
                 </ScrollButton>
                 <ScrollButton
                   targetId="seccion-aseguradoras"
@@ -536,7 +536,7 @@ export default function HomePage() {
                   targetId="formulario-contacto"
                   className="bg-[#cc0033] text-white px-8 py-3"
                 >
-                  Quiero simplificar mi seguro ahora
+                  Solicitar Asesoría
                 </ScrollButton>
               </div>
             </RevealOnScroll>
@@ -620,7 +620,7 @@ export default function HomePage() {
               targetId="formulario-contacto"
               className="px-6 sm:px-8 py-3 bg-[#cc0033] text-white hover:bg-[#a30029] transition-colors rounded text-sm sm:text-base"
             >
-              ¿Quieres una asesoría personalizada?
+              Solicitar Asesoría
             </ScrollButton>
           </RevealOnScroll>
 
@@ -791,7 +791,7 @@ export default function HomePage() {
                   <Download className="w-4 h-4" />
                   <span>Incorporación</span>
                 </a>
-                <a href="https://redagrupa.cl/consorcio-reembolso-denta/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="https://redagrupa.cl/consorcio-reembolso-dental/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Reembolso dental</span>
                 </a>

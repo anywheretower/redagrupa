@@ -69,7 +69,7 @@ export default function BeneficiosClient() {
               className="bg-transparent border-white text-white hover:bg-white/10 w-[180px]"
               onClick={scrollToForm}
             >
-              Agendar orientación
+              Solicitar Asesoría
             </Button>
             <Button
               variant="outline"
@@ -129,7 +129,7 @@ export default function BeneficiosClient() {
               <h1 className="text-4xl font-bold text-[#cc0033] drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)]">Beneficios de Salud<br />para Empresas</h1>
               <div>
                 <Button onClick={scrollToForm} className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3 shadow-lg">
-                  Conoce los Beneficios
+                  Solicitar Asesoría
                 </Button>
               </div>
             </RevealOnScroll>
@@ -144,7 +144,7 @@ export default function BeneficiosClient() {
               <h1 className="text-3xl font-bold text-[#cc0033]">Beneficios de Salud<br />para Empresas</h1>
               <div>
                 <Button onClick={scrollToForm} className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3">
-                  Conoce los Beneficios
+                  Solicitar Asesoría
                 </Button>
               </div>
             </div>
@@ -473,7 +473,7 @@ export default function BeneficiosClient() {
               </p>
               <div className="pt-4">
                 <Button onClick={scrollToForm} className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3">
-                  Accede a los Beneficios para tu empresa
+                  Solicitar Asesoría
                 </Button>
               </div>
             </RevealOnScroll>

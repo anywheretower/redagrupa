@@ -73,7 +73,7 @@ export default function BicePersonasClient() {
               className="bg-transparent border-white text-white hover:bg-white/10 w-[180px]"
               onClick={scrollToForm}
             >
-              Agendar orientacion
+              Solicitar Asesoría
             </Button>
             <Button
               variant="outline"
@@ -152,7 +152,7 @@ export default function BicePersonasClient() {
                   className="border-[#cc0033] text-[#cc0033] hover:bg-red-50 px-8 py-3 w-full sm:w-64"
                   onClick={scrollToForm}
                 >
-                  Necesito asesoria
+                  Solicitar Asesoría
                 </Button>
               </div>
             </RevealOnScroll>
@@ -412,7 +412,7 @@ export default function BicePersonasClient() {
                   className="border-[#cc0033] text-[#cc0033] hover:bg-red-50 px-8 py-3 w-full sm:w-64"
                   onClick={scrollToForm}
                 >
-                  Necesito asesoria
+                  Solicitar Asesoría
                 </Button>
               </div>
             </RevealOnScroll>
@@ -486,7 +486,7 @@ export default function BicePersonasClient() {
                     type="submit"
                     className="w-full bg-[#cc0033] text-white py-3 rounded-full text-sm font-medium hover:bg-[#b30029] transition-colors shadow-lg"
                   >
-                    Enviar consulta
+                    Enviar Mensaje
                   </button>
 
                   <p className="text-xs text-center text-gray-600 flex items-center justify-center gap-1">

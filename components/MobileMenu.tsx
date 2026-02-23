@@ -73,7 +73,7 @@ export default function MobileMenu() {
               className="bg-transparent border-white text-white hover:bg-white/10 w-full py-3 mt-4"
               onClick={() => setIsOpen(false)}
             >
-              Agendar orientación
+              Solicitar Asesoría
             </ScrollButton>
           </div>
         </div>

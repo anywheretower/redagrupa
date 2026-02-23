@@ -69,7 +69,7 @@ export default function SegurosSaludClient() {
               className="bg-transparent border-white text-white hover:bg-white/10 w-[180px]"
               onClick={scrollToForm}
             >
-              Agendar orientación
+              Solicitar Asesoría
             </Button>
             <Button
               variant="outline"
@@ -350,7 +350,7 @@ export default function SegurosSaludClient() {
               </p>
               <div className="pt-4">
                 <Button onClick={scrollToForm} className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3">
-                  Recibe una propuesta para tu empresa
+                  Solicitar Asesoría
                 </Button>
               </div>
             </RevealOnScroll>
