@@ -143,7 +143,7 @@ export default function BicePersonasClient() {
               <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3 w-full sm:w-64">
                   <a href="https://segurocomplementariosalud.bicevida.cl/?negocio=aEd0TFolRnQjQzY17OVzwP1NaCN6_V6AdjkZ9TXI5bnYVyiV0rM" target="_blank" rel="noopener noreferrer">
-                    Contrata Aqui
+                    Contrata Aquí
                   </a>
                 </Button>
                 <Button
@@ -403,7 +403,7 @@ export default function BicePersonasClient() {
               <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3 w-full sm:w-64">
                   <a href="https://segurocomplementariosalud.bicevida.cl/?negocio=aEd0TFolRnQjQzY17OVzwP1NaCN6_V6AdjkZ9TXI5bnYVyiV0rM" target="_blank" rel="noopener noreferrer">
-                    Contrata Aqui
+                    Contrata Aquí
                   </a>
                 </Button>
                 <Button

@@ -200,7 +200,7 @@ export default function BicePymeClient() {
               <div className="pt-4">
                 <Button asChild className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3 w-full sm:w-64">
                   <a href={CONTRATA_URL} target="_blank" rel="noopener noreferrer">
-                    Contrata Aqui
+                    Contrata Aquí
                   </a>
                 </Button>
               </div>
@@ -362,7 +362,7 @@ export default function BicePymeClient() {
                           : "text-[#cc0033] hover:bg-red-50"
                       }`}
                     >
-                      Contrata Aqui
+                      Contrata Aquí
                       <ExternalLink className="w-4 h-4" />
                     </a>
                   </motion.div>
@@ -450,7 +450,7 @@ export default function BicePymeClient() {
               <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3 w-full sm:w-64">
                   <a href={CONTRATA_URL} target="_blank" rel="noopener noreferrer">
-                    Contrata Aqui
+                    Contrata Aquí
                   </a>
                 </Button>
                 <Button
