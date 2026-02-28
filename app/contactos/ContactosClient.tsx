@@ -190,10 +190,10 @@ export default function ContactosClient() {
               className="px-3 py-2 text-sm bg-gray-100 rounded-lg border-none focus:ring-2 focus:ring-[#cc0033] outline-none"
             >
               <option value="">Todos</option>
-              <option value="Cotizar seguro">Cotizar seguro</option>
-              <option value="Información general">Información general</option>
-              <option value="Soporte">Soporte</option>
-              <option value="Otro">Otro</option>
+              <option value="cotizacion">Cotización</option>
+              <option value="consulta">Consulta</option>
+              <option value="informacion">Más información</option>
+              <option value="otro">Otro</option>
             </select>
           </div>
           {(desde || hasta || motivo) && (
@@ -217,11 +217,12 @@ export default function ContactosClient() {
               <table className="w-full text-sm">
                 <thead>
                   <tr className="bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className="px-4 py-3">ID</th>
                     <th className="px-4 py-3">Fecha</th>
-                    <th className="px-4 py-3">Nombre</th>
+                    <th className="px-4 py-3">Nombre Completo</th>
                     <th className="px-4 py-3">Email</th>
                     <th className="px-4 py-3 hidden sm:table-cell">Teléfono</th>
-                    <th className="px-4 py-3 hidden md:table-cell">Empresa</th>
+                    <th className="px-4 py-3 hidden md:table-cell">Nombre Empresa</th>
                     <th className="px-4 py-3 hidden lg:table-cell">Motivo</th>
                     <th className="px-4 py-3 hidden lg:table-cell">Página</th>
                   </tr>
@@ -233,6 +234,7 @@ export default function ContactosClient() {
                         onClick={() => setExpandedId(expandedId === c.id ? null : c.id)}
                         className="hover:bg-gray-50 cursor-pointer transition-colors"
                       >
+                        <td className="px-4 py-3 text-gray-400 whitespace-nowrap">{c.id}</td>
                         <td className="px-4 py-3 text-gray-500 whitespace-nowrap">{formatDate(c.created_at)}</td>
                         <td className="px-4 py-3 font-medium text-gray-900">{c.nombre}</td>
                         <td className="px-4 py-3 text-gray-600">{c.email}</td>
@@ -243,7 +245,7 @@ export default function ContactosClient() {
                       </tr>
                       {expandedId === c.id && (
                         <tr>
-                          <td colSpan={7} className="px-4 py-4 bg-gray-50">
+                          <td colSpan={8} className="px-4 py-4 bg-gray-50">
                             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm max-w-3xl">
                               <div>
                                 <span className="text-xs text-gray-400 block">Teléfono</span>
@@ -251,7 +253,7 @@ export default function ContactosClient() {
                               </div>
                               {c.empresa && (
                                 <div>
-                                  <span className="text-xs text-gray-400 block">Empresa</span>
+                                  <span className="text-xs text-gray-400 block">Nombre Empresa</span>
                                   <span className="text-gray-700">{c.empresa}</span>
                                 </div>
                               )}
@@ -263,7 +265,7 @@ export default function ContactosClient() {
                               )}
                               {c.cantidad_empleados && (
                                 <div>
-                                  <span className="text-xs text-gray-400 block">Empleados</span>
+                                  <span className="text-xs text-gray-400 block">Cantidad de Empleados</span>
                                   <span className="text-gray-700">{c.cantidad_empleados}</span>
                                 </div>
                               )}
@@ -272,7 +274,7 @@ export default function ContactosClient() {
                                 <span className="text-gray-700">{c.motivo}</span>
                               </div>
                               <div>
-                                <span className="text-xs text-gray-400 block">Página</span>
+                                <span className="text-xs text-gray-400 block">Página de origen</span>
                                 <span className="text-gray-700">{c.pagina}</span>
                               </div>
                               {c.mensaje && (
