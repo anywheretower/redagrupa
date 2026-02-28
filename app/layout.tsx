@@ -13,7 +13,6 @@ export const metadata: Metadata = {
   title: "RedAgrupa - Gestión de Seguros Complementarios para Pymes",
   description:
     "Gestiona tus seguros complementarios de salud para que tu pyme y tu equipo estén protegidos, sin trámites eternos ni lenguaje técnico imposible.",
-  generator: "v0.app",
   icons: {
     icon: [
       {
