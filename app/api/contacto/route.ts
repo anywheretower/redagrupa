@@ -71,11 +71,9 @@ export async function POST(request: Request) {
     `
 
     const { error } = await resend.emails.send({
-      from: "RedAgrupa Web <onboarding@resend.dev>",
+      from: "RedAgrupa Web <contacto@redagrupa.cl>",
       to: "contacto@jorgetorres.cl",
-      // TODO: Restaurar destinatarios reales cuando se verifique el dominio en Resend
-      // to: "cwinter@redagrupa.cl",
-      // cc: ["mcostabal@redagrupa.cl", "pfuentes@dorigenes.cl"],
+      cc: ["valeska.fajardo.h@gmail.com"],
       replyTo: data.email,
       subject: `Nuevo contacto desde ${data.pagina} - ${data.nombre}`,
       html,
