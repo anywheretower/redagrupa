@@ -223,7 +223,10 @@ export default function ContactosClient() {
                     <th className="px-4 py-3">Email</th>
                     <th className="px-4 py-3 hidden sm:table-cell">Teléfono</th>
                     <th className="px-4 py-3 hidden md:table-cell">Nombre Empresa</th>
+                    <th className="px-4 py-3 hidden md:table-cell">Rubro</th>
+                    <th className="px-4 py-3 hidden lg:table-cell">Cantidad de Empleados</th>
                     <th className="px-4 py-3 hidden lg:table-cell">Motivo</th>
+                    <th className="px-4 py-3 hidden lg:table-cell">Mensaje</th>
                     <th className="px-4 py-3 hidden lg:table-cell">Página</th>
                   </tr>
                 </thead>
@@ -240,12 +243,15 @@ export default function ContactosClient() {
                         <td className="px-4 py-3 text-gray-600">{c.email}</td>
                         <td className="px-4 py-3 text-gray-600 hidden sm:table-cell">{c.telefono}</td>
                         <td className="px-4 py-3 text-gray-600 hidden md:table-cell">{c.empresa || "—"}</td>
+                        <td className="px-4 py-3 text-gray-600 hidden md:table-cell">{c.rubro || "—"}</td>
+                        <td className="px-4 py-3 text-gray-600 hidden lg:table-cell">{c.cantidad_empleados || "—"}</td>
                         <td className="px-4 py-3 text-gray-600 hidden lg:table-cell">{c.motivo}</td>
+                        <td className="px-4 py-3 text-gray-600 hidden lg:table-cell max-w-[200px] truncate">{c.mensaje || "—"}</td>
                         <td className="px-4 py-3 text-gray-500 hidden lg:table-cell">{c.pagina}</td>
                       </tr>
                       {expandedId === c.id && (
                         <tr>
-                          <td colSpan={8} className="px-4 py-4 bg-gray-50">
+                          <td colSpan={11} className="px-4 py-4 bg-gray-50">
                             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm max-w-3xl">
                               <div>
                                 <span className="text-xs text-gray-400 block">Teléfono</span>
