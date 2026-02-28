@@ -80,7 +80,7 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
               className="bg-transparent border-white text-white hover:bg-white/10"
               asChild
             >
-              <a href="/contactos">
+              <a href="/contactos" target="_blank" rel="noopener noreferrer">
                 <UsersIcon className="h-5 w-5" />
               </a>
             </Button>
