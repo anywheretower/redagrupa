@@ -1,8 +1,9 @@
 "use client"
 
+import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { ChevronDown, Lock, Loader2 } from "lucide-react"
+import { ChevronDown, Lock, Loader2, CheckCircle2, X } from "lucide-react"
 import { toast } from "sonner"
 import { contactoSchema, contactoPersonasSchema, type ContactoData, type ContactoPersonasData } from "@/lib/schemas/contacto"
 
@@ -15,6 +16,7 @@ type ContactFormProps = {
 type FormData = ContactoData | ContactoPersonasData
 
 export default function ContactForm({ pagina, heading, variant = "standard" }: ContactFormProps) {
+  const [showSuccess, setShowSuccess] = useState(false)
   const isPersonas = variant === "personas"
   const schema = isPersonas ? contactoPersonasSchema : contactoSchema
 
@@ -40,10 +42,8 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
         throw new Error("Error al enviar")
       }
 
-      toast.success("¡Mensaje enviado!", {
-        description: "Nos pondremos en contacto contigo pronto.",
-      })
       reset()
+      setShowSuccess(true)
     } catch {
       toast.error("Error al enviar el mensaje", {
         description: "Por favor intenta nuevamente.",
@@ -215,6 +215,43 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
           </a>
         </p>
       </form>
+
+      {showSuccess && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-4"
+          onClick={() => setShowSuccess(false)}
+        >
+          <div
+            className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 text-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setShowSuccess(false)}
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            <div className="w-16 h-16 bg-[#cc0033] rounded-full flex items-center justify-center mx-auto mb-5">
+              <CheckCircle2 className="w-8 h-8 text-white" />
+            </div>
+
+            <h3 className="text-2xl font-bold text-[#333333] mb-2">
+              ¡Mensaje enviado!
+            </h3>
+            <p className="text-gray-600 mb-6">
+              Gracias por contactarnos. Nos pondremos en contacto contigo a la brevedad.
+            </p>
+
+            <button
+              onClick={() => setShowSuccess(false)}
+              className="bg-[#cc0033] text-white px-8 py-3 rounded-full text-sm font-medium hover:bg-[#a30029] transition-colors"
+            >
+              Entendido
+            </button>
+          </div>
+        </div>
+      )}
     </>
   )
 }
