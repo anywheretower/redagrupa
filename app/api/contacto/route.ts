@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server"
 import { Resend } from "resend"
 import { contactoSchema, contactoPersonasSchema } from "@/lib/schemas/contacto"
+import { getSupabaseAdmin } from "@/lib/supabase"
 
 export async function POST(request: Request) {
   try {
@@ -85,6 +86,23 @@ export async function POST(request: Request) {
         { error: "Error al enviar el email" },
         { status: 500 }
       )
+    }
+
+    // Save to Supabase (non-blocking — don't fail the request if this errors)
+    try {
+      await getSupabaseAdmin().from("contactos_redagrupa").insert({
+        nombre: data.nombre,
+        email: data.email,
+        telefono: data.telefono,
+        empresa: "empresa" in data ? data.empresa || null : null,
+        rubro: "rubro" in data ? (data as Record<string, string>).rubro || null : null,
+        cantidad_empleados: "cantidad_empleados" in data ? (data as Record<string, string>).cantidad_empleados || null : null,
+        motivo: data.motivo,
+        mensaje: "mensaje" in data ? data.mensaje || null : null,
+        pagina: data.pagina,
+      })
+    } catch (dbErr) {
+      console.error("Supabase insert error:", dbErr)
     }
 
     return NextResponse.json({ success: true })
