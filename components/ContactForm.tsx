@@ -182,7 +182,7 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
         {/* Mensaje */}
         <div>
           <textarea
-            placeholder={isPersonas ? "Mensaje (Opcional)" : "Mensaje"}
+            placeholder="Mensaje (Opcional)"
             rows={4}
             className="w-full px-4 py-2.5 bg-gray-100 border-0 rounded-lg text-sm text-gray-900 placeholder-gray-500 resize-none focus:outline-none focus:ring-2 focus:ring-[#cc0033]"
             {...register("mensaje")}

@@ -13,7 +13,7 @@ export const contactoSchema = z.object({
   empresa: z.string().min(1, "Ingresa el nombre de tu empresa"),
   rubro: z.string().min(1, "Ingresa el rubro de tu empresa"),
   cantidad_empleados: z.string().min(1, "Ingresa la cantidad de empleados"),
-  mensaje: z.string().min(1, "Escribe un mensaje"),
+  mensaje: z.string().optional(),
 })
 
 export const contactoPersonasSchema = z.object({
