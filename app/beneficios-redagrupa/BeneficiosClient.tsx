@@ -76,7 +76,7 @@ export default function BeneficiosClient() {
               className="bg-transparent border-white text-white hover:bg-white/10"
               asChild
             >
-              <a href="https://redagrupa.vercel.app/dashboard" target="_blank" rel="noopener noreferrer">
+              <a href="/contactos">
                 <UsersIcon className="h-5 w-5" />
               </a>
             </Button>
