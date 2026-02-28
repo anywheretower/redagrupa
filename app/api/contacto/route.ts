@@ -73,8 +73,8 @@ export async function POST(request: Request) {
 
     const { error } = await resend.emails.send({
       from: "RedAgrupa Web <contacto@redagrupa.cl>",
-      to: "contacto@jorgetorres.cl",
-      cc: ["valeska.fajardo.h@gmail.com"],
+      to: "cwinter@redagrupa.cl",
+      cc: ["mcostabal@redagrupa.cl", "pfuentes@dorigenes.cl"],
       replyTo: data.email,
       subject: `Nuevo contacto desde ${data.pagina} - ${data.nombre}`,
       html,
