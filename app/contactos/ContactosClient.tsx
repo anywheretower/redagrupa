@@ -33,6 +33,14 @@ export default function ContactosClient() {
   // Expanded row
   const [expandedId, setExpandedId] = useState<number | null>(null)
 
+  // Edit state
+  const [editingId, setEditingId] = useState<number | null>(null)
+  const [editForm, setEditForm] = useState<Partial<Contacto>>({})
+  const [saving, setSaving] = useState(false)
+
+  // Delete state
+  const [deletingId, setDeletingId] = useState<number | null>(null)
+
   const fetchContactos = useCallback(async () => {
     setCargandoContactos(true)
     try {
@@ -96,6 +104,60 @@ export default function ContactosClient() {
       setError("Error de conexión")
     } finally {
       setCargando(false)
+    }
+  }
+
+  const handleDelete = async (id: number) => {
+    setDeletingId(id)
+    try {
+      const res = await fetch("/api/contactos", {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id }),
+      })
+      if (res.ok) {
+        setContactos((prev) => prev.filter((c) => c.id !== id))
+        if (expandedId === id) setExpandedId(null)
+      }
+    } catch {
+      console.error("Error deleting contacto")
+    } finally {
+      setDeletingId(null)
+    }
+  }
+
+  const startEdit = (c: Contacto) => {
+    setEditingId(c.id)
+    setEditForm({
+      nombre: c.nombre,
+      email: c.email,
+      telefono: c.telefono,
+      empresa: c.empresa || "",
+      rubro: c.rubro || "",
+      cantidad_empleados: c.cantidad_empleados || "",
+      motivo: c.motivo,
+      mensaje: c.mensaje || "",
+    })
+  }
+
+  const handleSave = async () => {
+    if (!editingId) return
+    setSaving(true)
+    try {
+      const res = await fetch("/api/contactos", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: editingId, ...editForm }),
+      })
+      if (res.ok) {
+        const { contacto } = await res.json()
+        setContactos((prev) => prev.map((c) => (c.id === editingId ? contacto : c)))
+        setEditingId(null)
+      }
+    } catch {
+      console.error("Error updating contacto")
+    } finally {
+      setSaving(false)
     }
   }
 
@@ -234,7 +296,10 @@ export default function ContactosClient() {
                   {contactos.map((c) => (
                     <Fragment key={c.id}>
                       <tr
-                        onClick={() => setExpandedId(expandedId === c.id ? null : c.id)}
+                        onClick={() => {
+                          if (editingId === c.id) return
+                          setExpandedId(expandedId === c.id ? null : c.id)
+                        }}
                         className="hover:bg-gray-50 cursor-pointer transition-colors"
                       >
                         <td className="px-4 py-3 text-gray-400 whitespace-nowrap">{c.id}</td>
@@ -252,44 +317,164 @@ export default function ContactosClient() {
                       {expandedId === c.id && (
                         <tr>
                           <td colSpan={11} className="px-4 py-4 bg-gray-50">
-                            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm max-w-3xl">
-                              <div>
-                                <span className="text-xs text-gray-400 block">Teléfono</span>
-                                <span className="text-gray-700">{c.telefono}</span>
-                              </div>
-                              {c.empresa && (
+                            {editingId === c.id ? (
+                              /* Edit form */
+                              <div className="max-w-3xl space-y-3">
+                                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                                  <div>
+                                    <label className="text-xs text-gray-400 block mb-1">Nombre</label>
+                                    <input
+                                      value={editForm.nombre || ""}
+                                      onChange={(e) => setEditForm({ ...editForm, nombre: e.target.value })}
+                                      className="w-full px-3 py-1.5 text-sm bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-[#cc0033] outline-none"
+                                    />
+                                  </div>
+                                  <div>
+                                    <label className="text-xs text-gray-400 block mb-1">Email</label>
+                                    <input
+                                      value={editForm.email || ""}
+                                      onChange={(e) => setEditForm({ ...editForm, email: e.target.value })}
+                                      className="w-full px-3 py-1.5 text-sm bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-[#cc0033] outline-none"
+                                    />
+                                  </div>
+                                  <div>
+                                    <label className="text-xs text-gray-400 block mb-1">Teléfono</label>
+                                    <input
+                                      value={editForm.telefono || ""}
+                                      onChange={(e) => setEditForm({ ...editForm, telefono: e.target.value })}
+                                      className="w-full px-3 py-1.5 text-sm bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-[#cc0033] outline-none"
+                                    />
+                                  </div>
+                                  <div>
+                                    <label className="text-xs text-gray-400 block mb-1">Empresa</label>
+                                    <input
+                                      value={editForm.empresa || ""}
+                                      onChange={(e) => setEditForm({ ...editForm, empresa: e.target.value })}
+                                      className="w-full px-3 py-1.5 text-sm bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-[#cc0033] outline-none"
+                                    />
+                                  </div>
+                                  <div>
+                                    <label className="text-xs text-gray-400 block mb-1">Rubro</label>
+                                    <input
+                                      value={editForm.rubro || ""}
+                                      onChange={(e) => setEditForm({ ...editForm, rubro: e.target.value })}
+                                      className="w-full px-3 py-1.5 text-sm bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-[#cc0033] outline-none"
+                                    />
+                                  </div>
+                                  <div>
+                                    <label className="text-xs text-gray-400 block mb-1">Cantidad de Empleados</label>
+                                    <input
+                                      value={editForm.cantidad_empleados || ""}
+                                      onChange={(e) => setEditForm({ ...editForm, cantidad_empleados: e.target.value })}
+                                      className="w-full px-3 py-1.5 text-sm bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-[#cc0033] outline-none"
+                                    />
+                                  </div>
+                                  <div>
+                                    <label className="text-xs text-gray-400 block mb-1">Motivo</label>
+                                    <select
+                                      value={editForm.motivo || ""}
+                                      onChange={(e) => setEditForm({ ...editForm, motivo: e.target.value })}
+                                      className="w-full px-3 py-1.5 text-sm bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-[#cc0033] outline-none"
+                                    >
+                                      <option value="cotizacion">Cotización</option>
+                                      <option value="consulta">Consulta</option>
+                                      <option value="informacion">Más información</option>
+                                      <option value="otro">Otro</option>
+                                    </select>
+                                  </div>
+                                </div>
                                 <div>
-                                  <span className="text-xs text-gray-400 block">Nombre Empresa</span>
-                                  <span className="text-gray-700">{c.empresa}</span>
+                                  <label className="text-xs text-gray-400 block mb-1">Mensaje</label>
+                                  <textarea
+                                    value={editForm.mensaje || ""}
+                                    onChange={(e) => setEditForm({ ...editForm, mensaje: e.target.value })}
+                                    rows={3}
+                                    className="w-full px-3 py-1.5 text-sm bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-[#cc0033] outline-none resize-none"
+                                  />
                                 </div>
-                              )}
-                              {c.rubro && (
-                                <div>
-                                  <span className="text-xs text-gray-400 block">Rubro</span>
-                                  <span className="text-gray-700">{c.rubro}</span>
+                                <div className="flex gap-2">
+                                  <button
+                                    onClick={handleSave}
+                                    disabled={saving}
+                                    className="px-4 py-1.5 text-sm bg-[#cc0033] text-white rounded-lg hover:bg-[#a30029] transition-colors disabled:opacity-50"
+                                  >
+                                    {saving ? "Guardando..." : "Guardar"}
+                                  </button>
+                                  <button
+                                    onClick={() => setEditingId(null)}
+                                    className="px-4 py-1.5 text-sm text-gray-500 hover:text-gray-700 transition-colors"
+                                  >
+                                    Cancelar
+                                  </button>
                                 </div>
-                              )}
-                              {c.cantidad_empleados && (
-                                <div>
-                                  <span className="text-xs text-gray-400 block">Cantidad de Empleados</span>
-                                  <span className="text-gray-700">{c.cantidad_empleados}</span>
-                                </div>
-                              )}
-                              <div>
-                                <span className="text-xs text-gray-400 block">Motivo</span>
-                                <span className="text-gray-700">{c.motivo}</span>
                               </div>
+                            ) : (
+                              /* Detail view */
                               <div>
-                                <span className="text-xs text-gray-400 block">Página de origen</span>
-                                <span className="text-gray-700">{c.pagina}</span>
-                              </div>
-                              {c.mensaje && (
-                                <div className="col-span-2 sm:col-span-3">
-                                  <span className="text-xs text-gray-400 block">Mensaje</span>
-                                  <p className="text-gray-700 whitespace-pre-wrap">{c.mensaje}</p>
+                                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm max-w-3xl">
+                                  <div>
+                                    <span className="text-xs text-gray-400 block">Teléfono</span>
+                                    <span className="text-gray-700">{c.telefono}</span>
+                                  </div>
+                                  {c.empresa && (
+                                    <div>
+                                      <span className="text-xs text-gray-400 block">Nombre Empresa</span>
+                                      <span className="text-gray-700">{c.empresa}</span>
+                                    </div>
+                                  )}
+                                  {c.rubro && (
+                                    <div>
+                                      <span className="text-xs text-gray-400 block">Rubro</span>
+                                      <span className="text-gray-700">{c.rubro}</span>
+                                    </div>
+                                  )}
+                                  {c.cantidad_empleados && (
+                                    <div>
+                                      <span className="text-xs text-gray-400 block">Cantidad de Empleados</span>
+                                      <span className="text-gray-700">{c.cantidad_empleados}</span>
+                                    </div>
+                                  )}
+                                  <div>
+                                    <span className="text-xs text-gray-400 block">Motivo</span>
+                                    <span className="text-gray-700">{c.motivo}</span>
+                                  </div>
+                                  <div>
+                                    <span className="text-xs text-gray-400 block">Página de origen</span>
+                                    <span className="text-gray-700">{c.pagina}</span>
+                                  </div>
+                                  {c.mensaje && (
+                                    <div className="col-span-2 sm:col-span-3">
+                                      <span className="text-xs text-gray-400 block">Mensaje</span>
+                                      <p className="text-gray-700 whitespace-pre-wrap">{c.mensaje}</p>
+                                    </div>
+                                  )}
                                 </div>
-                              )}
-                            </div>
+                                <div className="flex gap-3 mt-4 pt-3 border-t border-gray-200">
+                                  <button
+                                    onClick={(e) => { e.stopPropagation(); startEdit(c) }}
+                                    className="flex items-center gap-1.5 px-3 py-1.5 text-sm text-gray-600 hover:text-[#cc0033] transition-colors"
+                                  >
+                                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                                      <path strokeLinecap="round" strokeLinejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+                                    </svg>
+                                    Editar
+                                  </button>
+                                  <button
+                                    onClick={(e) => {
+                                      e.stopPropagation()
+                                      if (confirm("¿Eliminar este contacto?")) handleDelete(c.id)
+                                    }}
+                                    disabled={deletingId === c.id}
+                                    className="flex items-center gap-1.5 px-3 py-1.5 text-sm text-gray-600 hover:text-red-600 transition-colors disabled:opacity-50"
+                                  >
+                                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                                      <path strokeLinecap="round" strokeLinejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+                                    </svg>
+                                    {deletingId === c.id ? "Eliminando..." : "Eliminar"}
+                                  </button>
+                                </div>
+                              </div>
+                            )}
                           </td>
                         </tr>
                       )}
