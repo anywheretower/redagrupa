@@ -23,7 +23,7 @@ export default function Footer() {
           <div className="space-y-4 text-center lg:text-left lg:col-span-1 flex flex-col items-center lg:items-start">
             <div className="flex items-center gap-3 max-w-[280px] w-full">
               <Mail className="w-5 h-5 flex-shrink-0" />
-              <a href="mailto:cwinter@redagrupa.cl" className="text-sm hover:underline text-left">Casilla de Reembolsos</a>
+              <a href="mailto:reembolsos@redagrupa.cl" className="text-sm hover:underline text-left">Casilla de Reembolsos</a>
             </div>
             <div className="flex items-center gap-3 max-w-[280px] w-full">
               <Phone className="w-5 h-5 flex-shrink-0" />
