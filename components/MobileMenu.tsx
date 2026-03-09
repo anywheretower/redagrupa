@@ -17,6 +17,8 @@ export default function MobileMenu() {
         size="icon"
         className="lg:hidden text-white hover:bg-white/10"
         onClick={() => setIsOpen(!isOpen)}
+        aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
+        aria-expanded={isOpen}
       >
         {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
       </Button>

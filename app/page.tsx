@@ -379,7 +379,7 @@ export default function HomePage() {
               className="bg-transparent border-white text-white hover:bg-white/10"
               asChild
             >
-              <a href="/contactos" target="_blank" rel="noopener noreferrer">
+              <a href="/contactos" target="_blank" rel="noopener noreferrer" aria-label="Ver contactos">
                 <UsersIcon className="h-5 w-5" />
               </a>
             </Button>
@@ -398,6 +398,7 @@ export default function HomePage() {
           className="w-9 h-9 bg-[#cc0033] rounded-full flex items-center justify-center hover:bg-[#a00028] transition-colors shadow-lg"
         >
           <Facebook className="w-4 h-4 text-white" strokeWidth={1.5} />
+          aria-label="Facebook de RedAgrupa"
         </Link>
         <Link
           href="https://www.instagram.com/redagrupa/"
@@ -406,6 +407,7 @@ export default function HomePage() {
           className="w-9 h-9 bg-[#cc0033] rounded-full flex items-center justify-center hover:bg-[#a00028] transition-colors shadow-lg"
         >
           <Instagram className="w-4 h-4 text-white" strokeWidth={1.5} />
+          aria-label="Instagram de RedAgrupa"
         </Link>
         <Link
           href="https://www.linkedin.com/company/redagrupa"
@@ -414,6 +416,7 @@ export default function HomePage() {
           className="w-9 h-9 bg-[#cc0033] rounded-full flex items-center justify-center hover:bg-[#a00028] transition-colors shadow-lg"
         >
           <Linkedin className="w-4 h-4 text-white" strokeWidth={1.5} />
+          aria-label="LinkedIn de RedAgrupa"
         </Link>
       </div>
 

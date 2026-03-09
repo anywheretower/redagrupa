@@ -74,6 +74,7 @@ export default function PoliticasClient() {
           className="w-9 h-9 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
         >
           <Facebook className="w-4 h-4 text-white" strokeWidth={1.5} />
+          aria-label="Facebook de RedAgrupa"
         </a>
         <a
           href="https://www.instagram.com/redagrupa/"
@@ -82,6 +83,7 @@ export default function PoliticasClient() {
           className="w-9 h-9 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
         >
           <Instagram className="w-4 h-4 text-white" strokeWidth={1.5} />
+          aria-label="Instagram de RedAgrupa"
         </a>
         <a
           href="https://www.linkedin.com/company/redagrupa"
@@ -90,6 +92,7 @@ export default function PoliticasClient() {
           className="w-9 h-9 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
         >
           <Linkedin className="w-4 h-4 text-white" strokeWidth={1.5} />
+          aria-label="LinkedIn de RedAgrupa"
         </a>
       </div>
 
