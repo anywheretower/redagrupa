@@ -91,27 +91,27 @@ export default function SegurosSaludClient() {
           target="_blank"
           rel="noopener noreferrer"
           className="w-9 h-9 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
+          aria-label="Facebook de RedAgrupa"
         >
           <Facebook className="w-4 h-4 text-white" strokeWidth={1.5} />
-          aria-label="Facebook de RedAgrupa"
         </a>
         <a
           href="https://www.instagram.com/redagrupa/"
           target="_blank"
           rel="noopener noreferrer"
           className="w-9 h-9 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
+          aria-label="Instagram de RedAgrupa"
         >
           <Instagram className="w-4 h-4 text-white" strokeWidth={1.5} />
-          aria-label="Instagram de RedAgrupa"
         </a>
         <a
           href="https://www.linkedin.com/company/redagrupa"
           target="_blank"
           rel="noopener noreferrer"
           className="w-9 h-9 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
+          aria-label="LinkedIn de RedAgrupa"
         >
           <Linkedin className="w-4 h-4 text-white" strokeWidth={1.5} />
-          aria-label="LinkedIn de RedAgrupa"
         </a>
       </div>
 

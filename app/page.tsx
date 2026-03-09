@@ -396,27 +396,27 @@ export default function HomePage() {
           target="_blank"
           rel="noopener noreferrer"
           className="w-9 h-9 bg-[#cc0033] rounded-full flex items-center justify-center hover:bg-[#a00028] transition-colors shadow-lg"
+          aria-label="Facebook de RedAgrupa"
         >
           <Facebook className="w-4 h-4 text-white" strokeWidth={1.5} />
-          aria-label="Facebook de RedAgrupa"
         </Link>
         <Link
           href="https://www.instagram.com/redagrupa/"
           target="_blank"
           rel="noopener noreferrer"
           className="w-9 h-9 bg-[#cc0033] rounded-full flex items-center justify-center hover:bg-[#a00028] transition-colors shadow-lg"
+          aria-label="Instagram de RedAgrupa"
         >
           <Instagram className="w-4 h-4 text-white" strokeWidth={1.5} />
-          aria-label="Instagram de RedAgrupa"
         </Link>
         <Link
           href="https://www.linkedin.com/company/redagrupa"
           target="_blank"
           rel="noopener noreferrer"
           className="w-9 h-9 bg-[#cc0033] rounded-full flex items-center justify-center hover:bg-[#a00028] transition-colors shadow-lg"
+          aria-label="LinkedIn de RedAgrupa"
         >
           <Linkedin className="w-4 h-4 text-white" strokeWidth={1.5} />
-          aria-label="LinkedIn de RedAgrupa"
         </Link>
       </div>
 
