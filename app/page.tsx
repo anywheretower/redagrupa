@@ -577,7 +577,7 @@ export default function HomePage() {
         {/* Background Image - Mobile */}
         <div className="absolute inset-0 z-0 lg:hidden">
           <Image
-            src="/images/pushpin-movil.png"
+            src="/images/pushpin-movil.webp"
             alt="Equipamiento médico sobre fondo rojo"
             fill
             className="object-cover object-top"
