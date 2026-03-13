@@ -201,6 +201,7 @@ function StatsCarousel() {
         {statsCards.map((_, i) => (
           <button
             key={i}
+            aria-label={`Ir a estadística ${i + 1}`}
             className={`min-w-[24px] min-h-[24px] bg-clip-content p-[7px] w-2 h-2 rounded-full transition-colors ${i === selectedIndex ? "bg-white" : "bg-white/40"}`}
             onClick={() => emblaApi?.scrollTo(i)}
           />
@@ -242,6 +243,7 @@ function ProblemaCarousel() {
         {problemaCards.map((_, i) => (
           <button
             key={i}
+            aria-label={`Ir a problema ${i + 1}`}
             className={`min-w-[24px] min-h-[24px] bg-clip-content p-[7px] w-2 h-2 rounded-full transition-colors ${i === selectedIndex ? "bg-white" : "bg-white/40"}`}
             onClick={() => emblaApi?.scrollTo(i)}
           />
@@ -307,6 +309,7 @@ export default function HomePage() {
               alt="RedAgrupa Logo"
               width={160}
               height={40}
+              priority
               className="h-6 md:h-8 w-auto"
             />
           </Link>
@@ -674,7 +677,7 @@ export default function HomePage() {
               />
               <h3 className="text-lg font-semibold text-[#333333]">Seguros Bupa</h3>
               <div className="space-y-2 pt-2">
-                <a href="/formularios/bupa-incorporacion.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="/formularios/bupa-incorporacion.pdf" target="_blank" rel="noopener noreferrer" aria-label="Incorporación Bupa" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Incorporación</span>
                 </a>
@@ -700,7 +703,7 @@ export default function HomePage() {
               />
               <h3 className="text-lg font-semibold text-[#333333]">Bice Vida</h3>
               <div className="space-y-2 pt-2">
-                <a href="/formularios/bicevida-incorporacion.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="/formularios/bicevida-incorporacion.pdf" target="_blank" rel="noopener noreferrer" aria-label="Incorporación BICE Vida" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Incorporación</span>
                 </a>
@@ -726,7 +729,7 @@ export default function HomePage() {
               />
               <h3 className="text-lg font-semibold text-[#333333]">Seguros Sura</h3>
               <div className="space-y-2 pt-2">
-                <a href="/formularios/sura-incorporacion.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="/formularios/sura-incorporacion.pdf" target="_blank" rel="noopener noreferrer" aria-label="Incorporación Sura" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Incorporación</span>
                 </a>
@@ -752,7 +755,7 @@ export default function HomePage() {
               />
               <h3 className="text-lg font-semibold text-[#333333]">Consorcio</h3>
               <div className="space-y-2 pt-2">
-                <a href="/formularios/consorcio-incorporacion.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="/formularios/consorcio-incorporacion.pdf" target="_blank" rel="noopener noreferrer" aria-label="Incorporación Consorcio" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Incorporación</span>
                 </a>
@@ -778,7 +781,7 @@ export default function HomePage() {
               />
               <h3 className="text-lg font-semibold text-[#333333]">MetLife</h3>
               <div className="space-y-2 pt-2">
-                <a href="/formularios/metlife-incorporacion.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="/formularios/metlife-incorporacion.pdf" target="_blank" rel="noopener noreferrer" aria-label="Incorporación MetLife" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Incorporación</span>
                 </a>
@@ -804,7 +807,7 @@ export default function HomePage() {
               />
               <h3 className="text-lg font-semibold text-[#333333]">BCI Seguros</h3>
               <div className="space-y-2 pt-2">
-                <a href="/formularios/bci-incorporacion.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="/formularios/bci-incorporacion.pdf" target="_blank" rel="noopener noreferrer" aria-label="Incorporación BCI" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Incorporación</span>
                 </a>
@@ -830,7 +833,7 @@ export default function HomePage() {
               />
               <h3 className="text-lg font-semibold text-[#333333]">Vida Security</h3>
               <div className="space-y-2 pt-2">
-                <a href="/formularios/vidasecurity-incorporacion.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="/formularios/vidasecurity-incorporacion.pdf" target="_blank" rel="noopener noreferrer" aria-label="Incorporación Vida Security" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Incorporación</span>
                 </a>
@@ -860,7 +863,7 @@ export default function HomePage() {
               />
               <h3 className="text-lg font-semibold text-[#333333]">Help Seguros</h3>
               <div className="space-y-2 pt-2">
-                <a href="/formularios/help-incorporacion.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="/formularios/help-incorporacion.pdf" target="_blank" rel="noopener noreferrer" aria-label="Incorporación Help" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Incorporación</span>
                 </a>
@@ -886,7 +889,7 @@ export default function HomePage() {
               />
               <h3 className="text-lg font-semibold text-[#333333]">Chilena Consolidada</h3>
               <div className="space-y-2 pt-2">
-                <a href="/formularios/chilenaconsolidada-incorporacion.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
+                <a href="/formularios/chilenaconsolidada-incorporacion.pdf" target="_blank" rel="noopener noreferrer" aria-label="Incorporación Chilena Consolidada" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
                   <Download className="w-4 h-4" />
                   <span>Incorporación</span>
                 </a>

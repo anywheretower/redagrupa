@@ -103,6 +103,7 @@ export default function BicePymeClient() {
               alt="RedAgrupa Logo"
               width={160}
               height={40}
+              priority
               className="h-6 md:h-8 w-auto"
             />
           </Link>
