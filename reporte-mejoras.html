@@ -105,7 +105,7 @@
     <table>
       <tr><th style="width:40px">#</th><th>Medida</th><th style="width:100px">Estado</th></tr>
       <tr><td>1</td><td>Reducir JavaScript sin usar<div class="detail">Eliminados 55 componentes UI y 33 dependencias npm no utilizadas (recharts, cmdk, react-resizable-panels, input-otp, vaul, next-themes, 26 @radix-ui)</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
-      <tr><td>2</td><td>Bloqueo de renderizaci&oacute;n<div class="detail">Eliminada dependencia tw-animate-css no utilizada, preconnect a googletagmanager.com, imports Geist innecesarios removidos de layout.tsx</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
+      <tr><td>2</td><td>Bloqueo de renderizaci&oacute;n<div class="detail">Eliminada tw-animate-css, preconnect GTM, imports Geist removidos. Commit bf94bac</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
       <tr><td>3</td><td>Cach&eacute; eficientes (Cache-Control 1 a&ntilde;o)<div class="detail">Headers para /images/ y /_next/static/ en next.config.mjs</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
       <tr><td>4</td><td>JavaScript heredado<div class="detail">Next.js SWC ya maneja transpilaci&oacute;n moderna por defecto. JS heredado restante es de terceros (Facebook 12.5 KiB)</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
       <tr><td>5</td><td>Preload logo header<div class="detail">link rel=preload en layout.tsx</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
@@ -120,7 +120,7 @@
       <tr><th style="width:40px">#</th><th>Medida</th><th style="width:100px">Estado</th></tr>
       <tr><td>7</td><td>Botones sin nombres accesibles<div class="detail">aria-labels en links RRSS (&times;9 archivos), bot&oacute;n CRM, hamburguesa mobile, dots de carousel</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
       <tr><td>8</td><td>Select sin label accesible<div class="detail">aria-label=&ldquo;Motivo de contacto&rdquo; en ambos selects de ContactForm</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
-      <tr><td>9</td><td>Objetivos t&aacute;ctiles peque&ntilde;os<div class="detail">Dots carousel: min-w/h 24px con bg-clip-content. Sidebar RRSS: w-9&rarr;w-11. Bot&oacute;n cerrar formulario: padding extra</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
+      <tr><td>9</td><td>Objetivos t&aacute;ctiles peque&ntilde;os<div class="detail">Dots carousel: min-w/h 24px con bg-clip-content. Sidebar RRSS: w-9&rarr;w-11. Bot&oacute;n cerrar formulario: padding extra. Commit bf94bac</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
       <tr><td>10</td><td>V&iacute;nculos id&eacute;nticos mismo prop&oacute;sito<div class="detail">Parcialmente resuelto con aria-labels que diferencian links duplicados</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
     </table>
   </div>
@@ -146,6 +146,16 @@
     </table>
   </div>
 
+  <!-- Rendimiento Mobile -->
+  <div class="section">
+    <div class="section-title">Rendimiento Mobile (score 58)</div>
+    <table>
+      <tr><th style="width:40px">#</th><th>Medida</th><th style="width:100px">Estado</th></tr>
+      <tr><td>M1</td><td>Eliminar framer-motion de home page<div class="detail">Reemplazar motion/react (~45KB gzip) con CSS @keyframes para hero, testimonios, acordeones y grids. Ahorro: ~200KB JS sin comprimir del bundle cr&iacute;tico. Commit bf94bac</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
+      <tr><td>M2</td><td>Preload hero image<div class="detail">link rel=preload en layout.tsx para hero-redagrupa.webp (85KB). Commit bf94bac</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
+    </table>
+  </div>
+
   <!-- No controlable -->
   <div class="section">
     <div class="section-title">No controlable (terceros)</div>
@@ -162,7 +172,7 @@
   <div style="margin-top: 16px; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
     <div style="display: flex; gap: 24px; align-items: center; justify-content: center; flex-wrap: wrap;">
       <div style="text-align: center;">
-        <div style="font-size: 28px; font-weight: 800; color: #16a34a;">11</div>
+        <div style="font-size: 28px; font-weight: 800; color: #16a34a;">13</div>
         <div style="font-size: 11px; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px;">Aplicadas</div>
       </div>
       <div style="width: 1px; height: 40px; background: #e2e8f0;"></div>
