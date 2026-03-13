@@ -150,6 +150,7 @@ function TestimonialCarousel() {
           <button
             key={i}
             onClick={() => setCurrent(i)}
+            aria-label={`Ir a testimonio ${i + 1}`}
             className={`min-w-[24px] min-h-[24px] bg-clip-content p-[7px] w-2 h-2 rounded-full transition-all duration-300 ${
               i === current ? "bg-[#cc0033] w-6" : "bg-gray-300"
             }`}
