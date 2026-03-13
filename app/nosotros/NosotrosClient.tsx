@@ -16,6 +16,7 @@ import ContactForm from "@/components/ContactForm"
 import RevealOnScroll from "@/components/RevealOnScroll"
 import { motion } from "motion/react"
 import { staggerContainer, staggerItem } from "@/lib/animations"
+import Breadcrumbs from "@/components/Breadcrumbs"
 
 export default function NosotrosClient() {
   return (
@@ -82,7 +83,7 @@ export default function NosotrosClient() {
           href="https://www.facebook.com/RedAgrupa/"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-9 h-9 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
+          className="w-11 h-11 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
           aria-label="Facebook de RedAgrupa"
         >
           <Facebook className="w-4 h-4 text-white" strokeWidth={1.5} />
@@ -91,7 +92,7 @@ export default function NosotrosClient() {
           href="https://www.instagram.com/redagrupa/"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-9 h-9 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
+          className="w-11 h-11 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
           aria-label="Instagram de RedAgrupa"
         >
           <Instagram className="w-4 h-4 text-white" strokeWidth={1.5} />
@@ -100,7 +101,7 @@ export default function NosotrosClient() {
           href="https://www.linkedin.com/company/redagrupa"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-9 h-9 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
+          className="w-11 h-11 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
           aria-label="LinkedIn de RedAgrupa"
         >
           <Linkedin className="w-4 h-4 text-white" strokeWidth={1.5} />
@@ -111,6 +112,7 @@ export default function NosotrosClient() {
         {/* Hero/Intro */}
         <section className="py-32 bg-white">
           <div className="container mx-auto px-4">
+            <Breadcrumbs items={[{ label: "Nosotros" }]} />
             <RevealOnScroll className="max-w-4xl mx-auto text-center space-y-6">
               <h1 className="text-4xl font-bold text-[#cc0033]">
                 Delegue la gestión del Seguro Complementario y enfoque su empresa en lo estratégico

@@ -1,13 +1,9 @@
 import type React from "react"
 import type { Metadata } from "next"
 import Script from "next/script"
-import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Toaster } from "sonner"
 import "./globals.css"
-
-const _geist = Geist({ subsets: ["latin"] })
-const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "RedAgrupa - Gestión de Seguros Complementarios para Pymes",
@@ -39,6 +35,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
         <Script
           id="gtm-script"
           strategy="afterInteractive"
@@ -51,6 +48,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }}
         />
         <link rel="preload" as="image" href="/images/logo-20redagrupa-3.png" />
+        <link rel="preload" as="image" href="/images/hero-redagrupa.webp" />
       </head>
       <body className={`font-sans antialiased`}>
         <noscript>

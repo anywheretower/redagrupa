@@ -26,6 +26,7 @@ import ContactForm from "@/components/ContactForm"
 import RevealOnScroll from "@/components/RevealOnScroll"
 import { motion } from "motion/react"
 import { staggerContainer, staggerItem } from "@/lib/animations"
+import Breadcrumbs from "@/components/Breadcrumbs"
 
 export default function BeneficiosClient() {
   const scrollToForm = () => {
@@ -90,7 +91,7 @@ export default function BeneficiosClient() {
           href="https://www.facebook.com/RedAgrupa/"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-9 h-9 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
+          className="w-11 h-11 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
           aria-label="Facebook de RedAgrupa"
         >
           <Facebook className="w-4 h-4 text-white" strokeWidth={1.5} />
@@ -99,7 +100,7 @@ export default function BeneficiosClient() {
           href="https://www.instagram.com/redagrupa/"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-9 h-9 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
+          className="w-11 h-11 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
           aria-label="Instagram de RedAgrupa"
         >
           <Instagram className="w-4 h-4 text-white" strokeWidth={1.5} />
@@ -108,7 +109,7 @@ export default function BeneficiosClient() {
           href="https://www.linkedin.com/company/redagrupa"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-9 h-9 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
+          className="w-11 h-11 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
           aria-label="LinkedIn de RedAgrupa"
         >
           <Linkedin className="w-4 h-4 text-white" strokeWidth={1.5} />
@@ -141,6 +142,7 @@ export default function BeneficiosClient() {
         {/* Introducción */}
         <section className="py-16 lg:py-32">
           <div className="container mx-auto px-4">
+            <Breadcrumbs items={[{ label: "Beneficios" }]} />
             {/* Título y botón solo en móvil */}
             <div className="lg:hidden max-w-4xl mx-auto space-y-3 mb-8">
               <h1 className="text-3xl font-bold text-[#cc0033]">Beneficios de Salud<br />para Empresas</h1>

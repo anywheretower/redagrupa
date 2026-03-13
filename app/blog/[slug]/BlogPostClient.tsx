@@ -18,6 +18,7 @@ import ReactMarkdown from "react-markdown"
 import remarkGfm from "remark-gfm"
 import { format, parseISO } from "date-fns"
 import { es } from "date-fns/locale"
+import Breadcrumbs from "@/components/Breadcrumbs"
 
 interface BlogPost {
   slug: string
@@ -201,7 +202,7 @@ export default function BlogPostClient({
           href="https://www.facebook.com/RedAgrupa/"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-9 h-9 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
+          className="w-11 h-11 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
           aria-label="Facebook de RedAgrupa"
         >
           <Facebook className="w-4 h-4 text-white" strokeWidth={1.5} />
@@ -210,7 +211,7 @@ export default function BlogPostClient({
           href="https://www.instagram.com/redagrupa/"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-9 h-9 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
+          className="w-11 h-11 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
           aria-label="Instagram de RedAgrupa"
         >
           <Instagram className="w-4 h-4 text-white" strokeWidth={1.5} />
@@ -219,7 +220,7 @@ export default function BlogPostClient({
           href="https://www.linkedin.com/company/redagrupa"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-9 h-9 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
+          className="w-11 h-11 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
           aria-label="LinkedIn de RedAgrupa"
         >
           <Linkedin className="w-4 h-4 text-white" strokeWidth={1.5} />
@@ -231,6 +232,7 @@ export default function BlogPostClient({
         <article className="py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
+              <Breadcrumbs items={[{ label: "Blog", href: "/blog" }, { label: post.title }]} />
               {/* Back link */}
               <Link
                 href="/blog"

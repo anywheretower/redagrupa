@@ -11,6 +11,7 @@ import {
 import { Button } from "@/components/ui/button"
 import MobileMenu from "@/components/MobileMenu"
 import Footer from "@/components/Footer"
+import Breadcrumbs from "@/components/Breadcrumbs"
 
 interface BlogPost {
   slug: string
@@ -95,7 +96,7 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
           href="https://www.facebook.com/RedAgrupa/"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-9 h-9 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
+          className="w-11 h-11 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
           aria-label="Facebook de RedAgrupa"
         >
           <Facebook className="w-4 h-4 text-white" strokeWidth={1.5} />
@@ -104,7 +105,7 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
           href="https://www.instagram.com/redagrupa/"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-9 h-9 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
+          className="w-11 h-11 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
           aria-label="Instagram de RedAgrupa"
         >
           <Instagram className="w-4 h-4 text-white" strokeWidth={1.5} />
@@ -113,7 +114,7 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
           href="https://www.linkedin.com/company/redagrupa"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-9 h-9 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
+          className="w-11 h-11 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
           aria-label="LinkedIn de RedAgrupa"
         >
           <Linkedin className="w-4 h-4 text-white" strokeWidth={1.5} />
@@ -124,6 +125,7 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
       <div className="pt-20">
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4">
+            <Breadcrumbs items={[{ label: "Blog" }]} />
             <div className="max-w-4xl mx-auto text-center mb-16">
               <h1 className="text-4xl font-bold text-[#cc0033] mb-4">Blog RedAgrupa</h1>
               <p className="text-base text-gray-700 leading-[1.1]">

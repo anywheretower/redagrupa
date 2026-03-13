@@ -25,9 +25,6 @@ import ContactForm from "@/components/ContactForm"
 import { useState, useEffect, useCallback } from "react"
 import useEmblaCarousel from "embla-carousel-react"
 import Autoplay from "embla-carousel-autoplay"
-import { motion, AnimatePresence } from "motion/react"
-import RevealOnScroll from "@/components/RevealOnScroll"
-import { staggerContainer, staggerItem, fadeUp } from "@/lib/animations"
 
 const problemaCards = [
   {
@@ -121,21 +118,15 @@ function TestimonialCarousel() {
     return () => clearInterval(timer)
   }, [])
 
-  const t = testimonios[current]
-
   return (
     <div>
       <div className="relative min-h-[280px]">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={current}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="flex flex-col items-center text-center space-y-6"
+        {testimonios.map((t, i) => (
+          <div
+            key={i}
+            className={`flex flex-col items-center text-center space-y-6 transition-opacity duration-500 ${i === current ? "opacity-100" : "opacity-0 absolute inset-0"}`}
           >
-            <div className="text-4xl md:text-6xl text-[#cc0033] leading-none">"</div>
+            <div className="text-4xl md:text-6xl text-[#cc0033] leading-none">&ldquo;</div>
             <p className="text-[#666666] text-base leading-snug">{t.texto}</p>
             <div className="pt-4 border-t border-gray-200 flex items-center gap-4">
               <Image
@@ -150,8 +141,8 @@ function TestimonialCarousel() {
                 <p className="text-sm text-[#666666]">{t.cargo}</p>
               </div>
             </div>
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        ))}
       </div>
       {/* Dots */}
       <div className="flex justify-center gap-2 mt-6">
@@ -159,7 +150,7 @@ function TestimonialCarousel() {
           <button
             key={i}
             onClick={() => setCurrent(i)}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+            className={`min-w-[24px] min-h-[24px] bg-clip-content p-[7px] w-2 h-2 rounded-full transition-all duration-300 ${
               i === current ? "bg-[#cc0033] w-6" : "bg-gray-300"
             }`}
           />
@@ -209,7 +200,7 @@ function StatsCarousel() {
         {statsCards.map((_, i) => (
           <button
             key={i}
-            className={`w-2 h-2 rounded-full transition-colors ${i === selectedIndex ? "bg-white" : "bg-white/40"}`}
+            className={`min-w-[24px] min-h-[24px] bg-clip-content p-[7px] w-2 h-2 rounded-full transition-colors ${i === selectedIndex ? "bg-white" : "bg-white/40"}`}
             onClick={() => emblaApi?.scrollTo(i)}
           />
         ))}
@@ -250,7 +241,7 @@ function ProblemaCarousel() {
         {problemaCards.map((_, i) => (
           <button
             key={i}
-            className={`w-2 h-2 rounded-full transition-colors ${i === selectedIndex ? "bg-white" : "bg-white/40"}`}
+            className={`min-w-[24px] min-h-[24px] bg-clip-content p-[7px] w-2 h-2 rounded-full transition-colors ${i === selectedIndex ? "bg-white" : "bg-white/40"}`}
             onClick={() => emblaApi?.scrollTo(i)}
           />
         ))}
@@ -272,19 +263,11 @@ function ProblemaCarouselCard({ icon: Icon, title, text }: { icon: React.Compone
           <h3 className="text-lg font-normal text-white leading-tight flex-1">{title}</h3>
           <ChevronDown className={`w-5 h-5 text-white/70 transition-transform duration-300 flex-shrink-0 ${open ? "rotate-180" : ""}`} />
         </button>
-        <AnimatePresence>
-          {open && (
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: "auto", opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="overflow-hidden"
-            >
-              <p className="text-white/80 text-sm leading-snug pt-1">{text}</p>
-            </motion.div>
-          )}
-        </AnimatePresence>
+        <div className={`grid transition-all duration-300 ease-in-out ${open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}>
+          <div className="overflow-hidden">
+            <p className="text-white/80 text-sm leading-snug pt-1">{text}</p>
+          </div>
+        </div>
       </div>
     </div>
   )
@@ -294,7 +277,7 @@ function ProblemaCardExpandable({ icon: Icon, title, text }: { icon: React.Compo
   const [open, setOpen] = useState(false)
 
   return (
-    <motion.div variants={staggerItem} className="p-6 space-y-3">
+    <div className="p-6 space-y-3">
       <button onClick={() => setOpen(!open)} className="flex items-center gap-3 text-left w-full">
         <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center flex-shrink-0">
           <Icon className="w-6 h-6 text-[#cc0033]" />
@@ -302,20 +285,12 @@ function ProblemaCardExpandable({ icon: Icon, title, text }: { icon: React.Compo
         <h3 className="text-lg font-normal text-white leading-tight flex-1">{title}</h3>
         <ChevronDown className={`w-5 h-5 text-white/70 transition-transform duration-300 flex-shrink-0 ${open ? "rotate-180" : ""}`} />
       </button>
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="overflow-hidden"
-          >
-            <p className="text-white/80 text-sm leading-snug pt-1">{text}</p>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.div>
+      <div className={`grid transition-all duration-300 ease-in-out ${open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}>
+        <div className="overflow-hidden">
+          <p className="text-white/80 text-sm leading-snug pt-1">{text}</p>
+        </div>
+      </div>
+    </div>
   )
 }
 
@@ -395,7 +370,7 @@ export default function HomePage() {
           href="https://www.facebook.com/RedAgrupa/"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-9 h-9 bg-[#cc0033] rounded-full flex items-center justify-center hover:bg-[#a00028] transition-colors shadow-lg"
+          className="w-11 h-11 bg-[#cc0033] rounded-full flex items-center justify-center hover:bg-[#a00028] transition-colors shadow-lg"
           aria-label="Facebook de RedAgrupa"
         >
           <Facebook className="w-4 h-4 text-white" strokeWidth={1.5} />
@@ -404,7 +379,7 @@ export default function HomePage() {
           href="https://www.instagram.com/redagrupa/"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-9 h-9 bg-[#cc0033] rounded-full flex items-center justify-center hover:bg-[#a00028] transition-colors shadow-lg"
+          className="w-11 h-11 bg-[#cc0033] rounded-full flex items-center justify-center hover:bg-[#a00028] transition-colors shadow-lg"
           aria-label="Instagram de RedAgrupa"
         >
           <Instagram className="w-4 h-4 text-white" strokeWidth={1.5} />
@@ -413,7 +388,7 @@ export default function HomePage() {
           href="https://www.linkedin.com/company/redagrupa"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-9 h-9 bg-[#cc0033] rounded-full flex items-center justify-center hover:bg-[#a00028] transition-colors shadow-lg"
+          className="w-11 h-11 bg-[#cc0033] rounded-full flex items-center justify-center hover:bg-[#a00028] transition-colors shadow-lg"
           aria-label="LinkedIn de RedAgrupa"
         >
           <Linkedin className="w-4 h-4 text-white" strokeWidth={1.5} />
@@ -448,20 +423,17 @@ export default function HomePage() {
         {/* Content */}
         <div className="container mx-auto px-6 h-full relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-end lg:items-center min-h-[calc(100vh-6rem)]">
-            <motion.div
+            <div
               className="space-y-6 md:space-y-8 pb-10 lg:py-12 mobile-text-shadow"
-              initial="hidden"
-              animate="visible"
-              variants={staggerContainer}
             >
-              <motion.h1 variants={staggerItem} className="text-3xl sm:text-2xl md:text-[2rem] lg:text-[2.75rem] font-normal leading-[0.95] text-balance tracking-tight">
+              <h1 className="animate-fade-in-up text-3xl sm:text-2xl md:text-[2rem] lg:text-[2.75rem] font-normal leading-[0.95] text-balance tracking-tight">
                 ¿Listo para Simplificar tus Seguros Complementarios?
-              </motion.h1>
-              <motion.p variants={staggerItem} className="text-base sm:text-base lg:text-lg text-white/90 leading-[1.3] max-w-2xl">
+              </h1>
+              <p className="animate-fade-in-up-d1 text-base sm:text-base lg:text-lg text-white/90 leading-[1.3] max-w-2xl">
                 RedAgrupa gestiona tus seguros complementarios de salud para que tu pyme y tu equipo estén protegidos,
                 sin trámites eternos ni lenguaje técnico imposible.
-              </motion.p>
-              <motion.div variants={staggerItem} className="flex flex-col sm:flex-row gap-4 pt-2">
+              </p>
+              <div className="animate-fade-in-up-d2 flex flex-col sm:flex-row gap-4 pt-2">
                 <ScrollButton
                   targetId="formulario-contacto"
                   className="bg-[#cc0033] text-white hover:bg-[#a30029] px-6 sm:px-8 py-3 text-sm sm:text-base font-normal w-full sm:w-64"
@@ -475,8 +447,8 @@ export default function HomePage() {
                 >
                   Descarga Formularios
                 </ScrollButton>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
             <div className="relative hidden lg:block lg:h-[700px]">{/* Empty space to maintain layout balance */}</div>
           </div>
         </div>
@@ -486,7 +458,7 @@ export default function HomePage() {
       <section className="py-8 lg:py-16 relative bg-[#cc0033] overflow-hidden min-h-0 flex flex-col">
 
         <div className="container mx-auto px-6 relative z-10 flex-1 flex flex-col lg:justify-between">
-          <RevealOnScroll className="text-center max-w-4xl mx-auto pt-0 lg:pt-8 px-4">
+          <div className="text-center max-w-4xl mx-auto pt-0 lg:pt-8 px-4">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal leading-[1.1] text-white mb-2">
               Porque la vida no espera
             </h2>
@@ -496,7 +468,7 @@ export default function HomePage() {
             <h3 className="text-xs sm:text-sm uppercase tracking-wider text-white/90 mt-2 lg:mt-6">
               Hoy mismo te ayudamos con:
             </h3>
-          </RevealOnScroll>
+          </div>
 
 
           {/* Cards - Mobile: auto-sliding carousel / Desktop: 3-column grid */}
@@ -505,17 +477,13 @@ export default function HomePage() {
             <ProblemaCarousel />
           </div>
           {/* Desktop Grid */}
-          <motion.div
+          <div
             className="hidden lg:grid grid-cols-3 gap-6 max-w-6xl mx-auto pb-16 mt-6"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={staggerContainer}
           >
             {problemaCards.map((card, i) => (
               <ProblemaCardExpandable key={i} icon={card.icon} title={card.title} text={card.text} />
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -524,7 +492,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left: Content */}
-            <RevealOnScroll className="text-center lg:text-left">
+            <div className="text-center lg:text-left">
               <p className="text-xs sm:text-sm uppercase tracking-wider text-[#666666] mb-4">
                 PORQUE ESTAR CUBIERTO NO BASTA… HAY QUE SENTIRSE PROTEGIDO
               </p>
@@ -543,12 +511,12 @@ export default function HomePage() {
                   Solicitar Asesoría
                 </ScrollButton>
               </div>
-            </RevealOnScroll>
+            </div>
 
             {/* Right: Testimonials Carousel */}
-            <RevealOnScroll delay={0.2}>
+            <div>
               <TestimonialCarousel />
-            </RevealOnScroll>
+            </div>
           </div>
 
           {/* Marquee below */}
@@ -615,7 +583,7 @@ export default function HomePage() {
 
         <div className="container mx-auto px-6 relative z-10 flex-1 flex flex-col lg:justify-between mobile-text-shadow">
           {/* Top content - centered */}
-          <RevealOnScroll className="text-center max-w-3xl mx-auto pt-4 lg:pt-20">
+          <div className="text-center max-w-3xl mx-auto pt-4 lg:pt-20">
             <p className="text-xs uppercase tracking-widest text-white mb-6">¿POR QUÉ REDAGRUPA?</p>
             <h2 className="text-[1.5rem] sm:text-[2rem] lg:text-[2.5rem] font-normal mb-8 leading-[0.9] text-white px-4">
               Cuando delegas bien, tu equipo gana confianza… y tú recuperas foco.
@@ -626,7 +594,7 @@ export default function HomePage() {
             >
               Solicitar Asesoría
             </ScrollButton>
-          </RevealOnScroll>
+          </div>
 
           {/* Spacer for image visibility - Mobile only */}
           <div className="flex-1 min-h-[50vh] lg:hidden" />
@@ -635,14 +603,10 @@ export default function HomePage() {
           <div className="lg:hidden pb-4">
             <StatsCarousel />
           </div>
-          <motion.div
+          <div
             className="hidden lg:grid grid-cols-4 gap-8 max-w-6xl mx-auto pb-16"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={staggerContainer}
           >
-            <motion.div variants={staggerItem} className="pl-6 space-y-3">
+            <div className="pl-6 space-y-3">
               <div className="w-10 h-10 rounded-full bg-[#cc0033] flex items-center justify-center mb-4">
                 <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -651,8 +615,8 @@ export default function HomePage() {
               <div className="text-6xl font-bold text-white">+10</div>
               <h3 className="text-xl font-semibold text-white">Años de experiencia</h3>
               <p className="text-sm text-white leading-snug">Enfocados en las necesidades de las pymes</p>
-            </motion.div>
-            <motion.div variants={staggerItem} className="pl-6 space-y-3">
+            </div>
+            <div className="pl-6 space-y-3">
               <div className="w-10 h-10 rounded-full bg-[#cc0033] flex items-center justify-center mb-4">
                 <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -661,8 +625,8 @@ export default function HomePage() {
               <div className="text-6xl font-bold text-white">+300</div>
               <h3 className="text-xl font-semibold text-white">Empresas</h3>
               <p className="text-sm text-white leading-snug">Que confían en nuestro equipo de profesionales</p>
-            </motion.div>
-            <motion.div variants={staggerItem} className="pl-6 space-y-3">
+            </div>
+            <div className="pl-6 space-y-3">
               <div className="w-10 h-10 rounded-full bg-[#cc0033] flex items-center justify-center mb-4">
                 <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -671,8 +635,8 @@ export default function HomePage() {
               <div className="text-6xl font-bold text-white">+9,000</div>
               <h3 className="text-xl font-semibold text-white">Familias</h3>
               <p className="text-sm text-white leading-snug">Cubiertas en Chile y el extranjero</p>
-            </motion.div>
-            <motion.div variants={staggerItem} className="pl-6 space-y-3">
+            </div>
+            <div className="pl-6 space-y-3">
               <div className="w-10 h-10 rounded-full bg-[#cc0033] flex items-center justify-center mb-4">
                 <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -681,29 +645,25 @@ export default function HomePage() {
               <div className="text-6xl font-bold text-white">+1,400</div>
               <h3 className="text-xl font-semibold text-white">Alianzas</h3>
               <p className="text-sm text-white leading-snug">Conforman nuestra red de convenios</p>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Todos los Seguros Section */}
       <section id="seccion-aseguradoras" className="pt-24 md:pt-32 pb-24 md:pb-32 bg-white">
         <div className="container mx-auto px-6">
-          <RevealOnScroll className="text-center mb-12 md:mb-20">
+          <div className="text-center mb-12 md:mb-20">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight text-[#cc0033] px-4">
               Formularios de reembolso e incorporación
             </h2>
-          </RevealOnScroll>
+          </div>
 
-          <motion.div
+          <div
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.1 }}
-            variants={staggerContainer}
           >
             {/* Bupa */}
-            <motion.div variants={staggerItem} className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
+            <div className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
               <Image
                 src="/images/bupa.png"
                 alt="Seguros Bupa"
@@ -726,10 +686,10 @@ export default function HomePage() {
                   <span>Reembolso de salud</span>
                 </a>
               </div>
-            </motion.div>
+            </div>
 
             {/* Bice Vida */}
-            <motion.div variants={staggerItem} className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
+            <div className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
               <Image
                 src="/images/logo-bicevida-e1674133440155.png"
                 alt="Bice Vida"
@@ -752,10 +712,10 @@ export default function HomePage() {
                   <span>Reembolso de salud</span>
                 </a>
               </div>
-            </motion.div>
+            </div>
 
             {/* Sura */}
-            <motion.div variants={staggerItem} className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
+            <div className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
               <Image
                 src="/images/sura-seguros300-e1674133176152.png"
                 alt="Seguros Sura"
@@ -778,10 +738,10 @@ export default function HomePage() {
                   <span>Reembolso de salud</span>
                 </a>
               </div>
-            </motion.div>
+            </div>
 
             {/* Consorcio */}
-            <motion.div variants={staggerItem} className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
+            <div className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
               <Image
                 src="/images/consorcio300-e1674133353916.png"
                 alt="Consorcio"
@@ -804,10 +764,10 @@ export default function HomePage() {
                   <span>Reembolso de salud</span>
                 </a>
               </div>
-            </motion.div>
+            </div>
 
             {/* MetLife */}
-            <motion.div variants={staggerItem} className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
+            <div className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
               <Image
                 src="/images/metlife-logo-e1674133505895.png"
                 alt="MetLife"
@@ -830,10 +790,10 @@ export default function HomePage() {
                   <span>Reembolso de salud</span>
                 </a>
               </div>
-            </motion.div>
+            </div>
 
             {/* BCI */}
-            <motion.div variants={staggerItem} className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
+            <div className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
               <Image
                 src="/images/bci-seguros300.png"
                 alt="BCI Seguros"
@@ -856,10 +816,10 @@ export default function HomePage() {
                   <span>Reembolso de salud</span>
                 </a>
               </div>
-            </motion.div>
+            </div>
 
             {/* Vida Security */}
-            <motion.div variants={staggerItem} className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
+            <div className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
               <Image
                 src="/images/security.png"
                 alt="Vida Security"
@@ -886,10 +846,10 @@ export default function HomePage() {
                   <span>Reembolso de salud</span>
                 </a>
               </div>
-            </motion.div>
+            </div>
 
             {/* Help */}
-            <motion.div variants={staggerItem} className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
+            <div className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
               <Image
                 src="/images/logo-help1-e1674133566493.png"
                 alt="Help Seguros"
@@ -912,10 +872,10 @@ export default function HomePage() {
                   <span>Reembolso de salud</span>
                 </a>
               </div>
-            </motion.div>
+            </div>
 
             {/* Chilena Consolidada */}
-            <motion.div variants={staggerItem} className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
+            <div className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
               <Image
                 src="/images/logo-chilena-consolidada2-e1674133731697.png"
                 alt="Chilena Consolidada"
@@ -942,8 +902,8 @@ export default function HomePage() {
                   <span>Reembolso de salud</span>
                 </a>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -980,12 +940,12 @@ export default function HomePage() {
         {/* Content */}
         <div className="container mx-auto px-4 sm:px-6 h-full relative z-10">
           <div className="flex items-center min-h-0 lg:min-h-[700px] py-12">
-            <RevealOnScroll className="max-w-lg w-full bg-white/95 backdrop-blur-sm rounded-2xl p-5 sm:p-6 lg:p-8 shadow-2xl">
+            <div className="max-w-lg w-full bg-white/95 backdrop-blur-sm rounded-2xl p-5 sm:p-6 lg:p-8 shadow-2xl">
               <ContactForm
                 pagina="landing"
                 heading="Tranquilo, sabemos cómo hacer simples los seguros complementarios, ¡Conversemos!"
               />
-            </RevealOnScroll>
+            </div>
           </div>
         </div>
       </section>

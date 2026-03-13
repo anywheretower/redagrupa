@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RedAgrupa &mdash; Reporte de Mejoras Web</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f8f9fa; color: #1e293b; }
+
+  .header { background: #cc0033; color: white; padding: 32px 24px; }
+  .header-inner { max-width: 900px; margin: 0 auto; }
+  .header h1 { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+  .header p { font-size: 14px; opacity: 0.85; }
+  .header .date { font-size: 12px; opacity: 0.7; margin-top: 8px; }
+
+  .container { max-width: 900px; margin: 0 auto; padding: 24px; }
+
+  /* Tabs */
+  .tabs { display: flex; gap: 0; margin-bottom: 0; margin-top: 24px; }
+  .tab { padding: 10px 24px; font-size: 13px; font-weight: 600; cursor: pointer; border: 1px solid #e2e8f0; border-bottom: none; border-radius: 8px 8px 0 0; background: #f1f5f9; color: #64748b; transition: all 0.2s; }
+  .tab.active { background: white; color: #1e293b; border-color: #e2e8f0; position: relative; }
+  .tab.active::after { content: ''; position: absolute; bottom: -1px; left: 0; right: 0; height: 1px; background: white; }
+  .tab-content { display: none; border: 1px solid #e2e8f0; border-radius: 0 8px 8px 8px; background: white; padding: 20px; margin-bottom: 28px; }
+  .tab-content.active { display: block; }
+
+  /* Scores */
+  .scores { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 16px; }
+  .score-card { background: #f8fafc; border-radius: 10px; padding: 16px; text-align: center; }
+  .score-value { font-size: 32px; font-weight: 800; margin-bottom: 2px; }
+  .score-label { font-size: 11px; color: #64748b; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; }
+  .score-green { color: #16a34a; }
+  .score-orange { color: #ea580c; }
+  .score-red { color: #dc2626; }
+
+  /* Sections */
+  .section { margin-bottom: 28px; }
+  .section-title { font-size: 16px; font-weight: 700; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid #e2e8f0; }
+
+  /* Table */
+  table { width: 100%; border-collapse: collapse; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+  th { background: #f1f5f9; text-align: left; padding: 10px 14px; font-size: 11px; font-weight: 600; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; }
+  td { padding: 10px 14px; font-size: 13px; border-top: 1px solid #f1f5f9; vertical-align: top; }
+  tr:hover td { background: #f8fafc; }
+
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; }
+  .badge-done { background: #dcfce7; color: #166534; }
+  .badge-pending { background: #fef3c7; color: #92400e; }
+  .badge-design { background: #ede9fe; color: #5b21b6; }
+
+  .detail { color: #64748b; font-size: 12px; margin-top: 2px; }
+
+  .note { background: #fff1f2; border-left: 3px solid #cc0033; padding: 12px 16px; font-size: 13px; color: #334155; border-radius: 0 8px 8px 0; margin-top: 20px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-inner">
+    <h1>RedAgrupa &mdash; Reporte de Mejoras Web</h1>
+    <p>Optimizaci&oacute;n de rendimiento, accesibilidad, SEO y tasa de rebote</p>
+    <p class="date">www.redagrupa.cl &middot; Actualizado 13 marzo 2026</p>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="note">
+    <strong>Importante:</strong> Ninguna mejora afecta la funcionalidad de formularios, env&iacute;o de emails (Resend), registro en Supabase, Google Tag Manager ni Vercel Analytics. Solo se optimiza rendimiento, accesibilidad y experiencia de usuario.
+  </div>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <div class="tab active" onclick="switchTab('desktop')">Desktop</div>
+    <div class="tab" onclick="switchTab('mobile')">Mobile</div>
+  </div>
+
+  <!-- Desktop Tab -->
+  <div class="tab-content active" id="tab-desktop">
+    <div style="margin-bottom: 12px; font-size: 14px; font-weight: 600;">PageSpeed Insights &mdash; Desktop (baseline 13 mar 2026)</div>
+    <div class="scores">
+      <div class="score-card"><div class="score-value score-orange">81</div><div class="score-label">Rendimiento</div></div>
+      <div class="score-card"><div class="score-value score-orange">89</div><div class="score-label">Accesibilidad</div></div>
+      <div class="score-card"><div class="score-value score-green">100</div><div class="score-label">Recomendaciones</div></div>
+      <div class="score-card"><div class="score-value score-green">100</div><div class="score-label">SEO</div></div>
+    </div>
+    <div style="font-size: 13px; color: #64748b;">Sin datos CrUX (sitio nuevo). Laboratorio: FCP 0.2s, LCP 2.1s, TBT 250ms, CLS 0.001, Speed Index 0.7s</div>
+  </div>
+
+  <!-- Mobile Tab -->
+  <div class="tab-content" id="tab-mobile">
+    <div style="margin-bottom: 12px; font-size: 14px; font-weight: 600;">PageSpeed Insights &mdash; Mobile (baseline 13 mar 2026)</div>
+    <div class="scores">
+      <div class="score-card"><div class="score-value score-orange">58</div><div class="score-label">Rendimiento</div></div>
+      <div class="score-card"><div class="score-value score-orange">85</div><div class="score-label">Accesibilidad</div></div>
+      <div class="score-card"><div class="score-value score-green">100</div><div class="score-label">Recomendaciones</div></div>
+      <div class="score-card"><div class="score-value score-green">100</div><div class="score-label">SEO</div></div>
+    </div>
+    <div style="font-size: 13px; color: #64748b;">Sin datos CrUX (sitio nuevo). Laboratorio: FCP 0.9s, LCP 9.4s, TBT 660ms, CLS 0, Speed Index 2.9s</div>
+  </div>
+
+  <!-- Rendimiento -->
+  <div class="section">
+    <div class="section-title">Rendimiento</div>
+    <table>
+      <tr><th style="width:40px">#</th><th>Medida</th><th style="width:100px">Estado</th></tr>
+      <tr><td>1</td><td>Reducir JavaScript sin usar<div class="detail">Eliminados 55 componentes UI y 33 dependencias npm no utilizadas (recharts, cmdk, react-resizable-panels, input-otp, vaul, next-themes, 26 @radix-ui)</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
+      <tr><td>2</td><td>Bloqueo de renderizaci&oacute;n<div class="detail">Eliminada dependencia tw-animate-css no utilizada, preconnect a googletagmanager.com, imports Geist innecesarios removidos de layout.tsx</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
+      <tr><td>3</td><td>Cach&eacute; eficientes (Cache-Control 1 a&ntilde;o)<div class="detail">Headers para /images/ y /_next/static/ en next.config.mjs</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
+      <tr><td>4</td><td>JavaScript heredado<div class="detail">Next.js SWC ya maneja transpilaci&oacute;n moderna por defecto. JS heredado restante es de terceros (Facebook 12.5 KiB)</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
+      <tr><td>5</td><td>Preload logo header<div class="detail">link rel=preload en layout.tsx</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
+      <tr><td>6</td><td>Im&aacute;genes mobile pesadas<div class="detail">pushpin-movil.png convertida a WebP (771KB &rarr; 39KB, -95%)</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
+    </table>
+  </div>
+
+  <!-- Accesibilidad -->
+  <div class="section">
+    <div class="section-title">Accesibilidad</div>
+    <table>
+      <tr><th style="width:40px">#</th><th>Medida</th><th style="width:100px">Estado</th></tr>
+      <tr><td>7</td><td>Botones sin nombres accesibles<div class="detail">aria-labels en links RRSS (&times;9 archivos), bot&oacute;n CRM, hamburguesa mobile, dots de carousel</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
+      <tr><td>8</td><td>Select sin label accesible<div class="detail">aria-label=&ldquo;Motivo de contacto&rdquo; en ambos selects de ContactForm</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
+      <tr><td>9</td><td>Objetivos t&aacute;ctiles peque&ntilde;os<div class="detail">Dots carousel: min-w/h 24px con bg-clip-content. Sidebar RRSS: w-9&rarr;w-11. Bot&oacute;n cerrar formulario: padding extra</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
+      <tr><td>10</td><td>V&iacute;nculos id&eacute;nticos mismo prop&oacute;sito<div class="detail">Parcialmente resuelto con aria-labels que diferencian links duplicados</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
+    </table>
+  </div>
+
+  <!-- SEO -->
+  <div class="section">
+    <div class="section-title">SEO (score 100)</div>
+    <table>
+      <tr><th style="width:40px">#</th><th>Medida</th><th style="width:100px">Estado</th></tr>
+      <tr><td colspan="3" style="text-align: center; color: #64748b; font-style: italic;">Sin hallazgos &mdash; score perfecto</td></tr>
+    </table>
+  </div>
+
+  <!-- UX / Tasa de Rebote -->
+  <div class="section">
+    <div class="section-title">UX / Tasa de Rebote</div>
+    <table>
+      <tr><th style="width:40px">#</th><th>Medida</th><th style="width:100px">Estado</th></tr>
+      <tr><td>11</td><td>Redise&ntilde;ar hero mobile<div class="detail">Imagen actual no comunica bien la propuesta de valor en pantalla chica</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+      <tr><td>12</td><td>CTAs intermedios en p&aacute;ginas largas<div class="detail">Agregar llamadas a la acci&oacute;n entre secciones para reducir scroll sin conversi&oacute;n</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+      <tr><td>13</td><td>Breadcrumbs en subp&aacute;ginas<div class="detail">Navegaci&oacute;n jer&aacute;rquica en 8 subp&aacute;ginas (nosotros, seguros-salud, beneficios, BICE pyme/personas, pol&iacute;ticas, blog)</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
+      <tr><td>14</td><td>Velocidad de carga percibida<div class="detail">Skeleton loaders o placeholders mientras cargan im&aacute;genes y datos</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+    </table>
+  </div>
+
+  <!-- No controlable -->
+  <div class="section">
+    <div class="section-title">No controlable (terceros)</div>
+    <table>
+      <tr><th style="width:40px">#</th><th>Recurso</th><th style="width:100px">Impacto</th></tr>
+      <tr><td>&mdash;</td><td>Google Tag Manager<div class="detail">JS sin usar 473.6 KiB + cach&eacute; corto</div></td><td><span class="badge badge-design">Tercero</span></td></tr>
+      <tr><td>&mdash;</td><td>Facebook Pixel<div class="detail">JS sin usar 94.2 KiB, JS heredado 12.5 KiB, cach&eacute; 20 min</div></td><td><span class="badge badge-design">Tercero</span></td></tr>
+      <tr><td>&mdash;</td><td>Google Analytics<div class="detail">Cach&eacute; 2h (21 KiB)</div></td><td><span class="badge badge-design">Tercero</span></td></tr>
+      <tr><td>&mdash;</td><td>Vercel Analytics<div class="detail">Script adicional en cada p&aacute;gina</div></td><td><span class="badge badge-design">Tercero</span></td></tr>
+    </table>
+  </div>
+
+  <!-- Summary -->
+  <div style="margin-top: 16px; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
+    <div style="display: flex; gap: 24px; align-items: center; justify-content: center; flex-wrap: wrap;">
+      <div style="text-align: center;">
+        <div style="font-size: 28px; font-weight: 800; color: #16a34a;">11</div>
+        <div style="font-size: 11px; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px;">Aplicadas</div>
+      </div>
+      <div style="width: 1px; height: 40px; background: #e2e8f0;"></div>
+      <div style="text-align: center;">
+        <div style="font-size: 28px; font-weight: 800; color: #7c3aed;">3</div>
+        <div style="font-size: 11px; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px;">Pendientes</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function switchTab(tab) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  document.getElementById('tab-' + tab).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
+
+</body>
+</html>

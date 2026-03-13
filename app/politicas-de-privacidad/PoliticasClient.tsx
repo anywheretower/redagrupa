@@ -15,6 +15,7 @@ import { Button } from "@/components/ui/button"
 import MobileMenu from "@/components/MobileMenu"
 import Footer from "@/components/Footer"
 import RevealOnScroll from "@/components/RevealOnScroll"
+import Breadcrumbs from "@/components/Breadcrumbs"
 
 export default function PoliticasClient() {
   return (
@@ -71,7 +72,7 @@ export default function PoliticasClient() {
           href="https://www.facebook.com/RedAgrupa/"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-9 h-9 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
+          className="w-11 h-11 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
           aria-label="Facebook de RedAgrupa"
         >
           <Facebook className="w-4 h-4 text-white" strokeWidth={1.5} />
@@ -80,7 +81,7 @@ export default function PoliticasClient() {
           href="https://www.instagram.com/redagrupa/"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-9 h-9 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
+          className="w-11 h-11 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
           aria-label="Instagram de RedAgrupa"
         >
           <Instagram className="w-4 h-4 text-white" strokeWidth={1.5} />
@@ -89,7 +90,7 @@ export default function PoliticasClient() {
           href="https://www.linkedin.com/company/redagrupa"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-9 h-9 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
+          className="w-11 h-11 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
           aria-label="LinkedIn de RedAgrupa"
         >
           <Linkedin className="w-4 h-4 text-white" strokeWidth={1.5} />
@@ -100,6 +101,7 @@ export default function PoliticasClient() {
         <section className="py-32">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
+              <Breadcrumbs items={[{ label: "Políticas de Privacidad" }]} />
               <RevealOnScroll>
                 <h1 className="text-4xl font-bold text-[#cc0033] text-center mb-4">
                   Politica de Privacidad
