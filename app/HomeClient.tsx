@@ -304,12 +304,13 @@ export default function HomePage() {
       <ScrollHeader>
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center -ml-2 lg:ml-0">
-            <Image
+            <img
               src="/images/logo-20redagrupa-3.png"
               alt="RedAgrupa Logo"
               width={160}
               height={40}
-              priority
+              fetchPriority="high"
+              decoding="sync"
               className="h-6 md:h-8 w-auto"
             />
           </Link>
