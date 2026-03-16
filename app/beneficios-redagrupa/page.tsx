@@ -3,7 +3,7 @@ import BeneficiosClient from "./BeneficiosClient"
 export const metadata = {
   title: "Beneficios de Salud para Empresas | RedAgrupa",
   description:
-    "Convenios de salud, bienestar, vacunación corporativa y plataforma digital de beneficios para empresas clientes de RedAgrupa en Chile.",
+    "Convenios de salud, bienestar y vacunación corporativa para empresas clientes de RedAgrupa. +9.000 familias protegidas en Chile.",
 }
 
 export default function BeneficiosPage() {

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     template: "%s | RedAgrupa",
   },
   description:
-    "Gestiona tus seguros complementarios de salud para que tu pyme y tu equipo estén protegidos, sin trámites eternos ni lenguaje técnico imposible.",
+    "Gestión integral de seguros complementarios de salud para pymes en Chile. +10 años de experiencia, +300 empresas clientes, +9.000 familias protegidas. Sin trámites eternos ni lenguaje técnico.",
   alternates: {
     canonical: "./",
   },
