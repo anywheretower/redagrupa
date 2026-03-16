@@ -6,8 +6,33 @@ interface BreadcrumbItem {
 }
 
 export default function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
+  const baseUrl = "https://www.redagrupa.cl"
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Inicio",
+        item: baseUrl,
+      },
+      ...items.map((item, index) => ({
+        "@type": "ListItem",
+        position: index + 2,
+        name: item.label,
+        ...(item.href ? { item: `${baseUrl}${item.href}` } : {}),
+      })),
+    ],
+  }
+
   return (
     <nav aria-label="Breadcrumb" className="mb-6">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <ol className="flex items-center gap-1.5 text-xs text-gray-500 flex-wrap">
         <li>
           <a href="/" className="flex items-center gap-1 hover:text-[#cc0033] transition-colors">

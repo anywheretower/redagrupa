@@ -39,5 +39,40 @@ export default async function BlogPostPage({
 
   const relatedPosts = getRelatedPosts(slug, 8)
 
-  return <BlogPostClient post={post} relatedPosts={relatedPosts} />
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.excerpt,
+    image: `https://www.redagrupa.cl${post.heroImage}`,
+    datePublished: post.date,
+    dateModified: post.date,
+    author: {
+      "@type": "Organization",
+      name: "RedAgrupa",
+      url: "https://www.redagrupa.cl",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "RedAgrupa",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.redagrupa.cl/images/logo-20redagrupa-3.png",
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://www.redagrupa.cl/blog/${slug}`,
+    },
+  }
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <BlogPostClient post={post} relatedPosts={relatedPosts} />
+    </>
+  )
 }
