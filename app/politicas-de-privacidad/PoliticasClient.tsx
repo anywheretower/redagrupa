@@ -48,6 +48,9 @@ export default function PoliticasClient() {
             <Link href="/seguro-complementario-bice-personas" className="text-white font-medium text-sm">
               Seguro BICE Personas
             </Link>
+            <Link href="/blog" className="text-white font-medium text-sm">
+              Blog
+            </Link>
           </nav>
           <div className="hidden lg:flex items-center gap-3">
             <Button variant="outline" className="bg-transparent border-white text-white hover:bg-white/10 w-[180px]" asChild>

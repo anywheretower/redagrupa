@@ -67,6 +67,9 @@ export default function BicePersonasClient() {
             <Link href="/seguro-complementario-bice-personas" className="text-white font-medium text-sm">
               Seguro BICE Personas
             </Link>
+            <Link href="/blog" className="text-white font-medium text-sm">
+              Blog
+            </Link>
           </nav>
           <div className="hidden lg:flex items-center gap-3">
             <Button
@@ -132,7 +135,7 @@ export default function BicePersonasClient() {
               </h1>
               <Image
                 src="/images/logo-bice-vida.avif"
-                alt="BICE Vida"
+                alt="Logo BICE Vida - seguro complementario para personas"
                 width={200}
                 height={50}
                 className="mx-auto h-14 w-auto object-contain -mt-2 mb-1"
@@ -394,7 +397,7 @@ export default function BicePersonasClient() {
             <RevealOnScroll className="max-w-4xl mx-auto text-center space-y-6">
               <Image
                 src="/images/logo-bice-vida.avif"
-                alt="BICE Vida"
+                alt="Logo BICE Vida - seguro complementario para personas"
                 width={180}
                 height={50}
                 className="mx-auto h-10 w-auto object-contain"

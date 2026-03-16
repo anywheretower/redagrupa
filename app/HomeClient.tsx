@@ -342,6 +342,12 @@ export default function HomePage() {
             >
               Seguro BICE Personas
             </Link>
+            <Link
+              href="/blog"
+              className="text-white hover:text-white/80 transition-colors font-medium text-sm"
+            >
+              Blog
+            </Link>
           </nav>
           {/* Desktop Buttons - Hidden on mobile */}
           <div className="hidden lg:flex items-center gap-3">
@@ -405,7 +411,7 @@ export default function HomePage() {
         <div className="absolute inset-0 z-0">
           <Image 
             src="/images/hero-redagrupa.webp" 
-            alt="Fondo hero" 
+            alt="Equipo de trabajo protegido con seguro complementario de salud RedAgrupa"
             fill 
             className="object-cover" 
             priority 
@@ -550,7 +556,7 @@ export default function HomePage() {
         <div className="absolute inset-0 z-0 lg:hidden">
           <Image
             src="/images/pushpin-movil.webp"
-            alt="Equipamiento médico sobre fondo rojo"
+            alt="Gestión de seguros complementarios de salud para pymes en Chile"
             fill
             className="object-cover object-top"
             quality={85}
@@ -569,7 +575,7 @@ export default function HomePage() {
         <div className="absolute inset-0 z-0 hidden lg:block">
           <Image
             src="/images/proyecto-nuevo-1-4.webp"
-            alt="Medical equipment on red background"
+            alt="Simplifica los seguros complementarios de salud con RedAgrupa"
             fill
             className="object-cover"
             quality={85}
@@ -670,7 +676,7 @@ export default function HomePage() {
             <div className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
               <Image
                 src="/images/bupa.png"
-                alt="Seguros Bupa"
+                alt="Logo Bupa - aseguradora partner de RedAgrupa"
                 width={120}
                 height={32}
                 className="h-8 w-auto object-contain"
@@ -696,7 +702,7 @@ export default function HomePage() {
             <div className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
               <Image
                 src="/images/logo-bicevida-e1674133440155.png"
-                alt="Bice Vida"
+                alt="Logo BICE Vida - aseguradora partner de RedAgrupa"
                 width={120}
                 height={32}
                 className="h-8 w-auto object-contain"
@@ -722,7 +728,7 @@ export default function HomePage() {
             <div className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
               <Image
                 src="/images/sura-seguros300-e1674133176152.png"
-                alt="Seguros Sura"
+                alt="Logo Sura - aseguradora partner de RedAgrupa"
                 width={120}
                 height={32}
                 className="h-8 w-auto object-contain"
@@ -748,7 +754,7 @@ export default function HomePage() {
             <div className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
               <Image
                 src="/images/consorcio300-e1674133353916.png"
-                alt="Consorcio"
+                alt="Logo Consorcio - aseguradora partner de RedAgrupa"
                 width={120}
                 height={32}
                 className="h-8 w-auto object-contain"
@@ -774,7 +780,7 @@ export default function HomePage() {
             <div className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
               <Image
                 src="/images/metlife-logo-e1674133505895.png"
-                alt="MetLife"
+                alt="Logo MetLife - aseguradora partner de RedAgrupa"
                 width={120}
                 height={32}
                 className="h-8 w-auto object-contain"
@@ -800,7 +806,7 @@ export default function HomePage() {
             <div className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
               <Image
                 src="/images/bci-seguros300.png"
-                alt="BCI Seguros"
+                alt="Logo BCI Seguros - aseguradora partner de RedAgrupa"
                 width={120}
                 height={32}
                 className="h-8 w-auto object-contain"
@@ -826,7 +832,7 @@ export default function HomePage() {
             <div className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
               <Image
                 src="/images/security.png"
-                alt="Vida Security"
+                alt="Logo Vida Security - aseguradora partner de RedAgrupa"
                 width={120}
                 height={32}
                 className="h-8 w-auto object-contain"
@@ -856,7 +862,7 @@ export default function HomePage() {
             <div className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
               <Image
                 src="/images/logo-help1-e1674133566493.png"
-                alt="Help Seguros"
+                alt="Logo Help Seguros - aseguradora partner de RedAgrupa"
                 width={120}
                 height={32}
                 className="h-8 w-auto object-contain"
@@ -882,7 +888,7 @@ export default function HomePage() {
             <div className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col">
               <Image
                 src="/images/logo-chilena-consolidada2-e1674133731697.png"
-                alt="Chilena Consolidada"
+                alt="Logo Chilena Consolidada - aseguradora partner de RedAgrupa"
                 width={120}
                 height={32}
                 className="h-8 w-auto object-contain"
@@ -917,7 +923,7 @@ export default function HomePage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/proyecto-nuevo-1-1.webp"
-            alt="Modern laptop on red gradient background"
+            alt="Formularios de seguros complementarios disponibles para descarga en RedAgrupa"
             fill
             className="object-cover"
             quality={85}

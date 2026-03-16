@@ -50,6 +50,9 @@ export default function NosotrosClient() {
             <Link href="/seguro-complementario-bice-personas" className="text-white font-medium text-sm">
               Seguro BICE Personas
             </Link>
+            <Link href="/blog" className="text-white font-medium text-sm">
+              Blog
+            </Link>
           </nav>
           {/* Desktop Buttons - Hidden on mobile */}
           <div className="hidden lg:flex items-center gap-3">

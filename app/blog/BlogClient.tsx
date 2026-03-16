@@ -65,6 +65,9 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
             >
               Seguro BICE Personas
             </Link>
+            <Link href="/blog" className="text-white font-medium text-sm">
+              Blog
+            </Link>
           </nav>
           <div className="hidden lg:flex items-center gap-3">
             <Button
