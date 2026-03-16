@@ -146,7 +146,7 @@ export default function SegurosSaludClient() {
             <Breadcrumbs items={[{ label: "Seguros Salud" }]} />
             {/* Título y botón solo en móvil */}
             <div className="lg:hidden max-w-4xl mx-auto space-y-3 mb-8">
-              <h1 className="text-3xl font-bold text-[#cc0033]">Seguro Complementario<br />de Salud</h1>
+              <p className="text-3xl font-bold text-[#cc0033]" aria-hidden="true">Seguro Complementario<br />de Salud</p>
               <div>
                 <Button onClick={scrollToForm} className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3">
                   Solicitar Asesoría

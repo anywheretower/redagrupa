@@ -146,7 +146,7 @@ export default function BeneficiosClient() {
             <Breadcrumbs items={[{ label: "Beneficios" }]} />
             {/* Título y botón solo en móvil */}
             <div className="lg:hidden max-w-4xl mx-auto space-y-3 mb-8">
-              <h1 className="text-3xl font-bold text-[#cc0033]">Beneficios de Salud<br />para Empresas</h1>
+              <p className="text-3xl font-bold text-[#cc0033]" aria-hidden="true">Beneficios de Salud<br />para Empresas</p>
               <div>
                 <Button onClick={scrollToForm} className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3">
                   Solicitar Asesoría

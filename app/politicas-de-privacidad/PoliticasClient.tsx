@@ -105,7 +105,7 @@ export default function PoliticasClient() {
               <Breadcrumbs items={[{ label: "Políticas de Privacidad" }]} />
               <RevealOnScroll>
                 <h1 className="text-4xl font-bold text-[#cc0033] text-center mb-4">
-                  Politica de Privacidad
+                  Política de Privacidad
                 </h1>
                 <p className="text-sm text-gray-500 text-center mb-16">
                   Ultima actualizacion: febrero 2026

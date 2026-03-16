@@ -9,9 +9,32 @@ import "./globals.css"
 const geist = Geist({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "RedAgrupa - Gestión de Seguros Complementarios para Pymes",
+  metadataBase: new URL("https://www.redagrupa.cl"),
+  title: {
+    default: "RedAgrupa - Gestión de Seguros Complementarios para Pymes",
+    template: "%s | RedAgrupa",
+  },
   description:
     "Gestiona tus seguros complementarios de salud para que tu pyme y tu equipo estén protegidos, sin trámites eternos ni lenguaje técnico imposible.",
+  alternates: {
+    canonical: "./",
+  },
+  openGraph: {
+    type: "website",
+    locale: "es_CL",
+    siteName: "RedAgrupa",
+    images: [
+      {
+        url: "/images/og-redagrupa.jpg",
+        width: 1200,
+        height: 630,
+        alt: "RedAgrupa - Seguros Complementarios para Pymes",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "48x48" },
@@ -52,6 +75,40 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         />
         <link rel="preload" as="image" href="/images/logo-20redagrupa-3.png" />
         <link rel="preload" as="image" href="/images/hero-redagrupa.webp" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": ["Organization", "InsuranceAgency"],
+              name: "RedAgrupa",
+              url: "https://www.redagrupa.cl",
+              logo: "https://www.redagrupa.cl/images/logo-20redagrupa-3.png",
+              description:
+                "Gestión de seguros complementarios de salud para pymes en Chile. Más de 10 años de experiencia, 300+ empresas y 9.000+ familias protegidas.",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Los Militares 5620, of 1011",
+                addressLocality: "Las Condes",
+                addressRegion: "Región Metropolitana",
+                postalCode: "7550000",
+                addressCountry: "CL",
+              },
+              telephone: "+56228132245",
+              email: "reembolsos@redagrupa.cl",
+              sameAs: [
+                "https://www.facebook.com/RedAgrupa/",
+                "https://www.instagram.com/redagrupa/",
+                "https://www.linkedin.com/company/redagrupa",
+              ],
+              foundingDate: "2014",
+              areaServed: {
+                "@type": "Country",
+                name: "Chile",
+              },
+            }),
+          }}
+        />
       </head>
       <body className={`${geist.className} antialiased`}>
         <noscript>
