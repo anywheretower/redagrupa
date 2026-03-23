@@ -1,7 +1,7 @@
 import SegurosSaludClient from "./SegurosSaludClient"
 
 export const metadata = {
-  title: "Seguro Complementario de Salud para Empresas | RedAgrupa",
+  title: "Seguro Complementario de Salud para Empresas",
   description:
     "Seguro complementario de salud para empresas en Chile. Cubre gastos que exceden Fonasa o Isapre. +300 pymes confían en RedAgrupa. Cotiza sin costo.",
 }

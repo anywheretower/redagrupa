@@ -374,6 +374,29 @@ export default function SegurosSaludClient() {
           </div>
         </section>
 
+        {/* Related Services */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-2xl font-bold text-gray-900 text-center mb-8">Servicios relacionados</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <Link href="/seguro-complementario-bice-pyme" className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow group">
+                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-[#cc0033] transition-colors">Seguro BICE Pyme</h3>
+                  <p className="text-sm text-gray-600 mt-2">Planes desde UF 0,52/trabajador/mes. Salud + Vida para tu equipo.</p>
+                </Link>
+                <Link href="/seguro-complementario-bice-personas" className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow group">
+                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-[#cc0033] transition-colors">Seguro BICE Personas</h3>
+                  <p className="text-sm text-gray-600 mt-2">Protección individual y familiar. Hospitalización, consultas y medicamentos.</p>
+                </Link>
+                <Link href="/beneficios-redagrupa" className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow group">
+                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-[#cc0033] transition-colors">Beneficios Corporativos</h3>
+                  <p className="text-sm text-gray-600 mt-2">Convenios de salud, bienestar y vacunación para empresas clientes.</p>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Contact Section */}
         <section className="py-32 bg-[#cc0033]" id="formulario-contacto">
           <div className="container mx-auto px-4">

@@ -11,6 +11,13 @@ const reviewsJsonLd = {
   "@type": "Organization",
   name: "RedAgrupa",
   url: "https://www.redagrupa.cl",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5.0",
+    bestRating: "5",
+    ratingCount: "3",
+    reviewCount: "3",
+  },
   review: [
     {
       "@type": "Review",

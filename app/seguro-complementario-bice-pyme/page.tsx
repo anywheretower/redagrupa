@@ -1,7 +1,7 @@
 import BicePymeClient from "./BicePymeClient"
 
 export const metadata = {
-  title: "Seguro Complementario BICE Pyme | RedAgrupa",
+  title: "Seguro Complementario BICE Pyme",
   description:
     "Planes de seguro complementario de salud BICE Vida para pymes. Seguro de Salud + Seguro de Vida desde UF 0,5200 mensual por trabajador.",
 }

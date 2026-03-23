@@ -129,6 +129,47 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }),
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "@id": "https://www.redagrupa.cl/#localbusiness",
+              name: "RedAgrupa",
+              image: "https://www.redagrupa.cl/images/logo-20redagrupa-3.png",
+              url: "https://www.redagrupa.cl",
+              telephone: "+56228132245",
+              email: "reembolsos@redagrupa.cl",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Los Militares 5620, of 1011",
+                addressLocality: "Las Condes",
+                addressRegion: "Región Metropolitana",
+                postalCode: "7550000",
+                addressCountry: "CL",
+              },
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: -33.4103,
+                longitude: -70.5831,
+              },
+              openingHoursSpecification: {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                ],
+                opens: "09:00",
+                closes: "18:00",
+              },
+              priceRange: "$$",
+            }),
+          }}
+        />
       </head>
       <body className={`${geist.className} antialiased`}>
         <noscript>
