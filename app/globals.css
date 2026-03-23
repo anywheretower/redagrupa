@@ -198,3 +198,27 @@
   }
 }
 
+/* RevealOnScroll — CSS-only reveal animation */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.reveal-on-scroll.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger children — CSS-only stagger */
+.stagger-grid > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.stagger-grid.reveal-visible > *:nth-child(1) { transition-delay: 0.1s; opacity: 1; transform: translateY(0); }
+.stagger-grid.reveal-visible > *:nth-child(2) { transition-delay: 0.25s; opacity: 1; transform: translateY(0); }
+.stagger-grid.reveal-visible > *:nth-child(3) { transition-delay: 0.4s; opacity: 1; transform: translateY(0); }
+.stagger-grid.reveal-visible > *:nth-child(4) { transition-delay: 0.55s; opacity: 1; transform: translateY(0); }
+.stagger-grid.reveal-visible > *:nth-child(5) { transition-delay: 0.7s; opacity: 1; transform: translateY(0); }
+.stagger-grid.reveal-visible > *:nth-child(n+6) { transition-delay: 0.85s; opacity: 1; transform: translateY(0); }
+

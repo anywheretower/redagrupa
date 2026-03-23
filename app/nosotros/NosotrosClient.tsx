@@ -12,10 +12,9 @@ import {
 import { Button } from "@/components/ui/button"
 import MobileMenu from "@/components/MobileMenu"
 import Footer from "@/components/Footer"
-import ContactForm from "@/components/ContactForm"
+import dynamic from "next/dynamic"
+const ContactForm = dynamic(() => import("@/components/ContactForm"), { ssr: false })
 import RevealOnScroll from "@/components/RevealOnScroll"
-import { motion } from "motion/react"
-import { staggerContainer, staggerItem } from "@/lib/animations"
 import Breadcrumbs from "@/components/Breadcrumbs"
 
 export default function NosotrosClient() {
@@ -165,28 +164,28 @@ export default function NosotrosClient() {
                 No solo asesoramos en la contratación del seguro. Nos encargamos de acompañar a la empresa en todo su ciclo de vida, asegurando una administración eficiente y una correcta utilización del beneficio por parte de los trabajadores.
               </p>
               <p className="text-base text-gray-700 font-semibold">Esto permite:</p>
-              <motion.ul className="space-y-4" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={staggerContainer}>
-                <motion.li variants={staggerItem} className="flex items-start gap-4">
+              <RevealOnScroll className="space-y-4 stagger-grid">
+                <li className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" />
                   <span className="text-base text-gray-700 leading-[1.1]">Disminuir la carga operativa del área de RRHH</span>
-                </motion.li>
-                <motion.li variants={staggerItem} className="flex items-start gap-4">
+                </li>
+                <li className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" />
                   <span className="text-base text-gray-700 leading-[1.1]">Reducir consultas repetitivas y tiempos de respuesta</span>
-                </motion.li>
-                <motion.li variants={staggerItem} className="flex items-start gap-4">
+                </li>
+                <li className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" />
                   <span className="text-base text-gray-700 leading-[1.1]">Optimizar el uso de coberturas contratadas</span>
-                </motion.li>
-                <motion.li variants={staggerItem} className="flex items-start gap-4">
+                </li>
+                <li className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" />
                   <span className="text-base text-gray-700 leading-[1.1]">Mejorar la experiencia del colaborador</span>
-                </motion.li>
-                <motion.li variants={staggerItem} className="flex items-start gap-4">
+                </li>
+                <li className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" />
                   <span className="text-base text-gray-700 leading-[1.1]">Mantener orden y control en la administración del beneficio</span>
-                </motion.li>
-              </motion.ul>
+                </li>
+              </RevealOnScroll>
             </RevealOnScroll>
           </div>
         </section>
@@ -200,28 +199,28 @@ export default function NosotrosClient() {
                 Las organizaciones necesitan que sus equipos directivos estén concentrados en crecimiento, resultados y sostenibilidad. Externalizar la administración del Seguro Complementario y sus beneficios permite profesionalizar el proceso sin aumentar estructura interna.
               </p>
               <p className="text-base text-gray-700 font-semibold">Delegar en RedAgrupa significa:</p>
-              <motion.ul className="space-y-4" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={staggerContainer}>
-                <motion.li variants={staggerItem} className="flex items-start gap-4">
+              <RevealOnScroll className="space-y-4 stagger-grid">
+                <li className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" />
                   <span className="text-base text-gray-700 leading-[1.1]">Ahorro de tiempo en tareas administrativas</span>
-                </motion.li>
-                <motion.li variants={staggerItem} className="flex items-start gap-4">
+                </li>
+                <li className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" />
                   <span className="text-base text-gray-700 leading-[1.1]">Mayor eficiencia en procesos relacionados con salud corporativa</span>
-                </motion.li>
-                <motion.li variants={staggerItem} className="flex items-start gap-4">
+                </li>
+                <li className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" />
                   <span className="text-base text-gray-700 leading-[1.1]">Reducción de fricción interna</span>
-                </motion.li>
-                <motion.li variants={staggerItem} className="flex items-start gap-4">
+                </li>
+                <li className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" />
                   <span className="text-base text-gray-700 leading-[1.1]">Respaldo técnico especializado permanente</span>
-                </motion.li>
-                <motion.li variants={staggerItem} className="flex items-start gap-4">
+                </li>
+                <li className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" />
                   <span className="text-base text-gray-700 leading-[1.1]">Continuidad operativa sin sobrecargar al equipo</span>
-                </motion.li>
-              </motion.ul>
+                </li>
+              </RevealOnScroll>
             </RevealOnScroll>
           </div>
         </section>

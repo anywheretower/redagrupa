@@ -22,10 +22,9 @@ import {
 import { Button } from "@/components/ui/button"
 import MobileMenu from "@/components/MobileMenu"
 import Footer from "@/components/Footer"
-import ContactForm from "@/components/ContactForm"
+import dynamic from "next/dynamic"
+const ContactForm = dynamic(() => import("@/components/ContactForm"), { ssr: false })
 import RevealOnScroll from "@/components/RevealOnScroll"
-import { motion } from "motion/react"
-import { staggerContainer, staggerItem } from "@/lib/animations"
 import Breadcrumbs from "@/components/Breadcrumbs"
 
 export default function BeneficiosClient() {
@@ -242,17 +241,17 @@ export default function BeneficiosClient() {
                 </h2>
               </RevealOnScroll>
 
-              <motion.div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={staggerContainer}>
-                <motion.div variants={staggerItem} className="space-y-4">
+              <RevealOnScroll className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto stagger-grid">
+                <div className="space-y-4">
                   <Dumbbell className="w-12 h-12 text-[#cc0033]" strokeWidth={1.5} />
                   <h3 className="text-2xl font-bold text-gray-900">Convenios con gimnasios y actividad física</h3>
                   <p className="text-base text-gray-700 leading-[1.1]">
                     Acceso a convenios preferenciales con gimnasios y centros deportivos, promoviendo hábitos
                     saludables que contribuyen a reducir licencias médicas y mejorar el rendimiento laboral.
                   </p>
-                </motion.div>
+                </div>
 
-                <motion.div variants={staggerItem} className="space-y-4">
+                <div className="space-y-4">
                   <Eye className="w-12 h-12 text-[#cc0033]" strokeWidth={1.5} />
                   <h3 className="text-2xl font-bold text-gray-900">Operativos oftalmológicos en terreno</h3>
                   <p className="text-base text-gray-700 leading-[1.1]">
@@ -260,8 +259,8 @@ export default function BeneficiosClient() {
                     en oficinas del cliente, optimizando tiempos del trabajador y evitando ausencias prolongadas por
                     gestiones médicas.
                   </p>
-                </motion.div>
-              </motion.div>
+                </div>
+              </RevealOnScroll>
             </div>
           </div>
         </section>

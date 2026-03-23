@@ -21,7 +21,8 @@ import ScrollButton from "@/components/ScrollButton" // Declare the ScrollButton
 import MobileMenu from "@/components/MobileMenu" // Declare the MobileMenu variable before using it
 import ScrollHeader from "@/components/ScrollHeader" // Declare the ScrollHeader variable before using it
 import Footer from "@/components/Footer"
-import ContactForm from "@/components/ContactForm"
+import dynamic from "next/dynamic"
+const ContactForm = dynamic(() => import("@/components/ContactForm"), { ssr: false })
 import { useState, useEffect, useCallback } from "react"
 import useEmblaCarousel from "embla-carousel-react"
 import Autoplay from "embla-carousel-autoplay"

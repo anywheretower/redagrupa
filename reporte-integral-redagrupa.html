@@ -354,8 +354,8 @@
         <tr><th style="width:40px">#</th><th>Medida</th><th style="width:100px">Estado</th></tr>
         <tr><td>R1</td><td>Formatos optimizados WebP/AVIF<div class="detail">next.config con formats [&ldquo;image/avif&rdquo;, &ldquo;image/webp&rdquo;]. Next.js Image sirve formato &oacute;ptimo.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
         <tr><td>R2</td><td>Preload hero image<div class="detail">link rel=&ldquo;preload&rdquo; para hero-redagrupa.webp (85 KB) en layout.tsx.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
-        <tr><td>R3</td><td>Hero preload es global &mdash; mover a page.tsx<div class="detail">El preload de hero-redagrupa.webp est&aacute; en layout.tsx y se carga en TODAS las p&aacute;ginas (blog, nosotros, etc.), no solo en landing.</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>R4</td><td>Im&aacute;genes hu&eacute;rfanas: 1.28 MB<div class="detail">pushpin-movil.png (771 KB), reloj-movil.png (505 KB), proyecto-nuevo-1-3.webp (58 KB). No referenciadas en ning&uacute;n componente.</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>R3</td><td>Hero preload movido a page.tsx<div class="detail">Preload de hero-redagrupa.webp movido de layout.tsx (global) a app/page.tsx (solo landing). Las dem&aacute;s p&aacute;ginas ya no lo cargan.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
+        <tr><td>R4</td><td>Im&aacute;genes hu&eacute;rfanas eliminadas (1.28 MB)<div class="detail">Eliminados pushpin-movil.png (771 KB), reloj-movil.png (505 KB), proyecto-nuevo-1-3.webp (58 KB). Directorio /images/ de 1.8 MB &rarr; 484 KB.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
         <tr><td>R5</td><td>fetchPriority high en logo LCP<div class="detail">Logo principal con fetchPriority=&ldquo;high&rdquo; y decoding=&ldquo;sync&rdquo; para acelerar LCP.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
         <tr><td>R6</td><td>CLS 0 en ambos dispositivos<div class="detail">Sin layout shifts. Dimensiones expl&iacute;citas en todas las im&aacute;genes con next/image.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
       </table>
@@ -365,8 +365,8 @@
       <div class="section-title"><span class="section-icon icon-perf">R</span> JavaScript &amp; Scripts</div>
       <table>
         <tr><th style="width:40px">#</th><th>Medida</th><th style="width:100px">Estado</th></tr>
-        <tr><td>R7</td><td>framer-motion a&uacute;n en 5 subp&aacute;ginas<div class="detail">NosotrosClient, SegurosSaludClient, BicePymeClient, BicePersonasClient, BeneficiosClient + RevealOnScroll.tsx + lib/animations.ts. ~150 KB JS extra.</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
-        <tr><td>R8</td><td>Cero dynamic imports<div class="detail">ContactForm se carga eager en todas las p&aacute;ginas. Deber&iacute;a ser lazy con next/dynamic ya que est&aacute; below-the-fold.</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
+        <tr><td>R7</td><td>framer-motion eliminado de 5 subp&aacute;ginas<div class="detail">RevealOnScroll reescrito con CSS + IntersectionObserver. Eliminados imports de motion/react y lib/animations.ts. Ahorro ~150 KB JS.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
+        <tr><td>R8</td><td>ContactForm con dynamic import<div class="detail">next/dynamic con ssr: false en 6 archivos. ContactForm solo se carga cuando el formulario est&aacute; en viewport (below-the-fold).</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
         <tr><td>R9</td><td>GTM con afterInteractive<div class="detail">Script GTM cargado con strategy=&ldquo;afterInteractive&rdquo; para no bloquear hidrataci&oacute;n.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
         <tr><td>R10</td><td>JS sin usar de terceros: 243 KB<div class="detail">GTM 64.7 KB (43%), GA4 &times;2 118.8 KB (31-41%), Meta Pixel 35.1 KB (37%), app bundle 24.4 KB (37%). No controlable directamente.</div></td><td><span class="badge badge-third">Tercero</span></td></tr>
         <tr><td>R11</td><td>framer-motion eliminado del home<div class="detail">Landing usa CSS nativo (keyframes + IntersectionObserver) en vez de framer-motion. Ahorro ~150 KB en p&aacute;gina principal.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
@@ -427,12 +427,12 @@
     <div style="text-align: center; margin-bottom: 16px; font-size: 13px; font-weight: 600; color: #475569;">Resumen Total de Medidas</div>
     <div class="footer-grid">
       <div class="footer-item">
-        <div class="footer-num" style="color: #16a34a;">66</div>
+        <div class="footer-num" style="color: #16a34a;">70</div>
         <div class="footer-label">Aplicadas</div>
       </div>
       <div class="footer-divider"></div>
       <div class="footer-item">
-        <div class="footer-num" style="color: #ea580c;">15</div>
+        <div class="footer-num" style="color: #ea580c;">11</div>
         <div class="footer-label">Pendientes</div>
       </div>
       <div class="footer-divider"></div>
@@ -446,7 +446,7 @@
         <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #2563eb; margin-right: 4px;"></span>SEO: 29 aplicadas / 1 pendiente</span>
         <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #7c3aed; margin-right: 4px;"></span>GEO: 9 aplicadas / 3 pendientes</span>
         <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #ea580c; margin-right: 4px;"></span>CRO: 11 aplicadas / 3 pendientes</span>
-        <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #16a34a; margin-right: 4px;"></span>Rendimiento: 11 aplicadas / 4 pendientes</span>
+        <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #16a34a; margin-right: 4px;"></span>Rendimiento: 15 aplicadas</span>
         <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #0891b2; margin-right: 4px;"></span>Accesibilidad: 6 aplicadas / 4 pendientes</span>
       </div>
     </div>

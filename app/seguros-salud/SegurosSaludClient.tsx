@@ -22,10 +22,9 @@ import {
 import { Button } from "@/components/ui/button"
 import MobileMenu from "@/components/MobileMenu"
 import Footer from "@/components/Footer"
-import ContactForm from "@/components/ContactForm"
+import dynamic from "next/dynamic"
+const ContactForm = dynamic(() => import("@/components/ContactForm"), { ssr: false })
 import RevealOnScroll from "@/components/RevealOnScroll"
-import { motion } from "motion/react"
-import { staggerContainer, staggerItem } from "@/lib/animations"
 import Breadcrumbs from "@/components/Breadcrumbs"
 
 export default function SegurosSaludClient() {
@@ -253,40 +252,40 @@ export default function SegurosSaludClient() {
               <p className="text-xs sm:text-sm uppercase tracking-wider text-[#666666] mb-8 text-center">
                 Coberturas principales
               </p>
-              <motion.div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8 mb-16" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={staggerContainer}>
-                <motion.div variants={staggerItem} className="text-center space-y-3">
+              <RevealOnScroll className="grid md:grid-cols-3 lg:grid-cols-5 gap-8 mb-16 stagger-grid">
+                <div className="text-center space-y-3">
                   <Heart className="w-12 h-12 text-[#cc0033] mx-auto" strokeWidth={1.5} />
                   <h3 className="text-lg font-semibold text-gray-900 leading-snug">Vida</h3>
-                </motion.div>
-                <motion.div variants={staggerItem} className="text-center space-y-3">
+                </div>
+                <div className="text-center space-y-3">
                   <BedDouble className="w-12 h-12 text-[#cc0033] mx-auto" strokeWidth={1.5} />
                   <h3 className="text-lg font-semibold text-gray-900 leading-snug">Hospitalización</h3>
                   <p className="text-sm text-gray-600 leading-snug">
                     Incluyendo cirugías y estadías clínicas
                   </p>
-                </motion.div>
-                <motion.div variants={staggerItem} className="text-center space-y-3">
+                </div>
+                <div className="text-center space-y-3">
                   <Stethoscope className="w-12 h-12 text-[#cc0033] mx-auto" strokeWidth={1.5} />
                   <h3 className="text-lg font-semibold text-gray-900 leading-snug">Atención ambulatoria</h3>
                   <p className="text-sm text-gray-600 leading-snug">
                     Consultas médicas, exámenes y procedimientos
                   </p>
-                </motion.div>
-                <motion.div variants={staggerItem} className="text-center space-y-3">
+                </div>
+                <div className="text-center space-y-3">
                   <Pill className="w-12 h-12 text-[#cc0033] mx-auto" strokeWidth={1.5} />
                   <h3 className="text-lg font-semibold text-gray-900 leading-snug">Medicamentos</h3>
                   <p className="text-sm text-gray-600 leading-snug">
                     Farmacia según receta médica
                   </p>
-                </motion.div>
-                <motion.div variants={staggerItem} className="text-center space-y-3">
+                </div>
+                <div className="text-center space-y-3">
                   <ShieldAlert className="w-12 h-12 text-[#cc0033] mx-auto" strokeWidth={1.5} />
                   <h3 className="text-lg font-semibold text-gray-900 leading-snug">Catastrófica</h3>
                   <p className="text-sm text-gray-600 leading-snug">
                     Para eventos de alto costo
                   </p>
-                </motion.div>
-              </motion.div>
+                </div>
+              </RevealOnScroll>
 
               {/* Coberturas adicionales */}
               <div className="border-l-4 border-[#cc0033] pl-6 max-w-4xl mx-auto">

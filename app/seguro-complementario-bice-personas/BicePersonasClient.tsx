@@ -26,10 +26,9 @@ import {
 import { Button } from "@/components/ui/button"
 import MobileMenu from "@/components/MobileMenu"
 import Footer from "@/components/Footer"
-import ContactForm from "@/components/ContactForm"
+import dynamic from "next/dynamic"
+const ContactForm = dynamic(() => import("@/components/ContactForm"), { ssr: false })
 import RevealOnScroll from "@/components/RevealOnScroll"
-import { motion } from "motion/react"
-import { staggerContainer, staggerItem } from "@/lib/animations"
 import Breadcrumbs from "@/components/Breadcrumbs"
 
 export default function BicePersonasClient() {
@@ -195,36 +194,36 @@ export default function BicePersonasClient() {
                 </div>
               </RevealOnScroll>
 
-              <motion.div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={staggerContainer}>
-                <motion.div variants={staggerItem} className="text-center space-y-3">
+              <RevealOnScroll className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto stagger-grid">
+                <div className="text-center space-y-3">
                   <BedDouble className="w-12 h-12 text-[#cc0033] mx-auto" strokeWidth={1.5} />
                   <h3 className="text-lg font-semibold text-gray-900 leading-snug">Hospitalizacion</h3>
                   <p className="text-sm text-gray-600 leading-snug">
                     Cobertura para cirugias, estadias clinicas y procedimientos hospitalarios
                   </p>
-                </motion.div>
-                <motion.div variants={staggerItem} className="text-center space-y-3">
+                </div>
+                <div className="text-center space-y-3">
                   <Stethoscope className="w-12 h-12 text-[#cc0033] mx-auto" strokeWidth={1.5} />
                   <h3 className="text-lg font-semibold text-gray-900 leading-snug">Consultas medicas</h3>
                   <p className="text-sm text-gray-600 leading-snug">
                     Atencion ambulatoria, consultas con especialistas y examenes
                   </p>
-                </motion.div>
-                <motion.div variants={staggerItem} className="text-center space-y-3">
+                </div>
+                <div className="text-center space-y-3">
                   <Siren className="w-12 h-12 text-[#cc0033] mx-auto" strokeWidth={1.5} />
                   <h3 className="text-lg font-semibold text-gray-900 leading-snug">Urgencias</h3>
                   <p className="text-sm text-gray-600 leading-snug">
                     Atencion de emergencia en clinicas y hospitales
                   </p>
-                </motion.div>
-                <motion.div variants={staggerItem} className="text-center space-y-3">
+                </div>
+                <div className="text-center space-y-3">
                   <Pill className="w-12 h-12 text-[#cc0033] mx-auto" strokeWidth={1.5} />
                   <h3 className="text-lg font-semibold text-gray-900 leading-snug">Medicamentos</h3>
                   <p className="text-sm text-gray-600 leading-snug">
                     Reembolso en farmacia segun receta medica
                   </p>
-                </motion.div>
-              </motion.div>
+                </div>
+              </RevealOnScroll>
             </div>
           </div>
         </section>
@@ -246,8 +245,8 @@ export default function BicePersonasClient() {
                 </div>
               </RevealOnScroll>
 
-              <motion.div className="grid md:grid-cols-3 gap-8 max-w-3xl mx-auto" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={staggerContainer}>
-                <motion.div variants={staggerItem} className="text-center space-y-3">
+              <RevealOnScroll className="grid md:grid-cols-3 gap-8 max-w-3xl mx-auto stagger-grid">
+                <div className="text-center space-y-3">
                   <div className="w-16 h-16 bg-[#cc0033] rounded-full flex items-center justify-center mx-auto">
                     <ShieldCheck className="w-8 h-8 text-white" strokeWidth={1.5} />
                   </div>
@@ -255,8 +254,8 @@ export default function BicePersonasClient() {
                   <p className="text-sm text-gray-600 leading-snug">
                     Personas entre 18 y 64 anos
                   </p>
-                </motion.div>
-                <motion.div variants={staggerItem} className="text-center space-y-3">
+                </div>
+                <div className="text-center space-y-3">
                   <div className="w-16 h-16 bg-[#cc0033] rounded-full flex items-center justify-center mx-auto">
                     <Heart className="w-8 h-8 text-white" strokeWidth={1.5} />
                   </div>
@@ -264,8 +263,8 @@ export default function BicePersonasClient() {
                   <p className="text-sm text-gray-600 leading-snug">
                     Conyuges o convivientes
                   </p>
-                </motion.div>
-                <motion.div variants={staggerItem} className="text-center space-y-3">
+                </div>
+                <div className="text-center space-y-3">
                   <div className="w-16 h-16 bg-[#cc0033] rounded-full flex items-center justify-center mx-auto">
                     <Users className="w-8 h-8 text-white" strokeWidth={1.5} />
                   </div>
@@ -273,8 +272,8 @@ export default function BicePersonasClient() {
                   <p className="text-sm text-gray-600 leading-snug">
                     Hijos dependientes del titular
                   </p>
-                </motion.div>
-              </motion.div>
+                </div>
+              </RevealOnScroll>
             </div>
           </div>
         </section>
@@ -298,8 +297,8 @@ export default function BicePersonasClient() {
                 </div>
               </RevealOnScroll>
 
-              <motion.div className="grid md:grid-cols-3 gap-8 max-w-3xl mx-auto" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={staggerContainer}>
-                <motion.div variants={staggerItem} className="text-center space-y-3">
+              <RevealOnScroll className="grid md:grid-cols-3 gap-8 max-w-3xl mx-auto stagger-grid">
+                <div className="text-center space-y-3">
                   <div className="w-12 h-12 bg-[#cc0033] rounded-lg flex items-center justify-center mx-auto">
                     <span className="text-white text-xl font-bold">1</span>
                   </div>
@@ -307,8 +306,8 @@ export default function BicePersonasClient() {
                   <p className="text-sm text-gray-600 leading-snug">
                     Acude a tu consulta, hospitalizacion o urgencia como lo haces habitualmente
                   </p>
-                </motion.div>
-                <motion.div variants={staggerItem} className="text-center space-y-3">
+                </div>
+                <div className="text-center space-y-3">
                   <div className="w-12 h-12 bg-[#cc0033] rounded-lg flex items-center justify-center mx-auto">
                     <span className="text-white text-xl font-bold">2</span>
                   </div>
@@ -316,8 +315,8 @@ export default function BicePersonasClient() {
                   <p className="text-sm text-gray-600 leading-snug">
                     Presenta los documentos de respaldo para solicitar el reembolso de tus gastos
                   </p>
-                </motion.div>
-                <motion.div variants={staggerItem} className="text-center space-y-3">
+                </div>
+                <div className="text-center space-y-3">
                   <div className="w-12 h-12 bg-[#cc0033] rounded-lg flex items-center justify-center mx-auto">
                     <span className="text-white text-xl font-bold">3</span>
                   </div>
@@ -325,8 +324,8 @@ export default function BicePersonasClient() {
                   <p className="text-sm text-gray-600 leading-snug">
                     Te devolvemos el porcentaje correspondiente segun tu plan de forma rapida
                   </p>
-                </motion.div>
-              </motion.div>
+                </div>
+              </RevealOnScroll>
             </div>
           </div>
         </section>
@@ -350,8 +349,8 @@ export default function BicePersonasClient() {
                 </div>
               </RevealOnScroll>
 
-              <motion.div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={staggerContainer}>
-                <motion.div variants={staggerItem} className="flex items-start gap-4">
+              <RevealOnScroll className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto stagger-grid">
+                <div className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-[#cc0033] rounded-lg flex items-center justify-center flex-shrink-0">
                     <Smile className="w-5 h-5 text-white" strokeWidth={1.5} />
                   </div>
@@ -361,8 +360,8 @@ export default function BicePersonasClient() {
                       Cobertura dental opcional para consultas, tratamientos y procedimientos
                     </p>
                   </div>
-                </motion.div>
-                <motion.div variants={staggerItem} className="flex items-start gap-4">
+                </div>
+                <div className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-[#cc0033] rounded-lg flex items-center justify-center flex-shrink-0">
                     <PawPrint className="w-5 h-5 text-white" strokeWidth={1.5} />
                   </div>
@@ -372,8 +371,8 @@ export default function BicePersonasClient() {
                       Proteccion para tu mascota incluida en los planes Elite
                     </p>
                   </div>
-                </motion.div>
-                <motion.div variants={staggerItem} className="flex items-start gap-4">
+                </div>
+                <div className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-[#cc0033] rounded-lg flex items-center justify-center flex-shrink-0">
                     <ArrowRightLeft className="w-5 h-5 text-white" strokeWidth={1.5} />
                   </div>
@@ -383,8 +382,8 @@ export default function BicePersonasClient() {
                       Proceso agil de devolucion sin tramites complicados
                     </p>
                   </div>
-                </motion.div>
-                <motion.div variants={staggerItem} className="flex items-start gap-4">
+                </div>
+                <div className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-[#cc0033] rounded-lg flex items-center justify-center flex-shrink-0">
                     <FileCheck className="w-5 h-5 text-white" strokeWidth={1.5} />
                   </div>
@@ -394,8 +393,8 @@ export default function BicePersonasClient() {
                       Contratacion y uso simple, sin papeleos innecesarios
                     </p>
                   </div>
-                </motion.div>
-              </motion.div>
+                </div>
+              </RevealOnScroll>
             </div>
           </div>
         </section>

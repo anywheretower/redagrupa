@@ -74,7 +74,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }}
         />
         <link rel="preload" as="image" href="/images/logo-20redagrupa-3.png" fetchPriority="high" />
-        <link rel="preload" as="image" href="/images/hero-redagrupa.webp" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

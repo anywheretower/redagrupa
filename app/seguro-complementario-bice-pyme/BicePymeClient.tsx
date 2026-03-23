@@ -16,10 +16,9 @@ import {
 import { Button } from "@/components/ui/button"
 import MobileMenu from "@/components/MobileMenu"
 import Footer from "@/components/Footer"
-import ContactForm from "@/components/ContactForm"
+import dynamic from "next/dynamic"
+const ContactForm = dynamic(() => import("@/components/ContactForm"), { ssr: false })
 import RevealOnScroll from "@/components/RevealOnScroll"
-import { motion } from "motion/react"
-import { staggerContainer, staggerItem } from "@/lib/animations"
 import Breadcrumbs from "@/components/Breadcrumbs"
 
 const planes = [
@@ -245,11 +244,10 @@ export default function BicePymeClient() {
                 </div>
               </RevealOnScroll>
 
-              <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }} variants={staggerContainer}>
+              <RevealOnScroll className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger-grid">
                 {planes.map((plan) => (
-                  <motion.div
+                  <div
                     key={plan.nombre}
-                    variants={staggerItem}
                     className={`rounded-2xl p-6 flex flex-col justify-between ${
                       plan.destacado
                         ? "bg-[#1a1a2e] text-white shadow-2xl"
@@ -383,9 +381,9 @@ export default function BicePymeClient() {
                       Contrata Aquí
                       <ExternalLink className="w-4 h-4" />
                     </a>
-                  </motion.div>
+                  </div>
                 ))}
-              </motion.div>
+              </RevealOnScroll>
 
               <p className="text-sm text-gray-500 text-center mt-8">
                 Precios de planes con IVA incluido. Valor UF: $39.705,63 al 13/02/2026.
