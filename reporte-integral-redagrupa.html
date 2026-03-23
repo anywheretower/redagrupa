@@ -302,8 +302,8 @@
       <table>
         <tr><th style="width:40px">#</th><th>Medida</th><th style="width:100px">Estado</th></tr>
         <tr><td>C1</td><td>Propuesta de valor clara en hero<div class="detail">&ldquo;Gestiona tus seguros complementarios... sin tr&aacute;mites eternos ni lenguaje t&eacute;cnico imposible.&rdquo; Entendible en &lt;5 segundos.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
-        <tr><td>C2</td><td>CTA hero rojo sobre fondo rojo<div class="detail">&ldquo;Solicitar Asesor&iacute;a&rdquo; usa bg-[#cc0033] sobre hero con overlay rojo. Bajo contraste visual, f&aacute;cil de perder.</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
-        <tr><td>C3</td><td>CTA secundario confuso &ldquo;Descarga Formularios&rdquo;<div class="detail">No es un lead magnet. Lleva a secci&oacute;n de formularios de incorporaci&oacute;n de aseguradoras. Confunde al visitante nuevo.</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>C2</td><td>CTA hero con alto contraste blanco sobre rojo<div class="detail">Bot&oacute;n cambiado a bg-white text-[#cc0033] font-semibold con shadow-lg. Alto contraste sobre hero rojo.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
+        <tr><td>C3</td><td>CTA secundario renombrado a &ldquo;Conoce las Aseguradoras&rdquo;<div class="detail">Texto m&aacute;s claro que describe el destino real (secci&oacute;n de aseguradoras partners con formularios de incorporaci&oacute;n).</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
       </table>
     </div>
 
@@ -314,8 +314,8 @@
         <tr><td>C4</td><td>Formulario conectado a Resend + Supabase<div class="detail">Env&iacute;o de email funcional v&iacute;a API route /api/contacto. Registro paralelo en Supabase.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
         <tr><td>C5</td><td>Formulario con 7 campos &mdash; reducir a 5<div class="detail">Nombre, email, tel&eacute;fono, empresa, rubro, cantidad empleados, motivo + mensaje. Eliminar rubro y cantidad_empleados para reducir fricci&oacute;n.</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
         <tr><td>C6</td><td>CTA form gen&eacute;rico &ldquo;Enviar Mensaje&rdquo;<div class="detail">No comunica valor. Alternativas: &ldquo;Solicitar Cotizaci&oacute;n Gratis&rdquo;, &ldquo;Recibir Asesor&iacute;a sin Costo&rdquo;.</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>C7</td><td>WhatsApp oculto en landing mobile<div class="detail">Sidebar social es hidden lg:flex. Bot&oacute;n WhatsApp (#25D366) no visible en mobile, donde est&aacute; el mayor tr&aacute;fico.</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
-        <tr><td>C8</td><td>Sin CTA fijo mobile<div class="detail">Al scrollear se pierde el path de conversi&oacute;n. No hay barra sticky ni bot&oacute;n flotante en mobile.</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
+        <tr><td>C7</td><td>WhatsApp flotante visible en mobile<div class="detail">Bot&oacute;n flotante #25D366 de 56px en esquina inferior derecha (bottom-20, right-4). Visible solo en mobile (lg:hidden).</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
+        <tr><td>C8</td><td>Sticky CTA bar en mobile<div class="detail">Barra fija bottom-0 con &ldquo;Solicitar Asesor&iacute;a Gratis&rdquo; (rounded-full, bg-[#cc0033]). Visible solo en mobile (lg:hidden). WhatsApp posicionado encima (bottom-20).</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
       </table>
     </div>
 
@@ -427,12 +427,12 @@
     <div style="text-align: center; margin-bottom: 16px; font-size: 13px; font-weight: 600; color: #475569;">Resumen Total de Medidas</div>
     <div class="footer-grid">
       <div class="footer-item">
-        <div class="footer-num" style="color: #16a34a;">62</div>
+        <div class="footer-num" style="color: #16a34a;">66</div>
         <div class="footer-label">Aplicadas</div>
       </div>
       <div class="footer-divider"></div>
       <div class="footer-item">
-        <div class="footer-num" style="color: #ea580c;">19</div>
+        <div class="footer-num" style="color: #ea580c;">15</div>
         <div class="footer-label">Pendientes</div>
       </div>
       <div class="footer-divider"></div>
@@ -445,7 +445,7 @@
       <div style="display: inline-flex; gap: 16px; flex-wrap: wrap; justify-content: center;">
         <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #2563eb; margin-right: 4px;"></span>SEO: 29 aplicadas / 1 pendiente</span>
         <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #7c3aed; margin-right: 4px;"></span>GEO: 9 aplicadas / 3 pendientes</span>
-        <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #ea580c; margin-right: 4px;"></span>CRO: 7 aplicadas / 7 pendientes</span>
+        <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #ea580c; margin-right: 4px;"></span>CRO: 11 aplicadas / 3 pendientes</span>
         <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #16a34a; margin-right: 4px;"></span>Rendimiento: 11 aplicadas / 4 pendientes</span>
         <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #0891b2; margin-right: 4px;"></span>Accesibilidad: 6 aplicadas / 4 pendientes</span>
       </div>
