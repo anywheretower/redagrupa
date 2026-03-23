@@ -341,7 +341,7 @@ export default function BicePersonasClient() {
                     Desde cobertura estandar a elite
                   </p>
                   <h2 className="text-2xl font-bold text-gray-900">
-                    Planes y beneficios adicionales
+                    ¿Qué planes y beneficios adicionales ofrece?
                   </h2>
                   <p className="text-base text-gray-700 leading-[1.1] max-w-3xl mx-auto">
                     Desde cobertura estandar a elite, puedes sumar asistencia dental y veterinaria

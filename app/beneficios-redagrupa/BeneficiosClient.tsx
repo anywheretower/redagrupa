@@ -217,7 +217,7 @@ export default function BeneficiosClient() {
                 Beneficios exclusivos para empresas clientes de RedAgrupa
               </p>
               <h2 className="text-2xl font-bold text-gray-900 text-center">
-                Convenios y Beneficios Corporativos en Salud y Bienestar
+                ¿Qué convenios y beneficios corporativos incluye RedAgrupa?
               </h2>
               <p className="text-base text-gray-700 leading-[1.1]">
                 RedAgrupa asesora e implementa convenios y beneficios corporativos en salud y bienestar, disponibles
@@ -238,7 +238,7 @@ export default function BeneficiosClient() {
             <div className="max-w-6xl mx-auto">
               <RevealOnScroll>
                 <h2 className="text-2xl font-bold text-gray-900 text-center mb-16">
-                  Tipos de convenios de salud disponibles
+                  ¿Qué tipos de convenios de salud están disponibles?
                 </h2>
               </RevealOnScroll>
 
@@ -272,7 +272,7 @@ export default function BeneficiosClient() {
             <div className="max-w-4xl mx-auto">
               <RevealOnScroll>
                 <h2 className="text-2xl font-bold text-gray-900 text-center mb-4">
-                  Impacto de los convenios corporativos en la empresa
+                  ¿Cuál es el impacto de los convenios corporativos en tu empresa?
                 </h2>
                 <p className="text-base text-gray-700 leading-[1.1] text-center mb-12">
                   Implementar beneficios de salud a través de RedAgrupa permite:
@@ -327,7 +327,7 @@ export default function BeneficiosClient() {
                   Salud preventiva orientada a continuidad operativa
                 </p>
                 <h2 className="text-2xl font-bold text-gray-900">
-                  Coordinación de Vacunación para Empresas
+                  ¿Cómo funciona la coordinación de vacunación para empresas?
                 </h2>
                 <p className="text-base text-gray-700 leading-[1.1] max-w-3xl mx-auto">
                   RedAgrupa coordina productos y servicios de vacunación corporativa, como parte de una estrategia
@@ -432,7 +432,7 @@ export default function BeneficiosClient() {
                   Gestión simple, escalable y sin carga administrativa
                 </p>
                 <h2 className="text-2xl font-bold text-gray-900">
-                  Plataforma Digital de Beneficios para Trabajadores
+                  ¿Qué es la plataforma digital de beneficios para trabajadores?
                 </h2>
                 <p className="text-base text-gray-700 leading-[1.1] max-w-3xl mx-auto">
                   Gracias a una alianza estratégica con un proveedor local, los clientes de RedAgrupa acceden a una

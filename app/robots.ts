@@ -24,6 +24,14 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: "Google-Extended",
         allow: "/",
       },
+      {
+        userAgent: "OAI-SearchBot",
+        allow: "/",
+      },
+      {
+        userAgent: "ChatGPT-User",
+        allow: "/",
+      },
     ],
     sitemap: "https://www.redagrupa.cl/sitemap.xml",
   }

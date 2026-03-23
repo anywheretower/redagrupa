@@ -1,32 +1,58 @@
-# RedAgrupa
+# RedAgrupa — Seguros Complementarios de Salud para Pymes en Chile
 
-## Descripción
-RedAgrupa es una corredora de seguros chilena especializada en la gestión de seguros complementarios de salud para pequeñas y medianas empresas (pymes). Con más de 10 años de experiencia, 300+ empresas clientes y 9.000+ familias protegidas.
+> Corredora de seguros chilena especializada en la gestión de seguros complementarios de salud para pequeñas y medianas empresas. Más de 10 años de experiencia, 300+ empresas clientes y 9.000+ familias protegidas.
 
-## Propuesta de valor
-Gestiona tus seguros complementarios de salud para que tu pyme y tu equipo estén protegidos, sin trámites eternos ni lenguaje técnico imposible.
+## Páginas principales
+
+- [Inicio](https://www.redagrupa.cl): Landing page con propuesta de valor, testimonios y formulario de contacto
+- [Seguro Complementario de Salud](https://www.redagrupa.cl/seguros-salud): Qué es, coberturas (vida, hospitalización, ambulatoria, medicamentos, catastrófica) y beneficios para empresas
+- [Seguro BICE Pyme](https://www.redagrupa.cl/seguro-complementario-bice-pyme): 4 planes BICE Vida para pymes con precios y coberturas detalladas
+- [Seguro BICE Personas](https://www.redagrupa.cl/seguro-complementario-bice-personas): Seguro individual/familiar BICE Vida para personas entre 18-64 años
+- [Beneficios RedAgrupa](https://www.redagrupa.cl/beneficios-redagrupa): Convenios corporativos de salud, bienestar, vacunación y plataforma digital
+- [Nosotros](https://www.redagrupa.cl/nosotros): Historia, misión y equipo de RedAgrupa
+- [Blog](https://www.redagrupa.cl/blog): 60+ artículos sobre gestión de personas, legislación laboral y seguros en Chile
 
 ## Servicios principales
+
 - Asesoría en seguros complementarios de salud para empresas
 - Gestión de pólizas colectivas (cotización, contratación, renovación)
 - Administración de reembolsos médicos
 - Convenios de salud y bienestar corporativo (gimnasios, operativos oftalmológicos, vacunación)
 - Plataforma digital de beneficios para trabajadores
-- Planes BICE Vida para pymes (desde UF 0,52/trabajador/mes)
+- Planes BICE Vida para pymes
 - Seguro complementario BICE Vida para personas y familias
 
+## Planes BICE Vida para Pymes (precios por trabajador/mes)
+
+- Pyme Estándar: $20.647 CLP (~UF 0,52) — 50% ambulatoria, 50% hospitalaria, 300 UF tope salud, 500 UF vida
+- Pyme Premium: $26.658 CLP (~UF 0,67) — 70% ambulatoria, 70% hospitalaria, 300 UF tope salud, 500 UF vida
+- Pyme Elite: $41.651 CLP (~UF 1,05) — 80% ambulatoria, 80% hospitalaria, 500 UF tope salud, 500 UF vida
+- Pyme Elite Plus: $48.401 CLP (~UF 1,22) — 80% ambulatoria, 80% hospitalaria, 500 UF tope salud, 1.000 UF vida
+
+## Preguntas frecuentes
+
+- ¿Qué es un Seguro Complementario de Salud? Es un seguro diseñado para cubrir total o parcialmente el copago que queda después de Fonasa o Isapre, reduciendo el gasto de bolsillo del trabajador.
+- ¿Qué coberturas incluye? Vida, hospitalización, atención ambulatoria, medicamentos y catastrófica. Opcionalmente, cobertura dental.
+- ¿Cuáles son los beneficios para empresas? Reducir gastos médicos de colaboradores, mejorar retención de talento, ofrecer beneficio competitivo y ajustar coberturas a la realidad de la empresa.
+- ¿Para quién es el seguro BICE Personas? Personas entre 18-64 años, sus parejas e hijos dependientes, estén en Isapre o Fonasa.
+- ¿Cómo funciona el reembolso? En 3 pasos: acudir a consulta, presentar documentos de respaldo, recibir el porcentaje correspondiente según el plan.
+- ¿Por qué elegir BICE Vida para pymes? Respaldo del grupo financiero BICE, coberturas desde el primer día, contratación 100% online vía Mi Pyme Segura, incluye seguro de vida.
+
 ## Aseguradoras partners
+
 BCI Seguros, BICE Vida, Chilena Consolidada, Consorcio, Help Seguros, MetLife, Bupa, Sura, Vida Security
 
-## Ubicación
-Los Militares 5620, oficina 1011, Las Condes, Santiago, Chile
+## Datos de la empresa
 
-## Contacto
+- Razón social: RedAgrupa
+- Fundación: 2014
+- Dirección: Los Militares 5620, oficina 1011, Las Condes, Santiago, Chile
 - Teléfono: +56 (22) 813 2245
 - Email: reembolsos@redagrupa.cl
 - Web: https://www.redagrupa.cl
 
 ## Redes sociales
+
 - Facebook: https://www.facebook.com/RedAgrupa/
 - Instagram: https://www.instagram.com/redagrupa/
 - LinkedIn: https://www.linkedin.com/company/redagrupa

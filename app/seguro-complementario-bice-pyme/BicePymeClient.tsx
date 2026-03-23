@@ -236,7 +236,7 @@ export default function BicePymeClient() {
                     Seguro de Salud + Seguro de Vida
                   </p>
                   <h2 className="text-2xl font-bold text-gray-900">
-                    Planes BICE Vida para Pymes
+                    ¿Qué planes BICE Vida existen para pymes?
                   </h2>
                   <p className="text-base text-gray-700 max-w-3xl mx-auto leading-[1.1]">
                     Elige el plan que mejor se adapte a las necesidades de tu empresa y tus
@@ -459,7 +459,7 @@ export default function BicePymeClient() {
                 className="mx-auto h-10 w-auto object-contain"
               />
               <h2 className="text-2xl font-bold text-gray-900">
-                Contrata tu seguro complementario BICE Pyme
+                ¿Cómo contratar tu seguro complementario BICE Pyme?
               </h2>
               <p className="text-base text-gray-700 leading-[1.1] max-w-3xl mx-auto">
                 Ingresa a la plataforma Mi Pyme Segura de BICE Vida y cotiza el plan ideal

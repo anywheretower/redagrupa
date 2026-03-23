@@ -191,7 +191,7 @@
         <tr><th style="width:40px">#</th><th>Medida</th><th style="width:100px">Estado</th></tr>
         <tr><td>S1</td><td>Robots.txt bien configurado<div class="detail">Allow general + AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended). Disallow /api/ y /contactos. Referencia a sitemap.xml.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
         <tr><td>S2</td><td>Sitemap XML din&aacute;mico<div class="detail">69 URLs (8 p&aacute;ginas est&aacute;ticas + 61 blog posts). Prioridades diferenciadas (1.0 home &rarr; 0.3 privacidad). Generado con app/sitemap.ts.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
-        <tr><td>S3</td><td>lastModified del sitemap usa new Date()<div class="detail">Todas las URLs muestran la misma fecha de build (2026-03-17T00:10:26), no la fecha real de &uacute;ltima modificaci&oacute;n de cada p&aacute;gina.</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>S3</td><td>lastModified del sitemap con fechas reales<div class="detail">Cada URL tiene su fecha espec&iacute;fica de &uacute;ltima modificaci&oacute;n (home 2026-03-17, servicios 2026-03-15, privacidad 2026-02-11).</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
         <tr><td>S4</td><td>Canonical URLs configuradas<div class="detail">metadataBase en layout.tsx con alternates.canonical: &ldquo;./&rdquo;. Self-referencing en todas las p&aacute;ginas.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
         <tr><td>S5</td><td>Redirecciones 301 legacy WordPress<div class="detail">14 reglas en next.config.mjs: /seguro-complementario, /seguro-colectivo, /seguro-dental, /seguro-medico, /formulario-de-reembolso, /contacto, /web.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
         <tr><td>S6</td><td>Idioma declarado<div class="detail">html lang=&ldquo;es&rdquo; en layout.tsx, og:locale es_CL en Open Graph.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
@@ -205,7 +205,7 @@
       <table>
         <tr><th style="width:40px">#</th><th>Medida</th><th style="width:100px">Estado</th></tr>
         <tr><td>S9</td><td>Titles &uacute;nicos por p&aacute;gina<div class="detail">Las 8 p&aacute;ginas est&aacute;ticas + blog posts tienen titles &uacute;nicos y descriptivos.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
-        <tr><td>S10</td><td>Titles duplican marca &ldquo;| RedAgrupa | RedAgrupa&rdquo;<div class="detail">3 p&aacute;ginas (seguros-salud, BICE pyme, beneficios) incluyen &ldquo;| RedAgrupa&rdquo; en el title cuando el template del layout ya lo agrega autom&aacute;ticamente. Resultado: doble marca en SERP.</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
+        <tr><td>S10</td><td>Titles sin duplicaci&oacute;n de marca<div class="detail">Corregido en 3 p&aacute;ginas (seguros-salud, BICE pyme, beneficios). El template del layout agrega &ldquo;| RedAgrupa&rdquo; autom&aacute;ticamente.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
         <tr><td>S11</td><td>Meta descriptions &uacute;nicas con datos duros<div class="detail">Todas las p&aacute;ginas tienen descriptions con cifras espec&iacute;ficas: +10 a&ntilde;os, +300 empresas, +9.000 familias.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
         <tr><td>S12</td><td>Open Graph + Twitter Cards<div class="detail">Configurado globalmente en layout.tsx. og:image (1200&times;630) con dimensiones expl&iacute;citas. Twitter summary_large_image.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
         <tr><td>S13</td><td>Jerarqu&iacute;a de encabezados H1&rarr;H2&rarr;H3<div class="detail">Un solo H1 por p&aacute;gina, jerarqu&iacute;a l&oacute;gica verificada en las 8 p&aacute;ginas est&aacute;ticas.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
@@ -224,8 +224,8 @@
         <tr><td>S19</td><td>Article schema en blog<div class="detail">Cada post tiene headline, description, image, datePublished, author con schema Person.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
         <tr><td>S20</td><td>Review schema (testimonios)<div class="detail">3 reviews con ratingValue 5/5, author Person con jobTitle. En page.tsx del home.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
         <tr><td>S21</td><td>BreadcrumbList<div class="detail">Componente Breadcrumbs.tsx con JSON-LD autom&aacute;tico en subp&aacute;ginas.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
-        <tr><td>S22</td><td>Agregar aggregateRating a reviews<div class="detail">Organization tiene 3 reviews individuales pero falta aggregateRating (ratingValue promedio, reviewCount).</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>S23</td><td>Agregar LocalBusiness schema<div class="detail">Falta schema con geo coordinates, openingHours, mapa. Solo tiene Organization + InsuranceAgency.</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>S22</td><td>aggregateRating en schema reviews<div class="detail">Agregado aggregateRating (5.0, reviewCount: 3) al schema Organization en page.tsx del home.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
+        <tr><td>S23</td><td>LocalBusiness schema agregado<div class="detail">Schema con geo coordinates (-33.4103, -70.5831), horarios L-V 09:00-18:00, direcci&oacute;n estructurada en layout.tsx.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
         <tr><td>S24</td><td>Expandir FAQs de 7 a 15+<div class="detail">Solo 7 preguntas en 3 p&aacute;ginas. Google y motores AI favorecen p&aacute;ginas con m&aacute;s FAQs. Meta: 15+ preguntas.</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
       </table>
     </div>
@@ -235,8 +235,8 @@
       <table>
         <tr><th style="width:40px">#</th><th>Medida</th><th style="width:100px">Estado</th></tr>
         <tr><td>S25</td><td>Navegaci&oacute;n completa en header<div class="detail">Desktop nav y MobileMenu incluyen las 6 p&aacute;ginas principales (Nosotros, Seguros, Beneficios, BICE Pyme, BICE Personas, Blog) + CTA.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
-        <tr><td>S26</td><td>Footer m&iacute;nimo sin links a p&aacute;ginas<div class="detail">Solo tiene contacto (email, tel, direcci&oacute;n) + link a blog. Faltan links a seguros-salud, beneficios, BICE pyme, nosotros.</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
-        <tr><td>S27</td><td>Cero cross-links contextuales entre servicios<div class="detail">Las p&aacute;ginas de servicio no enlazan entre s&iacute; dentro del contenido. Solo se conectan v&iacute;a nav del header.</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
+        <tr><td>S26</td><td>Footer expandido con links a p&aacute;ginas<div class="detail">4 columnas: Logo, Servicios (4 links), Empresa (3 links: Nosotros, Blog, Privacidad), Contacto (email, tel, direcci&oacute;n).</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
+        <tr><td>S27</td><td>Cross-links contextuales entre servicios<div class="detail">Secci&oacute;n &ldquo;Servicios relacionados&rdquo; con 3 cards en 4 p&aacute;ginas de servicio (seguros-salud, beneficios, BICE pyme, BICE personas).</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
         <tr><td>S28</td><td>Breadcrumbs implementados<div class="detail">Componente compartido con JSON-LD BreadcrumbList autom&aacute;tico.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
       </table>
     </div>
@@ -264,9 +264,9 @@
       <table>
         <tr><th style="width:40px">#</th><th>Medida</th><th style="width:100px">Estado</th></tr>
         <tr><td>G1</td><td>AI crawlers permitidos en robots.txt<div class="detail">GPTBot, ClaudeBot, PerplexityBot y Google-Extended con Allow: /. Permite indexaci&oacute;n por motores AI.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
-        <tr><td>G2</td><td>Faltan OAI-SearchBot y ChatGPT-User<div class="detail">2 crawlers de OpenAI importantes no est&aacute;n en robots.txt. OAI-SearchBot es para b&uacute;squeda web de OpenAI; ChatGPT-User para navegaci&oacute;n directa.</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>G2</td><td>OAI-SearchBot y ChatGPT-User agregados<div class="detail">2 crawlers OpenAI a&ntilde;adidos en robots.ts con Allow: /. Total: 6 bots AI permitidos (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, OAI-SearchBot, ChatGPT-User).</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
         <tr><td>G3</td><td>Archivo llms.txt presente<div class="detail">En ra&iacute;z del dominio con descripci&oacute;n, servicios principales, aseguradoras partners y contacto.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
-        <tr><td>G4</td><td>llms.txt incompleto<div class="detail">Falta URLs de p&aacute;ginas clave, FAQs con respuestas, precios de planes, links al blog. Solo contiene un resumen gen&eacute;rico de ~33 l&iacute;neas.</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
+        <tr><td>G4</td><td>llms.txt expandido con URLs, FAQs y precios<div class="detail">URLs de 7 p&aacute;ginas, 4 planes BICE con precios CLP/UF, 6 FAQs con respuestas completas, aseguradoras partners, datos de contacto.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
         <tr><td>G5</td><td>Sitemap accesible para AI crawlers<div class="detail">Referenciado en robots.txt, formato est&aacute;ndar XML con 69 URLs.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
       </table>
     </div>
@@ -275,7 +275,7 @@
       <div class="section-title"><span class="section-icon icon-geo">G</span> Citabilidad &amp; Entidad</div>
       <table>
         <tr><th style="width:40px">#</th><th>Medida</th><th style="width:100px">Estado</th></tr>
-        <tr><td>G6</td><td>Expandir headings con formato pregunta<div class="detail">Solo 3 H2 en seguros-salud usan &ldquo;&iquest;...?&rdquo;. Resto del sitio no usa este patr&oacute;n. Meta: headings de pregunta en todas las p&aacute;ginas de servicio.</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>G6</td><td>Headings con formato pregunta en 4 p&aacute;ginas<div class="detail">8 H2 reformulados a &ldquo;&iquest;...?&rdquo; en beneficios (5), BICE pyme (2) y BICE personas (1). Seguros-salud ya ten&iacute;a 3. Total: 11+ headings de pregunta en el sitio.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
         <tr><td>G7</td><td>Bloques de respuesta demasiado cortos<div class="detail">Bloques de ~89 palabras (lo &oacute;ptimo para citaci&oacute;n AI: 134-167 palabras). Expandir respuestas para alcanzar rango &oacute;ptimo.</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
         <tr><td>G8</td><td>Estad&iacute;sticas sin fuente verificable<div class="detail">&ldquo;+300 empresas&rdquo;, &ldquo;+9.000 familias&rdquo;, &ldquo;+10 a&ntilde;os&rdquo; aparecen sin cita ni fuente. Los motores AI priorizan datos atribuidos.</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
         <tr><td>G9</td><td>Definiciones claras con patr&oacute;n Q&amp;A<div class="detail">&ldquo;&iquest;Qu&eacute; es un Seguro Complementario de Salud?&rdquo; con respuesta directa. Patr&oacute;n favorable para citaci&oacute;n AI.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
@@ -427,12 +427,12 @@
     <div style="text-align: center; margin-bottom: 16px; font-size: 13px; font-weight: 600; color: #475569;">Resumen Total de Medidas</div>
     <div class="footer-grid">
       <div class="footer-item">
-        <div class="footer-num" style="color: #16a34a;">53</div>
+        <div class="footer-num" style="color: #16a34a;">62</div>
         <div class="footer-label">Aplicadas</div>
       </div>
       <div class="footer-divider"></div>
       <div class="footer-item">
-        <div class="footer-num" style="color: #ea580c;">28</div>
+        <div class="footer-num" style="color: #ea580c;">19</div>
         <div class="footer-label">Pendientes</div>
       </div>
       <div class="footer-divider"></div>
@@ -443,8 +443,8 @@
     </div>
     <div style="text-align: center; margin-top: 16px;">
       <div style="display: inline-flex; gap: 16px; flex-wrap: wrap; justify-content: center;">
-        <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #2563eb; margin-right: 4px;"></span>SEO: 23 aplicadas / 7 pendientes</span>
-        <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #7c3aed; margin-right: 4px;"></span>GEO: 6 aplicadas / 6 pendientes</span>
+        <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #2563eb; margin-right: 4px;"></span>SEO: 29 aplicadas / 1 pendiente</span>
+        <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #7c3aed; margin-right: 4px;"></span>GEO: 9 aplicadas / 3 pendientes</span>
         <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #ea580c; margin-right: 4px;"></span>CRO: 7 aplicadas / 7 pendientes</span>
         <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #16a34a; margin-right: 4px;"></span>Rendimiento: 11 aplicadas / 4 pendientes</span>
         <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #0891b2; margin-right: 4px;"></span>Accesibilidad: 6 aplicadas / 4 pendientes</span>
