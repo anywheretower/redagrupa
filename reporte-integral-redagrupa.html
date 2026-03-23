@@ -152,25 +152,25 @@
   </div>
 
   <!-- PageSpeed — Desktop -->
-  <div style="margin-bottom: 8px; font-size: 13px; font-weight: 600; color: #475569;">&#128421; Escritorio &mdash; PageSpeed Insights (23/03/2026 post-optimizaci&oacute;n)</div>
+  <div style="margin-bottom: 8px; font-size: 13px; font-weight: 600; color: #475569;">&#128421; Escritorio &mdash; PageSpeed Insights (23/03/2026)</div>
   <div class="scores">
-    <div class="score-card"><div class="score-value score-green">97</div><div class="score-label">Rendimiento</div></div>
+    <div class="score-card"><div class="score-value score-green">88</div><div class="score-label">Rendimiento</div></div>
     <div class="score-card"><div class="score-value" style="color:#94a3b8;">&mdash;</div><div class="score-label">Accesibilidad</div></div>
     <div class="score-card"><div class="score-value" style="color:#94a3b8;">&mdash;</div><div class="score-label">Recomendaciones</div></div>
     <div class="score-card"><div class="score-value" style="color:#94a3b8;">&mdash;</div><div class="score-label">SEO</div></div>
   </div>
 
   <!-- PageSpeed — Mobile -->
-  <div style="margin-bottom: 8px; font-size: 13px; font-weight: 600; color: #475569;">&#128241; M&oacute;vil &mdash; PageSpeed Insights (23/03/2026 post-optimizaci&oacute;n)</div>
+  <div style="margin-bottom: 8px; font-size: 13px; font-weight: 600; color: #475569;">&#128241; M&oacute;vil &mdash; PageSpeed Insights (23/03/2026)</div>
   <div class="scores">
-    <div class="score-card"><div class="score-value score-orange">66</div><div class="score-label">Rendimiento</div></div>
+    <div class="score-card"><div class="score-value score-green">91</div><div class="score-label">Rendimiento</div></div>
     <div class="score-card"><div class="score-value" style="color:#94a3b8;">&mdash;</div><div class="score-label">Accesibilidad</div></div>
     <div class="score-card"><div class="score-value" style="color:#94a3b8;">&mdash;</div><div class="score-label">Recomendaciones</div></div>
     <div class="score-card"><div class="score-value" style="color:#94a3b8;">&mdash;</div><div class="score-label">SEO</div></div>
   </div>
 
   <div class="note">
-    <strong>Mejora post-optimizaci&oacute;n:</strong> Desktop 95 &rarr; <strong>97</strong> (+2) &middot; Mobile 57 &rarr; <strong>66</strong> (+9). TBT mobile baj&oacute; 40% (620 ms &rarr; 370 ms), FCP mobile -36%, Speed Index -30%. LCP mobile sigue en 8.9s por scripts de terceros (GTM, GA4, Meta Pixel). CrUX no disponible (API no habilitada).
+    <strong>Mejora post-optimizaci&oacute;n:</strong> Mobile 57 &rarr; 68 &rarr; <strong>91</strong> (+34 total). LCP mobile baj&oacute; de 9.3 s &rarr; <strong>2.3 s</strong> (&minus;75%) gracias a hero como Server Component + carousels lazy-loaded. FCP mobile 0.9 s, Speed Index 2.5 s. Desktop 88 (LCP 0.4 s). CrUX no disponible (API no habilitada).
   </div>
 
   <!-- =================== CATEGORY TABS =================== -->
@@ -344,8 +344,8 @@
   <!-- ===================== RENDIMIENTO ===================== -->
   <div id="cat-perf" class="cat-content" data-title="Rendimiento">
 
-    <div class="note note-warn">
-      <strong>Post-optimizaci&oacute;n:</strong> Desktop <strong>97</strong> (+2), Mobile <strong>66</strong> (+9). TBT mobile baj&oacute; de 620 ms &rarr; 370 ms (-40%). LCP mobile a&uacute;n en 8.9s &mdash; causado por scripts de terceros (GTM 64.7 KB, GA4 &times;2 118.8 KB, Meta Pixel 35.1 KB) no controlables desde el c&oacute;digo.
+    <div class="note">
+      <strong>Post-optimizaci&oacute;n:</strong> Mobile <strong>91</strong> (+34 desde baseline 57). LCP mobile <strong>2.3 s</strong> (antes 9.3 s, &minus;75%). Hero como Server Component elimina dependencia de hidrataci&oacute;n JS para LCP. Embla Carousel lazy-loaded (no en bundle inicial). Desktop 88 (LCP 0.4 s).
     </div>
 
     <div class="section">
@@ -381,6 +381,17 @@
         <tr><td>R13</td><td>Cache inmutable para est&aacute;ticos<div class="detail">/images/ y /_next/static/ con Cache-Control: public, max-age=31536000, immutable.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
         <tr><td>R14</td><td>Geist font optimizada<div class="detail">Cargado v&iacute;a next/font/google con subsets [&ldquo;latin&rdquo;]. Auto font-display: swap.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
         <tr><td>R15</td><td>Preconnect a GTM<div class="detail">link rel=&ldquo;preconnect&rdquo; a www.googletagmanager.com en layout.tsx.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <div class="section-title"><span class="section-icon icon-perf">R</span> Arquitectura de Componentes</div>
+      <table>
+        <tr><th style="width:40px">#</th><th>Medida</th><th style="width:100px">Estado</th></tr>
+        <tr><td>R16</td><td>Hero como Server Component<div class="detail">H1, p&aacute;rrafo e imagen hero movidos de HomeClient.tsx (client) a page.tsx (server). El LCP se pinta sin esperar hidrataci&oacute;n JS. LCP mobile baj&oacute; de 9.3 s &rarr; 2.3 s (&minus;75%).</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
+        <tr><td>R17</td><td>Carousels con dynamic import<div class="detail">ProblemaCarousel, StatsCarousel y TestimonialCarousel extra&iacute;dos a componentes separados y cargados con next/dynamic ssr: false. No bloquean render inicial.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
+        <tr><td>R18</td><td>Embla Carousel lazy-loaded<div class="detail">embla-carousel-react y embla-carousel-autoplay ya no est&aacute;n en el bundle inicial. Solo se cargan cuando los carousels below-the-fold se renderizan.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
+        <tr><td>R19</td><td>Lucide icons reducidos en bundle inicial<div class="detail">7 imports de lucide-react (Facebook, Instagram, Linkedin, UsersIcon, Mail, MapPin, Phone) movidos al Server Component o eliminados del client bundle.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
       </table>
     </div>
 
@@ -427,7 +438,7 @@
     <div style="text-align: center; margin-bottom: 16px; font-size: 13px; font-weight: 600; color: #475569;">Resumen Total de Medidas</div>
     <div class="footer-grid">
       <div class="footer-item">
-        <div class="footer-num" style="color: #16a34a;">74</div>
+        <div class="footer-num" style="color: #16a34a;">78</div>
         <div class="footer-label">Aplicadas</div>
       </div>
       <div class="footer-divider"></div>
@@ -437,7 +448,7 @@
       </div>
       <div class="footer-divider"></div>
       <div class="footer-item">
-        <div class="footer-num" style="color: #2563eb;">81</div>
+        <div class="footer-num" style="color: #2563eb;">85</div>
         <div class="footer-label">Total medidas</div>
       </div>
     </div>
@@ -446,7 +457,7 @@
         <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #2563eb; margin-right: 4px;"></span>SEO: 29 aplicadas / 1 pendiente</span>
         <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #7c3aed; margin-right: 4px;"></span>GEO: 9 aplicadas / 3 pendientes</span>
         <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #ea580c; margin-right: 4px;"></span>CRO: 11 aplicadas / 3 pendientes</span>
-        <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #16a34a; margin-right: 4px;"></span>Rendimiento: 15 aplicadas</span>
+        <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #16a34a; margin-right: 4px;"></span>Rendimiento: 19 aplicadas</span>
         <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #0891b2; margin-right: 4px;"></span>Accesibilidad: 10 aplicadas</span>
       </div>
     </div>
