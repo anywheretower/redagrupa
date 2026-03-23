@@ -64,7 +64,9 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
       <form className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
         {/* Nombre completo */}
         <div>
+          <label htmlFor="nombre" className="sr-only">Nombre completo</label>
           <input
+            id="nombre"
             type="text"
             placeholder="Nombre Completo"
             className={inputClass}
@@ -76,7 +78,9 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
         {/* Email y Teléfono */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
+            <label htmlFor="email" className="sr-only">Email</label>
             <input
+              id="email"
               type="email"
               placeholder="Email"
               className={inputClass}
@@ -85,7 +89,9 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
             {errors.email && <p className={errorClass}>{errors.email.message}</p>}
           </div>
           <div>
+            <label htmlFor="telefono" className="sr-only">Teléfono</label>
             <input
+              id="telefono"
               type="tel"
               placeholder="Teléfono"
               className={inputClass}
@@ -99,7 +105,9 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
           /* Personas: Empresa (opcional) + Motivo */
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
+              <label htmlFor="empresa-personas" className="sr-only">Nombre empresa (opcional)</label>
               <input
+                id="empresa-personas"
                 type="text"
                 placeholder="Nombre Empresa (Opcional)"
                 className={inputClass}
@@ -128,7 +136,9 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
           <>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
+                <label htmlFor="empresa-standard" className="sr-only">Nombre empresa</label>
                 <input
+                  id="empresa-standard"
                   type="text"
                   placeholder="Nombre Empresa"
                   className={inputClass}
@@ -139,7 +149,9 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
                 )}
               </div>
               <div>
+                <label htmlFor="rubro" className="sr-only">Rubro</label>
                 <input
+                  id="rubro"
                   type="text"
                   placeholder="Rubro"
                   className={inputClass}
@@ -153,7 +165,9 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
+                <label htmlFor="cantidad-empleados" className="sr-only">Cantidad de empleados</label>
                 <input
+                  id="cantidad-empleados"
                   type="number"
                   placeholder="Cantidad de Empleados"
                   className={inputClass}
@@ -185,7 +199,9 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
 
         {/* Mensaje */}
         <div>
+          <label htmlFor="mensaje" className="sr-only">Mensaje (opcional)</label>
           <textarea
+            id="mensaje"
             placeholder="Mensaje (Opcional)"
             rows={4}
             className="w-full px-4 py-2.5 bg-gray-100 border-0 rounded-lg text-sm text-gray-900 placeholder-gray-500 resize-none focus:outline-none focus:ring-2 focus:ring-[#cc0033]"

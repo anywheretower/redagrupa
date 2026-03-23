@@ -393,7 +393,7 @@
       <div class="section-title"><span class="section-icon icon-a11y">A</span> ARIA</div>
       <table>
         <tr><th style="width:40px">#</th><th>Medida</th><th style="width:100px">Estado</th></tr>
-        <tr><td>A1</td><td>Formulario sin labels accesibles en 5 inputs<div class="detail">nombre, email, tel&eacute;fono, empresa, rubro y cantidad_empleados solo tienen placeholder. Falta label visible o sr-only para lectores de pantalla.</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
+        <tr><td>A1</td><td>Labels accesibles en todos los inputs del formulario<div class="detail">Agregados label sr-only con htmlFor en 8 inputs: nombre, email, tel&eacute;fono, empresa (standard y personas), rubro, cantidad_empleados, mensaje.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
         <tr><td>A2</td><td>Selectores con label sr-only<div class="detail">motivo-standard y motivo-personas tienen label htmlFor + className sr-only.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
         <tr><td>A3</td><td>Social links con aria-label<div class="detail">Facebook, Instagram, LinkedIn y WhatsApp con aria-label descriptivo (ej: &ldquo;WhatsApp de RedAgrupa&rdquo;).</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
         <tr><td>A4</td><td>MobileMenu con aria-label y aria-expanded<div class="detail">Bot&oacute;n hamburguesa con aria-label din&aacute;mico (&ldquo;Abrir men&uacute;&rdquo;/&ldquo;Cerrar men&uacute;&rdquo;) y aria-expanded.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
@@ -406,7 +406,7 @@
       <table>
         <tr><th style="width:40px">#</th><th>Medida</th><th style="width:100px">Estado</th></tr>
         <tr><td>A6</td><td>Texto blanco sobre rojo marca<div class="detail">Header y footer con #cc0033 + texto white cumplen contraste WCAG AA (ratio &gt;4.5:1).</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
-        <tr><td>A7</td><td>CTA hero rojo sobre fondo rojo<div class="detail">Mismo problema que C2. Bot&oacute;n #cc0033 sobre overlay rojo no cumple contraste m&iacute;nimo.</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>A7</td><td>CTA hero con contraste corregido<div class="detail">Resuelto junto con C2. Bot&oacute;n ahora es bg-white text-[#cc0033] con shadow-lg. Cumple WCAG AA.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
       </table>
     </div>
 
@@ -414,8 +414,8 @@
       <div class="section-title"><span class="section-icon icon-a11y">A</span> Estructura &amp; Navegaci&oacute;n</div>
       <table>
         <tr><th style="width:40px">#</th><th>Medida</th><th style="width:100px">Estado</th></tr>
-        <tr><td>A8</td><td>Sin skip link<div class="detail">No existe enlace &ldquo;Saltar al contenido&rdquo; para navegaci&oacute;n por teclado. Requerido por WCAG 2.4.1.</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>A9</td><td>Sin prefers-reduced-motion<div class="detail">Animaciones CSS (fade-in, marquee, scroll reveals) ignoran la preferencia del usuario. Agregar @media (prefers-reduced-motion: reduce).</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>A8</td><td>Skip link implementado<div class="detail">Enlace &ldquo;Saltar al contenido&rdquo; en layout.tsx (sr-only, visible con focus). Apunta a id=&ldquo;contenido-principal&rdquo; en todas las p&aacute;ginas.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
+        <tr><td>A9</td><td>prefers-reduced-motion implementado<div class="detail">@media (prefers-reduced-motion: reduce) en globals.css. Desactiva reveal-on-scroll, stagger-grid, fade-in, marquee cuando el usuario prefiere movimiento reducido.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
         <tr><td>A10</td><td>Alt text descriptivo en todas las im&aacute;genes<div class="detail">Verificado en las 8 p&aacute;ginas. Contexto de marca incluido en alt text.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
       </table>
     </div>
@@ -427,12 +427,12 @@
     <div style="text-align: center; margin-bottom: 16px; font-size: 13px; font-weight: 600; color: #475569;">Resumen Total de Medidas</div>
     <div class="footer-grid">
       <div class="footer-item">
-        <div class="footer-num" style="color: #16a34a;">70</div>
+        <div class="footer-num" style="color: #16a34a;">74</div>
         <div class="footer-label">Aplicadas</div>
       </div>
       <div class="footer-divider"></div>
       <div class="footer-item">
-        <div class="footer-num" style="color: #ea580c;">11</div>
+        <div class="footer-num" style="color: #ea580c;">7</div>
         <div class="footer-label">Pendientes</div>
       </div>
       <div class="footer-divider"></div>
@@ -447,7 +447,7 @@
         <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #7c3aed; margin-right: 4px;"></span>GEO: 9 aplicadas / 3 pendientes</span>
         <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #ea580c; margin-right: 4px;"></span>CRO: 11 aplicadas / 3 pendientes</span>
         <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #16a34a; margin-right: 4px;"></span>Rendimiento: 15 aplicadas</span>
-        <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #0891b2; margin-right: 4px;"></span>Accesibilidad: 6 aplicadas / 4 pendientes</span>
+        <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #0891b2; margin-right: 4px;"></span>Accesibilidad: 10 aplicadas</span>
       </div>
     </div>
   </div>

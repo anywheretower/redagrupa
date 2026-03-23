@@ -222,3 +222,28 @@
 .stagger-grid.reveal-visible > *:nth-child(5) { transition-delay: 0.7s; opacity: 1; transform: translateY(0); }
 .stagger-grid.reveal-visible > *:nth-child(n+6) { transition-delay: 0.85s; opacity: 1; transform: translateY(0); }
 
+/* Respetar preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .stagger-grid > * {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .animate-fade-in-up,
+  .animate-fade-in-up-d1,
+  .animate-fade-in-up-d2,
+  .animate-fade-in {
+    animation: none;
+    opacity: 1;
+  }
+  .animate-marquee,
+  .lg\:animate-marquee-desktop {
+    animation-duration: 0s;
+  }
+}
+

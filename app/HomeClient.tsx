@@ -300,7 +300,7 @@ function ProblemaCardExpandable({ icon: Icon, title, text }: { icon: React.Compo
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div id="contenido-principal" className="min-h-screen bg-white">
       {/* Header */}
       <ScrollHeader>
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">

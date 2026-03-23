@@ -23,7 +23,7 @@ interface BlogPost {
 
 export default function BlogClient({ posts }: { posts: BlogPost[] }) {
   return (
-    <main className="min-h-screen bg-white">
+    <main id="contenido-principal" className="min-h-screen bg-white">
       {/* Fixed Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#cc0033] text-white shadow-md">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
