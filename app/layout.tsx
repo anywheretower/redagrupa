@@ -61,6 +61,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
+        <meta name="google-site-verification" content="Zv9E4we9myI4IJe3uDP17K0TGfQl9sFvfWYphYt_2bI" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <Script
           id="gtm-script"
