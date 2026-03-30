@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -8,11 +8,59 @@ import ScrollButton from '@/components/ScrollButton'
 
 export default function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false)
+  const menuRef = useRef<HTMLDivElement>(null)
+  const buttonRef = useRef<HTMLButtonElement>(null)
+
+  // Close on Escape key
+  useEffect(() => {
+    if (!isOpen) return
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setIsOpen(false)
+        buttonRef.current?.focus()
+      }
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [isOpen])
+
+  // Focus trap
+  const handleTabTrap = useCallback((e: KeyboardEvent) => {
+    if (e.key !== 'Tab' || !menuRef.current) return
+    const focusable = menuRef.current.querySelectorAll<HTMLElement>(
+      'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+    )
+    if (focusable.length === 0) return
+    const first = focusable[0]
+    const last = focusable[focusable.length - 1]
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault()
+      last.focus()
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault()
+      first.focus()
+    }
+  }, [])
+
+  useEffect(() => {
+    if (!isOpen) return
+    window.addEventListener('keydown', handleTabTrap)
+    // Focus first link when menu opens
+    const timer = setTimeout(() => {
+      const firstLink = menuRef.current?.querySelector<HTMLElement>('a[href]')
+      firstLink?.focus()
+    }, 100)
+    return () => {
+      window.removeEventListener('keydown', handleTabTrap)
+      clearTimeout(timer)
+    }
+  }, [isOpen, handleTabTrap])
 
   return (
     <>
       {/* Hamburger Button - Only visible on mobile */}
       <Button
+        ref={buttonRef}
         variant="ghost"
         size="icon"
         className="lg:hidden text-white hover:bg-white/10"
@@ -25,7 +73,7 @@ export default function MobileMenu() {
 
       {/* Mobile Menu Overlay */}
       {isOpen && (
-        <div className="fixed inset-0 top-[72px] bg-[#cc0033] z-50 lg:hidden">
+        <div ref={menuRef} role="dialog" aria-modal="true" aria-label="Menú de navegación" className="fixed inset-0 top-[72px] bg-[#cc0033] z-50 lg:hidden">
           <div className="container mx-auto px-6 py-8 flex flex-col gap-6">
             <Link
               href="/nosotros"

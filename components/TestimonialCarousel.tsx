@@ -35,8 +35,8 @@ export default function TestimonialCarousel() {
   }, [])
 
   return (
-    <div>
-      <div className="relative min-h-[280px]">
+    <div role="region" aria-label="Testimonios de clientes" aria-roledescription="carrusel">
+      <div className="relative min-h-[280px]" aria-live="polite">
         {testimonios.map((t, i) => (
           <div
             key={i}
@@ -50,6 +50,7 @@ export default function TestimonialCarousel() {
                 alt={t.nombre}
                 width={56}
                 height={56}
+                loading="lazy"
                 className="w-14 h-14 rounded-full object-cover flex-shrink-0"
               />
               <div className="text-left">

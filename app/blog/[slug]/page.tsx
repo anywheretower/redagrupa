@@ -13,10 +13,10 @@ export async function generateMetadata({
 }) {
   const { slug } = await params
   const post = getPostBySlug(slug)
-  if (!post) return { title: "Artículo no encontrado | RedAgrupa" }
+  if (!post) return { title: "Art\u00edculo no encontrado" }
 
   return {
-    title: `${post.title} | Blog RedAgrupa`,
+    title: post.title,
     description: post.excerpt,
     openGraph: {
       title: post.title,

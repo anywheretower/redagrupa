@@ -239,7 +239,7 @@ export default function NosotrosClient() {
                   </p>
                   <footer className="text-white/90">
                     <div className="font-bold text-base">Cristóbal Winter</div>
-                    <div className="text-white/80 text-base">Socio Fundador y Gerente General</div>
+                    <div className="text-white/95 text-base">Socio Fundador y Gerente General</div>
                   </footer>
                 </blockquote>
               </RevealOnScroll>

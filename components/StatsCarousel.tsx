@@ -66,7 +66,7 @@ export default function StatsCarousel() {
   }, [emblaApi, onSelect])
 
   return (
-    <div>
+    <div role="region" aria-label="Estadísticas de RedAgrupa" aria-roledescription="carrusel">
       <div ref={emblaRef} className="overflow-hidden">
         <div className="flex">
           {statsCards.map((card, i) => (
@@ -77,7 +77,7 @@ export default function StatsCarousel() {
                 </div>
                 <div className="text-4xl font-bold text-white">{card.number}</div>
                 <h3 className="text-xl font-semibold text-white">{card.label}</h3>
-                <p className="text-sm text-white/80 leading-snug">{card.text}</p>
+                <p className="text-sm text-white/95 leading-snug">{card.text}</p>
               </div>
             </div>
           ))}

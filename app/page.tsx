@@ -83,7 +83,7 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsJsonLd) }}
       />
-      <div id="contenido-principal" className="min-h-screen bg-white">
+      <main id="contenido-principal" className="min-h-screen bg-white">
         {/* Header */}
         <ScrollHeader>
           <div className="container mx-auto px-6 py-4 flex items-center justify-between">
@@ -259,7 +259,7 @@ export default function HomePage() {
             Solicitar Asesoría Gratis
           </ScrollButton>
         </div>
-      </div>
+      </main>
     </>
   )
 }

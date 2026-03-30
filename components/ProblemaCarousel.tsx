@@ -29,16 +29,16 @@ function ProblemaCarouselCard({ icon: Icon, title, text }: { icon: React.Compone
   return (
     <div className="min-w-0 shrink-0 grow-0 basis-full px-6 py-6">
       <div className="rounded-2xl p-5 space-y-3">
-        <button onClick={() => setOpen(!open)} className="flex items-center gap-3 text-left w-full">
+        <button onClick={() => setOpen(!open)} aria-expanded={open} className="flex items-center gap-3 text-left w-full">
           <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center flex-shrink-0">
             <Icon className="w-6 h-6 text-[#cc0033]" />
           </div>
           <h3 className="text-lg font-normal text-white leading-tight flex-1">{title}</h3>
-          <ChevronDown className={`w-5 h-5 text-white/70 transition-transform duration-300 flex-shrink-0 ${open ? "rotate-180" : ""}`} />
+          <ChevronDown className={`w-5 h-5 text-white/90 transition-transform duration-300 flex-shrink-0 ${open ? "rotate-180" : ""}`} />
         </button>
         <div className={`grid transition-all duration-300 ease-in-out ${open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}>
           <div className="overflow-hidden">
-            <p className="text-white/80 text-sm leading-snug pt-1">{text}</p>
+            <p className="text-white/95 text-sm leading-snug pt-1">{text}</p>
           </div>
         </div>
       </div>
@@ -65,7 +65,7 @@ export default function ProblemaCarousel() {
   }, [emblaApi, onSelect])
 
   return (
-    <div>
+    <div role="region" aria-label="Problemas que resuelve RedAgrupa" aria-roledescription="carrusel">
       <div ref={emblaRef} className="overflow-hidden">
         <div className="flex">
           {problemaCards.map((card, i) => (

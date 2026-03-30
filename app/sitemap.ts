@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next"
-import { getAllSlugs } from "@/lib/blog"
+import { getAllPosts } from "@/lib/blog"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.redagrupa.cl"
@@ -55,10 +55,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
-  const blogSlugs = getAllSlugs()
-  const blogPages: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({
-    url: `${baseUrl}/blog/${slug}`,
-    lastModified: new Date("2026-03-17"),
+  const blogPosts = getAllPosts()
+  const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.date),
     changeFrequency: "monthly",
     priority: 0.6,
   }))

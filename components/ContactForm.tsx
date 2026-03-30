@@ -86,9 +86,11 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
             type="text"
             placeholder="Nombre Completo"
             className={inputClass}
+            aria-invalid={!!errors.nombre}
+            aria-describedby={errors.nombre ? "nombre-error" : undefined}
             {...register("nombre")}
           />
-          {errors.nombre && <p className={errorClass}>{errors.nombre.message}</p>}
+          {errors.nombre && <p id="nombre-error" role="alert" className={errorClass}>{errors.nombre.message}</p>}
         </div>
 
         {/* Email y Teléfono */}
@@ -100,9 +102,11 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
               type="email"
               placeholder="Email"
               className={inputClass}
+              aria-invalid={!!errors.email}
+              aria-describedby={errors.email ? "email-error" : undefined}
               {...register("email")}
             />
-            {errors.email && <p className={errorClass}>{errors.email.message}</p>}
+            {errors.email && <p id="email-error" role="alert" className={errorClass}>{errors.email.message}</p>}
           </div>
           <div>
             <label htmlFor="telefono" className="sr-only">Teléfono</label>
@@ -111,9 +115,11 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
               type="tel"
               placeholder="Teléfono"
               className={inputClass}
+              aria-invalid={!!errors.telefono}
+              aria-describedby={errors.telefono ? "telefono-error" : undefined}
               {...register("telefono")}
             />
-            {errors.telefono && <p className={errorClass}>{errors.telefono.message}</p>}
+            {errors.telefono && <p id="telefono-error" role="alert" className={errorClass}>{errors.telefono.message}</p>}
           </div>
         </div>
 
@@ -144,7 +150,7 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
                 <option value="otro">Otro</option>
               </select>
               <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#cc0033] pointer-events-none" />
-              {errors.motivo && <p className={errorClass}>{errors.motivo.message}</p>}
+              {errors.motivo && <p id="motivo-personas-error" role="alert" className={errorClass}>{errors.motivo.message}</p>}
             </div>
           </div>
         ) : (
@@ -161,7 +167,7 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
                   {...register("empresa")}
                 />
                 {"empresa" in errors && errors.empresa && (
-                  <p className={errorClass}>{errors.empresa.message}</p>
+                  <p id="empresa-error" role="alert" className={errorClass}>{errors.empresa.message}</p>
                 )}
               </div>
               <div>
@@ -174,7 +180,7 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
                   {...register("rubro" as keyof FormData)}
                 />
                 {"rubro" in errors && (errors as Record<string, { message?: string }>).rubro && (
-                  <p className={errorClass}>{(errors as Record<string, { message?: string }>).rubro?.message}</p>
+                  <p id="rubro-error" role="alert" className={errorClass}>{(errors as Record<string, { message?: string }>).rubro?.message}</p>
                 )}
               </div>
             </div>
@@ -190,7 +196,7 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
                   {...register("cantidad_empleados" as keyof FormData)}
                 />
                 {"cantidad_empleados" in errors && (errors as Record<string, { message?: string }>).cantidad_empleados && (
-                  <p className={errorClass}>{(errors as Record<string, { message?: string }>).cantidad_empleados?.message}</p>
+                  <p id="cantidad-empleados-error" role="alert" className={errorClass}>{(errors as Record<string, { message?: string }>).cantidad_empleados?.message}</p>
                 )}
               </div>
               <div className="relative">
@@ -207,7 +213,7 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
                   <option value="otro">Otro</option>
                 </select>
                 <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#cc0033] pointer-events-none" />
-                {errors.motivo && <p className={errorClass}>{errors.motivo.message}</p>}
+                {errors.motivo && <p id="motivo-standard-error" role="alert" className={errorClass}>{errors.motivo.message}</p>}
               </div>
             </div>
           </>
@@ -224,7 +230,7 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
             {...register("mensaje")}
           />
           {"mensaje" in errors && errors.mensaje && (
-            <p className={errorClass}>{errors.mensaje.message}</p>
+            <p id="mensaje-error" role="alert" className={errorClass}>{errors.mensaje.message}</p>
           )}
         </div>
 
@@ -258,11 +264,15 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
           onClick={() => setShowSuccess(false)}
         >
           <div
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="success-heading"
             className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 text-center"
             onClick={(e) => e.stopPropagation()}
           >
             <button
               onClick={() => setShowSuccess(false)}
+              aria-label="Cerrar confirmación"
               className="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-600 transition-colors"
             >
               <X className="w-5 h-5" />
@@ -272,7 +282,7 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
               <CheckCircle2 className="w-8 h-8 text-white" />
             </div>
 
-            <h3 className="text-2xl font-bold text-[#333333] mb-2">
+            <h3 id="success-heading" className="text-2xl font-bold text-[#333333] mb-2">
               ¡Mensaje enviado!
             </h3>
             <p className="text-gray-600 mb-6">

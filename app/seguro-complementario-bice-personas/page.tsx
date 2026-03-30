@@ -1,7 +1,7 @@
 import BicePersonasClient from "./BicePersonasClient"
 
 export const metadata = {
-  title: "Seguro Complementario BICE Personas | RedAgrupa",
+  title: "Seguro Complementario BICE Personas",
   description:
     "Seguro de salud complementario BICE Vida para personas. Protege tu salud y la de tu familia con coberturas en hospitalización, consultas, urgencias y medicamentos.",
 }

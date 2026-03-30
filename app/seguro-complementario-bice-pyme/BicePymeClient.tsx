@@ -269,7 +269,7 @@ export default function BicePymeClient() {
                       </h3>
                       <p
                         className={`text-sm mb-4 ${
-                          plan.destacado ? "text-white/70" : "text-gray-500"
+                          plan.destacado ? "text-white/90" : "text-gray-500"
                         }`}
                       >
                         Seguro de Salud + Seguro de Vida
@@ -277,7 +277,7 @@ export default function BicePymeClient() {
 
                       <p
                         className={`text-xs mb-1 ${
-                          plan.destacado ? "text-white/70" : "text-gray-500"
+                          plan.destacado ? "text-white/90" : "text-gray-500"
                         }`}
                       >
                         Desde
@@ -292,7 +292,7 @@ export default function BicePymeClient() {
                         </span>
                         <span
                           className={`text-sm ${
-                            plan.destacado ? "text-white/60" : "text-gray-400"
+                            plan.destacado ? "text-white/90" : "text-gray-400"
                           }`}
                         >
                           / {plan.precioUF}
@@ -300,7 +300,7 @@ export default function BicePymeClient() {
                       </div>
                       <p
                         className={`text-xs mb-6 ${
-                          plan.destacado ? "text-white/70" : "text-gray-500"
+                          plan.destacado ? "text-white/90" : "text-gray-500"
                         }`}
                       >
                         Mensual por trabajador
@@ -342,7 +342,7 @@ export default function BicePymeClient() {
                       </p>
                       <p
                         className={`text-sm leading-snug mb-6 ${
-                          plan.destacado ? "text-white/70" : "text-gray-500"
+                          plan.destacado ? "text-white/90" : "text-gray-500"
                         }`}
                       >
                         Puedes incluir en el plan Coberturas Dental y Catastrofica.
@@ -359,7 +359,7 @@ export default function BicePymeClient() {
                           </p>
                           <p
                             className={`text-sm leading-snug ${
-                              plan.destacado ? "text-white/70" : "text-gray-500"
+                              plan.destacado ? "text-white/90" : "text-gray-500"
                             }`}
                           >
                             Asistencia medica para tu mascota con <strong>Pawer.</strong>

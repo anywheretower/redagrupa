@@ -20,7 +20,7 @@ export default function Footer() {
 
           {/* Col 2: Servicios */}
           <div className="text-center lg:text-left">
-            <h3 className="text-sm font-semibold uppercase tracking-wider mb-4 text-white/70">Servicios</h3>
+            <h3 className="text-sm font-semibold uppercase tracking-wider mb-4 text-white">Servicios</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/seguros-salud" className="text-sm hover:underline text-white/90">
@@ -47,7 +47,7 @@ export default function Footer() {
 
           {/* Col 3: Empresa */}
           <div className="text-center lg:text-left">
-            <h3 className="text-sm font-semibold uppercase tracking-wider mb-4 text-white/70">Empresa</h3>
+            <h3 className="text-sm font-semibold uppercase tracking-wider mb-4 text-white">Empresa</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/nosotros" className="text-sm hover:underline text-white/90">
@@ -69,7 +69,7 @@ export default function Footer() {
 
           {/* Col 4: Contacto */}
           <div className="space-y-4 text-center lg:text-left flex flex-col items-center lg:items-start">
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white/70">Contacto</h3>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Contacto</h3>
             <div className="flex items-center gap-3 max-w-[280px] w-full">
               <Mail className="w-5 h-5 flex-shrink-0" />
               <a href="mailto:reembolsos@redagrupa.cl" className="text-sm hover:underline text-left">Casilla de Reembolsos</a>

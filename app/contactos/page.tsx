@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import ContactosClient from "./ContactosClient"
 
 export const metadata: Metadata = {
-  title: "Contactos | RedAgrupa",
+  title: "Contactos",
   robots: { index: false, follow: false },
 }
 

@@ -152,7 +152,7 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
                 <Link
                   key={post.slug}
                   href={`/blog/${post.slug}`}
-                  className="group grid grid-rows-subgrid row-span-4 bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
+                  className="group grid grid-rows-subgrid row-span-5 bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
                 >
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <Image
@@ -166,6 +166,9 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
                   <h2 className="px-5 -mt-1 text-lg font-semibold text-[#333333] leading-[1.1] group-hover:text-[#cc0033] transition-colors">
                     {post.title}
                   </h2>
+                  <time dateTime={post.date} className="px-5 -mt-5 text-xs text-gray-400">
+                    {new Date(post.date + "T12:00:00").toLocaleDateString("es-CL", { year: "numeric", month: "long", day: "numeric" })}
+                  </time>
                   <p className="px-5 -mt-5 text-sm text-[#666666] leading-snug line-clamp-3">
                     {post.excerpt}
                   </p>
