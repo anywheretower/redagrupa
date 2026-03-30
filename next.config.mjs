@@ -12,6 +12,7 @@ const nextConfig = {
       { key: "X-Frame-Options", value: "DENY" },
       { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
       { key: "Permissions-Policy", value: "camera=(), microphone=()" },
+      { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
     ]
     return [
       {
@@ -44,8 +45,8 @@ const nextConfig = {
       { source: "/seguro-medico/:path*", destination: "/seguros-salud", permanent: true },
       { source: "/formulario-de-reembolso", destination: "/", permanent: true },
       { source: "/formulario-de-reembolso/", destination: "/", permanent: true },
-      { source: "/contacto", destination: "/contactos", permanent: true },
-      { source: "/contacto/", destination: "/contactos", permanent: true },
+      { source: "/contacto", destination: "/", permanent: true },
+      { source: "/contacto/", destination: "/", permanent: true },
       { source: "/web", destination: "/", permanent: true },
       { source: "/web/", destination: "/", permanent: true },
     ]

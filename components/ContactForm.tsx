@@ -17,6 +17,8 @@ type FormData = ContactoData | ContactoPersonasData
 
 export default function ContactForm({ pagina, heading, variant = "standard" }: ContactFormProps) {
   const [showSuccess, setShowSuccess] = useState(false)
+  const [loadedAt] = useState(() => Date.now())
+  const [honeypot, setHoneypot] = useState("")
   const isPersonas = variant === "personas"
   const schema = isPersonas ? contactoPersonasSchema : contactoSchema
 
@@ -35,7 +37,7 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
       const res = await fetch("/api/contacto", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ ...data, website: honeypot, _t: loadedAt }),
       })
 
       if (!res.ok) {
@@ -62,6 +64,20 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
       </h2>
 
       <form className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
+        {/* Honeypot anti-bot — invisible para usuarios reales */}
+        <div className="absolute opacity-0 h-0 w-0 -z-10 overflow-hidden" aria-hidden="true">
+          <label htmlFor="website">Website</label>
+          <input
+            id="website"
+            type="text"
+            name="website"
+            tabIndex={-1}
+            autoComplete="off"
+            value={honeypot}
+            onChange={(e) => setHoneypot(e.target.value)}
+          />
+        </div>
+
         {/* Nombre completo */}
         <div>
           <label htmlFor="nombre" className="sr-only">Nombre completo</label>

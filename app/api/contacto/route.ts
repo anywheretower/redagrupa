@@ -8,6 +8,20 @@ export async function POST(request: Request) {
     const resend = new Resend(process.env.RESEND_API_KEY)
     const body = await request.json()
 
+    // Anti-bot: honeypot — si el campo invisible "website" tiene valor, es un bot
+    if (body.website) {
+      return NextResponse.json({ success: true }) // 200 falso para que el bot crea que funcionó
+    }
+
+    // Anti-bot: validación de tiempo — envío en menos de 3 segundos = bot
+    if (body._t && Date.now() - body._t < 3000) {
+      return NextResponse.json({ success: true }) // 200 falso
+    }
+
+    // Limpiar campos anti-bot antes de validar
+    delete body.website
+    delete body._t
+
     // Determine which schema to use based on variant
     const isPersonas = body.pagina === "bice-personas"
     const schema = isPersonas ? contactoPersonasSchema : contactoSchema
