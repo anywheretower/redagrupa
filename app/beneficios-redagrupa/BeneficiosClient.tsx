@@ -246,8 +246,12 @@ export default function BeneficiosClient() {
                   <Dumbbell className="w-12 h-12 text-[#cc0033]" strokeWidth={1.5} />
                   <h3 className="text-2xl font-bold text-gray-900">Convenios con gimnasios y actividad física</h3>
                   <p className="text-base text-gray-700 leading-[1.1]">
-                    Acceso a convenios preferenciales con gimnasios y centros deportivos, promoviendo hábitos
-                    saludables que contribuyen a reducir licencias médicas y mejorar el rendimiento laboral.
+                    Los clientes de RedAgrupa acceden a convenios preferenciales con gimnasios y centros deportivos
+                    a lo largo de Chile. Estos convenios forman parte del modelo de gestión centralizada de beneficios:
+                    RedAgrupa negocia las condiciones, coordina la implementación y la empresa solo comunica el
+                    beneficio a sus colaboradores, sin carga administrativa adicional. La actividad física regular
+                    contribuye a reducir licencias médicas y mejorar el rendimiento laboral, impactando directamente
+                    en la continuidad operativa de la empresa.
                   </p>
                 </div>
 
@@ -255,9 +259,12 @@ export default function BeneficiosClient() {
                   <Eye className="w-12 h-12 text-[#cc0033]" strokeWidth={1.5} />
                   <h3 className="text-2xl font-bold text-gray-900">Operativos oftalmológicos en terreno</h3>
                   <p className="text-base text-gray-700 leading-[1.1]">
-                    Convenios con redes oftalmológicas que operan tanto en centros externos como mediante operativos
-                    en oficinas del cliente, optimizando tiempos del trabajador y evitando ausencias prolongadas por
-                    gestiones médicas.
+                    RedAgrupa coordina convenios con redes oftalmológicas que operan en dos modalidades: atención en
+                    centros externos con tarifas preferenciales, y operativos directamente en las oficinas del cliente.
+                    Esta segunda modalidad es especialmente valorada por pymes, ya que evita ausencias prolongadas
+                    por gestiones médicas y permite que los trabajadores accedan a exámenes de vista, lentes y
+                    tratamientos sin salir de su lugar de trabajo. La coordinación completa queda a cargo de RedAgrupa,
+                    desde la agenda de profesionales hasta la entrega de resultados.
                   </p>
                 </div>
               </RevealOnScroll>
@@ -283,31 +290,41 @@ export default function BeneficiosClient() {
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
                   <p className="text-base text-gray-700 leading-[1.1]">
-                    Optimizar el tiempo de gestión del área de RRHH
+                    <strong className="text-gray-900">Optimizar el tiempo de gestión del área de RRHH.</strong> RedAgrupa
+                    se encarga de la coordinación con aseguradoras, la gestión de reembolsos y la implementación de
+                    convenios, liberando al equipo de Personas para enfocarse en tareas estratégicas.
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
                   <p className="text-base text-gray-700 leading-[1.1]">
-                    Reducir costos indirectos asociados a ausentismo
+                    <strong className="text-gray-900">Reducir costos indirectos asociados a ausentismo.</strong> Los
+                    convenios de salud preventiva (vacunación, oftalmología, actividad física) están orientados a
+                    disminuir licencias médicas y mantener la continuidad operativa de los equipos.
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
                   <p className="text-base text-gray-700 leading-[1.1]">
-                    Aumentar el valor del paquete de beneficios laborales
+                    <strong className="text-gray-900">Aumentar el valor del paquete de beneficios laborales.</strong> Los
+                    beneficios complementan el seguro de salud con convenios de gimnasio, entretención familiar y
+                    una plataforma digital con más de 1.500 beneficios disponibles.
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
                   <p className="text-base text-gray-700 leading-[1.1]">
-                    Facilitar el acceso a prestaciones de salud para los equipos
+                    <strong className="text-gray-900">Facilitar el acceso a prestaciones de salud.</strong> RedAgrupa
+                    trabaja con 9 aseguradoras (BCI Seguros, BICE Vida, Consorcio, MetLife, Bupa, entre otras) y
+                    coordina operativos en terreno para que los colaboradores accedan sin trámites complejos.
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
                   <p className="text-base text-gray-700 leading-[1.1]">
-                    Mejorar la percepción del empleador sin aumentar dotación administrativa
+                    <strong className="text-gray-900">Mejorar la percepción del empleador sin aumentar dotación.</strong> Todo
+                    el modelo opera de forma externalizada: RedAgrupa gestiona los beneficios y la empresa solo comunica.
+                    No se requiere contratar personal adicional ni crear áreas nuevas.
                   </p>
                 </div>
               </div>
@@ -345,24 +362,37 @@ export default function BeneficiosClient() {
                 <div className="space-y-5">
                   <div className="flex items-start gap-4">
                     <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
-                    <p className="text-base text-gray-700 leading-[1.1]">Reducción de licencias médicas</p>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
-                    <p className="text-base text-gray-700 leading-[1.1]">Prevención de contagios masivos</p>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
-                    <p className="text-base text-gray-700 leading-[1.1]">Mayor continuidad operativa</p>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
-                    <p className="text-base text-gray-700 leading-[1.1]">Mejora en la gestión de riesgos laborales</p>
+                    <p className="text-base text-gray-700 leading-[1.1]">
+                      <strong className="text-gray-900">Reducción de licencias médicas</strong> al proteger a los
+                      equipos antes de los períodos de mayor riesgo sanitario.
+                    </p>
                   </div>
                   <div className="flex items-start gap-4">
                     <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
                     <p className="text-base text-gray-700 leading-[1.1]">
-                      Ahorro de tiempo para trabajadores y equipos administrativos
+                      <strong className="text-gray-900">Prevención de contagios masivos</strong> que pueden afectar
+                      la operación completa de una pyme con equipos reducidos.
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
+                    <p className="text-base text-gray-700 leading-[1.1]">
+                      <strong className="text-gray-900">Mayor continuidad operativa</strong> al reducir ausencias
+                      imprevistas por enfermedades estacionales.
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
+                    <p className="text-base text-gray-700 leading-[1.1]">
+                      <strong className="text-gray-900">Mejora en la gestión de riesgos laborales</strong> con un
+                      enfoque preventivo coordinado por RedAgrupa.
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
+                    <p className="text-base text-gray-700 leading-[1.1]">
+                      <strong className="text-gray-900">Ahorro de tiempo</strong> para trabajadores y equipos
+                      administrativos, ya que RedAgrupa coordina la logística completa del operativo.
                     </p>
                   </div>
                 </div>

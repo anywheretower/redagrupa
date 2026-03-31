@@ -275,7 +275,7 @@
     <tr><th style="width:40px">#</th><th>Medida</th><th style="width:100px">Estado</th></tr>
     <tr><td>S27</td><td>Blog con 55 art&iacute;culos de autoridad<div class="detail">Temas: seguros complementarios, legislaci&oacute;n laboral, gesti&oacute;n de personas. Contenido relevante para el rubro.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
     <tr><td>S28</td><td>Fechas de publicaci&oacute;n visibles en blog<div class="detail">Fecha mostrada en listado (BlogClient) con &lt;time&gt; sem&aacute;ntico. BlogPostClient ya las mostraba. Autor&iacute;a Person pendiente.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
-    <tr><td>S29</td><td>/contactos ausente del sitemap<div class="detail">La p&aacute;gina /contactos existe pero no est&aacute; incluida en sitemap.xml. robots.txt la bloquea (Disallow: /contactos).</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+    <tr><td>S29</td><td>/contactos excluida del sitemap (intencional)<div class="detail">P&aacute;gina /contactos es el dashboard/CRM interno, no contenido p&uacute;blico. Correctamente bloqueada en robots.txt (Disallow: /contactos) y excluida del sitemap.</div></td><td><span class="badge badge-done">No aplica</span></td></tr>
     <tr><td>S30</td><td>Blog lastmod con fecha real por art&iacute;culo<div class="detail">Sitemap usa post.date de cada art&iacute;culo en lugar de fecha fija. Import cambiado de getAllSlugs a getAllPosts.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
   </table>
 </div>
@@ -313,7 +313,7 @@
     <tr><td>G6</td><td>Bloques citables en /seguros-salud<div class="detail">Secci&oacute;n &ldquo;&iquest;Qu&eacute; es un Seguro Complementario?&rdquo; tiene longitud &oacute;ptima (134-167 palabras) para citaci&oacute;n AI.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
     <tr><td>G7</td><td>FAQ schema con Q&amp;A estructurado<div class="detail">3 p&aacute;ginas con FAQPage schema. Preguntas y respuestas autocontenidas, formato ideal para AI.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
     <tr><td>G8</td><td>Estad&iacute;sticas sin fuente citada<div class="detail">&ldquo;70% de los colaboradores no entiende su cobertura&rdquo;, &ldquo;40 horas anuales recuperadas&rdquo; &mdash; sin fuente. AI no puede verificar ni citar.</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-    <tr><td>G9</td><td>Bloques respuesta cortos en /beneficios<div class="detail">Secciones de ~25-110 palabras. Por debajo del rango &oacute;ptimo (134-167 palabras) para citaci&oacute;n AI.</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+    <tr><td>G9</td><td>Bloques respuesta expandidos en /beneficios<div class="detail">Secciones expandidas a 90-150 palabras usando contenido existente del sitio (modelo de gesti&oacute;n, 9 aseguradoras, 1.500 beneficios). Gimnasios, oftalmolog&iacute;a, impacto, vacunaci&oacute;n.</div></td><td><span class="badge badge-done">Aplicado</span></td></tr>
     <tr><td>G10</td><td>Sin tablas comparativas en p&aacute;ginas de servicio<div class="detail">No hay tablas de comparaci&oacute;n (planes, coberturas). Las tablas son altamente citables por AI.</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
   </table>
 </div>
@@ -480,12 +480,12 @@
     <div style="text-align: center; margin-bottom: 16px; font-size: 13px; font-weight: 600; color: #475569;">Resumen Total de Medidas</div>
     <div class="footer-grid">
       <div class="footer-item">
-        <div class="footer-num" style="color: #16a34a;">84</div>
+        <div class="footer-num" style="color: #16a34a;">86</div>
         <div class="footer-label">Aplicadas</div>
       </div>
       <div class="footer-divider"></div>
       <div class="footer-item">
-        <div class="footer-num" style="color: #ea580c;">8</div>
+        <div class="footer-num" style="color: #ea580c;">6</div>
         <div class="footer-label">Pendientes</div>
       </div>
       <div class="footer-divider"></div>
@@ -496,8 +496,8 @@
     </div>
     <div style="text-align: center; margin-top: 16px;">
       <div style="display: inline-flex; gap: 16px; flex-wrap: wrap; justify-content: center;">
-        <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #2563eb; margin-right: 4px;"></span>SEO: 28 aplicadas / 2 pendientes</span>
-        <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #7c3aed; margin-right: 4px;"></span>GEO: 9 aplicadas / 5 pendientes</span>
+        <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #2563eb; margin-right: 4px;"></span>SEO: 30 aplicadas / 0 pendientes</span>
+        <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #7c3aed; margin-right: 4px;"></span>GEO: 10 aplicadas / 4 pendientes</span>
         <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #ea580c; margin-right: 4px;"></span>CRO: 11 aplicadas / 4 pendientes</span>
         <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #16a34a; margin-right: 4px;"></span>Rendimiento: 16 aplicadas / 0 pendientes</span>
         <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #0891b2; margin-right: 4px;"></span>Accesibilidad: 17 aplicadas</span>
