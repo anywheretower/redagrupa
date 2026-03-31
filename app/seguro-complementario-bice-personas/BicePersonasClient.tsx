@@ -149,14 +149,15 @@ export default function BicePersonasClient() {
                 className="mx-auto h-14 w-auto object-contain -mt-2 mb-1"
               />
               <p className="text-base text-gray-700 leading-[1.1]">
-                Protege tu salud y la de tu familia con la seguridad y solidez de BICE Vida,
-                disponible a traves de RedAgrupa. Un seguro disenado para personas que buscan
-                complementar la cobertura de su Isapre o Fonasa con tranquilidad y respaldo.
+                Complementa tu Isapre o Fonasa y reduce el copago en consultas, exámenes,
+                hospitalizaciones, dental y óptico. Contratación 100% online, sin exámenes
+                médicos previos.
               </p>
-              <p className="text-base text-gray-700 leading-[1.1]">
-                Los imprevistos medicos pueden ocurrir en cualquier momento. No dejes tu salud
-                al azar, con RedAgrupa y BICE Vida te respaldamos cada dia.
-              </p>
+              <div className="flex flex-wrap justify-center gap-4 text-sm text-[#666666]">
+                <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-[#cc0033]" />Sin carencias</span>
+                <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-[#cc0033]" />Cobertura nacional</span>
+                <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-[#cc0033]" />Respaldo BICE Vida</span>
+              </div>
               <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3 w-full sm:w-64">
                   <a href="https://segurocomplementariosalud.bicevida.cl/?negocio=aEd0TFolRnQjQzY17OVzwP1NaCN6_V6AdjkZ9TXI5bnYVyiV0rM" target="_blank" rel="noopener noreferrer">
