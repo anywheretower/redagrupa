@@ -36,6 +36,14 @@ Las empresas que reciben una multa de la Dirección del Trabajo tienen los sigui
 - **Recurso de reconsideración:** La empresa puede solicitar a la DT que reconsidere la multa y, si lo estima procedente, la reduzca o la elimine.
 - **Recurso de apelación:** Si la empresa no está de acuerdo con la resolución de la DT, puede presentar un recurso de apelación ante el Juzgado de Letras del Trabajo competente.
 
+## ¿Cómo protege un seguro complementario a tu empresa ante multas?
+
+Muchas multas de la Dirección del Trabajo están relacionadas con el incumplimiento de obligaciones hacia los trabajadores. Contar con **beneficios laborales formalizados** —como un [seguro complementario de salud](/seguros-salud)— no solo mejora la relación con tus colaboradores, sino que demuestra buenas prácticas laborales ante una fiscalización.
+
+Las empresas que ofrecen [beneficios corporativos estructurados](/beneficios-redagrupa) tienen menos rotación, menos conflictos laborales y, en consecuencia, menos exposición a denuncias y multas. Un seguro complementario es una de las herramientas más efectivas para construir una cultura de cumplimiento.
+
+> Si tu pyme aún no tiene seguro complementario, en RedAgrupa te ayudamos a comparar planes de 9 aseguradoras sin costo. [Solicita una asesoría gratuita](/#formulario-contacto).
+
 ## Medidas para prevenir multas
 
 Para evitar multas de la Dirección del Trabajo, las empresas deben implementar las siguientes medidas:
@@ -53,3 +61,9 @@ La Dirección del Trabajo ofrece diversos recursos para las empresas que buscan 
 - **Sitio web:** En el sitio web de la Dirección del Trabajo se puede encontrar información sobre la normativa laboral, procedimientos de fiscalización, multas y recursos disponibles para las empresas.
 - **Línea de atención telefónica:** La Dirección del Trabajo cuenta con la línea de atención telefónica gratuita 600 450 4000, donde las empresas pueden realizar consultas sobre la normativa laboral y procedimientos de fiscalización.
 - **Capacitaciones:** La Dirección del Trabajo ofrece capacitaciones gratuitas para empresas sobre diversos temas relacionados con el derecho laboral, incluyendo la prevención de multas.
+
+## Conclusión
+
+Las multas de la Dirección del Trabajo pueden representar un costo significativo para las pymes chilenas, tanto económico como reputacional. La clave está en la prevención: conocer la normativa, implementar procesos claros y ofrecer condiciones laborales competitivas.
+
+Invertir en el bienestar de tus colaboradores —por ejemplo, con un [seguro complementario de salud para pymes](/seguro-complementario-bice-pyme)— no es solo un beneficio para ellos, sino una estrategia que reduce riesgos laborales y fortalece tu empresa ante cualquier fiscalización.

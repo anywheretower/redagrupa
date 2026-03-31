@@ -41,6 +41,8 @@ Para garantizar la claridad y transparencia en la relación laboral, la carta of
 
 - Detalle de los beneficios laborales ofrecidos por la empresa, como seguro de salud, vacaciones, permisos, aguinaldos, etc.
 
+> **Tip para pymes:** Incluir un [seguro complementario de salud](/seguros-salud) en la carta oferta es uno de los diferenciadores más valorados por los candidatos en Chile. En RedAgrupa puedes [cotizar planes desde 0,2 UF/mes por persona](/seguro-complementario-bice-pyme) y hacer tu oferta mucho más competitiva.
+
 ### 6. Fecha de inicio:
 
 - Fecha en que el trabajador debe incorporarse a sus funciones
@@ -74,6 +76,18 @@ En Chile, la oferta de trabajo contenida en la carta de propuesta de trabajo es 
 
 Sin embargo, es importante destacar que la carta oferta laboral no es un contrato de trabajo en sí mismo. El contrato de trabajo se firma una vez que el trabajador se ha incorporado a sus funciones y ha cumplido con el período de prueba, en caso de que lo haya.
 
+## Cómo hacer tu oferta laboral más atractiva
+
+Más allá de la remuneración, los candidatos valoran cada vez más los **beneficios complementarios**. Según estudios del mercado laboral chileno, las empresas que ofrecen seguros de salud complementarios tienen hasta un 40% menos de rotación.
+
+Algunos beneficios que puedes incluir en tu carta oferta para destacar frente a la competencia:
+
+- **Seguro complementario de salud** — cubre lo que Fonasa e Isapre no cubren. [Conoce cómo funciona](/seguros-salud).
+- **Seguro dental y de vida** — planes accesibles incluso para pymes pequeñas.
+- **Beneficios corporativos RedAgrupa** — [gestión simplificada de todos tus seguros](/beneficios-redagrupa) en un solo lugar.
+
+> ¿Quieres ofrecer mejores beneficios sin complicarte? En RedAgrupa comparamos planes de 9 aseguradoras para tu pyme. [Solicita una asesoría gratuita](/#formulario-contacto).
+
 ## Conclusión
 
-La carta oferta laboral es un instrumento fundamental para formalizar la incorporación de nuevos colaboradores y establecer un marco de confianza y transparencia en la relación laboral. Al emitir una carta oferta clara y precisa, las empresas chilenas pueden atraer y retener talento humano de calidad, contribuyendo así al éxito sostenible de su organización.
+La carta oferta laboral es un instrumento fundamental para formalizar la incorporación de nuevos colaboradores y establecer un marco de confianza y transparencia en la relación laboral. Al emitir una carta oferta clara y precisa —y al incluir beneficios competitivos como un seguro complementario— las empresas chilenas pueden atraer y retener talento humano de calidad, contribuyendo así al éxito sostenible de su organización.

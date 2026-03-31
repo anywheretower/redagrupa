@@ -101,16 +101,29 @@ const mdComponents: Components = {
       {children}
     </blockquote>
   ),
-  a: ({ href, children }) => (
-    <a
-      href={href}
-      className="text-[#cc0033] hover:text-[#a30029] underline underline-offset-2 transition-colors"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      {children}
-    </a>
-  ),
+  a: ({ href, children }) => {
+    const isInternal = href?.startsWith("/") || href?.startsWith("#")
+    if (isInternal) {
+      return (
+        <Link
+          href={href!}
+          className="text-[#cc0033] hover:text-[#a30029] underline underline-offset-2 transition-colors"
+        >
+          {children}
+        </Link>
+      )
+    }
+    return (
+      <a
+        href={href}
+        className="text-[#cc0033] hover:text-[#a30029] underline underline-offset-2 transition-colors"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {children}
+      </a>
+    )
+  },
   strong: ({ children }) => (
     <strong className="font-semibold text-[#333333]">{children}</strong>
   ),
