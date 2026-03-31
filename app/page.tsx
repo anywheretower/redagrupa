@@ -83,6 +83,21 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsJsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: [
+            { "@type": "Question", name: "¿Qué es un seguro complementario de salud?", acceptedAnswer: { "@type": "Answer", text: "Es un seguro que complementa la cobertura de tu Isapre o Fonasa, cubriendo el copago que queda después de la bonificación. Incluye consultas médicas, exámenes, hospitalización, dental y óptico según el plan contratado." }},
+            { "@type": "Question", name: "¿Cuántos trabajadores necesita mi pyme para contratar?", acceptedAnswer: { "@type": "Answer", text: "Desde 5 trabajadores puedes acceder a planes colectivos con tarifas preferenciales. Para empresas más pequeñas, también existen opciones individuales o familiares como el seguro BICE Personas." }},
+            { "@type": "Question", name: "¿Qué aseguradoras trabajan con RedAgrupa?", acceptedAnswer: { "@type": "Answer", text: "Trabajamos con las principales aseguradoras de Chile: BCI Seguros, BICE Vida, Chilena Consolidada, Consorcio, Help Seguros, MetLife, Bupa, Sura y Vida Security." }},
+            { "@type": "Question", name: "¿Cuánto demora el proceso de contratación?", acceptedAnswer: { "@type": "Answer", text: "El proceso completo toma entre 5 y 10 días hábiles. Nosotros nos encargamos de toda la gestión: cotización, comparación de planes, recopilación de documentos y coordinación con la aseguradora." }},
+            { "@type": "Question", name: "¿Tiene algún costo la asesoría de RedAgrupa?", acceptedAnswer: { "@type": "Answer", text: "No, nuestra asesoría es completamente gratuita para tu empresa. Somos corredores de seguros, lo que significa que las aseguradoras nos compensan directamente. Tú pagas exactamente lo mismo que pagarías contratando directo." }},
+            { "@type": "Question", name: "¿Cómo se gestionan los reembolsos?", acceptedAnswer: { "@type": "Answer", text: "RedAgrupa gestiona los reembolsos por ti. Tus colaboradores envían sus boletas y nosotros nos encargamos del trámite completo con la aseguradora, reduciendo tiempos de espera y papeleo." }},
+          ]
+        }) }}
+      />
       <main id="contenido-principal" className="min-h-screen bg-white">
         {/* Header */}
         <ScrollHeader>

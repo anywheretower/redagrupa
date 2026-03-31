@@ -416,6 +416,53 @@ export default function HomeContent() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-16 md:py-24 bg-gray-50">
+        <div className="container mx-auto px-6 max-w-3xl">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#333333] text-center mb-12">
+            Preguntas frecuentes
+          </h2>
+          <div className="space-y-4">
+            {[
+              {
+                q: "¿Qué es un seguro complementario de salud?",
+                a: "Es un seguro que complementa la cobertura de tu Isapre o Fonasa, cubriendo el copago que queda después de la bonificación. Incluye consultas médicas, exámenes, hospitalización, dental y óptico según el plan contratado."
+              },
+              {
+                q: "¿Cuántos trabajadores necesita mi pyme para contratar?",
+                a: "Desde 5 trabajadores puedes acceder a planes colectivos con tarifas preferenciales. Para empresas más pequeñas, también existen opciones individuales o familiares como el seguro BICE Personas."
+              },
+              {
+                q: "¿Qué aseguradoras trabajan con RedAgrupa?",
+                a: "Trabajamos con las principales aseguradoras de Chile: BCI Seguros, BICE Vida, Chilena Consolidada, Consorcio, Help Seguros, MetLife, Bupa, Sura y Vida Security. Comparamos opciones para encontrar la mejor relación cobertura-precio."
+              },
+              {
+                q: "¿Cuánto demora el proceso de contratación?",
+                a: "El proceso completo toma entre 5 y 10 días hábiles. Nosotros nos encargamos de toda la gestión: cotización, comparación de planes, recopilación de documentos y coordinación con la aseguradora."
+              },
+              {
+                q: "¿Tiene algún costo la asesoría de RedAgrupa?",
+                a: "No, nuestra asesoría es completamente gratuita para tu empresa. Somos corredores de seguros, lo que significa que las aseguradoras nos compensan directamente. Tú pagas exactamente lo mismo que pagarías contratando directo."
+              },
+              {
+                q: "¿Cómo se gestionan los reembolsos?",
+                a: "RedAgrupa gestiona los reembolsos por ti. Tus colaboradores envían sus boletas y nosotros nos encargamos del trámite completo con la aseguradora, reduciendo tiempos de espera y papeleo."
+              },
+            ].map((item, i) => (
+              <details key={i} className="group bg-white rounded-lg shadow-sm border border-gray-200">
+                <summary className="flex items-center justify-between cursor-pointer p-5 text-left font-semibold text-[#333333] text-base">
+                  {item.q}
+                  <ChevronDown className="w-5 h-5 text-[#cc0033] flex-shrink-0 ml-4 transition-transform group-open:rotate-180" />
+                </summary>
+                <div className="px-5 pb-5 text-gray-700 text-sm leading-relaxed">
+                  {item.a}
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA Section */}
       <section id="formulario-contacto" className="relative min-h-0 lg:min-h-[700px] text-white overflow-hidden">
         <div className="absolute inset-0 z-0">

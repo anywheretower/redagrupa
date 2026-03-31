@@ -16,8 +16,6 @@ import MobileMenu from "@/components/MobileMenu"
 import Footer from "@/components/Footer"
 import ReactMarkdown from "react-markdown"
 import remarkGfm from "remark-gfm"
-import { format, parseISO } from "date-fns"
-import { es } from "date-fns/locale"
 import Breadcrumbs from "@/components/Breadcrumbs"
 
 interface BlogPost {
@@ -257,9 +255,7 @@ export default function BlogPostClient({
 
               {/* Date */}
               <time className="block text-xs text-[#666666] uppercase tracking-wider mb-4">
-                {format(parseISO(post.date), "d 'de' MMMM, yyyy", {
-                  locale: es,
-                })}
+                {new Intl.DateTimeFormat("es-CL", { day: "numeric", month: "long", year: "numeric" }).format(new Date(post.date))}
               </time>
 
               {/* Hero Image */}

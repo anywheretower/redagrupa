@@ -67,8 +67,14 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 4: Contacto */}
+          {/* Col 4: Contacto + CTA */}
           <div className="space-y-4 text-center lg:text-left flex flex-col items-center lg:items-start">
+            <Link
+              href="/#contacto"
+              className="inline-block bg-white text-[#cc0033] font-semibold text-sm px-6 py-2.5 rounded-full hover:bg-white/90 transition-colors"
+            >
+              Cotiza tu seguro →
+            </Link>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Contacto</h3>
             <div className="flex items-center gap-3 max-w-[280px] w-full">
               <Mail className="w-5 h-5 flex-shrink-0" />

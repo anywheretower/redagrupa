@@ -4,6 +4,7 @@ import Script from "next/script"
 import { Geist } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Toaster } from "sonner"
+import ExitIntentPopup from "@/components/ExitIntentPopup"
 import "./globals.css"
 
 const geist = Geist({ subsets: ["latin"] })
@@ -184,6 +185,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           />
         </noscript>
         {children}
+        <ExitIntentPopup />
         <Toaster richColors position="top-center" />
         <Analytics />
       </body>
