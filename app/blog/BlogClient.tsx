@@ -53,20 +53,24 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
             >
               Beneficios RedAgrupa
             </Link>
-            <Link
-              href="/seguro-complementario-bice-pyme"
-              className="text-white font-medium text-sm"
-            >
-              Seguro BICE Pyme
-            </Link>
-            <Link
-              href="/seguro-complementario-bice-personas"
-              className="text-white font-medium text-sm"
-            >
-              Seguro BICE Personas
-            </Link>
+            <div className="relative group">
+              <button className="text-white font-medium text-sm flex items-center gap-1">
+                Seguro BICE
+                <svg className="w-3.5 h-3.5 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
+              </button>
+              <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <div className="bg-white rounded-lg shadow-lg py-2 min-w-[200px]">
+                  <Link href="/seguro-complementario-bice-pyme" className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#cc0033] transition-colors">
+                    Seguro BICE Pyme
+                  </Link>
+                  <Link href="/seguro-complementario-bice-personas" className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#cc0033] transition-colors">
+                    Seguro BICE Personas
+                  </Link>
+                </div>
+              </div>
+            </div>
             <Link href="/blog" className="text-white font-medium text-sm">
-              Blog
+              Conocimiento Pyme
             </Link>
           </nav>
           <div className="hidden lg:flex items-center gap-3">
@@ -140,10 +144,9 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
           <div className="container mx-auto px-4">
             <Breadcrumbs items={[{ label: "Blog" }]} />
             <div className="max-w-4xl mx-auto text-center mb-16">
-              <h1 className="text-4xl font-bold text-[#cc0033] mb-4">Blog RedAgrupa</h1>
+              <h1 className="text-4xl font-bold text-[#cc0033] mb-4">Conocimiento Pyme</h1>
               <p className="text-base text-gray-700 leading-[1.1]">
-                Artículos sobre seguros complementarios, legislación laboral,
-                gestión de personas y más.
+                Guías y recursos sobre seguros, legislación laboral y gestión de personas para tu empresa.
               </p>
             </div>
 

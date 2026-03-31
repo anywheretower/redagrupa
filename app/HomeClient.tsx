@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 import {
   FileText,
   Shield,
@@ -10,7 +11,7 @@ import {
 } from "lucide-react"
 import ScrollButton from "@/components/ScrollButton"
 import dynamic from "next/dynamic"
-import { useState } from "react"
+import { useState, useEffect, useCallback } from "react"
 
 const ContactForm = dynamic(() => import("@/components/ContactForm"), { ssr: false })
 const ProblemaCarousel = dynamic(() => import("@/components/ProblemaCarousel"), { ssr: false })
@@ -56,7 +57,82 @@ function ProblemaCardExpandable({ icon: Icon, title, text }: { icon: React.Compo
   )
 }
 
-export default function HomeContent() {
+interface LatestPost {
+  slug: string
+  title: string
+  heroImage: string
+  excerpt: string
+}
+
+function BlogCarousel({ posts }: { posts: LatestPost[] }) {
+  const [current, setCurrent] = useState(0)
+  const [paused, setPaused] = useState(false)
+
+  const next = useCallback(() => {
+    setCurrent((prev) => (prev + 1) % posts.length)
+  }, [posts.length])
+
+  useEffect(() => {
+    if (paused || posts.length <= 1) return
+    const timer = setInterval(next, 5000)
+    return () => clearInterval(timer)
+  }, [paused, next, posts.length])
+
+  return (
+    <div
+      className="relative"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
+      <div className="relative overflow-hidden rounded-xl">
+        {posts.map((post, i) => (
+          <Link
+            key={post.slug}
+            href={`/blog/${post.slug}`}
+            className={`group block bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 transition-all duration-500 ${
+              i === current ? "opacity-100 relative" : "opacity-0 absolute inset-0"
+            }`}
+          >
+            <div className="relative aspect-[16/9] overflow-hidden">
+              <Image
+                src={post.heroImage}
+                alt={post.title}
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-300"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
+            <div className="p-5">
+              <h3 className="text-base font-semibold text-[#333333] leading-snug group-hover:text-[#cc0033] transition-colors line-clamp-2">
+                {post.title}
+              </h3>
+              <p className="text-sm text-gray-500 mt-2 line-clamp-2">
+                {post.excerpt}
+              </p>
+            </div>
+          </Link>
+        ))}
+      </div>
+      {/* Dots */}
+      {posts.length > 1 && (
+        <div className="flex justify-center gap-2 mt-4">
+          {posts.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              className={`w-2.5 h-2.5 rounded-full transition-colors ${
+                i === current ? "bg-[#cc0033]" : "bg-gray-300"
+              }`}
+              aria-label={`Ver artículo ${i + 1}`}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
+
+export default function HomeContent({ latestPosts = [] }: { latestPosts?: LatestPost[] }) {
   return (
     <>
       {/* El Problema Section */}
@@ -416,52 +492,73 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* Conocimiento Pyme + FAQ — Unified Section */}
       <section className="py-16 md:py-24 bg-gray-50">
-        <div className="container mx-auto px-6 max-w-3xl">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#cc0033] text-center mb-12">
-            Preguntas frecuentes
-          </h2>
-          <div className="space-y-4">
-            {[
-              {
-                q: "¿Qué es un seguro complementario de salud?",
-                a: "Es un seguro que complementa la cobertura de tu Isapre o Fonasa, cubriendo el copago que queda después de la bonificación. Incluye consultas médicas, exámenes, hospitalización, dental y óptico según el plan contratado."
-              },
-              {
-                q: "¿Cuántos trabajadores necesita mi pyme para contratar?",
-                a: "Desde 5 trabajadores puedes acceder a planes colectivos con tarifas preferenciales. Para empresas más pequeñas, también existen opciones individuales o familiares como el seguro BICE Personas."
-              },
-              {
-                q: "¿Qué aseguradoras trabajan con RedAgrupa?",
-                a: "Trabajamos con las principales aseguradoras de Chile: BCI Seguros, BICE Vida, Chilena Consolidada, Consorcio, Help Seguros, MetLife, Bupa, Sura y Vida Security. Comparamos opciones para encontrar la mejor relación cobertura-precio."
-              },
-              {
-                q: "¿Cuánto demora el proceso de contratación?",
-                a: "El proceso completo toma entre 5 y 10 días hábiles. Nosotros nos encargamos de toda la gestión: cotización, comparación de planes, recopilación de documentos y coordinación con la aseguradora."
-              },
-              {
-                q: "¿Tiene algún costo la asesoría de RedAgrupa?",
-                a: "No, nuestra asesoría es completamente gratuita para tu empresa. Somos corredores de seguros, lo que significa que las aseguradoras nos compensan directamente. Tú pagas exactamente lo mismo que pagarías contratando directo."
-              },
-              {
-                q: "¿Cómo se gestionan los reembolsos?",
-                a: "RedAgrupa gestiona los reembolsos por ti. Tus colaboradores envían sus boletas y nosotros nos encargamos del trámite completo con la aseguradora, reduciendo tiempos de espera y papeleo."
-              },
-            ].map((item, i) => (
-              <details key={i} className="group rounded-xl overflow-hidden shadow-sm">
-                <summary className="flex items-center justify-between cursor-pointer p-5 text-left font-semibold text-white text-base bg-[#cc0033] group-open:rounded-b-none">
-                  <span className="flex items-center gap-3">
-                    <svg className="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" /></svg>
-                    {item.q}
-                  </span>
-                  <ChevronDown className="w-5 h-5 text-white flex-shrink-0 ml-4 transition-transform group-open:rotate-180" />
-                </summary>
-                <div className="px-5 py-5 bg-white text-gray-700 text-sm leading-relaxed border border-t-0 border-gray-200 rounded-b-xl">
-                  {item.a}
-                </div>
-              </details>
-            ))}
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            {/* Left: Blog Carousel */}
+            <div>
+              <h2 className="text-2xl font-bold text-[#cc0033] mb-2">Conocimiento Pyme</h2>
+              <p className="text-gray-500 text-sm mb-6">Guías y recursos para tu empresa</p>
+              {latestPosts.length > 0 && (
+                <BlogCarousel posts={latestPosts} />
+              )}
+              <div className="mt-6">
+                <Link
+                  href="/blog"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-[#cc0033] hover:text-[#a30029] transition-colors"
+                >
+                  Ver todos los artículos →
+                </Link>
+              </div>
+            </div>
+
+            {/* Right: FAQ */}
+            <div>
+              <h2 className="text-2xl font-bold text-[#cc0033] mb-2">Preguntas frecuentes</h2>
+              <p className="text-gray-500 text-sm mb-6">Resolvemos tus dudas sobre seguros complementarios</p>
+              <div className="space-y-3">
+                {[
+                  {
+                    q: "¿Qué es un seguro complementario de salud?",
+                    a: "Es un seguro que complementa la cobertura de tu Isapre o Fonasa, cubriendo el copago que queda después de la bonificación. Incluye consultas médicas, exámenes, hospitalización, dental y óptico según el plan contratado."
+                  },
+                  {
+                    q: "¿Cuántos trabajadores necesita mi pyme para contratar?",
+                    a: "Desde 5 trabajadores puedes acceder a planes colectivos con tarifas preferenciales. Para empresas más pequeñas, también existen opciones individuales o familiares como el seguro BICE Personas."
+                  },
+                  {
+                    q: "¿Qué aseguradoras trabajan con RedAgrupa?",
+                    a: "Trabajamos con las principales aseguradoras de Chile: BCI Seguros, BICE Vida, Chilena Consolidada, Consorcio, Help Seguros, MetLife, Bupa, Sura y Vida Security. Comparamos opciones para encontrar la mejor relación cobertura-precio."
+                  },
+                  {
+                    q: "¿Cuánto demora el proceso de contratación?",
+                    a: "El proceso completo toma entre 5 y 10 días hábiles. Nosotros nos encargamos de toda la gestión: cotización, comparación de planes, recopilación de documentos y coordinación con la aseguradora."
+                  },
+                  {
+                    q: "¿Tiene algún costo la asesoría de RedAgrupa?",
+                    a: "No, nuestra asesoría es completamente gratuita para tu empresa. Somos corredores de seguros, lo que significa que las aseguradoras nos compensan directamente. Tú pagas exactamente lo mismo que pagarías contratando directo."
+                  },
+                  {
+                    q: "¿Cómo se gestionan los reembolsos?",
+                    a: "RedAgrupa gestiona los reembolsos por ti. Tus colaboradores envían sus boletas y nosotros nos encargamos del trámite completo con la aseguradora, reduciendo tiempos de espera y papeleo."
+                  },
+                ].map((item, i) => (
+                  <details key={i} className="group rounded-xl overflow-hidden shadow-sm">
+                    <summary className="flex items-center justify-between cursor-pointer p-4 text-left font-semibold text-white text-sm bg-[#cc0033] group-open:rounded-b-none">
+                      <span className="flex items-center gap-2">
+                        <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" /></svg>
+                        {item.q}
+                      </span>
+                      <ChevronDown className="w-4 h-4 text-white flex-shrink-0 ml-3 transition-transform group-open:rotate-180" />
+                    </summary>
+                    <div className="px-4 py-4 bg-white text-gray-700 text-sm leading-relaxed border border-t-0 border-gray-200 rounded-b-xl">
+                      {item.a}
+                    </div>
+                  </details>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
