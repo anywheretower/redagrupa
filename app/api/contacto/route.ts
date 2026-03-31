@@ -46,13 +46,6 @@ export async function POST(request: Request) {
     if ("empresa" in data && data.empresa) {
       rows.push(["Empresa", data.empresa])
     }
-    if ("rubro" in data && (data as Record<string, string>).rubro) {
-      rows.push(["Rubro", (data as Record<string, string>).rubro])
-    }
-    if ("cantidad_empleados" in data && (data as Record<string, string>).cantidad_empleados) {
-      rows.push(["Cantidad de Empleados", (data as Record<string, string>).cantidad_empleados])
-    }
-    rows.push(["Motivo", data.motivo])
     if ("mensaje" in data && data.mensaje) {
       rows.push(["Mensaje", data.mensaje])
     }
@@ -109,9 +102,6 @@ export async function POST(request: Request) {
         email: data.email,
         telefono: data.telefono,
         empresa: "empresa" in data ? data.empresa || null : null,
-        rubro: "rubro" in data ? (data as Record<string, string>).rubro || null : null,
-        cantidad_empleados: "cantidad_empleados" in data ? (data as Record<string, string>).cantidad_empleados || null : null,
-        motivo: data.motivo,
         mensaje: "mensaje" in data ? data.mensaje || null : null,
         pagina: data.pagina,
       })

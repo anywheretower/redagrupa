@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { ChevronDown, Lock, Loader2, CheckCircle2, X } from "lucide-react"
+import { Lock, Loader2, CheckCircle2, X } from "lucide-react"
 import { toast } from "sonner"
 import { contactoSchema, contactoPersonasSchema, type ContactoData, type ContactoPersonasData } from "@/lib/schemas/contacto"
 
@@ -123,101 +123,22 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
           </div>
         </div>
 
-        {isPersonas ? (
-          /* Personas: Empresa (opcional) + Motivo */
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <label htmlFor="empresa-personas" className="sr-only">Nombre empresa (opcional)</label>
-              <input
-                id="empresa-personas"
-                type="text"
-                placeholder="Nombre Empresa (Opcional)"
-                className={inputClass}
-                {...register("empresa")}
-              />
-            </div>
-            <div className="relative">
-              <label htmlFor="motivo-personas" className="sr-only">Motivo de contacto</label>
-              <select
-                id="motivo-personas"
-                className="w-full px-4 py-2.5 bg-gray-100 border-0 rounded-lg text-sm text-gray-700 appearance-none focus:outline-none focus:ring-2 focus:ring-[#cc0033]"
-                {...register("motivo")}
-              >
-                <option value="">Motivo</option>
-                <option value="cotizacion">Cotización</option>
-                <option value="consulta">Consulta</option>
-                <option value="informacion">Más información</option>
-                <option value="otro">Otro</option>
-              </select>
-              <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#cc0033] pointer-events-none" />
-              {errors.motivo && <p id="motivo-personas-error" role="alert" className={errorClass}>{errors.motivo.message}</p>}
-            </div>
-          </div>
-        ) : (
-          /* Standard: Empresa + Rubro, luego Cantidad Empleados + Motivo */
-          <>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label htmlFor="empresa-standard" className="sr-only">Nombre empresa</label>
-                <input
-                  id="empresa-standard"
-                  type="text"
-                  placeholder="Nombre Empresa"
-                  className={inputClass}
-                  {...register("empresa")}
-                />
-                {"empresa" in errors && errors.empresa && (
-                  <p id="empresa-error" role="alert" className={errorClass}>{errors.empresa.message}</p>
-                )}
-              </div>
-              <div>
-                <label htmlFor="rubro" className="sr-only">Rubro</label>
-                <input
-                  id="rubro"
-                  type="text"
-                  placeholder="Rubro"
-                  className={inputClass}
-                  {...register("rubro" as keyof FormData)}
-                />
-                {"rubro" in errors && (errors as Record<string, { message?: string }>).rubro && (
-                  <p id="rubro-error" role="alert" className={errorClass}>{(errors as Record<string, { message?: string }>).rubro?.message}</p>
-                )}
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label htmlFor="cantidad-empleados" className="sr-only">Cantidad de empleados</label>
-                <input
-                  id="cantidad-empleados"
-                  type="number"
-                  placeholder="Cantidad de Empleados"
-                  className={inputClass}
-                  {...register("cantidad_empleados" as keyof FormData)}
-                />
-                {"cantidad_empleados" in errors && (errors as Record<string, { message?: string }>).cantidad_empleados && (
-                  <p id="cantidad-empleados-error" role="alert" className={errorClass}>{(errors as Record<string, { message?: string }>).cantidad_empleados?.message}</p>
-                )}
-              </div>
-              <div className="relative">
-                <label htmlFor="motivo-standard" className="sr-only">Motivo de contacto</label>
-                <select
-                  id="motivo-standard"
-                  className="w-full px-4 py-2.5 bg-gray-100 border-0 rounded-lg text-sm text-gray-700 appearance-none focus:outline-none focus:ring-2 focus:ring-[#cc0033]"
-                  {...register("motivo")}
-                >
-                  <option value="">Motivo</option>
-                  <option value="cotizacion">Cotización</option>
-                  <option value="consulta">Consulta</option>
-                  <option value="informacion">Más información</option>
-                  <option value="otro">Otro</option>
-                </select>
-                <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#cc0033] pointer-events-none" />
-                {errors.motivo && <p id="motivo-standard-error" role="alert" className={errorClass}>{errors.motivo.message}</p>}
-              </div>
-            </div>
-          </>
-        )}
+        {/* Empresa */}
+        <div>
+          <label htmlFor="empresa" className="sr-only">Nombre empresa{isPersonas ? " (opcional)" : ""}</label>
+          <input
+            id="empresa"
+            type="text"
+            placeholder={isPersonas ? "Nombre Empresa (Opcional)" : "Nombre Empresa"}
+            className={inputClass}
+            aria-invalid={!!(errors as Record<string, unknown>).empresa}
+            aria-describedby={(errors as Record<string, unknown>).empresa ? "empresa-error" : undefined}
+            {...register("empresa")}
+          />
+          {"empresa" in errors && errors.empresa && (
+            <p id="empresa-error" role="alert" className={errorClass}>{errors.empresa.message}</p>
+          )}
+        </div>
 
         {/* Mensaje */}
         <div>
