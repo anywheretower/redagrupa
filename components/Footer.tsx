@@ -70,7 +70,7 @@ export default function Footer() {
           {/* Col 4: Contacto + CTA */}
           <div className="space-y-4 text-center lg:text-left flex flex-col items-center lg:items-start">
             <Link
-              href="/#contacto"
+              href="/#formulario-contacto"
               className="inline-block bg-white text-[#cc0033] font-semibold text-sm px-6 py-2.5 rounded-full hover:bg-white/90 transition-colors"
             >
               Cotiza tu seguro →
