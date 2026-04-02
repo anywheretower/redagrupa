@@ -76,22 +76,24 @@ export default function Footer() {
               Cotiza tu seguro →
             </Link>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Contacto</h3>
-            <div className="flex items-center gap-3 max-w-[280px] w-full">
-              <Mail className="w-5 h-5 flex-shrink-0" />
-              <a href="mailto:reembolsos@redagrupa.cl" className="text-sm hover:underline text-left">Casilla de Reembolsos</a>
-            </div>
-            <div className="flex items-center gap-3 max-w-[280px] w-full">
-              <Phone className="w-5 h-5 flex-shrink-0" />
-              <a href="tel:+56228132245" className="text-sm hover:underline text-left">
-                +56 (22) 813 2245
-              </a>
-            </div>
-            <div className="flex items-center gap-3 max-w-[280px] w-full">
-              <MapPin className="w-5 h-5 flex-shrink-0" />
-              <p className="text-sm leading-relaxed text-left">
-                Los Militares 5620, of 1011, Las Condes, Santiago, Chile.
-              </p>
-            </div>
+            <address className="not-italic space-y-3">
+              <div className="flex items-center gap-3 max-w-[280px] w-full">
+                <Mail className="w-5 h-5 flex-shrink-0" />
+                <a href="mailto:reembolsos@redagrupa.cl" className="text-sm hover:underline text-left">Casilla de Reembolsos</a>
+              </div>
+              <div className="flex items-center gap-3 max-w-[280px] w-full">
+                <Phone className="w-5 h-5 flex-shrink-0" />
+                <a href="tel:+56228132245" className="text-sm hover:underline text-left">
+                  +56 (22) 813 2245
+                </a>
+              </div>
+              <div className="flex items-center gap-3 max-w-[280px] w-full">
+                <MapPin className="w-5 h-5 flex-shrink-0" />
+                <p className="text-sm leading-relaxed text-left">
+                  Los Militares 5620, of 1011, Las Condes, Santiago, Chile.
+                </p>
+              </div>
+            </address>
           </div>
         </div>
       </div>

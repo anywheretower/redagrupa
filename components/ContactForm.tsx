@@ -181,12 +181,18 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
           )}
         </button>
 
+        <p className="text-xs text-center text-gray-500 mt-1">
+          Sin costo, sin compromiso. Respuesta en menos de 24 horas.
+        </p>
         <p className="text-xs text-center text-gray-600 flex items-center justify-center gap-1">
           <Lock className="w-3 h-3" />
           Tus datos están 100% protegidos.{" "}
           <a href="/politicas-de-privacidad" className="text-[#cc0033] underline hover:no-underline">
             Ver políticas
           </a>
+        </p>
+        <p className="text-xs text-center text-gray-500 mt-2">
+          +300 empresas ya confían en RedAgrupa | +10 años de experiencia
         </p>
       </form>
 

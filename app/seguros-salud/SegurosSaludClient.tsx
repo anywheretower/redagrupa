@@ -138,7 +138,7 @@ export default function SegurosSaludClient() {
         </a>
       </div>
 
-      <div>
+      <article>
         {/* Hero Section */}
         <section className="relative min-h-[50vh] lg:min-h-[70vh] flex items-center pt-20">
           <Image
@@ -432,7 +432,7 @@ export default function SegurosSaludClient() {
         </section>
 
         <Footer />
-      </div>
+      </article>
     </main>
   )
 }

@@ -264,41 +264,43 @@ export default function HomePage() {
           <div className="container mx-auto px-6 py-8 lg:py-10 flex flex-col lg:flex-row items-center gap-8 lg:gap-0">
             {/* Stats — 1/3 */}
             <div className="flex items-center justify-center gap-8 sm:gap-12 lg:w-1/2 lg:border-r lg:border-gray-200 lg:pr-10">
+              <dl className="flex items-center justify-center gap-8 sm:gap-12">
               <div className="flex items-center gap-2.5">
                 <span className="w-12 h-12 rounded-full bg-[#cc0033] flex items-center justify-center flex-shrink-0"><svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg></span>
                 <div>
-                  <p className="text-3xl font-bold text-[#cc0033] leading-none">+10</p>
-                  <p className="text-xs uppercase tracking-wider text-gray-500">años</p>
+                  <dd className="text-3xl font-bold text-[#cc0033] leading-none">+10</dd>
+                  <dt className="text-xs uppercase tracking-wider text-gray-500">años</dt>
                 </div>
               </div>
               <div className="flex items-center gap-2.5">
                 <span className="w-12 h-12 rounded-full bg-[#cc0033] flex items-center justify-center flex-shrink-0"><svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" /></svg></span>
                 <div>
-                  <p className="text-3xl font-bold text-[#cc0033] leading-none">+300</p>
-                  <p className="text-xs uppercase tracking-wider text-gray-500">empresas</p>
+                  <dd className="text-3xl font-bold text-[#cc0033] leading-none">+300</dd>
+                  <dt className="text-xs uppercase tracking-wider text-gray-500">empresas</dt>
                 </div>
               </div>
               <div className="flex items-center gap-2.5">
                 <span className="w-12 h-12 rounded-full bg-[#cc0033] flex items-center justify-center flex-shrink-0"><svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" /></svg></span>
                 <div>
-                  <p className="text-3xl font-bold text-[#cc0033] leading-none">+9.000</p>
-                  <p className="text-xs uppercase tracking-wider text-gray-500">familias</p>
+                  <dd className="text-3xl font-bold text-[#cc0033] leading-none">+9.000</dd>
+                  <dt className="text-xs uppercase tracking-wider text-gray-500">familias</dt>
                 </div>
               </div>
+              </dl>
             </div>
             {/* Logos — 2/3 */}
             <div className="lg:w-1/2 lg:pl-10">
               <div className="grid grid-cols-5 items-center justify-items-center gap-x-2 gap-y-5 lg:gap-x-3 max-w-lg lg:max-w-xl mx-auto">
                 {[
-                  { src: "/images/bupa.png", alt: "Bupa" },
-                  { src: "/images/logo-bicevida-e1674133440155.png", alt: "BICE Vida" },
-                  { src: "/images/sura-seguros300-e1674133176152.png", alt: "Sura Seguros" },
-                  { src: "/images/consorcio300-e1674133353916.png", alt: "Consorcio" },
-                  { src: "/images/metlife-logo-e1674133505895.png", alt: "MetLife" },
-                  { src: "/images/bci-seguros300.png", alt: "BCI Seguros" },
-                  { src: "/images/security.png", alt: "Vida Security" },
-                  { src: "/images/logo-help1-e1674133566493.png", alt: "Help Seguros" },
-                  { src: "/images/logo-chilena-consolidada2-e1674133731697.png", alt: "Chilena Consolidada" },
+                  { src: "/images/bupa.png", alt: "Logo Bupa, aseguradora partner de RedAgrupa" },
+                  { src: "/images/logo-bicevida-e1674133440155.png", alt: "Logo BICE Vida, aseguradora partner de RedAgrupa" },
+                  { src: "/images/sura-seguros300-e1674133176152.png", alt: "Logo Sura Seguros, aseguradora partner de RedAgrupa" },
+                  { src: "/images/consorcio300-e1674133353916.png", alt: "Logo Consorcio, aseguradora partner de RedAgrupa" },
+                  { src: "/images/metlife-logo-e1674133505895.png", alt: "Logo MetLife, aseguradora partner de RedAgrupa" },
+                  { src: "/images/bci-seguros300.png", alt: "Logo BCI Seguros, aseguradora partner de RedAgrupa" },
+                  { src: "/images/security.png", alt: "Logo Vida Security, aseguradora partner de RedAgrupa" },
+                  { src: "/images/logo-help1-e1674133566493.png", alt: "Logo Help Seguros, aseguradora partner de RedAgrupa" },
+                  { src: "/images/logo-chilena-consolidada2-e1674133731697.png", alt: "Logo Chilena Consolidada, aseguradora partner de RedAgrupa" },
                 ].map((logo) => (
                   <Image
                     key={logo.alt}

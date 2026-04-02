@@ -142,7 +142,7 @@ export default function BicePersonasClient() {
         </a>
       </div>
 
-      <div className="pt-20">
+      <article className="pt-20">
         {/* Hero Section */}
         <section className="py-32">
           <div className="container mx-auto px-4">
@@ -496,7 +496,7 @@ export default function BicePersonasClient() {
         </section>
 
         <Footer />
-      </div>
+      </article>
     </main>
   )
 }

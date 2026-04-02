@@ -5,13 +5,13 @@ import Image from "next/image"
 
 const testimonios = [
   {
-    texto: "Levábamos años encontrando un seguro que permitiese como empresa pequeña poder tener cobertura adicional. Hemos encontrado asesoría confiable, con profesionales atentos capacitados para resolver cualquier duda. Excelente servicio, recomiendo Redagrupa a ojos cerrados.",
+    texto: "Llevábamos años buscando un seguro que nos permitiese, como empresa pequeña, tener cobertura adicional. Hemos encontrado asesoría confiable, con profesionales atentos y capacitados para resolver cualquier duda. Excelente servicio, recomiendo RedAgrupa a ojos cerrados.",
     nombre: "Marcela Lorenzo",
     cargo: "Partner CEO en JSTL",
     foto: "/images/marcela-lorenzo-ceo-just4u-baja.jpg",
   },
   {
-    texto: "Contratamos Redagrupa como beneficio extra para trabajadores, pero al poco tiempo nos dimos cuenta que es un gran aliado, tanto clientes como empleados. Es el agregado bien servicio indiscutible con ellos.",
+    texto: "Contratamos RedAgrupa como beneficio extra para nuestros trabajadores, pero al poco tiempo nos dimos cuenta de que es un gran aliado, tanto para clientes como para empleados. Es un valor agregado de servicio indiscutible.",
     nombre: "Manuel Pamplona",
     cargo: "Gerente Regional en EngMe",
     foto: "/images/manuel-pamplona-baja.jpg",

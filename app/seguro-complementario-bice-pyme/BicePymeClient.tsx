@@ -198,7 +198,7 @@ export default function BicePymeClient() {
         </a>
       </div>
 
-      <div className="pt-20">
+      <article className="pt-20">
         {/* Hero Section */}
         <section className="py-32">
           <div className="container mx-auto px-4">
@@ -419,7 +419,7 @@ export default function BicePymeClient() {
               </table>
 
               <p className="text-sm text-gray-500 text-center mt-8">
-                Precios de planes con IVA incluido. Valor UF: $39.705,63 al 13/02/2026.
+                Precios de planes con IVA incluido. Valor UF: $39.705,63 al <time dateTime="2026-02-13">13/02/2026</time>.
               </p>
             </div>
           </div>
@@ -563,7 +563,7 @@ export default function BicePymeClient() {
         </section>
 
         <Footer />
-      </div>
+      </article>
     </main>
   )
 }
