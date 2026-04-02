@@ -266,7 +266,7 @@
 <tr><td><strong>S31</strong></td><td>Alt text descriptivo en im&aacute;genes<div class="detail">Hero, logos, testimonios y blog con alt text en espa&ntilde;ol contextual.</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
 <tr><td><strong>S32</strong></td><td>Formatos modernos WebP/AVIF<div class="detail">next.config.mjs configura formatos optimizados. Im&aacute;genes en /images/ en WebP.</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
 <tr><td><strong>S33</strong></td><td>2 hero subp&aacute;ginas en JPG<div class="detail">seguros-salud-hero.jpg (77KB) y beneficios-hero.jpg (66KB) no convertidas a WebP en origen.</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-<tr><td><strong>S34</strong></td><td>Trust bar logos con alt gen&eacute;rico<div class="detail">Solo nombre de marca (&quot;Bupa&quot;, &quot;MetLife&quot;). Secci&oacute;n reembolso tiene alt m&aacute;s descriptivo. Inconsistencia.</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+<tr><td><strong>S34</strong></td><td>Trust bar logos con alt descriptivo<div class="detail">Alt actualizado a &quot;Logo X, aseguradora partner de RedAgrupa&quot; en los 9 logos (b2068f9).</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
 <tr><td><strong>S35</strong></td><td>Blog usa t&iacute;tulo del post como alt de imagen<div class="detail">alt={post.title} en vez de descripci&oacute;n espec&iacute;fica de la imagen. Agregar campo heroAlt en frontmatter.</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
 </tbody></table></div>
 
@@ -298,10 +298,10 @@
 <div class="section">
 <div class="section-title"><span class="section-icon icon-geo">&#10003;</span>Se&ntilde;ales GEO en C&oacute;digo (G9-G13)</div>
 <table><thead><tr><th style="width:60px;">ID</th><th>Medida</th><th style="width:100px;">Estado</th></tr></thead><tbody>
-<tr><td><strong>G9</strong></td><td>Sin article tag en p&aacute;ginas de servicio<div class="detail">Subp&aacute;ginas usan section/div sin article. AI engines usan article como se&ntilde;al de contenido citable.</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-<tr><td><strong>G10</strong></td><td>Estad&iacute;sticas sin elementos sem&aacute;nticos<div class="detail">Trust bar stats (+10 a&ntilde;os, +300 empresas) en p tags gen&eacute;ricos. Usar dl/dt/dd o data tags para extractabilidad.</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-<tr><td><strong>G11</strong></td><td>Footer sin tag address<div class="detail">Datos de contacto en div/p gen&eacute;ricos. El tag HTML5 address marca informaci&oacute;n de contacto expl&iacute;citamente.</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-<tr><td><strong>G12</strong></td><td>Sin time tag en precios<div class="detail">Fecha de validez UF (&quot;13/02/2026&quot;) en texto plano. Usar time datetime para legibilidad de m&aacute;quina.</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+<tr><td><strong>G9</strong></td><td>Article tag en 4 subp&aacute;ginas<div class="detail">Contenido principal envuelto en &lt;article&gt; en seguros-salud, beneficios, bice-pyme y bice-personas (b2068f9).</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
+<tr><td><strong>G10</strong></td><td>Stats con &lt;dl&gt;/&lt;dt&gt;/&lt;dd&gt; sem&aacute;ntico<div class="detail">Trust bar stats envueltos en definition list para extractabilidad por AI engines (b2068f9).</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
+<tr><td><strong>G11</strong></td><td>Footer con tag &lt;address&gt;<div class="detail">Datos de contacto (email, tel&eacute;fono, direcci&oacute;n) envueltos en &lt;address&gt; sem&aacute;ntico (b2068f9).</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
+<tr><td><strong>G12</strong></td><td>Fecha UF con &lt;time datetime&gt;<div class="detail">&lt;time datetime=&quot;2026-02-13&quot;&gt; aplicado a fecha de validez UF en BICE Pyme (b2068f9).</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
 <tr><td><strong>G13</strong></td><td>Blog markdown soporta tablas<div class="detail">mdComponents mapea markdown tables a table/thead/th/tr/td. Buena infraestructura.</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
 </tbody></table></div>
 <div class="section">
@@ -340,9 +340,9 @@
 <div class="section-title"><span class="section-icon icon-cro">&#10003;</span>Se&ntilde;ales de Confianza (C11-C14)</div>
 <table><thead><tr><th style="width:60px;">ID</th><th>Medida</th><th style="width:100px;">Estado</th></tr></thead><tbody>
 <tr><td><strong>C11</strong></td><td>3 testimonios con nombre y cargo<div class="detail">Marcela Lorenzo/JSTL, Manuel Pamplona/EngMe, Roberto Allaro/SCLatam. Review schema implementado.</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
-<tr><td><strong>C12</strong></td><td>Sin social proof junto al formulario<div class="detail">Ni testimonios, ni stats, ni logos cerca del form. Trust signals est&aacute;n 3+ secciones arriba.</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-<tr><td><strong>C13</strong></td><td>Sin risk reversal ni garant&iacute;a<div class="detail">Ninguna menci&oacute;n de &quot;sin compromiso&quot;, &quot;cancela cuando quieras&quot;. Cr&iacute;tico para seguros (categor&iacute;a alta ansiedad).</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-<tr><td><strong>C14</strong></td><td>Typos en testimonios<div class="detail">&quot;Levabamos&quot; (falta L), &quot;agregado bien servicio&quot; (frase incompleta). Debilita credibilidad.</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+<tr><td><strong>C12</strong></td><td>Social proof junto al formulario<div class="detail">&quot;+300 empresas ya conf&iacute;an en RedAgrupa | +10 a&ntilde;os de experiencia&quot; bajo el bot&oacute;n de env&iacute;o (b2068f9).</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
+<tr><td><strong>C13</strong></td><td>Risk reversal bajo formulario<div class="detail">&quot;Sin costo, sin compromiso. Respuesta en menos de 24 horas.&quot; agregado bajo bot&oacute;n de env&iacute;o (b2068f9).</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
+<tr><td><strong>C14</strong></td><td>Typos corregidos en testimonios<div class="detail">&quot;Levábamos&quot;&rarr;&quot;Llevábamos&quot;, &quot;agregado bien servicio&quot;&rarr;&quot;valor agregado de servicio&quot; (b2068f9).</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
 </tbody></table></div>
 <div class="section">
 <div class="section-title"><span class="section-icon icon-cro">&#10003;</span>Copywriting (C15-C18)</div>
@@ -434,7 +434,7 @@
 <tr><td><strong>A7</strong></td><td>Skip-to-content link<div class="detail">&quot;Saltar al contenido&quot; con estilos focus visibles. Apunta a #contenido-principal.</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
 <tr><td><strong>A8</strong></td><td>prefers-reduced-motion respetado<div class="detail">Animaciones fade-in-up y marquee se desactivan con reduced-motion.</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
 <tr><td><strong>A9</strong></td><td>Dots carousel con touch target 24px<div class="detail">min-w-[24px] min-h-[24px] ya aplicado con bg-clip-content. Cumple WCAG 2.2.</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
-<tr><td><strong>A10</strong></td><td>Marquee sin pausa y duplicado<div class="detail">Animaci&oacute;n infinita sin bot&oacute;n de pausa. Texto duplicado 3x le&iacute;do por screen readers. Usar aria-hidden en copias.</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+<tr><td><strong>A10</strong></td><td>Marquee copias con aria-hidden<div class="detail">2 copias duplicadas marcadas con aria-hidden=&quot;true&quot;. Screen readers leen solo 1 vez (b2068f9).</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
 </tbody></table></div>
 
   </div>
@@ -444,12 +444,12 @@
     <div style="text-align: center; margin-bottom: 16px; font-size: 13px; font-weight: 600; color: #475569;">Resumen Total de Medidas</div>
     <div class="footer-grid">
       <div class="footer-item">
-        <div class="footer-num" style="color: #16a34a;">64</div>
+        <div class="footer-num" style="color: #16a34a;">74</div>
         <div class="footer-label">Aplicadas</div>
       </div>
       <div class="footer-divider"></div>
       <div class="footer-item">
-        <div class="footer-num" style="color: #ea580c;">35</div>
+        <div class="footer-num" style="color: #ea580c;">25</div>
         <div class="footer-label">Pendientes</div>
       </div>
       <div class="footer-divider"></div>
@@ -460,11 +460,11 @@
     </div>
     <div style="text-align: center; margin-top: 16px;">
       <div style="display: inline-flex; gap: 16px; flex-wrap: wrap; justify-content: center;">
-        <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #2563eb; margin-right: 4px;"></span>SEO: 22 aplicadas / 13 pendientes</span>
-<span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #7c3aed; margin-right: 4px;"></span>GEO: 8 aplicadas / 10 pendientes</span>
-<span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #ea580c; margin-right: 4px;"></span>CRO: 14 aplicadas / 8 pendientes</span>
+        <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #2563eb; margin-right: 4px;"></span>SEO: 24 aplicadas / 11 pendientes</span>
+<span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #7c3aed; margin-right: 4px;"></span>GEO: 12 aplicadas / 6 pendientes</span>
+<span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #ea580c; margin-right: 4px;"></span>CRO: 18 aplicadas / 4 pendientes</span>
 <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #16a34a; margin-right: 4px;"></span>Rendimiento: 11 aplicadas / 3 pendientes</span>
-<span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #0891b2; margin-right: 4px;"></span>Accesibilidad: 9 aplicadas / 1 pendiente</span>
+<span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #0891b2; margin-right: 4px;"></span>Accesibilidad: 10 aplicadas / 0 pendientes</span>
       </div>
     </div>
   </div>
