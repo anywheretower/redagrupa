@@ -265,7 +265,7 @@
 <table><thead><tr><th style="width:60px;">ID</th><th>Medida</th><th style="width:100px;">Estado</th></tr></thead><tbody>
 <tr><td><strong>S31</strong></td><td>Alt text descriptivo en im&aacute;genes<div class="detail">Hero, logos, testimonios y blog con alt text en espa&ntilde;ol contextual.</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
 <tr><td><strong>S32</strong></td><td>Formatos modernos WebP/AVIF<div class="detail">next.config.mjs configura formatos optimizados. Im&aacute;genes en /images/ en WebP.</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
-<tr><td><strong>S33</strong></td><td>2 hero subp&aacute;ginas en JPG<div class="detail">seguros-salud-hero.jpg (77KB) y beneficios-hero.jpg (66KB) no convertidas a WebP en origen.</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+<tr><td><strong>S33</strong></td><td>Hero subp&aacute;ginas convertidos a WebP<div class="detail">seguros-salud-hero.webp (49KB, -35%) y beneficios-hero.webp (40KB, -37%) (36d13b0).</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
 <tr><td><strong>S34</strong></td><td>Trust bar logos con alt descriptivo<div class="detail">Alt actualizado a &quot;Logo X, aseguradora partner de RedAgrupa&quot; en los 9 logos (b2068f9).</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
 <tr><td><strong>S35</strong></td><td>Blog usa t&iacute;tulo del post como alt de imagen<div class="detail">alt={post.title} en vez de descripci&oacute;n espec&iacute;fica de la imagen. Agregar campo heroAlt en frontmatter.</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
 </tbody></table></div>
@@ -284,7 +284,7 @@
 <table><thead><tr><th style="width:60px;">ID</th><th>Medida</th><th style="width:100px;">Estado</th></tr></thead><tbody>
 <tr><td><strong>G1</strong></td><td>6 bots AI permitidos en robots.txt<div class="detail">GPTBot, ClaudeBot, PerplexityBot, Google-Extended, OAI-SearchBot, ChatGPT-User con Allow expl&iacute;cito.</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
 <tr><td><strong>G2</strong></td><td>llms.txt completo y estructurado<div class="detail">Descripci&oacute;n empresa, URLs, 7 servicios, 4 planes con precios CLP/UF, 6 FAQs, contacto, RRSS.</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
-<tr><td><strong>G3</strong></td><td>Falta llms-full.txt<div class="detail">El est&aacute;ndar recomienda llms.txt (resumen) + llms-full.txt (versi&oacute;n extendida con contenido completo).</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+<tr><td><strong>G3</strong></td><td>llms-full.txt creado<div class="detail">Versi&oacute;n extendida con tabla comparativa, FAQs de decisi&oacute;n, detalle aseguradoras y testimonios (36d13b0).</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
 </tbody></table></div>
 <div class="section">
 <div class="section-title"><span class="section-icon icon-geo">&#10003;</span>Citabilidad &amp; Entidad (G4-G8)</div>
@@ -293,7 +293,7 @@
 <tr><td><strong>G5</strong></td><td>Producto BICE con precios en schema<div class="detail">4 Product schemas con precios CLP y URLs de compra. Datos estructurados que AI puede extraer.</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
 <tr><td><strong>G6</strong></td><td>Tabla comparativa HTML para AI<div class="detail">Tabla sr-only con 4 planes, 8 columnas (precio, coberturas, asistencia) para AI crawlers y screen readers (0a9e131).</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
 <tr><td><strong>G7</strong></td><td>Sin contenido comparativo multi-carrier<div class="detail">El diferenciador de RedAgrupa (broker de 9 aseguradoras) no tiene contenido comparativo online. QuePlan y MetLife son citados en su lugar.</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
-<tr><td><strong>G8</strong></td><td>FAQ no cubre queries de decisi&oacute;n<div class="detail">FAQs actuales responden &quot;qu&eacute; es&quot; pero no &quot;c&oacute;mo elegir&quot;, &quot;cu&aacute;nto cuesta&quot;, &quot;cu&aacute;ntos trabajadores necesito&quot;.</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+<tr><td><strong>G8</strong></td><td>FAQs de decisi&oacute;n en schema<div class="detail">3 FAQs agregadas: &quot;c&oacute;mo elegir plan&quot;, &quot;cu&aacute;nto cuesta&quot;, &quot;corredor vs directo&quot;. Total 9 FAQs en landing (36d13b0).</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
 </tbody></table></div>
 <div class="section">
 <div class="section-title"><span class="section-icon icon-geo">&#10003;</span>Se&ntilde;ales GEO en C&oacute;digo (G9-G13)</div>
@@ -402,7 +402,7 @@
 <div class="section-title"><span class="section-icon icon-perf">&#10003;</span>Mobile (R12-R13)</div>
 <table><thead><tr><th style="width:60px;">ID</th><th>Medida</th><th style="width:100px;">Estado</th></tr></thead><tbody>
 <tr><td><strong>R12</strong></td><td>Carousels lazy-loaded<div class="detail">ProblemaCarousel, StatsCarousel, TestimonialCarousel con dynamic import ssr:false. Embla Carousel no en bundle inicial.</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
-<tr><td><strong>R13</strong></td><td>9 trust bar logos sin lazy loading<div class="detail">Cargan eager en Server Component. 9 requests adicionales (~35KB total) compiten con hero en mobile.</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+<tr><td><strong>R13</strong></td><td>Logos trust bar con lazy loading<div class="detail">loading=&quot;lazy&quot; agregado a 9 logos. No compiten con hero LCP en mobile (36d13b0).</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
 </tbody></table></div>
 <div class="section">
 <div class="section-title"><span class="section-icon icon-perf">&#10003;</span>Seguridad &amp; Best Practices (R14)</div>
@@ -420,7 +420,7 @@
 <tr><td><strong>A1</strong></td><td>Formulario con labels sr-only y aria<div class="detail">aria-invalid, aria-describedby, role=&quot;alert&quot; en errores. Honeypot con aria-hidden y tabIndex -1.</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
 <tr><td><strong>A2</strong></td><td>ExitIntentPopup con focus trap<div class="detail">role=&quot;dialog&quot;, aria-modal, focus trap, Escape cierra.</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
 <tr><td><strong>A3</strong></td><td>MobileMenu accesible<div class="detail">Focus trap, Escape cierra, aria-expanded, role=&quot;dialog&quot;, retorna foco al trigger.</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
-<tr><td><strong>A4</strong></td><td>Dropdown nav desktop inaccesible por teclado<div class="detail">&quot;Seguro BICE&quot; dropdown usa CSS group-hover sin aria-expanded, sin toggle por teclado. Usuarios de teclado no pueden acceder a 2 p&aacute;ginas.</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
+<tr><td><strong>A4</strong></td><td>Dropdown nav accesible por teclado<div class="detail">focus-within abre dropdown, aria-haspopup, role=menu/menuitem, focus styles en 9 p&aacute;ginas (36d13b0).</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
 </tbody></table></div>
 <div class="section">
 <div class="section-title"><span class="section-icon icon-a11y">&#10003;</span>Contraste (A5-A6)</div>
@@ -444,12 +444,12 @@
     <div style="text-align: center; margin-bottom: 16px; font-size: 13px; font-weight: 600; color: #475569;">Resumen Total de Medidas</div>
     <div class="footer-grid">
       <div class="footer-item">
-        <div class="footer-num" style="color: #16a34a;">74</div>
+        <div class="footer-num" style="color: #16a34a;">79</div>
         <div class="footer-label">Aplicadas</div>
       </div>
       <div class="footer-divider"></div>
       <div class="footer-item">
-        <div class="footer-num" style="color: #ea580c;">25</div>
+        <div class="footer-num" style="color: #ea580c;">20</div>
         <div class="footer-label">Pendientes</div>
       </div>
       <div class="footer-divider"></div>
@@ -460,10 +460,10 @@
     </div>
     <div style="text-align: center; margin-top: 16px;">
       <div style="display: inline-flex; gap: 16px; flex-wrap: wrap; justify-content: center;">
-        <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #2563eb; margin-right: 4px;"></span>SEO: 24 aplicadas / 11 pendientes</span>
-<span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #7c3aed; margin-right: 4px;"></span>GEO: 12 aplicadas / 6 pendientes</span>
+        <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #2563eb; margin-right: 4px;"></span>SEO: 25 aplicadas / 10 pendientes</span>
+<span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #7c3aed; margin-right: 4px;"></span>GEO: 14 aplicadas / 4 pendientes</span>
 <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #ea580c; margin-right: 4px;"></span>CRO: 18 aplicadas / 4 pendientes</span>
-<span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #16a34a; margin-right: 4px;"></span>Rendimiento: 11 aplicadas / 3 pendientes</span>
+<span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #16a34a; margin-right: 4px;"></span>Rendimiento: 12 aplicadas / 2 pendientes</span>
 <span style="font-size: 11px; color: #64748b;"><span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #0891b2; margin-right: 4px;"></span>Accesibilidad: 10 aplicadas / 0 pendientes</span>
       </div>
     </div>
