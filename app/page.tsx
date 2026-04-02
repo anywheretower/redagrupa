@@ -96,6 +96,9 @@ export default function HomePage() {
             { "@type": "Question", name: "¿Cuánto demora el proceso de contratación?", acceptedAnswer: { "@type": "Answer", text: "El proceso completo toma entre 5 y 10 días hábiles. Nosotros nos encargamos de toda la gestión: cotización, comparación de planes, recopilación de documentos y coordinación con la aseguradora." }},
             { "@type": "Question", name: "¿Tiene algún costo la asesoría de RedAgrupa?", acceptedAnswer: { "@type": "Answer", text: "No, nuestra asesoría es completamente gratuita para tu empresa. Somos corredores de seguros, lo que significa que las aseguradoras nos compensan directamente. Tú pagas exactamente lo mismo que pagarías contratando directo." }},
             { "@type": "Question", name: "¿Cómo se gestionan los reembolsos?", acceptedAnswer: { "@type": "Answer", text: "RedAgrupa gestiona los reembolsos por ti. Tus colaboradores envían sus boletas y nosotros nos encargamos del trámite completo con la aseguradora, reduciendo tiempos de espera y papeleo." }},
+            { "@type": "Question", name: "¿Cómo elijo el mejor seguro complementario para mi empresa?", acceptedAnswer: { "@type": "Answer", text: "Depende de tres factores: presupuesto por trabajador, nivel de cobertura deseado y tamaño de la empresa. RedAgrupa compara planes de 9 aseguradoras y recomienda la mejor opción. El plan más vendido es Pyme Premium (70% cobertura, $26.658/mes por trabajador)." }},
+            { "@type": "Question", name: "¿Cuánto cuesta un seguro complementario para mi empresa?", acceptedAnswer: { "@type": "Answer", text: "Desde $20.647 CLP mensuales por trabajador (Plan Pyme Estándar, 50% cobertura). El costo depende del plan elegido, la edad promedio del grupo y las coberturas opcionales. RedAgrupa cotiza sin costo y sin compromiso." }},
+            { "@type": "Question", name: "¿Qué diferencia hay entre contratar directo con la aseguradora y usar un corredor?", acceptedAnswer: { "@type": "Answer", text: "Un corredor como RedAgrupa compara planes de 9 aseguradoras, negocia condiciones, gestiona toda la administración y trámites de reembolso, y brinda asesoría continua sin costo adicional. Contratar directo limita las opciones a una sola aseguradora y el precio es el mismo." }},
           ]
         }) }}
       />
@@ -125,16 +128,19 @@ export default function HomePage() {
                 Beneficios RedAgrupa
               </Link>
               <div className="relative group">
-                <button className="text-white hover:text-white/80 transition-colors font-medium text-sm flex items-center gap-1">
+                <button
+                  aria-haspopup="true"
+                  className="text-white hover:text-white/80 transition-colors font-medium text-sm flex items-center gap-1"
+                >
                   Seguro BICE
-                  <svg className="w-3.5 h-3.5 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
+                  <svg className="w-3.5 h-3.5 transition-transform group-hover:rotate-180 group-focus-within:rotate-180" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
                 </button>
-                <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                  <div className="bg-white rounded-lg shadow-lg py-2 min-w-[200px]">
-                    <Link href="/seguro-complementario-bice-pyme" className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#cc0033] transition-colors">
+                <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-200">
+                  <div className="bg-white rounded-lg shadow-lg py-2 min-w-[200px]" role="menu">
+                    <Link href="/seguro-complementario-bice-pyme" role="menuitem" className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#cc0033] focus:bg-gray-50 focus:text-[#cc0033] focus:outline-none transition-colors">
                       Seguro BICE Pyme
                     </Link>
-                    <Link href="/seguro-complementario-bice-personas" className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#cc0033] transition-colors">
+                    <Link href="/seguro-complementario-bice-personas" role="menuitem" className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#cc0033] focus:bg-gray-50 focus:text-[#cc0033] focus:outline-none transition-colors">
                       Seguro BICE Personas
                     </Link>
                   </div>
@@ -308,6 +314,7 @@ export default function HomePage() {
                     alt={logo.alt}
                     width={120}
                     height={40}
+                    loading="lazy"
                     className="h-10 w-auto object-contain"
                   />
                 ))}

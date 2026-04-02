@@ -1,0 +1,109 @@
+# RedAgrupa — Seguros Complementarios de Salud para Pymes en Chile
+
+> Corredora de seguros chilena especializada en la gestión de seguros complementarios de salud para pequeñas y medianas empresas. Más de 10 años de experiencia, 300+ empresas clientes y 9.000+ familias protegidas.
+
+## Páginas principales
+
+- [Inicio](https://www.redagrupa.cl): Landing page con propuesta de valor, testimonios y formulario de contacto
+- [Seguro Complementario de Salud](https://www.redagrupa.cl/seguros-salud): Qué es, coberturas (vida, hospitalización, ambulatoria, medicamentos, catastrófica) y beneficios para empresas
+- [Seguro BICE Pyme](https://www.redagrupa.cl/seguro-complementario-bice-pyme): 4 planes BICE Vida para pymes con precios y coberturas detalladas
+- [Seguro BICE Personas](https://www.redagrupa.cl/seguro-complementario-bice-personas): Seguro individual/familiar BICE Vida para personas entre 18-64 años
+- [Beneficios RedAgrupa](https://www.redagrupa.cl/beneficios-redagrupa): Convenios corporativos de salud, bienestar, vacunación y plataforma digital
+- [Nosotros](https://www.redagrupa.cl/nosotros): Historia, misión y equipo de RedAgrupa
+- [Blog - Conocimiento Pyme](https://www.redagrupa.cl/blog): 55+ artículos sobre gestión de personas, legislación laboral y seguros en Chile
+
+## Servicios principales
+
+### Asesoría en seguros complementarios de salud
+RedAgrupa actúa como corredor de seguros, comparando planes de 9 aseguradoras para encontrar la mejor opción según el tamaño, presupuesto y necesidades de cada empresa. La asesoría es 100% gratuita — RedAgrupa es compensada por las aseguradoras, no por los clientes.
+
+### Gestión de pólizas colectivas
+Incluye cotización, contratación, renovación y administración de pólizas grupales. El proceso completo toma entre 5 y 10 días hábiles. RedAgrupa se encarga de toda la gestión documental y administrativa.
+
+### Administración de reembolsos médicos
+RedAgrupa gestiona directamente los reembolsos de los trabajadores, reduciendo tiempos de espera y trámites. Proceso en 3 pasos: acudir a consulta, presentar documentos, recibir reembolso según porcentaje del plan.
+
+### Convenios de salud y bienestar corporativo
+Programas complementarios para empresas: convenios con gimnasios, operativos oftalmológicos en la oficina, campañas de vacunación, y plataforma digital de beneficios para trabajadores.
+
+### Planes BICE Vida para pymes
+Producto específico de BICE Vida diseñado para pymes. Contratación 100% online vía Mi Pyme Segura (mipymesegura.bicevida.cl). Mínimo 5 trabajadores para planes colectivos.
+
+### Seguro complementario BICE Vida para personas
+Seguro individual o familiar para personas entre 18 y 64 años, disponible para afiliados de Fonasa o Isapre. Incluye cobertura desde el primer día, sin carencias.
+
+## Planes BICE Vida para Pymes — Comparativa detallada
+
+| Plan | Precio/mes (CLP) | Precio/mes (UF) | Ambulatoria | Hospitalaria | Tope Salud | Seguro Vida | Asistencia Mascota |
+|------|-------------------|------------------|-------------|--------------|------------|-------------|---------------------|
+| Pyme Estándar | $20.647 | UF 0,5200 | 50% | 50% | 300 UF | 500 UF | No |
+| Pyme Premium | $26.658 | UF 0,6714 | 70% | 70% | 300 UF | 500 UF | No |
+| Pyme Elite | $41.651 | UF 1,0490 | 80% | 80% | 500 UF | 500 UF | Sí (Pawer) |
+| Pyme Elite Plus | $48.401 | UF 1,1290 | 80% | 80% | 500 UF | 1.000 UF | Sí (Pawer) |
+
+Precios por trabajador, mensuales, con IVA incluido. Todos los planes incluyen Seguro de Salud + Seguro de Vida. Coberturas opcionales disponibles: Dental y Catastrófica.
+
+## Preguntas frecuentes
+
+### Generales
+- **¿Qué es un Seguro Complementario de Salud?** Es un seguro diseñado para cubrir total o parcialmente el copago que queda después de Fonasa o Isapre. Por ejemplo, si una consulta médica cuesta $50.000 y Fonasa cubre $15.000, el seguro complementario puede cubrir entre 50% y 80% de los $35.000 restantes, dependiendo del plan contratado.
+
+- **¿Qué coberturas incluye?** Las pólizas contemplan: Vida, Hospitalización (incluyendo cirugías y estadías clínicas), Atención ambulatoria (consultas médicas, exámenes y procedimientos), Medicamentos (farmacia según receta médica) y Catastrófica (para eventos de alto costo). Opcionalmente, cobertura dental.
+
+- **¿Cuáles son los beneficios para empresas?** Reducir el impacto financiero de gastos médicos en colaboradores, mejorar el bienestar y percepción del beneficio laboral, aumentar la fidelización y retención de trabajadores, ofrecer un beneficio competitivo frente al mercado laboral, y ajustar coberturas y capitales a la realidad de la empresa.
+
+### Contratación
+- **¿Cuántos trabajadores necesita mi pyme para contratar?** El mínimo para planes colectivos es 5 trabajadores. Para empresas más pequeñas o personas individuales, existe el Seguro BICE Personas (individual/familiar, desde 18 años).
+
+- **¿Cuánto demora el proceso de contratación?** Entre 5 y 10 días hábiles. RedAgrupa se encarga de toda la gestión: cotización con múltiples aseguradoras, comparación de planes, tramitación y puesta en vigencia.
+
+- **¿Tiene algún costo la asesoría de RedAgrupa?** No, la asesoría es 100% gratuita y sin compromiso. RedAgrupa es una corredora de seguros compensada por las aseguradoras, no por los clientes.
+
+### Decisión de compra
+- **¿Cómo elijo el mejor plan para mi empresa?** Depende de tres factores: presupuesto por trabajador, nivel de cobertura deseado y tamaño de la empresa. RedAgrupa compara planes de 9 aseguradoras y recomienda la mejor opción. El plan más vendido es Pyme Premium (70% cobertura, $26.658/mes).
+
+- **¿Cuánto cuesta un seguro complementario para mi empresa?** Desde $20.647 CLP mensuales por trabajador (Plan Pyme Estándar, 50% cobertura). El costo depende del plan elegido, la edad promedio del grupo y las coberturas opcionales. RedAgrupa cotiza sin costo.
+
+- **¿Puedo cambiar de plan o aseguradora después?** Sí. RedAgrupa gestiona la renovación anual y puede recomendar cambios de plan o aseguradora según la experiencia del grupo y las necesidades que hayan surgido.
+
+- **¿Qué diferencia hay entre contratar directo con la aseguradora y usar un corredor como RedAgrupa?** Un corredor compara planes de múltiples aseguradoras (RedAgrupa trabaja con 9), negocia condiciones, gestiona toda la administración y trámites de reembolso, y brinda asesoría continua sin costo adicional. Contratar directo limita las opciones a una sola aseguradora.
+
+### Seguro BICE Personas
+- **¿Para quién es el seguro BICE Personas?** Personas entre 18 y 64 años, sus parejas e hijos dependientes, estén en Isapre o Fonasa. Cobertura desde el primer día, sin carencias, con respaldo de BICE Vida.
+
+- **¿Cómo funciona el reembolso?** En 3 pasos: (1) acudir a consulta médica, (2) presentar documentos de respaldo (boleta, orden médica), (3) recibir el porcentaje de reembolso correspondiente según el plan contratado.
+
+## Aseguradoras partners
+
+RedAgrupa trabaja con las 9 principales aseguradoras de Chile:
+1. **BCI Seguros** — Parte del grupo BCI, una de las mayores instituciones financieras de Chile
+2. **BICE Vida** — Especialista en seguros de vida y salud para pymes. Producto estrella: Mi Pyme Segura
+3. **Chilena Consolidada** — Subsidiaria de Zurich Insurance Group, presencia global
+4. **Consorcio** — Grupo asegurador chileno con amplia trayectoria en seguros colectivos
+5. **Help Seguros** — Enfocada en seguros de salud complementarios accesibles
+6. **MetLife** — Aseguradora global con fuerte presencia en seguros grupales de salud
+7. **Bupa** — Grupo internacional de salud y seguros, líder en seguros complementarios
+8. **Sura** — Grupo asegurador latinoamericano con amplia cobertura regional
+9. **Vida Security** — Especializada en seguros de vida y salud en Chile
+
+## Datos de la empresa
+
+- Razón social: RedAgrupa
+- Fundación: 2014
+- Dirección: Los Militares 5620, oficina 1011, Las Condes, Santiago, Chile
+- Teléfono: +56 (22) 813 2245
+- Email: reembolsos@redagrupa.cl
+- Web: https://www.redagrupa.cl
+- Horario: Lunes a Viernes, 9:00 a 18:00
+
+## Redes sociales
+
+- Facebook: https://www.facebook.com/RedAgrupa/
+- Instagram: https://www.instagram.com/redagrupa/
+- LinkedIn: https://www.linkedin.com/company/redagrupa
+
+## Testimonios de clientes
+
+- **Marcela Lorenzo** (Partner CEO, JSTL): "Llevábamos años buscando un seguro que nos permitiese, como empresa pequeña, tener cobertura adicional. Hemos encontrado asesoría confiable, con profesionales atentos y capacitados."
+- **Manuel Pamplona** (Gerente Regional, EngMe): "Contratamos RedAgrupa como beneficio extra para nuestros trabajadores, pero al poco tiempo nos dimos cuenta de que es un gran aliado."
+- **Roberto Allaro** (Gerente General, SCLatam): "Antes no había sido posible conseguir seguro complementario para mis colaboradores, ya que como compañía de pocos empleados no cumplíamos con los requisitos. Gracias a RedAgrupa lo conseguimos."

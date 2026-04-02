@@ -2,6 +2,8 @@
 
 > Corredora de seguros chilena especializada en la gestión de seguros complementarios de salud para pequeñas y medianas empresas. Más de 10 años de experiencia, 300+ empresas clientes y 9.000+ familias protegidas.
 
+> Versión extendida con contenido completo: [llms-full.txt](https://www.redagrupa.cl/llms-full.txt)
+
 ## Páginas principales
 
 - [Inicio](https://www.redagrupa.cl): Landing page con propuesta de valor, testimonios y formulario de contacto
