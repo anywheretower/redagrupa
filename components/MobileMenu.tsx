@@ -101,14 +101,14 @@ export default function MobileMenu() {
               <div className="pl-4 space-y-3">
                 <Link
                   href="/seguro-complementario-bice-pyme"
-                  className="block text-white/80 text-base"
+                  className="block text-white/90 text-base"
                   onClick={() => setIsOpen(false)}
                 >
                   Seguro BICE Pyme
                 </Link>
                 <Link
                   href="/seguro-complementario-bice-personas"
-                  className="block text-white/80 text-base"
+                  className="block text-white/90 text-base"
                   onClick={() => setIsOpen(false)}
                 >
                   Seguro BICE Personas

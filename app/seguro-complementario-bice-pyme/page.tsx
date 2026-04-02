@@ -33,6 +33,8 @@ const jsonLd = [
           "@type": "Product",
           name: "Pyme Estándar",
           description: "Seguro de Salud + Seguro de Vida. 50% en atención ambulatoria, 50% en atención hospitalaria, 300 UF tope anual en salud, 500 UF en seguro de vida.",
+          image: "https://www.redagrupa.cl/images/logo-bice-vida.avif",
+          brand: { "@type": "Brand", name: "BICE Vida" },
           offers: {
             "@type": "Offer",
             price: "20647",
@@ -50,6 +52,8 @@ const jsonLd = [
           "@type": "Product",
           name: "Pyme Premium",
           description: "Seguro de Salud + Seguro de Vida. 70% en atención ambulatoria, 70% en atención hospitalaria, 300 UF tope anual en salud, 500 UF en seguro de vida.",
+          image: "https://www.redagrupa.cl/images/logo-bice-vida.avif",
+          brand: { "@type": "Brand", name: "BICE Vida" },
           offers: {
             "@type": "Offer",
             price: "26658",
@@ -67,6 +71,8 @@ const jsonLd = [
           "@type": "Product",
           name: "Pyme Elite",
           description: "Seguro de Salud + Seguro de Vida. 80% en atención ambulatoria, 80% en atención hospitalaria, UF 500 tope anual en salud, UF 500 en seguro de vida. Incluye asistencia mascota Pawer.",
+          image: "https://www.redagrupa.cl/images/logo-bice-vida.avif",
+          brand: { "@type": "Brand", name: "BICE Vida" },
           offers: {
             "@type": "Offer",
             price: "41651",
@@ -84,6 +90,8 @@ const jsonLd = [
           "@type": "Product",
           name: "Pyme Elite Plus",
           description: "Seguro de Salud + Seguro de Vida. 80% en atención ambulatoria, 80% en atención hospitalaria, UF 500 tope anual en salud, UF 1.000 en seguro de vida. Incluye asistencia mascota Pawer.",
+          image: "https://www.redagrupa.cl/images/logo-bice-vida.avif",
+          brand: { "@type": "Brand", name: "BICE Vida" },
           offers: {
             "@type": "Offer",
             price: "48401",

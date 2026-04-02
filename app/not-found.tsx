@@ -3,6 +3,7 @@ import Image from "next/image"
 
 export const metadata = {
   title: "Página no encontrada",
+  robots: { index: false, follow: false },
 }
 
 export default function NotFound() {

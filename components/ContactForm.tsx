@@ -46,6 +46,17 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
 
       reset()
       setShowSuccess(true)
+
+      // C8: Disparar evento para GA4 (atribución de conversiones)
+      if (typeof window !== "undefined" && window.dataLayer) {
+        window.dataLayer.push({
+          event: "formulario_contacto_enviado",
+          pagina,
+        })
+      }
+
+      // C9: Marcar envío para que ExitIntentPopup no aparezca post-conversión
+      sessionStorage.setItem("redagrupa_form_submitted", "true")
     } catch {
       toast.error("Error al enviar el mensaje", {
         description: "Por favor intenta nuevamente.",

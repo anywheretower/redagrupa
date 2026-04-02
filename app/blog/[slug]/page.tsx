@@ -15,12 +15,15 @@ export async function generateMetadata({
   const post = getPostBySlug(slug)
   if (!post) return { title: "Art\u00edculo no encontrado" }
 
+  const url = `https://www.redagrupa.cl/blog/${slug}`
   return {
     title: post.title,
     description: post.excerpt,
+    alternates: { canonical: url },
     openGraph: {
       title: post.title,
       description: post.excerpt,
+      url,
       images: [{ url: post.heroImage }],
       type: "article",
       publishedTime: post.date,

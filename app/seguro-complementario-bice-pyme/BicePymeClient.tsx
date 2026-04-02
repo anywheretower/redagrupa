@@ -395,6 +395,29 @@ export default function BicePymeClient() {
                 ))}
               </RevealOnScroll>
 
+              {/* Tabla comparativa para AI crawlers y screen readers */}
+              <table className="sr-only" aria-label="Comparación de planes BICE Vida para pymes">
+                <caption>Planes de Seguro Complementario BICE Vida para Pymes — Precios mensuales por trabajador con IVA incluido</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Plan</th>
+                    <th scope="col">Precio mensual (CLP)</th>
+                    <th scope="col">Precio mensual (UF)</th>
+                    <th scope="col">Cobertura ambulatoria</th>
+                    <th scope="col">Cobertura hospitalaria</th>
+                    <th scope="col">Tope anual salud</th>
+                    <th scope="col">Seguro de vida</th>
+                    <th scope="col">Asistencia mascota</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Pyme Estándar</td><td>$20.647</td><td>UF 0,5200</td><td>50%</td><td>50%</td><td>300 UF</td><td>500 UF</td><td>No</td></tr>
+                  <tr><td>Pyme Premium</td><td>$26.658</td><td>UF 0,6714</td><td>70%</td><td>70%</td><td>300 UF</td><td>500 UF</td><td>No</td></tr>
+                  <tr><td>Pyme Elite</td><td>$41.651</td><td>UF 1,0490</td><td>80%</td><td>80%</td><td>500 UF</td><td>500 UF</td><td>Sí (Pawer)</td></tr>
+                  <tr><td>Pyme Elite Plus</td><td>$48.401</td><td>UF 1,1290</td><td>80%</td><td>80%</td><td>500 UF</td><td>1.000 UF</td><td>Sí (Pawer)</td></tr>
+                </tbody>
+              </table>
+
               <p className="text-sm text-gray-500 text-center mt-8">
                 Precios de planes con IVA incluido. Valor UF: $39.705,63 al 13/02/2026.
               </p>

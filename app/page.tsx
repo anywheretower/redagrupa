@@ -80,7 +80,6 @@ export default function HomePage() {
   const latestPosts = getAllPosts().slice(0, 3)
   return (
     <>
-      <link rel="preload" as="image" href="/images/hero-redagrupa.webp" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsJsonLd) }}
