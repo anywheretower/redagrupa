@@ -238,11 +238,11 @@ export default function HomePage() {
             <div className="grid lg:grid-cols-2 gap-12 items-end lg:items-center min-h-[calc(100vh-6rem)]">
               <div className="space-y-6 md:space-y-8 pb-10 lg:py-12 mobile-text-shadow">
                 <h1 className="animate-fade-in-up text-3xl sm:text-2xl md:text-[2rem] lg:text-[2.75rem] font-normal leading-[0.95] text-balance tracking-tight">
-                  ¿Listo para Simplificar tus Seguros Complementarios?
+                  Seguros Complementarios para tu Pyme desde UF&nbsp;0,52/mes
                 </h1>
                 <p className="animate-fade-in-up-d1 text-base sm:text-base lg:text-lg text-white/90 leading-[1.3] max-w-2xl">
-                  RedAgrupa gestiona tus seguros complementarios de salud para que tu pyme y tu equipo estén protegidos,
-                  sin trámites eternos ni lenguaje técnico imposible.
+                  Comparamos 9 aseguradoras y gestionamos todo por ti: cotización, contratación y reembolsos.
+                  Sin trámites eternos ni lenguaje técnico. Tu equipo protegido en 10 días.
                 </p>
                 <div className="animate-fade-in-up-d2 flex flex-col sm:flex-row gap-4 pt-2">
                   <ScrollButton
@@ -318,6 +318,40 @@ export default function HomePage() {
                     className="h-10 w-auto object-contain"
                   />
                 ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Proceso 3 Pasos */}
+        <section className="py-12 md:py-16 bg-white border-b border-gray-200">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-center text-xs sm:text-sm uppercase tracking-widest text-[#666666] mb-8">
+                Así de simple es proteger a tu equipo
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+                <div className="space-y-3">
+                  <div className="w-14 h-14 rounded-full bg-[#cc0033] flex items-center justify-center mx-auto">
+                    <span className="text-xl font-bold text-white">1</span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-[#333333]">Cotiza gratis</h3>
+                  <p className="text-sm text-[#666666] leading-snug">Cuéntanos sobre tu empresa y te contactamos en menos de 24 hrs.</p>
+                </div>
+                <div className="space-y-3">
+                  <div className="w-14 h-14 rounded-full bg-[#cc0033] flex items-center justify-center mx-auto">
+                    <span className="text-xl font-bold text-white">2</span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-[#333333]">Comparamos 9 aseguradoras</h3>
+                  <p className="text-sm text-[#666666] leading-snug">Analizamos planes y negociamos las mejores condiciones para tu pyme.</p>
+                </div>
+                <div className="space-y-3">
+                  <div className="w-14 h-14 rounded-full bg-[#cc0033] flex items-center justify-center mx-auto">
+                    <span className="text-xl font-bold text-white">3</span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-[#333333]">Protegido en 10 días</h3>
+                  <p className="text-sm text-[#666666] leading-snug">Gestionamos toda la contratación. Tu equipo queda cubierto sin complicaciones.</p>
+                </div>
               </div>
             </div>
           </div>

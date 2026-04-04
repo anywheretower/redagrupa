@@ -1,4 +1,5 @@
 ![Hero image](./images/aguinaldo.jpg)
+<!-- description: Todo sobre el aguinaldo en Chile: quién tiene derecho, montos habituales, diferencias con gratificación y cómo calcularlo en tu pyme. Guía actualizada 2026. -->
 
 # El Aguinaldo y sus diferentes contextos culturales
 

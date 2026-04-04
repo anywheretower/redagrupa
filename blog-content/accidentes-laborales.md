@@ -1,4 +1,5 @@
 ![Hero image](./images/accidentes-laborales.jpg)
+<!-- description: Accidentes laborales en Chile: obligaciones del empleador, procedimiento de denuncia, plazos legales y cómo proteger a tu equipo con seguros complementarios. -->
 
 # Accidentes laborales: Guía completa para empleadores
 

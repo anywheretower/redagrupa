@@ -1,4 +1,5 @@
 ![Hero image](./images/carta-oferta-laboral.jpg)
+<!-- description: Cómo redactar una carta oferta laboral en Chile: elementos obligatorios, modelo descargable y errores que debes evitar al contratar personal en tu pyme. -->
 
 # Carta oferta laboral: Formalizando la incorporación de personal
 

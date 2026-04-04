@@ -1,4 +1,5 @@
 ![Hero image](./images/multas-direccion-trabajo.jpg)
+<!-- description: Conoce las multas de la Dirección del Trabajo en Chile 2026: montos, causas frecuentes, cómo reclamar y plazos legales. Guía práctica para empleadores pyme. -->
 
 # Multas de la Dirección del Trabajo
 

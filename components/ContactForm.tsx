@@ -181,8 +181,8 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
           )}
         </button>
 
-        <p className="text-xs text-center text-gray-500 mt-1">
-          Sin costo, sin compromiso. Respuesta en menos de 24 horas.
+        <p className="text-xs text-center text-[#cc0033] font-medium mt-1">
+          Recibirás tu cotización personalizada en menos de 24 hrs
         </p>
         <p className="text-xs text-center text-gray-600 flex items-center justify-center gap-1">
           <Lock className="w-3 h-3" />

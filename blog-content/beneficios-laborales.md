@@ -1,4 +1,5 @@
 ![Hero image](./images/beneficios-laborales.jpg)
+<!-- description: Guía completa de beneficios laborales en Chile: tipos, obligaciones legales y cómo implementar seguros complementarios y otros beneficios en tu pyme. -->
 
 # ¿Qué son los beneficios laborales?
 

@@ -18,11 +18,11 @@ export async function generateMetadata({
   const url = `https://www.redagrupa.cl/blog/${slug}`
   return {
     title: post.title,
-    description: post.excerpt,
+    description: post.description,
     alternates: { canonical: url },
     openGraph: {
       title: post.title,
-      description: post.excerpt,
+      description: post.description,
       url,
       images: [{ url: post.heroImage }],
       type: "article",
@@ -46,7 +46,7 @@ export default async function BlogPostPage({
     "@context": "https://schema.org",
     "@type": "Article",
     headline: post.title,
-    description: post.excerpt,
+    description: post.description,
     image: `https://www.redagrupa.cl${post.heroImage}`,
     datePublished: post.date,
     dateModified: post.date,

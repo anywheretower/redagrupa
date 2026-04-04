@@ -419,7 +419,7 @@ export default function BicePymeClient() {
               </table>
 
               <p className="text-sm text-gray-500 text-center mt-8">
-                Precios de planes con IVA incluido. Valor UF: $39.705,63 al <time dateTime="2026-02-13">13/02/2026</time>.
+                Precios de planes con IVA incluido. Valores referenciales en UF. El precio en pesos puede variar según el valor de la UF vigente.
               </p>
             </div>
           </div>
