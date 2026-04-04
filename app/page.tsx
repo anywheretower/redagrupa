@@ -149,6 +149,9 @@ export default function HomePage() {
               <Link href="/blog" className="text-white hover:text-white/80 transition-colors font-medium text-sm">
                 Conocimiento Pyme
               </Link>
+              <Link href="/formularios" className="text-white hover:text-white/80 transition-colors font-medium text-sm">
+                Formularios
+              </Link>
             </nav>
             <div className="hidden lg:flex items-center gap-3">
               <ScrollButton

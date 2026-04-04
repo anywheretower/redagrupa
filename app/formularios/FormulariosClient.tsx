@@ -58,6 +58,9 @@ export default function FormulariosClient() {
             <Link href="/blog" className="text-white font-medium text-sm">
               Conocimiento Pyme
             </Link>
+            <Link href="/formularios" className="text-white font-medium text-sm">
+              Formularios
+            </Link>
           </nav>
           <div className="hidden lg:flex items-center gap-3">
             <Button

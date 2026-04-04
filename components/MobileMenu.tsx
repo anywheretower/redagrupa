@@ -122,6 +122,13 @@ export default function MobileMenu() {
             >
               Conocimiento Pyme
             </Link>
+            <Link
+              href="/formularios"
+              className="text-white text-lg py-3 border-b border-white/20"
+              onClick={() => setIsOpen(false)}
+            >
+              Formularios
+            </Link>
             <ScrollButton
               targetId="formulario-contacto"
               variant="outline"

@@ -61,6 +61,9 @@ export default function PoliticasClient() {
             <Link href="/blog" className="text-white font-medium text-sm">
               Conocimiento Pyme
             </Link>
+            <Link href="/formularios" className="text-white font-medium text-sm">
+              Formularios
+            </Link>
           </nav>
           <div className="hidden lg:flex items-center gap-3">
             <Button variant="outline" className="bg-transparent border-white text-white hover:bg-white/10 w-[180px]" asChild>

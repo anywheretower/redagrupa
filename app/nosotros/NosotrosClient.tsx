@@ -62,6 +62,9 @@ export default function NosotrosClient() {
             <Link href="/blog" className="text-white font-medium text-sm">
               Conocimiento Pyme
             </Link>
+            <Link href="/formularios" className="text-white font-medium text-sm">
+              Formularios
+            </Link>
           </nav>
           {/* Desktop Buttons - Hidden on mobile */}
           <div className="hidden lg:flex items-center gap-3">
