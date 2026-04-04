@@ -3,7 +3,7 @@ import FormulariosClient from "./FormulariosClient"
 export const metadata = {
   title: "Formularios de Reembolso e Incorporación — RedAgrupa",
   description:
-    "Descarga los formularios de reembolso e incorporación de las 9 aseguradoras partner de RedAgrupa: Bupa, BICE Vida, Sura, Consorcio, MetLife, BCI, Vida Security, Help y Chilena Consolidada.",
+    "Descarga los formularios de reembolso e incorporación de las principales aseguradoras partner de RedAgrupa: Bupa, BICE Vida, Sura, Consorcio, MetLife, BCI, Vida Security, Help y Chilena Consolidada.",
   alternates: {
     canonical: "https://www.redagrupa.cl/formularios",
   },

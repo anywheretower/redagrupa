@@ -175,7 +175,7 @@ export default function HomeContent({ latestPosts = [] }: { latestPosts?: Latest
                 Tu área de seguros externalizada: diseño, gestión y reembolsos
               </h2>
               <p className="text-[#666666] text-base sm:text-lg mt-4 leading-snug">
-                Nos integramos como el área de seguros complementarios de tu empresa: comparamos 9 aseguradoras,
+                Nos integramos como el área de seguros complementarios de tu empresa: comparamos las principales aseguradoras,
                 diseñamos el plan y gestionamos incorporaciones, reembolsos y consultas de tu equipo.
               </p>
               <div className="mt-6">

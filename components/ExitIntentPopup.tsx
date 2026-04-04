@@ -165,7 +165,7 @@ export default function ExitIntentPopup() {
             ¿Te vas sin cotizar?
           </h2>
           <p className="mt-2 text-sm text-[#666666] leading-relaxed">
-            Recibe una propuesta personalizada sin costo. Comparamos planes de <strong>9 aseguradoras</strong> para encontrar el mejor para tu equipo.
+            Recibe una propuesta personalizada sin costo. Comparamos planes de <strong>las principales aseguradoras</strong> para encontrar el mejor para tu equipo.
           </p>
 
           <div className="mt-4 rounded-xl bg-gray-50 border border-gray-200 px-4 py-3">

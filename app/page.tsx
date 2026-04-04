@@ -96,9 +96,9 @@ export default function HomePage() {
             { "@type": "Question", name: "¿Cuánto demora el proceso de contratación?", acceptedAnswer: { "@type": "Answer", text: "El proceso es rápido: en pocos días hábiles tu equipo puede estar cubierto. Nosotros nos encargamos de toda la gestión: cotización, comparación de planes, recopilación de documentos y coordinación con la aseguradora." }},
             { "@type": "Question", name: "¿Tiene algún costo la asesoría de RedAgrupa?", acceptedAnswer: { "@type": "Answer", text: "No, nuestra asesoría es completamente gratuita para tu empresa. Somos corredores de seguros, lo que significa que las aseguradoras nos compensan directamente. Tú pagas exactamente lo mismo que pagarías contratando directo." }},
             { "@type": "Question", name: "¿Cómo se gestionan los reembolsos?", acceptedAnswer: { "@type": "Answer", text: "RedAgrupa gestiona los reembolsos por ti. Tus colaboradores envían sus boletas y nosotros nos encargamos del trámite completo con la aseguradora, reduciendo tiempos de espera y papeleo." }},
-            { "@type": "Question", name: "¿Cómo elijo el mejor seguro complementario para mi empresa?", acceptedAnswer: { "@type": "Answer", text: "Depende de tres factores: presupuesto por trabajador, nivel de cobertura deseado y tamaño de la empresa. RedAgrupa compara planes de 9 aseguradoras y recomienda la mejor opción. El plan más vendido es Pyme Premium (70% cobertura, $26.750/mes por trabajador)." }},
+            { "@type": "Question", name: "¿Cómo elijo el mejor seguro complementario para mi empresa?", acceptedAnswer: { "@type": "Answer", text: "Depende de tres factores: presupuesto por trabajador, nivel de cobertura deseado y tamaño de la empresa. RedAgrupa compara planes de las principales aseguradoras y recomienda la mejor opción. El plan más vendido es Pyme Premium (70% cobertura, $26.750/mes por trabajador)." }},
             { "@type": "Question", name: "¿Cuánto cuesta un seguro complementario para mi empresa?", acceptedAnswer: { "@type": "Answer", text: "Desde $20.718 CLP mensuales por trabajador (Plan Pyme Estándar, 50% cobertura). El costo depende del plan elegido, la edad promedio del grupo y las coberturas opcionales. RedAgrupa cotiza sin costo y sin compromiso." }},
-            { "@type": "Question", name: "¿Qué diferencia hay entre contratar directo con la aseguradora y usar un corredor?", acceptedAnswer: { "@type": "Answer", text: "Un corredor como RedAgrupa compara planes de 9 aseguradoras, negocia condiciones, gestiona toda la administración y trámites de reembolso, y brinda asesoría continua sin costo adicional. Contratar directo limita las opciones a una sola aseguradora y el precio es el mismo." }},
+            { "@type": "Question", name: "¿Qué diferencia hay entre contratar directo con la aseguradora y usar un corredor?", acceptedAnswer: { "@type": "Answer", text: "Un corredor como RedAgrupa compara planes de las principales aseguradoras, negocia condiciones, gestiona toda la administración y trámites de reembolso, y brinda asesoría continua sin costo adicional. Contratar directo limita las opciones a una sola aseguradora y el precio es el mismo." }},
           ]
         }) }}
       />
@@ -244,7 +244,7 @@ export default function HomePage() {
                   Seguros Complementarios para tu Pyme desde UF&nbsp;0,52/mes
                 </h1>
                 <p className="animate-fade-in-up-d1 text-base sm:text-base lg:text-lg text-white/90 leading-[1.3] max-w-2xl">
-                  Comparamos 9 aseguradoras y gestionamos todo por ti: cotización, contratación y reembolsos.
+                  Comparamos las principales aseguradoras y gestionamos todo por ti: cotización, contratación y reembolsos.
                   Sin trámites eternos ni lenguaje técnico. Tu equipo protegido en días, no meses.
                 </p>
                 <div className="animate-fade-in-up-d2 flex flex-col sm:flex-row gap-4 pt-2">
@@ -347,7 +347,7 @@ export default function HomePage() {
                   <div className="w-14 h-14 rounded-full bg-[#cc0033] flex items-center justify-center mx-auto">
                     <span className="text-xl font-bold text-white">2</span>
                   </div>
-                  <h3 className="text-lg font-semibold text-[#333333]">Comparamos 9 aseguradoras</h3>
+                  <h3 className="text-lg font-semibold text-[#333333]">Comparamos las principales aseguradoras</h3>
                   <p className="text-sm text-[#666666] leading-snug">Analizamos planes y negociamos las mejores condiciones para tu pyme.</p>
                 </div>
                 <div className="space-y-3">

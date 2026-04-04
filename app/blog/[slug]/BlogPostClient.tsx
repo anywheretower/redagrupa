@@ -306,7 +306,7 @@ export default function BlogPostClient({
                   ¿Tu pyme ya tiene seguro complementario?
                 </h3>
                 <p className="text-white/90 text-sm leading-relaxed mb-5">
-                  Comparamos planes de 9 aseguradoras para encontrar la mejor cobertura al mejor precio. Asesoría gratuita, sin compromiso.
+                  Comparamos planes de las principales aseguradoras para encontrar la mejor cobertura al mejor precio. Asesoría gratuita, sin compromiso.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link

@@ -328,7 +328,7 @@ export default function BeneficiosClient() {
                   <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
                   <p className="text-base text-gray-700 leading-[1.1]">
                     <strong className="text-gray-900">Facilitar el acceso a prestaciones de salud.</strong> RedAgrupa
-                    trabaja con 9 aseguradoras (BCI Seguros, BICE Vida, Consorcio, MetLife, Bupa, entre otras) y
+                    trabaja con las principales aseguradoras (BCI Seguros, BICE Vida, Consorcio, MetLife, Bupa, entre otras) y
                     coordina operativos en terreno para que los colaboradores accedan sin trámites complejos.
                   </p>
                 </div>
