@@ -50,7 +50,7 @@ La decisión sobre qué previsión de salud tomar dependerá de diversos factore
 
 - **Preferencias personales:** Algunas personas prefieren la atención del sistema privado por sus menores tiempos de espera y mayor acceso a especialistas. Otros prefieren los bajos costos de Fonasa.
 
-Sumado a lo anterior, es importante considerar que la Ley Corta de isapres establece la creación de la Modalidad de Cobertura Complementaria (MCC) de Fonasa. Esta nueva opción permitirá añadir a la cobertura pública un seguro complementario de salud del sector privado.
+Sumado a lo anterior, es importante considerar que la Ley Corta de isapres establece la creación de la Modalidad de Cobertura Complementaria (MCC) de Fonasa. Esta nueva opción permitirá añadir a la cobertura pública un [seguro complementario de salud](/seguros-salud) del sector privado.
 
 La MCC permite a los usuarios del sistema público de salud acceder a una red de prestadores privados de seguros de salud en Chile, con copagos mínimos garantizados, a través de Fonasa. Todo mediante el pago de una prima comunitaria adicional al 7% por beneficiario.
 

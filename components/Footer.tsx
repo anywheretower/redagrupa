@@ -42,6 +42,11 @@ export default function Footer() {
                   Beneficios RedAgrupa
                 </Link>
               </li>
+              <li>
+                <Link href="/formularios" className="text-sm hover:underline text-white/90">
+                  Formularios Reembolso
+                </Link>
+              </li>
             </ul>
           </div>
 

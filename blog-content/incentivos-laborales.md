@@ -24,7 +24,7 @@ Los beneficios incluyen:
 
 **Incentivos no monetarios:** Abarcan reconocimientos públicos, premios, desarrollo profesional, flexibilidad horaria, días libres adicionales, capacitación u oportunidades de ascenso. Estos refuerzan la satisfacción personal y profesional.
 
-**Incentivos basados en el bienestar:** Enfoques centrados en salud y bienestar, incluyendo seguros dentales, actividades deportivas, asesoramiento y beneficios médicos que mejoran la salud y reducen estrés.
+**Incentivos basados en el bienestar:** Enfoques centrados en salud y bienestar, incluyendo seguros dentales, actividades deportivas, asesoramiento y [beneficios corporativos](/beneficios-redagrupa) que mejoran la salud y reducen estrés.
 
 ## Cómo Desarrollar un Plan de Incentivos Laborales para Impulsar la Motivación y el Rendimiento
 

@@ -48,6 +48,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/formularios`,
+      lastModified: new Date("2026-04-04"),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
       url: `${baseUrl}/politicas-de-privacidad`,
       lastModified: new Date("2026-02-11"),
       changeFrequency: "yearly",

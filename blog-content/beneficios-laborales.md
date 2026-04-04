@@ -13,7 +13,7 @@ Para los empleados, los beneficios laborales proporcionan seguridad y estabilida
 
 Los beneficios laborales son un pilar fundamental para mejorar la calidad de vida de los trabajadores en el entorno laboral. Estos beneficios van más allá del salario y ofrecen una serie de ventajas que contribuyen al bienestar y satisfacción del empleado.
 
-En primer lugar, los beneficios laborales proporcionan seguridad y estabilidad al trabajador. Acceder a un seguro complementario de salud, por ejemplo, garantiza atención médica y protección para el empleado y su familia, brindando tranquilidad en caso de enfermedad o accidente. Asimismo, el seguro de vida ofrece protección financiera en situaciones imprevistas.
+En primer lugar, los beneficios laborales proporcionan seguridad y estabilidad al trabajador. Acceder a un [seguro complementario de salud](/seguros-salud), por ejemplo, garantiza atención médica y protección para el empleado y su familia, brindando tranquilidad en caso de enfermedad o accidente. Asimismo, el seguro de vida ofrece protección financiera en situaciones imprevistas.
 
 Otro beneficio valorado es el desarrollo profesional y personal. Las oportunidades de capacitación y desarrollo ofrecidas por las empresas permiten a los empleados adquirir nuevas habilidades y conocimientos, lo que aumenta su empleabilidad y crecimiento en la carrera profesional.
 

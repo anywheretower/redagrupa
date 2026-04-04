@@ -14,7 +14,7 @@ El índice de rotación de personal representa la proporción de empleados que i
 
 Una rotación elevada impacta negativamente a las organizaciones. La pérdida continua de empleados valiosos interrumpe la continuidad operativa y complica la cobertura de vacantes, afectando la productividad y los gastos relacionados con el reclutamiento.
 
-La gestión efectiva de la rotación requiere implementar estrategias de retención para el personal talentoso, mejorar la cultura laboral, proporcionar oportunidades de avance y asegurar salarios competitivos. Comparar las tasas de rotación específicas de la industria ofrece una perspectiva más amplia.
+La gestión efectiva de la rotación requiere implementar estrategias de retención para el personal talentoso, mejorar la cultura laboral, proporcionar oportunidades de avance y asegurar salarios competitivos. Ofrecer [beneficios corporativos](/beneficios-redagrupa) como seguros complementarios es una estrategia clave de retención. Comparar las tasas de rotación específicas de la industria ofrece una perspectiva más amplia.
 
 ## Fórmula rotación de personal: Medición efectiva en tu empresa
 

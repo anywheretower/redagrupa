@@ -26,4 +26,4 @@ El plazo para presentar reclamos fue el 31 de mayo de 2023. Los reclamos pueden 
 
 ## Respuesta del Gobierno
 
-El gobierno estima que las opciones de seguro complementario de salud a través de Fonasa pueden ayudar a las personas a abordar las brechas de cobertura, sirviendo potencialmente como beneficios de incentivo para empleados de las empresas.
+El gobierno estima que las opciones de [seguro complementario de salud](/seguros-salud) a través de Fonasa pueden ayudar a las personas a abordar las brechas de cobertura, sirviendo potencialmente como beneficios de incentivo para empleados de las empresas.

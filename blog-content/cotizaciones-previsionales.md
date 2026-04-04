@@ -8,7 +8,7 @@ En esta era de longevidad poblacional, la edad de jubilación y las políticas g
 
 En medio de esta evolución, se plantean críticas constructivas. Dudas sobre la equidad y suficiencia de los fondos resuenan en las discusiones. En respuesta, la clave radica en una sólida planificación financiera.
 
-Conscientes de la complejidad, es crucial buscar asesoramiento profesional. Expertos pueden guiar en la toma de decisiones informadas para maximizar los beneficios de las cotizaciones previsionales. Además, no subestimemos la relevancia de los seguros complementarios.
+Conscientes de la complejidad, es crucial buscar asesoramiento profesional. Expertos pueden guiar en la toma de decisiones informadas para maximizar los beneficios de las cotizaciones previsionales. Además, no subestimemos la relevancia de los [seguros complementarios](/seguros-salud).
 
 Estos seguros adicionales, como cobertura por invalidez o rentas vitalicias, pueden ser una pieza clave para una jubilación tranquila. Personalizar estas opciones y evaluarlas cuidadosamente puede marcar la diferencia en la seguridad financiera a largo plazo.
 

@@ -18,7 +18,7 @@ Fonasa es un sistema de salud público financiado por el Estado y administrado p
 
 Por otro lado, las Isapres son instituciones del sector privado de salud que ofrecen planes de salud a sus afiliados. Las pólizas varían según la Isapre y pueden incluir beneficios adicionales, como cobertura dental, maternidad y atención médica en el extranjero. Los trabajadores que ganan por encima de un cierto monto mensual pueden elegir entre Fonasa y una Isapre. La Isapre se financia a través de las cotizaciones de sus afiliados y el nivel de cobertura depende del plan de salud elegido.
 
-Fonasa e Isapre son los sistemas de salud más populares en Chile, pero también se pueden obtener pólizas de seguro de salud complementario para mejorar la cobertura médica. Estas pólizas típicamente cubren servicios no incluidos en los planes básicos de Fonasa o Isapre, como odontología, tratamientos estéticos, cirugías cosméticas y condiciones preexistentes.
+Fonasa e Isapre son los sistemas de salud más populares en Chile, pero también se pueden obtener pólizas de [seguro de salud complementario](/seguros-salud) para mejorar la cobertura médica. Estas pólizas típicamente cubren servicios no incluidos en los planes básicos de Fonasa o Isapre, como odontología, tratamientos estéticos, cirugías cosméticas y condiciones preexistentes.
 
 ## Tabla Comparativa de Características
 
