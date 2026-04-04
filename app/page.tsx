@@ -251,13 +251,15 @@ export default function HomePage() {
                   >
                     Solicitar Asesoría Gratis
                   </ScrollButton>
-                  <ScrollButton
-                    targetId="seccion-aseguradoras"
+                  <Button
                     variant="outline"
                     className="border-white text-white hover:bg-white/10 bg-transparent px-6 sm:px-8 py-3 text-sm sm:text-base font-normal w-full sm:w-64"
+                    asChild
                   >
-                    Conoce las Aseguradoras
-                  </ScrollButton>
+                    <Link href="/seguros-salud">
+                      Ver Coberturas y Planes
+                    </Link>
+                  </Button>
                 </div>
               </div>
               <div className="relative hidden lg:block lg:h-[700px]" />

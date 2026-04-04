@@ -331,31 +331,31 @@ export default function SegurosSaludClient() {
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
                   <p className="text-base text-gray-700 leading-[1.1]">
-                    Reducir el impacto financiero de gastos médicos en sus colaboradores
+                    <strong>Tus trabajadores van al doctor sin preocuparse por el costo:</strong> el seguro cubre el copago que Fonasa o Isapre no cubren, reduciendo gastos de bolsillo hasta un 80%.
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
                   <p className="text-base text-gray-700 leading-[1.1]">
-                    Mejorar el bienestar y la percepción del beneficio laboral
+                    <strong>Tu equipo se siente valorado y se queda:</strong> las empresas con seguro complementario reducen la rotación hasta un 25%, porque el beneficio impacta directo en la calidad de vida.
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
                   <p className="text-base text-gray-700 leading-[1.1]">
-                    Aumentar la fidelización y retención de trabajadores
+                    <strong>Atraes talento sin competir solo por sueldo:</strong> el seguro complementario es el beneficio más valorado en Chile después del sueldo. Diferencia tu oferta laboral.
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
                   <p className="text-base text-gray-700 leading-[1.1]">
-                    Ofrecer un beneficio competitivo frente al mercado laboral
+                    <strong>Una urgencia no se convierte en deuda familiar:</strong> hospitalización, cirugías y eventos catastróficos quedan cubiertos. Tu equipo está protegido ante lo inesperado.
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
                   <p className="text-base text-gray-700 leading-[1.1]">
-                    Ajustar coberturas y capitales a la realidad de la empresa
+                    <strong>Planes adaptados a tu presupuesto real:</strong> desde UF 0,52/mes por trabajador. Eliges coberturas, topes y aseguradora según lo que tu pyme necesita y puede pagar.
                   </p>
                 </div>
               </RevealOnScroll>

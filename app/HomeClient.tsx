@@ -96,7 +96,7 @@ function BlogCarousel({ posts }: { posts: LatestPost[] }) {
             <div className="relative aspect-[16/9] overflow-hidden">
               <Image
                 src={post.heroImage}
-                alt={post.title}
+                alt={`Ilustración del artículo: ${post.title}`}
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-300"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -140,10 +140,10 @@ export default function HomeContent({ latestPosts = [] }: { latestPosts?: Latest
         <div className="container mx-auto px-6 relative z-10 flex-1 flex flex-col lg:justify-between">
           <div className="text-center max-w-4xl mx-auto pt-0 lg:pt-8 px-4">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal leading-[1.1] text-white mb-2">
-              Porque la vida no espera
+              3 problemas que enfrentan las pymes con sus seguros
             </h2>
-            <p className="hidden lg:block text-base sm:text-lg lg:text-xl text-white/90 leading-[1.3] mb-1 whitespace-nowrap">
-              El mejor beneficio es el que se usa. El mejor partner, el que te ayuda a que eso pase
+            <p className="hidden lg:block text-base sm:text-lg lg:text-xl text-white/90 leading-[1.3] mb-1">
+              El 70% de los colaboradores no entiende su cobertura. RedAgrupa resuelve eso por ti.
             </p>
             <h3 className="text-xs sm:text-sm uppercase tracking-wider text-white/90 mt-2 lg:mt-6">
               Hoy mismo te ayudamos con:
@@ -172,11 +172,11 @@ export default function HomeContent({ latestPosts = [] }: { latestPosts?: Latest
                 PORQUE ESTAR CUBIERTO NO BASTA… HAY QUE SENTIRSE PROTEGIDO
               </p>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-[1.1] text-[#cc0033]">
-                Simplificar no es quitar cobertura. Es quitar obstáculos.
+                Tu área de seguros externalizada: diseño, gestión y reembolsos
               </h2>
               <p className="text-[#666666] text-base sm:text-lg mt-4 leading-snug">
-                Nos integramos como el área de seguros complementarios de salud de tu empresa: diseñamos el plan,
-                acompañamos a tu equipo y nos hacemos cargo de la relación con las aseguradoras de principio a fin.
+                Nos integramos como el área de seguros complementarios de tu empresa: comparamos 9 aseguradoras,
+                diseñamos el plan y gestionamos incorporaciones, reembolsos y consultas de tu equipo.
               </p>
               <div className="mt-6">
                 <ScrollButton
@@ -258,7 +258,7 @@ export default function HomeContent({ latestPosts = [] }: { latestPosts?: Latest
           <div className="text-center max-w-3xl mx-auto pt-4 lg:pt-20">
             <p className="text-xs uppercase tracking-widest text-white mb-6">¿POR QUÉ REDAGRUPA?</p>
             <h2 className="text-[1.5rem] sm:text-[2rem] lg:text-[2.5rem] font-normal mb-8 leading-[0.9] text-white px-4">
-              Cuando delegas bien, tu equipo gana confianza… y tú recuperas foco.
+              +300 empresas y +9.000 familias ya confían en RedAgrupa
             </h2>
             <ScrollButton
               targetId="formulario-contacto"

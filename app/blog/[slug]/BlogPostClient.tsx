@@ -279,7 +279,7 @@ export default function BlogPostClient({
               <div className="relative aspect-[16/9] rounded-xl overflow-hidden mb-10">
                 <Image
                   src={post.heroImage}
-                  alt={post.title}
+                  alt={`Ilustración del artículo: ${post.title}`}
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 768px"
@@ -359,7 +359,7 @@ export default function BlogPostClient({
                     <div className="relative aspect-[4/3] overflow-hidden">
                       <Image
                         src={related.heroImage}
-                        alt={related.title}
+                        alt={`Ilustración del artículo: ${related.title}`}
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-300"
                         sizes="280px"

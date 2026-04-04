@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import {
@@ -7,11 +8,15 @@ import {
   Facebook,
   Instagram,
   Linkedin,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import MobileMenu from "@/components/MobileMenu"
 import Footer from "@/components/Footer"
 import Breadcrumbs from "@/components/Breadcrumbs"
+
+const POSTS_PER_PAGE = 12
 
 interface BlogPost {
   slug: string
@@ -22,6 +27,15 @@ interface BlogPost {
 }
 
 export default function BlogClient({ posts }: { posts: BlogPost[] }) {
+  const [page, setPage] = useState(1)
+  const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE)
+  const paginatedPosts = posts.slice((page - 1) * POSTS_PER_PAGE, page * POSTS_PER_PAGE)
+
+  const goToPage = (p: number) => {
+    setPage(p)
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+
   return (
     <main id="contenido-principal" className="min-h-screen bg-white">
       {/* Fixed Header */}
@@ -151,7 +165,7 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
             </div>
 
             <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8">
-              {posts.map((post) => (
+              {paginatedPosts.map((post) => (
                 <Link
                   key={post.slug}
                   href={`/blog/${post.slug}`}
@@ -160,7 +174,7 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <Image
                       src={post.heroImage}
-                      alt={post.title}
+                      alt={`Ilustración del artículo: ${post.title}`}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
@@ -181,6 +195,43 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
                 </Link>
               ))}
             </div>
+
+            {/* Paginación */}
+            {totalPages > 1 && (
+              <nav aria-label="Paginación del blog" className="max-w-7xl mx-auto flex items-center justify-center gap-2 mt-12">
+                <button
+                  onClick={() => goToPage(page - 1)}
+                  disabled={page === 1}
+                  className="p-2 rounded-lg text-[#cc0033] hover:bg-gray-100 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+                  aria-label="Página anterior"
+                >
+                  <ChevronLeft className="w-5 h-5" />
+                </button>
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
+                  <button
+                    key={p}
+                    onClick={() => goToPage(p)}
+                    className={`w-10 h-10 rounded-lg text-sm font-medium transition-colors ${
+                      p === page
+                        ? "bg-[#cc0033] text-white"
+                        : "text-gray-600 hover:bg-gray-100"
+                    }`}
+                    aria-label={`Página ${p}`}
+                    aria-current={p === page ? "page" : undefined}
+                  >
+                    {p}
+                  </button>
+                ))}
+                <button
+                  onClick={() => goToPage(page + 1)}
+                  disabled={page === totalPages}
+                  className="p-2 rounded-lg text-[#cc0033] hover:bg-gray-100 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+                  aria-label="Página siguiente"
+                >
+                  <ChevronRight className="w-5 h-5" />
+                </button>
+              </nav>
+            )}
           </div>
         </section>
 
