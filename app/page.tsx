@@ -93,7 +93,7 @@ export default function HomePage() {
             { "@type": "Question", name: "¿Qué es un seguro complementario de salud?", acceptedAnswer: { "@type": "Answer", text: "Es un seguro que complementa la cobertura de tu Isapre o Fonasa, cubriendo el copago que queda después de la bonificación. Incluye consultas médicas, exámenes, hospitalización, dental y óptico según el plan contratado." }},
             { "@type": "Question", name: "¿Cuántos trabajadores necesita mi pyme para contratar?", acceptedAnswer: { "@type": "Answer", text: "Desde 5 trabajadores puedes acceder a planes colectivos con tarifas preferenciales. Para empresas más pequeñas, también existen opciones individuales o familiares como el seguro BICE Personas." }},
             { "@type": "Question", name: "¿Qué aseguradoras trabajan con RedAgrupa?", acceptedAnswer: { "@type": "Answer", text: "Trabajamos con las principales aseguradoras de Chile: BCI Seguros, BICE Vida, Chilena Consolidada, Consorcio, Help Seguros, MetLife, Bupa, Sura y Vida Security." }},
-            { "@type": "Question", name: "¿Cuánto demora el proceso de contratación?", acceptedAnswer: { "@type": "Answer", text: "El proceso completo toma entre 5 y 10 días hábiles. Nosotros nos encargamos de toda la gestión: cotización, comparación de planes, recopilación de documentos y coordinación con la aseguradora." }},
+            { "@type": "Question", name: "¿Cuánto demora el proceso de contratación?", acceptedAnswer: { "@type": "Answer", text: "El proceso es rápido: en pocos días hábiles tu equipo puede estar cubierto. Nosotros nos encargamos de toda la gestión: cotización, comparación de planes, recopilación de documentos y coordinación con la aseguradora." }},
             { "@type": "Question", name: "¿Tiene algún costo la asesoría de RedAgrupa?", acceptedAnswer: { "@type": "Answer", text: "No, nuestra asesoría es completamente gratuita para tu empresa. Somos corredores de seguros, lo que significa que las aseguradoras nos compensan directamente. Tú pagas exactamente lo mismo que pagarías contratando directo." }},
             { "@type": "Question", name: "¿Cómo se gestionan los reembolsos?", acceptedAnswer: { "@type": "Answer", text: "RedAgrupa gestiona los reembolsos por ti. Tus colaboradores envían sus boletas y nosotros nos encargamos del trámite completo con la aseguradora, reduciendo tiempos de espera y papeleo." }},
             { "@type": "Question", name: "¿Cómo elijo el mejor seguro complementario para mi empresa?", acceptedAnswer: { "@type": "Answer", text: "Depende de tres factores: presupuesto por trabajador, nivel de cobertura deseado y tamaño de la empresa. RedAgrupa compara planes de 9 aseguradoras y recomienda la mejor opción. El plan más vendido es Pyme Premium (70% cobertura, $26.658/mes por trabajador)." }},
@@ -245,7 +245,7 @@ export default function HomePage() {
                 </h1>
                 <p className="animate-fade-in-up-d1 text-base sm:text-base lg:text-lg text-white/90 leading-[1.3] max-w-2xl">
                   Comparamos 9 aseguradoras y gestionamos todo por ti: cotización, contratación y reembolsos.
-                  Sin trámites eternos ni lenguaje técnico. Tu equipo protegido en 10 días.
+                  Sin trámites eternos ni lenguaje técnico. Tu equipo protegido en días, no meses.
                 </p>
                 <div className="animate-fade-in-up-d2 flex flex-col sm:flex-row gap-4 pt-2">
                   <ScrollButton
@@ -354,8 +354,8 @@ export default function HomePage() {
                   <div className="w-14 h-14 rounded-full bg-[#cc0033] flex items-center justify-center mx-auto">
                     <span className="text-xl font-bold text-white">3</span>
                   </div>
-                  <h3 className="text-lg font-semibold text-[#333333]">Protegido en 10 días</h3>
-                  <p className="text-sm text-[#666666] leading-snug">Gestionamos toda la contratación. Tu equipo queda cubierto sin complicaciones.</p>
+                  <h3 className="text-lg font-semibold text-[#333333]">Protegido rápidamente</h3>
+                  <p className="text-sm text-[#666666] leading-snug">Gestionamos toda la contratación. Tu equipo queda cubierto en días, no meses.</p>
                 </div>
               </div>
             </div>

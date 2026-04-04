@@ -403,7 +403,7 @@ export default function HomeContent({ latestPosts = [] }: { latestPosts?: Latest
                   },
                   {
                     q: "¿Cuánto demora el proceso de contratación?",
-                    a: "El proceso completo toma entre 5 y 10 días hábiles. Nosotros nos encargamos de toda la gestión: cotización, comparación de planes, recopilación de documentos y coordinación con la aseguradora."
+                    a: "El proceso es rápido: en pocos días hábiles tu equipo puede estar cubierto. Nosotros nos encargamos de toda la gestión: cotización, comparación de planes, recopilación de documentos y coordinación con la aseguradora."
                   },
                   {
                     q: "¿Tiene algún costo la asesoría de RedAgrupa?",
