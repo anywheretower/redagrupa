@@ -36,10 +36,10 @@ Seguro individual o familiar para personas entre 18 y 64 años, disponible para 
 
 | Plan | Precio/mes (CLP) | Precio/mes (UF) | Ambulatoria | Hospitalaria | Tope Salud | Seguro Vida | Asistencia Mascota |
 |------|-------------------|------------------|-------------|--------------|------------|-------------|---------------------|
-| Pyme Estándar | $20.647 | UF 0,5200 | 50% | 50% | 300 UF | 500 UF | No |
-| Pyme Premium | $26.658 | UF 0,6714 | 70% | 70% | 300 UF | 500 UF | No |
-| Pyme Elite | $41.651 | UF 1,0490 | 80% | 80% | 500 UF | 500 UF | Sí (Pawer) |
-| Pyme Elite Plus | $48.401 | UF 1,1290 | 80% | 80% | 500 UF | 1.000 UF | Sí (Pawer) |
+| Pyme Estándar | $20.718 | UF 0,5200 | 50% | 50% | 300 UF | 500 UF | No |
+| Pyme Premium | $26.750 | UF 0,6714 | 70% | 70% | 300 UF | 500 UF | No |
+| Pyme Elite | $41.794 | UF 1,0490 | 80% | 80% | 500 UF | 500 UF | Sí (Pawer) |
+| Pyme Elite Plus | $48.567 | UF 1,2190 | 80% | 80% | 500 UF | 1.000 UF | Sí (Pawer) |
 
 Precios por trabajador, mensuales, con IVA incluido. Todos los planes incluyen Seguro de Salud + Seguro de Vida. Coberturas opcionales disponibles: Dental y Catastrófica.
 
@@ -60,9 +60,9 @@ Precios por trabajador, mensuales, con IVA incluido. Todos los planes incluyen S
 - **¿Tiene algún costo la asesoría de RedAgrupa?** No, la asesoría es 100% gratuita y sin compromiso. RedAgrupa es una corredora de seguros compensada por las aseguradoras, no por los clientes.
 
 ### Decisión de compra
-- **¿Cómo elijo el mejor plan para mi empresa?** Depende de tres factores: presupuesto por trabajador, nivel de cobertura deseado y tamaño de la empresa. RedAgrupa compara planes de 9 aseguradoras y recomienda la mejor opción. El plan más vendido es Pyme Premium (70% cobertura, $26.658/mes).
+- **¿Cómo elijo el mejor plan para mi empresa?** Depende de tres factores: presupuesto por trabajador, nivel de cobertura deseado y tamaño de la empresa. RedAgrupa compara planes de 9 aseguradoras y recomienda la mejor opción. El plan más vendido es Pyme Premium (70% cobertura, $26.750/mes).
 
-- **¿Cuánto cuesta un seguro complementario para mi empresa?** Desde $20.647 CLP mensuales por trabajador (Plan Pyme Estándar, 50% cobertura). El costo depende del plan elegido, la edad promedio del grupo y las coberturas opcionales. RedAgrupa cotiza sin costo.
+- **¿Cuánto cuesta un seguro complementario para mi empresa?** Desde $20.718 CLP mensuales por trabajador (Plan Pyme Estándar, 50% cobertura). El costo depende del plan elegido, la edad promedio del grupo y las coberturas opcionales. RedAgrupa cotiza sin costo.
 
 - **¿Puedo cambiar de plan o aseguradora después?** Sí. RedAgrupa gestiona la renovación anual y puede recomendar cambios de plan o aseguradora según la experiencia del grupo y las necesidades que hayan surgido.
 

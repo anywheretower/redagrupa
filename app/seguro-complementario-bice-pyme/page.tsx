@@ -37,7 +37,7 @@ const jsonLd = [
           brand: { "@type": "Brand", name: "BICE Vida" },
           offers: {
             "@type": "Offer",
-            price: "20647",
+            price: "20718",
             priceCurrency: "CLP",
             priceValidUntil: "2026-12-31",
             availability: "https://schema.org/InStock",
@@ -56,7 +56,7 @@ const jsonLd = [
           brand: { "@type": "Brand", name: "BICE Vida" },
           offers: {
             "@type": "Offer",
-            price: "26658",
+            price: "26750",
             priceCurrency: "CLP",
             priceValidUntil: "2026-12-31",
             availability: "https://schema.org/InStock",
@@ -75,7 +75,7 @@ const jsonLd = [
           brand: { "@type": "Brand", name: "BICE Vida" },
           offers: {
             "@type": "Offer",
-            price: "41651",
+            price: "41794",
             priceCurrency: "CLP",
             priceValidUntil: "2026-12-31",
             availability: "https://schema.org/InStock",
@@ -94,7 +94,7 @@ const jsonLd = [
           brand: { "@type": "Brand", name: "BICE Vida" },
           offers: {
             "@type": "Offer",
-            price: "48401",
+            price: "48567",
             priceCurrency: "CLP",
             priceValidUntil: "2026-12-31",
             availability: "https://schema.org/InStock",

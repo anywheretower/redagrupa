@@ -26,10 +26,10 @@
 
 ## Planes BICE Vida para Pymes (precios por trabajador/mes)
 
-- Pyme Estándar: $20.647 CLP (~UF 0,52) — 50% ambulatoria, 50% hospitalaria, 300 UF tope salud, 500 UF vida
-- Pyme Premium: $26.658 CLP (~UF 0,67) — 70% ambulatoria, 70% hospitalaria, 300 UF tope salud, 500 UF vida
-- Pyme Elite: $41.651 CLP (~UF 1,05) — 80% ambulatoria, 80% hospitalaria, 500 UF tope salud, 500 UF vida
-- Pyme Elite Plus: $48.401 CLP (~UF 1,22) — 80% ambulatoria, 80% hospitalaria, 500 UF tope salud, 1.000 UF vida
+- Pyme Estándar: $20.718 CLP (~UF 0,52) — 50% ambulatoria, 50% hospitalaria, 300 UF tope salud, 500 UF vida
+- Pyme Premium: $26.750 CLP (~UF 0,67) — 70% ambulatoria, 70% hospitalaria, 300 UF tope salud, 500 UF vida
+- Pyme Elite: $41.794 CLP (~UF 1,05) — 80% ambulatoria, 80% hospitalaria, 500 UF tope salud, 500 UF vida
+- Pyme Elite Plus: $48.567 CLP (~UF 1,22) — 80% ambulatoria, 80% hospitalaria, 500 UF tope salud, 1.000 UF vida
 
 ## Preguntas frecuentes
 

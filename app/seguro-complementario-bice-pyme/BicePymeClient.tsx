@@ -26,7 +26,7 @@ const planes = [
     nombre: "Pyme Estandar",
     etiqueta: "Mas economico",
     etiquetaColor: "bg-gray-100 text-gray-700",
-    precioCLP: "$20.647",
+    precioCLP: "$20.718",
     precioUF: "UF 0,5200",
     coberturas: [
       { bold: "50%", texto: "en atencion ambulatoria" },
@@ -41,7 +41,7 @@ const planes = [
     nombre: "Pyme Premium",
     etiqueta: "Mas vendido",
     etiquetaColor: "bg-yellow-100 text-yellow-800",
-    precioCLP: "$26.658",
+    precioCLP: "$26.750",
     precioUF: "UF 0,6714",
     coberturas: [
       { bold: "70%", texto: "en atencion ambulatoria" },
@@ -56,7 +56,7 @@ const planes = [
     nombre: "Pyme Elite",
     etiqueta: "Mayor cobertura",
     etiquetaColor: "bg-blue-100 text-blue-800",
-    precioCLP: "$41.651",
+    precioCLP: "$41.794",
     precioUF: "UF 1,0490",
     coberturas: [
       { bold: "80%", texto: "en atencion ambulatoria" },
@@ -71,8 +71,8 @@ const planes = [
     nombre: "Pyme Elite Plus",
     etiqueta: "Mayor cobertura vida",
     etiquetaColor: "bg-[#cc0033] text-white",
-    precioCLP: "$48.401",
-    precioUF: "UF 1,1290",
+    precioCLP: "$48.567",
+    precioUF: "UF 1,2190",
     coberturas: [
       { bold: "80%", texto: "en atencion ambulatoria" },
       { bold: "80%", texto: "en atencion hospitalaria" },
@@ -414,10 +414,10 @@ export default function BicePymeClient() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>Pyme Estándar</td><td>$20.647</td><td>UF 0,5200</td><td>50%</td><td>50%</td><td>300 UF</td><td>500 UF</td><td>No</td></tr>
-                  <tr><td>Pyme Premium</td><td>$26.658</td><td>UF 0,6714</td><td>70%</td><td>70%</td><td>300 UF</td><td>500 UF</td><td>No</td></tr>
-                  <tr><td>Pyme Elite</td><td>$41.651</td><td>UF 1,0490</td><td>80%</td><td>80%</td><td>500 UF</td><td>500 UF</td><td>Sí (Pawer)</td></tr>
-                  <tr><td>Pyme Elite Plus</td><td>$48.401</td><td>UF 1,1290</td><td>80%</td><td>80%</td><td>500 UF</td><td>1.000 UF</td><td>Sí (Pawer)</td></tr>
+                  <tr><td>Pyme Estándar</td><td>$20.718</td><td>UF 0,5200</td><td>50%</td><td>50%</td><td>300 UF</td><td>500 UF</td><td>No</td></tr>
+                  <tr><td>Pyme Premium</td><td>$26.750</td><td>UF 0,6714</td><td>70%</td><td>70%</td><td>300 UF</td><td>500 UF</td><td>No</td></tr>
+                  <tr><td>Pyme Elite</td><td>$41.794</td><td>UF 1,0490</td><td>80%</td><td>80%</td><td>500 UF</td><td>500 UF</td><td>Sí (Pawer)</td></tr>
+                  <tr><td>Pyme Elite Plus</td><td>$48.567</td><td>UF 1,2190</td><td>80%</td><td>80%</td><td>500 UF</td><td>1.000 UF</td><td>Sí (Pawer)</td></tr>
                 </tbody>
               </table>
 
