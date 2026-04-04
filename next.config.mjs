@@ -37,6 +37,7 @@ const nextConfig = {
     return [
       { source: "/seguro-complementario", destination: "/seguros-salud", permanent: true },
       { source: "/seguro-complementario/", destination: "/seguros-salud", permanent: true },
+      { source: "/seguro-complementario/:path*", destination: "/seguros-salud", permanent: true },
       { source: "/seguro-colectivo", destination: "/seguros-salud", permanent: true },
       { source: "/seguro-colectivo/", destination: "/seguros-salud", permanent: true },
       { source: "/seguro-dental", destination: "/seguros-salud", permanent: true },

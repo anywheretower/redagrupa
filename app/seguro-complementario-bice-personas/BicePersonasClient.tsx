@@ -413,8 +413,105 @@ export default function BicePersonasClient() {
           </div>
         </section>
 
-        {/* CTA */}
+        {/* Pricing — Plan Hospitalario */}
         <section className="py-32 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <RevealOnScroll>
+                <div className="text-center space-y-4 mb-12">
+                  <p className="text-xs sm:text-sm uppercase tracking-wider text-[#666666]">
+                    Plan Hospitalario BICE Vida
+                  </p>
+                  <h2 className="text-2xl font-bold text-gray-900">
+                    ¿Cuánto cuesta el seguro?
+                  </h2>
+                  <p className="text-base text-gray-700 leading-[1.1] max-w-3xl mx-auto">
+                    El precio mensual depende de cuántas personas incluyas. Todos los valores incluyen IVA.
+                  </p>
+                </div>
+              </RevealOnScroll>
+
+              <RevealOnScroll className="overflow-x-auto">
+                <table className="w-full max-w-2xl mx-auto text-sm border-collapse">
+                  <thead>
+                    <tr className="bg-[#1a1a2e] text-white">
+                      <th className="px-4 py-3 text-left font-semibold rounded-tl-lg">Cargas familiares</th>
+                      <th className="px-4 py-3 text-right font-semibold rounded-tr-lg">Precio mensual (UF)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-gray-100">
+                      <td className="px-4 py-3 text-gray-900 font-medium">Solo titular</td>
+                      <td className="px-4 py-3 text-right text-gray-900 font-bold">UF 0,3215</td>
+                    </tr>
+                    <tr className="border-b border-gray-100 bg-gray-50">
+                      <td className="px-4 py-3 text-gray-900 font-medium">Titular + 1 carga</td>
+                      <td className="px-4 py-3 text-right text-gray-900 font-bold">UF 0,5948</td>
+                    </tr>
+                    <tr className="border-b border-gray-100">
+                      <td className="px-4 py-3 text-gray-900 font-medium">Titular + 2 cargas</td>
+                      <td className="px-4 py-3 text-right text-gray-900 font-bold">UF 0,8037</td>
+                    </tr>
+                    <tr className="border-b border-gray-100 bg-gray-50">
+                      <td className="px-4 py-3 text-gray-900 font-medium">Titular + 3 cargas</td>
+                      <td className="px-4 py-3 text-right text-gray-900 font-bold">UF 1,0610</td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-3 text-gray-900 font-medium rounded-bl-lg">Titular + 4 cargas</td>
+                      <td className="px-4 py-3 text-right text-gray-900 font-bold rounded-br-lg">UF 1,2860</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </RevealOnScroll>
+
+              <div className="max-w-2xl mx-auto mt-6 space-y-3">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-center">
+                  <div className="bg-white rounded-lg p-3 border border-gray-100">
+                    <p className="text-xs text-[#666666] uppercase tracking-wider">Cobertura</p>
+                    <p className="text-lg font-bold text-[#cc0033]">50%</p>
+                    <p className="text-xs text-gray-500">hospitalización</p>
+                  </div>
+                  <div className="bg-white rounded-lg p-3 border border-gray-100">
+                    <p className="text-xs text-[#666666] uppercase tracking-wider">Límite anual</p>
+                    <p className="text-lg font-bold text-[#cc0033]">200 UF</p>
+                    <p className="text-xs text-gray-500">por persona</p>
+                  </div>
+                  <div className="bg-white rounded-lg p-3 border border-gray-100">
+                    <p className="text-xs text-[#666666] uppercase tracking-wider">Deducible</p>
+                    <p className="text-lg font-bold text-[#cc0033]">0,50 UF</p>
+                    <p className="text-xs text-gray-500">por persona/año</p>
+                  </div>
+                </div>
+                <p className="text-sm text-gray-500 text-center">
+                  Valores referenciales en UF. El precio en pesos puede variar según el valor de la UF vigente. Incluye cobertura de maternidad y ambulancia terrestre.
+                </p>
+              </div>
+
+              {/* Tabla sr-only para AI crawlers */}
+              <table className="sr-only" aria-label="Precios Plan Hospitalario BICE Personas">
+                <thead>
+                  <tr>
+                    <th scope="col">Cargas familiares</th>
+                    <th scope="col">Precio mensual (UF)</th>
+                    <th scope="col">Cobertura hospitalaria</th>
+                    <th scope="col">Límite anual</th>
+                    <th scope="col">Deducible</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Solo titular</td><td>UF 0,3215</td><td>50%</td><td>200 UF</td><td>0,50 UF</td></tr>
+                  <tr><td>Titular + 1 carga</td><td>UF 0,5948</td><td>50%</td><td>200 UF</td><td>0,50 UF</td></tr>
+                  <tr><td>Titular + 2 cargas</td><td>UF 0,8037</td><td>50%</td><td>200 UF</td><td>0,50 UF</td></tr>
+                  <tr><td>Titular + 3 cargas</td><td>UF 1,0610</td><td>50%</td><td>200 UF</td><td>0,50 UF</td></tr>
+                  <tr><td>Titular + 4 cargas</td><td>UF 1,2860</td><td>50%</td><td>200 UF</td><td>0,50 UF</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="py-32 bg-white">
           <div className="container mx-auto px-4">
             <RevealOnScroll className="max-w-4xl mx-auto text-center space-y-6">
               <Image
