@@ -7,7 +7,7 @@
 ## Páginas principales
 
 - [Inicio](https://www.redagrupa.cl): Landing page con propuesta de valor, testimonios y formulario de contacto
-- [Seguro Complementario de Salud](https://www.redagrupa.cl/seguros-salud): Qué es, coberturas (vida, hospitalización, ambulatoria, medicamentos, catastrófica) y beneficios para empresas
+- [Seguro Complementario de Salud](https://www.redagrupa.cl/seguro-complementario): Qué es, coberturas (vida, hospitalización, ambulatoria, medicamentos, catastrófica) y beneficios para empresas
 - [Seguro BICE Pyme](https://www.redagrupa.cl/seguro-complementario-bice-pyme): 4 planes BICE Vida para pymes con precios y coberturas detalladas
 - [Seguro BICE Personas](https://www.redagrupa.cl/seguro-complementario-bice-personas): Seguro individual/familiar BICE Vida para personas entre 18-64 años
 - [Beneficios RedAgrupa](https://www.redagrupa.cl/beneficios-redagrupa): Convenios corporativos de salud, bienestar, vacunación y plataforma digital

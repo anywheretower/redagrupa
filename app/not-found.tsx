@@ -48,7 +48,7 @@ export default function NotFound() {
               Inicio
             </Link>
             <Link
-              href="/seguros-salud"
+              href="/seguro-complementario"
               className="px-6 py-3 border border-[#cc0033] text-[#cc0033] rounded-lg font-medium text-sm hover:bg-red-50 transition-colors"
             >
               Seguro Complementario

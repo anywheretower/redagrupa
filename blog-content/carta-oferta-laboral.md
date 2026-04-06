@@ -42,7 +42,7 @@ Para garantizar la claridad y transparencia en la relación laboral, la carta of
 
 - Detalle de los beneficios laborales ofrecidos por la empresa, como seguro de salud, vacaciones, permisos, aguinaldos, etc.
 
-> **Tip para pymes:** Incluir un [seguro complementario de salud](/seguros-salud) en la carta oferta es uno de los diferenciadores más valorados por los candidatos en Chile. En RedAgrupa puedes [cotizar planes desde 0,2 UF/mes por persona](/seguro-complementario-bice-pyme) y hacer tu oferta mucho más competitiva.
+> **Tip para pymes:** Incluir un [seguro complementario de salud](/seguro-complementario) en la carta oferta es uno de los diferenciadores más valorados por los candidatos en Chile. En RedAgrupa puedes [cotizar planes desde 0,2 UF/mes por persona](/seguro-complementario-bice-pyme) y hacer tu oferta mucho más competitiva.
 
 ### 6. Fecha de inicio:
 
@@ -83,7 +83,7 @@ Más allá de la remuneración, los candidatos valoran cada vez más los **benef
 
 Algunos beneficios que puedes incluir en tu carta oferta para destacar frente a la competencia:
 
-- **Seguro complementario de salud** — cubre lo que Fonasa e Isapre no cubren. [Conoce cómo funciona](/seguros-salud).
+- **Seguro complementario de salud** — cubre lo que Fonasa e Isapre no cubren. [Conoce cómo funciona](/seguro-complementario).
 - **Seguro dental y de vida** — planes accesibles incluso para pymes pequeñas.
 - **Beneficios corporativos RedAgrupa** — [gestión simplificada de todos tus seguros](/beneficios-redagrupa) en un solo lugar.
 

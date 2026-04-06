@@ -14,7 +14,7 @@ La jornada de trabajo es un concepto fundamental en el mundo profesional. Va má
 
 La duración y las condiciones de la jornada de trabajo pueden variar según la legislación, la industria y las políticas de la empresa. Puede incluir el horario de inicio y finalización, así como los descansos y pausas en medio. La optimización de la jornada de trabajo es crucial para el equilibrio entre la vida profesional y personal de los colaboradores de una empresa.
 
-Desde la perspectiva de una empresa que gestiona [seguro complementario de salud](/seguros-salud), entender cómo funciona una jornada de trabajo es vital para elegir las mejores pólizas para sus clientes. Por otro lado, las compañías deben adaptar sus políticas y entornos laborales para garantizar la eficiencia y el bienestar. También, los empleados deben estar informados sobre sus derechos en términos de horarios, descansos y posibles horas extras.
+Desde la perspectiva de una empresa que gestiona [seguro complementario de salud](/seguro-complementario), entender cómo funciona una jornada de trabajo es vital para elegir las mejores pólizas para sus clientes. Por otro lado, las compañías deben adaptar sus políticas y entornos laborales para garantizar la eficiencia y el bienestar. También, los empleados deben estar informados sobre sus derechos en términos de horarios, descansos y posibles horas extras.
 
 ## Jornada de Trabajo en Chile: Optimización con tecnológicas
 

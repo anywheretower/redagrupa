@@ -18,7 +18,7 @@ Además, la implementación de horarios flexibles tiene múltiples ventajas para
 
 En Chile, la jornada laboral está regulada por el Código del Trabajo. Hasta 2019, la jornada máxima era de 45 horas semanales distribuidas en cinco o seis días. Sin embargo, la Ley Nº 21.122, vigente desde 2019, redujo la jornada laboral a 40 horas semanales, sin alterar la remuneración.
 
-Esta medida busca mejorar la calidad de vida de los trabajadores junto con otros beneficios como el [seguro complementario de salud](/seguros-salud), y fomenta un equilibrio entre la vida laboral y personal. La implementación gradual de esta nueva normativa se extenderá hasta 2025 para dar tiempo a las empresas a adaptarse a este cambio significativo.
+Esta medida busca mejorar la calidad de vida de los trabajadores junto con otros beneficios como el [seguro complementario de salud](/seguro-complementario), y fomenta un equilibrio entre la vida laboral y personal. La implementación gradual de esta nueva normativa se extenderá hasta 2025 para dar tiempo a las empresas a adaptarse a este cambio significativo.
 
 ## Jornada laboral 40 horas semanales
 

@@ -36,7 +36,7 @@ export default function PoliticasClient() {
             <Link href="/nosotros" className="text-white font-medium text-sm">
               Nosotros
             </Link>
-            <Link href="/seguros-salud" className="text-white font-medium text-sm">
+            <Link href="/seguro-complementario" className="text-white font-medium text-sm">
               Seguro Complementario Salud
             </Link>
             <Link href="/beneficios-redagrupa" className="text-white font-medium text-sm">

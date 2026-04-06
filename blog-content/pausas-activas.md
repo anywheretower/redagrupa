@@ -28,7 +28,7 @@ En Chile, la Ley N° 20.123 sobre Seguridad y Salud en el Trabajo establece la o
 
 - **Mejora del clima laboral:** Las pausas activas fomentan la interacción social entre los trabajadores, lo que puede contribuir a mejorar el clima laboral.
 
-- **Reducción de costos:** La disminución de enfermedades y el ausentismo laboral puede generar ahorros importantes para la empresa en costos de atención médica y prestaciones sociales. Complementar las pausas activas con un [seguro complementario de salud](/seguros-salud) permite cubrir consultas y tratamientos preventivos para el equipo.
+- **Reducción de costos:** La disminución de enfermedades y el ausentismo laboral puede generar ahorros importantes para la empresa en costos de atención médica y prestaciones sociales. Complementar las pausas activas con un [seguro complementario de salud](/seguro-complementario) permite cubrir consultas y tratamientos preventivos para el equipo.
 
 ## ¿Cómo implementar pausas activas de manera eficiente?
 

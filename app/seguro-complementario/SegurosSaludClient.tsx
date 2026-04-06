@@ -51,7 +51,7 @@ export default function SegurosSaludClient() {
             <Link href="/nosotros" className="text-white font-medium text-sm">
               Nosotros
             </Link>
-            <Link href="/seguros-salud" className="text-white font-medium text-sm">
+            <Link href="/seguro-complementario" className="text-white font-medium text-sm">
               Seguro Complementario Salud
             </Link>
             <Link href="/beneficios-redagrupa" className="text-white font-medium text-sm">
@@ -150,7 +150,7 @@ export default function SegurosSaludClient() {
         {/* Hero Section */}
         <section className="relative min-h-[50vh] lg:min-h-[70vh] flex items-center pt-20">
           <Image
-            src="/seguros-salud-hero.webp"
+            src="/seguro-complementario-hero.webp"
             alt="Familia protegida con seguro complementario de salud"
             fill
             className="object-cover"
@@ -497,7 +497,7 @@ export default function SegurosSaludClient() {
             <div className="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto items-center">
               <RevealOnScroll className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 lg:p-8 shadow-2xl">
                 <ContactForm
-                  pagina="seguros-salud"
+                  pagina="seguro-complementario"
                   heading="Tranquilo, sabemos cómo hacer simples los seguros complementarios, ¡Conversemos!"
                 />
               </RevealOnScroll>

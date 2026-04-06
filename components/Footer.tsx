@@ -31,7 +31,7 @@ export default function Footer() {
             <h3 className="text-sm font-semibold uppercase tracking-wider mb-4 text-white">Servicios</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/seguros-salud" className="text-sm hover:underline text-white/90">
+                <Link href="/seguro-complementario" className="text-sm hover:underline text-white/90">
                   Seguro Complementario Salud
                 </Link>
               </li>

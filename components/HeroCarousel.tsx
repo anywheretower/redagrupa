@@ -12,7 +12,7 @@ const slides = [
     headline: "Tu equipo protegido desde UF\u00a00,52/mes. Sin trámites, sin papeleo",
     subtitle: "Seguro complementario de salud para pymes desde 5 trabajadores. Comparamos las principales aseguradoras, elegimos el mejor plan y gestionamos todo: cotización, contratación y reembolsos.",
     ctaPrimary: { text: "Cotiza Gratis", href: "#formulario-contacto" },
-    ctaSecondary: { text: "Ver Coberturas y Planes", href: "/seguros-salud", isLink: true },
+    ctaSecondary: { text: "Ver Coberturas y Planes", href: "/seguro-complementario", isLink: true },
   },
   {
     image: "/images/hero-slide2.webp",

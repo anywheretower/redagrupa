@@ -82,7 +82,7 @@ export default function MobileMenu() {
               Nosotros
             </Link>
             <Link
-              href="/seguros-salud"
+              href="/seguro-complementario"
               className="text-white text-lg py-3 border-b border-white/20"
               onClick={() => setIsOpen(false)}
             >

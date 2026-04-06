@@ -39,7 +39,7 @@ Las empresas que reciben una multa de la Dirección del Trabajo tienen los sigui
 
 ## ¿Cómo protege un seguro complementario a tu empresa ante multas?
 
-Muchas multas de la Dirección del Trabajo están relacionadas con el incumplimiento de obligaciones hacia los trabajadores. Contar con **beneficios laborales formalizados** —como un [seguro complementario de salud](/seguros-salud)— no solo mejora la relación con tus colaboradores, sino que demuestra buenas prácticas laborales ante una fiscalización.
+Muchas multas de la Dirección del Trabajo están relacionadas con el incumplimiento de obligaciones hacia los trabajadores. Contar con **beneficios laborales formalizados** —como un [seguro complementario de salud](/seguro-complementario)— no solo mejora la relación con tus colaboradores, sino que demuestra buenas prácticas laborales ante una fiscalización.
 
 Las empresas que ofrecen [beneficios corporativos estructurados](/beneficios-redagrupa) tienen menos rotación, menos conflictos laborales y, en consecuencia, menos exposición a denuncias y multas. Un seguro complementario es una de las herramientas más efectivas para construir una cultura de cumplimiento.
 

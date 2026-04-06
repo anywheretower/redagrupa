@@ -18,7 +18,7 @@ La atención a estos detalles garantiza una alineación precisa entre las metas 
 
 ## ¿Cómo realizar un perfil de cargo?
 
-Desarrollar un perfil de cargo efectivo comienza con instrucciones claras y detalladas. Una tabla estructurada puede ser invaluable para organizar responsabilidades, habilidades y requisitos. Al igual que los beneficios de un [seguro complementario de salud](/seguros-salud), un perfil de cargo bien definido agrega atractivo a la oferta laboral.
+Desarrollar un perfil de cargo efectivo comienza con instrucciones claras y detalladas. Una tabla estructurada puede ser invaluable para organizar responsabilidades, habilidades y requisitos. Al igual que los beneficios de un [seguro complementario de salud](/seguro-complementario), un perfil de cargo bien definido agrega atractivo a la oferta laboral.
 
 Al proporcionar un panorama claro de lo que la empresa espera, los candidatos pueden evaluar mejor su idoneidad. Esto no solo agiliza el proceso de selección, sino que también reduce las posibilidades de desajustes en las expectativas.
 

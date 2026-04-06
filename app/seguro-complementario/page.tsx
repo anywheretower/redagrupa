@@ -6,13 +6,13 @@ export const metadata = {
   description:
     "Seguro complementario de salud para empresas en Chile. Cubre gastos que exceden Fonasa o Isapre. +300 pymes confían en RedAgrupa. Cotiza sin costo.",
   alternates: {
-    canonical: "https://www.redagrupa.cl/seguros-salud",
+    canonical: "https://www.redagrupa.cl/seguro-complementario",
   },
   openGraph: {
     title: "Seguro Complementario de Salud para Empresas",
     description:
       "Seguro complementario de salud para empresas en Chile. Cubre gastos que exceden Fonasa o Isapre. +300 pymes confían en RedAgrupa. Cotiza sin costo.",
-    url: "https://www.redagrupa.cl/seguros-salud",
+    url: "https://www.redagrupa.cl/seguro-complementario",
     siteName: "RedAgrupa",
     locale: "es_CL",
     type: "website",
@@ -76,7 +76,7 @@ const webPageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   name: "Seguro Complementario de Salud para Empresas",
-  url: "https://www.redagrupa.cl/seguros-salud",
+  url: "https://www.redagrupa.cl/seguro-complementario",
   speakable: {
     "@type": "SpeakableSpecification",
     cssSelector: ["h1", "main p:first-of-type"],

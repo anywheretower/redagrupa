@@ -33,4 +33,4 @@ Varias aplicaciones simplifican la gestión de la carpeta tributaria: Contpaq i 
 
 Los elementos esenciales incluyen el RUT de la empresa, estatutos corporativos, comprobante de inscripción en el Registro de Comercio, información de los directores y documentación organizacional vigente.
 
-Una vez que tu empresa esté en regla con su documentación tributaria, es buen momento para evaluar [beneficios corporativos](/beneficios-redagrupa) que protejan a tu equipo, como un [seguro complementario de salud](/seguros-salud).
+Una vez que tu empresa esté en regla con su documentación tributaria, es buen momento para evaluar [beneficios corporativos](/beneficios-redagrupa) que protejan a tu equipo, como un [seguro complementario de salud](/seguro-complementario).

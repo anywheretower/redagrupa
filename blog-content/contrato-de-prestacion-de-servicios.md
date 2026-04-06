@@ -41,4 +41,4 @@ En general, este tipo de trabajo con **boleta de honorarios** puede terminar por
 
 Además, el término de contrato debe notificarse y quedar registrado por escrito, detallando la causal y fecha de término.
 
-En conclusión, es importante recordar que la elección entre un contrato de prestación de servicios y un contrato de trabajo dependerá de las características específicas del servicio, así como de las necesidades y preferencias de ambas partes. Para los trabajadores con contrato laboral, contar con un [seguro complementario de salud](/seguros-salud) es uno de los beneficios más valorados al momento de evaluar una oferta de empleo.
+En conclusión, es importante recordar que la elección entre un contrato de prestación de servicios y un contrato de trabajo dependerá de las características específicas del servicio, así como de las necesidades y preferencias de ambas partes. Para los trabajadores con contrato laboral, contar con un [seguro complementario de salud](/seguro-complementario) es uno de los beneficios más valorados al momento de evaluar una oferta de empleo.

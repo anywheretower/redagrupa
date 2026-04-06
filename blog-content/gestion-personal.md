@@ -24,7 +24,7 @@ Una gestión de personal efectiva se basa en una serie de principios y práctica
 
 6. **Gestión del entorno laboral:** Un clima laboral positivo y motivador genera un impacto significativo en la productividad, el compromiso y la retención de talento. Esto implica fomentar una cultura de respeto, inclusión laboral, colaboración, comunicación abierta y reconocimiento al trabajo bien hecho.
 
-7. **Salud:** La salud y seguridad ocupacional son aspectos fundamentales para el bienestar de los trabajadores y la productividad de la empresa. Implementar medidas preventivas, contar con un [seguro complementario de salud](/seguros-salud) y promover una cultura de seguridad en el trabajo es esencial para minimizar los riesgos laborales.
+7. **Salud:** La salud y seguridad ocupacional son aspectos fundamentales para el bienestar de los trabajadores y la productividad de la empresa. Implementar medidas preventivas, contar con un [seguro complementario de salud](/seguro-complementario) y promover una cultura de seguridad en el trabajo es esencial para minimizar los riesgos laborales.
 
 8. **Desarrollo organizacional:** Se enfoca en el crecimiento y la mejora continua de la organización como un todo, promoviendo una cultura de aprendizaje, innovación y adaptación al cambio.
 

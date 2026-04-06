@@ -6,7 +6,7 @@ Las horas extras son aquellas horas laborales que exceden la jornada ordinaria e
 
 Los empleados, por otro lado, obtienen beneficios económicos adicionales, aumentando sus ingresos mensuales. Sin embargo, este beneficio no viene sin desafíos. Las horas extras pueden llevar a fatiga y agotamiento, impactando negativamente en la salud y la productividad. Además, la falta de equilibrio entre el trabajo y la vida personal puede generar insatisfacción y estrés laboral.
 
-Es crucial para las empresas encontrar un balance entre la necesidad operativa y la salud de los trabajadores, estableciendo políticas que regulen y compensen adecuadamente las horas extras, garantizando así un entorno laboral saludable y productivo. Para esa tarea, contar con un [seguro complementario de salud](/seguros-salud) ayuda a mejorar la calidad de vida de los trabajadores de tu empresa, especialmente cuando las exigencias laborales son mayores.
+Es crucial para las empresas encontrar un balance entre la necesidad operativa y la salud de los trabajadores, estableciendo políticas que regulen y compensen adecuadamente las horas extras, garantizando así un entorno laboral saludable y productivo. Para esa tarea, contar con un [seguro complementario de salud](/seguro-complementario) ayuda a mejorar la calidad de vida de los trabajadores de tu empresa, especialmente cuando las exigencias laborales son mayores.
 
 ## Horas extras en Chile
 

@@ -66,4 +66,4 @@ A continuación, se presenta un paso a paso para la redacción de una carta de d
 
 ## Conclusión
 
-Es fundamental recordar que el despido es una medida que debe adoptarse con cautela y responsabilidad, considerando siempre los derechos y obligaciones tanto del empleador como del trabajador. Si tu empresa ofrece un [seguro complementario de salud](/seguros-salud), verifica las condiciones de continuidad de cobertura para el trabajador desvinculado. La búsqueda de asesoría legal especializada puede ser de gran utilidad para navegar con seguridad por este complejo proceso.
+Es fundamental recordar que el despido es una medida que debe adoptarse con cautela y responsabilidad, considerando siempre los derechos y obligaciones tanto del empleador como del trabajador. Si tu empresa ofrece un [seguro complementario de salud](/seguro-complementario), verifica las condiciones de continuidad de cobertura para el trabajador desvinculado. La búsqueda de asesoría legal especializada puede ser de gran utilidad para navegar con seguridad por este complejo proceso.

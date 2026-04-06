@@ -29,4 +29,4 @@ Calcular el valor hora extra implica partir del valor de la hora ordinaria, dete
 
 En Chile, el valor hora extra dominical se calcula a partir de la remuneración ordinaria con recargo especial. Se divide la liquidación de sueldo mensual por 30 para obtener el valor de hora ordinaria.
 
-Luego se aplica un recargo del 100% sobre esta hora ordinaria. El empleado recibe el doble de su valor de hora ordinaria por cada hora extra trabajada en domingo, garantizando compensación justa por trabajo adicional en días dominicales según legislación laboral chilena. Conoce cómo un [seguro complementario de salud](/seguros-salud) puede complementar la protección de tus trabajadores más allá de la remuneración.
+Luego se aplica un recargo del 100% sobre esta hora ordinaria. El empleado recibe el doble de su valor de hora ordinaria por cada hora extra trabajada en domingo, garantizando compensación justa por trabajo adicional en días dominicales según legislación laboral chilena. Conoce cómo un [seguro complementario de salud](/seguro-complementario) puede complementar la protección de tus trabajadores más allá de la remuneración.

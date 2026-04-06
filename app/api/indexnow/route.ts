@@ -7,7 +7,7 @@ const KEY_LOCATION = `https://${SITE_HOST}/${INDEXNOW_KEY}.txt`
 // All known site URLs for bulk submission
 const STATIC_URLS = [
   `https://${SITE_HOST}`,
-  `https://${SITE_HOST}/seguros-salud`,
+  `https://${SITE_HOST}/seguro-complementario`,
   `https://${SITE_HOST}/seguro-complementario-bice-pyme`,
   `https://${SITE_HOST}/seguro-complementario-bice-personas`,
   `https://${SITE_HOST}/beneficios-redagrupa`,

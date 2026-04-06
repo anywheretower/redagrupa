@@ -24,4 +24,4 @@ El objetivo asegura que los empleados disfruten de tiempo libre remunerado mient
 
 ## Conclusión
 
-El proceso de cálculo es sencillo pero varía según la política de la empresa y la legislación laboral aplicable. El bienestar del empleado abarca múltiples factores, incluyendo el descanso y los beneficios de salud. Contar con un [seguro complementario de salud](/seguros-salud) es otra forma clave en que las pymes pueden proteger a su equipo más allá de las vacaciones.
+El proceso de cálculo es sencillo pero varía según la política de la empresa y la legislación laboral aplicable. El bienestar del empleado abarca múltiples factores, incluyendo el descanso y los beneficios de salud. Contar con un [seguro complementario de salud](/seguro-complementario) es otra forma clave en que las pymes pueden proteger a su equipo más allá de las vacaciones.

@@ -56,7 +56,7 @@ export default function BlogClient({ posts, initialPage = 1 }: { posts: BlogPost
               Nosotros
             </Link>
             <Link
-              href="/seguros-salud"
+              href="/seguro-complementario"
               className="text-white font-medium text-sm"
             >
               Seguro Complementario Salud

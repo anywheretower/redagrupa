@@ -32,4 +32,4 @@ El proceso de pago contempla nueve pasos:
 8. **Comunicación a empleados:** Notificar a los empleados sobre sus pagos.
 9. **Cumplimiento de plazos legales:** Cumplir con los plazos establecidos por la legislación.
 
-Los [seguros complementarios de salud](/seguros-salud) se descuentan directamente de las remuneraciones mediante retención a través de los planes Isapre contratados. Si buscas opciones accesibles para tu pyme, conoce los [planes BICE Vida para pymes](/seguro-complementario-bice-pyme) desde UF 0,52 por persona al mes.
+Los [seguros complementarios de salud](/seguro-complementario) se descuentan directamente de las remuneraciones mediante retención a través de los planes Isapre contratados. Si buscas opciones accesibles para tu pyme, conoce los [planes BICE Vida para pymes](/seguro-complementario-bice-pyme) desde UF 0,52 por persona al mes.

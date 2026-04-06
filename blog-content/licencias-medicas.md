@@ -37,7 +37,7 @@ La legislación chilena contempla diversos tipos de licencias médicas, cada una
 
 Depende del fondo o institución al que esté afiliado el trabajador. Si está en Fonasa, este es el encargado de pagar la licencia, a través de la Comisión de Medicina Preventiva e Invalidez (Compin).
 
-En cambio, si la persona está afiliada a una isapre, esta institución es la encargada de realizar el pago de forma directa. Para complementar esta cobertura y reducir gastos de bolsillo durante una licencia, muchas pymes optan por un [seguro complementario de salud](/seguros-salud).
+En cambio, si la persona está afiliada a una isapre, esta institución es la encargada de realizar el pago de forma directa. Para complementar esta cobertura y reducir gastos de bolsillo durante una licencia, muchas pymes optan por un [seguro complementario de salud](/seguro-complementario).
 
 ## ¿Cómo se calcula el pago de las licencias médicas?
 

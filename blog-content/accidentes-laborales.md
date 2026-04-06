@@ -85,4 +85,4 @@ La capacitación de los trabajadores en materia de seguridad y salud ocupacional
 
 - **Prevención de enfermedades profesionales**: Los trabajadores deben recibir información sobre las enfermedades profesionales que pueden afectar su salud y las medidas para prevenirlas.
 
-La implementación de medidas preventivas, la capacitación de los trabajadores y la atención médica oportuna son claves para garantizar la seguridad y el bienestar de los trabajadores en el ámbito laboral. Complementar esta protección con un [seguro complementario de salud](/seguros-salud) permite cubrir gastos médicos que el sistema previsional no cubre completamente.
+La implementación de medidas preventivas, la capacitación de los trabajadores y la atención médica oportuna son claves para garantizar la seguridad y el bienestar de los trabajadores en el ámbito laboral. Complementar esta protección con un [seguro complementario de salud](/seguro-complementario) permite cubrir gastos médicos que el sistema previsional no cubre completamente.

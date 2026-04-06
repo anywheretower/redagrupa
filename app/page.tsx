@@ -179,7 +179,7 @@ export default function HomePage() {
               <Link href="/nosotros" className="text-white hover:text-white/80 transition-colors font-medium text-xs">
                 Nosotros
               </Link>
-              <Link href="/seguros-salud" className="text-white hover:text-white/80 transition-colors font-medium text-xs">
+              <Link href="/seguro-complementario" className="text-white hover:text-white/80 transition-colors font-medium text-xs">
                 Seguro Complementario Salud
               </Link>
               <Link href="/beneficios-redagrupa" className="text-white hover:text-white/80 transition-colors font-medium text-xs">
@@ -368,7 +368,7 @@ export default function HomePage() {
                 <h2 className="text-2xl sm:text-3xl font-bold text-[#cc0033] mb-2">Nuestros Servicios</h2>
                 <p className="text-base text-[#666666] mb-6">Soluciones de protección para empresas y personas</p>
                 <div className="grid grid-cols-2 gap-4">
-                  <Link href="/seguros-salud" className="group flex flex-col items-center bg-white rounded-xl p-4 text-center">
+                  <Link href="/seguro-complementario" className="group flex flex-col items-center bg-white rounded-xl p-4 text-center">
                     <div className="w-14 h-14 rounded-full bg-[#cc0033] flex items-center justify-center mx-auto mb-2">
                       <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m0-10.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.75c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.25-8.25-3.286ZM12 9h.008v.008H12V9Z" /></svg>
                     </div>

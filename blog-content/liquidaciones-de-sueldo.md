@@ -23,7 +23,7 @@ Los cálculos de sueldo en Chile incorporan varios conceptos de compensación y 
 
 **Comisiones:** Comisiones de ventas o compensación basada en actividades incluidas en las liquidaciones.
 
-**Descuentos Legales:** Deducciones obligatorias que incluyen impuesto a la renta, seguro de cesantía, [seguro complementario de salud](/seguros-salud), cotizaciones de salud y cotizaciones previsionales.
+**Descuentos Legales:** Deducciones obligatorias que incluyen impuesto a la renta, seguro de cesantía, [seguro complementario de salud](/seguro-complementario), cotizaciones de salud y cotizaciones previsionales.
 
 **Otros Descuentos:** Pagos de préstamos, cuotas sindicales y otros descuentos acordados.
 

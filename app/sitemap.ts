@@ -12,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
-      url: `${baseUrl}/seguros-salud`,
+      url: `${baseUrl}/seguro-complementario`,
       lastModified: new Date("2026-04-06"),
       changeFrequency: "monthly",
       priority: 0.9,

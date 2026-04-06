@@ -51,4 +51,4 @@ En este ejemplo, el sueldo bruto de $1.000.000 se reduce a $723.400 después de 
 
 ## Sueldo líquido a bruto y seguros complementarios
 
-Las deducciones voluntarias en [seguros complementarios de salud](/seguros-salud) son una forma eficiente de mejorar la protección de tu equipo directamente desde la nómina. Si tienes una pyme, los [planes BICE Vida para pymes](/seguro-complementario-bice-pyme) se ajustan a las necesidades de tu negocio, colaboradores y familiares.
+Las deducciones voluntarias en [seguros complementarios de salud](/seguro-complementario) son una forma eficiente de mejorar la protección de tu equipo directamente desde la nómina. Si tienes una pyme, los [planes BICE Vida para pymes](/seguro-complementario-bice-pyme) se ajustan a las necesidades de tu negocio, colaboradores y familiares.

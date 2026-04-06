@@ -55,7 +55,7 @@ export default function BicePersonasClient() {
             <Link href="/nosotros" className="text-white font-medium text-sm">
               Nosotros
             </Link>
-            <Link href="/seguros-salud" className="text-white font-medium text-sm">
+            <Link href="/seguro-complementario" className="text-white font-medium text-sm">
               Seguro Complementario Salud
             </Link>
             <Link href="/beneficios-redagrupa" className="text-white font-medium text-sm">
@@ -154,7 +154,7 @@ export default function BicePersonasClient() {
         {/* Hero Section */}
         <section className="py-32">
           <div className="container mx-auto px-4">
-            <Breadcrumbs items={[{ label: "Seguros Salud", href: "/seguros-salud" }, { label: "BICE Personas" }]} />
+            <Breadcrumbs items={[{ label: "Seguros Salud", href: "/seguro-complementario" }, { label: "BICE Personas" }]} />
             <RevealOnScroll className="max-w-4xl mx-auto text-center space-y-6">
               <h1 className="text-4xl font-bold text-[#cc0033]">
                 Seguro de Salud Complementario para Personas
@@ -557,7 +557,7 @@ export default function BicePersonasClient() {
             <div className="max-w-4xl mx-auto">
               <h2 className="text-2xl font-bold text-gray-900 text-center mb-8">Servicios relacionados</h2>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                <Link href="/seguros-salud" className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow group">
+                <Link href="/seguro-complementario" className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow group">
                   <h3 className="text-lg font-semibold text-gray-900 group-hover:text-[#cc0033] transition-colors">Seguro Complementario Salud</h3>
                   <p className="text-sm text-gray-600 mt-2">Cubre gastos que exceden Fonasa o Isapre. +300 pymes confían en RedAgrupa.</p>
                 </Link>

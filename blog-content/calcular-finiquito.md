@@ -40,4 +40,4 @@ El proceso incluye salario base, gratificaciones, vacaciones no disfrutadas y ag
 | Otros Beneficios Acumulados | Sí | Sí |
 | Seguro Complementario | Generalmente se mantiene | Generalmente se mantiene |
 
-Se recomienda buscar asesoría legal o recursos especializados para cálculos precisos, particularmente en casos de despido debido a la complejidad regulatoria. Si tu pyme ofrece un [seguro complementario de salud](/seguros-salud) a sus colaboradores, recuerda verificar las condiciones de continuidad de cobertura al momento del término de la relación laboral.
+Se recomienda buscar asesoría legal o recursos especializados para cálculos precisos, particularmente en casos de despido debido a la complejidad regulatoria. Si tu pyme ofrece un [seguro complementario de salud](/seguro-complementario) a sus colaboradores, recuerda verificar las condiciones de continuidad de cobertura al momento del término de la relación laboral.

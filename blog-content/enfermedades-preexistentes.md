@@ -17,7 +17,7 @@ Los seguros de salud complementarios son seguros que cubren enfermedades preexis
 
 Otra ventaja de los seguros complementarios es que, a menudo, no tienen limitaciones en cuanto a la edad o el historial médico del asegurado. Esto significa que las personas con enfermedades preexistentes pueden obtener cobertura sin tener que preocuparse por ser rechazados o pagar tarifas más altas debido a su condición.
 
-Además, los seguros complementarios pueden ofrecer acceso a especialistas y tratamientos que no están cubiertos por el seguro de salud básico. Esto es particularmente importante para las personas con enfermedades preexistentes que necesitan atención especializada. Los [seguros complementarios de salud](/seguros-salud) que te ofrece RedAgrupa brindan beneficios significativos para las personas con enfermedades preexistentes, ya que les da acceso a atención médica de calidad y les permiten cubrir los costos de tratamientos y servicios especializados que pueden ser costosos de otra manera.
+Además, los seguros complementarios pueden ofrecer acceso a especialistas y tratamientos que no están cubiertos por el seguro de salud básico. Esto es particularmente importante para las personas con enfermedades preexistentes que necesitan atención especializada. Los [seguros complementarios de salud](/seguro-complementario) que te ofrece RedAgrupa brindan beneficios significativos para las personas con enfermedades preexistentes, ya que les da acceso a atención médica de calidad y les permiten cubrir los costos de tratamientos y servicios especializados que pueden ser costosos de otra manera.
 
 ### Beneficios de los seguros complementarios con respecto a enfermedades preexistentes:
 

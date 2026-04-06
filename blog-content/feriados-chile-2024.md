@@ -47,4 +47,4 @@ Cuando un trabajador finaliza su relación laboral, el pago de finiquito tambié
 
 Los feriados no solo influyen en las obligaciones del empleador, sino que también impactan en los derechos del trabajador. Esto asegura que reciba sus remuneraciones y beneficios de manera adecuada incluso en fechas festivas. Un manejo cuidadoso de estos aspectos contribuye a mantener un ambiente laboral justo y cumplir con las disposiciones legales establecidas en el marco laboral chileno.
 
-Además de cumplir con las obligaciones de remuneración en feriados, las empresas que ofrecen un [seguro complementario de salud](/seguros-salud) a sus trabajadores fortalecen la protección de su equipo durante todo el año, incluyendo las fechas festivas.
+Además de cumplir con las obligaciones de remuneración en feriados, las empresas que ofrecen un [seguro complementario de salud](/seguro-complementario) a sus trabajadores fortalecen la protección de su equipo durante todo el año, incluyendo las fechas festivas.
