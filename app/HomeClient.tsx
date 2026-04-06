@@ -199,13 +199,13 @@ export default function HomeContent({ latestPosts = [] }: { latestPosts?: Latest
               <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-white to-transparent z-10" />
               <div className="flex whitespace-nowrap animate-marquee lg:animate-marquee-desktop">
                 <span className="inline-block text-[#cc0033] text-base md:text-xl font-medium px-8">
-                  Pymes que hoy respiran más tranquilas | Recuperar hasta 40 horas anuales del tiempo de un profesional para retención talento y estrategia |
+                  Pymes que hoy respiran más tranquilas | Recuperar hasta 40 horas anuales del tiempo de un profesional para retención de talento y estrategia |
                 </span>
                 <span className="inline-block text-[#cc0033] text-base md:text-xl font-medium px-8" aria-hidden="true">
-                  Pymes que hoy respiran más tranquilas | Recuperar hasta 40 horas anuales del tiempo de un profesional para retención talento y estrategia |
+                  Pymes que hoy respiran más tranquilas | Recuperar hasta 40 horas anuales del tiempo de un profesional para retención de talento y estrategia |
                 </span>
                 <span className="inline-block text-[#cc0033] text-base md:text-xl font-medium px-8" aria-hidden="true">
-                  Pymes que hoy respiran más tranquilas | Recuperar hasta 40 horas anuales del tiempo de un profesional para retención talento y estrategia |
+                  Pymes que hoy respiran más tranquilas | Recuperar hasta 40 horas anuales del tiempo de un profesional para retención de talento y estrategia |
                 </span>
               </div>
             </div>

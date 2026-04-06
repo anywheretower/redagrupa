@@ -361,9 +361,9 @@
         <tr><td>C2</td><td>Trust microcopy bajo formulario: &ldquo;24 hrs&rdquo;, &ldquo;100% protegidos&rdquo;, &ldquo;+300 empresas&rdquo;<div class="detail">Bien ejecutado</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>C3</td><td><strong>Sin sticky CTA ni WhatsApp en subp&aacute;ginas</strong> &mdash; solo homepage tiene ambos<div class="detail">Mover a layout.tsx o componente compartido</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
         <tr><td>C4</td><td><strong>CTAs BICE Pyme/Personas env&iacute;an leads a BICE directamente</strong> (&ldquo;Contrata Aqu&iacute;&rdquo; = CTA primario)<div class="detail">Invertir: &ldquo;Solicitar Asesor&iacute;a&rdquo; primario, &ldquo;Contrata Directo&rdquo; secundario</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
-        <tr><td>C5</td><td><strong>/seguros-salud sin precios ni gu&iacute;a de planes</strong> &mdash; educa pero no convierte<div class="detail">Agregar secci&oacute;n &ldquo;Desde UF 0,52/mes&rdquo; con links a planes BICE</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>C6</td><td>Plan &ldquo;M&aacute;s vendido&rdquo; (Pyme Premium) sin &eacute;nfasis visual vs Elite Plus que tiene bg oscuro<div class="detail">Agregar border-2 border-[#cc0033] + &ldquo;Recomendado&rdquo;</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>C7</td><td>Sin social proof cerca de pricing cards en BICE Pyme<div class="detail">Agregar mini testimonial o stat &ldquo;+300 empresas&rdquo;</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>C5</td><td>Secci&oacute;n &ldquo;Desde UF 0,52/mes&rdquo; en /seguros-salud con cards a BICE Pyme y BICE Personas<div class="detail">SegurosSaludClient.tsx &mdash; convierte visitante informativo en lead</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
+        <tr><td>C6</td><td>Plan Pyme Premium con borde rojo + badge &ldquo;Recomendado&rdquo;<div class="detail">BicePymeClient.tsx &mdash; gu&iacute;a visual de decisi&oacute;n</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
+        <tr><td>C7</td><td>Social proof &ldquo;+300 empresas&rdquo; bajo pricing cards BICE Pyme<div class="detail">BicePymeClient.tsx &mdash; confianza en momento de decisi&oacute;n</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>C8</td><td>Form heading id&eacute;ntico gen&eacute;rico en 5 de 6 p&aacute;ginas<div class="detail">Personalizar por intent: BICE=&ldquo;Cotiza plan BICE&rdquo;, Salud=&ldquo;Comparamos aseguradoras&rdquo;</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
         <tr><td>C9</td><td>Sin urgencia/escasez leg&iacute;tima: &ldquo;Precios var&iacute;an con UF vigente &mdash; cotiza hoy&rdquo;<div class="detail">Factuamente correcto, soft urgency</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
       </table>
@@ -375,11 +375,11 @@
         <tr><th style="width:40px">#</th><th>Hallazgo</th><th style="width:90px">Estado</th></tr>
         <tr><td>C10</td><td>Honeypot + validaci&oacute;n temporal anti-bot implementados correctamente<div class="detail">ContactForm.tsx &mdash; sin CAPTCHA visible</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>C11</td><td><strong>Bot&oacute;n &ldquo;Enviar Mensaje&rdquo;</strong> gen&eacute;rico y pasivo<div class="detail">Cambiar a &ldquo;Solicitar Cotizaci&oacute;n Gratis&rdquo; o &ldquo;Recibir mi cotizaci&oacute;n&rdquo;</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>C12</td><td>Tel&eacute;fono sin formato sugerido: placeholder solo dice &ldquo;Tel&eacute;fono&rdquo;<div class="detail">Cambiar a &ldquo;Ej: +56 9 1234 5678&rdquo;</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>C13</td><td>Textarea rows={4} alarga el formulario innecesariamente para lead capture<div class="detail">Reducir a rows={2} o colapsar tras &ldquo;Agregar mensaje (opcional)&rdquo;</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>C14</td><td>Mensaje post-submit gen&eacute;rico: &ldquo;a la brevedad&rdquo; &mdash; no refuerza &ldquo;24 hrs&rdquo;<div class="detail">Cambiar a &ldquo;Te contactaremos en menos de 24 hrs h&aacute;biles por email o tel&eacute;fono&rdquo;</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>C12</td><td>Placeholder tel&eacute;fono con formato ejemplo: &ldquo;Ej: +56 9 1234 5678&rdquo;<div class="detail">ContactForm.tsx &mdash; gu&iacute;a al usuario</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
+        <tr><td>C13</td><td>Textarea reducido de rows=4 a rows=2 &mdash; formulario m&aacute;s corto<div class="detail">ContactForm.tsx &mdash; menos fricci&oacute;n</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
+        <tr><td>C14</td><td>Mensaje post-submit: &ldquo;en menos de 24 hrs h&aacute;biles por email o tel&eacute;fono&rdquo;<div class="detail">ContactForm.tsx &mdash; refuerza timeframe concreto</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>C15</td><td>aria-required=true + asterisco * en 4 campos obligatorios (condicional en empresa)<div class="detail">ContactForm.tsx &mdash; indicador visual y sem&aacute;ntico</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
-        <tr><td>C16</td><td>Sin &ldquo;sin compromiso&rdquo; expl&iacute;cito cerca del formulario<div class="detail">Agregar subt&iacute;tulo &ldquo;Cotizaci&oacute;n gratuita y sin compromiso&rdquo;</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>C16</td><td>&ldquo;Cotizaci&oacute;n gratuita y sin compromiso&rdquo; bajo heading del formulario<div class="detail">ContactForm.tsx &mdash; reduce fricci&oacute;n de conversi&oacute;n</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>C17</td><td>Sin auto-reply email al usuario tras env&iacute;o (solo modal en p&aacute;gina)<div class="detail">Agregar 2do call Resend con confirmaci&oacute;n + timeframe</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
       </table>
     </div>
@@ -389,11 +389,11 @@
       <table>
         <tr><th style="width:40px">#</th><th>Hallazgo</th><th style="width:90px">Estado</th></tr>
         <tr><td>C18</td><td>Exit-intent con post-conversion suppression, GTM tracking, focus trap, WhatsApp + form CTAs<div class="detail">Bien implementado</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
-        <tr><td>C19</td><td><strong>WhatsApp n&uacute;mero inconsistente</strong>: popup usa 56228132245 (fijo), resto usa 56982414614 (m&oacute;vil/WA Business)<div class="detail">ExitIntentPopup.tsx:181 + BlogPostClient.tsx:319 &mdash; BUG</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
+        <tr><td>C19</td><td>WhatsApp n&uacute;mero unificado a 56982414614 (WA Business) en popup y blog<div class="detail">ExitIntentPopup.tsx + BlogPostClient.tsx &mdash; BUG corregido</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>C20</td><td><strong>Sin ESC key para cerrar popup</strong> &mdash; viola WCAG 2.1.2<div class="detail">Agregar if (e.key === &ldquo;Escape&rdquo;) handleDismiss()</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
-        <tr><td>C21</td><td>Bot&oacute;n &ldquo;Llenar formulario&rdquo; no funciona en p&aacute;ginas sin #formulario-contacto<div class="detail">Fallback: navegar a /#formulario-contacto si no existe</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>C22</td><td>Mobile trigger a 15s + 300px scroll-up es agresivo (Google interstitial guidelines)<div class="detail">Aumentar a 30-45s + 50% scroll depth</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>C23</td><td>Frecuencia: sessionStorage &mdash; popup reaparece en cada sesi&oacute;n nueva<div class="detail">Usar localStorage con TTL 7 d&iacute;as</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>C21</td><td>Bot&oacute;n popup &ldquo;Llenar formulario&rdquo; con fallback a /#formulario-contacto<div class="detail">ExitIntentPopup.tsx &mdash; funciona en todas las p&aacute;ginas</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
+        <tr><td>C22</td><td>Mobile trigger a 15s + 300px scroll-up es agresivo (Google interstitial guidelines)<div class="detail">Mantiene timing actual por decisi&oacute;n del cliente (bounce alto)</div></td><td><span class="badge badge-client">Cliente</span></td></tr>
+        <tr><td>C23</td><td>Popup frecuencia: localStorage con TTL 7 d&iacute;as (antes sessionStorage)<div class="detail">ExitIntentPopup.tsx &mdash; no reaparece por 7 d&iacute;as tras dismiss</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
       </table>
     </div>
 
@@ -403,10 +403,10 @@
         <tr><th style="width:40px">#</th><th>Hallazgo</th><th style="width:90px">Estado</th></tr>
         <tr><td>C24</td><td><strong>H1 de /seguros-salud y /beneficios son etiquetas categ&oacute;ricas</strong>, no headlines persuasivos<div class="detail">&ldquo;Seguro Complementario de Salud&rdquo; = nombre del producto, no beneficio</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
         <tr><td>C25</td><td><strong>Sin value proposition &uacute;nica y memorable</strong> &mdash; &ldquo;gestionar&rdquo; aparece 40+ veces<div class="detail">Necesita frase flagship: outcome-oriented, no process-oriented</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>C26</td><td><strong>Registro inconsistente: /nosotros usa &ldquo;usted&rdquo;</strong>, resto del sitio usa &ldquo;t&uacute;&rdquo;<div class="detail">Estandarizar tuteo en todo el sitio</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>C27</td><td><strong>Copy t&eacute;cnico contradice promesa &ldquo;sin lenguaje t&eacute;cnico&rdquo;</strong><div class="detail">&ldquo;sistema previsional de salud&rdquo;, &ldquo;continuidad operativa&rdquo;, &ldquo;modelo de gesti&oacute;n centralizada&rdquo;</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>C26</td><td>Tuteo estandarizado en /nosotros (&ldquo;Delegue/su&rdquo; &rarr; &ldquo;Delega/tu&rdquo;)<div class="detail">NosotrosClient.tsx &mdash; consistencia de tono en todo el sitio</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
+        <tr><td>C27</td><td>Copy t&eacute;cnico simplificado: &ldquo;sistema previsional&rdquo;, &ldquo;continuidad operativa&rdquo;, &ldquo;gesti&oacute;n centralizada&rdquo;<div class="detail">SegurosSaludClient + BeneficiosClient &mdash; lenguaje accesible</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>C28</td><td><strong>Sin manejo de objeciones</strong> en todo el sitio (&ldquo;es caro&rdquo;, &ldquo;ya tengo Isapre&rdquo;, &ldquo;contrato directo&rdquo;)<div class="detail">Agregar secci&oacute;n espec&iacute;fica en homepage y /seguros-salud</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
-        <tr><td>C29</td><td>Marquee id&eacute;ntico en 3 p&aacute;ginas, gram&aacute;tica rota (&ldquo;para retenci&oacute;n talento y estrategia&rdquo;)<div class="detail">Personalizar por p&aacute;gina, corregir gram&aacute;tica</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>C29</td><td>Marquee gram&aacute;tica corregida: &ldquo;retenci&oacute;n talento&rdquo; &rarr; &ldquo;retenci&oacute;n de talento&rdquo; en 3 p&aacute;ginas<div class="detail">HomeClient + SegurosSalud + Beneficios</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>C30</td><td>/seguros-salud intro lee como textbook de seguros, no p&aacute;gina de venta<div class="detail">Reescribir con protagonista=lector, escenarios concretos</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
         <tr><td>C31</td><td>Social proof (3 testimonios) solo en homepage &mdash; ninguno en subp&aacute;ginas<div class="detail">A&ntilde;adir 1 testimonial relevante por subp&aacute;gina</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
       </table>
@@ -537,22 +537,22 @@
     <div style="text-align: center; margin-bottom: 16px; font-size: 13px; font-weight: 600; color: #475569;">Resumen Total de Hallazgos</div>
     <div class="footer-grid">
       <div class="footer-item">
-        <div class="footer-num" style="color: #dc2626;">19</div>
+        <div class="footer-num" style="color: #dc2626;">18</div>
         <div class="footer-label">Cr&iacute;ticos</div>
       </div>
       <div class="footer-divider"></div>
       <div class="footer-item">
-        <div class="footer-num" style="color: #ea580c;">83</div>
+        <div class="footer-num" style="color: #ea580c;">70</div>
         <div class="footer-label">Pendientes</div>
       </div>
       <div class="footer-divider"></div>
       <div class="footer-item">
-        <div class="footer-num" style="color: #16a34a;">44</div>
+        <div class="footer-num" style="color: #16a34a;">57</div>
         <div class="footer-label">Aplicadas</div>
       </div>
       <div class="footer-divider"></div>
       <div class="footer-item">
-        <div class="footer-num" style="color: #5b21b6;">3</div>
+        <div class="footer-num" style="color: #5b21b6;">4</div>
         <div class="footer-label">Req. Cliente</div>
       </div>
       <div class="footer-divider"></div>

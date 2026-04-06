@@ -265,12 +265,19 @@ export default function BicePymeClient() {
                 {planes.map((plan) => (
                   <div
                     key={plan.nombre}
-                    className={`rounded-2xl p-6 flex flex-col justify-between ${
+                    className={`rounded-2xl p-6 flex flex-col justify-between relative ${
                       plan.destacado
                         ? "bg-[#1a1a2e] text-white shadow-2xl"
+                        : plan.nombre === "Pyme Premium"
+                        ? "bg-white border-2 border-[#cc0033] shadow-lg"
                         : "bg-white border border-gray-200 shadow-sm"
                     }`}
                   >
+                    {plan.nombre === "Pyme Premium" && (
+                      <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#cc0033] text-white text-xs font-semibold px-4 py-1 rounded-full">
+                        Recomendado
+                      </span>
+                    )}
                     <div>
                       <span
                         className={`inline-block text-xs font-medium px-3 py-1 rounded-full mb-4 ${plan.etiquetaColor}`}
@@ -428,6 +435,11 @@ export default function BicePymeClient() {
               <p className="text-sm text-gray-500 text-center mt-8">
                 Precios de planes con IVA incluido. Valores referenciales en UF. El precio en pesos puede variar según el valor de la UF vigente.
               </p>
+              <div className="flex items-center justify-center gap-6 mt-6 text-sm text-gray-500">
+                <span className="font-semibold text-[#cc0033]">+300 empresas</span> confían en RedAgrupa
+                <span className="hidden sm:inline">·</span>
+                <span className="hidden sm:inline">+10 años de experiencia</span>
+              </div>
             </div>
           </div>
         </section>

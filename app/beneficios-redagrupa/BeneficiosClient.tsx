@@ -207,17 +207,17 @@ export default function BeneficiosClient() {
               <div className="animate-marquee whitespace-nowrap text-[#cc0033] font-medium">
                 <span className="mx-8">
                   Pymes que hoy respiran más tranquilas | Recuperar hasta 40 horas anuales del tiempo de un profesional
-                  para retención talento y estrategia. | ¿Sabías que el 70% de los colaboradores no entiende su
+                  para retención de talento y estrategia. | ¿Sabías que el 70% de los colaboradores no entiende su
                   cobertura?
                 </span>
                 <span className="mx-8">
                   Pymes que hoy respiran más tranquilas | Recuperar hasta 40 horas anuales del tiempo de un profesional
-                  para retención talento y estrategia. | ¿Sabías que el 70% de los colaboradores no entiende su
+                  para retención de talento y estrategia. | ¿Sabías que el 70% de los colaboradores no entiende su
                   cobertura?
                 </span>
                 <span className="mx-8">
                   Pymes que hoy respiran más tranquilas | Recuperar hasta 40 horas anuales del tiempo de un profesional
-                  para retención talento y estrategia. | ¿Sabías que el 70% de los colaboradores no entiende su
+                  para retención de talento y estrategia. | ¿Sabías que el 70% de los colaboradores no entiende su
                   cobertura?
                 </span>
               </div>
@@ -264,11 +264,10 @@ export default function BeneficiosClient() {
                   <h3 className="text-2xl font-bold text-gray-900">Convenios con gimnasios y actividad física</h3>
                   <p className="text-base text-gray-700 leading-[1.1]">
                     Los clientes de RedAgrupa acceden a convenios preferenciales con gimnasios y centros deportivos
-                    a lo largo de Chile. Estos convenios forman parte del modelo de gestión centralizada de beneficios:
-                    RedAgrupa negocia las condiciones, coordina la implementación y la empresa solo comunica el
-                    beneficio a sus colaboradores, sin carga administrativa adicional. La actividad física regular
-                    contribuye a reducir licencias médicas y mejorar el rendimiento laboral, impactando directamente
-                    en la continuidad operativa de la empresa.
+                    a lo largo de Chile. Nosotros negociamos las condiciones y coordinamos todo: tu empresa solo
+                    comunica el beneficio a sus colaboradores, sin carga administrativa. La actividad física regular
+                    ayuda a reducir licencias médicas y mejorar el rendimiento, manteniendo a tu equipo activo
+                    y presente.
                   </p>
                 </div>
 
@@ -357,7 +356,7 @@ export default function BeneficiosClient() {
               <RevealOnScroll>
               <div className="text-center space-y-4 mb-16">
                 <p className="text-xs sm:text-sm uppercase tracking-wider text-[#666666]">
-                  Salud preventiva orientada a continuidad operativa
+                  Salud preventiva para equipos más sanos y productivos
                 </p>
                 <h2 className="text-2xl font-bold text-gray-900">
                   ¿Cómo funciona la coordinación de vacunación para empresas?

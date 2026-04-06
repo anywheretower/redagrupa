@@ -144,7 +144,7 @@ export default function NosotrosClient() {
             <Breadcrumbs items={[{ label: "Nosotros" }]} />
             <RevealOnScroll className="max-w-4xl mx-auto text-center space-y-6">
               <h1 className="text-4xl font-bold text-[#cc0033]">
-                Delegue la gestión del Seguro Complementario y enfoque su empresa en lo estratégico
+                Delega la gestión del Seguro Complementario y enfoca tu empresa en lo estratégico
               </h1>
               <p className="text-base text-gray-700 leading-[1.1]">
                 En RedAgrupa ayudamos a las empresas a ahorrar tiempo y reducir carga administrativa, delegando en especialistas la gestión del Seguro Complementario de Salud y los beneficios asociados.
@@ -279,7 +279,7 @@ export default function NosotrosClient() {
                 La administración de beneficios no debería consumir tiempo estratégico dentro de la empresa. Ese es nuestro trabajo.
               </p>
               <p className="text-base text-gray-700 leading-[1.1]">
-                Si su organización busca eficiencia, orden y respaldo técnico en la gestión del Seguro Complementario y beneficios de salud, conversemos.
+                Si tu empresa busca eficiencia, orden y respaldo técnico en la gestión del Seguro Complementario y beneficios de salud, conversemos.
               </p>
               <div className="pt-4">
                 <Button

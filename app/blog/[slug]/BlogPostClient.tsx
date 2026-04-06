@@ -320,7 +320,7 @@ export default function BlogPostClient({
                     Solicitar Asesoría Gratis
                   </Link>
                   <a
-                    href="https://wa.me/56228132245?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20complementario%20para%20mi%20empresa"
+                    href="https://wa.me/56982414614?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20complementario%20para%20mi%20empresa"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 border border-white/50 text-white font-medium text-sm px-6 py-3 rounded-full hover:bg-white/10 transition-colors"

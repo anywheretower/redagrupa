@@ -114,9 +114,10 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
   return (
     <>
       <Toaster richColors position="top-center" />
-      <h2 className="text-xl lg:text-2xl font-bold text-[#333333] text-center mb-6 leading-snug">
+      <h2 className="text-xl lg:text-2xl font-bold text-[#333333] text-center mb-2 leading-snug">
         {heading}
       </h2>
+      <p className="text-sm text-center text-[#666666] mb-6">Cotización gratuita y sin compromiso</p>
 
       <form className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
         {/* Honeypot anti-bot — invisible para usuarios reales */}
@@ -170,7 +171,7 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
             <input
               id="telefono"
               type="tel"
-              placeholder="Teléfono *"
+              placeholder="Teléfono (Ej: +56 9 1234 5678) *"
               className={inputClass}
               aria-required="true"
               aria-invalid={!!errors.telefono}
@@ -205,7 +206,7 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
           <textarea
             id="mensaje"
             placeholder="Mensaje (Opcional)"
-            rows={4}
+            rows={2}
             className="w-full px-4 py-2.5 bg-gray-100 border-0 rounded-lg text-sm text-gray-900 placeholder-gray-500 resize-none focus:outline-none focus:ring-2 focus:ring-[#cc0033]"
             {...register("mensaje")}
           />
@@ -274,7 +275,7 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
               ¡Mensaje enviado!
             </h3>
             <p className="text-gray-600 mb-6">
-              Gracias por contactarnos. Nos pondremos en contacto contigo a la brevedad.
+              Gracias por contactarnos. Te contactaremos en menos de 24 hrs hábiles por email o teléfono.
             </p>
 
             <button

@@ -45,7 +45,8 @@ export default function ExitIntentPopup() {
   }, [show, trapFocus])
 
   useEffect(() => {
-    if (sessionStorage.getItem("redagrupa_exit_dismissed")) return
+    const dismissedAt = localStorage.getItem("redagrupa_exit_dismissed")
+    if (dismissedAt && Date.now() - Number(dismissedAt) < 7 * 24 * 60 * 60 * 1000) return
     if (sessionStorage.getItem("redagrupa_form_submitted")) return
 
     const isMobile = window.innerWidth < 1024
@@ -115,14 +116,14 @@ export default function ExitIntentPopup() {
   const handleDismiss = () => {
     setShow(false)
     setDismissed(true)
-    sessionStorage.setItem("redagrupa_exit_dismissed", "1")
+    localStorage.setItem("redagrupa_exit_dismissed", String(Date.now()))
     pushEvent({ event: "exit_intent_dismissed" })
   }
 
   const handleCTA = (type: "whatsapp" | "form") => {
     setShow(false)
     setDismissed(true)
-    sessionStorage.setItem("redagrupa_exit_dismissed", "1")
+    localStorage.setItem("redagrupa_exit_dismissed", String(Date.now()))
     pushEvent({ event: "exit_intent_cta_click", cta_type: type })
     if (type === "whatsapp") {
       pushEvent({ event: "whatsapp_click", click_source: "exit_intent" })
@@ -178,7 +179,7 @@ export default function ExitIntentPopup() {
           </div>
 
           <a
-            href="https://wa.me/56228132245?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20complementario%20para%20mi%20empresa"
+            href="https://wa.me/56982414614?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20complementario%20para%20mi%20empresa"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => handleCTA("whatsapp")}
@@ -193,7 +194,12 @@ export default function ExitIntentPopup() {
           <button
             onClick={() => {
               handleCTA("form")
-              document.getElementById("formulario-contacto")?.scrollIntoView({ behavior: "smooth" })
+              const form = document.getElementById("formulario-contacto")
+              if (form) {
+                form.scrollIntoView({ behavior: "smooth" })
+              } else {
+                window.location.href = "/#formulario-contacto"
+              }
             }}
             className="mt-3 block w-full text-center rounded-full border border-gray-200 px-6 py-3 text-sm font-medium text-[#333333] hover:bg-gray-50 transition-colors"
           >

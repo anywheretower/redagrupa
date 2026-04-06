@@ -183,10 +183,9 @@ export default function SegurosSaludClient() {
             </div>
             <RevealOnScroll className="max-w-4xl mx-auto space-y-6">
               <p className="text-base text-gray-700 leading-[1.1]">
-                El Seguro Complementario de Salud es un beneficio altamente valorado por las empresas que buscan
-                entregar una mejor protección a sus trabajadores frente a gastos médicos no cubiertos completamente
-                por el sistema previsional de salud. Este tipo de seguro cubre, en la proporción y hasta los montos
-                establecidos en la póliza, los gastos que exceden la cobertura base de Fonasa o Isapre.
+                El Seguro Complementario de Salud es un beneficio que protege a tus trabajadores frente a gastos
+                médicos no cubiertos completamente por Fonasa o Isapre. Este seguro cubre el copago que queda
+                después de la bonificación, según los porcentajes y topes de la póliza contratada.
               </p>
               <p className="text-base text-gray-700 leading-[1.1]">
                 Para pymes y empresas medianas, el Seguro Complementario de Salud representa una herramienta
@@ -208,17 +207,17 @@ export default function SegurosSaludClient() {
               <div className="animate-marquee whitespace-nowrap text-[#cc0033] font-medium">
                 <span className="mx-8">
                   Pymes que hoy respiran más tranquilas | Recuperar hasta 40 horas anuales del tiempo de un profesional
-                  para retención talento y estrategia. | ¿Sabías que el 70% de los colaboradores no entiende su
+                  para retención de talento y estrategia. | ¿Sabías que el 70% de los colaboradores no entiende su
                   cobertura?
                 </span>
                 <span className="mx-8">
                   Pymes que hoy respiran más tranquilas | Recuperar hasta 40 horas anuales del tiempo de un profesional
-                  para retención talento y estrategia. | ¿Sabías que el 70% de los colaboradores no entiende su
+                  para retención de talento y estrategia. | ¿Sabías que el 70% de los colaboradores no entiende su
                   cobertura?
                 </span>
                 <span className="mx-8">
                   Pymes que hoy respiran más tranquilas | Recuperar hasta 40 horas anuales del tiempo de un profesional
-                  para retención talento y estrategia. | ¿Sabías que el 70% de los colaboradores no entiende su
+                  para retención de talento y estrategia. | ¿Sabías que el 70% de los colaboradores no entiende su
                   cobertura?
                 </span>
               </div>
@@ -244,8 +243,7 @@ export default function SegurosSaludClient() {
                 reduciendo significativamente el gasto de bolsillo del trabajador.
               </p>
               <p className="text-base text-gray-700 leading-[1.1]">
-                Desde un punto de vista técnico, este seguro actúa como una ampliación de la cobertura del sistema
-                previsional, aplicable a distintas prestaciones médicas.
+                En la práctica, es como ampliar tu cobertura de Fonasa o Isapre: consultas, exámenes, hospitalización y más quedan cubiertos con menos gasto para tu equipo.
               </p>
             </RevealOnScroll>
           </div>
@@ -370,8 +368,48 @@ export default function SegurosSaludClient() {
           </div>
         </section>
 
+        {/* Planes y precios */}
+        <section className="py-16 lg:py-24">
+          <div className="container mx-auto px-4">
+            <RevealOnScroll className="max-w-4xl mx-auto text-center space-y-6">
+              <h2 className="text-2xl font-bold text-gray-900">Planes desde UF 0,52/mes por trabajador</h2>
+              <p className="text-base text-gray-700 leading-[1.1] max-w-3xl mx-auto">
+                RedAgrupa compara planes de las principales aseguradoras para encontrar la mejor relación cobertura-precio para tu empresa. Estos son algunos de los planes más solicitados:
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto mt-8">
+                <Link
+                  href="/seguro-complementario-bice-pyme"
+                  className="group rounded-xl border border-gray-200 p-6 hover:border-[#cc0033] hover:shadow-lg transition-all text-center"
+                >
+                  <p className="text-xs uppercase tracking-wider text-[#666666] mb-2">Empresas desde 5 trabajadores</p>
+                  <h3 className="text-lg font-bold text-[#333333] group-hover:text-[#cc0033] transition-colors">Seguro BICE Pyme</h3>
+                  <p className="text-2xl font-bold text-[#cc0033] mt-2">Desde UF 0,52<span className="text-sm font-normal text-gray-500">/mes</span></p>
+                  <p className="text-sm text-gray-500 mt-2">4 planes · Salud + Vida en una sola póliza</p>
+                </Link>
+                <Link
+                  href="/seguro-complementario-bice-personas"
+                  className="group rounded-xl border border-gray-200 p-6 hover:border-[#cc0033] hover:shadow-lg transition-all text-center"
+                >
+                  <p className="text-xs uppercase tracking-wider text-[#666666] mb-2">Individual y familiar</p>
+                  <h3 className="text-lg font-bold text-[#333333] group-hover:text-[#cc0033] transition-colors">Seguro BICE Personas</h3>
+                  <p className="text-2xl font-bold text-[#cc0033] mt-2">Desde UF 0,58<span className="text-sm font-normal text-gray-500">/mes</span></p>
+                  <p className="text-sm text-gray-500 mt-2">5 niveles · Sin carencias · Cobertura nacional</p>
+                </Link>
+              </div>
+              <p className="text-sm text-gray-500 mt-4">
+                ¿No sabes cuál elegir? Solicita asesoría gratuita y te ayudamos a comparar.
+              </p>
+              <div className="pt-2">
+                <Button onClick={scrollToForm} className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3">
+                  Solicitar Asesoría Gratis
+                </Button>
+              </div>
+            </RevealOnScroll>
+          </div>
+        </section>
+
         {/* Asesoría especializada */}
-        <section className="py-32">
+        <section className="py-32 bg-gray-50">
           <div className="container mx-auto px-4">
             <RevealOnScroll className="max-w-4xl mx-auto text-center space-y-6">
               <Users className="w-12 h-12 text-[#cc0033] mx-auto" strokeWidth={1.5} />
