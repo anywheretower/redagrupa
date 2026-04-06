@@ -23,7 +23,7 @@ Las OTEC también pueden diseñar cursos personalizados para atender las necesid
 ### Beneficios de capacitar a tus colaboradores con una OTEC:
 
 - **Mejora en la productividad y el desempeño laboral:** Los colaboradores capacitados son más eficientes, cometen menos errores y están más comprometidos con su trabajo.
-- **Reducción de costos:** La capacitación preventiva puede reducir los costos asociados a accidentes laborales, rotación de personal y baja productividad.
+- **Reducción de costos:** La capacitación preventiva puede reducir los costos asociados a accidentes laborales, rotación de personal y baja productividad. Complementar la capacitación con [beneficios corporativos](/beneficios-redagrupa) como seguros de salud refuerza aún más la retención del equipo.
 - **Mayor innovación y adaptación al cambio:** Los colaboradores capacitados son más propensos a adoptar nuevas tecnologías, procesos y metodologías de trabajo.
 - **Mejora en el clima laboral:** La capacitación fomenta el trabajo en equipo, la comunicación efectiva y el desarrollo personal de los colaboradores, generando un ambiente laboral más positivo.
 - **Mayor competitividad empresarial:** Una empresa con colaboradores capacitados y actualizados se encuentra mejor posicionada para competir en el mercado.
@@ -51,4 +51,4 @@ A continuación, te presentamos los pasos necesarios para verificar si una OTEC 
 6. Asegúrate de que la OTEC esté habilitada para impartir cursos en las áreas temáticas que te interesan. En la sección de «Áreas Temáticas» encontrarás una lista detallada de las áreas en las que la OTEC está certificada.
 7. El Registro Nacional de OTEC también muestra el historial de sanciones de cada OTEC. Si una OTEC ha sido sancionada por el SENCE, esta información estará disponible en la sección correspondiente.
 
-Invertir en la capacitación laboral de tus colaboradores es una decisión estratégica que te permitirá potenciar el capital humano de tu empresa, impulsar su productividad, competitividad y crecimiento a largo plazo.
+Invertir en la capacitación laboral de tus colaboradores es una decisión estratégica que te permitirá potenciar el capital humano de tu empresa, impulsar su productividad, competitividad y crecimiento a largo plazo. Otra forma de invertir en tu equipo es ofrecer un [seguro complementario de salud](/seguros-salud) que proteja a tus trabajadores y sus familias.

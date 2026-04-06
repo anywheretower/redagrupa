@@ -29,3 +29,5 @@ El proceso consta de varias etapas: establecimiento de criterios e indicadores, 
 ## Beneficios de la Evaluación de Desempeño 360
 
 Esta metodología recopila retroalimentación de múltiples fuentes incluyendo supervisores, compañeros, subordinados y clientes. Permite identificar fortalezas y áreas de mejora con mayor precisión, obtener evaluación objetiva confiable, facilitar identificación de necesidades capacitativas, promover comunicación efectiva, estimular crecimiento personal profesional, fortalecer colaboración y aumentar motivación organizacional.
+
+Complementar la evaluación de desempeño con [beneficios corporativos](/beneficios-redagrupa) como seguros de salud refuerza el compromiso de la empresa con el bienestar de sus colaboradores, mejorando tanto la satisfacción como la retención del talento.

@@ -62,4 +62,4 @@ El despido debe seguir un procedimiento legal establecido en el Código del Trab
 
 Las causales de despido en Chile constituyen un tema de gran relevancia para los empleadores, quienes deben manejar con cautela y conocimiento estas herramientas legales a fin de tomar decisiones justas y fundamentadas en el marco de la relación laboral.
 
-La comprensión profunda de las causales, sus requisitos y las implicaciones legales asociadas es esencial para evitar conflictos y proteger el correcto funcionamiento de la empresa.
+La comprensión profunda de las causales, sus requisitos y las implicaciones legales asociadas es esencial para evitar conflictos y proteger el correcto funcionamiento de la empresa. Más allá de cumplir con la ley, invertir en [beneficios corporativos](/beneficios-redagrupa) como seguros de salud ayuda a reducir la rotación y fortalecer la relación con tus colaboradores.

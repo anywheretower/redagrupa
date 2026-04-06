@@ -13,7 +13,7 @@ El teletrabajo consiste en la realización de la jornada laboral fuera del lugar
 - **Reducción de costos:** El teletrabajo permite a las empresas reducir costos asociados a la infraestructura física, como arriendos, servicios públicos y equipamiento de oficina.
 - **Mayor productividad:** Estudios han demostrado que los trabajadores a distancia suelen ser más productivos que aquellos que trabajan en una oficina tradicional.
 - **Atracción y retención de talento:** El teletrabajo ofrece una mayor flexibilidad laboral que puede ser atractiva para un amplio espectro de talentos, incluyendo profesionales con familias, personas con discapacidades o aquellos que viven en zonas alejadas de las oficinas centrales de la empresa.
-- **Mejora del bienestar laboral:** El teletrabajo puede contribuir a mejorar el bienestar laboral de los trabajadores al permitirles conciliar mejor su vida personal y profesional.
+- **Mejora del bienestar laboral:** El teletrabajo puede contribuir a mejorar el bienestar laboral de los trabajadores al permitirles conciliar mejor su vida personal y profesional. Complementar con un [seguro complementario de salud](/seguros-salud) refuerza la protección del equipo, sin importar desde dónde trabajen.
 - **Reducción del impacto ambiental:** Reduce la cantidad de desplazamientos de los trabajadores, contribuyendo así a la disminución de la contaminación y las emisiones de gases de efecto invernadero.
 
 ### Para los trabajadores:
@@ -59,4 +59,4 @@ La empresa debe fomentar una cultura de trabajo en equipo entre los colaboradore
 
 La empresa debe adaptarse a las necesidades de los trabajadores a distancia, considerando que el teletrabajo es un proceso que requiere tiempo y ajustes.
 
-En definitiva, el teletrabajo se perfila como una tendencia laboral con un gran potencial para transformar el panorama empresarial chileno. Al adoptar esta modalidad de manera estratégica y responsable, pueden optimizar sus recursos, potenciar la productividad de sus colaboradores y contribuir a un futuro laboral más flexible, equilibrado y sostenible.
+En definitiva, el teletrabajo se perfila como una tendencia laboral con un gran potencial para transformar el panorama empresarial chileno. Al adoptar esta modalidad de manera estratégica y responsable, las empresas pueden optimizar sus recursos, potenciar la productividad de sus colaboradores y contribuir a un futuro laboral más flexible, equilibrado y sostenible. Ofrecer [beneficios corporativos](/beneficios-redagrupa) a los colaboradores remotos es clave para mantener su compromiso y bienestar.

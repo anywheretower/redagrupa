@@ -73,4 +73,4 @@ La gestión de los EPP es un proceso integral que involucra a diversos actores d
 
 ## Conclusión
 
-Es importante destacar que la gestión de los EPP es un proceso dinámico que debe adaptarse a las necesidades cambiantes del entorno laboral y a las nuevas tecnologías disponibles. Las empresas deben estar atentas a las nuevas tendencias en materia de EPP, como el desarrollo de materiales más ligeros y resistentes, para ofrecer a sus trabajadores la mejor protección posible.
+Es importante destacar que la gestión de los EPP es un proceso dinámico que debe adaptarse a las necesidades cambiantes del entorno laboral y a las nuevas tecnologías disponibles. Las empresas deben estar atentas a las nuevas tendencias en materia de EPP, como el desarrollo de materiales más ligeros y resistentes, para ofrecer a sus trabajadores la mejor protección posible. La protección del trabajador no termina en los EPP: complementar con un [seguro complementario de salud](/seguros-salud) asegura cobertura ante accidentes y enfermedades que van más allá del ámbito laboral.

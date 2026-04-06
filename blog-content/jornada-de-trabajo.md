@@ -14,7 +14,7 @@ La jornada de trabajo es un concepto fundamental en el mundo profesional. Va má
 
 La duración y las condiciones de la jornada de trabajo pueden variar según la legislación, la industria y las políticas de la empresa. Puede incluir el horario de inicio y finalización, así como los descansos y pausas en medio. La optimización de la jornada de trabajo es crucial para el equilibrio entre la vida profesional y personal de los colaboradores de una empresa.
 
-Desde la perspectiva de una empresa que gestiona seguro complementario, entender cómo funciona una jornada de trabajo, es vital para elegir las mejores pólizas para sus clientes. Por otro lado, las compañías deben adaptar sus políticas y entornos laborales para garantizar la eficiencia y el bienestar. También, los empleados deben estar informados sobre sus derechos en términos de horarios, descansos y posibles horas extras.
+Desde la perspectiva de una empresa que gestiona [seguro complementario de salud](/seguros-salud), entender cómo funciona una jornada de trabajo es vital para elegir las mejores pólizas para sus clientes. Por otro lado, las compañías deben adaptar sus políticas y entornos laborales para garantizar la eficiencia y el bienestar. También, los empleados deben estar informados sobre sus derechos en términos de horarios, descansos y posibles horas extras.
 
 ## Jornada de Trabajo en Chile: Optimización con tecnológicas
 
@@ -24,4 +24,4 @@ En el dinámico escenario laboral de Chile y el mundo, las herramientas tecnoló
 
 En el contexto de una economía en evolución y horarios cambiantes, las aplicaciones de seguimiento de tiempo permiten un monitoreo preciso de las horas laborales y pausas, evitando excesos y fomentando la productividad. Además, las notificaciones y alertas pueden ayudar a mantener a los trabajadores enfocados y asegurarse de que cumplan con los plazos y objetivos establecidos.
 
-No obstante, es esencial que estas herramientas se utilicen de manera equilibrada y consciente. La adopción de aplicaciones de gestión del tiempo debe estar acompañada de una atención constante al bienestar y leyes que respalden la reducción en la jornada de trabajo. Así como el proyecto 40 horas que establece mecanismos para evitar la posibilidad de agotamiento o estrés en las personas causados por exceso de trabajo.
+No obstante, es esencial que estas herramientas se utilicen de manera equilibrada y consciente. La adopción de aplicaciones de gestión del tiempo debe estar acompañada de [beneficios que protejan la salud del equipo](/beneficios-redagrupa) y leyes que respalden la reducción en la jornada de trabajo. Así como el proyecto 40 horas que establece mecanismos para evitar la posibilidad de agotamiento o estrés en las personas causados por exceso de trabajo.

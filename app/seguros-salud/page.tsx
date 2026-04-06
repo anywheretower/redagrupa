@@ -36,7 +36,7 @@ const faqJsonLd = {
       name: "¿Qué es un Seguro Complementario de Salud?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "En Chile, todas las personas cuentan por ley con un sistema de salud previsional, ya sea Fonasa o Isapre, el cual cubre solo un porcentaje del costo total de las prestaciones médicas, generando un copago que debe ser asumido por la persona. El Seguro Complementario de Salud está diseñado para cubrir total o parcialmente ese copago, de acuerdo con los porcentajes, topes y condiciones definidos en la póliza contratada por la empresa, reduciendo significativamente el gasto de bolsillo del trabajador.",
+        text: "Es un seguro que cubre total o parcialmente el copago que Fonasa o Isapre no bonifica en prestaciones médicas. La empresa contrata una póliza que define porcentajes de cobertura, topes anuales y condiciones, reduciendo significativamente el gasto de bolsillo del trabajador en consultas, exámenes y hospitalizaciones.",
       },
     },
     {
@@ -72,9 +72,24 @@ const serviceJsonLd = {
   serviceType: "Correduría de Seguros de Salud",
 }
 
+const webPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Seguro Complementario de Salud para Empresas",
+  url: "https://www.redagrupa.cl/seguros-salud",
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: ["h1", "main p:first-of-type"],
+  },
+}
+
 export default function SegurosSaludPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}

@@ -7,7 +7,7 @@ El tope imponible representa un límite máximo sobre el cual se aplican impuest
 
 En su aplicación, se calcula el ingreso bruto del individuo y se aplica un porcentaje establecido por la legislación. Sin embargo, este porcentaje se aplica solo hasta el tope imponible; los ingresos que excedan este límite no están sujetos al porcentaje establecido. Esencialmente, este sistema permite que quienes tienen ingresos más altos contribuyan sobre una fracción de su salario.
 
-Para maximizar los beneficios dentro de este límite, empresas como RedAgrupa ofrecen seguros complementarios que permiten a los trabajadores acceder a coberturas adicionales y servicios que complementan la seguridad social estándar, brindando así una mayor protección financiera y de salud.
+Para maximizar los beneficios dentro de este límite, contar con un [seguro complementario de salud](/seguros-salud) permite a los trabajadores acceder a coberturas adicionales que complementan la seguridad social estándar. Las pymes pueden acceder a [planes BICE Vida](/seguro-complementario-bice-pyme) con tarifas competitivas para proteger a su equipo.
 
 ## ¿Cuál es el tope imponible?
 

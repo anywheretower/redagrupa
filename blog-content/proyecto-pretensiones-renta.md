@@ -30,7 +30,7 @@ Las repercusiones positivas de este proyecto se extienden a todos los actores in
 
 - **Mejora de la imagen corporativa:** La adopción de prácticas transparentes y equitativas en el proceso de reclutamiento y selección fortalece la imagen de la empresa como un empleador responsable y comprometido con la equidad.
 
-- **Atracción de talento calificado:** La transparencia en las remuneraciones puede convertirse en un factor diferenciador para atraer a los mejores talentos, quienes buscan oportunidades justas y competitivas.
+- **Atracción de talento calificado:** La transparencia en las remuneraciones puede convertirse en un factor diferenciador para atraer a los mejores talentos, quienes buscan oportunidades justas y competitivas. Complementar con [beneficios corporativos](/beneficios-redagrupa) como seguros de salud fortalece aún más la propuesta de valor al candidato.
 
 ### Para el mercado laboral:
 
@@ -44,7 +44,7 @@ Si bien el Proyecto Pretensiones de Renta aún se encuentra en proceso de debate
 
 1. **Revisar y actualizar las escalas de remuneración** para asegurar que estén alineadas con las condiciones del mercado y con el rango de remuneración que se ofrecerá en las ofertas de trabajo.
 
-2. **Capacitar al personal de recursos humanos** sobre la nueva normativa y las mejores prácticas para comunicar de manera transparente las remuneraciones y beneficios en las ofertas de trabajo.
+2. **Capacitar al personal de recursos humanos** sobre la nueva normativa y las mejores prácticas para comunicar de manera transparente las remuneraciones y beneficios --como un [seguro complementario de salud](/seguros-salud)-- en las ofertas de trabajo.
 
 3. **Implementar herramientas tecnológicas** que faciliten la gestión de las ofertas de trabajo y la comunicación clara de la información salarial a los postulantes.
 

@@ -51,4 +51,4 @@ En este ejemplo, el sueldo bruto de $1.000.000 se reduce a $723.400 después de 
 
 ## Sueldo líquido a bruto y seguros complementarios
 
-Te invitamos a explorar las ventajas de las deducciones voluntarias en seguros de salud complementarios a través de la atención experta. RedAgrupa se enfoca en brindarte como empresa la mejor atención y soluciones a la hora de contratar un seguro complementario de salud. Los seguros complementarios se ajustan a las necesidades de tu negocio, colaboradores y familiares.
+Las deducciones voluntarias en [seguros complementarios de salud](/seguros-salud) son una forma eficiente de mejorar la protección de tu equipo directamente desde la nómina. Si tienes una pyme, los [planes BICE Vida para pymes](/seguro-complementario-bice-pyme) se ajustan a las necesidades de tu negocio, colaboradores y familiares.

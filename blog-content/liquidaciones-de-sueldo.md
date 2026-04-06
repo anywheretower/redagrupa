@@ -23,11 +23,11 @@ Los cálculos de sueldo en Chile incorporan varios conceptos de compensación y 
 
 **Comisiones:** Comisiones de ventas o compensación basada en actividades incluidas en las liquidaciones.
 
-**Descuentos Legales:** Deducciones obligatorias que incluyen impuesto a la renta, seguro de cesantía, seguro complementario de salud, cotizaciones de salud y cotizaciones previsionales.
+**Descuentos Legales:** Deducciones obligatorias que incluyen impuesto a la renta, seguro de cesantía, [seguro complementario de salud](/seguros-salud), cotizaciones de salud y cotizaciones previsionales.
 
 **Otros Descuentos:** Pagos de préstamos, cuotas sindicales y otros descuentos acordados.
 
-Los cálculos varían según el tipo de contrato de trabajo, las condiciones laborales específicas y los convenios colectivos aplicables. Los empleadores deben preparar las liquidaciones de manera precisa y completa, considerando todos los conceptos y deducciones aplicables. Los trabajadores deben verificar las liquidaciones para asegurar el correcto cumplimiento de los términos acordados y las disposiciones legales vigentes.
+Los cálculos varían según el tipo de contrato de trabajo, las condiciones laborales específicas y los convenios colectivos aplicables. Los empleadores deben preparar las liquidaciones de manera precisa y completa, considerando todos los conceptos y deducciones aplicables. Los trabajadores deben verificar las liquidaciones para asegurar el correcto cumplimiento de los términos acordados y las disposiciones legales vigentes. Si tu pyme ofrece [beneficios corporativos](/beneficios-redagrupa) como seguros complementarios, estos también se reflejan en la liquidación como descuentos voluntarios.
 
 ### Cálculo de sueldo líquido
 

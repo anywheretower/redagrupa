@@ -96,6 +96,19 @@ export default function HomePage() {
     <>
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "Seguros Complementarios para Pymes en Chile",
+          url: "https://www.redagrupa.cl",
+          speakable: {
+            "@type": "SpeakableSpecification",
+            cssSelector: ["h1", ".hero-description"],
+          },
+        }) }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsJsonLd) }}
       />
       <script
@@ -288,7 +301,7 @@ export default function HomePage() {
                 <h1 className="text-3xl sm:text-2xl md:text-[2rem] lg:text-[2.75rem] font-normal leading-[0.95] text-balance tracking-tight">
                   Seguros Complementarios para tu Pyme desde UF&nbsp;0,52/mes
                 </h1>
-                <p className="animate-fade-in-up-d1 text-base sm:text-base lg:text-lg text-white/90 leading-[1.3] max-w-2xl">
+                <p className="hero-description animate-fade-in-up-d1 text-base sm:text-base lg:text-lg text-white/90 leading-[1.3] max-w-2xl">
                   Comparamos las principales aseguradoras y gestionamos todo por ti: cotización, contratación y reembolsos.
                   Sin trámites eternos ni lenguaje técnico. Tu equipo protegido en días, no meses.
                 </p>

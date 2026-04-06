@@ -29,6 +29,8 @@ La falta de registro preciso tiene consecuencias tanto para el trabajador como p
 - **Para los trabajadores:** Enfrentan posibles acciones disciplinarias que van desde advertencias hasta sanciones severas por registro inexacto.
 - **Para los empleadores:** Se arriesgan a problemas de gestión de personal, complicaciones en la planificación y posibles disputas legales derivadas de violaciones regulatorias y las multas asociadas.
 
+Una gestión laboral ordenada, que incluya el correcto registro de asistencia y [beneficios corporativos](/beneficios-redagrupa) como un seguro complementario de salud, contribuye a un ambiente de trabajo transparente y a la retención del talento.
+
 ## Ejemplo libro de asistencia laboral
 
 A continuación se muestra un formato de ejemplo semanal del libro de asistencia:

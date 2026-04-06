@@ -10,6 +10,7 @@ import {
   Linkedin,
   ArrowLeft,
   Check,
+  Info,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import MobileMenu from "@/components/MobileMenu"
@@ -302,6 +303,14 @@ export default function BlogPostClient({
                 >
                   {post.content}
                 </ReactMarkdown>
+              </div>
+
+              {/* Disclaimer YMYL */}
+              <div className="mt-10 flex items-start gap-2.5 border-t border-gray-200 pt-5">
+                <Info className="w-4 h-4 text-gray-400 flex-shrink-0 mt-0.5" strokeWidth={1.5} />
+                <p className="text-xs text-gray-500 leading-relaxed">
+                  Este artículo es de carácter informativo y no constituye asesoría legal, laboral ni financiera. Para situaciones específicas, consulta a un profesional.
+                </p>
               </div>
 
               {/* CTA Banner */}

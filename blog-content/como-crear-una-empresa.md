@@ -71,3 +71,5 @@ Crear una empresa en Chile implica seguir varios pasos fundamentales.
     Separar las finanzas personales y comerciales y abre una cuenta para tu empresa.
 
 Este proceso, aunque detallado, asegura una creación sólida y legal de la empresa, abordando aspectos fiscales, legales y operativos esenciales para su funcionamiento adecuado.
+
+Una vez constituida tu empresa, no olvides evaluar la contratación de un [seguro complementario de salud para tu pyme](/seguro-complementario-bice-pyme). Ofrecer [beneficios corporativos](/beneficios-redagrupa) desde el inicio es clave para atraer y retener talento.

@@ -202,7 +202,7 @@
         <tr><td>S15</td><td><strong>/seguros-salud tiene ~500 palabras</strong> para keyword m&aacute;s competitivo. Competidores tienen 2.000-3.000 palabras con tablas.<div class="detail">Agregar secciones: c&oacute;mo elegir, Fonasa vs Isapre, precios, FAQ visible</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
         <tr><td>S16</td><td><strong>Blog 85% derecho laboral, ~6 posts de seguros</strong> &mdash; 0 clicks org&aacute;nicos para queries de seguros (GSC)<div class="detail">Crear 8-10 posts de seguros complementarios urgentemente</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
         <tr><td>S17</td><td><strong>20+ blog posts son thin content (&lt;500 palabras)</strong> &mdash; 2 est&aacute;n bajo 300 palabras<div class="detail">Expandir los m&aacute;s visitados a 1.000+ palabras con tablas y fuentes</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>S18</td><td><strong>44 de 55 blog posts sin links internos</strong> a p&aacute;ginas de servicio &mdash; dead-ends que suben bounce<div class="detail">Ya implementado en 11 posts, faltan 44</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>S18</td><td>55 de 55 blog posts con links internos a p&aacute;ginas de servicio (43 nuevos + 12 previos)<div class="detail">1-2 links contextuales por post a /seguros-salud, /beneficios-redagrupa, /bice-pyme</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>S19</td><td>Meta description homepage recortada a ~135 chars + CTA &ldquo;Cotiza gratis&rdquo;<div class="detail">page.tsx &mdash; ya no se trunca en SERP</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>S20</td><td>OpenGraph espec&iacute;fico en 9 de 9 p&aacute;ginas (title, description, url, image, locale es_CL)<div class="detail">Metadata openGraph en cada page.tsx incluyendo homepage y blog</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>S21</td><td>T&iacute;tulo homepage keyword-first: &ldquo;Seguros Complementarios para Pymes en Chile | RedAgrupa&rdquo;<div class="detail">page.tsx &mdash; keyword antes de marca</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
@@ -225,7 +225,7 @@
         <tr><td>S31</td><td>Blog Article schema: author es Organization, no Person (E-E-A-T d&eacute;bil)<div class="detail">Requiere nombre real de autor (S29 pendiente cliente)</div></td><td><span class="badge badge-client">Cliente</span></td></tr>
         <tr><td>S32</td><td>Schema HowTo &ldquo;3 pasos&rdquo; en homepage (Cotiza &rarr; Comparamos &rarr; Protegido)<div class="detail">app/page.tsx &mdash; JSON-LD HowTo con totalTime P3D</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>S33</td><td>ContactPoint agregado en Organization schema (customer service, tel, es)<div class="detail">layout.tsx &mdash; contactPoint con tel&eacute;fono y idioma</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
-        <tr><td>S34</td><td>priceValidUntil 2026-12-31 en 5 Products &mdash; expirar&aacute; sin actualizaci&oacute;n<div class="detail">Crear recordatorio para actualizar precios anualmente</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>S34</td><td>priceValidUntil din&aacute;mico en 5 Products &mdash; siempre a&ntilde;o actual via new Date().getFullYear()<div class="detail">bice-pyme/page.tsx (4) + bice-personas/page.tsx (1)</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
       </table>
     </div>
 
@@ -302,10 +302,10 @@
         <tr><td>G7</td><td><strong>Ausente de AI Overviews</strong> pese a rankear #1 org&aacute;nico &mdash; AI cita a carriers (SURA, Bupa, MetLife) y comparadores (QuePlan)<div class="detail">Causa: contenido es lead-gen, no educativo/definitorio</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
         <tr><td>G8</td><td><strong>0 menciones de RedAgrupa en respuestas AI</strong> para 7 de 10 queries clave de seguros<div class="detail">Solo aparece para queries de marca y &ldquo;pymes&rdquo; (posici&oacute;n 3-5)</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
         <tr><td>G9</td><td><strong>/seguros-salud FAQ invisible</strong> &mdash; schema FAQPage con 3 Q&amp;A pero sin FAQ visible en el HTML<div class="detail">Riesgo de cloaking. Agregar accordion FAQ visible.</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
-        <tr><td>G10</td><td><strong>Sin p&aacute;rrafo definitorio claro en primera frase</strong> de /seguros-salud<div class="detail">El &ldquo;qu&eacute; es&rdquo; est&aacute; enterrado. AI necesita definici&oacute;n en frase 1.</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>G10</td><td>P&aacute;rrafo definitorio claro en primera frase de /seguros-salud &mdash; &ldquo;Un seguro complementario de salud es...&rdquo;<div class="detail">SegurosSaludClient.tsx &mdash; definici&oacute;n citable en frase 1</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>G11</td><td>Sin glosario de seguros (&lt;dfn&gt; + DefinedTermSet schema) &mdash; alta citabilidad<div class="detail">URL propuesta: /glosario-seguros-salud &mdash; 25-30 t&eacute;rminos</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
         <tr><td>G12</td><td>Estad&iacute;sticas sin fuente reducen confianza AI en citar el sitio<div class="detail">Marquee &ldquo;70%&rdquo;, &ldquo;40 horas&rdquo; sin atribuci&oacute;n a estudio</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>G13</td><td>FAQ answers en schema podr&iacute;an ser m&aacute;s concisas (40-60 palabras ideal para AI Overview)<div class="detail">Respuesta directa en frase 1, luego elaborar</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>G13</td><td>FAQ answers en schema optimizadas a 40-60 palabras (seguros-salud y bice-pyme)<div class="detail">Respuesta directa en frase 1, datos preservados</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
       </table>
     </div>
 
@@ -314,10 +314,10 @@
       <table>
         <tr><th style="width:40px">#</th><th>Hallazgo</th><th style="width:90px">Estado</th></tr>
         <tr><td>G14</td><td><strong>100% del body content de subp&aacute;ginas dentro de &ldquo;use client&rdquo;</strong> &mdash; h1/intro no est&aacute;n en Server Components<div class="detail">AI crawlers con JS limitado no ven el contenido principal</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
-        <tr><td>G15</td><td>FAQ HTML solo en client component (HomeClient) &mdash; subp&aacute;ginas tienen FAQPage schema pero 0 FAQ visible<div class="detail">Mover FAQ a Server Components + agregar accordion visible</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>G15</td><td>FAQ accordion visible en /seguros-salud (3 FAQs) y /bice-personas (6 FAQs) &mdash; match con schema<div class="detail">details/summary nativo + ChevronDown, sin JS extra</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>G16</td><td>&lt;article&gt; agregado en /nosotros<div class="detail">AI parsers usan &lt;article&gt; para identificar contenido principal</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>G17</td><td>&lt;li&gt; envueltos en &lt;ul&gt; en /nosotros &mdash; HTML corregido<div class="detail">NosotrosClient.tsx &mdash; 2 listas corregidas</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
-        <tr><td>G18</td><td>Sin SpeakableSpecification schema para voice search / AI assistants<div class="detail">Agregar speakable con cssSelector en h1 + intro</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>G18</td><td>SpeakableSpecification schema en 4 p&aacute;ginas (homepage, seguros-salud, bice-pyme, bice-personas)<div class="detail">WebPage + speakable cssSelector h1 + intro paragraph</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>G19</td><td>Meta keywords en 4 service pages (homepage, seguros-salud, BICE Pyme, beneficios)<div class="detail">Bing/Copilot usa keywords para clasificaci&oacute;n</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>G20</td><td>&lt;time dateTime&gt; agregado en BlogPostClient.tsx<div class="detail">dateTime={post.date} para parseo de frescura</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
       </table>
@@ -521,13 +521,13 @@
         <tr><td>B6</td><td>TypeScript ignoreBuildErrors: true &mdash; errores de tipos llegan a producci&oacute;n<div class="detail">next.config.mjs &mdash; remover y corregir errores TS</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
         <tr><td>B7</td><td>Sin error.tsx / global-error.tsx &mdash; errores React muestran pantalla blanca<div class="detail">Crear con branding del sitio + bot&oacute;n reset</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
         <tr><td>B8</td><td>/contactos admin accesible sin auth server-side (solo client-side cookie check)<div class="detail">Agregar middleware.ts para proteger /contactos/*</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>B9</td><td>Faltan Cross-Origin-Opener-Policy y Cross-Origin-Resource-Policy headers<div class="detail">next.config.mjs &mdash; agregar COOP: same-origin, CORP: same-origin</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>B10</td><td>Permissions-Policy solo restringe camera/microphone &mdash; faltan geolocation, payment, usb, etc.<div class="detail">Expandir a 9+ APIs restringidas</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>B9</td><td>COOP: same-origin + CORP: same-origin headers agregados<div class="detail">next.config.mjs &mdash; protecci&oacute;n cross-origin</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
+        <tr><td>B10</td><td>Permissions-Policy expandida a 10 APIs restringidas (camera, mic, geo, payment, usb, bluetooth, serial, hid, idle, wake-lock)<div class="detail">next.config.mjs</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>B11</td><td>console.error en API routes puede leakear stack traces en Vercel logs<div class="detail">Sanitizar: solo error.message, no full error object</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
         <tr><td>B12</td><td>package.json name: &ldquo;my-v0-project&rdquo; &mdash; cambiar a &ldquo;redagrupa-web&rdquo;<div class="detail">Cosm&eacute;tico pero profesional</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
         <tr><td>B13</td><td>Pol&iacute;tica de privacidad referencia &ldquo;redagrupa.vercel.app&rdquo; en vez de www.redagrupa.cl<div class="detail">PoliticasClient.tsx:148</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
         <tr><td>B14</td><td>Solo email reembolsos@ visible &mdash; sin email general de contacto/ventas<div class="detail">Agregar contacto@redagrupa.cl o asesoria@redagrupa.cl</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>B15</td><td>Sin disclaimer legal en blog posts de derecho laboral (contenido YMYL)<div class="detail">Agregar &ldquo;Contenido informativo, no constituye asesor&iacute;a legal&rdquo;</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>B15</td><td>Disclaimer YMYL en todos los blog posts: &ldquo;art&iacute;culo informativo, no constituye asesor&iacute;a legal&rdquo;<div class="detail">BlogPostClient.tsx &mdash; nota con icono Info al final de cada post</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
       </table>
     </div>
   </div>
@@ -542,12 +542,12 @@
       </div>
       <div class="footer-divider"></div>
       <div class="footer-item">
-        <div class="footer-num" style="color: #ea580c;">49</div>
+        <div class="footer-num" style="color: #ea580c;">40</div>
         <div class="footer-label">Pendientes</div>
       </div>
       <div class="footer-divider"></div>
       <div class="footer-item">
-        <div class="footer-num" style="color: #16a34a;">78</div>
+        <div class="footer-num" style="color: #16a34a;">87</div>
         <div class="footer-label">Aplicadas</div>
       </div>
       <div class="footer-divider"></div>

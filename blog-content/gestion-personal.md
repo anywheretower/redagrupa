@@ -18,13 +18,13 @@ Una gestión de personal efectiva se basa en una serie de principios y práctica
 
 3. **Inducción:** La inducción y capacitación laboral son procesos esenciales para integrar a los nuevos colaboradores a la empresa. Así, se le entregan herramientas y conocimientos necesarios para desempeñar sus funciones de manera eficiente.
 
-4. **Administración de nóminas:** La gestión eficiente de las nóminas y beneficios garantiza que los trabajadores reciban una remuneración justa y oportuna. Además, acceden a beneficios que contribuyan a su bienestar y calidad de vida.
+4. **Administración de nóminas:** La gestión eficiente de las nóminas y [beneficios corporativos](/beneficios-redagrupa) garantiza que los trabajadores reciban una remuneración justa y oportuna. Además, acceden a beneficios que contribuyan a su bienestar y calidad de vida.
 
 5. **Evaluación del desempeño:** Permite medir el rendimiento individual de los colaboradores, identificar áreas de mejora y brindar retroalimentación constructiva para impulsar su desarrollo profesional.
 
 6. **Gestión del entorno laboral:** Un clima laboral positivo y motivador genera un impacto significativo en la productividad, el compromiso y la retención de talento. Esto implica fomentar una cultura de respeto, inclusión laboral, colaboración, comunicación abierta y reconocimiento al trabajo bien hecho.
 
-7. **Salud:** La salud y seguridad ocupacional son aspectos fundamentales para el bienestar de los trabajadores y la productividad de la empresa. Implementar medidas preventivas y promover una cultura de seguridad en el trabajo es esencial para minimizar los riesgos laborales.
+7. **Salud:** La salud y seguridad ocupacional son aspectos fundamentales para el bienestar de los trabajadores y la productividad de la empresa. Implementar medidas preventivas, contar con un [seguro complementario de salud](/seguros-salud) y promover una cultura de seguridad en el trabajo es esencial para minimizar los riesgos laborales.
 
 8. **Desarrollo organizacional:** Se enfoca en el crecimiento y la mejora continua de la organización como un todo, promoviendo una cultura de aprendizaje, innovación y adaptación al cambio.
 

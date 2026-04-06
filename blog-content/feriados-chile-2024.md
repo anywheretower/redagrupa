@@ -46,3 +46,5 @@ El pago de finiquitos y las remuneraciones están estrechamente vinculados a los
 Cuando un trabajador finaliza su relación laboral, el pago de finiquito también se ve afectado por la consideración de días feriados. Es esencial que este proceso se realice de acuerdo con la normativa vigente. Esto garantiza la liquidación correcta y oportuna de las obligaciones laborales, especialmente durante períodos festivos.
 
 Los feriados no solo influyen en las obligaciones del empleador, sino que también impactan en los derechos del trabajador. Esto asegura que reciba sus remuneraciones y beneficios de manera adecuada incluso en fechas festivas. Un manejo cuidadoso de estos aspectos contribuye a mantener un ambiente laboral justo y cumplir con las disposiciones legales establecidas en el marco laboral chileno.
+
+Además de cumplir con las obligaciones de remuneración en feriados, las empresas que ofrecen un [seguro complementario de salud](/seguros-salud) a sus trabajadores fortalecen la protección de su equipo durante todo el año, incluyendo las fechas festivas.

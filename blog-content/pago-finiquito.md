@@ -13,7 +13,7 @@ Cuando llega el momento de poner fin a una relación laboral, uno de los aspecto
 
 Otro factor crucial es la consideración de impuestos y retenciones que pueden aplicarse al monto del finiquito. Dependiendo de las leyes fiscales de cada país, el monto recibido puede estar sujeto a deducciones. Esto puede influir en la cantidad final que el empleado recibe, por lo que es importante tener en cuenta este aspecto.
 
-Al recibir el finiquito, es esencial revisarlo con cuidado. RedAgrupa ofrece soluciones para seguros complementarios de salud, asegurando bienestar y respaldo para los trabajadores. Su enfoque especializado fortalece la seguridad y tranquilidad al culminar la relación laboral.
+Al recibir el finiquito, es esencial revisarlo con cuidado. Contar con un [seguro complementario de salud](/seguros-salud) durante la relación laboral asegura bienestar y respaldo para los trabajadores, y es un [beneficio corporativo](/beneficios-redagrupa) que marca la diferencia en la experiencia del colaborador.
 
 ## Plazo pago finiquito
 

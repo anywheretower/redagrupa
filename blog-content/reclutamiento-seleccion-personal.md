@@ -41,7 +41,7 @@ El anuncio de empleo es el primer punto de contacto entre la empresa y los candi
   - **Responsabilidades específicas:** Las obligaciones concretas que el candidato tendrá a su cargo.
   - **Metas y objetivos:** Los logros que se espera que el candidato alcance en el puesto.
 - **Perfil del cargo:** Habilidades duras y blandas que se buscan en el candidato ideal.
-- **Oferta de la empresa:** Remuneración, beneficios laborales, oportunidades de crecimiento y desarrollo profesional dentro de la organización.
+- **Oferta de la empresa:** Remuneración, [beneficios corporativos](/beneficios-redagrupa) como seguros de salud, oportunidades de crecimiento y desarrollo profesional dentro de la organización.
 - **Datos de contacto:** Información para que los candidatos interesados puedan postularse al puesto.
 
 ## Entrevistas: Evaluando a los candidatos
@@ -71,4 +71,4 @@ Una vez finalizadas las entrevistas, es importante analizar los resultados y tom
 
 Es importante destacar que el proceso de selección de personal debe ser dinámico y adaptarse a las necesidades cambiantes del mercado laboral y de la propia organización. Las empresas deben estar atentas a las nuevas tendencias en selección, como el uso de herramientas tecnológicas y la búsqueda de talento en plataformas digitales, para mantenerse competitivas y atraer a los mejores candidatos.
 
-Al invertir en un proceso de selección efectivo y bien definido, las organizaciones pueden construir equipos de alto rendimiento, impulsar su productividad, fortalecer su cultura organizacional y alcanzar el éxito sostenible en el competitivo mercado laboral chileno.
+Al invertir en un proceso de selección efectivo y bien definido, las organizaciones pueden construir equipos de alto rendimiento, impulsar su productividad, fortalecer su cultura organizacional y alcanzar el éxito sostenible en el competitivo mercado laboral chileno. Ofrecer un [seguro complementario de salud](/seguros-salud) como parte del paquete de compensación es una herramienta clave para atraer y retener al mejor talento.

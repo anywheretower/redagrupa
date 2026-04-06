@@ -14,7 +14,7 @@ La corrección monetaria es un ajuste contable utilizado en entornos económicos
 
 Para activos fijos, se ajustan los valores contables para reflejar la pérdida de poder adquisitivo y mantener su valor real. En cuentas por cobrar, se corrigen los saldos pendientes para compensar la depreciación monetaria. Asimismo, en cuentas por pagar, se realiza un ajuste para reflejar el impacto de la inflación en los montos pendientes de pago. La corrección monetaria busca proporcionar información financiera más precisa en entornos inflacionarios.
 
-La corrección monetaria puede afectar la capacidad de las aseguradoras para mantener el nivel de prestaciones y servicios del seguro complementario de salud. Esto podría llevar a ajustes en las características de las pólizas para adaptarse a la realidad económica.
+La corrección monetaria puede afectar la capacidad de las aseguradoras para mantener el nivel de prestaciones y servicios del [seguro complementario de salud](/seguros-salud). Esto podría llevar a ajustes en las características de las pólizas para adaptarse a la realidad económica. Por eso, es importante comparar planes y elegir una opción que proteja a tu equipo a largo plazo, como los [planes BICE Vida para pymes](/seguro-complementario-bice-pyme).
 
 ## Factor corrección monetaria
 

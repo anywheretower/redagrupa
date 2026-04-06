@@ -18,6 +18,7 @@ import {
   MapPin,
   Mail,
   Phone,
+  ChevronDown,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import MobileMenu from "@/components/MobileMenu"
@@ -183,14 +184,15 @@ export default function SegurosSaludClient() {
             </div>
             <RevealOnScroll className="max-w-4xl mx-auto space-y-6">
               <p className="text-base text-gray-700 leading-[1.1]">
-                El Seguro Complementario de Salud es un beneficio que protege a tus trabajadores frente a gastos
-                médicos no cubiertos completamente por Fonasa o Isapre. Este seguro cubre el copago que queda
-                después de la bonificación, según los porcentajes y topes de la póliza contratada.
+                Un seguro complementario de salud es una póliza que cubre los gastos médicos que Fonasa o tu Isapre
+                no cubren completamente — consultas, exámenes, hospitalizaciones y medicamentos. En la práctica,
+                el seguro reembolsa el copago que queda después de la bonificación de tu plan de salud, según los
+                porcentajes y topes de la póliza contratada.
               </p>
               <p className="text-base text-gray-700 leading-[1.1]">
-                Para pymes y empresas medianas, el Seguro Complementario de Salud representa una herramienta
-                estratégica para fortalecer la propuesta de valor hacia sus colaboradores, mejorar la retención de
-                talento y respaldar a los equipos ante eventos de salud imprevistos.
+                Para pymes y empresas medianas en Chile, contar con un seguro complementario de salud es una de las
+                herramientas más efectivas para retener talento, fortalecer tu propuesta de valor como empleador
+                y proteger a tus equipos ante gastos de salud imprevistos.
               </p>
             </RevealOnScroll>
 
@@ -446,6 +448,44 @@ export default function SegurosSaludClient() {
                   <h3 className="text-lg font-semibold text-gray-900 group-hover:text-[#cc0033] transition-colors">Beneficios Corporativos</h3>
                   <p className="text-sm text-gray-600 mt-2">Convenios de salud, bienestar y vacunación para empresas clientes.</p>
                 </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Preguntas Frecuentes */}
+        <section className="py-16 lg:py-24">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-2xl font-bold text-gray-900 text-center mb-10">Preguntas Frecuentes</h2>
+              <div className="divide-y divide-gray-200">
+                <details className="py-4 group">
+                  <summary className="flex items-center justify-between cursor-pointer text-lg font-semibold text-gray-900">
+                    ¿Qué es un Seguro Complementario de Salud?
+                    <ChevronDown className="w-5 h-5 text-[#cc0033] transition-transform group-open:rotate-180 flex-shrink-0 ml-4" />
+                  </summary>
+                  <p className="mt-3 text-gray-700 leading-relaxed">
+                    En Chile, todas las personas cuentan por ley con un sistema de salud previsional, ya sea Fonasa o Isapre, el cual cubre solo un porcentaje del costo total de las prestaciones médicas, generando un copago que debe ser asumido por la persona. El Seguro Complementario de Salud está diseñado para cubrir total o parcialmente ese copago, de acuerdo con los porcentajes, topes y condiciones definidos en la póliza contratada por la empresa, reduciendo significativamente el gasto de bolsillo del trabajador.
+                  </p>
+                </details>
+                <details className="py-4 group">
+                  <summary className="flex items-center justify-between cursor-pointer text-lg font-semibold text-gray-900">
+                    ¿Qué coberturas incluye un Seguro Complementario de Salud?
+                    <ChevronDown className="w-5 h-5 text-[#cc0033] transition-transform group-open:rotate-180 flex-shrink-0 ml-4" />
+                  </summary>
+                  <p className="mt-3 text-gray-700 leading-relaxed">
+                    Las pólizas contemplan coberturas en: Vida, Hospitalización (incluyendo cirugías y estadías clínicas), Atención ambulatoria (consultas médicas, exámenes y procedimientos), Medicamentos (farmacia según receta médica) y Catastrófica (para eventos de alto costo). De forma opcional, pueden incorporar cobertura dental.
+                  </p>
+                </details>
+                <details className="py-4 group">
+                  <summary className="flex items-center justify-between cursor-pointer text-lg font-semibold text-gray-900">
+                    ¿Cuáles son los beneficios del Seguro Complementario de Salud para empresas?
+                    <ChevronDown className="w-5 h-5 text-[#cc0033] transition-transform group-open:rotate-180 flex-shrink-0 ml-4" />
+                  </summary>
+                  <p className="mt-3 text-gray-700 leading-relaxed">
+                    Contratar un Seguro Complementario de Salud permite a las empresas: reducir el impacto financiero de gastos médicos en sus colaboradores, mejorar el bienestar y la percepción del beneficio laboral, aumentar la fidelización y retención de trabajadores, ofrecer un beneficio competitivo frente al mercado laboral, y ajustar coberturas y capitales a la realidad de la empresa.
+                  </p>
+                </details>
               </div>
             </div>
           </div>

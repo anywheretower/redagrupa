@@ -12,13 +12,13 @@ La jornada laboral es el período de tiempo en el que un empleado dedica sus esf
 
 Existen empresas que entienden que la flexibilidad en la jornada laboral es fundamental para el bienestar y la eficiencia de sus colaboradores. Permitir horarios flexibles implica otorgar a los empleados la libertad de adaptar sus horas de trabajo de acuerdo con sus necesidades y responsabilidades personales. Esta flexibilidad puede impactar positivamente en la productividad al permitir que los empleados trabajen en los momentos en que se sienten más enérgicos y enfocados.
 
-Además, la implementación de horarios flexibles tiene múltiples ventajas para la empresa. Facilita la retención de talento al adaptarse a diferentes estilos de vida, mejora la satisfacción laboral y reduce el estrés al brindar un mejor equilibrio entre la vida personal y profesional.
+Además, la implementación de horarios flexibles tiene múltiples ventajas para la empresa. Facilita la retención de talento al adaptarse a diferentes estilos de vida, mejora la satisfacción laboral y reduce el estrés al brindar un mejor equilibrio entre la vida personal y profesional. Complementar estas medidas con [beneficios corporativos](/beneficios-redagrupa) como seguros de salud potencia aun mas el bienestar del equipo.
 
 ## Jornada laboral en Chile
 
 En Chile, la jornada laboral está regulada por el Código del Trabajo. Hasta 2019, la jornada máxima era de 45 horas semanales distribuidas en cinco o seis días. Sin embargo, la Ley Nº 21.122, vigente desde 2019, redujo la jornada laboral a 40 horas semanales, sin alterar la remuneración.
 
-Esta medida busca mejorar la calidad de vida de los trabajadores junto con otros beneficios como el seguro complementario, fomenta un equilibrio entre la vida laboral y personal. La implementación gradual de esta nueva normativa se extenderá hasta 2025 para dar tiempo a las empresas a adaptarse a este cambio significativo.
+Esta medida busca mejorar la calidad de vida de los trabajadores junto con otros beneficios como el [seguro complementario de salud](/seguros-salud), y fomenta un equilibrio entre la vida laboral y personal. La implementación gradual de esta nueva normativa se extenderá hasta 2025 para dar tiempo a las empresas a adaptarse a este cambio significativo.
 
 ## Jornada laboral 40 horas semanales
 

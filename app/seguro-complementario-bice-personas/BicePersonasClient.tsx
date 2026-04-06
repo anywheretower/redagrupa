@@ -22,6 +22,7 @@ import {
   MapPin,
   Mail,
   Phone,
+  ChevronDown,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import MobileMenu from "@/components/MobileMenu"
@@ -568,6 +569,71 @@ export default function BicePersonasClient() {
                   <h3 className="text-lg font-semibold text-gray-900 group-hover:text-[#cc0033] transition-colors">Beneficios Corporativos</h3>
                   <p className="text-sm text-gray-600 mt-2">Convenios de salud, bienestar y vacunación para empresas clientes.</p>
                 </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Preguntas Frecuentes */}
+        <section className="py-16 lg:py-24">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-2xl font-bold text-gray-900 text-center mb-10">Preguntas Frecuentes</h2>
+              <div className="divide-y divide-gray-200">
+                <details className="py-4 group">
+                  <summary className="flex items-center justify-between cursor-pointer text-lg font-semibold text-gray-900">
+                    ¿Qué cubre este seguro de salud complementario para personas?
+                    <ChevronDown className="w-5 h-5 text-[#cc0033] transition-transform group-open:rotate-180 flex-shrink-0 ml-4" />
+                  </summary>
+                  <p className="mt-3 text-gray-700 leading-relaxed">
+                    El Plan Hospitalario BICE Personas cubre hospitalización (cirugías, estadías clínicas, procedimientos hospitalarios), maternidad (parto normal, cesárea) y ambulancia terrestre. La cobertura es de 50% con bonificación institucional, con un límite anual de 200 UF por persona.
+                  </p>
+                </details>
+                <details className="py-4 group">
+                  <summary className="flex items-center justify-between cursor-pointer text-lg font-semibold text-gray-900">
+                    ¿Para quién es el seguro complementario BICE Vida Personas?
+                    <ChevronDown className="w-5 h-5 text-[#cc0033] transition-transform group-open:rotate-180 flex-shrink-0 ml-4" />
+                  </summary>
+                  <p className="mt-3 text-gray-700 leading-relaxed">
+                    Pueden acceder personas entre 18 y 64 años, sus parejas (cónyuges o convivientes) e hijos dependientes del titular, estén en Isapre o Fonasa. Un seguro pensado para proteger a toda tu familia.
+                  </p>
+                </details>
+                <details className="py-4 group">
+                  <summary className="flex items-center justify-between cursor-pointer text-lg font-semibold text-gray-900">
+                    ¿Cómo funciona el reembolso del seguro complementario?
+                    <ChevronDown className="w-5 h-5 text-[#cc0033] transition-transform group-open:rotate-180 flex-shrink-0 ml-4" />
+                  </summary>
+                  <p className="mt-3 text-gray-700 leading-relaxed">
+                    En 3 simples pasos: 1) Acude a tu consulta, hospitalización o urgencia como lo haces habitualmente. 2) Presenta los documentos de respaldo para solicitar el reembolso de tus gastos. 3) Te devolvemos el porcentaje correspondiente según tu plan de forma rápida.
+                  </p>
+                </details>
+                <details className="py-4 group">
+                  <summary className="flex items-center justify-between cursor-pointer text-lg font-semibold text-gray-900">
+                    ¿Cuánto cuesta el seguro BICE Personas?
+                    <ChevronDown className="w-5 h-5 text-[#cc0033] transition-transform group-open:rotate-180 flex-shrink-0 ml-4" />
+                  </summary>
+                  <p className="mt-3 text-gray-700 leading-relaxed">
+                    El Plan Hospitalario tiene precios mensuales en UF según las cargas familiares: solo titular UF 0,3215, titular + 1 carga UF 0,5948, titular + 2 cargas UF 0,8037, titular + 3 cargas UF 1,0610, titular + 4 cargas UF 1,2860. Todos los valores incluyen IVA.
+                  </p>
+                </details>
+                <details className="py-4 group">
+                  <summary className="flex items-center justify-between cursor-pointer text-lg font-semibold text-gray-900">
+                    ¿Tiene período de carencia?
+                    <ChevronDown className="w-5 h-5 text-[#cc0033] transition-transform group-open:rotate-180 flex-shrink-0 ml-4" />
+                  </summary>
+                  <p className="mt-3 text-gray-700 leading-relaxed">
+                    No, el seguro BICE Personas no tiene período de carencia. La cobertura comienza desde el primer día de vigencia de la póliza.
+                  </p>
+                </details>
+                <details className="py-4 group">
+                  <summary className="flex items-center justify-between cursor-pointer text-lg font-semibold text-gray-900">
+                    ¿Cubre atención ambulatoria?
+                    <ChevronDown className="w-5 h-5 text-[#cc0033] transition-transform group-open:rotate-180 flex-shrink-0 ml-4" />
+                  </summary>
+                  <p className="mt-3 text-gray-700 leading-relaxed">
+                    El Plan Hospitalario cubre exclusivamente hospitalización, maternidad y ambulancia terrestre. Para cobertura ambulatoria (consultas, exámenes, medicamentos), existen los planes colectivos para empresas desde 5 trabajadores a través de RedAgrupa.
+                  </p>
+                </details>
               </div>
             </div>
           </div>

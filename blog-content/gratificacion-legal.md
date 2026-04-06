@@ -7,7 +7,7 @@ Las gratificaciones legales pueden tener un impacto significativo en la economí
 
 Una de estas estrategias es destinar parte del dinero de la gratificación para establecer un fondo de emergencia. Esto tiene como objetivo proporcionar una seguridad financiera en situaciones inesperadas. Sin embargo, otro grupo de personas las utilizan para pagar deudas pendientes, como préstamos estudiantiles o saldos de tarjetas de crédito. Esta acción ayuda a aliviar la carga financiera y contribuir a una mejor salud crediticia.
 
-En términos de seguros complementarios, las gratificaciones pueden ser una oportunidad para invertir en la protección de la salud y el bienestar personal. Adquirir seguros médicos o dentales adicionales puede ayudar a cubrir gastos que podrían surgir en el futuro. Además, los seguros complementarios ofrecen una red de servicios de salud para los seres queridos en caso de eventos inesperados.
+En términos de seguros complementarios, las gratificaciones pueden ser una oportunidad para invertir en la protección de la salud y el bienestar personal. Adquirir un [seguro complementario de salud](/seguros-salud) puede ayudar a cubrir gastos que podrían surgir en el futuro. Además, los seguros complementarios ofrecen una red de servicios de salud para los seres queridos en caso de eventos inesperados. Si tienes una pyme, existen [planes especialmente diseñados para empresas](/seguro-complementario-bice-pyme) que facilitan esta protección para todo tu equipo.
 
 ## ¿Qué son las gratificaciones legales en Chile?
 

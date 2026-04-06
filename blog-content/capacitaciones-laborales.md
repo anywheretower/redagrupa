@@ -52,3 +52,5 @@ Además, es importante considerar las necesidades específicas del perfil de car
 - **Promover la participación de los trabajadores:** Es importante promover la participación activa de los trabajadores en las capacitaciones. Esto se puede lograr creando un ambiente de aprendizaje positivo, fomentando la interacción y la retroalimentación, y utilizando metodologías de enseñanza que sean atractivas y participativas.
 
 - **Evaluar el impacto de la capacitación:** Una vez finalizado el curso, se debe evaluar el impacto de la capacitación para medir si se han alcanzado los objetivos establecidos. Esto se puede hacer a través de encuestas, entrevistas o análisis del desempeño laboral.
+
+La capacitación es solo una parte de la inversión en tu equipo. Complementarla con [beneficios corporativos](/beneficios-redagrupa) como un [seguro complementario de salud](/seguros-salud) fortalece la retención de talento y demuestra un compromiso real con el bienestar de tus colaboradores.

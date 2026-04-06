@@ -12,7 +12,7 @@ En Chile, el valor hora extra se calcula considerando el sueldo base con un reca
 
 Cuando un trabajador realiza horas extras, estas se pagan a 1,5 veces la hora ordinaria conforme a la legislación laboral chilena. Este valor adicional impacta significativamente en la remuneración mensual de los trabajadores.
 
-Para las empresas, calcular el valor de hora extra es fundamental en la gestión de costos laborales y decisiones sobre contratación adicional versus sobretiempo. La forma en que se establece y compensa el valor influye en la motivación de empleados para trabajo adicional, afectando productividad y satisfacción laboral.
+Para las empresas, calcular el valor de hora extra es fundamental en la gestión de costos laborales y decisiones sobre contratación adicional versus sobretiempo. La forma en que se establece y compensa el valor influye en la motivación de empleados para trabajo adicional, afectando productividad y satisfacción laboral. Junto con una remuneración justa, ofrecer [beneficios corporativos](/beneficios-redagrupa) como seguros de salud es otra forma efectiva de motivar y retener al equipo.
 
 ## ¿Cómo Calcular el Valor Hora Extra en Chile?
 
@@ -29,4 +29,4 @@ Calcular el valor hora extra implica partir del valor de la hora ordinaria, dete
 
 En Chile, el valor hora extra dominical se calcula a partir de la remuneración ordinaria con recargo especial. Se divide la liquidación de sueldo mensual por 30 para obtener el valor de hora ordinaria.
 
-Luego se aplica un recargo del 100% sobre esta hora ordinaria. El empleado recibe el doble de su valor de hora ordinaria por cada hora extra trabajada en domingo, garantizando compensación justa por trabajo adicional en días dominicales según legislación laboral chilena.
+Luego se aplica un recargo del 100% sobre esta hora ordinaria. El empleado recibe el doble de su valor de hora ordinaria por cada hora extra trabajada en domingo, garantizando compensación justa por trabajo adicional en días dominicales según legislación laboral chilena. Conoce cómo un [seguro complementario de salud](/seguros-salud) puede complementar la protección de tus trabajadores más allá de la remuneración.

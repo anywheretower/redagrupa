@@ -42,6 +42,6 @@ Esta guía te facilitará el proceso. Te deseamos mucho éxito en tu nueva etapa
 
 El Certificado de Inicio de Actividades es un documento emitido por el Servicio de Impuestos Internos (SII) en Chile. Sirve como confirmación oficial de que una empresa ha iniciado sus operaciones comerciales. Es esencial para cumplir con las obligaciones tributarias, emitir facturas legalmente, y establecer la legalidad y transparencia de la empresa en el país.
 
-Aunque RedAgrupa no facilita directamente el inicio de actividades, destaca al asesorar sobre seguro complementario de salud para empleados. Integrar adecuadamente estos seguros desde el inicio, asegura la protección de tus colaboradores y fortalece el bienestar, contribuyendo así al éxito sostenible de tu empresa desde el inicio de sus operaciones.
+Aunque RedAgrupa no facilita directamente el inicio de actividades, destaca al asesorar sobre [seguro complementario de salud](/seguros-salud) para empleados. Si estás formando una pyme, puedes revisar los [planes BICE Vida diseñados para empresas](/seguro-complementario-bice-pyme). Integrar adecuadamente estos seguros desde el inicio asegura la protección de tus colaboradores y fortalece el bienestar, contribuyendo así al éxito sostenible de tu empresa desde el inicio de sus operaciones.
 
 El inicio de actividades en Chile es un paso crucial para emprendedores y empresas. Cumplir con los requisitos del SII, elegir la estructura adecuada y gestionar la documentación correctamente sienta las bases para un camino empresarial exitoso.

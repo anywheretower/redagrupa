@@ -42,7 +42,7 @@ La Ley Karin tendrá un impacto significativo en las empresas chilenas, las cual
 - **Mayor rigor en la investigación y sanción del acoso laboral:** Se establecen plazos más cortos para la investigación de denuncias y sanciones para las empresas que no cumplan con sus obligaciones.
 - **Protección para las víctimas de acoso laboral:** La ley establece medidas de protección para las víctimas de acoso laboral, como la suspensión temporal de sus funciones o el traslado a otro puesto de trabajo. Esto busca garantizar la seguridad y el bienestar de los trabajadores afectados.
 - **Conciencia sobre el acoso laboral:** La Ley Karin ha generado una mayor conciencia sobre el problema del acoso laboral en Chile. Esto ha llevado a que las empresas y los trabajadores estén más atentos a las señales de acoso y sepan cómo actuar en caso de ser víctimas o testigos de este tipo de conductas.
-- **Cambios en la cultura organizacional:** La implementación de la Ley Karin puede impulsar cambios positivos en la cultura organizacional de las empresas, promoviendo un ambiente de trabajo más respetuoso, inclusivo y seguro, y en consecuencia un mejor desempeño laboral.
+- **Cambios en la cultura organizacional:** La implementación de la Ley Karin puede impulsar cambios positivos en la cultura organizacional de las empresas, promoviendo un ambiente de trabajo más respetuoso, inclusivo y seguro, y en consecuencia un mejor desempeño laboral. Contar con un [seguro complementario de salud](/seguros-salud) que cubra atención psicológica refuerza la protección integral de los trabajadores frente a situaciones de acoso.
 
 ### Estrategias para que las empresas cumplan con la Ley Karin
 

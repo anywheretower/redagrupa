@@ -26,6 +26,17 @@ export const metadata = {
   },
 }
 
+const webPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Seguro Complementario BICE Personas",
+  url: "https://www.redagrupa.cl/seguro-complementario-bice-personas",
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: ["h1", "main p:first-of-type"],
+  },
+}
+
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -93,7 +104,7 @@ const productJsonLd = {
     "@type": "Offer",
     price: "12807",
     priceCurrency: "CLP",
-    priceValidUntil: "2026-12-31",
+    priceValidUntil: `${new Date().getFullYear()}-12-31`,
     availability: "https://schema.org/InStock",
     url: "https://segurocomplementariosalud.bicevida.cl/?negocio=aEd0TFolRnQjQzY17OVzwP1NaCN6_V6AdjkZ9TXI5bnYVyiV0rM",
   },
@@ -102,6 +113,10 @@ const productJsonLd = {
 export default function BicePersonasPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}

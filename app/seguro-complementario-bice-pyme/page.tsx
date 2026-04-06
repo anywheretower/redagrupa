@@ -27,6 +27,17 @@ export const metadata = {
   },
 }
 
+const webPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Seguro Complementario BICE Pyme",
+  url: "https://www.redagrupa.cl/seguro-complementario-bice-pyme",
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: ["h1", "main p:first-of-type"],
+  },
+}
+
 const jsonLd = [
   {
     "@context": "https://schema.org",
@@ -37,7 +48,7 @@ const jsonLd = [
         name: "¿Por qué elegir un seguro BICE Vida para tu pyme?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "BICE Vida es una de las aseguradoras más reconocidas de Chile, respaldada por el grupo financiero BICE. Permite proteger a tus trabajadores con coberturas ambulatorias y hospitalarias desde el primer día, incluir seguro de vida, agregar coberturas opcionales como dental y catastrófica, contratar 100% online a través de la plataforma Mi Pyme Segura, y ofrecer un beneficio competitivo que mejora la retención de talento.",
+          text: "BICE Vida ofrece coberturas ambulatorias, hospitalarias y seguro de vida desde el primer día, con opcionales como dental y catastrófica. La contratación es 100% online a través de Mi Pyme Segura. Respaldada por el grupo financiero BICE, es un beneficio competitivo que mejora la retención de talento.",
         },
       },
       {
@@ -100,7 +111,7 @@ const jsonLd = [
             "@type": "Offer",
             price: "20718",
             priceCurrency: "CLP",
-            priceValidUntil: "2026-12-31",
+            priceValidUntil: `${new Date().getFullYear()}-12-31`,
             availability: "https://schema.org/InStock",
             url: "https://mipymesegura.bicevida.cl/cotizacion/numero-trabajadores?negocio=cjw",
           },
@@ -119,7 +130,7 @@ const jsonLd = [
             "@type": "Offer",
             price: "26750",
             priceCurrency: "CLP",
-            priceValidUntil: "2026-12-31",
+            priceValidUntil: `${new Date().getFullYear()}-12-31`,
             availability: "https://schema.org/InStock",
             url: "https://mipymesegura.bicevida.cl/cotizacion/numero-trabajadores?negocio=cjw",
           },
@@ -138,7 +149,7 @@ const jsonLd = [
             "@type": "Offer",
             price: "41794",
             priceCurrency: "CLP",
-            priceValidUntil: "2026-12-31",
+            priceValidUntil: `${new Date().getFullYear()}-12-31`,
             availability: "https://schema.org/InStock",
             url: "https://mipymesegura.bicevida.cl/cotizacion/numero-trabajadores?negocio=cjw",
           },
@@ -157,7 +168,7 @@ const jsonLd = [
             "@type": "Offer",
             price: "48567",
             priceCurrency: "CLP",
-            priceValidUntil: "2026-12-31",
+            priceValidUntil: `${new Date().getFullYear()}-12-31`,
             availability: "https://schema.org/InStock",
             url: "https://mipymesegura.bicevida.cl/cotizacion/numero-trabajadores?negocio=cjw",
           },
@@ -170,6 +181,10 @@ const jsonLd = [
 export default function BicePymePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
+      />
       {jsonLd.map((schema, i) => (
         <script
           key={i}

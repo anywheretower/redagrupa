@@ -71,3 +71,5 @@ El pago de las cotizaciones AFC es una obligación legal del empleador, y su inc
 - **Daño a la imagen:** El incumplimiento en el pago puede dañar la imagen y reputación de la empresa ante sus trabajadores, clientes y proveedores.
 - **Dificultades para acceder a créditos:** Las empresas que tienen un historial de incumplimiento en el pago de cotizaciones AFC pueden tener dificultades para acceder a créditos bancarios o financiamiento de otras entidades.
 - **Demanda por parte de los trabajadores:** Los trabajadores afectados por el incumplimiento en el pago pueden demandar a la empresa por las vías legales correspondientes.
+
+Además de cumplir con las cotizaciones AFC, ofrecer [beneficios corporativos](/beneficios-redagrupa) como un [seguro complementario de salud](/seguros-salud) es una forma concreta de proteger a tus colaboradores y fortalecer su confianza en la empresa.

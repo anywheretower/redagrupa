@@ -27,7 +27,7 @@ La reducción de la jornada laboral podría tener también un impacto en la igua
 
 Sin embargo, existen también desventajas en el proyecto 40 horas. Una reducción en las horas trabajadas podría significar una disminución en los ingresos de los trabajadores, especialmente aquellos que ganan el salario mínimo.
 
-La reducción en la jornada laboral podría significar una mejora en la calidad de vida de los trabajadores, lo que a su vez podría tener un impacto positivo en su salud física y mental. Esto podría resultar en una reducción en los costos de los seguros de salud para las empresas y los trabajadores, al disminuir la necesidad de tratamientos médicos y consultas por enfermedades relacionadas con el estrés y la fatiga laboral.
+La reducción en la jornada laboral podría significar una mejora en la calidad de vida de los trabajadores, lo que a su vez podría tener un impacto positivo en su salud física y mental. Esto podría resultar en una reducción en los costos de los [seguros complementarios de salud](/seguros-salud) para las empresas y los trabajadores, al disminuir la necesidad de tratamientos médicos y consultas por enfermedades relacionadas con el estrés y la fatiga laboral.
 
 ## Resumen: ventajas y desventajas proyecto 40 horas
 
@@ -35,7 +35,7 @@ La reducción en la jornada laboral podría significar una mejora en la calidad 
 
 - Mejora en la calidad de vida de los trabajadores al tener más tiempo libre para el ocio, el cuidado de la salud, la familia y el estudio
 - Reducción del estrés y la fatiga laboral, lo que puede llevar a una disminución de accidentes y enfermedades laborales
-- Aumento de la satisfacción laboral de los trabajadores, lo que puede mejorar su motivación y compromiso con la empresa
+- Aumento de la satisfacción laboral de los trabajadores, lo que puede mejorar su motivación y compromiso con la empresa. Ofrecer [beneficios corporativos](/beneficios-redagrupa) complementa esta mayor satisfacción
 - Estímulo a la creación de empleo al tener que contratar más trabajadores para cubrir la misma cantidad de horas laborales
 - Reducción de la desigualdad de género al permitir una mayor participación de las mujeres en el mercado laboral al tener más tiempo libre para cuidar de la familia y estudiar
 

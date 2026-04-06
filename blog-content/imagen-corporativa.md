@@ -13,7 +13,7 @@ Una buena imagen corporativa aporta numerosos beneficios a una empresa:
 - **Atrae y fideliza clientes:** Una imagen atractiva y coherente genera confianza y credibilidad en los consumidores, lo que los motiva a elegir la marca por sobre la competencia. Además, una imagen fuerte fomenta la fidelidad de los clientes existentes, quienes se convierten en defensores de la marca.
 - **Fortalece la reputación:** Una buena imagen corporativa contribuye a construir una reputación sólida y positiva para la empresa. Esto se traduce en mayor prestigio, reconocimiento y respeto en el mercado.
 - **Diferencia a la empresa:** En un mercado saturado de productos y servicios, una imagen corporativa única y memorable permite a la empresa destacarse entre la competencia y posicionarse en la mente de los consumidores.
-- **Motiva a los empleados:** Una imagen corporativa positiva y atractiva también beneficia al talento humano de la empresa. Los empleados que se sienten orgullosos de trabajar en una organización tienen un mejor desempeño y son más comprometidos y leales.
+- **Motiva a los empleados:** Una imagen corporativa positiva y atractiva también beneficia al talento humano de la empresa. Ofrecer [beneficios corporativos](/beneficios-redagrupa) como seguros de salud refuerza esa imagen internamente. Los empleados que se sienten orgullosos de trabajar en una organización tienen un mejor desempeño y son más comprometidos y leales.
 
 ## ¿Cómo crear una imagen corporativa?
 
