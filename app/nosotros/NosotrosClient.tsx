@@ -268,6 +268,23 @@ export default function NosotrosClient() {
           </div>
         </section>
 
+        {/* Alianza Estratégica */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center space-y-4">
+              <p className="text-xs uppercase tracking-widest text-[#666666]">Alianza Estratégica</p>
+              <h2 className="text-2xl font-bold text-[#333333]">
+                Parte de la red <a href="https://www.segurosequos.com" target="_blank" rel="noopener noreferrer" className="text-[#cc0033] hover:underline">EQUOS Seguros</a>
+              </h2>
+              <p className="text-base text-gray-700 leading-relaxed">
+                RedAgrupa trabaja en alianza con EQUOS Seguros, una de las corredoras de seguros más importantes de Chile.
+                Esta alianza nos permite acceder a mejores condiciones de negociación con las aseguradoras,
+                ampliar nuestra cobertura de servicios y ofrecer un respaldo institucional sólido a nuestros clientes.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Cierre CTA */}
         <section className="py-32 bg-gray-50">
           <div className="container mx-auto px-4">

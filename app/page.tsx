@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import ScrollHeader from "@/components/ScrollHeader"
 import MobileMenu from "@/components/MobileMenu"
 import Footer from "@/components/Footer"
+import HeroCarousel from "@/components/HeroCarousel"
 import HomeContent from "./HomeClient"
 import { getLatestPosts } from "@/lib/blog"
 
@@ -174,20 +175,20 @@ export default function HomePage() {
                 className="h-6 md:h-8 w-auto"
               />
             </Link>
-            <nav aria-label="Navegación principal" className="hidden lg:flex items-center gap-8">
-              <Link href="/nosotros" className="text-white hover:text-white/80 transition-colors font-medium text-sm">
+            <nav aria-label="Navegación principal" className="hidden lg:flex items-center gap-8 ml-auto mr-4">
+              <Link href="/nosotros" className="text-white hover:text-white/80 transition-colors font-medium text-xs">
                 Nosotros
               </Link>
-              <Link href="/seguros-salud" className="text-white hover:text-white/80 transition-colors font-medium text-sm">
+              <Link href="/seguros-salud" className="text-white hover:text-white/80 transition-colors font-medium text-xs">
                 Seguro Complementario Salud
               </Link>
-              <Link href="/beneficios-redagrupa" className="text-white hover:text-white/80 transition-colors font-medium text-sm">
+              <Link href="/beneficios-redagrupa" className="text-white hover:text-white/80 transition-colors font-medium text-xs">
                 Beneficios RedAgrupa
               </Link>
               <div className="relative group">
                 <button
                   aria-haspopup="true"
-                  className="text-white hover:text-white/80 transition-colors font-medium text-sm flex items-center gap-1"
+                  className="text-white hover:text-white/80 transition-colors font-medium text-xs flex items-center gap-1"
                 >
                   Seguro BICE
                   <svg className="w-3.5 h-3.5 transition-transform group-hover:rotate-180 group-focus-within:rotate-180" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
@@ -203,10 +204,10 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-              <Link href="/blog" className="text-white hover:text-white/80 transition-colors font-medium text-sm">
+              <Link href="/blog" className="text-white hover:text-white/80 transition-colors font-medium text-xs">
                 Conocimiento Pyme
               </Link>
-              <Link href="/formularios" className="text-white hover:text-white/80 transition-colors font-medium text-sm">
+              <Link href="/formularios" className="text-white hover:text-white/80 transition-colors font-medium text-xs">
                 Formularios
               </Link>
             </nav>
@@ -273,59 +274,8 @@ export default function HomePage() {
           </a>
         </div>
 
-        {/* Hero Section — Server Rendered (no JS hydration needed for LCP) */}
-        <section className="relative min-h-screen text-white pt-24 overflow-hidden">
-          <div className="absolute inset-0 z-0">
-            <Image
-              src="/images/hero-redagrupa.webp"
-              alt="Equipo de trabajo protegido con seguro complementario de salud RedAgrupa"
-              fill
-              className="object-cover"
-              priority
-              quality={75}
-              sizes="100vw"
-            />
-            <div
-              className="absolute inset-0 bg-gradient-to-b from-[#cc0033] via-transparent to-transparent"
-              style={{ backgroundImage: "linear-gradient(to bottom, #cc0033 0%, transparent 30%)" }}
-            />
-            <div
-              className="absolute inset-0 bg-gradient-to-t from-[#cc0033] via-transparent to-transparent"
-              style={{ backgroundImage: "linear-gradient(to top, #cc0033 0%, transparent 50%)" }}
-            />
-          </div>
-          <div className="container mx-auto px-6 h-full relative z-10">
-            <div className="grid lg:grid-cols-2 gap-12 items-end lg:items-center min-h-[calc(100vh-6rem)]">
-              <div className="space-y-6 md:space-y-8 pb-10 lg:py-12 mobile-text-shadow">
-                <h1 className="text-3xl sm:text-2xl md:text-[2rem] lg:text-[2.75rem] font-normal leading-[0.95] text-balance tracking-tight">
-                  Seguros Complementarios para tu Pyme desde UF&nbsp;0,52/mes
-                </h1>
-                <p className="hero-description animate-fade-in-up-d1 text-base sm:text-base lg:text-lg text-white/90 leading-[1.3] max-w-2xl">
-                  Comparamos las principales aseguradoras y gestionamos todo por ti: cotización, contratación y reembolsos.
-                  Sin trámites eternos ni lenguaje técnico. Tu equipo protegido en días, no meses.
-                </p>
-                <div className="animate-fade-in-up-d2 flex flex-col sm:flex-row gap-4 pt-2">
-                  <Button
-                    className="bg-white text-[#cc0033] hover:bg-gray-100 px-6 sm:px-8 py-3 text-sm sm:text-base font-semibold w-full sm:w-64 shadow-lg"
-                    asChild
-                  >
-                    <a href="#formulario-contacto">Solicitar Asesoría Gratis</a>
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="border-white text-white hover:bg-white/10 bg-transparent px-6 sm:px-8 py-3 text-sm sm:text-base font-normal w-full sm:w-64"
-                    asChild
-                  >
-                    <Link href="/seguros-salud">
-                      Ver Coberturas y Planes
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-              <div className="relative hidden lg:block lg:h-[700px]" />
-            </div>
-          </div>
-        </section>
+        {/* Hero Carousel — 3 slides con fade */}
+        <HeroCarousel />
 
         {/* Trust Bar — Social Proof */}
         <section className="bg-white border-b border-gray-200">
@@ -359,7 +309,7 @@ export default function HomePage() {
         {/* Proceso + Servicios — combinados */}
         <section id="seccion-aseguradoras" className="py-12 md:py-16 bg-white border-b border-gray-200">
           <div className="container mx-auto px-6">
-            <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+            <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               {/* Izquierda: 3 Pasos */}
               <div>
                 <p className="text-xs sm:text-sm uppercase tracking-widest text-[#666666] mb-8">

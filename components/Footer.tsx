@@ -7,8 +7,8 @@ export default function Footer() {
     <footer className="bg-[#cc0033] text-white py-12 lg:py-24">
       <div className="container mx-auto px-6">
         <div className="flex flex-col items-center gap-10 lg:grid lg:grid-cols-4 lg:gap-12 lg:items-start">
-          {/* Col 1: Logo */}
-          <div className="flex justify-center lg:justify-start lg:col-span-1">
+          {/* Col 1: Logo + Socio */}
+          <div className="flex flex-col items-center lg:items-start gap-4 lg:col-span-1">
             <Image
               src="/images/logo-20redagrupa-3.png"
               alt="RedAgrupa Logo"
@@ -16,6 +16,14 @@ export default function Footer() {
               height={40}
               className="h-8 w-auto"
             />
+            <a
+              href="https://www.segurosequos.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-xs text-white/70 hover:text-white transition-colors"
+            >
+              Socio Estratégico: <span className="font-semibold text-white">EQUOS Seguros</span>
+            </a>
           </div>
 
           {/* Col 2: Servicios */}
