@@ -370,46 +370,6 @@ export default function SegurosSaludClient() {
           </div>
         </section>
 
-        {/* Planes y precios */}
-        <section className="py-16 lg:py-24">
-          <div className="container mx-auto px-4">
-            <RevealOnScroll className="max-w-4xl mx-auto text-center space-y-6">
-              <h2 className="text-2xl font-bold text-gray-900">Planes desde UF 0,52/mes por trabajador</h2>
-              <p className="text-base text-gray-700 leading-[1.1] max-w-3xl mx-auto">
-                RedAgrupa compara planes de las principales aseguradoras para encontrar la mejor relación cobertura-precio para tu empresa. Estos son algunos de los planes más solicitados:
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto mt-8">
-                <Link
-                  href="/seguro-complementario-bice-pyme"
-                  className="group rounded-xl border border-gray-200 p-6 hover:border-[#cc0033] hover:shadow-lg transition-all text-center"
-                >
-                  <p className="text-xs uppercase tracking-wider text-[#666666] mb-2">Empresas desde 5 trabajadores</p>
-                  <h3 className="text-lg font-bold text-[#333333] group-hover:text-[#cc0033] transition-colors">Seguro BICE Pyme</h3>
-                  <p className="text-2xl font-bold text-[#cc0033] mt-2">Desde UF 0,52<span className="text-sm font-normal text-gray-500">/mes</span></p>
-                  <p className="text-sm text-gray-500 mt-2">4 planes · Salud + Vida en una sola póliza</p>
-                </Link>
-                <Link
-                  href="/seguro-complementario-bice-personas"
-                  className="group rounded-xl border border-gray-200 p-6 hover:border-[#cc0033] hover:shadow-lg transition-all text-center"
-                >
-                  <p className="text-xs uppercase tracking-wider text-[#666666] mb-2">Individual y familiar</p>
-                  <h3 className="text-lg font-bold text-[#333333] group-hover:text-[#cc0033] transition-colors">Seguro BICE Personas</h3>
-                  <p className="text-2xl font-bold text-[#cc0033] mt-2">Desde UF 0,58<span className="text-sm font-normal text-gray-500">/mes</span></p>
-                  <p className="text-sm text-gray-500 mt-2">5 niveles · Sin carencias · Cobertura nacional</p>
-                </Link>
-              </div>
-              <p className="text-sm text-gray-500 mt-4">
-                ¿No sabes cuál elegir? Solicita asesoría gratuita y te ayudamos a comparar.
-              </p>
-              <div className="pt-2">
-                <Button onClick={scrollToForm} className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3">
-                  Solicitar Asesoría Gratis
-                </Button>
-              </div>
-            </RevealOnScroll>
-          </div>
-        </section>
-
         {/* Asesoría especializada */}
         <section className="py-32 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -438,7 +398,7 @@ export default function SegurosSaludClient() {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 <Link href="/seguro-complementario-bice-pyme" className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow group">
                   <h3 className="text-lg font-semibold text-gray-900 group-hover:text-[#cc0033] transition-colors">Seguro BICE Pyme</h3>
-                  <p className="text-sm text-gray-600 mt-2">Planes desde UF 0,52/trabajador/mes. Salud + Vida para tu equipo.</p>
+                  <p className="text-sm text-gray-600 mt-2">Salud + Vida en una sola póliza para tu equipo.</p>
                 </Link>
                 <Link href="/seguro-complementario-bice-personas" className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow group">
                   <h3 className="text-lg font-semibold text-gray-900 group-hover:text-[#cc0033] transition-colors">Seguro BICE Personas</h3>
