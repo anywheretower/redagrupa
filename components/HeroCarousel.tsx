@@ -27,7 +27,7 @@ const slides = [
     alt: "Asesora de seguros con atención personalizada vía WhatsApp",
     headline: "Mejor cobertura para tu equipo, cero gestión para ti",
     subtitle: "Tu equipo va al doctor sin preocuparse por el costo. El seguro cubre el copago que Fonasa o Isapre no cubren. Contratación en días, no meses. Proceso 100% gestionado por RedAgrupa.",
-    ctaPrimary: { text: "Cotiza en 2 Minutos", href: "#formulario-contacto" },
+    ctaPrimary: { text: "Cotiza Sin Costo", href: "#formulario-contacto" },
     ctaSecondary: { text: "Explorar Servicios", href: "#seccion-aseguradoras" },
   },
 ]

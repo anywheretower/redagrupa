@@ -231,7 +231,7 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
         </button>
 
         <p className="text-xs text-center text-[#cc0033] font-medium mt-1">
-          Recibirás tu cotización personalizada en menos de 24 hrs
+          Recibirás tu cotización personalizada sin costo
         </p>
         <p className="text-xs text-center text-gray-600 flex items-center justify-center gap-1">
           <Lock className="w-3 h-3" />
@@ -275,7 +275,7 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
               ¡Mensaje enviado!
             </h3>
             <p className="text-gray-600 mb-6">
-              Gracias por contactarnos. Te contactaremos en menos de 24 hrs hábiles por email o teléfono.
+              Gracias por contactarnos. Te contactaremos pronto por email o teléfono.
             </p>
 
             <button

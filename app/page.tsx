@@ -142,7 +142,7 @@ export default function HomePage() {
               "@type": "HowToStep",
               position: 1,
               name: "Cotiza gratis",
-              text: "Cuéntanos sobre tu empresa y te contactamos en menos de 24 hrs. Completa el formulario con datos básicos: nombre, empresa, número de trabajadores y teléfono.",
+              text: "Cuéntanos sobre tu empresa y te contactamos a la brevedad. Completa el formulario con datos básicos: nombre, empresa, número de trabajadores y teléfono.",
               url: "https://www.redagrupa.cl/#formulario-contacto",
             },
             {
@@ -322,7 +322,7 @@ export default function HomePage() {
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-[#333333] leading-tight">Cotiza gratis</h3>
-                      <p className="text-sm text-[#666666] leading-tight mt-1">Cuéntanos sobre tu empresa y te contactamos en menos de 24 hrs.</p>
+                      <p className="text-sm text-[#666666] leading-tight mt-1">Cuéntanos sobre tu empresa y te contactamos a la brevedad.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
