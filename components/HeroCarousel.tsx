@@ -77,7 +77,7 @@ export default function HeroCarousel() {
             src={slide.image}
             alt={slide.alt}
             fill
-            className={`object-cover ${i > 0 ? "-scale-x-100" : ""}`}
+            className="object-cover"
             {...(i === 0 ? { priority: true } : { loading: "lazy" as const })}
             quality={75}
             sizes="100vw"
