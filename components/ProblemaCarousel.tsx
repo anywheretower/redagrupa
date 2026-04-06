@@ -48,7 +48,7 @@ function ProblemaCarouselCard({ icon: Icon, title, text }: { icon: React.Compone
 
 export default function ProblemaCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
-    Autoplay({ delay: 5000, stopOnInteraction: false }),
+    Autoplay({ delay: 5000, stopOnInteraction: true }),
   ])
   const [selectedIndex, setSelectedIndex] = useState(0)
 

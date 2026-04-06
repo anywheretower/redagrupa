@@ -49,7 +49,7 @@ const statsCards = [
 
 export default function StatsCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
-    Autoplay({ delay: 5000, stopOnInteraction: false }),
+    Autoplay({ delay: 5000, stopOnInteraction: true }),
   ])
   const [selectedIndex, setSelectedIndex] = useState(0)
 

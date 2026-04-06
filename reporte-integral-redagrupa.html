@@ -378,7 +378,7 @@
         <tr><td>C12</td><td>Tel&eacute;fono sin formato sugerido: placeholder solo dice &ldquo;Tel&eacute;fono&rdquo;<div class="detail">Cambiar a &ldquo;Ej: +56 9 1234 5678&rdquo;</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
         <tr><td>C13</td><td>Textarea rows={4} alarga el formulario innecesariamente para lead capture<div class="detail">Reducir a rows={2} o colapsar tras &ldquo;Agregar mensaje (opcional)&rdquo;</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
         <tr><td>C14</td><td>Mensaje post-submit gen&eacute;rico: &ldquo;a la brevedad&rdquo; &mdash; no refuerza &ldquo;24 hrs&rdquo;<div class="detail">Cambiar a &ldquo;Te contactaremos en menos de 24 hrs h&aacute;biles por email o tel&eacute;fono&rdquo;</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>C15</td><td>Sin aria-required en campos obligatorios, sin indicador visual de requerido<div class="detail">Agregar aria-required=&ldquo;true&rdquo; y asterisco con sr-only text</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>C15</td><td>aria-required=true + asterisco * en 4 campos obligatorios (condicional en empresa)<div class="detail">ContactForm.tsx &mdash; indicador visual y sem&aacute;ntico</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>C16</td><td>Sin &ldquo;sin compromiso&rdquo; expl&iacute;cito cerca del formulario<div class="detail">Agregar subt&iacute;tulo &ldquo;Cotizaci&oacute;n gratuita y sin compromiso&rdquo;</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
         <tr><td>C17</td><td>Sin auto-reply email al usuario tras env&iacute;o (solo modal en p&aacute;gina)<div class="detail">Agregar 2do call Resend con confirmaci&oacute;n + timeframe</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
       </table>
@@ -498,8 +498,8 @@
         <tr><td>A2</td><td>Exit-intent y MobileMenu con focus trap, ESC key, return focus<div class="detail">Bien implementado</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>A3</td><td>Alt text en 100% de im&aacute;genes (18/18), dot buttons carousel 24px+ touch<div class="detail">Cumple WCAG 2.5.8</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>A4</td><td>Dropdown nav con ARIA completo en todas las p&aacute;ginas (aria-haspopup, role=menu)<div class="detail">Patr&oacute;n de page.tsx replicado a 9 subp&aacute;ginas</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
-        <tr><td>A5</td><td><strong>Success dialog ContactForm sin focus trap ni ESC key</strong><div class="detail">Copiar patr&oacute;n de ExitIntentPopup.tsx:20-45</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
-        <tr><td>A6</td><td><strong>Carousels autoplay sin control de pausa</strong> (stopOnInteraction: false)<div class="detail">WCAG 2.2.2 &mdash; agregar bot&oacute;n pause o cambiar a stopOnInteraction: true</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
+        <tr><td>A5</td><td>Success dialog ContactForm con focus trap, ESC key y auto-focus<div class="detail">ContactForm.tsx &mdash; Tab cycle + Escape + focus on open</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
+        <tr><td>A6</td><td>Carousels autoplay con stopOnInteraction: true (WCAG 2.2.2)<div class="detail">ProblemaCarousel + StatsCarousel &mdash; usuario detiene autoplay al interactuar</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>A7</td><td>Marquee: focus-within pausa animaci&oacute;n para keyboard users<div class="detail">globals.css &mdash; focus-within:[animation-play-state:paused]</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>A8</td><td>prefers-reduced-motion: testimonial-track y related-track incluidos<div class="detail">globals.css &mdash; animation: none en @media reduced-motion</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>A9</td><td>&lt;nav aria-label=&ldquo;Navegaci&oacute;n principal&rdquo;&gt; en 10 p&aacute;ginas<div class="detail">Todas las p&aacute;ginas con aria-label</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
@@ -537,17 +537,17 @@
     <div style="text-align: center; margin-bottom: 16px; font-size: 13px; font-weight: 600; color: #475569;">Resumen Total de Hallazgos</div>
     <div class="footer-grid">
       <div class="footer-item">
-        <div class="footer-num" style="color: #dc2626;">22</div>
+        <div class="footer-num" style="color: #dc2626;">20</div>
         <div class="footer-label">Cr&iacute;ticos</div>
       </div>
       <div class="footer-divider"></div>
       <div class="footer-item">
-        <div class="footer-num" style="color: #ea580c;">92</div>
+        <div class="footer-num" style="color: #ea580c;">89</div>
         <div class="footer-label">Pendientes</div>
       </div>
       <div class="footer-divider"></div>
       <div class="footer-item">
-        <div class="footer-num" style="color: #16a34a;">35</div>
+        <div class="footer-num" style="color: #16a34a;">38</div>
         <div class="footer-label">Aplicadas</div>
       </div>
       <div class="footer-divider"></div>

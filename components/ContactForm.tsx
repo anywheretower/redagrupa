@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Lock, Loader2, CheckCircle2, X } from "lucide-react"
@@ -19,6 +19,49 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
   const [showSuccess, setShowSuccess] = useState(false)
   const [loadedAt] = useState(() => Date.now())
   const [honeypot, setHoneypot] = useState("")
+  const dialogRef = useRef<HTMLDivElement>(null)
+
+  // A5: Focus trap + ESC key for success dialog
+  useEffect(() => {
+    if (!showSuccess) return
+    const dialog = dialogRef.current
+    if (!dialog) return
+
+    // Focus the close button on open
+    const closeBtn = dialog.querySelector<HTMLButtonElement>("[data-close-dialog]")
+    closeBtn?.focus()
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setShowSuccess(false)
+        return
+      }
+      if (e.key !== "Tab") return
+
+      const focusable = dialog.querySelectorAll<HTMLElement>(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      )
+      if (focusable.length === 0) return
+
+      const first = focusable[0]
+      const last = focusable[focusable.length - 1]
+
+      if (e.shiftKey) {
+        if (document.activeElement === first) {
+          e.preventDefault()
+          last.focus()
+        }
+      } else {
+        if (document.activeElement === last) {
+          e.preventDefault()
+          first.focus()
+        }
+      }
+    }
+
+    document.addEventListener("keydown", handleKeyDown)
+    return () => document.removeEventListener("keydown", handleKeyDown)
+  }, [showSuccess])
   const isPersonas = variant === "personas"
   const schema = isPersonas ? contactoPersonasSchema : contactoSchema
 
@@ -95,8 +138,9 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
           <input
             id="nombre"
             type="text"
-            placeholder="Nombre Completo"
+            placeholder="Nombre Completo *"
             className={inputClass}
+            aria-required="true"
             aria-invalid={!!errors.nombre}
             aria-describedby={errors.nombre ? "nombre-error" : undefined}
             {...register("nombre")}
@@ -111,8 +155,9 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
             <input
               id="email"
               type="email"
-              placeholder="Email"
+              placeholder="Email *"
               className={inputClass}
+              aria-required="true"
               aria-invalid={!!errors.email}
               aria-describedby={errors.email ? "email-error" : undefined}
               {...register("email")}
@@ -124,8 +169,9 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
             <input
               id="telefono"
               type="tel"
-              placeholder="Teléfono"
+              placeholder="Teléfono *"
               className={inputClass}
+              aria-required="true"
               aria-invalid={!!errors.telefono}
               aria-describedby={errors.telefono ? "telefono-error" : undefined}
               {...register("telefono")}
@@ -140,8 +186,9 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
           <input
             id="empresa"
             type="text"
-            placeholder={isPersonas ? "Nombre Empresa (Opcional)" : "Nombre Empresa"}
+            placeholder={isPersonas ? "Nombre Empresa (Opcional)" : "Nombre Empresa *"}
             className={inputClass}
+            aria-required={!isPersonas}
             aria-invalid={!!(errors as Record<string, unknown>).empresa}
             aria-describedby={(errors as Record<string, unknown>).empresa ? "empresa-error" : undefined}
             {...register("empresa")}
@@ -202,6 +249,7 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
           onClick={() => setShowSuccess(false)}
         >
           <div
+            ref={dialogRef}
             role="dialog"
             aria-modal="true"
             aria-labelledby="success-heading"
@@ -209,6 +257,7 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
             onClick={(e) => e.stopPropagation()}
           >
             <button
+              data-close-dialog
               onClick={() => setShowSuccess(false)}
               aria-label="Cerrar confirmación"
               className="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-600 transition-colors"
