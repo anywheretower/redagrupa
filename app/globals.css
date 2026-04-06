@@ -166,8 +166,14 @@
   .animate-marquee {
     animation: marquee 8s linear infinite;
   }
+  .animate-marquee:focus-within {
+    animation-play-state: paused;
+  }
   .animate-marquee-desktop {
     animation: marquee 25s linear infinite;
+  }
+  .animate-marquee-desktop:focus-within {
+    animation-play-state: paused;
   }
 
   .mobile-text-shadow {
@@ -244,6 +250,10 @@
   .animate-marquee,
   .lg\:animate-marquee-desktop {
     animation-duration: 0s;
+  }
+  .testimonial-track,
+  .related-track {
+    animation: none;
   }
 }
 
