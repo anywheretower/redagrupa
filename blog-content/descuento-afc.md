@@ -1,4 +1,5 @@
 ![Hero image](./images/descuento-afc.jpg)
+<!-- description: Descuento AFC en Chile: qué es el seguro de cesantía, cuánto se descuenta del sueldo, quién paga y cómo acceder a las prestaciones en caso de despido. -->
 
 # Descuentos AFC: Todo lo que necesitas saber
 

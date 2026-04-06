@@ -8,6 +8,7 @@ import {
   Instagram,
   Linkedin,
   CheckCircle2,
+  ChevronDown,
   ExternalLink,
   MapPin,
   Mail,
@@ -552,6 +553,59 @@ export default function BicePymeClient() {
                   <h3 className="text-lg font-semibold text-gray-900 group-hover:text-[#cc0033] transition-colors">Beneficios Corporativos</h3>
                   <p className="text-sm text-gray-600 mt-2">Convenios de salud, bienestar y vacunación para empresas clientes.</p>
                 </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Preguntas Frecuentes */}
+        <section className="py-32 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto">
+              <RevealOnScroll>
+                <h2 className="text-2xl font-bold text-gray-900 text-center mb-2">
+                  Preguntas frecuentes sobre BICE Pyme
+                </h2>
+                <p className="text-gray-500 text-sm text-center mb-8">
+                  Resolvemos tus dudas sobre los planes de seguro complementario BICE Vida para pymes
+                </p>
+              </RevealOnScroll>
+              <div className="space-y-3">
+                {[
+                  {
+                    q: "¿Cuánto cuesta el seguro complementario BICE Vida para pymes?",
+                    a: "BICE Vida ofrece 4 planes para pymes: Estándar desde $20.718/mes por trabajador (50% cobertura), Plus desde $26.750/mes (70%), Elite desde $41.794/mes (80%) y Elite Plus desde $48.567/mes (80% + mayor seguro de vida). Todos incluyen seguro de salud y seguro de vida."
+                  },
+                  {
+                    q: "¿Cuántos trabajadores necesita mi pyme para contratar BICE Vida?",
+                    a: "Con BICE Vida puedes contratar desde 5 trabajadores a través de la plataforma Mi Pyme Segura. El proceso es 100% online y no requiere exámenes médicos previos. Para empresas con menos de 5 personas, existen opciones individuales como el seguro BICE Personas."
+                  },
+                  {
+                    q: "¿Qué coberturas incluyen los planes BICE Pyme?",
+                    a: "Todos los planes incluyen cobertura ambulatoria (consultas, exámenes, medicamentos), hospitalaria y seguro de vida. Los planes Elite y Elite Plus agregan beneficios adicionales como asistencia mascota Pawer. Opcionalmente puedes sumar cobertura dental y catastrófica."
+                  },
+                  {
+                    q: "¿Cómo se hacen los reembolsos del seguro BICE Vida?",
+                    a: "Los reembolsos se gestionan a través de RedAgrupa: tus colaboradores envían sus boletas y documentos, y nosotros tramitamos directamente con BICE Vida. El reembolso se deposita en la cuenta del trabajador. Con RedAgrupa el proceso es más rápido y sin papeleo."
+                  },
+                  {
+                    q: "¿Los planes BICE Pyme cubren cargas familiares?",
+                    a: "Sí, los planes BICE Vida para pymes permiten incluir cargas familiares (cónyuge e hijos). La prima adicional por carga depende del plan elegido. Es uno de los beneficios más valorados por los trabajadores, ya que protege a toda la familia."
+                  },
+                ].map((item, i) => (
+                  <details key={i} className="group rounded-xl overflow-hidden shadow-sm">
+                    <summary className="flex items-center justify-between cursor-pointer p-4 text-left font-semibold text-white text-sm bg-[#cc0033] group-open:rounded-b-none">
+                      <span className="flex items-center gap-2">
+                        <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" /></svg>
+                        {item.q}
+                      </span>
+                      <ChevronDown className="w-4 h-4 text-white flex-shrink-0 ml-3 transition-transform group-open:rotate-180" />
+                    </summary>
+                    <div className="px-4 py-4 bg-white text-gray-700 text-sm leading-relaxed border border-t-0 border-gray-200 rounded-b-xl">
+                      {item.a}
+                    </div>
+                  </details>
+                ))}
               </div>
             </div>
           </div>

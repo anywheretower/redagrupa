@@ -1,4 +1,5 @@
 ![Hero image](./images/alza-isapre.jpg)
+<!-- description: Alza de Isapres en Chile: causas del aumento, fallo de la Corte Suprema, cómo reclamar y alternativas como seguros complementarios para proteger tu salud. -->
 
 # Alza Isapre: ¿Qué está sucediendo?
 

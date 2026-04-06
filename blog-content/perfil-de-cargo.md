@@ -1,4 +1,4 @@
-![Hero image](./images/perfil-de-cargo.png)
+![Hero image](./images/perfil-de-cargo.webp)
 
 # Perfil de cargo: Efectividad en el Éxito Empresarial
 

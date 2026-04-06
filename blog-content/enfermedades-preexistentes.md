@@ -1,4 +1,5 @@
 ![Hero image](./images/enfermedades-preexistentes.jpg)
+<!-- description: Enfermedades preexistentes en Chile: qué seguros las cubren, derechos GES y cómo un seguro complementario te protege sin exclusiones. Guía actualizada. -->
 
 # Enfermedades preexistentes, ¿Qué son?
 

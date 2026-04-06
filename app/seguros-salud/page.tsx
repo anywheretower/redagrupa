@@ -8,6 +8,23 @@ export const metadata = {
   alternates: {
     canonical: "https://www.redagrupa.cl/seguros-salud",
   },
+  openGraph: {
+    title: "Seguro Complementario de Salud para Empresas",
+    description:
+      "Seguro complementario de salud para empresas en Chile. Cubre gastos que exceden Fonasa o Isapre. +300 pymes confían en RedAgrupa. Cotiza sin costo.",
+    url: "https://www.redagrupa.cl/seguros-salud",
+    siteName: "RedAgrupa",
+    locale: "es_CL",
+    type: "website",
+    images: [
+      {
+        url: "https://www.redagrupa.cl/images/og-redagrupa.jpg",
+        width: 1200,
+        height: 630,
+        alt: "RedAgrupa — Seguros Complementarios para Pymes en Chile",
+      },
+    ],
+  },
 }
 
 const faqJsonLd = {

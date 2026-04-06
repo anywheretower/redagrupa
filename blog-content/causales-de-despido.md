@@ -1,4 +1,5 @@
 ![Hero image](./images/causales-de-despido.jpg)
+<!-- description: Causales de despido en Chile: tipos según el Código del Trabajo, obligaciones del empleador, indemnizaciones y cómo proceder legalmente en tu pyme. -->
 
 # Causales de despido en Chile: Panorama legal y obligaciones
 

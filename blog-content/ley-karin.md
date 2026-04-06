@@ -1,4 +1,5 @@
 ![Hero image](./images/ley-karin.jpg)
+<!-- description: Ley Karin (21.643) en Chile: qué sanciona, obligaciones del empleador, protocolo de denuncia y cómo prevenir el acoso laboral en tu empresa. Guía completa. -->
 
 # Ley Karin: Protección y prevención contra el acoso laboral
 

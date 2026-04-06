@@ -1,4 +1,5 @@
 ![Hero image](./images/ley-corta-de-isapres.jpg)
+<!-- description: Ley Corta de Isapres: qué cambió, cómo afecta tu plan de salud y qué opciones tienes para mantener cobertura. Todo lo que necesitas saber en Chile. -->
 
 # Ley Corta de Isapres: todo lo que necesitas saber
 

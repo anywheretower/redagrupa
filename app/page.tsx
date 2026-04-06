@@ -17,6 +17,15 @@ export const metadata = {
   alternates: {
     canonical: "https://www.redagrupa.cl",
   },
+  openGraph: {
+    title: "Seguros Complementarios para Pymes en Chile | RedAgrupa",
+    description: "Seguros complementarios de salud para pymes en Chile. +10 años, +300 empresas, +9.000 familias protegidas. Cotiza gratis con RedAgrupa.",
+    url: "https://www.redagrupa.cl",
+    siteName: "RedAgrupa",
+    locale: "es_CL",
+    type: "website",
+    images: [{ url: "/images/og-redagrupa.jpg", width: 1200, height: 630, alt: "RedAgrupa — Seguros complementarios para pymes en Chile" }],
+  },
 }
 
 const reviewsJsonLd = {
@@ -105,6 +114,37 @@ export default function HomePage() {
             { "@type": "Question", name: "¿Cuánto cuesta un seguro complementario para mi empresa?", acceptedAnswer: { "@type": "Answer", text: "Desde $20.718 CLP mensuales por trabajador (Plan Pyme Estándar, 50% cobertura). El costo depende del plan elegido, la edad promedio del grupo y las coberturas opcionales. RedAgrupa cotiza sin costo y sin compromiso." }},
             { "@type": "Question", name: "¿Qué diferencia hay entre contratar directo con la aseguradora y usar un corredor?", acceptedAnswer: { "@type": "Answer", text: "Un corredor como RedAgrupa compara planes de las principales aseguradoras, negocia condiciones, gestiona toda la administración y trámites de reembolso, y brinda asesoría continua sin costo adicional. Contratar directo limita las opciones a una sola aseguradora y el precio es el mismo." }},
           ]
+        }) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "HowTo",
+          name: "Cómo contratar un seguro complementario para tu pyme con RedAgrupa",
+          description: "En 3 simples pasos tu equipo queda protegido con seguro complementario de salud. RedAgrupa gestiona todo el proceso sin costo.",
+          totalTime: "P3D",
+          step: [
+            {
+              "@type": "HowToStep",
+              position: 1,
+              name: "Cotiza gratis",
+              text: "Cuéntanos sobre tu empresa y te contactamos en menos de 24 hrs. Completa el formulario con datos básicos: nombre, empresa, número de trabajadores y teléfono.",
+              url: "https://www.redagrupa.cl/#formulario-contacto",
+            },
+            {
+              "@type": "HowToStep",
+              position: 2,
+              name: "Comparamos las principales aseguradoras",
+              text: "Analizamos planes de BCI Seguros, BICE Vida, Consorcio, MetLife, Bupa y más. Negociamos las mejores condiciones de cobertura y precio para tu pyme.",
+            },
+            {
+              "@type": "HowToStep",
+              position: 3,
+              name: "Tu equipo queda protegido",
+              text: "Gestionamos toda la contratación, documentos y coordinación con la aseguradora. Tu equipo queda cubierto en días, no meses. Sin trámites ni papeleo.",
+            },
+          ],
         }) }}
       />
       <main id="contenido-principal" className="min-h-screen bg-white">

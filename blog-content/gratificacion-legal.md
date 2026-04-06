@@ -1,4 +1,5 @@
 ![Hero image](./images/gratificacion-legal.jpg)
+<!-- description: Gratificación legal en Chile: cómo se calcula, cuándo se paga, requisitos y diferencias entre el artículo 47 y 50 del Código del Trabajo. Guía para pymes. -->
 
 # Lo que debes saber del Cálculo de Gratificaciones Legales
 

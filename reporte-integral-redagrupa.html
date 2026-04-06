@@ -187,8 +187,8 @@
         <tr><td>S7</td><td><strong>Sin Content-Security-Policy header</strong> &mdash; sin protecci&oacute;n contra XSS<div class="detail">next.config.mjs &mdash; agregar CSP report-only primero</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
         <tr><td>S8</td><td><strong>Next.js 16.0.10 con 8 vulnerabilidades</strong> (1 alta DoS RSC, 7 moderadas)<div class="detail">package.json &mdash; actualizar a 16.2.2+</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
         <tr><td>S9</td><td>Canonicals expl&iacute;citos en 10 p&aacute;ginas (todas con URL absoluta www)<div class="detail">alternates.canonical en cada page.tsx</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
-        <tr><td>S10</td><td><strong>IndexNow no implementado</strong> &mdash; Bing/Yandex no reciben notificaci&oacute;n de cambios<div class="detail">Agregar key en public/ y ping endpoint</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>S11</td><td><strong>Paginaci&oacute;n /blog?page=999 retorna 200</strong> &mdash; URLs infinitas en crawl budget<div class="detail">app/blog/page.tsx &mdash; redirigir out-of-range a /blog</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>S10</td><td>IndexNow implementado &mdash; key verificaci&oacute;n + API route /api/indexnow para Bing/Yandex<div class="detail">public/c1a34e...txt + app/api/indexnow/route.ts</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
+        <tr><td>S11</td><td>Paginaci&oacute;n /blog validada server-side &mdash; out-of-range y no-num&eacute;ricos redirigen a /blog<div class="detail">app/blog/page.tsx &mdash; redirect() con validaci&oacute;n completa</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>S12</td><td>SearchAction eliminado del WebSite schema (no hay b&uacute;squeda implementada)<div class="detail">layout.tsx &mdash; eliminado potentialAction</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
       </table>
     </div>
@@ -204,10 +204,10 @@
         <tr><td>S17</td><td><strong>20+ blog posts son thin content (&lt;500 palabras)</strong> &mdash; 2 est&aacute;n bajo 300 palabras<div class="detail">Expandir los m&aacute;s visitados a 1.000+ palabras con tablas y fuentes</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
         <tr><td>S18</td><td><strong>44 de 55 blog posts sin links internos</strong> a p&aacute;ginas de servicio &mdash; dead-ends que suben bounce<div class="detail">Ya implementado en 11 posts, faltan 44</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
         <tr><td>S19</td><td>Meta description homepage recortada a ~135 chars + CTA &ldquo;Cotiza gratis&rdquo;<div class="detail">page.tsx &mdash; ya no se trunca en SERP</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
-        <tr><td>S20</td><td>Sin OpenGraph espec&iacute;fico en 7 de 9 p&aacute;ginas (heredan OG gen&eacute;rico del layout)<div class="detail">Agregar og:title, og:description, og:url por p&aacute;gina</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>S20</td><td>OpenGraph espec&iacute;fico en 9 de 9 p&aacute;ginas (title, description, url, image, locale es_CL)<div class="detail">Metadata openGraph en cada page.tsx incluyendo homepage y blog</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>S21</td><td>T&iacute;tulo homepage keyword-first: &ldquo;Seguros Complementarios para Pymes en Chile | RedAgrupa&rdquo;<div class="detail">page.tsx &mdash; keyword antes de marca</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>S22</td><td>H2 &ldquo;3 pasos&rdquo; cambiado a &lt;p&gt; &mdash; fix mismatch sem&aacute;ntico<div class="detail">page.tsx &mdash; corregido</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
-        <tr><td>S23</td><td>50 de 55 blog posts sin meta description custom (usan extracto autogenerado)<div class="detail">Agregar <!-- description: --> a top 20 posts con m&aacute;s tr&aacute;fico</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>S23</td><td>25 de 55 blog posts con meta description custom (20 nuevas + 5 previas)<div class="detail">&lt;!-- description: --&gt; en top 20 posts priorizados por relevancia a seguros</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>S24</td><td>Blog sin contenido nuevo desde junio 2024 (22 meses sin publicar)<div class="detail">Publicar m&iacute;nimo 2 posts/mes, priorizando seguros</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
         <tr><td>S25</td><td>T&iacute;tulo /formularios sin doble marca (usa template | RedAgrupa)<div class="detail">formularios/page.tsx &mdash; corregido</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
       </table>
@@ -221,9 +221,9 @@
         <tr><td>S27</td><td><strong>AggregateRating en tipo Organization</strong> (no soportado por Google) con solo 3 reviews<div class="detail">Mover a LocalBusiness o Product. Expandir a 10+ reviews.</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
         <tr><td>S28</td><td>Organization schemas unificados con @id: #organization<div class="detail">layout.tsx + page.tsx &mdash; cross-references conectadas</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>S29</td><td>Schema Service en /seguros-salud y /beneficios-redagrupa<div class="detail">Service con provider @id #organization, areaServed Chile</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
-        <tr><td>S30</td><td>BICE Pyme solo 1 FAQ en schema &mdash; Google requiere 2+ para mostrar<div class="detail">bice-pyme/page.tsx &mdash; agregar 4-5 FAQs m&aacute;s</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>S30</td><td>BICE Pyme FAQPage schema con 6 FAQs + accordion visible en p&aacute;gina<div class="detail">bice-pyme/page.tsx (schema) + BicePymeClient.tsx (UI details/summary)</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>S31</td><td>Blog Article schema: author es Organization, no Person (E-E-A-T d&eacute;bil)<div class="detail">Requiere nombre real de autor (S29 pendiente cliente)</div></td><td><span class="badge badge-client">Cliente</span></td></tr>
-        <tr><td>S32</td><td>Falta schema HowTo para secci&oacute;n &ldquo;3 pasos&rdquo; del homepage<div class="detail">page.tsx &mdash; oportunidad rich snippet</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>S32</td><td>Schema HowTo &ldquo;3 pasos&rdquo; en homepage (Cotiza &rarr; Comparamos &rarr; Protegido)<div class="detail">app/page.tsx &mdash; JSON-LD HowTo con totalTime P3D</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>S33</td><td>ContactPoint agregado en Organization schema (customer service, tel, es)<div class="detail">layout.tsx &mdash; contactPoint con tel&eacute;fono y idioma</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>S34</td><td>priceValidUntil 2026-12-31 en 5 Products &mdash; expirar&aacute; sin actualizaci&oacute;n<div class="detail">Crear recordatorio para actualizar precios anualmente</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
       </table>
@@ -247,8 +247,8 @@
       <table>
         <tr><th style="width:40px">#</th><th>Hallazgo</th><th style="width:90px">Estado</th></tr>
         <tr><td>S41</td><td>Todas las im&aacute;genes con alt descriptivo, next/image con AVIF+WebP, priority en hero<div class="detail">/images/ solo 484 KB total &mdash; bien optimizado</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
-        <tr><td>S42</td><td>3 PNGs blog a 335-351 KB c/u (convertir a WebP); 2 JPGs h&eacute;roes hu&eacute;rfanos (139 KB)<div class="detail">Ahorro total ~1.2 MB storage</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>S43</td><td>OG image 124 KB &mdash; comprimir a ~80 KB<div class="detail">public/images/og-redagrupa.jpg</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>S42</td><td>3 PNGs blog convertidos a WebP (94% reducci&oacute;n) + 2 JPGs hu&eacute;rfanos eliminados<div class="detail">Ahorro ~1.14 MB: perfil-de-cargo, como-crear-empresa, calcular-finiquito</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
+        <tr><td>S43</td><td>OG image comprimida de 124 KB a 71 KB (43% reducci&oacute;n)<div class="detail">public/images/og-redagrupa.jpg &mdash; JPEG quality 45</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
       </table>
     </div>
 
@@ -542,12 +542,12 @@
       </div>
       <div class="footer-divider"></div>
       <div class="footer-item">
-        <div class="footer-num" style="color: #ea580c;">57</div>
+        <div class="footer-num" style="color: #ea580c;">49</div>
         <div class="footer-label">Pendientes</div>
       </div>
       <div class="footer-divider"></div>
       <div class="footer-item">
-        <div class="footer-num" style="color: #16a34a;">70</div>
+        <div class="footer-num" style="color: #16a34a;">78</div>
         <div class="footer-label">Aplicadas</div>
       </div>
       <div class="footer-divider"></div>

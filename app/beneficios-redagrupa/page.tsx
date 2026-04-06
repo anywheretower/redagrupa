@@ -8,6 +8,23 @@ export const metadata = {
   alternates: {
     canonical: "https://www.redagrupa.cl/beneficios-redagrupa",
   },
+  openGraph: {
+    title: "Beneficios de Salud para Empresas",
+    description:
+      "Convenios de salud, bienestar y vacunación corporativa para empresas clientes de RedAgrupa. +9.000 familias protegidas en Chile.",
+    url: "https://www.redagrupa.cl/beneficios-redagrupa",
+    siteName: "RedAgrupa",
+    locale: "es_CL",
+    type: "website",
+    images: [
+      {
+        url: "https://www.redagrupa.cl/images/og-redagrupa.jpg",
+        width: 1200,
+        height: 630,
+        alt: "RedAgrupa — Seguros Complementarios para Pymes en Chile",
+      },
+    ],
+  },
 }
 
 const serviceJsonLd = {

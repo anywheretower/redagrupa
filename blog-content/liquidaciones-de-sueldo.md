@@ -1,4 +1,5 @@
 ![Hero image](./images/liquidaciones-de-sueldo.jpg)
+<!-- description: Liquidaciones de sueldo en Chile: componentes, cómo calcularlas, plazos de entrega y obligaciones legales del empleador. Guía práctica para pymes. -->
 
 # Liquidaciones de sueldo en Chile
 

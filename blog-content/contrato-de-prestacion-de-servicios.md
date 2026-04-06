@@ -1,4 +1,5 @@
 ![Hero image](./images/contrato-de-prestacion-de-servicios.jpg)
+<!-- description: Contrato de prestación de servicios en Chile: diferencias con contrato laboral, elementos esenciales, modelo y obligaciones tributarias. Guía para pymes. -->
 
 # Contrato de prestación de servicios
 

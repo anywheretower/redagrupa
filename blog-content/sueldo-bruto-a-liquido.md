@@ -1,4 +1,5 @@
 ![Hero image](./images/sueldo-bruto-a-liquido.jpg)
+<!-- description: Cómo calcular el sueldo bruto a líquido en Chile: deducciones obligatorias, cotizaciones previsionales, impuestos y fórmula paso a paso. Ejemplo práctico. -->
 
 # Sueldo bruto a líquido
 

@@ -1,4 +1,5 @@
 ![Hero image](./images/capacitaciones-laborales.jpg)
+<!-- description: Capacitaciones laborales en Chile: tipos, franquicia SENCE, beneficios tributarios y cómo invertir en formación para hacer crecer tu empresa y equipo. -->
 
 # Capacitaciones laborales: Inversión para el crecimiento de tu empresa
 

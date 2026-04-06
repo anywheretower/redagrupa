@@ -1,4 +1,4 @@
-![Hero image](./images/como-crear-una-empresa.png)
+![Hero image](./images/como-crear-una-empresa.webp)
 
 # ¿Cómo crear una empresa?
 

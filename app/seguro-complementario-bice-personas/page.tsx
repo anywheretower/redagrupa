@@ -7,6 +7,23 @@ export const metadata = {
   alternates: {
     canonical: "https://www.redagrupa.cl/seguro-complementario-bice-personas",
   },
+  openGraph: {
+    title: "Seguro Complementario BICE Personas",
+    description:
+      "Seguro de salud complementario BICE Vida para personas. Protege tu salud y la de tu familia con coberturas en hospitalización, consultas, urgencias y medicamentos.",
+    url: "https://www.redagrupa.cl/seguro-complementario-bice-personas",
+    siteName: "RedAgrupa",
+    locale: "es_CL",
+    type: "website",
+    images: [
+      {
+        url: "https://www.redagrupa.cl/images/og-redagrupa.jpg",
+        width: 1200,
+        height: 630,
+        alt: "RedAgrupa — Seguros Complementarios para Pymes en Chile",
+      },
+    ],
+  },
 }
 
 const faqJsonLd = {

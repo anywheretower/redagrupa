@@ -1,4 +1,5 @@
 ![Hero image](./images/pago-finiquito.jpg)
+<!-- description: Pago de finiquito en Chile: plazos legales, qué incluye, consecuencias por pago fuera de plazo y derechos del trabajador al término del contrato laboral. -->
 
 # Pago finiquito: compensación al finalizar un contrato laboral
 

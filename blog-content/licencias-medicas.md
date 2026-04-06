@@ -1,4 +1,5 @@
 ![Hero image](./images/licencias-medicas.jpg)
+<!-- description: Licencias médicas en Chile: tipos, requisitos, plazos y cómo tramitarlas correctamente. Conoce tus derechos como trabajador y las obligaciones del empleador. -->
 
 # Licencias médicas: Derechos, obligaciones y procedimientos
 

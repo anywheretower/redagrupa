@@ -1,4 +1,5 @@
 ![Hero image](./images/ley-de-conciliacion.jpg)
+<!-- description: Ley de Conciliación Vida Personal y Laboral (21.645): derechos de teletrabajo, jornada flexible y obligaciones para empleadores en Chile. Guía para pymes. -->
 
 # Ley de Conciliación de la Vida Personal, Familiar y Laboral
 

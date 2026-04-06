@@ -1,4 +1,5 @@
 ![Hero image](./images/proyecto-40-horas.jpg)
+<!-- description: Ley 40 horas en Chile: plazos de implementación, cómo adaptar tu pyme a la reducción de jornada laboral y qué cambia para empleadores y trabajadores. -->
 
 # Proyecto 40 horas, ¿Qué es?
 

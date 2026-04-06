@@ -26,8 +26,8 @@ interface BlogPost {
   heroImage: string
 }
 
-export default function BlogClient({ posts }: { posts: BlogPost[] }) {
-  const [page, setPage] = useState(1)
+export default function BlogClient({ posts, initialPage = 1 }: { posts: BlogPost[]; initialPage?: number }) {
+  const [page, setPage] = useState(initialPage)
   const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE)
   const paginatedPosts = posts.slice((page - 1) * POSTS_PER_PAGE, page * POSTS_PER_PAGE)
 

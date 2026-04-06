@@ -1,4 +1,5 @@
 ![Hero image](./images/tope-imponible.jpg)
+<!-- description: Tope imponible en Chile: qué es, montos vigentes para salud y pensiones, cómo afecta tu sueldo líquido y por qué importa para seguros complementarios. -->
 
 # Tope Imponible: Clave en la Tributación y Seguridad Social
 

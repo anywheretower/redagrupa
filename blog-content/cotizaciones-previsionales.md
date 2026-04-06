@@ -1,4 +1,5 @@
 ![Hero image](./images/cotizaciones-previsionales.jpg)
+<!-- description: Cotizaciones previsionales en Chile: qué son, cuánto se descuenta, cómo se calculan y por qué complementarlas con un seguro de salud para mayor protección. -->
 
 # Cotizaciones Previsionales
 

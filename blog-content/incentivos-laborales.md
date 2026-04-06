@@ -1,4 +1,5 @@
 ![Hero image](./images/incentivos-laborales.jpg)
+<!-- description: Incentivos laborales en Chile: tipos, beneficios y cómo implementar un programa efectivo en tu pyme para motivar a tu equipo y retener talento clave. -->
 
 # Incentivos Laborales: Motivación y Productividad en el Trabajo
 

@@ -1,4 +1,5 @@
-![Hero image](./images/calcular-finiquito.png)
+![Hero image](./images/calcular-finiquito.webp)
+<!-- description: Cómo calcular el finiquito en Chile: componentes, fórmulas, plazos legales de pago y errores frecuentes. Guía paso a paso para empleadores y trabajadores. -->
 
 # Calcular Finiquito: Claves para un cierre laboral justo
 
