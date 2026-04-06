@@ -4,7 +4,6 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import ScrollButton from '@/components/ScrollButton'
 
 export default function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false)
@@ -129,14 +128,14 @@ export default function MobileMenu() {
             >
               Formularios
             </Link>
-            <ScrollButton
-              targetId="formulario-contacto"
+            <Button
               variant="outline"
               className="bg-transparent border-white text-white hover:bg-white/10 w-full py-3 mt-4"
+              asChild
               onClick={() => setIsOpen(false)}
             >
-              Solicitar Asesoría
-            </ScrollButton>
+              <a href="#formulario-contacto">Solicitar Asesoría</a>
+            </Button>
           </div>
         </div>
       )}

@@ -6,10 +6,9 @@ import {
   FileText,
   Shield,
   AlertCircle,
-  Download,
   ChevronDown,
 } from "lucide-react"
-import ScrollButton from "@/components/ScrollButton"
+import { Button } from "@/components/ui/button"
 import dynamic from "next/dynamic"
 import { useState, useEffect, useCallback } from "react"
 
@@ -179,12 +178,12 @@ export default function HomeContent({ latestPosts = [] }: { latestPosts?: Latest
                 diseñamos el plan y gestionamos incorporaciones, reembolsos y consultas de tu equipo.
               </p>
               <div className="mt-6">
-                <ScrollButton
-                  targetId="formulario-contacto"
+                <Button
                   className="bg-[#cc0033] text-white px-8 py-3"
+                  asChild
                 >
-                  Solicitar Asesoría
-                </ScrollButton>
+                  <a href="#formulario-contacto">Solicitar Asesoría</a>
+                </Button>
               </div>
             </div>
             <div>
@@ -260,12 +259,12 @@ export default function HomeContent({ latestPosts = [] }: { latestPosts?: Latest
             <h2 className="text-[1.5rem] sm:text-[2rem] lg:text-[2.5rem] font-normal mb-8 leading-[0.9] text-white px-4">
               +300 empresas y +9.000 familias ya confían en RedAgrupa
             </h2>
-            <ScrollButton
-              targetId="formulario-contacto"
+            <Button
               className="px-6 sm:px-8 py-3 bg-[#cc0033] text-white hover:bg-[#a30029] transition-colors rounded text-sm sm:text-base"
+              asChild
             >
-              Solicitar Asesoría
-            </ScrollButton>
+              <a href="#formulario-contacto">Solicitar Asesoría</a>
+            </Button>
           </div>
 
           {/* Spacer for image visibility - Mobile only */}
@@ -316,48 +315,6 @@ export default function HomeContent({ latestPosts = [] }: { latestPosts?: Latest
               <h3 className="text-xl font-semibold text-white">Alianzas</h3>
               <p className="text-sm text-white leading-snug">Conforman nuestra red de convenios</p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Nuestros Servicios */}
-      <section id="seccion-aseguradoras" className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#cc0033] mb-3">Nuestros Servicios</h2>
-            <p className="text-base text-[#666666]">Soluciones de protección para empresas y personas</p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <Link href="/beneficios-redagrupa" className="group bg-white rounded-xl p-6 shadow-sm hover:shadow-lg border border-gray-100 transition-all text-center">
-              <div className="w-14 h-14 rounded-full bg-[#cc0033] flex items-center justify-center mx-auto mb-4">
-                <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" /></svg>
-              </div>
-              <h3 className="text-lg font-semibold text-[#333333] group-hover:text-[#cc0033] transition-colors mb-2">Beneficios Corporativos</h3>
-              <p className="text-sm text-[#666666] leading-snug">Convenios de salud, bienestar y vacunación para tu empresa y colaboradores.</p>
-            </Link>
-            <Link href="/seguro-complementario-bice-pyme" className="group bg-white rounded-xl p-6 shadow-sm hover:shadow-lg border border-gray-100 transition-all text-center">
-              <div className="w-14 h-14 rounded-full bg-[#cc0033] flex items-center justify-center mx-auto mb-4">
-                <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3H21m-3.75 3H21" /></svg>
-              </div>
-              <h3 className="text-lg font-semibold text-[#333333] group-hover:text-[#cc0033] transition-colors mb-2">Seguro BICE Pyme</h3>
-              <p className="text-sm text-[#666666] leading-snug">4 planes desde UF 0,52/mes por trabajador. Salud + Vida en una sola póliza.</p>
-            </Link>
-            <Link href="/seguro-complementario-bice-personas" className="group bg-white rounded-xl p-6 shadow-sm hover:shadow-lg border border-gray-100 transition-all text-center">
-              <div className="w-14 h-14 rounded-full bg-[#cc0033] flex items-center justify-center mx-auto mb-4">
-                <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" /></svg>
-              </div>
-              <h3 className="text-lg font-semibold text-[#333333] group-hover:text-[#cc0033] transition-colors mb-2">Seguro BICE Personas</h3>
-              <p className="text-sm text-[#666666] leading-snug">Protección individual y familiar. Sin carencias, cobertura nacional, respaldo BICE.</p>
-            </Link>
-          </div>
-          <div className="text-center mt-8">
-            <Link
-              href="/formularios"
-              className="inline-flex items-center gap-2 text-sm text-[#666666] hover:text-[#cc0033] transition-colors"
-            >
-              <Download className="w-4 h-4" />
-              ¿Ya eres cliente? Descarga tus formularios de reembolso e incorporación →
-            </Link>
           </div>
         </div>
       </section>
