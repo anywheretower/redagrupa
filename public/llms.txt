@@ -12,7 +12,8 @@
 - [Seguro BICE Personas](https://www.redagrupa.cl/seguro-complementario-bice-personas): Seguro individual/familiar BICE Vida para personas entre 18-64 años
 - [Beneficios RedAgrupa](https://www.redagrupa.cl/beneficios-redagrupa): Convenios corporativos de salud, bienestar, vacunación y plataforma digital
 - [Nosotros](https://www.redagrupa.cl/nosotros): Historia, misión y equipo de RedAgrupa
-- [Blog](https://www.redagrupa.cl/blog): 60+ artículos sobre gestión de personas, legislación laboral y seguros en Chile
+- [Blog](https://www.redagrupa.cl/blog): 55 artículos sobre gestión de personas, legislación laboral y seguros en Chile
+- [Formularios](https://www.redagrupa.cl/formularios): Formularios de reembolso e incorporación de 9 aseguradoras partner
 
 ## Servicios principales
 
@@ -30,6 +31,14 @@
 - Pyme Premium: $26.750 CLP (~UF 0,67) — 70% ambulatoria, 70% hospitalaria, 300 UF tope salud, 500 UF vida
 - Pyme Elite: $41.794 CLP (~UF 1,05) — 80% ambulatoria, 80% hospitalaria, 500 UF tope salud, 500 UF vida
 - Pyme Elite Plus: $48.567 CLP (~UF 1,22) — 80% ambulatoria, 80% hospitalaria, 500 UF tope salud, 1.000 UF vida
+
+## Planes BICE Vida para Personas (precios individuales/mes)
+
+- Nivel 1: UF 0,58 — Hospitalización 50%, 200 UF tope anual
+- Nivel 2: UF 0,75 — Hospitalización 50% + Ambulatorio 50%, 200 UF tope
+- Nivel 3: UF 1,05 — Hospitalización 70% + Ambulatorio 70%, 300 UF tope
+- Nivel 4: UF 1,48 — Hospitalización 80% + Ambulatorio 80%, 400 UF tope
+- Nivel 5: UF 1,95 — Hospitalización 80% + Ambulatorio 80%, 500 UF tope + Catastrófico
 
 ## Preguntas frecuentes
 

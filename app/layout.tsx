@@ -82,15 +82,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               "@type": "WebSite",
               name: "RedAgrupa",
               url: "https://www.redagrupa.cl",
-              potentialAction: {
-                "@type": "SearchAction",
-                target: {
-                  "@type": "EntryPoint",
-                  urlTemplate:
-                    "https://www.redagrupa.cl/blog?q={search_term_string}",
-                },
-                "query-input": "required name=search_term_string",
-              },
             }),
           }}
         />
@@ -100,6 +91,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": ["Organization", "InsuranceAgency"],
+              "@id": "https://www.redagrupa.cl/#organization",
               name: "RedAgrupa",
               url: "https://www.redagrupa.cl",
               logo: "https://www.redagrupa.cl/images/logo-20redagrupa-3.png",
@@ -120,6 +112,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 "https://www.instagram.com/redagrupa/",
                 "https://www.linkedin.com/company/redagrupa",
               ],
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: "+56228132245",
+                contactType: "customer service",
+                availableLanguage: "Spanish",
+                areaServed: "CL",
+              },
               foundingDate: "2014",
               areaServed: {
                 "@type": "Country",

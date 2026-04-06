@@ -2,8 +2,12 @@ import SegurosSaludClient from "./SegurosSaludClient"
 
 export const metadata = {
   title: "Seguro Complementario de Salud para Empresas",
+  keywords: ["seguro complementario de salud", "seguro salud empresas", "cobertura Fonasa Isapre", "copago médico Chile"],
   description:
     "Seguro complementario de salud para empresas en Chile. Cubre gastos que exceden Fonasa o Isapre. +300 pymes confían en RedAgrupa. Cotiza sin costo.",
+  alternates: {
+    canonical: "https://www.redagrupa.cl/seguros-salud",
+  },
 }
 
 const faqJsonLd = {
@@ -37,12 +41,30 @@ const faqJsonLd = {
   ],
 }
 
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Seguro Complementario de Salud para Empresas",
+  description: "Asesoría gratuita y gestión integral de seguros complementarios de salud para pymes en Chile. Comparamos planes de las principales aseguradoras.",
+  provider: {
+    "@type": "Organization",
+    "@id": "https://www.redagrupa.cl/#organization",
+    name: "RedAgrupa",
+  },
+  areaServed: { "@type": "Country", name: "Chile" },
+  serviceType: "Correduría de Seguros de Salud",
+}
+
 export default function SegurosSaludPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
       <SegurosSaludClient />
     </>

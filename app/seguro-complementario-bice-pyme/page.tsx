@@ -2,8 +2,12 @@ import BicePymeClient from "./BicePymeClient"
 
 export const metadata = {
   title: "Seguro Complementario BICE Pyme",
+  keywords: ["seguro BICE pyme", "seguro complementario BICE Vida", "seguro salud pyme Chile", "Mi Pyme Segura"],
   description:
     "Planes de seguro complementario de salud BICE Vida para pymes. Seguro de Salud + Seguro de Vida desde UF 0,5200 mensual por trabajador.",
+  alternates: {
+    canonical: "https://www.redagrupa.cl/seguro-complementario-bice-pyme",
+  },
 }
 
 const jsonLd = [

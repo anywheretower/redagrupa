@@ -183,13 +183,13 @@
         <tr><td>S3</td><td>Redirects 301 de 14 URLs legacy WordPress + wildcard /seguro-complementario/:path*<div class="detail">next.config.mjs</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>S4</td><td>HTTPS con HSTS preload (max-age 2 a&ntilde;os), www canonical, non-www redirect 301<div class="detail">Vercel + next.config.mjs</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>S5</td><td>Security headers: X-Content-Type-Options, X-Frame-Options, Referrer-Policy, Permissions-Policy<div class="detail">next.config.mjs</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
-        <tr><td>S6</td><td><strong>Fechas lastmod en sitemap desactualizadas</strong> &mdash; hardcoded 2026-03-15, &uacute;ltimo commit real 2026-04-04<div class="detail">app/sitemap.ts &mdash; todas las p&aacute;ginas est&aacute;ticas afectadas</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>S6</td><td>Fechas lastmod en sitemap actualizadas a 2026-04-06<div class="detail">app/sitemap.ts &mdash; todas las p&aacute;ginas est&aacute;ticas</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>S7</td><td><strong>Sin Content-Security-Policy header</strong> &mdash; sin protecci&oacute;n contra XSS<div class="detail">next.config.mjs &mdash; agregar CSP report-only primero</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
         <tr><td>S8</td><td><strong>Next.js 16.0.10 con 8 vulnerabilidades</strong> (1 alta DoS RSC, 7 moderadas)<div class="detail">package.json &mdash; actualizar a 16.2.2+</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
-        <tr><td>S9</td><td><strong>Canonicals impl&iacute;citos en 7 p&aacute;ginas</strong> &mdash; layout usa canonical: &quot;./&quot;, solo /formularios y /blog/[slug] tienen expl&iacute;citos<div class="detail">Riesgo www vs non-www (Google a&uacute;n indexa sin www)</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>S9</td><td>Canonicals expl&iacute;citos en 10 p&aacute;ginas (todas con URL absoluta www)<div class="detail">alternates.canonical en cada page.tsx</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>S10</td><td><strong>IndexNow no implementado</strong> &mdash; Bing/Yandex no reciben notificaci&oacute;n de cambios<div class="detail">Agregar key en public/ y ping endpoint</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
         <tr><td>S11</td><td><strong>Paginaci&oacute;n /blog?page=999 retorna 200</strong> &mdash; URLs infinitas en crawl budget<div class="detail">app/blog/page.tsx &mdash; redirigir out-of-range a /blog</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>S12</td><td><strong>SearchAction apunta a /blog?q= pero no hay b&uacute;squeda implementada</strong><div class="detail">layout.tsx WebSite schema &mdash; implementar b&uacute;squeda o eliminar</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>S12</td><td>SearchAction eliminado del WebSite schema (no hay b&uacute;squeda implementada)<div class="detail">layout.tsx &mdash; eliminado potentialAction</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
       </table>
     </div>
 
@@ -203,13 +203,13 @@
         <tr><td>S16</td><td><strong>Blog 85% derecho laboral, ~6 posts de seguros</strong> &mdash; 0 clicks org&aacute;nicos para queries de seguros (GSC)<div class="detail">Crear 8-10 posts de seguros complementarios urgentemente</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
         <tr><td>S17</td><td><strong>20+ blog posts son thin content (&lt;500 palabras)</strong> &mdash; 2 est&aacute;n bajo 300 palabras<div class="detail">Expandir los m&aacute;s visitados a 1.000+ palabras con tablas y fuentes</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
         <tr><td>S18</td><td><strong>44 de 55 blog posts sin links internos</strong> a p&aacute;ginas de servicio &mdash; dead-ends que suben bounce<div class="detail">Ya implementado en 11 posts, faltan 44</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>S19</td><td>Meta description homepage 190 chars (l&iacute;mite ~155-160), se trunca en SERP<div class="detail">Recortar y agregar CTA &ldquo;Cotiza gratis&rdquo;</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>S19</td><td>Meta description homepage recortada a ~135 chars + CTA &ldquo;Cotiza gratis&rdquo;<div class="detail">page.tsx &mdash; ya no se trunca en SERP</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>S20</td><td>Sin OpenGraph espec&iacute;fico en 7 de 9 p&aacute;ginas (heredan OG gen&eacute;rico del layout)<div class="detail">Agregar og:title, og:description, og:url por p&aacute;gina</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>S21</td><td>T&iacute;tulo homepage inicia con marca &ldquo;RedAgrupa -&rdquo; &mdash; keyword enterrado<div class="detail">Invertir: &ldquo;Seguros Complementarios para Pymes en Chile | RedAgrupa&rdquo;</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>S21</td><td>T&iacute;tulo homepage keyword-first: &ldquo;Seguros Complementarios para Pymes en Chile | RedAgrupa&rdquo;<div class="detail">page.tsx &mdash; keyword antes de marca</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>S22</td><td>H2 &ldquo;3 pasos&rdquo; cambiado a &lt;p&gt; &mdash; fix mismatch sem&aacute;ntico<div class="detail">page.tsx &mdash; corregido</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>S23</td><td>50 de 55 blog posts sin meta description custom (usan extracto autogenerado)<div class="detail">Agregar <!-- description: --> a top 20 posts con m&aacute;s tr&aacute;fico</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
         <tr><td>S24</td><td>Blog sin contenido nuevo desde junio 2024 (22 meses sin publicar)<div class="detail">Publicar m&iacute;nimo 2 posts/mes, priorizando seguros</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>S25</td><td>T&iacute;tulo /formularios tiene doble marca: &ldquo;...RedAgrupa | RedAgrupa&rdquo;<div class="detail">formularios/page.tsx &mdash; quitar &ldquo;-- RedAgrupa&rdquo; del t&iacute;tulo</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>S25</td><td>T&iacute;tulo /formularios sin doble marca (usa template | RedAgrupa)<div class="detail">formularios/page.tsx &mdash; corregido</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
       </table>
     </div>
 
@@ -219,12 +219,12 @@
         <tr><th style="width:40px">#</th><th>Hallazgo</th><th style="width:90px">Estado</th></tr>
         <tr><td>S26</td><td>12 tipos de schema implementados: WebSite, Organization, LocalBusiness, FAQPage&times;4, Product, Article, BreadcrumbList, AggregateRating<div class="detail">Buena cobertura base</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>S27</td><td><strong>AggregateRating en tipo Organization</strong> (no soportado por Google) con solo 3 reviews<div class="detail">Mover a LocalBusiness o Product. Expandir a 10+ reviews.</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
-        <tr><td>S28</td><td><strong>3 entidades Organization desconectadas</strong> sin @id cross-references<div class="detail">Unificar con @id: &ldquo;#organization&rdquo; en layout.tsx + page.tsx</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>S29</td><td><strong>Falta schema Service</strong> en /seguros-salud y /beneficios-redagrupa<div class="detail">Agregar Service con provider, areaServed, serviceType</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>S28</td><td>Organization schemas unificados con @id: #organization<div class="detail">layout.tsx + page.tsx &mdash; cross-references conectadas</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
+        <tr><td>S29</td><td>Schema Service en /seguros-salud y /beneficios-redagrupa<div class="detail">Service con provider @id #organization, areaServed Chile</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>S30</td><td>BICE Pyme solo 1 FAQ en schema &mdash; Google requiere 2+ para mostrar<div class="detail">bice-pyme/page.tsx &mdash; agregar 4-5 FAQs m&aacute;s</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
         <tr><td>S31</td><td>Blog Article schema: author es Organization, no Person (E-E-A-T d&eacute;bil)<div class="detail">Requiere nombre real de autor (S29 pendiente cliente)</div></td><td><span class="badge badge-client">Cliente</span></td></tr>
         <tr><td>S32</td><td>Falta schema HowTo para secci&oacute;n &ldquo;3 pasos&rdquo; del homepage<div class="detail">page.tsx &mdash; oportunidad rich snippet</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>S33</td><td>Falta ContactPoint en Organization schema (tel&eacute;fono, email, horarios)<div class="detail">layout.tsx &mdash; agregar contactPoint tipo &ldquo;customer service&rdquo;</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>S33</td><td>ContactPoint agregado en Organization schema (customer service, tel, es)<div class="detail">layout.tsx &mdash; contactPoint con tel&eacute;fono y idioma</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>S34</td><td>priceValidUntil 2026-12-31 en 5 Products &mdash; expirar&aacute; sin actualizaci&oacute;n<div class="detail">Crear recordatorio para actualizar precios anualmente</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
       </table>
     </div>
@@ -289,9 +289,9 @@
         <tr><td>G1</td><td>6 AI bots expl&iacute;citamente permitidos en robots.txt (GPTBot, ClaudeBot, PerplexityBot, etc.)<div class="detail">app/robots.ts &mdash; bien implementado</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>G2</td><td>llms.txt + llms-full.txt comprensivos con precios, FAQs, servicios, contacto<div class="detail">Entre las mejores implementaciones en Chile para pymes</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>G3</td><td>Tabla sr-only en BICE Pyme para AI crawlers &mdash; excelente patr&oacute;n<div class="detail">BicePymeClient.tsx:401 &mdash; replicar en otras p&aacute;ginas</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
-        <tr><td>G4</td><td>Faltan AI bots: Bytespider, Applebot-Extended, Amazonbot, GoogleOther<div class="detail">app/robots.ts &mdash; agregar Allow expl&iacute;cito</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>G5</td><td>llms.txt dice &ldquo;60+ art&iacute;culos&rdquo;, actual 55 &mdash; inconsistente. Falta /formularios y precios BICE Personas.<div class="detail">Actualizar conteo y agregar datos faltantes</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>G6</td><td>llms-full.txt no incluye secci&oacute;n &ldquo;Corredor vs Directo&rdquo; &mdash; diferenciador clave<div class="detail">Agregar ventajas del corredor</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>G4</td><td>10 AI bots permitidos: +Bytespider, Applebot-Extended, Amazonbot, GoogleOther<div class="detail">app/robots.ts &mdash; 4 bots adicionales agregados</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
+        <tr><td>G5</td><td>llms.txt actualizado: 55 art&iacute;culos, /formularios, precios BICE Personas (5 niveles UF)<div class="detail">public/llms.txt &mdash; datos consistentes</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
+        <tr><td>G6</td><td>llms-full.txt con secci&oacute;n &ldquo;Corredor vs Directo&rdquo; (6 ventajas)<div class="detail">public/llms-full.txt &mdash; diferenciador clave para AI</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
       </table>
     </div>
 
@@ -318,7 +318,7 @@
         <tr><td>G16</td><td>&lt;article&gt; agregado en /nosotros<div class="detail">AI parsers usan &lt;article&gt; para identificar contenido principal</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>G17</td><td>&lt;li&gt; envueltos en &lt;ul&gt; en /nosotros &mdash; HTML corregido<div class="detail">NosotrosClient.tsx &mdash; 2 listas corregidas</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>G18</td><td>Sin SpeakableSpecification schema para voice search / AI assistants<div class="detail">Agregar speakable con cssSelector en h1 + intro</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>G19</td><td>Sin meta keywords en ninguna p&aacute;gina (Bing/Copilot a&uacute;n los usa para clasificaci&oacute;n)<div class="detail">Agregar keywords array a top 4 service pages</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>G19</td><td>Meta keywords en 4 service pages (homepage, seguros-salud, BICE Pyme, beneficios)<div class="detail">Bing/Copilot usa keywords para clasificaci&oacute;n</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>G20</td><td>&lt;time dateTime&gt; agregado en BlogPostClient.tsx<div class="detail">dateTime={post.date} para parseo de frescura</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
       </table>
     </div>
@@ -542,12 +542,12 @@
       </div>
       <div class="footer-divider"></div>
       <div class="footer-item">
-        <div class="footer-num" style="color: #ea580c;">70</div>
+        <div class="footer-num" style="color: #ea580c;">57</div>
         <div class="footer-label">Pendientes</div>
       </div>
       <div class="footer-divider"></div>
       <div class="footer-item">
-        <div class="footer-num" style="color: #16a34a;">57</div>
+        <div class="footer-num" style="color: #16a34a;">70</div>
         <div class="footer-label">Aplicadas</div>
       </div>
       <div class="footer-divider"></div>

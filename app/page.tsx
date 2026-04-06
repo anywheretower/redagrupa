@@ -10,14 +10,19 @@ import HomeContent from "./HomeClient"
 import { getLatestPosts } from "@/lib/blog"
 
 export const metadata = {
-  title: "RedAgrupa - Gestión de Seguros Complementarios para Pymes",
+  title: "Seguros Complementarios para Pymes en Chile | RedAgrupa",
+  keywords: ["seguro complementario de salud", "seguros para pymes", "corredor de seguros Chile", "seguro complementario empresas", "RedAgrupa"],
   description:
-    "Gestión integral de seguros complementarios de salud para pymes en Chile. +10 años de experiencia, +300 empresas clientes, +9.000 familias protegidas. Sin trámites eternos ni lenguaje técnico.",
+    "Seguros complementarios de salud para pymes en Chile. +10 años, +300 empresas, +9.000 familias protegidas. Cotiza gratis con RedAgrupa.",
+  alternates: {
+    canonical: "https://www.redagrupa.cl",
+  },
 }
 
 const reviewsJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": "https://www.redagrupa.cl/#organization",
   name: "RedAgrupa",
   url: "https://www.redagrupa.cl",
   aggregateRating: {

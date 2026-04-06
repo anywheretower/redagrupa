@@ -4,6 +4,9 @@ export const metadata = {
   title: "Seguro Complementario BICE Personas",
   description:
     "Seguro de salud complementario BICE Vida para personas. Protege tu salud y la de tu familia con coberturas en hospitalización, consultas, urgencias y medicamentos.",
+  alternates: {
+    canonical: "https://www.redagrupa.cl/seguro-complementario-bice-personas",
+  },
 }
 
 const faqJsonLd = {
