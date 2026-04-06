@@ -1,7 +1,6 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-@custom-variant dark (&:is(.dark *));
 
 :root {
   /* Updated to RedAgrupa brand colors: #cc0033 (red), #ffffff (white), #333333 (dark gray) */
@@ -40,41 +39,6 @@
   --sidebar-ring: #cc0033;
 }
 
-.dark {
-  /* Dark mode with inverted RedAgrupa colors */
-  --background: #333333;
-  --foreground: #ffffff;
-  --card: #333333;
-  --card-foreground: #ffffff;
-  --popover: #333333;
-  --popover-foreground: #ffffff;
-  --primary: #cc0033;
-  --primary-foreground: #ffffff;
-  --secondary: #444444;
-  --secondary-foreground: #ffffff;
-  --muted: #444444;
-  --muted-foreground: #cccccc;
-  --accent: #cc0033;
-  --accent-foreground: #ffffff;
-  --destructive: #cc0033;
-  --destructive-foreground: #ffffff;
-  --border: #444444;
-  --input: #444444;
-  --ring: #cc0033;
-  --chart-1: #cc0033;
-  --chart-2: #999999;
-  --chart-3: #666666;
-  --chart-4: #555555;
-  --chart-5: #444444;
-  --sidebar: #333333;
-  --sidebar-foreground: #ffffff;
-  --sidebar-primary: #cc0033;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #444444;
-  --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #444444;
-  --sidebar-ring: #cc0033;
-}
 
 @theme inline {
   --font-sans: "Geist", "Geist Fallback";

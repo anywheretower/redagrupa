@@ -7,7 +7,7 @@ import ScrollHeader from "@/components/ScrollHeader"
 import MobileMenu from "@/components/MobileMenu"
 import Footer from "@/components/Footer"
 import HomeContent from "./HomeClient"
-import { getAllPosts } from "@/lib/blog"
+import { getLatestPosts } from "@/lib/blog"
 
 export const metadata = {
   title: "RedAgrupa - Gestión de Seguros Complementarios para Pymes",
@@ -77,7 +77,7 @@ const reviewsJsonLd = {
 }
 
 export default function HomePage() {
-  const latestPosts = getAllPosts().slice(0, 3)
+  const latestPosts = getLatestPosts(3)
   return (
     <>
       <script
@@ -225,7 +225,7 @@ export default function HomePage() {
               fill
               className="object-cover"
               priority
-              quality={85}
+              quality={75}
               sizes="100vw"
             />
             <div
@@ -240,7 +240,7 @@ export default function HomePage() {
           <div className="container mx-auto px-6 h-full relative z-10">
             <div className="grid lg:grid-cols-2 gap-12 items-end lg:items-center min-h-[calc(100vh-6rem)]">
               <div className="space-y-6 md:space-y-8 pb-10 lg:py-12 mobile-text-shadow">
-                <h1 className="animate-fade-in-up text-3xl sm:text-2xl md:text-[2rem] lg:text-[2.75rem] font-normal leading-[0.95] text-balance tracking-tight">
+                <h1 className="text-3xl sm:text-2xl md:text-[2rem] lg:text-[2.75rem] font-normal leading-[0.95] text-balance tracking-tight">
                   Seguros Complementarios para tu Pyme desde UF&nbsp;0,52/mes
                 </h1>
                 <p className="animate-fade-in-up-d1 text-base sm:text-base lg:text-lg text-white/90 leading-[1.3] max-w-2xl">

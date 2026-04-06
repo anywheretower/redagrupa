@@ -450,9 +450,9 @@
         <tr><td>R3</td><td>Carousels lazy-loaded con dynamic import ssr:false<div class="detail">ProblemaCarousel, StatsCarousel, TestimonialCarousel</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>R4</td><td>CLS 0.00 &mdash; sin layout shifts<div class="detail">Excelente estabilidad visual</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>R5</td><td>Cache inmutable para /images/ y /_next/static/</td><td><span class="badge badge-done">Aplicada</span></td></tr>
-        <tr><td>R6</td><td><strong>animate-fade-in-up en H1 hero inicia con opacity:0</strong> &mdash; LCP no se puede reportar hasta que animaci&oacute;n ejecuta<div class="detail">page.tsx:243 &mdash; REMOVER clase del H1. Impacto estimado: -1 a -3s LCP mobile</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
-        <tr><td>R7</td><td><strong>getAllPosts() lee 55 archivos markdown pero homepage usa solo 3</strong><div class="detail">lib/blog.ts &mdash; crear getLatestPosts(3). Impacto: -100 a -300ms TTFB cold start</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>R8</td><td>Hero image quality={85} pero preload usa q=75 &mdash; mismatch<div class="detail">page.tsx:228 &mdash; verificar o alinear a q=75</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>R6</td><td>animate-fade-in-up removido del H1 hero &mdash; LCP ya no espera animaci&oacute;n opacity:0&rarr;1<div class="detail">page.tsx &mdash; impacto estimado: -1 a -3s LCP mobile</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
+        <tr><td>R7</td><td>getLatestPosts(3) lee solo 3 archivos en vez de 55<div class="detail">lib/blog.ts &mdash; -100 a -300ms TTFB cold start</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
+        <tr><td>R8</td><td>Hero image quality alineado a 75 (match preload)<div class="detail">page.tsx &mdash; elimina doble descarga por mismatch</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>R9</td><td>Logo &lt;img&gt; decoding cambiado de sync a async<div class="detail">page.tsx &mdash; decoding=&ldquo;async&rdquo;</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>R10</td><td>Agregar scroll-behavior:smooth en CSS para eliminar ScrollButton JS del critical path<div class="detail">globals.css + reemplazar ScrollButton con &lt;a href=&ldquo;#&rdquo;&gt;</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
       </table>
@@ -463,12 +463,12 @@
       <table>
         <tr><th style="width:40px">#</th><th>Hallazgo</th><th style="width:90px">Estado</th></tr>
         <tr><td>R11</td><td><strong>Subp&aacute;ginas: header/sidebar/footer est&aacute;ticos dentro de &ldquo;use client&rdquo;</strong> &mdash; ~200-300 l&iacute;neas hidrataci&oacute;n innecesaria &times;6<div class="detail">Extraer a Server Components como el landing page</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
-        <tr><td>R12</td><td><strong>ExitIntentPopup cargado eagerly en layout.tsx</strong> en cada p&aacute;gina<div class="detail">Usar dynamic() ssr:false &mdash; popup no se muestra hasta 10-15s</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>R12</td><td>ExitIntentPopup lazy-loaded via wrapper client + dynamic ssr:false<div class="detail">ExitIntentPopupLazy.tsx &mdash; no se incluye en bundle inicial</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>R13</td><td><strong>react-markdown + remark-gfm cargados client-side</strong> (~50 KB) &mdash; blog es contenido est&aacute;tico<div class="detail">Mover rendering markdown a Server Component</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>R14</td><td>Sonner Toaster en layout.tsx global pero solo se usa en ContactForm (ya lazy-loaded)<div class="detail">Mover &lt;Toaster&gt; dentro de ContactForm</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>R14</td><td>Sonner Toaster movido de layout.tsx global a ContactForm<div class="detail">Solo se carga cuando el formulario est&aacute; visible</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>R15</td><td>HomeClient.tsx es 469 l&iacute;neas monol&iacute;ticas &ldquo;use client&rdquo; &mdash; FAQ y Servicios no necesitan JS<div class="detail">Splitear: FAQ + Servicios como Server Components</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
         <tr><td>R16</td><td>~242 KB JS sin usar (GA4 119KB, GTM 64KB, FB Pixel 35KB, Next.js 21KB)<div class="detail">Terceros no eliminables &mdash; auditar GTM container para diferir tags no esenciales</div></td><td><span class="badge badge-info">Info</span></td></tr>
-        <tr><td>R17</td><td>Dark mode CSS variables definidas pero tema oscuro no existe &mdash; ~500 bytes<div class="detail">globals.css .dark {} &mdash; eliminar</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>R17</td><td>Dark mode CSS eliminado (.dark {} + @custom-variant dark) &mdash; ~500 bytes<div class="detail">globals.css &mdash; tema oscuro no existe en el sitio</div></td><td><span class="badge badge-done">Aplicada</span></td></tr>
         <tr><td>R18</td><td>JSON-LD scripts en &lt;head&gt; (~6 KB) &mdash; mover a end of body para reducir parse time<div class="detail">-20 a -50ms FCP estimado</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
       </table>
     </div>
@@ -537,17 +537,17 @@
     <div style="text-align: center; margin-bottom: 16px; font-size: 13px; font-weight: 600; color: #475569;">Resumen Total de Hallazgos</div>
     <div class="footer-grid">
       <div class="footer-item">
-        <div class="footer-num" style="color: #dc2626;">20</div>
+        <div class="footer-num" style="color: #dc2626;">19</div>
         <div class="footer-label">Cr&iacute;ticos</div>
       </div>
       <div class="footer-divider"></div>
       <div class="footer-item">
-        <div class="footer-num" style="color: #ea580c;">89</div>
+        <div class="footer-num" style="color: #ea580c;">83</div>
         <div class="footer-label">Pendientes</div>
       </div>
       <div class="footer-divider"></div>
       <div class="footer-item">
-        <div class="footer-num" style="color: #16a34a;">38</div>
+        <div class="footer-num" style="color: #16a34a;">44</div>
         <div class="footer-label">Aplicadas</div>
       </div>
       <div class="footer-divider"></div>

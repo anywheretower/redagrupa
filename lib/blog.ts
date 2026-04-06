@@ -108,6 +108,14 @@ export function getAllPosts(): BlogPost[] {
   })
 }
 
+export function getLatestPosts(count: number): BlogPost[] {
+  const index = parseIndex().slice(0, count)
+  return index.map(({ slug, date }) => {
+    const { title, heroImage, content, excerpt, description } = parseMarkdown(slug)
+    return { slug, date, title, heroImage, content, excerpt, description }
+  })
+}
+
 export function getPostBySlug(slug: string): BlogPost | null {
   const index = parseIndex()
   const entry = index.find((p) => p.slug === slug)

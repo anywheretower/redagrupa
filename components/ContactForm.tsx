@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Lock, Loader2, CheckCircle2, X } from "lucide-react"
-import { toast } from "sonner"
+import { toast, Toaster } from "sonner"
 import { contactoSchema, contactoPersonasSchema, type ContactoData, type ContactoPersonasData } from "@/lib/schemas/contacto"
 
 type ContactFormProps = {
@@ -113,6 +113,7 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
 
   return (
     <>
+      <Toaster richColors position="top-center" />
       <h2 className="text-xl lg:text-2xl font-bold text-[#333333] text-center mb-6 leading-snug">
         {heading}
       </h2>
