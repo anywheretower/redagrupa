@@ -205,7 +205,7 @@ export default function HomePage() {
                 </div>
               </div>
               <Link href="/blog" className="text-white hover:text-white/80 transition-colors font-medium text-xs">
-                Conocimiento Pyme
+                Conocimiento Empresa
               </Link>
               <Link href="/formularios" className="text-white hover:text-white/80 transition-colors font-medium text-xs">
                 Formularios

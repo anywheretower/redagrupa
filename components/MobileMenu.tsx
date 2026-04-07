@@ -119,7 +119,7 @@ export default function MobileMenu() {
               className="text-white text-lg py-3 border-b border-white/20"
               onClick={() => setIsOpen(false)}
             >
-              Conocimiento Pyme
+              Conocimiento Empresa
             </Link>
             <Link
               href="/formularios"

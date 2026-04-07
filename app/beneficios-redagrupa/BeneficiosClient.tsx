@@ -77,7 +77,7 @@ export default function BeneficiosClient() {
               </div>
             </div>
             <Link href="/blog" className="text-white font-medium text-sm">
-              Conocimiento Pyme
+              Conocimiento Empresa
             </Link>
             <Link href="/formularios" className="text-white font-medium text-sm">
               Formularios

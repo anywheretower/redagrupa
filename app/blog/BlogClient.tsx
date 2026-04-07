@@ -88,7 +88,7 @@ export default function BlogClient({ posts, initialPage = 1 }: { posts: BlogPost
               </div>
             </div>
             <Link href="/blog" className="text-white font-medium text-sm">
-              Conocimiento Pyme
+              Conocimiento Empresa
             </Link>
             <Link href="/formularios" className="text-white font-medium text-sm">
               Formularios
@@ -165,7 +165,7 @@ export default function BlogClient({ posts, initialPage = 1 }: { posts: BlogPost
           <div className="container mx-auto px-4">
             <Breadcrumbs items={[{ label: "Blog" }]} />
             <div className="max-w-4xl mx-auto text-center mb-16">
-              <h1 className="text-4xl font-bold text-[#cc0033] mb-4">Conocimiento Pyme</h1>
+              <h1 className="text-4xl font-bold text-[#cc0033] mb-4">Conocimiento Empresa</h1>
               <p className="text-base text-gray-700 leading-[1.1]">
                 Guías y recursos sobre seguros, legislación laboral y gestión de personas para tu empresa.
               </p>

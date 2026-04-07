@@ -5,20 +5,20 @@ import BlogClient from "./BlogClient"
 const POSTS_PER_PAGE = 12
 
 export const metadata = {
-  title: "Conocimiento Pyme — Seguros, Legislación y Gestión de Personas",
+  title: "Conocimiento Empresa — Seguros, Legislación y Gestión de Personas",
   description:
     "Guías y recursos sobre seguros complementarios de salud, legislación laboral y gestión de personas para pymes en Chile. +55 artículos.",
   alternates: {
     canonical: "https://www.redagrupa.cl/blog",
   },
   openGraph: {
-    title: "Conocimiento Pyme — Seguros, Legislación y Gestión de Personas",
+    title: "Conocimiento Empresa — Seguros, Legislación y Gestión de Personas",
     description: "Guías y recursos sobre seguros complementarios de salud, legislación laboral y gestión de personas para pymes en Chile. +55 artículos.",
     url: "https://www.redagrupa.cl/blog",
     siteName: "RedAgrupa",
     locale: "es_CL",
     type: "website",
-    images: [{ url: "/images/og-redagrupa.jpg", width: 1200, height: 630, alt: "Conocimiento Pyme — Blog de RedAgrupa" }],
+    images: [{ url: "/images/og-redagrupa.jpg", width: 1200, height: 630, alt: "Conocimiento Empresa — Blog de RedAgrupa" }],
   },
 }
 

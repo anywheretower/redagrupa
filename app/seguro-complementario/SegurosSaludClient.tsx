@@ -45,7 +45,7 @@ export default function SegurosSaludClient() {
               width={160}
               height={40}
               priority
-              className="h-6 md:h-8 w-auto"
+              className="h-8 md:h-8 w-auto"
             />
           </Link>
           <nav aria-label="Navegación principal" className="hidden lg:flex items-center gap-8">
@@ -79,7 +79,7 @@ export default function SegurosSaludClient() {
               </div>
             </div>
             <Link href="/blog" className="text-white font-medium text-sm">
-              Conocimiento Pyme
+              Conocimiento Empresa
             </Link>
             <Link href="/formularios" className="text-white font-medium text-sm">
               Formularios
@@ -154,10 +154,11 @@ export default function SegurosSaludClient() {
             src="/seguro-complementario-hero.webp"
             alt="Familia protegida con seguro complementario de salud"
             fill
-            className="object-cover"
+            className="object-cover object-[70%_center] lg:object-center"
             priority
           />
           <div className="absolute inset-0 z-[1] hidden lg:block" style={{ background: "linear-gradient(to right, white 0%, white 25%, transparent 60%)" }} />
+          <div className="absolute inset-0 z-[1] lg:hidden" style={{ background: "linear-gradient(to right, white 0%, transparent 60%)" }} />
           <div className="container mx-auto px-4 relative z-10 hidden lg:block">
             <div className="max-w-4xl ml-8 lg:ml-16 space-y-4">
               <p className="text-4xl font-bold text-[#cc0033] drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)]" aria-hidden="true">Seguro Complementario<br />de Salud</p>
@@ -192,7 +193,7 @@ export default function SegurosSaludClient() {
           return (
             <section className="bg-white border-b border-gray-200">
               <div className="container mx-auto px-6 py-6 lg:py-8">
-                <p className="text-xs uppercase tracking-widest text-[#666666] text-center mb-4">Comparamos las principales aseguradoras de Chile</p>
+                <p className="text-[10px] sm:text-xs uppercase tracking-widest text-[#666666] text-center mb-4">Comparamos las principales aseguradoras por ti</p>
                 {/* Desktop: logos estáticos centrados */}
                 <div className="hidden md:flex items-center justify-center gap-x-11 max-w-full mx-auto">
                   {logos.map((logo) => (
@@ -217,10 +218,10 @@ export default function SegurosSaludClient() {
                         key={`${logo.alt}-${i}`}
                         src={logo.src}
                         alt={i >= logos.length ? "" : logo.alt}
-                        width={100}
-                        height={32}
+                        width={120}
+                        height={40}
                         loading="lazy"
-                        className="h-8 w-auto object-contain flex-shrink-0"
+                        className="h-10 w-auto object-contain flex-shrink-0"
                         aria-hidden={i >= logos.length ? true : undefined}
                       />
                     ))}
@@ -241,28 +242,26 @@ export default function SegurosSaludClient() {
               <p className="text-base text-[#333333] leading-snug">
                 Mejor cobertura para tu equipo, <strong className="text-[#cc0033]">cero gestión para ti</strong>. Contratación en días, reembolsos y consultas 100% gestionados por RedAgrupa.
               </p>
-              <div className="flex items-center gap-3">
-                <div>
-                  <Button onClick={scrollToForm} className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3 flex items-center gap-2">
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
-                    Solicitar Asesoría
-                  </Button>
-                  <p className="text-xs text-[#cc0033] font-medium mt-1.5">Cotiza gratis ahora — sin compromiso</p>
-                </div>
-                <span className="text-xs text-[#666666]">+300 pymes confían en nosotros</span>
+              <div>
+                <Button onClick={scrollToForm} className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3 flex items-center gap-2">
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
+                  Solicitar Asesoría
+                </Button>
+                <p className="text-xs text-[#cc0033] font-medium mt-1.5">Cotiza gratis ahora — sin compromiso</p>
+                <span className="text-xs text-[#666666] block mt-1">+300 pymes confían en nosotros</span>
               </div>
             </div>
             <div className="max-w-4xl mx-auto space-y-6">
               <p className="text-base text-gray-700 leading-[1.1]">
-                Un seguro complementario de salud es una póliza que cubre los gastos médicos que Fonasa o tu Isapre
-                no cubren completamente — consultas, exámenes, hospitalizaciones y medicamentos. En la práctica,
-                el seguro reembolsa el copago que queda después de la bonificación de tu plan de salud, según los
+                Un seguro complementario de salud es una póliza que <strong className="text-[#cc0033]">cubre los gastos médicos que Fonasa o tu Isapre
+                no cubren completamente</strong> — consultas, exámenes, hospitalizaciones y medicamentos. En la práctica,
+                el seguro <strong className="text-[#cc0033]">reembolsa el copago</strong> que queda después de la bonificación de tu plan de salud, según los
                 porcentajes y topes de la póliza contratada.
               </p>
               <p className="text-base text-gray-700 leading-[1.1]">
                 Para pymes y empresas medianas en Chile, contar con un seguro complementario de salud es una de las
-                herramientas más efectivas para retener talento, fortalecer tu propuesta de valor como empleador
-                y proteger a tus equipos ante gastos de salud imprevistos.
+                herramientas más efectivas para <strong className="text-[#cc0033]">retener talento</strong>, <strong className="text-[#cc0033]">fortalecer tu propuesta de valor como empleador</strong>
+                y <strong className="text-[#cc0033]">proteger a tus equipos</strong> ante gastos de salud imprevistos.
               </p>
             </div>
           </div>
@@ -362,16 +361,16 @@ export default function SegurosSaludClient() {
               </h2>
               <p className="text-base text-gray-700 leading-[1.1]">
                 En Chile, todas las personas cuentan por ley con un sistema de salud previsional, ya sea Fonasa o
-                Isapre, el cual cubre solo un porcentaje del costo total de las prestaciones médicas, generando un
+                Isapre, el cual <strong className="text-[#cc0033]">cubre solo un porcentaje del costo total</strong> de las prestaciones médicas, generando un
                 copago que debe ser asumido por la persona.
               </p>
               <p className="text-base text-gray-700 leading-[1.1]">
-                El Seguro Complementario de Salud está diseñado para cubrir total o parcialmente ese copago, de
+                El Seguro Complementario de Salud está diseñado para <strong className="text-[#cc0033]">cubrir total o parcialmente ese copago</strong>, de
                 acuerdo con los porcentajes, topes y condiciones definidos en la póliza contratada por la empresa,
-                reduciendo significativamente el gasto de bolsillo del trabajador.
+                <strong className="text-[#cc0033]">reduciendo significativamente el gasto de bolsillo</strong> del trabajador.
               </p>
               <p className="text-base text-gray-700 leading-[1.1]">
-                En la práctica, es como ampliar tu cobertura de Fonasa o Isapre: consultas, exámenes, hospitalización y más quedan cubiertos con menos gasto para tu equipo.
+                En la práctica, es como <strong className="text-[#cc0033]">ampliar tu cobertura de Fonasa o Isapre</strong>: consultas, exámenes, hospitalización y más quedan cubiertos con <strong className="text-[#cc0033]">menos gasto para tu equipo</strong>.
               </p>
             </RevealOnScroll>
           </div>

@@ -319,13 +319,13 @@ export default function HomeContent({ latestPosts = [] }: { latestPosts?: Latest
         </div>
       </section>
 
-      {/* Conocimiento Pyme + FAQ — Unified Section */}
+      {/* Conocimiento Empresa + FAQ — Unified Section */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Left: Blog Carousel */}
             <div>
-              <h2 className="text-2xl font-bold text-[#cc0033] mb-2">Conocimiento Pyme</h2>
+              <h2 className="text-2xl font-bold text-[#cc0033] mb-2">Conocimiento Empresa</h2>
               <p className="text-gray-500 text-sm mb-6">Guías y recursos para tu empresa</p>
               {latestPosts.length > 0 && (
                 <BlogCarousel posts={latestPosts} />
