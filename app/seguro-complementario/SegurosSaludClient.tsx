@@ -48,40 +48,40 @@ export default function SegurosSaludClient() {
               className="h-8 md:h-8 w-auto"
             />
           </Link>
-          <nav aria-label="Navegación principal" className="hidden lg:flex items-center gap-8">
-            <Link href="/nosotros" className="text-white font-medium text-sm">
+          <nav aria-label="Navegación principal" className="hidden lg:flex items-center gap-8 ml-auto mr-4">
+            <Link href="/nosotros" className="text-white hover:text-white/80 transition-colors font-medium text-xs">
               Nosotros
             </Link>
-            <Link href="/seguro-complementario" className="text-white font-medium text-sm">
+            <Link href="/seguro-complementario" className="text-white hover:text-white/80 transition-colors font-medium text-xs">
               Seguro Complementario Salud
             </Link>
-            <Link href="/beneficios-redagrupa" className="text-white font-medium text-sm">
+            <Link href="/beneficios-redagrupa" className="text-white hover:text-white/80 transition-colors font-medium text-xs">
               Beneficios RedAgrupa
             </Link>
             <div className="relative group">
               <button
                 aria-haspopup="true"
                 aria-expanded="false"
-                className="text-white font-medium text-sm flex items-center gap-1"
+                className="text-white hover:text-white/80 transition-colors font-medium text-xs flex items-center gap-1"
               >
                 Seguro BICE
                 <svg className="w-3.5 h-3.5 transition-transform group-hover:rotate-180 group-focus-within:rotate-180" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
               </button>
               <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-200">
                 <div className="bg-white rounded-lg shadow-lg py-2 min-w-[200px]" role="menu">
-                  <Link href="/seguro-complementario-bice-pyme" className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#cc0033] transition-colors">
+                  <Link href="/seguro-complementario-bice-pyme" role="menuitem" className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#cc0033] focus:bg-gray-50 focus:text-[#cc0033] focus:outline-none transition-colors">
                     Seguro BICE Pyme
                   </Link>
-                  <Link href="/seguro-complementario-bice-personas" className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#cc0033] transition-colors">
+                  <Link href="/seguro-complementario-bice-personas" role="menuitem" className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#cc0033] focus:bg-gray-50 focus:text-[#cc0033] focus:outline-none transition-colors">
                     Seguro BICE Personas
                   </Link>
                 </div>
               </div>
             </div>
-            <Link href="/blog" className="text-white font-medium text-sm">
+            <Link href="/blog" className="text-white hover:text-white/80 transition-colors font-medium text-xs">
               Conocimiento Empresa
             </Link>
-            <Link href="/formularios" className="text-white font-medium text-sm">
+            <Link href="/formularios" className="text-white hover:text-white/80 transition-colors font-medium text-xs">
               Formularios
             </Link>
           </nav>
