@@ -120,6 +120,10 @@
     animation: scroll-left 40s linear infinite;
   }
 
+  .logo-marquee-track {
+    animation: scroll-left 30s linear infinite;
+  }
+
   /* Adding marquee animation for infinite scrolling text banner */
   @keyframes marquee {
     0% {
@@ -219,7 +223,8 @@
     animation-duration: 0s;
   }
   .testimonial-track,
-  .related-track {
+  .related-track,
+  .logo-marquee-track {
     animation: none;
   }
 }
