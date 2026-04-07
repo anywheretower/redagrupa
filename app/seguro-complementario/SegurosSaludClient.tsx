@@ -162,7 +162,7 @@ export default function SegurosSaludClient() {
             <div className="max-w-4xl ml-8 lg:ml-16 space-y-4">
               <p className="text-4xl font-bold text-[#cc0033] drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)]" aria-hidden="true">Seguro Complementario<br />de Salud</p>
               <p className="text-lg text-[#333333] max-w-lg leading-snug">
-                Protege a tu equipo desde <strong className="text-[#cc0033]">UF 0,52/mes</strong> por trabajador. Asesoría gratuita + comparación de las principales aseguradoras.
+                Mejor cobertura para tu equipo, <strong className="text-[#cc0033]">cero gestión para ti</strong>. Contratación en días, reembolsos y consultas 100% gestionados por RedAgrupa.
               </p>
               <div className="space-y-3">
                 <Button onClick={scrollToForm} className="bg-[#cc0033] hover:bg-[#a30029] text-white px-12 py-3 shadow-lg flex items-center gap-2 text-base">
@@ -214,7 +214,7 @@ export default function SegurosSaludClient() {
             <div className="lg:hidden max-w-4xl mx-auto space-y-3 mb-8">
               <h1 className="text-3xl font-bold text-[#cc0033]">Seguro Complementario<br />de Salud</h1>
               <p className="text-base text-[#333333] leading-snug">
-                Protege a tu equipo desde <strong className="text-[#cc0033]">UF 0,52/mes</strong> por trabajador. Asesoría gratuita + comparación de las principales aseguradoras.
+                Mejor cobertura para tu equipo, <strong className="text-[#cc0033]">cero gestión para ti</strong>. Contratación en días, reembolsos y consultas 100% gestionados por RedAgrupa.
               </p>
               <div className="flex items-center gap-3">
                 <div>
@@ -247,7 +247,16 @@ export default function SegurosSaludClient() {
         <section className="py-8 bg-gray-50 border-y border-gray-200">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto flex items-start gap-4">
-              <Quote className="w-8 h-8 text-[#cc0033] flex-shrink-0 mt-1 rotate-180" strokeWidth={1.5} />
+              <div className="relative flex-shrink-0 mt-1">
+                <Image
+                  src="/images/marcela-lorenzo-ceo-just4u-baja.jpg"
+                  alt="Marcela Lorenzo, Partner CEO en JSTL"
+                  width={80}
+                  height={80}
+                  className="w-20 h-20 rounded-full object-cover"
+                />
+                <Quote className="w-5 h-5 text-[#cc0033] absolute -top-1 -right-1 rotate-180 bg-gray-50 rounded-full p-0.5" strokeWidth={2} />
+              </div>
               <div>
                 <p className="text-base text-[#666666] leading-snug italic">
                   &ldquo;Llevábamos años buscando un seguro que permitiese como empresa pequeña poder tener cobertura adicional.
