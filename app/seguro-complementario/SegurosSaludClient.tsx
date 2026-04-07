@@ -176,35 +176,60 @@ export default function SegurosSaludClient() {
           </div>
         </section>
 
-        {/* Trust Bar — Logos aseguradoras (visible inmediato, sin animación) */}
-        <section className="bg-white border-b border-gray-200">
-          <div className="container mx-auto px-6 py-6 lg:py-8">
-            <p className="text-xs uppercase tracking-widest text-[#666666] text-center mb-4">Comparamos las principales aseguradoras de Chile</p>
-            <div className="flex items-center justify-center gap-x-8 lg:gap-x-11 overflow-x-auto max-w-full mx-auto">
-              {[
-                { src: "/images/bupa.png", alt: "Logo Bupa" },
-                { src: "/images/logo-bicevida-e1674133440155.png", alt: "Logo BICE Vida" },
-                { src: "/images/sura-seguros300-e1674133176152.png", alt: "Logo Sura Seguros" },
-                { src: "/images/consorcio300-e1674133353916.png", alt: "Logo Consorcio" },
-                { src: "/images/metlife-logo-e1674133505895.png", alt: "Logo MetLife" },
-                { src: "/images/bci-seguros300.png", alt: "Logo BCI Seguros" },
-                { src: "/images/security.png", alt: "Logo Vida Security" },
-                { src: "/images/logo-help1-e1674133566493.png", alt: "Logo Help Seguros" },
-                { src: "/images/logo-chilena-consolidada2-e1674133731697.png", alt: "Logo Chilena Consolidada" },
-              ].map((logo) => (
-                <Image
-                  key={logo.alt}
-                  src={logo.src}
-                  alt={logo.alt}
-                  width={100}
-                  height={36}
-                  loading="lazy"
-                  className="h-8 lg:h-10 w-auto object-contain flex-shrink-0"
-                />
-              ))}
-            </div>
-          </div>
-        </section>
+        {/* Trust Bar — Logos aseguradoras */}
+        {(() => {
+          const logos = [
+            { src: "/images/bupa.png", alt: "Logo Bupa" },
+            { src: "/images/logo-bicevida-e1674133440155.png", alt: "Logo BICE Vida" },
+            { src: "/images/sura-seguros300-e1674133176152.png", alt: "Logo Sura Seguros" },
+            { src: "/images/consorcio300-e1674133353916.png", alt: "Logo Consorcio" },
+            { src: "/images/metlife-logo-e1674133505895.png", alt: "Logo MetLife" },
+            { src: "/images/bci-seguros300.png", alt: "Logo BCI Seguros" },
+            { src: "/images/security.png", alt: "Logo Vida Security" },
+            { src: "/images/logo-help1-e1674133566493.png", alt: "Logo Help Seguros" },
+            { src: "/images/logo-chilena-consolidada2-e1674133731697.png", alt: "Logo Chilena Consolidada" },
+          ]
+          return (
+            <section className="bg-white border-b border-gray-200">
+              <div className="container mx-auto px-6 py-6 lg:py-8">
+                <p className="text-xs uppercase tracking-widest text-[#666666] text-center mb-4">Comparamos las principales aseguradoras de Chile</p>
+                {/* Desktop: logos estáticos centrados */}
+                <div className="hidden md:flex items-center justify-center gap-x-11 max-w-full mx-auto">
+                  {logos.map((logo) => (
+                    <Image
+                      key={logo.alt}
+                      src={logo.src}
+                      alt={logo.alt}
+                      width={120}
+                      height={40}
+                      loading="lazy"
+                      className="h-10 w-auto object-contain flex-shrink-0"
+                    />
+                  ))}
+                </div>
+                {/* Mobile: marquee automático */}
+                <div className="md:hidden relative overflow-hidden min-h-[32px]">
+                  <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+                  <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+                  <div className="flex items-center gap-x-8 logo-marquee-track w-max">
+                    {[...logos, ...logos].map((logo, i) => (
+                      <Image
+                        key={`${logo.alt}-${i}`}
+                        src={logo.src}
+                        alt={i >= logos.length ? "" : logo.alt}
+                        width={100}
+                        height={32}
+                        loading="lazy"
+                        className="h-8 w-auto object-contain flex-shrink-0"
+                        aria-hidden={i >= logos.length ? true : undefined}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </section>
+          )
+        })()}
 
         {/* Intro + breadcrumbs */}
         <section className="py-12 lg:py-16">
