@@ -9,7 +9,7 @@ const slides = [
   {
     image: "/images/hero-redagrupa.webp",
     alt: "Equipo de trabajo protegido con seguro complementario de salud RedAgrupa",
-    mobileObjectPos: "object-[center_30%]",
+    mobileObjectPos: "object-[60%_30%]",
     headline: "Tu equipo protegido desde UF\u00a00,52/mes. Sin trámites, sin papeleo",
     subtitle: "Seguro complementario de salud para pymes desde 5 trabajadores. Comparamos las principales aseguradoras, elegimos el mejor plan y gestionamos todo: cotización, contratación y reembolsos.",
     ctaPrimary: { text: "Cotiza Gratis", href: "#formulario-contacto" },
@@ -18,7 +18,7 @@ const slides = [
   {
     image: "/images/hero-slide2.webp",
     alt: "Equipo de trabajo en reunión de planificación de seguros complementarios",
-    mobileObjectPos: "object-[center_25%]",
+    mobileObjectPos: "object-[70%_25%]",
     headline: "Recupera hasta 40 horas al año en gestión de seguros",
     subtitle: "Nos integramos como el área de seguros de tu empresa. Gestionamos incorporaciones, reembolsos y consultas de tu equipo. +300 empresas ya nos eligen hace más de 10 años.",
     ctaPrimary: { text: "Solicitar Asesoría Gratis", href: "#formulario-contacto" },
@@ -27,7 +27,7 @@ const slides = [
   {
     image: "/images/hero-slide3.webp",
     alt: "Asesora de seguros con atención personalizada vía WhatsApp",
-    mobileObjectPos: "object-[center_20%]",
+    mobileObjectPos: "object-[60%_20%]",
     headline: "Mejor cobertura para tu equipo, cero gestión para ti",
     subtitle: "Tu equipo va al doctor sin preocuparse por el costo. El seguro cubre el copago que Fonasa o Isapre no cubren. Contratación en días, no meses. Proceso 100% gestionado por RedAgrupa.",
     ctaPrimary: { text: "Cotiza Sin Costo", href: "#formulario-contacto" },
@@ -70,30 +70,33 @@ export default function HeroCarousel() {
       aria-roledescription="carrusel"
       aria-label="Información principal de RedAgrupa"
     >
-      {/* Background images */}
+      {/* Background images — mobile: imagen solo en 58% superior */}
       {slides.map((slide, i) => (
         <div
           key={i}
           className={`absolute inset-0 z-0 transition-opacity duration-700 ${i === current ? "opacity-100" : "opacity-0"}`}
         >
-          <Image
-            src={slide.image}
-            alt={slide.alt}
-            fill
-            className={`object-cover ${slide.mobileObjectPos} md:object-center`}
-            {...(i === 0 ? { priority: true } : { loading: "lazy" as const })}
-            quality={75}
-            sizes="100vw"
-          />
-          <div
-            className="absolute inset-0"
-            style={{ backgroundImage: "linear-gradient(to bottom, #cc0033 0%, transparent 30%)" }}
-          />
-          <div
-            className="absolute inset-0"
-            style={{ backgroundImage: "linear-gradient(to top, #cc0033 0%, transparent 50%)" }}
-          />
-          {/* Mobile: bloque rojo sólido en el tercio inferior para que la imagen no tape el texto */}
+          {/* Imagen: en mobile ocupa solo la parte superior, en desktop ocupa todo */}
+          <div className="absolute inset-0 bottom-[42%] md:bottom-0">
+            <Image
+              src={slide.image}
+              alt={slide.alt}
+              fill
+              className={`object-cover ${slide.mobileObjectPos} md:object-center`}
+              {...(i === 0 ? { priority: true } : { loading: "lazy" as const })}
+              quality={75}
+              sizes="100vw"
+            />
+            <div
+              className="absolute inset-0"
+              style={{ backgroundImage: "linear-gradient(to bottom, #cc0033 0%, transparent 30%)" }}
+            />
+            <div
+              className="absolute inset-0"
+              style={{ backgroundImage: "linear-gradient(to top, #cc0033 0%, transparent 50%)" }}
+            />
+          </div>
+          {/* Mobile: franja roja inferior */}
           <div className="absolute bottom-0 left-0 right-0 h-[42%] bg-[#cc0033] md:hidden" />
         </div>
       ))}
