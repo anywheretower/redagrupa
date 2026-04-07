@@ -19,6 +19,7 @@ import {
   Mail,
   Phone,
   ChevronDown,
+  Quote,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import MobileMenu from "@/components/MobileMenu"
@@ -112,7 +113,7 @@ export default function SegurosSaludClient() {
           href="https://www.facebook.com/RedAgrupa/"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-11 h-11 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
+          className="w-11 h-11 bg-[#1877F2] rounded-full flex items-center justify-center hover:bg-[#1565C0] transition-colors shadow-lg"
           aria-label="Facebook de RedAgrupa"
         >
           <Facebook className="w-4 h-4 text-white" strokeWidth={1.5} />
@@ -121,7 +122,7 @@ export default function SegurosSaludClient() {
           href="https://www.instagram.com/redagrupa/"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-11 h-11 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
+          className="w-11 h-11 bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF] rounded-full flex items-center justify-center hover:opacity-85 transition-opacity shadow-lg"
           aria-label="Instagram de RedAgrupa"
         >
           <Instagram className="w-4 h-4 text-white" strokeWidth={1.5} />
@@ -130,7 +131,7 @@ export default function SegurosSaludClient() {
           href="https://www.linkedin.com/company/redagrupa"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-11 h-11 rounded-full bg-[#cc0033] hover:bg-[#a30029] flex items-center justify-center shadow-lg transition-colors"
+          className="w-11 h-11 bg-[#0A66C2] rounded-full flex items-center justify-center hover:bg-[#084E96] transition-colors shadow-lg"
           aria-label="LinkedIn de RedAgrupa"
         >
           <Linkedin className="w-4 h-4 text-white" strokeWidth={1.5} />
@@ -147,7 +148,7 @@ export default function SegurosSaludClient() {
       </div>
 
       <article>
-        {/* Hero Section */}
+        {/* Hero Section — sin RevealOnScroll para visibilidad inmediata */}
         <section className="relative min-h-[50vh] lg:min-h-[70vh] flex items-center pt-20">
           <Image
             src="/seguro-complementario-hero.webp"
@@ -158,31 +159,75 @@ export default function SegurosSaludClient() {
           />
           <div className="absolute inset-0 z-[1] hidden lg:block" style={{ background: "linear-gradient(to right, white 0%, white 25%, transparent 60%)" }} />
           <div className="container mx-auto px-4 relative z-10 hidden lg:block">
-            <RevealOnScroll className="max-w-4xl ml-8 lg:ml-16 space-y-3">
+            <div className="max-w-4xl ml-8 lg:ml-16 space-y-4">
               <p className="text-4xl font-bold text-[#cc0033] drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)]" aria-hidden="true">Seguro Complementario<br />de Salud</p>
-              <div>
-                <Button onClick={scrollToForm} className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3 shadow-lg">
+              <p className="text-lg text-[#333333] max-w-lg leading-snug">
+                Protege a tu equipo desde <strong className="text-[#cc0033]">UF 0,52/mes</strong> por trabajador. Asesoría gratuita + comparación de las principales aseguradoras.
+              </p>
+              <div className="space-y-3">
+                <Button onClick={scrollToForm} className="bg-[#cc0033] hover:bg-[#a30029] text-white px-12 py-3 shadow-lg flex items-center gap-2 text-base">
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
                   Solicitar Asesoría
                 </Button>
+                <p className="text-xs text-[#cc0033] font-medium">Cotiza gratis ahora — sin compromiso</p>
+                <p className="text-sm text-[#666666]">+300 pymes confían en nosotros</p>
               </div>
-            </RevealOnScroll>
+            </div>
           </div>
         </section>
 
-        {/* Introducción */}
-        <section className="py-16 lg:py-32">
+        {/* Trust Bar — Logos aseguradoras (visible inmediato, sin animación) */}
+        <section className="bg-white border-b border-gray-200">
+          <div className="container mx-auto px-6 py-6 lg:py-8">
+            <p className="text-xs uppercase tracking-widest text-[#666666] text-center mb-4">Comparamos las principales aseguradoras de Chile</p>
+            <div className="flex items-center justify-center gap-x-8 lg:gap-x-11 overflow-x-auto max-w-full mx-auto">
+              {[
+                { src: "/images/bupa.png", alt: "Logo Bupa" },
+                { src: "/images/logo-bicevida-e1674133440155.png", alt: "Logo BICE Vida" },
+                { src: "/images/sura-seguros300-e1674133176152.png", alt: "Logo Sura Seguros" },
+                { src: "/images/consorcio300-e1674133353916.png", alt: "Logo Consorcio" },
+                { src: "/images/metlife-logo-e1674133505895.png", alt: "Logo MetLife" },
+                { src: "/images/bci-seguros300.png", alt: "Logo BCI Seguros" },
+                { src: "/images/security.png", alt: "Logo Vida Security" },
+                { src: "/images/logo-help1-e1674133566493.png", alt: "Logo Help Seguros" },
+                { src: "/images/logo-chilena-consolidada2-e1674133731697.png", alt: "Logo Chilena Consolidada" },
+              ].map((logo) => (
+                <Image
+                  key={logo.alt}
+                  src={logo.src}
+                  alt={logo.alt}
+                  width={100}
+                  height={36}
+                  loading="lazy"
+                  className="h-8 lg:h-10 w-auto object-contain flex-shrink-0"
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Intro + breadcrumbs */}
+        <section className="py-12 lg:py-16">
           <div className="container mx-auto px-4">
             <Breadcrumbs items={[{ label: "Seguros Salud" }]} />
             {/* Título y botón solo en móvil */}
             <div className="lg:hidden max-w-4xl mx-auto space-y-3 mb-8">
               <h1 className="text-3xl font-bold text-[#cc0033]">Seguro Complementario<br />de Salud</h1>
-              <div>
-                <Button onClick={scrollToForm} className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3">
-                  Solicitar Asesoría
-                </Button>
+              <p className="text-base text-[#333333] leading-snug">
+                Protege a tu equipo desde <strong className="text-[#cc0033]">UF 0,52/mes</strong> por trabajador. Asesoría gratuita + comparación de las principales aseguradoras.
+              </p>
+              <div className="flex items-center gap-3">
+                <div>
+                  <Button onClick={scrollToForm} className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3 flex items-center gap-2">
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
+                    Solicitar Asesoría
+                  </Button>
+                  <p className="text-xs text-[#cc0033] font-medium mt-1.5">Cotiza gratis ahora — sin compromiso</p>
+                </div>
+                <span className="text-xs text-[#666666]">+300 pymes confían en nosotros</span>
               </div>
             </div>
-            <RevealOnScroll className="max-w-4xl mx-auto space-y-6">
+            <div className="max-w-4xl mx-auto space-y-6">
               <p className="text-base text-gray-700 leading-[1.1]">
                 Un seguro complementario de salud es una póliza que cubre los gastos médicos que Fonasa o tu Isapre
                 no cubren completamente — consultas, exámenes, hospitalizaciones y medicamentos. En la práctica,
@@ -194,41 +239,88 @@ export default function SegurosSaludClient() {
                 herramientas más efectivas para retener talento, fortalecer tu propuesta de valor como empleador
                 y proteger a tus equipos ante gastos de salud imprevistos.
               </p>
-            </RevealOnScroll>
+            </div>
+          </div>
+        </section>
 
-            {/* Marquee */}
-            <div className="relative overflow-hidden mt-16 py-4">
-              <div
-                className="absolute inset-y-0 left-0 w-32 z-10 pointer-events-none"
-                style={{ background: "linear-gradient(to right, white, transparent)" }}
-              />
-              <div
-                className="absolute inset-y-0 right-0 w-32 z-10 pointer-events-none"
-                style={{ background: "linear-gradient(to left, white, transparent)" }}
-              />
-              <div className="animate-marquee whitespace-nowrap text-[#cc0033] font-medium">
-                <span className="mx-8">
-                  Pymes que hoy respiran más tranquilas | Recuperar hasta 40 horas anuales del tiempo de un profesional
-                  para retención de talento y estrategia. | ¿Sabías que el 70% de los colaboradores no entiende su
-                  cobertura?
-                </span>
-                <span className="mx-8">
-                  Pymes que hoy respiran más tranquilas | Recuperar hasta 40 horas anuales del tiempo de un profesional
-                  para retención de talento y estrategia. | ¿Sabías que el 70% de los colaboradores no entiende su
-                  cobertura?
-                </span>
-                <span className="mx-8">
-                  Pymes que hoy respiran más tranquilas | Recuperar hasta 40 horas anuales del tiempo de un profesional
-                  para retención de talento y estrategia. | ¿Sabías que el 70% de los colaboradores no entiende su
-                  cobertura?
-                </span>
+        {/* Mini-testimonio — social proof temprano */}
+        <section className="py-8 bg-gray-50 border-y border-gray-200">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto flex items-start gap-4">
+              <Quote className="w-8 h-8 text-[#cc0033] flex-shrink-0 mt-1 rotate-180" strokeWidth={1.5} />
+              <div>
+                <p className="text-base text-[#666666] leading-snug italic">
+                  &ldquo;Llevábamos años buscando un seguro que permitiese como empresa pequeña poder tener cobertura adicional.
+                  Hemos encontrado asesoría confiable, con profesionales atentos y capacitados. Recomiendo RedAgrupa a ojos cerrados.&rdquo;
+                </p>
+                <p className="mt-3 text-sm">
+                  <span className="font-semibold text-[#333333]">Marcela Lorenzo</span>
+                  <span className="text-[#666666]"> — Partner CEO en JSTL</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Beneficios para Empresas — ANTES de "¿Qué es?" para tráfico Ads */}
+        <section className="py-16 lg:py-24">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <RevealOnScroll>
+                <h2 className="text-2xl font-bold text-gray-900 text-center mb-4">
+                  Beneficios del Seguro Complementario de Salud para Empresas
+                </h2>
+                <p className="text-base text-gray-700 leading-[1.1] text-center mb-12">
+                  Contratar un Seguro Complementario de Salud permite a las empresas:
+                </p>
+              </RevealOnScroll>
+
+              <RevealOnScroll className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
+                  <p className="text-base text-gray-700 leading-[1.1]">
+                    <strong>Tus trabajadores van al doctor sin preocuparse por el costo:</strong> el seguro cubre el copago que Fonasa o Isapre no cubren, reduciendo gastos de bolsillo hasta un 80%.
+                  </p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
+                  <p className="text-base text-gray-700 leading-[1.1]">
+                    <strong>Tu equipo se siente valorado y se queda:</strong> las empresas con seguro complementario reducen la rotación hasta un 25%, porque el beneficio impacta directo en la calidad de vida.
+                  </p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
+                  <p className="text-base text-gray-700 leading-[1.1]">
+                    <strong>Atraes talento sin competir solo por sueldo:</strong> el seguro complementario es el beneficio más valorado en Chile después del sueldo. Diferencia tu oferta laboral.
+                  </p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
+                  <p className="text-base text-gray-700 leading-[1.1]">
+                    <strong>Una urgencia no se convierte en deuda familiar:</strong> hospitalización, cirugías y eventos catastróficos quedan cubiertos. Tu equipo está protegido ante lo inesperado.
+                  </p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
+                  <p className="text-base text-gray-700 leading-[1.1]">
+                    <strong>Planes adaptados a tu presupuesto real:</strong> desde UF 0,52/mes por trabajador. Eliges coberturas, topes y aseguradora según lo que tu pyme necesita y puede pagar.
+                  </p>
+                </div>
+              </RevealOnScroll>
+
+              <div className="text-center mt-10">
+                <Button onClick={scrollToForm} className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3 flex items-center gap-2 mx-auto">
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
+                  Solicitar Asesoría
+                </Button>
+                <p className="text-xs text-[#cc0033] font-medium mt-1.5">Cotiza gratis ahora — sin compromiso</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* ¿Qué es un Seguro Complementario de Salud? */}
-        <section className="py-32 bg-gray-50">
+        <section className="py-16 lg:py-24 bg-gray-50">
           <div className="container mx-auto px-4">
             <RevealOnScroll className="max-w-4xl mx-auto space-y-8">
               <h2 className="text-2xl font-bold text-gray-900 text-center">
@@ -252,7 +344,7 @@ export default function SegurosSaludClient() {
         </section>
 
         {/* Coberturas */}
-        <section className="py-32">
+        <section className="py-16 lg:py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <RevealOnScroll className="text-center space-y-4 mb-16">
@@ -321,57 +413,8 @@ export default function SegurosSaludClient() {
           </div>
         </section>
 
-        {/* Beneficios para Empresas */}
-        <section className="py-32 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <RevealOnScroll>
-                <h2 className="text-2xl font-bold text-gray-900 text-center mb-4">
-                  Beneficios del Seguro Complementario de Salud para Empresas
-                </h2>
-                <p className="text-base text-gray-700 leading-[1.1] text-center mb-12">
-                  Contratar un Seguro Complementario de Salud permite a las empresas:
-                </p>
-              </RevealOnScroll>
-
-              <RevealOnScroll className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
-                  <p className="text-base text-gray-700 leading-[1.1]">
-                    <strong>Tus trabajadores van al doctor sin preocuparse por el costo:</strong> el seguro cubre el copago que Fonasa o Isapre no cubren, reduciendo gastos de bolsillo hasta un 80%.
-                  </p>
-                </div>
-                <div className="flex items-start gap-4">
-                  <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
-                  <p className="text-base text-gray-700 leading-[1.1]">
-                    <strong>Tu equipo se siente valorado y se queda:</strong> las empresas con seguro complementario reducen la rotación hasta un 25%, porque el beneficio impacta directo en la calidad de vida.
-                  </p>
-                </div>
-                <div className="flex items-start gap-4">
-                  <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
-                  <p className="text-base text-gray-700 leading-[1.1]">
-                    <strong>Atraes talento sin competir solo por sueldo:</strong> el seguro complementario es el beneficio más valorado en Chile después del sueldo. Diferencia tu oferta laboral.
-                  </p>
-                </div>
-                <div className="flex items-start gap-4">
-                  <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
-                  <p className="text-base text-gray-700 leading-[1.1]">
-                    <strong>Una urgencia no se convierte en deuda familiar:</strong> hospitalización, cirugías y eventos catastróficos quedan cubiertos. Tu equipo está protegido ante lo inesperado.
-                  </p>
-                </div>
-                <div className="flex items-start gap-4">
-                  <CheckCircle2 className="w-6 h-6 text-[#cc0033] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
-                  <p className="text-base text-gray-700 leading-[1.1]">
-                    <strong>Planes adaptados a tu presupuesto real:</strong> desde UF 0,52/mes por trabajador. Eliges coberturas, topes y aseguradora según lo que tu pyme necesita y puede pagar.
-                  </p>
-                </div>
-              </RevealOnScroll>
-            </div>
-          </div>
-        </section>
-
         {/* Asesoría especializada */}
-        <section className="py-32 bg-gray-50">
+        <section className="py-16 lg:py-24 bg-gray-50">
           <div className="container mx-auto px-4">
             <RevealOnScroll className="max-w-4xl mx-auto text-center space-y-6">
               <Users className="w-12 h-12 text-[#cc0033] mx-auto" strokeWidth={1.5} />
@@ -382,34 +425,13 @@ export default function SegurosSaludClient() {
                 los trabajadores.
               </p>
               <div className="pt-4">
-                <Button onClick={scrollToForm} className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3">
+                <Button onClick={scrollToForm} className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3 flex items-center gap-2 mx-auto">
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
                   Solicitar Asesoría
                 </Button>
+                <p className="text-xs text-[#cc0033] font-medium mt-1.5">Cotiza gratis ahora — sin compromiso</p>
               </div>
             </RevealOnScroll>
-          </div>
-        </section>
-
-        {/* Related Services */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl font-bold text-gray-900 text-center mb-8">Servicios relacionados</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                <Link href="/seguro-complementario-bice-pyme" className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow group">
-                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-[#cc0033] transition-colors">Seguro BICE Pyme</h3>
-                  <p className="text-sm text-gray-600 mt-2">Salud + Vida en una sola póliza para tu equipo.</p>
-                </Link>
-                <Link href="/seguro-complementario-bice-personas" className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow group">
-                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-[#cc0033] transition-colors">Seguro BICE Personas</h3>
-                  <p className="text-sm text-gray-600 mt-2">Protección individual y familiar. Hospitalización, consultas y medicamentos.</p>
-                </Link>
-                <Link href="/beneficios-redagrupa" className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow group">
-                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-[#cc0033] transition-colors">Beneficios Corporativos</h3>
-                  <p className="text-sm text-gray-600 mt-2">Convenios de salud, bienestar y vacunación para empresas clientes.</p>
-                </Link>
-              </div>
-            </div>
           </div>
         </section>
 
@@ -417,35 +439,36 @@ export default function SegurosSaludClient() {
         <section className="py-16 lg:py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-2xl font-bold text-gray-900 text-center mb-10">Preguntas Frecuentes</h2>
-              <div className="divide-y divide-gray-200">
-                <details className="py-4 group">
-                  <summary className="flex items-center justify-between cursor-pointer text-lg font-semibold text-gray-900">
-                    ¿Qué es un Seguro Complementario de Salud?
-                    <ChevronDown className="w-5 h-5 text-[#cc0033] transition-transform group-open:rotate-180 flex-shrink-0 ml-4" />
-                  </summary>
-                  <p className="mt-3 text-gray-700 leading-relaxed">
-                    En Chile, todas las personas cuentan por ley con un sistema de salud previsional, ya sea Fonasa o Isapre, el cual cubre solo un porcentaje del costo total de las prestaciones médicas, generando un copago que debe ser asumido por la persona. El Seguro Complementario de Salud está diseñado para cubrir total o parcialmente ese copago, de acuerdo con los porcentajes, topes y condiciones definidos en la póliza contratada por la empresa, reduciendo significativamente el gasto de bolsillo del trabajador.
-                  </p>
-                </details>
-                <details className="py-4 group">
-                  <summary className="flex items-center justify-between cursor-pointer text-lg font-semibold text-gray-900">
-                    ¿Qué coberturas incluye un Seguro Complementario de Salud?
-                    <ChevronDown className="w-5 h-5 text-[#cc0033] transition-transform group-open:rotate-180 flex-shrink-0 ml-4" />
-                  </summary>
-                  <p className="mt-3 text-gray-700 leading-relaxed">
-                    Las pólizas contemplan coberturas en: Vida, Hospitalización (incluyendo cirugías y estadías clínicas), Atención ambulatoria (consultas médicas, exámenes y procedimientos), Medicamentos (farmacia según receta médica) y Catastrófica (para eventos de alto costo). De forma opcional, pueden incorporar cobertura dental.
-                  </p>
-                </details>
-                <details className="py-4 group">
-                  <summary className="flex items-center justify-between cursor-pointer text-lg font-semibold text-gray-900">
-                    ¿Cuáles son los beneficios del Seguro Complementario de Salud para empresas?
-                    <ChevronDown className="w-5 h-5 text-[#cc0033] transition-transform group-open:rotate-180 flex-shrink-0 ml-4" />
-                  </summary>
-                  <p className="mt-3 text-gray-700 leading-relaxed">
-                    Contratar un Seguro Complementario de Salud permite a las empresas: reducir el impacto financiero de gastos médicos en sus colaboradores, mejorar el bienestar y la percepción del beneficio laboral, aumentar la fidelización y retención de trabajadores, ofrecer un beneficio competitivo frente al mercado laboral, y ajustar coberturas y capitales a la realidad de la empresa.
-                  </p>
-                </details>
+              <h2 className="text-2xl font-bold text-[#cc0033] mb-2 text-center">Preguntas frecuentes</h2>
+              <p className="text-gray-500 text-sm mb-6 text-center">Resolvemos tus dudas sobre seguros complementarios</p>
+              <div className="space-y-3">
+                {[
+                  {
+                    q: "¿Qué es un Seguro Complementario de Salud?",
+                    a: "En Chile, todas las personas cuentan por ley con un sistema de salud previsional, ya sea Fonasa o Isapre, el cual cubre solo un porcentaje del costo total de las prestaciones médicas, generando un copago que debe ser asumido por la persona. El Seguro Complementario de Salud está diseñado para cubrir total o parcialmente ese copago, de acuerdo con los porcentajes, topes y condiciones definidos en la póliza contratada por la empresa, reduciendo significativamente el gasto de bolsillo del trabajador."
+                  },
+                  {
+                    q: "¿Qué coberturas incluye un Seguro Complementario de Salud?",
+                    a: "Las pólizas contemplan coberturas en: Vida, Hospitalización (incluyendo cirugías y estadías clínicas), Atención ambulatoria (consultas médicas, exámenes y procedimientos), Medicamentos (farmacia según receta médica) y Catastrófica (para eventos de alto costo). De forma opcional, pueden incorporar cobertura dental."
+                  },
+                  {
+                    q: "¿Cuáles son los beneficios del Seguro Complementario de Salud para empresas?",
+                    a: "Contratar un Seguro Complementario de Salud permite a las empresas: reducir el impacto financiero de gastos médicos en sus colaboradores, mejorar el bienestar y la percepción del beneficio laboral, aumentar la fidelización y retención de trabajadores, ofrecer un beneficio competitivo frente al mercado laboral, y ajustar coberturas y capitales a la realidad de la empresa."
+                  },
+                ].map((item, i) => (
+                  <details key={i} className="group rounded-xl overflow-hidden shadow-sm">
+                    <summary className="flex items-center justify-between cursor-pointer p-4 text-left font-semibold text-white text-sm bg-[#cc0033] group-open:rounded-b-none">
+                      <span className="flex items-center gap-2">
+                        <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" /></svg>
+                        {item.q}
+                      </span>
+                      <ChevronDown className="w-4 h-4 text-white flex-shrink-0 ml-3 transition-transform group-open:rotate-180" />
+                    </summary>
+                    <div className="px-4 py-4 bg-white text-gray-700 text-sm leading-relaxed border border-t-0 border-gray-200 rounded-b-xl">
+                      {item.a}
+                    </div>
+                  </details>
+                ))}
               </div>
             </div>
           </div>
@@ -478,6 +501,17 @@ export default function SegurosSaludClient() {
 
         <Footer />
       </article>
+
+      {/* Sticky CTA mobile — visible solo en móvil cuando el form no está en viewport */}
+      <div className="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-white border-t border-gray-200 shadow-[0_-4px_12px_rgba(0,0,0,0.1)] px-4 py-3">
+        <button
+          onClick={scrollToForm}
+          className="w-full bg-[#cc0033] text-white py-3 rounded-full text-sm font-medium hover:bg-[#a30029] transition-colors shadow-lg flex items-center justify-center gap-2"
+        >
+          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
+          Solicitar Asesoría Gratis
+        </button>
+      </div>
     </main>
   )
 }
