@@ -65,7 +65,7 @@ export default function HeroCarousel() {
 
   return (
     <section
-      className="relative aspect-[2/3] md:aspect-[16/9] text-white pt-24 overflow-hidden"
+      className="relative aspect-[1/2] md:aspect-[16/9] text-white pt-24 overflow-hidden"
       role="region"
       aria-roledescription="carrusel"
       aria-label="Información principal de RedAgrupa"
@@ -93,42 +93,92 @@ export default function HeroCarousel() {
             className="absolute inset-0"
             style={{ backgroundImage: "linear-gradient(to top, #cc0033 0%, transparent 50%)" }}
           />
+          {/* Mobile: bloque rojo sólido en el tercio inferior para que la imagen no tape el texto */}
+          <div className="absolute bottom-0 left-0 right-0 h-[42%] bg-[#cc0033] md:hidden" />
         </div>
       ))}
 
       {/* Content */}
-      <div className="container mx-auto px-6 h-full relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-end lg:items-center h-full">
+      <div className="container mx-auto px-6 h-full relative z-10 flex flex-col justify-between lg:block">
+        {/* Mobile: título posicionado sobre la imagen (parte inferior de la zona de imagen) */}
+        <div className="lg:hidden flex-1 flex items-end pb-4" aria-live="polite">
+          {slides.map((slide, i) => (
+            <div
+              key={`title-${i}`}
+              className={`mobile-text-shadow transition-opacity duration-500 ${
+                i === current ? "opacity-100" : "opacity-0 absolute pointer-events-none"
+              }`}
+            >
+              {i === 0 ? (
+                <h1 className="text-3xl font-normal leading-[0.95] text-balance tracking-tight">
+                  {slide.headline}
+                </h1>
+              ) : (
+                <p className="text-3xl font-normal leading-[0.95] text-balance tracking-tight">
+                  {slide.headline}
+                </p>
+              )}
+            </div>
+          ))}
+        </div>
+        {/* Mobile: subtítulo + botón sobre la franja roja */}
+        <div className="lg:hidden pb-10">
+          {slides.map((slide, i) => (
+            <div
+              key={`content-${i}`}
+              className={`space-y-4 transition-opacity duration-500 ${
+                i === current ? "opacity-100" : "opacity-0 absolute pointer-events-none"
+              }`}
+            >
+              <p className="text-base text-white/90 leading-[1.3] max-w-2xl">
+                {slide.subtitle}
+              </p>
+              <Button
+                variant="outline"
+                className="border-white text-white hover:bg-white/10 bg-transparent px-6 py-3 text-sm font-normal w-full"
+                asChild
+              >
+                {slide.ctaSecondary.isLink ? (
+                  <Link href={slide.ctaSecondary.href}>{slide.ctaSecondary.text}</Link>
+                ) : (
+                  <a href={slide.ctaSecondary.href}>{slide.ctaSecondary.text}</a>
+                )}
+              </Button>
+            </div>
+          ))}
+        </div>
+        {/* Desktop: layout original */}
+        <div className="hidden lg:grid lg:grid-cols-2 gap-12 items-center h-full">
           <div aria-live="polite">
             {slides.map((slide, i) => (
               <div
                 key={i}
-                className={`space-y-6 md:space-y-8 pb-10 lg:py-12 mobile-text-shadow transition-opacity duration-500 ${
+                className={`space-y-6 md:space-y-8 lg:py-12 transition-opacity duration-500 ${
                   i === current ? "opacity-100" : "opacity-0 absolute inset-0 pointer-events-none"
                 }`}
               >
                 {i === 0 ? (
-                  <h1 className="text-3xl sm:text-2xl md:text-[2rem] lg:text-[2.75rem] font-normal leading-[0.95] text-balance tracking-tight">
+                  <h1 className="md:text-[2rem] lg:text-[2.75rem] font-normal leading-[0.95] text-balance tracking-tight">
                     {slide.headline}
                   </h1>
                 ) : (
-                  <p className="text-3xl sm:text-2xl md:text-[2rem] lg:text-[2.75rem] font-normal leading-[0.95] text-balance tracking-tight">
+                  <p className="md:text-[2rem] lg:text-[2.75rem] font-normal leading-[0.95] text-balance tracking-tight">
                     {slide.headline}
                   </p>
                 )}
-                <p className="text-base sm:text-base lg:text-lg text-white/90 leading-[1.3] max-w-2xl">
+                <p className="lg:text-lg text-white/90 leading-[1.3] max-w-2xl">
                   {slide.subtitle}
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 pt-2">
+                <div className="flex flex-row gap-4 pt-2">
                   <Button
-                    className="bg-white text-[#cc0033] hover:bg-gray-100 px-6 sm:px-8 py-3 text-sm sm:text-base font-semibold w-full sm:w-64 shadow-lg"
+                    className="bg-white text-[#cc0033] hover:bg-gray-100 px-8 py-3 text-base font-semibold w-64 shadow-lg"
                     asChild
                   >
                     <a href={slide.ctaPrimary.href}>{slide.ctaPrimary.text}</a>
                   </Button>
                   <Button
                     variant="outline"
-                    className="border-white text-white hover:bg-white/10 bg-transparent px-6 sm:px-8 py-3 text-sm sm:text-base font-normal w-full sm:w-64"
+                    className="border-white text-white hover:bg-white/10 bg-transparent px-8 py-3 text-base font-normal w-64"
                     asChild
                   >
                     {slide.ctaSecondary.isLink ? (
@@ -145,8 +195,21 @@ export default function HeroCarousel() {
         </div>
       </div>
 
-      {/* Dot indicators + Badge EQUOS */}
-      <div className="absolute bottom-8 left-0 right-0 z-20 flex items-center justify-end gap-6 container mx-auto px-6">
+      {/* Mobile: Dot indicators vertical izquierda */}
+      <div className="absolute left-4 top-1/2 -translate-y-1/2 z-20 flex flex-col gap-2 lg:hidden">
+        {slides.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => goToSlide(i)}
+            aria-label={`Ir a slide ${i + 1}`}
+            className={`min-w-[24px] min-h-[24px] bg-clip-content p-[7px] w-2 h-2 rounded-full transition-all duration-300 ${
+              i === current ? "bg-white h-6" : "bg-white/40"
+            }`}
+          />
+        ))}
+      </div>
+      {/* Desktop: Dot indicators + Badge EQUOS */}
+      <div className="absolute bottom-8 left-0 right-0 z-20 hidden lg:flex items-center justify-end gap-6 container mx-auto px-6">
         <a
           href="https://www.segurosequos.com"
           target="_blank"

@@ -138,6 +138,14 @@ export default function HomeContent({ latestPosts = [] }: { latestPosts?: Latest
       <section className="py-8 lg:py-16 relative bg-[#cc0033] overflow-hidden min-h-0 flex flex-col">
         <div className="container mx-auto px-6 relative z-10 flex-1 flex flex-col lg:justify-between">
           <div className="text-center max-w-4xl mx-auto pt-0 lg:pt-8 px-4">
+            <a
+              href="https://www.segurosequos.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="lg:hidden inline-flex items-center text-xs text-white/70 hover:text-white transition-colors mb-3"
+            >
+              <span className="bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">Socio Estratégico: <span className="font-semibold text-white">EQUOS Seguros</span></span>
+            </a>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal leading-[1.1] text-white mb-2">
               3 problemas que enfrentan las pymes con sus seguros
             </h2>
