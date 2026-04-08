@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RedAgrupa — Comparativa Martes 1 abr vs 7 abr 2026</title>
+<style>
+  :root { --rojo: #cc0033; --rojo-dark: #a30029; --gris: #333; --gris-claro: #666; --bg: #f8f9fa; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--gris); line-height: 1.5; }
+  .container { max-width: 900px; margin: 0 auto; padding: 32px 24px; }
+  .header { text-align: center; margin-bottom: 40px; }
+  .header h1 { font-size: 1.75rem; color: var(--rojo); margin-bottom: 4px; }
+  .header p { color: var(--gris-claro); font-size: 0.9rem; }
+  .badge { display: inline-block; background: var(--rojo); color: white; font-size: 0.7rem; font-weight: 600; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+
+  /* KPI Cards */
+  .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-bottom: 40px; }
+  .kpi-card { background: white; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+  .kpi-card .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--gris-claro); margin-bottom: 8px; }
+  .kpi-card .values { display: flex; justify-content: center; align-items: baseline; gap: 8px; margin-bottom: 6px; }
+  .kpi-card .old { font-size: 1.1rem; color: #999; text-decoration: line-through; }
+  .kpi-card .new { font-size: 1.8rem; font-weight: 700; color: var(--gris); }
+  .kpi-card .change { font-size: 0.85rem; font-weight: 600; padding: 2px 8px; border-radius: 6px; }
+  .kpi-card .change.up { background: #e6f9ee; color: #0a7c3e; }
+  .kpi-card .change.down { background: #fde8e8; color: #c0392b; }
+  .kpi-card .change.neutral { background: #f0f0f0; color: #666; }
+
+  /* Tables */
+  .section { margin-bottom: 40px; }
+  .section h2 { font-size: 1.2rem; color: var(--gris); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--rojo); }
+  table { width: 100%; border-collapse: collapse; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+  th { background: var(--rojo); color: white; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; padding: 12px 16px; text-align: left; }
+  td { padding: 12px 16px; border-bottom: 1px solid #f0f0f0; font-size: 0.9rem; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #fafafa; }
+  .num { text-align: right; font-variant-numeric: tabular-nums; }
+  .positive { color: #0a7c3e; font-weight: 600; }
+  .negative { color: #c0392b; font-weight: 600; }
+  .neutral { color: #666; }
+
+  /* Hallazgos */
+  .hallazgos { display: grid; gap: 16px; }
+  .hallazgo { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border-left: 4px solid var(--rojo); }
+  .hallazgo.positivo { border-left-color: #0a7c3e; }
+  .hallazgo.alerta { border-left-color: #e67e22; }
+  .hallazgo.critico { border-left-color: #c0392b; }
+  .hallazgo .tag { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; margin-bottom: 6px; }
+  .hallazgo.positivo .tag { color: #0a7c3e; }
+  .hallazgo.alerta .tag { color: #e67e22; }
+  .hallazgo.critico .tag { color: #c0392b; }
+  .hallazgo p { font-size: 0.9rem; color: var(--gris-claro); }
+  .hallazgo strong { color: var(--gris); }
+
+  /* Nota metodológica */
+  .nota { background: #fff8e1; border: 1px solid #ffe082; border-radius: 12px; padding: 20px; margin-bottom: 40px; }
+  .nota .nota-title { font-size: 0.8rem; font-weight: 700; color: #e67e22; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+  .nota p { font-size: 0.85rem; color: var(--gris-claro); margin-bottom: 8px; }
+  .nota p:last-child { margin-bottom: 0; }
+  .nota strong { color: var(--gris); }
+  .nota ul { font-size: 0.85rem; color: var(--gris-claro); margin: 8px 0; padding-left: 20px; }
+  .nota li { margin-bottom: 4px; }
+
+  .footer { text-align: center; margin-top: 48px; padding-top: 24px; border-top: 1px solid #e0e0e0; color: #999; font-size: 0.75rem; }
+
+  @media print { body { background: white; } .container { padding: 16px; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <span class="badge">GA4 — RedAgrupa</span>
+    <h1>Comparativa Martes vs Martes</h1>
+    <p>1 de abril vs 7 de abril 2026</p>
+  </div>
+
+  <!-- KPI Cards -->
+  <div class="kpi-grid">
+    <div class="kpi-card">
+      <div class="label">Usuarios</div>
+      <div class="values">
+        <span class="old">32</span>
+        <span class="new">38</span>
+      </div>
+      <span class="change up">+19%</span>
+    </div>
+    <div class="kpi-card">
+      <div class="label">Sesiones</div>
+      <div class="values">
+        <span class="old">33</span>
+        <span class="new">42</span>
+      </div>
+      <span class="change up">+27%</span>
+    </div>
+    <div class="kpi-card">
+      <div class="label">Páginas Vistas</div>
+      <div class="values">
+        <span class="old">39</span>
+        <span class="new">108</span>
+      </div>
+      <span class="change up">+177%</span>
+    </div>
+    <div class="kpi-card">
+      <div class="label">Bounce Rate</div>
+      <div class="values">
+        <span class="old">84.8%</span>
+        <span class="new">71.4%</span>
+      </div>
+      <span class="change up">−13.4pp</span>
+    </div>
+    <div class="kpi-card">
+      <div class="label">Duración Sesión</div>
+      <div class="values">
+        <span class="old">40s</span>
+        <span class="new">5m 30s</span>
+      </div>
+      <span class="change up">+723%</span>
+    </div>
+    <div class="kpi-card">
+      <div class="label">Sesiones Engaged</div>
+      <div class="values">
+        <span class="old">5</span>
+        <span class="new">12</span>
+      </div>
+      <span class="change up">+140%</span>
+    </div>
+  </div>
+
+  <!-- Desglose por Canal -->
+  <div class="section">
+    <h2>Desglose por Canal</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Canal</th>
+          <th class="num">1 abr</th>
+          <th class="num">7 abr</th>
+          <th class="num">Cambio</th>
+          <th class="num">Bounce 1 abr</th>
+          <th class="num">Bounce 7 abr</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Paid Search</strong></td>
+          <td class="num">18</td>
+          <td class="num">18</td>
+          <td class="num neutral">0%</td>
+          <td class="num">77.8%</td>
+          <td class="num negative">88.9%</td>
+        </tr>
+        <tr>
+          <td><strong>Direct</strong></td>
+          <td class="num">8</td>
+          <td class="num">16</td>
+          <td class="num positive">+100%</td>
+          <td class="num">87.5%</td>
+          <td class="num positive">56.3%</td>
+        </tr>
+        <tr>
+          <td><strong>Organic Search</strong></td>
+          <td class="num">6</td>
+          <td class="num">5</td>
+          <td class="num neutral">−17%</td>
+          <td class="num">100%</td>
+          <td class="num positive">60%</td>
+        </tr>
+        <tr>
+          <td><strong>Referral</strong></td>
+          <td class="num">1</td>
+          <td class="num">3</td>
+          <td class="num positive">+200%</td>
+          <td class="num">100%</td>
+          <td class="num positive">66.7%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Desglose por Dispositivo -->
+  <div class="section">
+    <h2>Desglose por Dispositivo</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Dispositivo</th>
+          <th class="num">Ses. 1 abr</th>
+          <th class="num">Ses. 7 abr</th>
+          <th class="num">Bounce 1 abr</th>
+          <th class="num">Bounce 7 abr</th>
+          <th class="num">Dur. 1 abr</th>
+          <th class="num">Dur. 7 abr</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Desktop</strong></td>
+          <td class="num">13</td>
+          <td class="num">22</td>
+          <td class="num">84.6%</td>
+          <td class="num positive">59.1%</td>
+          <td class="num">1m 30s</td>
+          <td class="num positive">8m 28s</td>
+        </tr>
+        <tr>
+          <td><strong>Mobile</strong></td>
+          <td class="num">20</td>
+          <td class="num">22</td>
+          <td class="num">85.0%</td>
+          <td class="num positive">77.3%</td>
+          <td class="num">7s</td>
+          <td class="num positive">2m 03s</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Páginas Top -->
+  <div class="section">
+    <h2>Páginas más visitadas — 7 de abril</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Página</th>
+          <th class="num">Vistas</th>
+          <th class="num">Usuarios</th>
+          <th class="num">Dur. Prom.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>/</strong> (Home)</td>
+          <td class="num">46</td>
+          <td class="num">15</td>
+          <td class="num">9m 08s</td>
+        </tr>
+        <tr>
+          <td><strong>/seguro-complementario</strong></td>
+          <td class="num">43</td>
+          <td class="num">21</td>
+          <td class="num">2m 29s</td>
+        </tr>
+        <tr>
+          <td><strong>/nosotros</strong></td>
+          <td class="num">4</td>
+          <td class="num">3</td>
+          <td class="num">4m 48s</td>
+        </tr>
+        <tr>
+          <td><strong>/contactos</strong> (redirect)</td>
+          <td class="num">3</td>
+          <td class="num">3</td>
+          <td class="num">7s</td>
+        </tr>
+        <tr>
+          <td><strong>/bice-personas</strong></td>
+          <td class="num">3</td>
+          <td class="num">3</td>
+          <td class="num">7s</td>
+        </tr>
+        <tr>
+          <td><strong>/beneficios-redagrupa</strong></td>
+          <td class="num">2</td>
+          <td class="num">2</td>
+          <td class="num">15s</td>
+        </tr>
+        <tr>
+          <td><strong>/bice-pyme</strong></td>
+          <td class="num">2</td>
+          <td class="num">2</td>
+          <td class="num">2s</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Hallazgos -->
+  <div class="section">
+    <h2>Hallazgos Clave</h2>
+    <div class="hallazgos">
+
+      <div class="hallazgo critico">
+        <div class="tag">Crítico — Paid Search estancado y empeorando</div>
+        <p><strong>Ads mantuvo exactamente 18 sesiones ambos martes, pero bounce subió de 77.8% a 88.9% y la duración cayó de 16s a 4.5s.</strong> El tráfico pagado no crece y la calidad empeoró. Cada clic de Ads dura menos de 5 segundos en el sitio. La landing /seguro-complementario recibió 43 vistas pero el engagement de Ads es mínimo — revisar urgente alineación anuncio↔landing y keywords.</p>
+      </div>
+
+      <div class="hallazgo positivo">
+        <div class="tag">Positivo — Tráfico directo se duplicó con excelente engagement</div>
+        <p><strong>Direct creció +100% (8→16 sesiones) y bounce bajó de 87.5% a 56.3%</strong> con 8 minutos de duración promedio y 7 sesiones engaged (vs 1 la semana pasada). Esto indica mayor reconocimiento de marca y usuarios que llegan con intención real. Es el canal más valioso esta semana.</p>
+      </div>
+
+      <div class="hallazgo positivo">
+        <div class="tag">Positivo — Bounce general mejoró 13 puntos</div>
+        <p><strong>Bounce rate general bajó de 84.8% a 71.4% (−13.4pp)</strong> y las páginas vistas por sesión se triplicaron (39→108). Los usuarios navegan mucho más profundo: home (46 vistas) + /seguro-complementario (43 vistas) + 5 páginas internas visitadas. Las mejoras CRO implementadas están funcionando.</p>
+      </div>
+
+      <div class="hallazgo positivo">
+        <div class="tag">Positivo — Orgánico mejora calidad</div>
+        <p><strong>Organic Search bajó levemente en volumen (6→5) pero bounce pasó de 100% a 60%</strong> y generó 2 sesiones engaged (vs 0 antes). Los visitantes orgánicos ahora interactúan con el sitio en vez de rebotar inmediatamente.</p>
+      </div>
+
+      <div class="hallazgo positivo">
+        <div class="tag">Positivo — Desktop transformado</div>
+        <p><strong>Desktop pasó de 13 a 22 sesiones (+69%), bounce bajó de 84.6% a 59.1% y duración subió de 1m30s a 8m28s.</strong> El canal desktop muestra un engagement excelente. Mobile también mejoró (bounce 85%→77.3%, duración 7s→2m03s) pero queda terreno por ganar.</p>
+      </div>
+
+      <div class="hallazgo alerta">
+        <div class="tag">Observación — /contactos recibe tráfico sin destino</div>
+        <p><strong>3 usuarios llegaron a /contactos</strong> (URL legacy que redirige a home). Verificar que el redirect 301 está funcionando y que ningún anuncio o link externo apunta a esa URL obsoleta.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Nota metodológica -->
+  <div class="section">
+    <h2>Nota sobre promedios de duración</h2>
+    <div class="nota">
+      <div class="nota-title">Precaución con volúmenes bajos (&lt;50 sesiones/día)</div>
+      <p><strong>Un solo usuario con la pestaña abierta por tiempo prolongado puede distorsionar significativamente los promedios de duración.</strong> Por ejemplo, si 1 de 16 sesiones Direct duró 2 horas (pestaña olvidada), el promedio sube de ~1 min a 8 min para todo el canal.</p>
+      <p>GA4 mide "tiempo de engagement activo" (pestaña en foco), no tiempo total de pestaña abierta. Sin embargo, eventos periódicos como scroll o cambios de visibilidad pueden reactivar el contador, inflando la métrica.</p>
+      <p><strong>Valores sospechosos en este reporte:</strong></p>
+      <ul>
+        <li>Home con 9m 08s de duración promedio — inusualmente alto para una landing</li>
+        <li>Direct con 8m promedio — probable outlier con sesión larga</li>
+        <li>Referral con 33m 52s en solo 3 sesiones de 1 usuario — casi seguro pestaña olvidada</li>
+      </ul>
+      <p><strong>Métricas más confiables con estos volúmenes:</strong> bounce rate (binario: rebotó o no), sesiones engaged (binario: 10s+ sí/no) y páginas vistas (conteo absoluto). Los promedios de duración deben leerse como indicativos, no como valores exactos.</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Generado por NORA — 8 de abril 2026</p>
+    <p>Fuente: Google Analytics 4 (propiedad 390372367)</p>
+  </div>
+
+</div>
+</body>
+</html>
