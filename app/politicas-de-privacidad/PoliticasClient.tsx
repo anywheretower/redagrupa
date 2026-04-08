@@ -149,7 +149,7 @@ export default function PoliticasClient() {
                     RedAgrupa, con domicilio en Los Militares 5620, oficina 1011, Las Condes,
                     Santiago, Chile, se compromete a proteger la privacidad de los datos
                     personales de sus usuarios, clientes y visitantes del sitio web
-                    redagrupa.vercel.app (en adelante, el &quot;Sitio&quot;).
+                    www.redagrupa.cl (en adelante, el &quot;Sitio&quot;).
                   </p>
                   <p className="mt-3">
                     La presente Politica de Privacidad describe como recopilamos, utilizamos,

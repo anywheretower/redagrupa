@@ -423,7 +423,7 @@ export default function HomeContent({ latestPosts = [] }: { latestPosts?: Latest
             <div className="max-w-lg w-full bg-white/95 backdrop-blur-sm rounded-2xl p-5 sm:p-6 lg:p-8 shadow-2xl">
               <ContactForm
                 pagina="landing"
-                heading="Tranquilo, sabemos cómo hacer simples los seguros complementarios, ¡Conversemos!"
+                heading="Compara aseguradoras y encuentra el mejor plan para tu pyme"
               />
             </div>
           </div>

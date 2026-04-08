@@ -572,7 +572,7 @@ export default function BeneficiosClient() {
               <RevealOnScroll className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 lg:p-8 shadow-2xl">
                 <ContactForm
                   pagina="beneficios"
-                  heading="Tranquilo, sabemos cómo hacer simples los seguros complementarios, ¡Conversemos!"
+                  heading="Diseña el paquete de beneficios ideal para tu empresa"
                 />
               </RevealOnScroll>
 

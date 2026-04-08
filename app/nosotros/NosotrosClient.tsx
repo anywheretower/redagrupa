@@ -316,7 +316,7 @@ export default function NosotrosClient() {
               <RevealOnScroll className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 lg:p-8 shadow-2xl">
                 <ContactForm
                   pagina="nosotros"
-                  heading="Tranquilo, sabemos cómo hacer simples los seguros complementarios, ¡Conversemos!"
+                  heading="Conversemos sobre cómo proteger a tu equipo"
                 />
               </RevealOnScroll>
 

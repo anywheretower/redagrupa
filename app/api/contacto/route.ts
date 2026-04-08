@@ -88,7 +88,7 @@ export async function POST(request: Request) {
     })
 
     if (error) {
-      console.error("Resend error:", error)
+      console.error("Resend error:", error instanceof Error ? error.message : "Unknown error")
       return NextResponse.json(
         { error: "Error al enviar el email" },
         { status: 500 }
@@ -106,12 +106,12 @@ export async function POST(request: Request) {
         pagina: data.pagina,
       })
     } catch (dbErr) {
-      console.error("Supabase insert error:", dbErr)
+      console.error("Supabase insert error:", dbErr instanceof Error ? dbErr.message : "Unknown error")
     }
 
     return NextResponse.json({ success: true })
   } catch (err) {
-    console.error("API error:", err)
+    console.error("API error:", err instanceof Error ? err.message : "Unknown error")
     return NextResponse.json(
       { error: "Error interno del servidor" },
       { status: 500 }

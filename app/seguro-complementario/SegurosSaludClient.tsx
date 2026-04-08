@@ -514,7 +514,7 @@ export default function SegurosSaludClient() {
               <RevealOnScroll className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 lg:p-8 shadow-2xl">
                 <ContactForm
                   pagina="seguro-complementario"
-                  heading="Tranquilo, sabemos cómo hacer simples los seguros complementarios, ¡Conversemos!"
+                  heading="Cotiza tu seguro complementario de salud sin compromiso"
                 />
               </RevealOnScroll>
 

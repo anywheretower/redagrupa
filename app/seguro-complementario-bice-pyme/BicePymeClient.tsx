@@ -618,7 +618,7 @@ export default function BicePymeClient() {
               <RevealOnScroll className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 lg:p-8 shadow-2xl">
                 <ContactForm
                   pagina="bice-pyme"
-                  heading="Tranquilo, sabemos cómo hacer simples los seguros complementarios, ¡Conversemos!"
+                  heading="Cotiza tu plan BICE Vida para pymes"
                 />
               </RevealOnScroll>
 

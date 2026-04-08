@@ -35,7 +35,7 @@ export async function GET(request: NextRequest) {
   const { data, error } = await query
 
   if (error) {
-    console.error("Supabase query error:", error)
+    console.error("Supabase query error:", error instanceof Error ? error.message : "Unknown error")
     return NextResponse.json(
       { error: "Error al consultar contactos" },
       { status: 500 }
@@ -63,7 +63,7 @@ export async function DELETE(request: NextRequest) {
     .eq("id", id)
 
   if (error) {
-    console.error("Supabase delete error:", error)
+    console.error("Supabase delete error:", error instanceof Error ? error.message : "Unknown error")
     return NextResponse.json({ error: "Error al eliminar" }, { status: 500 })
   }
 
@@ -98,7 +98,7 @@ export async function PUT(request: NextRequest) {
     .single()
 
   if (error) {
-    console.error("Supabase update error:", error)
+    console.error("Supabase update error:", error instanceof Error ? error.message : "Unknown error")
     return NextResponse.json({ error: "Error al actualizar" }, { status: 500 })
   }
 
