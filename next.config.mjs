@@ -1,3 +1,62 @@
+/** Slugs de blog posts archivados — redirigir 301 a /blog */
+const prunedBlogSlugs = [
+  "espacio-trabajo",
+  "imagen-corporativa",
+  "elementos-proteccion-personal",
+  "reclutamiento-seleccion-personal",
+  "pausas-activas",
+  "canal-denuncias",
+  "multas-direccion-trabajo",
+  "entrevista-laboral",
+  "proyecto-pretensiones-renta",
+  "accidentes-laborales",
+  "carta-aviso-despido",
+  "causales-de-despido",
+  "carta-oferta-laboral",
+  "gestion-personal",
+  "otec-cursos",
+  "teletrabajo",
+  "descuento-afc",
+  "licencias-medicas",
+  "ley-de-conciliacion",
+  "capacitaciones-laborales",
+  "ley-corta-de-isapres",
+  "contrato-de-prestacion-de-servicios",
+  "ley-de-inclusion-laboral",
+  "ley-karin",
+  "correccion-monetaria",
+  "libro-de-asistencia",
+  "situacion-tributaria-de-terceros",
+  "pago-de-remuneraciones",
+  "inicio-de-actividades",
+  "feriados-chile-2024",
+  "carpeta-tributaria",
+  "como-crear-una-empresa",
+  "calcular-finiquito",
+  "perfil-de-cargo",
+  "tope-imponible",
+  "valor-hora-extra",
+  "hora-extra",
+  "jornada-laboral",
+  "cotizaciones-previsionales",
+  "pago-finiquito",
+  "aguinaldo",
+  "sueldo-bruto-a-liquido",
+  "gratificacion-legal",
+  "jornada-de-trabajo",
+  "liquidaciones-de-sueldo",
+  "evaluacion-de-desempeno",
+  "gestion-del-desempeno",
+  "alza-isapre",
+  "beneficios-laborales",
+  "incentivos-laborales",
+  "rotacion-de-personal",
+  "enfermedades-preexistentes",
+  "fonasa-o-isapre",
+  "proyecto-40-horas",
+  "calculo-vacaciones-proporcionales",
+]
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   typescript: {
@@ -43,6 +102,11 @@ const nextConfig = {
     ]
   },
   async redirects() {
+    const blogRedirects = prunedBlogSlugs.map((slug) => ({
+      source: `/blog/${slug}`,
+      destination: "/blog",
+      permanent: true,
+    }))
     return [
       { source: "/seguros-salud", destination: "/seguro-complementario", permanent: true },
       { source: "/seguro-colectivo", destination: "/seguro-complementario", permanent: true },
@@ -52,6 +116,7 @@ const nextConfig = {
       { source: "/formulario-de-reembolso", destination: "/", permanent: true },
       { source: "/contacto", destination: "/contactos", permanent: true },
       { source: "/web", destination: "/", permanent: true },
+      ...blogRedirects,
     ]
   },
 }

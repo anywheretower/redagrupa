@@ -141,7 +141,7 @@ export default async function BlogPostPage({
   const post = getPostBySlug(slug)
   if (!post) notFound()
 
-  const relatedPosts = getRelatedPosts(slug, 8)
+  const relatedPosts = getRelatedPosts(slug, 2)
 
   const jsonLd = {
     "@context": "https://schema.org",

@@ -5,15 +5,15 @@ import BlogClient from "./BlogClient"
 const POSTS_PER_PAGE = 12
 
 export const metadata = {
-  title: "Conocimiento Empresa — Seguros, Legislación y Gestión de Personas",
+  title: "Blog — Seguros Complementarios de Salud para Empresas",
   description:
-    "Guías y recursos sobre seguros complementarios de salud, legislación laboral y gestión de personas para pymes en Chile. +55 artículos.",
+    "Guías y comparativas sobre seguros complementarios de salud para pymes en Chile: coberturas, deducibles y beneficios de las principales aseguradoras.",
   alternates: {
     canonical: "https://www.redagrupa.cl/blog",
   },
   openGraph: {
-    title: "Conocimiento Empresa — Seguros, Legislación y Gestión de Personas",
-    description: "Guías y recursos sobre seguros complementarios de salud, legislación laboral y gestión de personas para pymes en Chile. +55 artículos.",
+    title: "Blog — Seguros Complementarios de Salud para Empresas",
+    description: "Guías y comparativas sobre seguros complementarios de salud para pymes en Chile: coberturas, deducibles y beneficios de las principales aseguradoras.",
     url: "https://www.redagrupa.cl/blog",
     siteName: "RedAgrupa",
     locale: "es_CL",
