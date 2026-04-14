@@ -458,6 +458,46 @@ export default function SegurosSaludClient() {
                 especializada permite diseñar una solución alineada con los objetivos del negocio y el perfil de
                 los trabajadores.
               </p>
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 pt-6 max-w-5xl mx-auto">
+                {[
+                  {
+                    name: "Mara Martínez",
+                    role: "Ejecutiva de Reembolsos",
+                    image: "/images/ejecutiva-reembolsos-1.jpg",
+                  },
+                  {
+                    name: "Francisca Arregui",
+                    role: "Ejecutiva de Reembolsos",
+                    image: "/images/ejecutiva-reembolsos-2.jpg",
+                  },
+                  {
+                    name: "Kerlin Ramírez",
+                    role: "Ejecutiva de Gestión de Seguros",
+                    image: "/images/kerlin-ramirez.jpg",
+                  },
+                  {
+                    name: "Paulina Herrera",
+                    role: "Ejecutiva de Gestión de Seguros",
+                    image: "/images/paulina.jpg",
+                  },
+                ].map((member, i) => (
+                  <div key={i} className="flex flex-col items-center text-center space-y-3">
+                    <div className="w-32 h-32 sm:w-36 sm:h-36 rounded-full border-4 border-[#cc0033] overflow-hidden flex-shrink-0">
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        width={144}
+                        height={144}
+                        className="w-full h-full object-cover object-top"
+                      />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-[#333333] leading-snug">{member.name}</h3>
+                      <p className="text-sm text-[#cc0033] font-medium">{member.role}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
               <div className="pt-4">
                 <Button onClick={scrollToForm} className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3 flex items-center gap-2 mx-auto">
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
