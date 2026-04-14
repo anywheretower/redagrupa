@@ -21,7 +21,7 @@ export default function FormulariosClient() {
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center -ml-2 lg:ml-0">
             <Image
-              src="/images/logo-20redagrupa-3.png"
+              src="/images/logo-redagrupa.png"
               alt="RedAgrupa Logo"
               width={160}
               height={40}
@@ -109,7 +109,7 @@ export default function FormulariosClient() {
       <div className="pt-20">
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4">
-            <Breadcrumbs items={[{ label: "Formularios" }]} />
+            <Breadcrumbs items={[{ label: "Formularios" }]} currentPath="/formularios" />
             <div className="max-w-4xl mx-auto text-center mb-16">
               <h1 className="text-4xl font-bold text-[#cc0033] mb-4">
                 Formularios de reembolso e incorporación

@@ -24,7 +24,7 @@ export default function PoliticasClient() {
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center -ml-2 lg:ml-0">
             <Image
-              src="/images/logo-20redagrupa-3.png"
+              src="/images/logo-redagrupa.png"
               alt="RedAgrupa Logo"
               width={160}
               height={40}
@@ -131,7 +131,7 @@ export default function PoliticasClient() {
         <section className="py-32">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
-              <Breadcrumbs items={[{ label: "Políticas de Privacidad" }]} />
+              <Breadcrumbs items={[{ label: "Políticas de Privacidad" }]} currentPath="/politicas-de-privacidad" />
               <RevealOnScroll>
                 <h1 className="text-4xl font-bold text-[#cc0033] text-center mb-4">
                   Política de Privacidad

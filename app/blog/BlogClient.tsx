@@ -43,7 +43,7 @@ export default function BlogClient({ posts, initialPage = 1 }: { posts: BlogPost
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center -ml-2 lg:ml-0">
             <Image
-              src="/images/logo-20redagrupa-3.png"
+              src="/images/logo-redagrupa.png"
               alt="RedAgrupa Logo"
               width={160}
               height={40}
@@ -163,7 +163,7 @@ export default function BlogClient({ posts, initialPage = 1 }: { posts: BlogPost
       <div className="pt-20">
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4">
-            <Breadcrumbs items={[{ label: "Blog" }]} />
+            <Breadcrumbs items={[{ label: "Blog" }]} currentPath="/blog" />
             <div className="max-w-4xl mx-auto text-center mb-16">
               <h1 className="text-4xl font-bold text-[#cc0033] mb-4">Conocimiento Empresa</h1>
               <p className="text-base text-gray-700 leading-[1.1]">
@@ -183,6 +183,7 @@ export default function BlogClient({ posts, initialPage = 1 }: { posts: BlogPost
                       src={post.heroImage}
                       alt={`Ilustración del artículo: ${post.title}`}
                       fill
+                      loading="lazy"
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     />

@@ -18,7 +18,7 @@ export const metadata = {
     siteName: "RedAgrupa",
     locale: "es_CL",
     type: "website",
-    images: [{ url: "/images/og-redagrupa.jpg", width: 1200, height: 630, alt: "Conocimiento Empresa — Blog de RedAgrupa" }],
+    images: [{ url: "https://www.redagrupa.cl/images/og-redagrupa.jpg", width: 1200, height: 630, alt: "Conocimiento Empresa — Blog de RedAgrupa" }],
   },
 }
 

@@ -16,9 +16,7 @@ export const metadata: Metadata = {
   },
   description:
     "Gestión integral de seguros complementarios de salud para pymes en Chile. +10 años de experiencia, +300 empresas clientes, +9.000 familias protegidas. Sin trámites eternos ni lenguaje técnico.",
-  alternates: {
-    canonical: "./",
-  },
+  alternates: {},
   openGraph: {
     type: "website",
     locale: "es_CL",
@@ -34,6 +32,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: "@redagrupa",
+    creator: "@redagrupa",
   },
   icons: {
     icon: [
@@ -96,8 +96,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
+              "@id": "https://www.redagrupa.cl/#website",
               name: "RedAgrupa",
               url: "https://www.redagrupa.cl",
+              description: "Gestión integral de seguros complementarios de salud para pymes en Chile.",
             }),
           }}
         />
@@ -110,7 +112,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               "@id": "https://www.redagrupa.cl/#organization",
               name: "RedAgrupa",
               url: "https://www.redagrupa.cl",
-              logo: "https://www.redagrupa.cl/images/logo-20redagrupa-3.png",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://www.redagrupa.cl/images/logo-redagrupa.png",
+              },
               description:
                 "Gestión de seguros complementarios de salud para pymes en Chile. Más de 10 años de experiencia, 300+ empresas y 9.000+ familias protegidas.",
               address: {
@@ -135,7 +140,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 availableLanguage: "Spanish",
                 areaServed: "CL",
               },
-              foundingDate: "2014",
+              foundingDate: "2014-01-01",
               areaServed: {
                 "@type": "Country",
                 name: "Chile",
@@ -151,7 +156,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               "@type": "LocalBusiness",
               "@id": "https://www.redagrupa.cl/#localbusiness",
               name: "RedAgrupa",
-              image: "https://www.redagrupa.cl/images/logo-20redagrupa-3.png",
+              image: "https://www.redagrupa.cl/images/logo-redagrupa.png",
               url: "https://www.redagrupa.cl",
               telephone: "+56228132245",
               email: "reembolsos@redagrupa.cl",

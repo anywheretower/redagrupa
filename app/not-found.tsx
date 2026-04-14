@@ -13,7 +13,7 @@ export default function NotFound() {
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center">
             <Image
-              src="/images/logo-20redagrupa-3.png"
+              src="/images/logo-redagrupa.png"
               alt="RedAgrupa Logo"
               width={160}
               height={40}

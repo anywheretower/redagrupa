@@ -24,7 +24,7 @@ export default function NosotrosClient() {
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center -ml-2 lg:ml-0">
             <Image
-              src="/images/logo-20redagrupa-3.png"
+              src="/images/logo-redagrupa.png"
               alt="RedAgrupa Logo"
               width={160}
               height={40}
@@ -141,7 +141,7 @@ export default function NosotrosClient() {
         {/* Hero/Intro */}
         <section className="py-32 bg-white">
           <div className="container mx-auto px-4">
-            <Breadcrumbs items={[{ label: "Nosotros" }]} />
+            <Breadcrumbs items={[{ label: "Nosotros" }]} currentPath="/nosotros" />
             <RevealOnScroll className="max-w-4xl mx-auto text-center space-y-6">
               <h1 className="text-4xl font-bold text-[#cc0033]">
                 Delega la gestión del Seguro Complementario y enfoca tu empresa en lo estratégico

@@ -38,7 +38,7 @@ export default function BeneficiosClient() {
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center -ml-2 lg:ml-0">
             <Image
-              src="/images/logo-20redagrupa-3.png"
+              src="/images/logo-redagrupa.png"
               alt="RedAgrupa Logo"
               width={160}
               height={40}
@@ -152,6 +152,7 @@ export default function BeneficiosClient() {
             src="/beneficios-hero.webp"
             alt="Equipo de trabajo con beneficios corporativos RedAgrupa"
             fill
+            sizes="100vw"
             className="object-cover"
             priority
           />
@@ -171,7 +172,7 @@ export default function BeneficiosClient() {
         {/* Introducción */}
         <section className="py-16 lg:py-32">
           <div className="container mx-auto px-4">
-            <Breadcrumbs items={[{ label: "Beneficios" }]} />
+            <Breadcrumbs items={[{ label: "Beneficios" }]} currentPath="/beneficios-redagrupa" />
             {/* Título y botón solo en móvil */}
             <div className="lg:hidden max-w-4xl mx-auto space-y-3 mb-8">
               <h1 className="text-3xl font-bold text-[#cc0033]">Beneficios de Salud<br />para Empresas</h1>

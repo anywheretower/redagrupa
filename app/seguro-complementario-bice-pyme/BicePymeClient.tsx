@@ -99,7 +99,7 @@ export default function BicePymeClient() {
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center -ml-2 lg:ml-0">
             <Image
-              src="/images/logo-20redagrupa-3.png"
+              src="/images/logo-redagrupa.png"
               alt="RedAgrupa Logo"
               width={160}
               height={40}
@@ -210,7 +210,7 @@ export default function BicePymeClient() {
         {/* Hero Section */}
         <section className="py-32">
           <div className="container mx-auto px-4">
-            <Breadcrumbs items={[{ label: "Seguros Salud", href: "/seguro-complementario" }, { label: "BICE Pyme" }]} />
+            <Breadcrumbs items={[{ label: "Seguros Salud", href: "/seguro-complementario" }, { label: "BICE Pyme" }]} currentPath="/seguro-complementario-bice-pyme" />
             <RevealOnScroll className="max-w-4xl mx-auto text-center space-y-6">
               <h1 className="text-4xl font-bold text-[#cc0033]">
                 Seguro Complementario BICE Pyme
@@ -224,13 +224,13 @@ export default function BicePymeClient() {
               />
               <p className="text-base text-gray-700 leading-[1.1]">
                 BICE Vida ofrece planes de seguro complementario de salud especialmente
-                disenados para pymes, combinando Seguro de Salud + Seguro de Vida en una
-                sola poliza. Protege a tu equipo con coberturas ambulatorias, hospitalarias
+                diseñados para pymes, combinando Seguro de Salud + Seguro de Vida en una
+                sola póliza. Protege a tu equipo con coberturas ambulatorias, hospitalarias
                 y de vida, con precios accesibles desde UF 0,52 mensual por trabajador.
               </p>
               <p className="text-base text-gray-700 leading-[1.1]">
                 Todos los planes incluyen cobertura ambulatoria, hospitalaria y seguro de vida,
-                con la posibilidad de agregar coberturas opcionales dental y catastrofica.
+                con la posibilidad de agregar coberturas opcionales dental y catastrófica.
               </p>
               <div className="pt-4">
                 <Button asChild className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3 w-full sm:w-64">

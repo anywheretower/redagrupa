@@ -13,7 +13,7 @@ export const metadata = {
   title: "Seguros Complementarios para Pymes en Chile | RedAgrupa",
   keywords: ["seguro complementario de salud", "seguros para pymes", "corredor de seguros Chile", "seguro complementario empresas", "RedAgrupa"],
   description:
-    "Seguros complementarios de salud para pymes en Chile. +10 años, +300 empresas, +9.000 familias protegidas. Cotiza gratis con RedAgrupa.",
+    "Seguros complementarios de salud para pymes en Chile. Comparamos planes de las principales aseguradoras, gestionamos reembolsos y asesoramos sin costo. +10 años, +300 empresas. Cotiza gratis.",
   alternates: {
     canonical: "https://www.redagrupa.cl",
   },
@@ -34,13 +34,6 @@ const reviewsJsonLd = {
   "@id": "https://www.redagrupa.cl/#organization",
   name: "RedAgrupa",
   url: "https://www.redagrupa.cl",
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "5.0",
-    bestRating: "5",
-    ratingCount: "3",
-    reviewCount: "3",
-  },
   review: [
     {
       "@type": "Review",
@@ -51,8 +44,8 @@ const reviewsJsonLd = {
       },
       reviewRating: {
         "@type": "Rating",
-        ratingValue: "5",
-        bestRating: "5",
+        ratingValue: 5,
+        bestRating: 5,
       },
       reviewBody:
         "Levábamos años encontrando un seguro que permitiese como empresa pequeña poder tener cobertura adicional. Hemos encontrado asesoría confiable, con profesionales atentos capacitados para resolver cualquier duda. Excelente servicio, recomiendo Redagrupa a ojos cerrados.",
@@ -66,8 +59,8 @@ const reviewsJsonLd = {
       },
       reviewRating: {
         "@type": "Rating",
-        ratingValue: "5",
-        bestRating: "5",
+        ratingValue: 5,
+        bestRating: 5,
       },
       reviewBody:
         "Contratamos Redagrupa como beneficio extra para trabajadores, pero al poco tiempo nos dimos cuenta que es un gran aliado, tanto clientes como empleados. Es el agregado bien servicio indiscutible con ellos.",
@@ -81,8 +74,8 @@ const reviewsJsonLd = {
       },
       reviewRating: {
         "@type": "Rating",
-        ratingValue: "5",
-        bestRating: "5",
+        ratingValue: 5,
+        bestRating: 5,
       },
       reviewBody:
         "Antes no había sido posible conseguir seguro complementario para mis colaboradores, ya que para tratar de una compañía de pocos empleados no cumplíamos con los requisitos. Pero gracias a Redagrupa lo conseguimos.",
@@ -166,7 +159,7 @@ export default function HomePage() {
           <div className="container mx-auto px-6 py-4 flex items-center justify-between">
             <Link href="/" className="flex items-center -ml-2 lg:ml-0">
               <img
-                src="/images/logo-20redagrupa-3.png"
+                src="/images/logo-redagrupa.png"
                 alt="RedAgrupa Logo"
                 width={160}
                 height={40}

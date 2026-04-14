@@ -43,7 +43,7 @@ export default function BicePersonasClient() {
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center -ml-2 lg:ml-0">
             <Image
-              src="/images/logo-20redagrupa-3.png"
+              src="/images/logo-redagrupa.png"
               alt="RedAgrupa Logo"
               width={160}
               height={40}
@@ -154,7 +154,7 @@ export default function BicePersonasClient() {
         {/* Hero Section */}
         <section className="py-32">
           <div className="container mx-auto px-4">
-            <Breadcrumbs items={[{ label: "Seguros Salud", href: "/seguro-complementario" }, { label: "BICE Personas" }]} />
+            <Breadcrumbs items={[{ label: "Seguros Salud", href: "/seguro-complementario" }, { label: "BICE Personas" }]} currentPath="/seguro-complementario-bice-personas" />
             <RevealOnScroll className="max-w-4xl mx-auto text-center space-y-6">
               <h1 className="text-4xl font-bold text-[#cc0033]">
                 Seguro de Salud Complementario para Personas

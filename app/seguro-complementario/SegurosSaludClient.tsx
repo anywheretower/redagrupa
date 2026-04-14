@@ -40,7 +40,7 @@ export default function SegurosSaludClient() {
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center -ml-2 lg:ml-0">
             <Image
-              src="/images/logo-20redagrupa-3.png"
+              src="/images/logo-redagrupa.png"
               alt="RedAgrupa Logo"
               width={160}
               height={40}
@@ -154,6 +154,7 @@ export default function SegurosSaludClient() {
             src="/seguro-complementario-hero.webp"
             alt="Familia protegida con seguro complementario de salud"
             fill
+            sizes="100vw"
             className="object-cover object-[70%_center] lg:object-center"
             priority
           />
@@ -161,7 +162,7 @@ export default function SegurosSaludClient() {
           <div className="absolute inset-0 z-[1] lg:hidden" style={{ background: "linear-gradient(to right, white 0%, transparent 60%)" }} />
           <div className="container mx-auto px-4 relative z-10 hidden lg:block">
             <div className="max-w-4xl ml-8 lg:ml-16 space-y-4">
-              <p className="text-4xl font-bold text-[#cc0033] drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)]" aria-hidden="true">Seguro Complementario<br />de Salud</p>
+              <h1 className="text-4xl font-bold text-[#cc0033] drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)]">Seguro Complementario<br />de Salud</h1>
               <p className="text-lg text-[#333333] max-w-lg leading-snug">
                 Mejor cobertura para tu equipo, <strong className="text-[#cc0033]">cero gestión para ti</strong>. Contratación en días, reembolsos y consultas 100% gestionados por RedAgrupa.
               </p>
@@ -235,10 +236,10 @@ export default function SegurosSaludClient() {
         {/* Intro + breadcrumbs */}
         <section className="py-12 lg:py-16">
           <div className="container mx-auto px-4">
-            <Breadcrumbs items={[{ label: "Seguros Salud" }]} />
+            <Breadcrumbs items={[{ label: "Seguros Salud" }]} currentPath="/seguro-complementario" />
             {/* Título y botón solo en móvil */}
             <div className="lg:hidden max-w-4xl mx-auto space-y-3 mb-8">
-              <h1 className="text-3xl font-bold text-[#cc0033]">Seguro Complementario<br />de Salud</h1>
+              <p className="text-3xl font-bold text-[#cc0033]" aria-hidden="true">Seguro Complementario<br />de Salud</p>
               <p className="text-base text-[#333333] leading-snug">
                 Mejor cobertura para tu equipo, <strong className="text-[#cc0033]">cero gestión para ti</strong>. Contratación en días, reembolsos y consultas 100% gestionados por RedAgrupa.
               </p>

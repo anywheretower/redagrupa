@@ -161,7 +161,7 @@ export default async function BlogPostPage({
       name: "RedAgrupa",
       logo: {
         "@type": "ImageObject",
-        url: "https://www.redagrupa.cl/images/logo-20redagrupa-3.png",
+        url: "https://www.redagrupa.cl/images/logo-redagrupa.png",
       },
     },
     mainEntityOfPage: {

@@ -48,7 +48,7 @@ export default function BlogPostClient({
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center -ml-2 lg:ml-0">
             <Image
-              src="/images/logo-20redagrupa-3.png"
+              src="/images/logo-redagrupa.png"
               alt="RedAgrupa Logo"
               width={160}
               height={40}
@@ -169,7 +169,7 @@ export default function BlogPostClient({
         <article className="py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
-              <Breadcrumbs items={[{ label: "Blog", href: "/blog" }, { label: post.title }]} />
+              <Breadcrumbs items={[{ label: "Blog", href: "/blog" }, { label: post.title }]} currentPath={`/blog/${post.slug}`} />
               {/* Back link */}
               <Link
                 href="/blog"
@@ -271,8 +271,10 @@ export default function BlogPostClient({
                     <div className="relative aspect-[4/3] overflow-hidden">
                       <Image
                         src={related.heroImage}
-                        alt={`Ilustración del artículo: ${related.title}`}
+                        alt={i >= relatedPosts.length ? "" : `Ilustración del artículo: ${related.title}`}
                         fill
+                        loading="lazy"
+                        decoding="async"
                         className="object-cover group-hover:scale-105 transition-transform duration-300"
                         sizes="280px"
                       />

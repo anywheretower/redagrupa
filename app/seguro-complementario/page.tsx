@@ -61,7 +61,9 @@ const faqJsonLd = {
 const serviceJsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
+  "@id": "https://www.redagrupa.cl/seguro-complementario/#service",
   name: "Seguro Complementario de Salud para Empresas",
+  url: "https://www.redagrupa.cl/seguro-complementario",
   description: "Asesoría gratuita y gestión integral de seguros complementarios de salud para pymes en Chile. Comparamos planes de las principales aseguradoras.",
   provider: {
     "@type": "Organization",
@@ -70,6 +72,12 @@ const serviceJsonLd = {
   },
   areaServed: { "@type": "Country", name: "Chile" },
   serviceType: "Correduría de Seguros de Salud",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "CLP",
+    description: "Cotización y asesoría sin costo",
+  },
 }
 
 const webPageJsonLd = {

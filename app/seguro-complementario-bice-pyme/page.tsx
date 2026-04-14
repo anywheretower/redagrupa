@@ -1,7 +1,7 @@
 import BicePymeClient from "./BicePymeClient"
 
 export const metadata = {
-  title: "Seguro Complementario BICE Pyme",
+  title: "Seguro Complementario de Salud BICE Pyme — Planes desde UF 0,52/mes",
   keywords: ["seguro BICE pyme", "seguro complementario BICE Vida", "seguro salud pyme Chile", "Mi Pyme Segura"],
   description:
     "Planes de seguro complementario de salud BICE Vida para pymes. Seguro de Salud + Seguro de Vida desde UF 0,5200 mensual por trabajador.",
@@ -9,7 +9,7 @@ export const metadata = {
     canonical: "https://www.redagrupa.cl/seguro-complementario-bice-pyme",
   },
   openGraph: {
-    title: "Seguro Complementario BICE Pyme",
+    title: "Seguro Complementario de Salud BICE Pyme — Planes desde UF 0,52/mes",
     description:
       "Planes de seguro complementario de salud BICE Vida para pymes. Seguro de Salud + Seguro de Vida desde UF 0,5200 mensual por trabajador.",
     url: "https://www.redagrupa.cl/seguro-complementario-bice-pyme",

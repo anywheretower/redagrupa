@@ -3,6 +3,7 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  trailingSlash: false,
   images: {
     formats: ["image/avif", "image/webp"],
   },
@@ -38,19 +39,13 @@ const nextConfig = {
   async redirects() {
     return [
       { source: "/seguros-salud", destination: "/seguro-complementario", permanent: true },
-      { source: "/seguros-salud/", destination: "/seguro-complementario", permanent: true },
       { source: "/seguro-colectivo", destination: "/seguro-complementario", permanent: true },
-      { source: "/seguro-colectivo/", destination: "/seguro-complementario", permanent: true },
       { source: "/seguro-dental", destination: "/seguro-complementario", permanent: true },
-      { source: "/seguro-dental/", destination: "/seguro-complementario", permanent: true },
       { source: "/seguro-medico", destination: "/seguro-complementario", permanent: true },
       { source: "/seguro-medico/:path*", destination: "/seguro-complementario", permanent: true },
       { source: "/formulario-de-reembolso", destination: "/", permanent: true },
-      { source: "/formulario-de-reembolso/", destination: "/", permanent: true },
-      { source: "/contacto", destination: "/", permanent: true },
-      { source: "/contacto/", destination: "/", permanent: true },
+      { source: "/contacto", destination: "/contactos", permanent: true },
       { source: "/web", destination: "/", permanent: true },
-      { source: "/web/", destination: "/", permanent: true },
     ]
   },
 }

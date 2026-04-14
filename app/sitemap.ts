@@ -1,5 +1,16 @@
 import { MetadataRoute } from "next"
 import { getAllPosts } from "@/lib/blog"
+import fs from "fs"
+import path from "path"
+
+function getPageModified(pagePath: string): Date {
+  const filePath = path.join(process.cwd(), "app", pagePath, "page.tsx")
+  try {
+    return fs.statSync(filePath).mtime
+  } catch {
+    return new Date()
+  }
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.redagrupa.cl"
@@ -7,55 +18,55 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
-      lastModified: new Date("2026-04-06"),
+      lastModified: getPageModified(""),
       changeFrequency: "weekly",
       priority: 1.0,
     },
     {
       url: `${baseUrl}/seguro-complementario`,
-      lastModified: new Date("2026-04-06"),
+      lastModified: getPageModified("seguro-complementario"),
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/seguro-complementario-bice-pyme`,
-      lastModified: new Date("2026-04-06"),
+      lastModified: getPageModified("seguro-complementario-bice-pyme"),
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/seguro-complementario-bice-personas`,
-      lastModified: new Date("2026-04-05"),
+      lastModified: getPageModified("seguro-complementario-bice-personas"),
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/beneficios-redagrupa`,
-      lastModified: new Date("2026-04-06"),
+      lastModified: getPageModified("beneficios-redagrupa"),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/nosotros`,
-      lastModified: new Date("2026-04-06"),
+      lastModified: getPageModified("nosotros"),
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
       url: `${baseUrl}/blog`,
-      lastModified: new Date("2026-04-06"),
+      lastModified: getPageModified("blog"),
       changeFrequency: "weekly",
       priority: 0.7,
     },
     {
       url: `${baseUrl}/formularios`,
-      lastModified: new Date("2026-04-04"),
+      lastModified: getPageModified("formularios"),
       changeFrequency: "monthly",
       priority: 0.5,
     },
     {
       url: `${baseUrl}/politicas-de-privacidad`,
-      lastModified: new Date("2026-02-11"),
+      lastModified: getPageModified("politicas-de-privacidad"),
       changeFrequency: "yearly",
       priority: 0.3,
     },

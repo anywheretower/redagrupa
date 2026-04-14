@@ -10,7 +10,7 @@ export default function Footer() {
           {/* Col 1: Logo + Socio */}
           <div className="flex flex-col items-center lg:items-start gap-4 lg:col-span-1">
             <Image
-              src="/images/logo-20redagrupa-3.png"
+              src="/images/logo-redagrupa.png"
               alt="RedAgrupa Logo"
               width={160}
               height={40}

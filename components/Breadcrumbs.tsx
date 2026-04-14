@@ -5,7 +5,7 @@ interface BreadcrumbItem {
   href?: string
 }
 
-export default function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
+export default function Breadcrumbs({ items, currentPath }: { items: BreadcrumbItem[]; currentPath?: string }) {
   const baseUrl = "https://www.redagrupa.cl"
 
   const jsonLd = {
@@ -18,12 +18,20 @@ export default function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
         name: "Inicio",
         item: baseUrl,
       },
-      ...items.map((item, index) => ({
-        "@type": "ListItem",
-        position: index + 2,
-        name: item.label,
-        ...(item.href ? { item: `${baseUrl}${item.href}` } : {}),
-      })),
+      ...items.map((item, index) => {
+        const isLast = index === items.length - 1
+        const url = item.href
+          ? `${baseUrl}${item.href}`
+          : isLast && currentPath
+            ? `${baseUrl}${currentPath}`
+            : undefined
+        return {
+          "@type": "ListItem",
+          position: index + 2,
+          name: item.label,
+          ...(url ? { item: url } : {}),
+        }
+      }),
     ],
   }
 
