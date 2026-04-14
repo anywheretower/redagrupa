@@ -523,7 +523,7 @@ export default function SegurosSaludClient() {
                 <h2 className="text-4xl font-bold text-white">
                   Recibe información técnica y una propuesta adecuada para tu empresa
                 </h2>
-                <p className="text-base text-white/90 leading-[1.1]">
+                <p className="text-base text-white leading-[1.1]">
                   Cada empresa tiene necesidades distintas según su tamaño, rubro y presupuesto. Contar con asesoría
                   especializada permite diseñar una solución alineada con los objetivos del negocio y el perfil de
                   los trabajadores.

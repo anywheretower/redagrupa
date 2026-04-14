@@ -104,7 +104,7 @@ export default function HeroCarousel() {
       {/* Content */}
       <div className="container mx-auto px-6 h-full relative z-10 flex flex-col justify-between lg:block">
         {/* Mobile: título posicionado sobre la imagen (parte inferior de la zona de imagen) */}
-        <div className="lg:hidden flex-1 flex items-end pb-4" aria-live="polite">
+        <div className="lg:hidden flex-1 flex items-end pb-4">
           {slides.map((slide, i) => (
             <div
               key={`title-${i}`}
@@ -133,7 +133,7 @@ export default function HeroCarousel() {
                 i === current ? "opacity-100" : "opacity-0 absolute pointer-events-none"
               }`}
             >
-              <p className="text-base text-white/90 leading-[1.3] max-w-2xl">
+              <p className="text-base text-white leading-[1.3] max-w-2xl">
                 {slide.subtitle}
               </p>
               <Button
@@ -169,7 +169,7 @@ export default function HeroCarousel() {
                     {slide.headline}
                   </p>
                 )}
-                <p className="lg:text-lg text-white/90 leading-[1.3] max-w-2xl">
+                <p className="lg:text-lg text-white leading-[1.3] max-w-2xl">
                   {slide.subtitle}
                 </p>
                 <div className="flex flex-row gap-4 pt-2">
@@ -217,7 +217,7 @@ export default function HeroCarousel() {
           href="https://www.segurosequos.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center text-xs text-white/70 hover:text-white transition-colors"
+          className="inline-flex items-center text-xs text-white hover:text-white transition-colors"
         >
           <span className="bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">Socio Estratégico: <span className="font-semibold text-white">EQUOS Seguros</span></span>
         </a>

@@ -227,5 +227,10 @@
   .logo-marquee-track {
     animation: none;
   }
+  .animate-in {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }
 

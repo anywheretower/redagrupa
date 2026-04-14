@@ -234,7 +234,7 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
           Recibirás tu cotización personalizada sin costo
         </p>
         <p className="text-xs text-center text-gray-600 flex items-center justify-center gap-1">
-          <Lock className="w-3 h-3" />
+          <Lock className="w-3 h-3" aria-hidden="true" />
           Tus datos están 100% protegidos.{" "}
           <a href="/politicas-de-privacidad" className="text-[#cc0033] underline hover:no-underline">
             Ver políticas
@@ -262,7 +262,7 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
               data-close-dialog
               onClick={() => setShowSuccess(false)}
               aria-label="Cerrar confirmación"
-              className="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-600 transition-colors"
+              className="absolute top-4 right-4 p-2 text-gray-600 hover:text-gray-800 transition-colors"
             >
               <X className="w-5 h-5" />
             </button>

@@ -453,13 +453,12 @@
   <div id="tab-a11y" class="cat-content" data-title="Accesibilidad + Best Practices">
 
     <div class="top5">
-      <h4>&#9889; Top 5 prioridades Accesibilidad</h4>
+      <h4>&#9889; Top 5 prioridades Accesibilidad (pendientes)</h4>
       <ol>
-        <li><strong>A1-A3:</strong> Contrast failures &mdash; text-white/70 y text-white/90 sobre #cc0033 fallan WCAG AA</li>
         <li><strong>A7:</strong> TestimonialCarousel auto-rotate sin mecanismo de pausa (WCAG 2.2.2)</li>
-        <li><strong>A4:</strong> Desktop dropdown &ldquo;Seguro BICE&rdquo; sin aria-expanded + sin keyboard Enter/Space/Escape</li>
+        <li><strong>A4:</strong> Desktop dropdown &ldquo;Seguro BICE&rdquo; sin aria-expanded</li>
+        <li><strong>A9:</strong> Desktop dropdown solo CSS :hover &mdash; sin keyboard Enter/Space/Escape</li>
         <li><strong>A10:</strong> Required fields sin indicador visible persistente (solo placeholder)</li>
-        <li><strong>A12:</strong> Embla carousels no respetan prefers-reduced-motion (JS autoplay)</li>
       </ol>
     </div>
 
@@ -467,9 +466,9 @@
       <div class="section-title"><span class="section-icon icon-a11y">A</span> Contraste de Color</div>
       <table>
         <tr><th width="40">ID</th><th>Hallazgo</th><th width="110">Estado</th></tr>
-        <tr><td>A1</td><td><strong>text-white/90 sobre #cc0033</strong> &mdash; ratio ~4.3:1, falla AA para texto normal (requiere 4.5:1)<div class="detail">Footer.tsx, HeroCarousel.tsx, MobileMenu.tsx &mdash; subir a text-white o reducir fondo</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
-        <tr><td>A2</td><td><strong>text-white/70 sobre #cc0033</strong> &mdash; ratio ~2.9:1, falla severa (hard fail)<div class="detail">Footer.tsx:23 (EQUOS label), HeroCarousel.tsx:220, StatsCarousel dots bg-white/40</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
-        <tr><td>A3</td><td><strong>text-gray-400 sobre white</strong> &mdash; ratio ~2.9:1, falla (botones close de modal/popup)<div class="detail">ContactForm.tsx:265, ExitIntentPopup.tsx:150 &mdash; usar gray-600 min</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>A1</td><td><strong>text-white/90 sobre #cc0033</strong> &mdash; ratio ~4.3:1, falla AA para texto normal (requiere 4.5:1)<div class="detail">Footer.tsx, HeroCarousel.tsx, MobileMenu.tsx &mdash; subir a text-white o reducir fondo</div></td><td><span class="badge badge-applied">Aplicado</span></td></tr>
+        <tr><td>A2</td><td><strong>text-white/70 sobre #cc0033</strong> &mdash; ratio ~2.9:1, falla severa (hard fail)<div class="detail">Footer.tsx:23 (EQUOS label), HeroCarousel.tsx:220, StatsCarousel dots bg-white/40</div></td><td><span class="badge badge-applied">Aplicado</span></td></tr>
+        <tr><td>A3</td><td><strong>text-gray-400 sobre white</strong> &mdash; ratio ~2.9:1, falla (botones close de modal/popup)<div class="detail">ContactForm.tsx:265, ExitIntentPopup.tsx:150 &mdash; usar gray-600 min</div></td><td><span class="badge badge-applied">Aplicado</span></td></tr>
       </table>
     </div>
 
@@ -478,10 +477,10 @@
       <table>
         <tr><th width="40">ID</th><th>Hallazgo</th><th width="110">Estado</th></tr>
         <tr><td>A4</td><td><strong>Desktop dropdown sin aria-expanded</strong> &mdash; screen readers no anuncian estado abierto/cerrado<div class="detail">page.tsx:190 bot&oacute;n &ldquo;Seguro BICE&rdquo; &mdash; agregar aria-expanded toggle</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
-        <tr><td>A5</td><td><strong>HeroCarousel: aria-live duplicado</strong> &mdash; mobile y desktop disparan simult&aacute;neamente, double announcements<div class="detail">HeroCarousel.tsx:107,155 &mdash; mantener solo 1 aria-live region</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>A6</td><td><strong>ProblemaCarousel/StatsCarousel sin aria-live</strong> en contenido de slides &mdash; cambios no anunciados<div class="detail">Agregar aria-live=&ldquo;polite&rdquo; al container de contenido activo</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>A5</td><td><strong>HeroCarousel: aria-live duplicado</strong> &mdash; mobile y desktop disparan simult&aacute;neamente, double announcements<div class="detail">HeroCarousel.tsx:107,155 &mdash; mantener solo 1 aria-live region</div></td><td><span class="badge badge-applied">Aplicado</span></td></tr>
+        <tr><td>A6</td><td><strong>ProblemaCarousel/StatsCarousel sin aria-live</strong> en contenido de slides &mdash; cambios no anunciados<div class="detail">Agregar aria-live=&ldquo;polite&rdquo; al container de contenido activo</div></td><td><span class="badge badge-applied">Aplicado</span></td></tr>
         <tr><td>A7</td><td><strong>TestimonialCarousel auto-rotate sin pausa</strong> &mdash; viola WCAG 2.2.2 (pausar contenido auto-updating)<div class="detail">Agregar bot&oacute;n pause/play visible</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
-        <tr><td>A8</td><td><strong>Lock icon decorativo sin aria-hidden</strong> en ContactForm &mdash; SVG anunciado como imagen sin label<div class="detail">ContactForm.tsx:238 &lt;Lock&gt; &mdash; agregar aria-hidden=&ldquo;true&rdquo;</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>A8</td><td><strong>Lock icon decorativo sin aria-hidden</strong> en ContactForm &mdash; SVG anunciado como imagen sin label<div class="detail">ContactForm.tsx:238 &lt;Lock&gt; &mdash; agregar aria-hidden=&ldquo;true&rdquo;</div></td><td><span class="badge badge-applied">Aplicado</span></td></tr>
       </table>
     </div>
 
@@ -498,8 +497,8 @@
       <div class="section-title"><span class="section-icon icon-a11y">A</span> Motion &amp; Reduced Motion</div>
       <table>
         <tr><th width="40">ID</th><th>Hallazgo</th><th width="110">Estado</th></tr>
-        <tr><td>A11</td><td><strong>ExitIntentPopup animate-in sin prefers-reduced-motion</strong> &mdash; animaci&oacute;n de tailwindcss-animate no cubierta por globals.css<div class="detail">Agregar guard CSS o JS para reducir movimiento</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>A12</td><td><strong>Embla Autoplay carousels ignoran prefers-reduced-motion</strong> &mdash; JS autoplay no detenido por media query CSS<div class="detail">ProblemaCarousel, StatsCarousel &mdash; detectar matchMedia y desactivar Autoplay plugin</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>A11</td><td><strong>ExitIntentPopup animate-in sin prefers-reduced-motion</strong> &mdash; animaci&oacute;n de tailwindcss-animate no cubierta por globals.css<div class="detail">Agregar guard CSS o JS para reducir movimiento</div></td><td><span class="badge badge-applied">Aplicado</span></td></tr>
+        <tr><td>A12</td><td><strong>Embla Autoplay carousels ignoran prefers-reduced-motion</strong> &mdash; JS autoplay no detenido por media query CSS<div class="detail">ProblemaCarousel, StatsCarousel &mdash; detectar matchMedia y desactivar Autoplay plugin</div></td><td><span class="badge badge-applied">Aplicado</span></td></tr>
       </table>
     </div>
 
@@ -510,11 +509,11 @@
     <div class="footer-grid">
       <div class="footer-item"><div class="footer-num">110</div><div class="footer-label">Hallazgos totales</div></div>
       <div class="footer-divider"></div>
-      <div class="footer-item"><div class="footer-num" style="color:#065f46">31</div><div class="footer-label">Aplicados</div></div>
+      <div class="footer-item"><div class="footer-num" style="color:#065f46">39</div><div class="footer-label">Aplicados</div></div>
       <div class="footer-divider"></div>
-      <div class="footer-item"><div class="footer-num" style="color:#991b1b">16</div><div class="footer-label">Cr&iacute;ticos</div></div>
+      <div class="footer-item"><div class="footer-num" style="color:#991b1b">14</div><div class="footer-label">Cr&iacute;ticos</div></div>
       <div class="footer-divider"></div>
-      <div class="footer-item"><div class="footer-num" style="color:#92400e">30</div><div class="footer-label">Pendientes</div></div>
+      <div class="footer-item"><div class="footer-num" style="color:#92400e">24</div><div class="footer-label">Pendientes</div></div>
       <div class="footer-divider"></div>
       <div class="footer-item"><div class="footer-num" style="color:#5b21b6">8</div><div class="footer-label">Requiere Cliente</div></div>
       <div class="footer-divider"></div>
@@ -524,7 +523,7 @@
     </div>
 
     <div class="note" style="margin-top: 20px;">
-      <strong>Nota:</strong> 31 medidas aplicadas el 14 abr 2026 (22 SEO + 3 GEO + 6 Rendimiento). Hallazgos aplicados se muestran con badge verde.
+      <strong>Nota:</strong> 39 medidas aplicadas el 14 abr 2026 (22 SEO + 3 GEO + 6 Rendimiento + 8 Accesibilidad). Hallazgos aplicados se muestran con badge verde.
     </div>
   </div>
 

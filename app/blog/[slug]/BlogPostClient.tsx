@@ -214,7 +214,7 @@ export default function BlogPostClient({
                 <h3 className="text-lg sm:text-xl font-bold mb-2">
                   ¿Tu pyme ya tiene seguro complementario?
                 </h3>
-                <p className="text-white/90 text-sm leading-relaxed mb-5">
+                <p className="text-white text-sm leading-relaxed mb-5">
                   Comparamos planes de las principales aseguradoras para encontrar la mejor cobertura al mejor precio. Asesoría gratuita, sin compromiso.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">

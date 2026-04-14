@@ -655,7 +655,7 @@ export default function BicePersonasClient() {
                 <h2 className="text-4xl font-bold text-white">
                   Protege tu salud y la de tu familia con el respaldo de BICE Vida
                 </h2>
-                <p className="text-base text-white/90 leading-[1.1]">
+                <p className="text-base text-white leading-[1.1]">
                   Nuestro equipo de asesores te orienta sin costo para que elijas la cobertura
                   que mejor se adapte a ti y a tu familia. Sencillo, transparente y sin tramites
                   complicados.

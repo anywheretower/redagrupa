@@ -34,7 +34,7 @@ function ProblemaCarouselCard({ icon: Icon, title, text }: { icon: React.Compone
             <Icon className="w-6 h-6 text-[#cc0033]" />
           </div>
           <h3 className="text-lg font-normal text-white leading-tight flex-1">{title}</h3>
-          <ChevronDown className={`w-5 h-5 text-white/90 transition-transform duration-300 flex-shrink-0 ${open ? "rotate-180" : ""}`} />
+          <ChevronDown className={`w-5 h-5 text-white transition-transform duration-300 flex-shrink-0 ${open ? "rotate-180" : ""}`} />
         </button>
         <div className={`grid transition-all duration-300 ease-in-out ${open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}>
           <div className="overflow-hidden">
@@ -47,7 +47,8 @@ function ProblemaCarouselCard({ icon: Icon, title, text }: { icon: React.Compone
 }
 
 export default function ProblemaCarousel() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
+  const prefersReduced = typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, prefersReduced ? [] : [
     Autoplay({ delay: 5000, stopOnInteraction: true }),
   ])
   const [selectedIndex, setSelectedIndex] = useState(0)
@@ -67,7 +68,7 @@ export default function ProblemaCarousel() {
   return (
     <div role="region" aria-label="Problemas que resuelve RedAgrupa" aria-roledescription="carrusel">
       <div ref={emblaRef} className="overflow-hidden">
-        <div className="flex">
+        <div className="flex" aria-live="polite" aria-atomic="false">
           {problemaCards.map((card, i) => (
             <ProblemaCarouselCard key={i} icon={card.icon} title={card.title} text={card.text} />
           ))}

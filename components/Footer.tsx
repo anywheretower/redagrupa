@@ -20,7 +20,7 @@ export default function Footer() {
               href="https://www.segurosequos.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs text-white/70 hover:text-white transition-colors"
+              className="inline-flex items-center gap-1.5 text-xs text-white hover:text-white transition-colors"
             >
               Socio Estratégico: <span className="font-semibold text-white">EQUOS Seguros</span>
             </a>
@@ -31,27 +31,27 @@ export default function Footer() {
             <h3 className="text-sm font-semibold uppercase tracking-wider mb-4 text-white">Servicios</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/seguro-complementario" className="text-sm hover:underline text-white/90">
+                <Link href="/seguro-complementario" className="text-sm hover:underline text-white">
                   Seguro Complementario Salud
                 </Link>
               </li>
               <li>
-                <Link href="/seguro-complementario-bice-pyme" className="text-sm hover:underline text-white/90">
+                <Link href="/seguro-complementario-bice-pyme" className="text-sm hover:underline text-white">
                   Seguro BICE Pyme
                 </Link>
               </li>
               <li>
-                <Link href="/seguro-complementario-bice-personas" className="text-sm hover:underline text-white/90">
+                <Link href="/seguro-complementario-bice-personas" className="text-sm hover:underline text-white">
                   Seguro BICE Personas
                 </Link>
               </li>
               <li>
-                <Link href="/beneficios-redagrupa" className="text-sm hover:underline text-white/90">
+                <Link href="/beneficios-redagrupa" className="text-sm hover:underline text-white">
                   Beneficios RedAgrupa
                 </Link>
               </li>
               <li>
-                <Link href="/formularios" className="text-sm hover:underline text-white/90">
+                <Link href="/formularios" className="text-sm hover:underline text-white">
                   Formularios Reembolso
                 </Link>
               </li>
@@ -63,17 +63,17 @@ export default function Footer() {
             <h3 className="text-sm font-semibold uppercase tracking-wider mb-4 text-white">Empresa</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/nosotros" className="text-sm hover:underline text-white/90">
+                <Link href="/nosotros" className="text-sm hover:underline text-white">
                   Nosotros
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-sm hover:underline text-white/90">
+                <Link href="/blog" className="text-sm hover:underline text-white">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link href="/politicas-de-privacidad" className="text-sm hover:underline text-white/90">
+                <Link href="/politicas-de-privacidad" className="text-sm hover:underline text-white">
                   Políticas de Privacidad
                 </Link>
               </li>

@@ -294,7 +294,7 @@ export default function BicePymeClient() {
                       </h3>
                       <p
                         className={`text-sm mb-4 ${
-                          plan.destacado ? "text-white/90" : "text-gray-500"
+                          plan.destacado ? "text-white" : "text-gray-500"
                         }`}
                       >
                         Seguro de Salud + Seguro de Vida
@@ -302,7 +302,7 @@ export default function BicePymeClient() {
 
                       <p
                         className={`text-xs mb-1 ${
-                          plan.destacado ? "text-white/90" : "text-gray-500"
+                          plan.destacado ? "text-white" : "text-gray-500"
                         }`}
                       >
                         Desde
@@ -317,7 +317,7 @@ export default function BicePymeClient() {
                         </span>
                         <span
                           className={`text-sm ${
-                            plan.destacado ? "text-white/90" : "text-gray-400"
+                            plan.destacado ? "text-white" : "text-gray-400"
                           }`}
                         >
                           / {plan.precioUF}
@@ -325,7 +325,7 @@ export default function BicePymeClient() {
                       </div>
                       <p
                         className={`text-xs mb-6 ${
-                          plan.destacado ? "text-white/90" : "text-gray-500"
+                          plan.destacado ? "text-white" : "text-gray-500"
                         }`}
                       >
                         Mensual por trabajador
@@ -349,7 +349,7 @@ export default function BicePymeClient() {
                             />
                             <p
                               className={`text-sm leading-snug ${
-                                plan.destacado ? "text-white/90" : "text-gray-700"
+                                plan.destacado ? "text-white" : "text-gray-700"
                               }`}
                             >
                               <strong>{cob.bold}</strong> {cob.texto}
@@ -367,7 +367,7 @@ export default function BicePymeClient() {
                       </p>
                       <p
                         className={`text-sm leading-snug mb-6 ${
-                          plan.destacado ? "text-white/90" : "text-gray-500"
+                          plan.destacado ? "text-white" : "text-gray-500"
                         }`}
                       >
                         Puedes incluir en el plan Coberturas Dental y Catastrofica.
@@ -384,7 +384,7 @@ export default function BicePymeClient() {
                           </p>
                           <p
                             className={`text-sm leading-snug ${
-                              plan.destacado ? "text-white/90" : "text-gray-500"
+                              plan.destacado ? "text-white" : "text-gray-500"
                             }`}
                           >
                             Asistencia medica para tu mascota con <strong>Pawer.</strong>
@@ -626,7 +626,7 @@ export default function BicePymeClient() {
                 <h2 className="text-4xl font-bold text-white">
                   ¿Necesitas ayuda para elegir el plan BICE Vida ideal para tu pyme?
                 </h2>
-                <p className="text-base text-white/90 leading-[1.1]">
+                <p className="text-base text-white leading-[1.1]">
                   Nuestro equipo de asesores te orienta sin costo para que elijas la
                   cobertura que mejor se adapte a tu empresa y tu presupuesto.
                 </p>

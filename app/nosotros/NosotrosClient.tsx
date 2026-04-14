@@ -254,7 +254,7 @@ export default function NosotrosClient() {
                   <p className="text-base leading-[1.1] italic">
                     &ldquo;Hace más de 10 años quisimos apoyar a las micro y pequeñas empresas, como un soporte fundamental y transversal en sus negocios. Esta es nuestra misión y sueño cumplido. Como especialistas en Seguros Complementarios de Salud, confíen en nuestra experiencia y trayectoria para que ustedes puedan fortalecer los lazos con sus trabajadores y promover el crecimiento y la sustentabilidad de sus negocios.&rdquo;
                   </p>
-                  <footer className="text-white/90">
+                  <footer className="text-white">
                     <div className="font-bold text-base">Cristóbal Winter</div>
                     <div className="text-white/95 text-base">Socio Fundador y Gerente General</div>
                   </footer>
@@ -323,7 +323,7 @@ export default function NosotrosClient() {
               {/* Right: CTA Content */}
               <div className="space-y-6">
                 <h2 className="text-4xl font-bold text-white">Contrata tu Seguro Complementario con RedAgrupa</h2>
-                <p className="text-base text-white/90 leading-[1.1]">
+                <p className="text-base text-white leading-[1.1]">
                   En RedAgrupa te ayudamos a elegir y contratar el seguro complementario que más se adapte a las
                   necesidades de tu empresa. Nos encargamos de todo el proceso, desde la cotización hasta la
                   implementación, para que tú y tu equipo puedan enfocarse en lo que realmente importa.

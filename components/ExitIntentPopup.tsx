@@ -147,7 +147,7 @@ export default function ExitIntentPopup() {
       >
         <button
           onClick={handleDismiss}
-          className="absolute top-3 right-3 w-8 h-8 flex items-center justify-center rounded-full text-gray-400 hover:text-gray-700 hover:bg-gray-100 transition-colors"
+          className="absolute top-3 right-3 w-8 h-8 flex items-center justify-center rounded-full text-gray-600 hover:text-gray-800 hover:bg-gray-100 transition-colors"
           aria-label="Cerrar"
         >
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">

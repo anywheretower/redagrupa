@@ -581,7 +581,7 @@ export default function BeneficiosClient() {
                 <h2 className="text-4xl font-bold text-white">
                   Conoce cómo acceder a los Beneficios de Salud exclusivos para clientes de RedAgrupa
                 </h2>
-                <p className="text-base text-white/90 leading-[1.1]">
+                <p className="text-base text-white leading-[1.1]">
                   Optimiza tiempo, productividad y gestión de personas centralizando los beneficios de salud y
                   bienestar de tu empresa con RedAgrupa.
                 </p>

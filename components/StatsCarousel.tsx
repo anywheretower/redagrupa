@@ -48,7 +48,8 @@ const statsCards = [
 ]
 
 export default function StatsCarousel() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
+  const prefersReduced = typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, prefersReduced ? [] : [
     Autoplay({ delay: 5000, stopOnInteraction: true }),
   ])
   const [selectedIndex, setSelectedIndex] = useState(0)
@@ -68,7 +69,7 @@ export default function StatsCarousel() {
   return (
     <div role="region" aria-label="Estadísticas de RedAgrupa" aria-roledescription="carrusel">
       <div ref={emblaRef} className="overflow-hidden">
-        <div className="flex">
+        <div className="flex" aria-live="polite" aria-atomic="false">
           {statsCards.map((card, i) => (
             <div key={i} className="min-w-0 shrink-0 grow-0 basis-full px-6">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-5 space-y-3 text-center">
@@ -88,7 +89,7 @@ export default function StatsCarousel() {
           <button
             key={i}
             aria-label={`Ir a estadística ${i + 1}`}
-            className={`min-w-[24px] min-h-[24px] bg-clip-content p-[7px] w-2 h-2 rounded-full transition-colors ${i === selectedIndex ? "bg-white" : "bg-white/40"}`}
+            className={`min-w-[24px] min-h-[24px] bg-clip-content p-[7px] w-2 h-2 rounded-full transition-colors ${i === selectedIndex ? "bg-white" : "bg-white/60"}`}
             onClick={() => emblaApi?.scrollTo(i)}
           />
         ))}

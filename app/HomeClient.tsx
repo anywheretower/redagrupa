@@ -45,7 +45,7 @@ function ProblemaCardExpandable({ icon: Icon, title, text }: { icon: React.Compo
           <Icon className="w-6 h-6 text-[#cc0033]" />
         </div>
         <h3 className="text-lg font-normal text-white leading-tight flex-1">{title}</h3>
-        <ChevronDown className={`w-5 h-5 text-white/90 transition-transform duration-300 flex-shrink-0 ${open ? "rotate-180" : ""}`} />
+        <ChevronDown className={`w-5 h-5 text-white transition-transform duration-300 flex-shrink-0 ${open ? "rotate-180" : ""}`} />
       </button>
       <div className={`grid transition-all duration-300 ease-in-out ${open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}>
         <div className="overflow-hidden">
@@ -142,17 +142,17 @@ export default function HomeContent({ latestPosts = [] }: { latestPosts?: Latest
               href="https://www.segurosequos.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="lg:hidden inline-flex items-center text-xs text-white/70 hover:text-white transition-colors mb-3"
+              className="lg:hidden inline-flex items-center text-xs text-white hover:text-white transition-colors mb-3"
             >
               <span className="bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">Socio Estratégico: <span className="font-semibold text-white">EQUOS Seguros</span></span>
             </a>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal leading-[1.1] text-white mb-2">
               3 problemas que enfrentan las pymes con sus seguros
             </h2>
-            <p className="hidden lg:block text-base sm:text-lg lg:text-xl text-white/90 leading-[1.3] mb-1">
+            <p className="hidden lg:block text-base sm:text-lg lg:text-xl text-white leading-[1.3] mb-1">
               El 70% de los colaboradores no entiende su cobertura. RedAgrupa resuelve eso por ti.
             </p>
-            <h3 className="text-xs sm:text-sm uppercase tracking-wider text-white/90 mt-2 lg:mt-6">
+            <h3 className="text-xs sm:text-sm uppercase tracking-wider text-white mt-2 lg:mt-6">
               Hoy mismo te ayudamos con:
             </h3>
           </div>
