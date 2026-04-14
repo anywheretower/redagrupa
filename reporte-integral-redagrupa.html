@@ -404,13 +404,13 @@
   <div id="tab-perf" class="cat-content" data-title="Rendimiento">
 
     <div class="top5">
-      <h4>&#9889; Top 5 prioridades Rendimiento</h4>
+      <h4>&#9889; Top 5 prioridades Rendimiento (pendientes)</h4>
       <ol>
         <li><strong>R1:</strong> TBT mobile 570ms &mdash; HeroCarousel sin dynamic import, hydrata main thread</li>
-        <li><strong>R4:</strong> Geist font sin display: &ldquo;swap&rdquo; &mdash; FOIT en conexiones lentas</li>
-        <li><strong>R6:</strong> Sin preload manual para hero image &mdash; LCP element en client component</li>
-        <li><strong>R3:</strong> ExitIntentPopup en layout hydrata en TODAS las p&aacute;ginas</li>
         <li><strong>R11:</strong> Sin rate limiting en /api/contacto &mdash; vulnerable a flooding</li>
+        <li><strong>R2:</strong> HomeClient.tsx masivo (434 l&iacute;neas &ldquo;use client&rdquo;) &mdash; hydrata todo homepage</li>
+        <li><strong>R10:</strong> Unused JS 267KB &mdash; oportunidad de reducci&oacute;n</li>
+        <li><strong>R7:</strong> Sin loading skeletons en dynamic imports</li>
       </ol>
     </div>
 
@@ -420,10 +420,10 @@
         <tr><th width="40">ID</th><th>Hallazgo</th><th width="110">Estado</th></tr>
         <tr><td>R1</td><td><strong>HeroCarousel sin dynamic import</strong> &mdash; importado directo en page.tsx, hydrata todo el JS del carousel en main thread<div class="detail">app/page.tsx:7 &mdash; wrap con dynamic(() =&gt; import(...), { ssr: true, loading: ... })</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
         <tr><td>R2</td><td><strong>HomeClient.tsx masivo (434 l&iacute;neas &ldquo;use client&rdquo;)</strong> &mdash; hydrata todo el homepage below-fold<div class="detail">Considerar split en componentes m&aacute;s peque&ntilde;os o Server Components parciales</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>R3</td><td><strong>ExitIntentPopup en layout.tsx hydrata en TODAS las p&aacute;ginas</strong> &mdash; mouse events + timers en cada page load<div class="detail">Idle-gate con requestIdleCallback antes de montar &mdash; ahorra ~50-80ms</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>R4</td><td><strong>Geist font sin display: &ldquo;swap&rdquo;</strong> &mdash; next/font default es &ldquo;optional&rdquo;, causa FOIT en conexiones lentas<div class="detail">app/layout.tsx &mdash; agregar display: &ldquo;swap&rdquo; a Geist() config</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
+        <tr><td>R3</td><td><strong>ExitIntentPopup en layout.tsx hydrata en TODAS las p&aacute;ginas</strong> &mdash; mouse events + timers en cada page load<div class="detail">Idle-gate con requestIdleCallback antes de montar &mdash; ahorra ~50-80ms</div></td><td><span class="badge badge-applied">Aplicado</span></td></tr>
+        <tr><td>R4</td><td><strong>Geist font sin display: &ldquo;swap&rdquo;</strong> &mdash; next/font default es &ldquo;optional&rdquo;, causa FOIT en conexiones lentas<div class="detail">app/layout.tsx &mdash; agregar display: &ldquo;swap&rdquo; a Geist() config</div></td><td><span class="badge badge-applied">Aplicado</span></td></tr>
         <tr><td>R5</td><td><strong>react-markdown + remark-gfm cargados eager</strong> en blog posts (~80-100KB parsed JS)<div class="detail">app/blog/[slug]/page.tsx &mdash; verificar que no cruza &ldquo;use client&rdquo; boundary</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>R6</td><td><strong>Sin preload manual para hero image</strong> &mdash; LCP element vive en client component, Next.js no emite &lt;link preload&gt; en SSR<div class="detail">layout.tsx &mdash; agregar &lt;link rel=&ldquo;preload&rdquo; as=&ldquo;image&rdquo; href=&ldquo;/images/hero-redagrupa.webp&rdquo;&gt;</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
+        <tr><td>R6</td><td><strong>Sin preload manual para hero image</strong> &mdash; LCP element vive en client component, Next.js no emite &lt;link preload&gt; en SSR<div class="detail">layout.tsx &mdash; agregar &lt;link rel=&ldquo;preload&rdquo; as=&ldquo;image&rdquo; href=&ldquo;/images/hero-redagrupa.webp&rdquo;&gt;</div></td><td><span class="badge badge-applied">Aplicado</span></td></tr>
         <tr><td>R7</td><td><strong>Sin loading skeletons en dynamic imports</strong> &mdash; 4 dynamic() calls sin loading option<div class="detail">HomeClient.tsx &mdash; agregar loading: () =&gt; &lt;Skeleton /&gt; a cada dynamic()</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
       </table>
     </div>
@@ -432,8 +432,8 @@
       <div class="section-title"><span class="section-icon icon-perf">R</span> Network &amp; Caching</div>
       <table>
         <tr><th width="40">ID</th><th>Hallazgo</th><th width="110">Estado</th></tr>
-        <tr><td>R8</td><td><strong>GTM preconnect sin crossOrigin=&ldquo;anonymous&rdquo;</strong> &mdash; limita efectividad de preconnect<div class="detail">layout.tsx &lt;link preconnect&gt; &mdash; agregar atributo</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>R9</td><td><strong>Sin Cache-Control para HTML pages</strong> &mdash; Vercel default s-maxage=0. P&aacute;ginas est&aacute;ticas sin CDN cache<div class="detail">next.config.mjs headers &mdash; agregar s-maxage=60, stale-while-revalidate=3600</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>R8</td><td><strong>GTM preconnect sin crossOrigin=&ldquo;anonymous&rdquo;</strong> &mdash; limita efectividad de preconnect<div class="detail">layout.tsx &lt;link preconnect&gt; &mdash; agregar atributo</div></td><td><span class="badge badge-applied">Aplicado</span></td></tr>
+        <tr><td>R9</td><td><strong>Sin Cache-Control para HTML pages</strong> &mdash; Vercel default s-maxage=0. P&aacute;ginas est&aacute;ticas sin CDN cache<div class="detail">next.config.mjs headers &mdash; agregar s-maxage=60, stale-while-revalidate=3600</div></td><td><span class="badge badge-applied">Aplicado</span></td></tr>
         <tr><td>R10</td><td><strong>Unused JS 267KB</strong> (PageSpeed Insights) &mdash; oportunidad de reducci&oacute;n<div class="detail">Auditar bundle con next/bundle-analyzer para identificar culpables</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
       </table>
     </div>
@@ -443,7 +443,7 @@
       <table>
         <tr><th width="40">ID</th><th>Hallazgo</th><th width="110">Estado</th></tr>
         <tr><td>R11</td><td><strong>Sin rate limiting en /api/contacto</strong> &mdash; bot que espera 3s+ puede enviar emails ilimitados v&iacute;a Resend<div class="detail">app/api/contacto/route.ts &mdash; agregar @upstash/ratelimit o middleware IP</div></td><td><span class="badge badge-critical">Cr&iacute;tico</span></td></tr>
-        <tr><td>R12</td><td><strong>HTML injection en email template</strong> &mdash; datos de usuario interpolados raw en HTML de Resend<div class="detail">route.ts:57-59 &mdash; escapear HTML entities antes de interpolar</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>R12</td><td><strong>HTML injection en email template</strong> &mdash; datos de usuario interpolados raw en HTML de Resend<div class="detail">route.ts:57-59 &mdash; escapear HTML entities antes de interpolar</div></td><td><span class="badge badge-applied">Aplicado</span></td></tr>
       </table>
     </div>
 
@@ -510,11 +510,11 @@
     <div class="footer-grid">
       <div class="footer-item"><div class="footer-num">110</div><div class="footer-label">Hallazgos totales</div></div>
       <div class="footer-divider"></div>
-      <div class="footer-item"><div class="footer-num" style="color:#065f46">25</div><div class="footer-label">Aplicados</div></div>
+      <div class="footer-item"><div class="footer-num" style="color:#065f46">31</div><div class="footer-label">Aplicados</div></div>
       <div class="footer-divider"></div>
-      <div class="footer-item"><div class="footer-num" style="color:#991b1b">18</div><div class="footer-label">Cr&iacute;ticos</div></div>
+      <div class="footer-item"><div class="footer-num" style="color:#991b1b">16</div><div class="footer-label">Cr&iacute;ticos</div></div>
       <div class="footer-divider"></div>
-      <div class="footer-item"><div class="footer-num" style="color:#92400e">34</div><div class="footer-label">Pendientes</div></div>
+      <div class="footer-item"><div class="footer-num" style="color:#92400e">30</div><div class="footer-label">Pendientes</div></div>
       <div class="footer-divider"></div>
       <div class="footer-item"><div class="footer-num" style="color:#5b21b6">8</div><div class="footer-label">Requiere Cliente</div></div>
       <div class="footer-divider"></div>
@@ -524,7 +524,7 @@
     </div>
 
     <div class="note" style="margin-top: 20px;">
-      <strong>Nota:</strong> 25 medidas aplicadas el 14 abr 2026 (22 SEO + 3 GEO). Hallazgos aplicados se muestran con badge verde.
+      <strong>Nota:</strong> 31 medidas aplicadas el 14 abr 2026 (22 SEO + 3 GEO + 6 Rendimiento). Hallazgos aplicados se muestran con badge verde.
     </div>
   </div>
 

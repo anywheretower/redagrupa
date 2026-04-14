@@ -36,20 +36,22 @@ export async function POST(request: Request) {
 
     const data = result.data
 
+    const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;")
+
     // Build table rows
     const rows = [
-      ["Nombre", data.nombre],
-      ["Email", data.email],
-      ["Teléfono", data.telefono],
+      ["Nombre", esc(data.nombre)],
+      ["Email", esc(data.email)],
+      ["Teléfono", esc(data.telefono)],
     ]
 
     if ("empresa" in data && data.empresa) {
-      rows.push(["Empresa", data.empresa])
+      rows.push(["Empresa", esc(data.empresa)])
     }
     if ("mensaje" in data && data.mensaje) {
-      rows.push(["Mensaje", data.mensaje])
+      rows.push(["Mensaje", esc(data.mensaje)])
     }
-    rows.push(["Página de origen", data.pagina])
+    rows.push(["Página de origen", esc(data.pagina)])
 
     const tableRows = rows
       .map(

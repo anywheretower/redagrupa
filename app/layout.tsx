@@ -6,7 +6,7 @@ import { Analytics } from "@vercel/analytics/next"
 import ExitIntentPopupLazy from "@/components/ExitIntentPopupLazy"
 import "./globals.css"
 
-const geist = Geist({ subsets: ["latin"] })
+const geist = Geist({ subsets: ["latin"], display: "swap" })
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.redagrupa.cl"),
@@ -62,7 +62,8 @@ export default function RootLayout({
     <html lang="es">
       <head>
         <meta name="google-site-verification" content="Zv9E4we9myI4IJe3uDP17K0TGfQl9sFvfWYphYt_2bI" />
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preload" as="image" href="/images/hero-redagrupa.webp" type="image/webp" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <Script
           id="gtm-script"
           strategy="afterInteractive"
