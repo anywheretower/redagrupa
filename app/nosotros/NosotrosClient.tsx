@@ -242,6 +242,63 @@ export default function NosotrosClient() {
           </div>
         </section>
 
+        {/* Nuestro Equipo */}
+        <section className="py-32 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <RevealOnScroll className="max-w-5xl mx-auto space-y-10">
+              <h2 className="text-4xl font-bold text-[#cc0033] text-center">Nuestro Equipo</h2>
+              <p className="text-base text-gray-700 leading-[1.1] text-center max-w-3xl mx-auto">
+                Profesionales con experiencia real en seguros complementarios de salud, dedicadas a que cada empresa y cada asegurado reciba atención oportuna y de calidad.
+              </p>
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                {[
+                  {
+                    name: "Mara Martínez",
+                    role: "Ejecutiva de Reembolsos",
+                    image: "/images/ejecutiva-reembolsos-1.jpg",
+                    description: "Más de 10 años en gestión administrativa y atención al cliente. Revisa, valida y da seguimiento a reembolsos de seguros complementarios de salud.",
+                  },
+                  {
+                    name: "Francisca Arregui",
+                    role: "Ejecutiva de Reembolsos",
+                    image: "/images/ejecutiva-reembolsos-2.jpg",
+                    description: "Más de 10 años gestionando reembolsos de gastos médicos. Acompaña a cada asegurado desde la solicitud hasta la resolución.",
+                  },
+                  {
+                    name: "Kerlin Ramírez",
+                    role: "Ejecutiva de Gestión de Seguros",
+                    image: "/images/kerlin-ramirez.jpg",
+                    description: "Ingeniera Industrial con más de 10 años administrando seguros complementarios. Gestiona incorporaciones, coberturas e incidencias.",
+                  },
+                  {
+                    name: "Paulina Herrera",
+                    role: "Ejecutiva de Gestión de Seguros",
+                    image: "/images/paulina.jpg",
+                    description: "Más de 30 años de experiencia en atención al cliente, con compromiso por un servicio de excelencia, amabilidad y empatía.",
+                  },
+                ].map((member, i) => (
+                  <div key={i} className="flex flex-col items-center text-center space-y-3">
+                    <div className="w-32 h-32 sm:w-36 sm:h-36 rounded-full border-4 border-[#cc0033] overflow-hidden flex-shrink-0">
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        width={144}
+                        height={144}
+                        className="w-full h-full object-cover object-top"
+                      />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-[#333333] leading-snug">{member.name}</h3>
+                      <p className="text-sm text-[#cc0033] font-medium">{member.role}</p>
+                    </div>
+                    <p className="text-sm text-[#666666] leading-snug hidden lg:block">{member.description}</p>
+                  </div>
+                ))}
+              </div>
+            </RevealOnScroll>
+          </div>
+        </section>
+
         {/* Nuestro Compromiso */}
         <section className="py-32 bg-[#cc0033]">
           <div className="container mx-auto px-4">
