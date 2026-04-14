@@ -141,6 +141,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 areaServed: "CL",
               },
               foundingDate: "2014-01-01",
+              numberOfEmployees: {
+                "@type": "QuantitativeValue",
+                minValue: 5,
+                maxValue: 10,
+              },
+              knowsAbout: [
+                "Seguros complementarios de salud",
+                "Seguros colectivos para pymes",
+                "Gestión de reembolsos médicos",
+                "Coberturas ambulatorias y hospitalarias",
+                "Seguros de vida grupales",
+                "Beneficios corporativos de salud",
+              ],
               areaServed: {
                 "@type": "Country",
                 name: "Chile",

@@ -289,11 +289,11 @@
         <tr><th width="40">ID</th><th>Hallazgo</th><th width="110">Estado</th></tr>
         <tr><td>G6</td><td><strong>llms-full.txt incompleto</strong> &mdash; no cubre blog (55 posts), pricing BICE Personas, regulaci&oacute;n CMF<div class="detail">public/llms-full.txt &mdash; expandir con resumen de cada secci&oacute;n del sitio</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
         <tr><td>G7</td><td><strong>Sin tabla comparativa carriers</strong> &mdash; formato #1 que AI engines extraen para queries comparativas<div class="detail">Crear tabla HTML con &lt;th scope&gt; comparando 9 aseguradoras por cobertura</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>G8</td><td><strong>SpeakableSpecification usa selectores que no coinciden</strong> &mdash; .hero-description no existe en DOM renderizado<div class="detail">page.tsx &mdash; actualizar cssSelector a clases reales del DOM</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>G9</td><td><strong>FAQ schema homepage: 3 items vs 6 visibles</strong> &mdash; desalineaci&oacute;n entre JSON-LD y contenido real<div class="detail">page.tsx &mdash; sincronizar FAQPage con todos los FAQ visibles</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>G8</td><td><strong>SpeakableSpecification usa selectores que no coinciden</strong> &mdash; .hero-description no existe en DOM renderizado<div class="detail">page.tsx &mdash; actualizar cssSelector a clases reales del DOM</div></td><td><span class="badge badge-applied">Aplicado</span></td></tr>
+        <tr><td>G9</td><td><strong>FAQ schema homepage: 3 items vs 6 visibles</strong> &mdash; desalineaci&oacute;n entre JSON-LD y contenido real<div class="detail">page.tsx &mdash; sincronizar FAQPage con todos los FAQ visibles</div></td><td><span class="badge badge-applied">Aplicado</span></td></tr>
         <tr><td>G10</td><td><strong>FAQ /seguro-complementario solo 3 preguntas</strong> &mdash; falta pricing, renovaci&oacute;n, Fonasa vs Isapre<div class="detail">Expandir a 6-8 preguntas cubriendo long-tail queries de AI</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
         <tr><td>G11</td><td><strong>Definici&oacute;n &ldquo;seguro complementario&rdquo; enterrada</strong> en &lt;p&gt; sin &lt;dfn&gt; ni heading ancla &mdash; dif&iacute;cil de extraer por AI<div class="detail">SegurosSaludClient.tsx:255-260 &mdash; anclar con H2 + &lt;dfn&gt; tag</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
-        <tr><td>G12</td><td><strong>Organization schema incompleto para AI</strong> &mdash; falta knowsAbout, founder, numberOfEmployees, description nicho<div class="detail">layout.tsx &mdash; agregar propiedades que refuerzan entity recognition</div></td><td><span class="badge badge-pending">Pendiente</span></td></tr>
+        <tr><td>G12</td><td><strong>Organization schema incompleto para AI</strong> &mdash; falta knowsAbout, founder, numberOfEmployees, description nicho<div class="detail">layout.tsx &mdash; agregar propiedades que refuerzan entity recognition</div></td><td><span class="badge badge-applied">Aplicado</span></td></tr>
       </table>
     </div>
 
@@ -510,11 +510,11 @@
     <div class="footer-grid">
       <div class="footer-item"><div class="footer-num">110</div><div class="footer-label">Hallazgos totales</div></div>
       <div class="footer-divider"></div>
-      <div class="footer-item"><div class="footer-num" style="color:#065f46">22</div><div class="footer-label">Aplicados</div></div>
+      <div class="footer-item"><div class="footer-num" style="color:#065f46">25</div><div class="footer-label">Aplicados</div></div>
       <div class="footer-divider"></div>
       <div class="footer-item"><div class="footer-num" style="color:#991b1b">18</div><div class="footer-label">Cr&iacute;ticos</div></div>
       <div class="footer-divider"></div>
-      <div class="footer-item"><div class="footer-num" style="color:#92400e">37</div><div class="footer-label">Pendientes</div></div>
+      <div class="footer-item"><div class="footer-num" style="color:#92400e">34</div><div class="footer-label">Pendientes</div></div>
       <div class="footer-divider"></div>
       <div class="footer-item"><div class="footer-num" style="color:#5b21b6">8</div><div class="footer-label">Requiere Cliente</div></div>
       <div class="footer-divider"></div>
@@ -524,7 +524,7 @@
     </div>
 
     <div class="note" style="margin-top: 20px;">
-      <strong>Nota:</strong> 22 medidas SEO aplicadas el 14 abr 2026 (commit 13875c8). Hallazgos aplicados se muestran con badge verde. Las dem&aacute;s categor&iacute;as mantienen su estado original.
+      <strong>Nota:</strong> 25 medidas aplicadas el 14 abr 2026 (22 SEO + 3 GEO). Hallazgos aplicados se muestran con badge verde.
     </div>
   </div>
 

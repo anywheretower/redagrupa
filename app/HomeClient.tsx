@@ -378,6 +378,18 @@ export default function HomeContent({ latestPosts = [] }: { latestPosts?: Latest
                     q: "¿Cómo se gestionan los reembolsos?",
                     a: "RedAgrupa gestiona los reembolsos por ti. Tus colaboradores envían sus boletas y nosotros nos encargamos del trámite completo con la aseguradora, reduciendo tiempos de espera y papeleo."
                   },
+                  {
+                    q: "¿Cómo elijo el mejor seguro complementario para mi empresa?",
+                    a: "Depende de tres factores: presupuesto por trabajador, nivel de cobertura deseado y tamaño de la empresa. RedAgrupa compara planes de las principales aseguradoras y recomienda la mejor opción."
+                  },
+                  {
+                    q: "¿Cuánto cuesta un seguro complementario para mi empresa?",
+                    a: "Desde $20.718 CLP mensuales por trabajador (Plan Pyme Estándar, 50% cobertura). El costo depende del plan elegido, la edad promedio del grupo y las coberturas opcionales. RedAgrupa cotiza sin costo y sin compromiso."
+                  },
+                  {
+                    q: "¿Qué diferencia hay entre contratar directo con la aseguradora y usar un corredor?",
+                    a: "Un corredor como RedAgrupa compara planes de las principales aseguradoras, negocia condiciones, gestiona toda la administración y trámites de reembolso, y brinda asesoría continua sin costo adicional. Contratar directo limita las opciones a una sola aseguradora y el precio es el mismo."
+                  },
                 ].map((item, i) => (
                   <details key={i} className="group rounded-xl overflow-hidden shadow-sm">
                     <summary className="flex items-center justify-between cursor-pointer p-4 text-left font-semibold text-white text-sm bg-[#cc0033] group-open:rounded-b-none">

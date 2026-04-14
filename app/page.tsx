@@ -96,7 +96,7 @@ export default function HomePage() {
           url: "https://www.redagrupa.cl",
           speakable: {
             "@type": "SpeakableSpecification",
-            cssSelector: ["h1", ".hero-description"],
+            cssSelector: ["h1", "main p:first-of-type"],
           },
         }) }}
       />
