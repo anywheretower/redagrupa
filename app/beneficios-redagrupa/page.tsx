@@ -33,6 +33,7 @@ const serviceJsonLd = {
   "@id": "https://www.redagrupa.cl/beneficios-redagrupa/#service",
   name: "Beneficios Corporativos de Salud y Bienestar",
   url: "https://www.redagrupa.cl/beneficios-redagrupa",
+  inLanguage: "es-CL",
   description: "Convenios de salud, bienestar, vacunación y plataforma digital de beneficios para empresas clientes de RedAgrupa en Chile.",
   provider: {
     "@type": "Organization",

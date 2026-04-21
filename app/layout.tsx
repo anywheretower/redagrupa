@@ -1,5 +1,5 @@
 import type React from "react"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import Script from "next/script"
 import { Geist } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
@@ -35,6 +35,17 @@ export const metadata: Metadata = {
     site: "@redagrupa",
     creator: "@redagrupa",
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "48x48" },
@@ -53,6 +64,10 @@ export const metadata: Metadata = {
   },
 }
 
+export const viewport: Viewport = {
+  themeColor: "#cc0033",
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -64,6 +79,7 @@ export default function RootLayout({
         <meta name="google-site-verification" content="Zv9E4we9myI4IJe3uDP17K0TGfQl9sFvfWYphYt_2bI" />
         <link rel="preload" as="image" href="/images/hero-redagrupa.webp" type="image/webp" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+        <link rel="alternate" type="application/rss+xml" title="RedAgrupa — Conocimiento Empresa" href="/feed.xml" />
         <Script
           id="gtm-script"
           strategy="afterInteractive"
@@ -100,6 +116,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               "@id": "https://www.redagrupa.cl/#website",
               name: "RedAgrupa",
               url: "https://www.redagrupa.cl",
+              inLanguage: "es-CL",
               description: "Gestión integral de seguros complementarios de salud para pymes en Chile.",
             }),
           }}
@@ -109,14 +126,45 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": ["Organization", "InsuranceAgency"],
+              "@type": ["Organization", "LocalBusiness", "InsuranceAgency"],
               "@id": "https://www.redagrupa.cl/#organization",
               name: "RedAgrupa",
+              legalName: "CJW Corredores de Seguros SpA",
+              alternateName: ["Red Agrupa", "RedAgrupa Seguros", "CJW Corredores de Seguros"],
+              taxID: "77.034.194-9",
+              identifier: [
+                {
+                  "@type": "PropertyValue",
+                  propertyID: "RUT",
+                  value: "77.034.194-9",
+                },
+                {
+                  "@type": "PropertyValue",
+                  propertyID: "CMF",
+                  value: "77034194",
+                  url: "https://www.cmfchile.cl/institucional/mercados/entidad.php?auth=&send=&mercado=S&rut=77034194&grupo=&tipoentidad=CSJUR&vig=VI&row=AAAwU3AAWAAAWOdAAZ&control=svs&pestania=1",
+                },
+              ],
+              hasCredential: {
+                "@type": "EducationalOccupationalCredential",
+                name: "Registro de Corredor de Seguros Jurídico",
+                credentialCategory: "RegulatoryLicense",
+                recognizedBy: {
+                  "@type": "GovernmentOrganization",
+                  name: "Comisión para el Mercado Financiero de Chile",
+                  alternateName: "CMF Chile",
+                  url: "https://www.cmfchile.cl",
+                },
+                url: "https://www.cmfchile.cl/institucional/mercados/entidad.php?auth=&send=&mercado=S&rut=77034194&grupo=&tipoentidad=CSJUR&vig=VI&row=AAAwU3AAWAAAWOdAAZ&control=svs&pestania=1",
+              },
               url: "https://www.redagrupa.cl",
+              inLanguage: "es-CL",
               logo: {
                 "@type": "ImageObject",
                 url: "https://www.redagrupa.cl/images/logo-redagrupa.png",
               },
+              slogan:
+                "Gestiona tus seguros complementarios de salud para que tu pyme y tu equipo estén protegidos, sin trámites eternos ni lenguaje técnico imposible.",
               description:
                 "Gestión de seguros complementarios de salud para pymes en Chile. Más de 10 años de experiencia, 300+ empresas y 9.000+ familias protegidas.",
               address: {
@@ -127,6 +175,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 postalCode: "7550000",
                 addressCountry: "CL",
               },
+              hasMap: "https://www.google.com/maps/search/?api=1&query=Los+Militares+5620+Las+Condes+Santiago+Chile",
               telephone: "+56228132245",
               email: "reembolsos@redagrupa.cl",
               sameAs: [
@@ -141,6 +190,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 availableLanguage: "Spanish",
                 areaServed: "CL",
               },
+              openingHoursSpecification: [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                  opens: "09:00",
+                  closes: "18:00",
+                },
+              ],
               foundingDate: "2014-01-01",
               numberOfEmployees: {
                 "@type": "QuantitativeValue",

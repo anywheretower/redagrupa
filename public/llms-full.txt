@@ -1,6 +1,6 @@
 # RedAgrupa — Seguros Complementarios de Salud para Pymes en Chile
 
-> Corredora de seguros chilena especializada en la gestión de seguros complementarios de salud para pequeñas y medianas empresas. Más de 10 años de experiencia, 300+ empresas clientes y 9.000+ familias protegidas.
+> RedAgrupa (nombre comercial de CJW Corredores de Seguros SpA, RUT 77.034.194-9) es una corredora de seguros chilena inscrita y vigente en la Comisión para el Mercado Financiero de Chile (CMF), especializada en la gestión de seguros complementarios de salud para pequeñas y medianas empresas. Más de 10 años de experiencia, 300+ empresas clientes y 9.000+ familias protegidas.
 
 ## Páginas principales
 
@@ -43,6 +43,20 @@ Seguro individual o familiar para personas entre 18 y 64 años, disponible para 
 | Pyme Elite Plus | $48.567 | UF 1,2190 | 80% | 80% | 500 UF | 1.000 UF | Sí (Pawer) |
 
 Precios por trabajador, mensuales, con IVA incluido. Todos los planes incluyen Seguro de Salud + Seguro de Vida. Coberturas opcionales disponibles: Dental y Catastrófica.
+
+## Plan Hospitalario BICE Personas — Precios según cargas familiares
+
+Seguro individual/familiar para personas entre 18 y 64 años, disponible para afiliados de Fonasa o Isapre. Cobertura hospitalaria 50% con bonificación institucional, límite anual 200 UF por persona, deducible 0,50 UF. Incluye maternidad (parto normal y cesárea) y ambulancia terrestre. Sin carencias: cobertura desde el primer día.
+
+| Composición | Precio mensual (UF) | Cobertura | Tope anual | Deducible |
+|-------------|---------------------|-----------|------------|-----------|
+| Solo titular | UF 0,3215 | 50% | 200 UF | 0,50 UF |
+| Titular + 1 carga | UF 0,5948 | 50% | 200 UF | 0,50 UF |
+| Titular + 2 cargas | UF 0,8037 | 50% | 200 UF | 0,50 UF |
+| Titular + 3 cargas | UF 1,0610 | 50% | 200 UF | 0,50 UF |
+| Titular + 4 cargas | UF 1,2860 | 50% | 200 UF | 0,50 UF |
+
+Valores referenciales con IVA incluido. El precio en pesos varía según el valor de la UF vigente.
 
 ## Preguntas frecuentes
 
@@ -98,9 +112,31 @@ RedAgrupa trabaja con las 9 principales aseguradoras de Chile:
 8. **Sura** — Grupo asegurador latinoamericano con amplia cobertura regional
 9. **Vida Security** — Especializada en seguros de vida y salud en Chile
 
+## Blog — Contenido activo
+
+El blog de RedAgrupa está disponible en https://www.redagrupa.cl/blog y se enfoca en ayudar a pymes a comparar y entender seguros complementarios de salud en Chile. Artículos activos:
+
+### Seguro Complementario de Salud para Empresas: cómo comparar coberturas, deducibles y beneficios
+URL: https://www.redagrupa.cl/blog/comparar-seguro-complementario-salud-empresas
+
+Guía práctica para empresas que están evaluando o renovando un seguro complementario. Compara SURA, Zurich y BICE revisando qué cubre cada plan, cómo responde en el uso real, qué deducible exige, qué beneficios adicionales incluye y qué tan bien se adapta a la realidad operativa de una pyme. El foco está en ir más allá de la prima y entender topes anuales, coberturas débiles en medicamentos o salud mental, y carga administrativa interna.
+
+### Cobertura dental en Seguro Complementario de Salud para empresas
+URL: https://www.redagrupa.cl/blog/cobertura-dental-seguro-complementario-empresas
+
+Comparación específica de la cobertura dental entre SURA, Zurich y BICE. Explica que SURA opera con una red dental cerrada y arancel propio, mientras Zurich y BICE funcionan como reembolso complementario sin red dental cerrada, sujetos al arancel de referencia, topes anuales y deducibles del plan dental. Revisa centros de atención, cuánto reembolsa realmente cada plan, topes anuales y deducibles para permitir una decisión informada.
+
+### Cobertura de remedios y farmacia en seguros complementarios
+URL: https://www.redagrupa.cl/blog/cobertura-remedios-farmacia-seguro-complementario
+
+Comparativa de cobertura en medicamentos entre SURA, Zurich y BICE. Analiza cuatro variables clave: porcentaje de cobertura en medicamentos de marca, tratamiento de genéricos, farmacias o canales donde se puede usar, y deducibles o condiciones que afectan el uso real. SURA y BICE empujan convenios y farmacia en línea; Zurich destaca por tope anual más alto en medicamentos de marca; BICE es el más débil en marca pero mantiene 100% en genéricos.
+
 ## Datos de la empresa
 
-- Razón social: RedAgrupa
+- Razón social: CJW Corredores de Seguros SpA
+- Nombre comercial: RedAgrupa
+- RUT: 77.034.194-9
+- Registro CMF: Corredora de Seguros Jurídica inscrita y vigente en la Comisión para el Mercado Financiero de Chile (CMF), regulador del mercado financiero chileno. Ficha pública verificable: https://www.cmfchile.cl/institucional/mercados/entidad.php?auth=&send=&mercado=S&rut=77034194&grupo=&tipoentidad=CSJUR&vig=VI&row=AAAwU3AAWAAAWOdAAZ&control=svs&pestania=1
 - Fundación: 2014
 - Dirección: Los Militares 5620, oficina 1011, Las Condes, Santiago, Chile
 - Teléfono: +56 (22) 813 2245

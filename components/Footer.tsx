@@ -24,6 +24,15 @@ export default function Footer() {
             >
               Socio Estratégico: <span className="font-semibold text-white">EQUOS Seguros</span>
             </a>
+            <a
+              href="https://www.cmfchile.cl/institucional/mercados/entidad.php?auth=&send=&mercado=S&rut=77034194&grupo=&tipoentidad=CSJUR&vig=VI&row=AAAwU3AAWAAAWOdAAZ&control=svs&pestania=1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-white hover:underline text-center lg:text-left max-w-[280px]"
+            >
+              CJW Corredores de Seguros SpA · RUT 77.034.194-9<br />
+              <span className="text-white/90">Inscrito en la CMF · Registro vigente</span>
+            </a>
           </div>
 
           {/* Col 2: Servicios */}
@@ -31,27 +40,27 @@ export default function Footer() {
             <h3 className="text-sm font-semibold uppercase tracking-wider mb-4 text-white">Servicios</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/seguro-complementario" className="text-sm hover:underline text-white">
+                <Link href="/seguro-complementario" prefetch={false} className="text-sm hover:underline text-white">
                   Seguro Complementario Salud
                 </Link>
               </li>
               <li>
-                <Link href="/seguro-complementario-bice-pyme" className="text-sm hover:underline text-white">
+                <Link href="/seguro-complementario-bice-pyme" prefetch={false} className="text-sm hover:underline text-white">
                   Seguro BICE Pyme
                 </Link>
               </li>
               <li>
-                <Link href="/seguro-complementario-bice-personas" className="text-sm hover:underline text-white">
+                <Link href="/seguro-complementario-bice-personas" prefetch={false} className="text-sm hover:underline text-white">
                   Seguro BICE Personas
                 </Link>
               </li>
               <li>
-                <Link href="/beneficios-redagrupa" className="text-sm hover:underline text-white">
+                <Link href="/beneficios-redagrupa" prefetch={false} className="text-sm hover:underline text-white">
                   Beneficios RedAgrupa
                 </Link>
               </li>
               <li>
-                <Link href="/formularios" className="text-sm hover:underline text-white">
+                <Link href="/formularios" prefetch={false} className="text-sm hover:underline text-white">
                   Formularios Reembolso
                 </Link>
               </li>
@@ -63,17 +72,17 @@ export default function Footer() {
             <h3 className="text-sm font-semibold uppercase tracking-wider mb-4 text-white">Empresa</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/nosotros" className="text-sm hover:underline text-white">
+                <Link href="/nosotros" prefetch={false} className="text-sm hover:underline text-white">
                   Nosotros
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-sm hover:underline text-white">
+                <Link href="/blog" prefetch={false} className="text-sm hover:underline text-white">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link href="/politicas-de-privacidad" className="text-sm hover:underline text-white">
+                <Link href="/politicas-de-privacidad" prefetch={false} className="text-sm hover:underline text-white">
                   Políticas de Privacidad
                 </Link>
               </li>

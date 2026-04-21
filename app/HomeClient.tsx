@@ -12,10 +12,22 @@ import { Button } from "@/components/ui/button"
 import dynamic from "next/dynamic"
 import { useState, useEffect, useCallback } from "react"
 
-const ContactForm = dynamic(() => import("@/components/ContactForm"), { ssr: false })
-const ProblemaCarousel = dynamic(() => import("@/components/ProblemaCarousel"), { ssr: false })
-const StatsCarousel = dynamic(() => import("@/components/StatsCarousel"), { ssr: false })
-const TestimonialCarousel = dynamic(() => import("@/components/TestimonialCarousel"), { ssr: false })
+const ContactForm = dynamic(() => import("@/components/ContactForm"), {
+  ssr: false,
+  loading: () => <div aria-hidden="true" className="animate-pulse bg-gray-100 rounded-xl min-h-[520px]" />,
+})
+const ProblemaCarousel = dynamic(() => import("@/components/ProblemaCarousel"), {
+  ssr: false,
+  loading: () => <div aria-hidden="true" className="animate-pulse bg-gray-100 rounded-xl min-h-[320px]" />,
+})
+const StatsCarousel = dynamic(() => import("@/components/StatsCarousel"), {
+  ssr: false,
+  loading: () => <div aria-hidden="true" className="animate-pulse bg-white/10 rounded-xl min-h-[200px]" />,
+})
+const TestimonialCarousel = dynamic(() => import("@/components/TestimonialCarousel"), {
+  ssr: false,
+  loading: () => <div aria-hidden="true" className="animate-pulse bg-gray-100 rounded-xl min-h-[360px]" />,
+})
 
 const problemaCards = [
   {

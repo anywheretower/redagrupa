@@ -16,6 +16,7 @@ import {
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import MobileMenu from "@/components/MobileMenu"
+import DropdownBICE from "@/components/DropdownBICE"
 import Footer from "@/components/Footer"
 import dynamic from "next/dynamic"
 const ContactForm = dynamic(() => import("@/components/ContactForm"), { ssr: false })
@@ -117,26 +118,7 @@ export default function BicePymeClient() {
             <Link href="/beneficios-redagrupa" className="text-white hover:text-white/80 transition-colors font-medium text-xs">
               Beneficios RedAgrupa
             </Link>
-            <div className="relative group">
-              <button
-                aria-haspopup="true"
-                aria-expanded="false"
-                className="text-white hover:text-white/80 transition-colors font-medium text-xs flex items-center gap-1"
-              >
-                Seguro BICE
-                <svg className="w-3.5 h-3.5 transition-transform group-hover:rotate-180 group-focus-within:rotate-180" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
-              </button>
-              <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-200">
-                <div className="bg-white rounded-lg shadow-lg py-2 min-w-[200px]" role="menu">
-                  <Link href="/seguro-complementario-bice-pyme" role="menuitem" className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#cc0033] focus:bg-gray-50 focus:text-[#cc0033] focus:outline-none transition-colors">
-                    Seguro BICE Pyme
-                  </Link>
-                  <Link href="/seguro-complementario-bice-personas" role="menuitem" className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#cc0033] focus:bg-gray-50 focus:text-[#cc0033] focus:outline-none transition-colors">
-                    Seguro BICE Personas
-                  </Link>
-                </div>
-              </div>
-            </div>
+            <DropdownBICE />
             <Link href="/blog" className="text-white hover:text-white/80 transition-colors font-medium text-xs">
               Conocimiento Empresa
             </Link>
@@ -417,7 +399,7 @@ export default function BicePymeClient() {
                   <tr>
                     <th scope="col">Plan</th>
                     <th scope="col">Precio mensual (CLP)</th>
-                    <th scope="col">Precio mensual (UF)</th>
+                    <th scope="col">Precio mensual (<abbr title="Unidad de Fomento">UF</abbr>)</th>
                     <th scope="col">Cobertura ambulatoria</th>
                     <th scope="col">Cobertura hospitalaria</th>
                     <th scope="col">Tope anual salud</th>

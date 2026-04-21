@@ -96,6 +96,7 @@ const productJsonLd = {
   "@context": "https://schema.org",
   "@type": "Product",
   name: "Plan Hospitalario BICE Personas",
+  inLanguage: "es-CL",
   description:
     "Seguro complementario de salud individual BICE Vida. Cobertura hospitalaria 50%, límite anual 200 UF por persona, sin carencias. Incluye maternidad y ambulancia terrestre.",
   image: "https://www.redagrupa.cl/images/logo-bice-vida.avif",

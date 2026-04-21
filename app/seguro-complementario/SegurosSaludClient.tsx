@@ -23,6 +23,7 @@ import {
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import MobileMenu from "@/components/MobileMenu"
+import DropdownBICE from "@/components/DropdownBICE"
 import Footer from "@/components/Footer"
 import dynamic from "next/dynamic"
 const ContactForm = dynamic(() => import("@/components/ContactForm"), { ssr: false })
@@ -58,26 +59,7 @@ export default function SegurosSaludClient() {
             <Link href="/beneficios-redagrupa" className="text-white hover:text-white/80 transition-colors font-medium text-xs">
               Beneficios RedAgrupa
             </Link>
-            <div className="relative group">
-              <button
-                aria-haspopup="true"
-                aria-expanded="false"
-                className="text-white hover:text-white/80 transition-colors font-medium text-xs flex items-center gap-1"
-              >
-                Seguro BICE
-                <svg className="w-3.5 h-3.5 transition-transform group-hover:rotate-180 group-focus-within:rotate-180" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
-              </button>
-              <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-200">
-                <div className="bg-white rounded-lg shadow-lg py-2 min-w-[200px]" role="menu">
-                  <Link href="/seguro-complementario-bice-pyme" role="menuitem" className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#cc0033] focus:bg-gray-50 focus:text-[#cc0033] focus:outline-none transition-colors">
-                    Seguro BICE Pyme
-                  </Link>
-                  <Link href="/seguro-complementario-bice-personas" role="menuitem" className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#cc0033] focus:bg-gray-50 focus:text-[#cc0033] focus:outline-none transition-colors">
-                    Seguro BICE Personas
-                  </Link>
-                </div>
-              </div>
-            </div>
+            <DropdownBICE />
             <Link href="/blog" className="text-white hover:text-white/80 transition-colors font-medium text-xs">
               Conocimiento Empresa
             </Link>
@@ -162,34 +144,79 @@ export default function SegurosSaludClient() {
           <div className="absolute inset-0 z-[1] lg:hidden" style={{ background: "linear-gradient(to right, white 0%, transparent 60%)" }} />
           <div className="container mx-auto px-4 relative z-10 hidden lg:block">
             <div className="max-w-4xl ml-8 lg:ml-16 space-y-4">
-              <h1 className="text-4xl font-bold text-[#cc0033] drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)]">Seguro Complementario<br />de Salud</h1>
+              <p className="text-xs uppercase tracking-widest font-semibold text-[#cc0033] drop-shadow-[0_1px_2px_rgba(255,255,255,0.9)]">Para Empresas y Pymes</p>
+              <h1 className="text-4xl font-bold text-[#cc0033] drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)]">Seguro Complementario<br />de Salud para Empresas</h1>
               <p className="text-lg text-[#333333] max-w-lg leading-snug">
                 Mejor cobertura para tu equipo, <strong className="text-[#cc0033]">cero gestión para ti</strong>. Contratación en días, reembolsos y consultas 100% gestionados por RedAgrupa.
               </p>
               <div className="space-y-3">
-                <Button onClick={scrollToForm} className="bg-[#cc0033] hover:bg-[#a30029] text-white px-12 py-3 shadow-lg flex items-center gap-2 text-base">
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
-                  Solicitar Asesoría
-                </Button>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-[560px]">
+                  <Button onClick={scrollToForm} className="bg-[#cc0033] hover:bg-[#a30029] text-white w-full py-3 shadow-lg flex items-center justify-center gap-2 text-base">
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
+                    Solicitar Asesoría
+                  </Button>
+                  <Button asChild className="bg-[#25D366] hover:bg-[#1DA851] text-white w-full py-3 shadow-lg flex items-center justify-center gap-2 text-base">
+                    <a href="https://wa.me/56982414614?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20complementario%20de%20salud%20para%20mi%20empresa" target="_blank" rel="noopener noreferrer">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                      </svg>
+                      Conversemos por WhatsApp
+                    </a>
+                  </Button>
+                </div>
                 <p className="text-xs text-[#cc0033] font-medium">Cotiza gratis ahora — sin compromiso</p>
                 <p className="text-sm text-[#666666]">+300 pymes confían en nosotros</p>
+                <div className="flex flex-wrap items-center gap-2 pt-3">
+                  <a
+                    href="https://www.segurosequos.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-[10px] text-[#333333] hover:text-[#cc0033] transition-colors bg-white/80 backdrop-blur-sm rounded-full px-3 py-1 border border-gray-200"
+                  >
+                    Socio Estratégico: <span className="font-semibold ml-1">EQUOS Seguros</span>
+                  </a>
+                  <a
+                    href="https://www.cmfchile.cl/institucional/mercados/entidad.php?auth=&send=&mercado=S&rut=77034194&grupo=&tipoentidad=CSJUR&vig=VI&row=AAAwU3AAWAAAWOdAAZ&control=svs&pestania=1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Ficha de CJW Seguros en la Comisión para el Mercado Financiero de Chile"
+                    className="inline-flex items-center text-[10px] text-[#333333] hover:text-[#cc0033] transition-colors bg-white/80 backdrop-blur-sm rounded-full px-3 py-1 border border-gray-200"
+                  >
+                    Socio Estratégico: <span className="font-semibold ml-1">CJW Seguros</span>
+                  </a>
+                </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Puente a /seguro-complementario-bice-personas — filtro B2B */}
+        <section className="bg-gray-50 border-b border-gray-200">
+          <div className="container mx-auto px-6 py-3">
+            <p className="text-xs sm:text-sm text-center text-[#666666]">
+              ¿Buscas cobertura individual o familiar?{" "}
+              <Link
+                href="/seguro-complementario-bice-personas"
+                className="text-[#cc0033] font-semibold hover:underline"
+              >
+                Ver Plan BICE Personas →
+              </Link>
+            </p>
           </div>
         </section>
 
         {/* Trust Bar — Logos aseguradoras */}
         {(() => {
           const logos = [
-            { src: "/images/bupa.png", alt: "Logo Bupa" },
-            { src: "/images/logo-bicevida-e1674133440155.png", alt: "Logo BICE Vida" },
-            { src: "/images/sura-seguros300-e1674133176152.png", alt: "Logo Sura Seguros" },
-            { src: "/images/consorcio300-e1674133353916.png", alt: "Logo Consorcio" },
-            { src: "/images/metlife-logo-e1674133505895.png", alt: "Logo MetLife" },
-            { src: "/images/bci-seguros300.png", alt: "Logo BCI Seguros" },
-            { src: "/images/security.png", alt: "Logo Vida Security" },
-            { src: "/images/logo-help1-e1674133566493.png", alt: "Logo Help Seguros" },
-            { src: "/images/logo-chilena-consolidada2-e1674133731697.png", alt: "Logo Chilena Consolidada" },
+            { src: "/images/logo-bupa.png", alt: "Logo Bupa" },
+            { src: "/images/logo-bice-vida.avif", alt: "Logo BICE Vida" },
+            { src: "/images/logo-sura.png", alt: "Logo Sura Seguros" },
+            { src: "/images/logo-consorcio.png", alt: "Logo Consorcio" },
+            { src: "/images/logo-metlife.png", alt: "Logo MetLife" },
+            { src: "/images/logo-bci-seguros.png", alt: "Logo BCI Seguros" },
+            { src: "/images/logo-vida-security.png", alt: "Logo Vida Security" },
+            { src: "/images/logo-help-seguros.png", alt: "Logo Help Seguros" },
+            { src: "/images/logo-chilena-consolidada.png", alt: "Logo Chilena Consolidada" },
           ]
           return (
             <section className="bg-white border-b border-gray-200">
@@ -239,22 +266,36 @@ export default function SegurosSaludClient() {
             <Breadcrumbs items={[{ label: "Seguros Salud" }]} currentPath="/seguro-complementario" />
             {/* Título y botón solo en móvil */}
             <div className="lg:hidden max-w-4xl mx-auto space-y-3 mb-8">
-              <p className="text-3xl font-bold text-[#cc0033]" aria-hidden="true">Seguro Complementario<br />de Salud</p>
+              <p className="text-[10px] uppercase tracking-widest font-semibold text-[#cc0033]" aria-hidden="true">Para Empresas y Pymes</p>
+              <p className="text-3xl font-bold text-[#cc0033]" aria-hidden="true">Seguro Complementario<br />de Salud para Empresas</p>
               <p className="text-base text-[#333333] leading-snug">
                 Mejor cobertura para tu equipo, <strong className="text-[#cc0033]">cero gestión para ti</strong>. Contratación en días, reembolsos y consultas 100% gestionados por RedAgrupa.
               </p>
               <div>
-                <Button onClick={scrollToForm} className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3 flex items-center gap-2">
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
-                  Solicitar Asesoría
-                </Button>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <Button onClick={scrollToForm} className="bg-[#cc0033] hover:bg-[#a30029] text-white w-full py-3 flex items-center justify-center gap-2">
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
+                    Solicitar Asesoría
+                  </Button>
+                  <Button asChild className="bg-[#25D366] hover:bg-[#1DA851] text-white w-full py-3 flex items-center justify-center gap-2">
+                    <a href="https://wa.me/56982414614?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20complementario%20de%20salud%20para%20mi%20empresa" target="_blank" rel="noopener noreferrer">
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                      </svg>
+                      Conversemos por WhatsApp
+                    </a>
+                  </Button>
+                </div>
                 <p className="text-xs text-[#cc0033] font-medium mt-1.5">Cotiza gratis ahora — sin compromiso</p>
                 <span className="text-xs text-[#666666] block mt-1">+300 pymes confían en nosotros</span>
               </div>
             </div>
             <div className="max-w-4xl mx-auto space-y-6">
+              <h2 id="que-es-seguro-complementario" className="text-2xl font-bold text-gray-900 leading-tight">
+                ¿Qué es un seguro complementario de salud?
+              </h2>
               <p className="text-base text-gray-700 leading-[1.1]">
-                Un seguro complementario de salud es una póliza que <strong className="text-[#cc0033]">cubre los gastos médicos que Fonasa o tu Isapre
+                Un <dfn>seguro complementario de salud</dfn> es una póliza que <strong className="text-[#cc0033]">cubre los gastos médicos que <abbr title="Fondo Nacional de Salud">Fonasa</abbr> o tu <abbr title="Institución de Salud Previsional">Isapre</abbr>
                 no cubren completamente</strong> — consultas, exámenes, hospitalizaciones y medicamentos. En la práctica,
                 el seguro <strong className="text-[#cc0033]">reembolsa el copago</strong> que queda después de la bonificación de tu plan de salud, según los
                 porcentajes y topes de la póliza contratada.
@@ -263,6 +304,11 @@ export default function SegurosSaludClient() {
                 Para pymes y empresas medianas en Chile, contar con un seguro complementario de salud es una de las
                 herramientas más efectivas para <strong className="text-[#cc0033]">retener talento</strong>, <strong className="text-[#cc0033]">fortalecer tu propuesta de valor como empleador</strong>
                 y <strong className="text-[#cc0033]">proteger a tus equipos</strong> ante gastos de salud imprevistos.
+              </p>
+              <p className="text-base text-gray-700 leading-[1.1]">
+                Como <strong className="text-[#cc0033]">corredor de seguros complementarios de salud para empresas</strong>, RedAgrupa compara
+                planes de las principales aseguradoras del mercado chileno, diseña la propuesta según el tamaño y
+                presupuesto de cada pyme, y gestiona la administración y reembolsos sin costo adicional.
               </p>
             </div>
           </div>
@@ -343,37 +389,23 @@ export default function SegurosSaludClient() {
               </RevealOnScroll>
 
               <div className="text-center mt-10">
-                <Button onClick={scrollToForm} className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3 flex items-center gap-2 mx-auto">
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
-                  Solicitar Asesoría
-                </Button>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-[560px] mx-auto">
+                  <Button onClick={scrollToForm} className="bg-[#cc0033] hover:bg-[#a30029] text-white w-full py-3 flex items-center justify-center gap-2">
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
+                    Solicitar Asesoría
+                  </Button>
+                  <Button asChild className="bg-[#25D366] hover:bg-[#1DA851] text-white w-full py-3 flex items-center justify-center gap-2">
+                    <a href="https://wa.me/56982414614?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20complementario%20de%20salud%20para%20mi%20empresa" target="_blank" rel="noopener noreferrer">
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                      </svg>
+                      Conversemos por WhatsApp
+                    </a>
+                  </Button>
+                </div>
                 <p className="text-xs text-[#cc0033] font-medium mt-1.5">Cotiza gratis ahora — sin compromiso</p>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* ¿Qué es un Seguro Complementario de Salud? */}
-        <section className="py-16 lg:py-24 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <RevealOnScroll className="max-w-4xl mx-auto space-y-8">
-              <h2 className="text-2xl font-bold text-gray-900 text-center">
-                ¿Qué es un Seguro Complementario de Salud?
-              </h2>
-              <p className="text-base text-gray-700 leading-[1.1]">
-                En Chile, todas las personas cuentan por ley con un sistema de salud previsional, ya sea Fonasa o
-                Isapre, el cual <strong className="text-[#cc0033]">cubre solo un porcentaje del costo total</strong> de las prestaciones médicas, generando un
-                copago que debe ser asumido por la persona.
-              </p>
-              <p className="text-base text-gray-700 leading-[1.1]">
-                El Seguro Complementario de Salud está diseñado para <strong className="text-[#cc0033]">cubrir total o parcialmente ese copago</strong>, de
-                acuerdo con los porcentajes, topes y condiciones definidos en la póliza contratada por la empresa,
-                <strong className="text-[#cc0033]">reduciendo significativamente el gasto de bolsillo</strong> del trabajador.
-              </p>
-              <p className="text-base text-gray-700 leading-[1.1]">
-                En la práctica, es como <strong className="text-[#cc0033]">ampliar tu cobertura de Fonasa o Isapre</strong>: consultas, exámenes, hospitalización y más quedan cubiertos con <strong className="text-[#cc0033]">menos gasto para tu equipo</strong>.
-              </p>
-            </RevealOnScroll>
           </div>
         </section>
 
@@ -452,7 +484,7 @@ export default function SegurosSaludClient() {
           <div className="container mx-auto px-4">
             <RevealOnScroll className="max-w-4xl mx-auto text-center space-y-6">
               <Users className="w-12 h-12 text-[#cc0033] mx-auto" strokeWidth={1.5} />
-              <h2 className="text-2xl font-bold text-gray-900">Asesoría especializada para empresas</h2>
+              <h2 className="text-2xl font-bold text-gray-900">Tu corredor de seguros complementarios de salud para empresas</h2>
               <p className="text-base text-gray-700 leading-[1.1] max-w-3xl mx-auto">
                 Cada empresa tiene necesidades distintas según su tamaño, rubro y presupuesto. Contar con asesoría
                 especializada permite diseñar una solución alineada con los objetivos del negocio y el perfil de
@@ -499,10 +531,20 @@ export default function SegurosSaludClient() {
                 ))}
               </div>
               <div className="pt-4">
-                <Button onClick={scrollToForm} className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3 flex items-center gap-2 mx-auto">
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
-                  Solicitar Asesoría
-                </Button>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-[560px] mx-auto">
+                  <Button onClick={scrollToForm} className="bg-[#cc0033] hover:bg-[#a30029] text-white w-full py-3 flex items-center justify-center gap-2">
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
+                    Solicitar Asesoría
+                  </Button>
+                  <Button asChild className="bg-[#25D366] hover:bg-[#1DA851] text-white w-full py-3 flex items-center justify-center gap-2">
+                    <a href="https://wa.me/56982414614?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20complementario%20de%20salud%20para%20mi%20empresa" target="_blank" rel="noopener noreferrer">
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                      </svg>
+                      Conversemos por WhatsApp
+                    </a>
+                  </Button>
+                </div>
                 <p className="text-xs text-[#cc0033] font-medium mt-1.5">Cotiza gratis ahora — sin compromiso</p>
               </div>
             </RevealOnScroll>
@@ -528,6 +570,22 @@ export default function SegurosSaludClient() {
                   {
                     q: "¿Cuáles son los beneficios del Seguro Complementario de Salud para empresas?",
                     a: "Contratar un Seguro Complementario de Salud permite a las empresas: reducir el impacto financiero de gastos médicos en sus colaboradores, mejorar el bienestar y la percepción del beneficio laboral, aumentar la fidelización y retención de trabajadores, ofrecer un beneficio competitivo frente al mercado laboral, y ajustar coberturas y capitales a la realidad de la empresa."
+                  },
+                  {
+                    q: "¿Cuántos trabajadores necesita mi pyme para contratar un seguro complementario?",
+                    a: "El mínimo para planes colectivos es 5 trabajadores. Para empresas más pequeñas o personas que buscan cobertura individual existe el Seguro BICE Personas, disponible para personas entre 18 y 64 años en Fonasa o Isapre."
+                  },
+                  {
+                    q: "¿Tiene algún costo la asesoría de RedAgrupa?",
+                    a: "No. La asesoría de RedAgrupa es 100% gratuita y sin compromiso. Como corredora de seguros, RedAgrupa es compensada directamente por las aseguradoras, no por los clientes. El precio del seguro es el mismo si se contrata por RedAgrupa o directo con la aseguradora."
+                  },
+                  {
+                    q: "¿Qué diferencia hay entre contratar directo con una aseguradora y usar un corredor como RedAgrupa?",
+                    a: "Un corredor compara planes de múltiples aseguradoras (RedAgrupa trabaja con las principales del mercado chileno), negocia condiciones en base al volumen de su cartera, gestiona toda la administración, incorporaciones, exclusiones y reembolsos, y brinda asesoría continua sin costo adicional. Contratar directo limita las opciones a una sola aseguradora y deja la administración a cargo de la empresa."
+                  },
+                  {
+                    q: "¿Cuánto demora el proceso de contratación?",
+                    a: "El proceso es rápido: en pocos días hábiles tu equipo puede estar cubierto. RedAgrupa se encarga de cotizar con las aseguradoras, comparar planes, preparar la propuesta, tramitar la documentación y poner la póliza en vigencia."
                   },
                 ].map((item, i) => (
                   <details key={i} className="group rounded-xl overflow-hidden shadow-sm">
@@ -557,6 +615,9 @@ export default function SegurosSaludClient() {
                   pagina="seguro-complementario"
                   heading="Cotiza tu seguro complementario de salud sin compromiso"
                 />
+                <p className="mt-4 text-center text-xs text-[#666666]">
+                  Asesoría sin costo — RedAgrupa es compensada por las aseguradoras.
+                </p>
               </RevealOnScroll>
 
               <div className="space-y-6">

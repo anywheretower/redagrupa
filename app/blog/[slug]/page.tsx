@@ -150,7 +150,11 @@ export default async function BlogPostPage({
     description: post.description,
     image: `https://www.redagrupa.cl${post.heroImage}`,
     datePublished: post.date,
-    dateModified: post.date,
+    dateModified: post.lastModified,
+    wordCount: post.wordCount,
+    inLanguage: "es-CL",
+    articleSection: "Seguros Complementarios de Salud",
+    keywords: "seguro complementario de salud, seguros empresas, pymes Chile, coberturas, reembolsos, aseguradoras",
     author: {
       "@type": "Organization",
       name: "RedAgrupa",

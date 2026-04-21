@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
+import Link from "next/link"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Lock, Loader2, CheckCircle2, X } from "lucide-react"
@@ -236,9 +237,9 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
         <p className="text-xs text-center text-gray-600 flex items-center justify-center gap-1">
           <Lock className="w-3 h-3" aria-hidden="true" />
           Tus datos están 100% protegidos.{" "}
-          <a href="/politicas-de-privacidad" className="text-[#cc0033] underline hover:no-underline">
+          <Link href="/politicas-de-privacidad" className="text-[#cc0033] underline hover:no-underline">
             Ver políticas
-          </a>
+          </Link>
         </p>
         <p className="text-xs text-center text-gray-500 mt-2">
           +300 empresas ya confían en RedAgrupa | +10 años de experiencia

@@ -26,6 +26,27 @@ export const metadata = {
   },
 }
 
+const aboutPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "@id": "https://www.redagrupa.cl/nosotros#aboutpage",
+  name: "Sobre Nosotros — RedAgrupa",
+  url: "https://www.redagrupa.cl/nosotros",
+  inLanguage: "es-CL",
+  description:
+    "Más de 10 años gestionando seguros complementarios de salud para pymes. +300 empresas y +9.000 familias protegidas en Chile.",
+  mainEntity: { "@id": "https://www.redagrupa.cl/#organization" },
+  isPartOf: { "@id": "https://www.redagrupa.cl/#website" },
+}
+
 export default function NosotrosPage() {
-  return <NosotrosClient />
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageJsonLd) }}
+      />
+      <NosotrosClient />
+    </>
+  )
 }

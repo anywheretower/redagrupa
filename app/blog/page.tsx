@@ -32,6 +32,35 @@ export default async function BlogPage({
   const params = await searchParams
   const rawPage = params.page
 
+  const blogJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": "https://www.redagrupa.cl/blog#blog",
+    name: "Conocimiento Empresa",
+    description:
+      "Guías y comparativas sobre seguros complementarios de salud para pymes en Chile: coberturas, deducibles y beneficios de las principales aseguradoras.",
+    url: "https://www.redagrupa.cl/blog",
+    inLanguage: "es-CL",
+    publisher: { "@id": "https://www.redagrupa.cl/#organization" },
+    blogPost: posts.map((p) => ({
+      "@type": "BlogPosting",
+      "@id": `https://www.redagrupa.cl/blog/${p.slug}`,
+      headline: p.title,
+      url: `https://www.redagrupa.cl/blog/${p.slug}`,
+      datePublished: p.date,
+      dateModified: p.lastModified,
+      description: p.description || p.excerpt,
+      image: `https://www.redagrupa.cl${p.heroImage}`,
+    })),
+  }
+
+  const jsonLdScript = (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(blogJsonLd) }}
+    />
+  )
+
   // If page param exists, validate it
   if (rawPage !== undefined) {
     const pageStr = Array.isArray(rawPage) ? rawPage[0] : rawPage
@@ -47,8 +76,18 @@ export default async function BlogPage({
       redirect("/blog")
     }
 
-    return <BlogClient posts={posts} initialPage={pageNum} />
+    return (
+      <>
+        {jsonLdScript}
+        <BlogClient posts={posts} initialPage={pageNum} />
+      </>
+    )
   }
 
-  return <BlogClient posts={posts} initialPage={1} />
+  return (
+    <>
+      {jsonLdScript}
+      <BlogClient posts={posts} initialPage={1} />
+    </>
+  )
 }

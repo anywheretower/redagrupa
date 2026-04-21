@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect, useRef, useCallback } from "react"
+import { usePathname } from "next/navigation"
 
 declare global {
   interface Window {
@@ -12,7 +13,10 @@ function pushEvent(data: Record<string, unknown>) {
   window.dataLayer?.push(data)
 }
 
+const EXCLUDED_PATH_PREFIXES = ["/blog", "/politicas-de-privacidad"]
+
 export default function ExitIntentPopup() {
+  const pathname = usePathname()
   const [show, setShow] = useState(false)
   const [dismissed, setDismissed] = useState(false)
   const dialogRef = useRef<HTMLDivElement>(null)
@@ -45,15 +49,19 @@ export default function ExitIntentPopup() {
   }, [show, trapFocus])
 
   useEffect(() => {
+    if (pathname && EXCLUDED_PATH_PREFIXES.some((p) => pathname === p || pathname.startsWith(`${p}/`))) return
+
     const dismissedAt = localStorage.getItem("redagrupa_exit_dismissed")
     if (dismissedAt && Date.now() - Number(dismissedAt) < 7 * 24 * 60 * 60 * 1000) return
     if (sessionStorage.getItem("redagrupa_form_submitted")) return
+    if (sessionStorage.getItem("redagrupa_exit_shown")) return
 
     const isMobile = window.innerWidth < 1024
 
     const triggerPopup = () => {
       if (!dismissed) {
         setShow(true)
+        sessionStorage.setItem("redagrupa_exit_shown", "1")
         pushEvent({ event: "exit_intent_shown", device: isMobile ? "mobile" : "desktop" })
       }
     }
@@ -100,18 +108,36 @@ export default function ExitIntentPopup() {
         if (e.clientY <= 0) triggerPopup()
       }
 
-      const timer = setTimeout(() => {
-        document.addEventListener("mouseleave", handleMouseLeave)
-      }, 10000)
+      let armed = false
+      let timer: ReturnType<typeof setTimeout> | undefined
+
+      const arm = () => {
+        if (armed) return
+        armed = true
+        timer = setTimeout(() => {
+          document.addEventListener("mouseleave", handleMouseLeave)
+        }, 10000)
+      }
+
+      const handleScroll = () => {
+        const doc = document.documentElement
+        const scrollable = doc.scrollHeight - doc.clientHeight
+        if (scrollable <= 0) return arm()
+        const depth = window.scrollY / scrollable
+        if (depth >= 0.4) arm()
+      }
+
+      window.addEventListener("scroll", handleScroll, { passive: true })
 
       cleanup = () => {
-        clearTimeout(timer)
+        if (timer) clearTimeout(timer)
+        window.removeEventListener("scroll", handleScroll)
         document.removeEventListener("mouseleave", handleMouseLeave)
       }
     }
 
     return cleanup
-  }, [dismissed])
+  }, [dismissed, pathname])
 
   const handleDismiss = () => {
     setShow(false)

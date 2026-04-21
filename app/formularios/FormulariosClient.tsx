@@ -11,6 +11,7 @@ import {
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import MobileMenu from "@/components/MobileMenu"
+import DropdownBICE from "@/components/DropdownBICE"
 import Footer from "@/components/Footer"
 import Breadcrumbs from "@/components/Breadcrumbs"
 
@@ -39,26 +40,7 @@ export default function FormulariosClient() {
             <Link href="/beneficios-redagrupa" className="text-white hover:text-white/80 transition-colors font-medium text-xs">
               Beneficios RedAgrupa
             </Link>
-            <div className="relative group">
-              <button
-                aria-haspopup="true"
-                aria-expanded="false"
-                className="text-white hover:text-white/80 transition-colors font-medium text-xs flex items-center gap-1"
-              >
-                Seguro BICE
-                <svg className="w-3.5 h-3.5 transition-transform group-hover:rotate-180 group-focus-within:rotate-180" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
-              </button>
-              <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-200">
-                <div className="bg-white rounded-lg shadow-lg py-2 min-w-[200px]" role="menu">
-                  <Link href="/seguro-complementario-bice-pyme" role="menuitem" className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#cc0033] focus:bg-gray-50 focus:text-[#cc0033] focus:outline-none transition-colors">
-                    Seguro BICE Pyme
-                  </Link>
-                  <Link href="/seguro-complementario-bice-personas" role="menuitem" className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#cc0033] focus:bg-gray-50 focus:text-[#cc0033] focus:outline-none transition-colors">
-                    Seguro BICE Personas
-                  </Link>
-                </div>
-              </div>
-            </div>
+            <DropdownBICE />
             <Link href="/blog" className="text-white hover:text-white/80 transition-colors font-medium text-xs">
               Conocimiento Empresa
             </Link>
@@ -123,7 +105,7 @@ export default function FormulariosClient() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
               {/* Bupa */}
               <div className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col border border-gray-100 rounded-xl">
-                <Image src="/images/bupa.png" alt="Logo Bupa - aseguradora partner de RedAgrupa" width={120} height={32} className="h-8 w-auto object-contain" />
+                <Image src="/images/logo-bupa.png" alt="Logo Bupa - aseguradora partner de RedAgrupa" width={120} height={32} className="h-8 w-auto object-contain" />
                 <h2 className="text-lg font-semibold text-[#333333]">Seguros Bupa</h2>
                 <div className="space-y-2 pt-2">
                   <a href="/formularios/bupa-incorporacion.pdf" target="_blank" rel="noopener noreferrer" aria-label="Incorporación Bupa" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
@@ -140,7 +122,7 @@ export default function FormulariosClient() {
 
               {/* Bice Vida */}
               <div className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col border border-gray-100 rounded-xl">
-                <Image src="/images/logo-bicevida-e1674133440155.png" alt="Logo BICE Vida - aseguradora partner de RedAgrupa" width={120} height={32} className="h-8 w-auto object-contain" />
+                <Image src="/images/logo-bice-vida.avif" alt="Logo BICE Vida - aseguradora partner de RedAgrupa" width={120} height={32} className="h-8 w-auto object-contain" />
                 <h2 className="text-lg font-semibold text-[#333333]">Bice Vida</h2>
                 <div className="space-y-2 pt-2">
                   <a href="/formularios/bicevida-incorporacion.pdf" target="_blank" rel="noopener noreferrer" aria-label="Incorporación BICE Vida" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
@@ -157,7 +139,7 @@ export default function FormulariosClient() {
 
               {/* Sura */}
               <div className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col border border-gray-100 rounded-xl">
-                <Image src="/images/sura-seguros300-e1674133176152.png" alt="Logo Sura - aseguradora partner de RedAgrupa" width={120} height={32} className="h-8 w-auto object-contain" />
+                <Image src="/images/logo-sura.png" alt="Logo Sura - aseguradora partner de RedAgrupa" width={120} height={32} className="h-8 w-auto object-contain" />
                 <h2 className="text-lg font-semibold text-[#333333]">Seguros Sura</h2>
                 <div className="space-y-2 pt-2">
                   <a href="/formularios/sura-incorporacion.pdf" target="_blank" rel="noopener noreferrer" aria-label="Incorporación Sura" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
@@ -174,7 +156,7 @@ export default function FormulariosClient() {
 
               {/* Consorcio */}
               <div className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col border border-gray-100 rounded-xl">
-                <Image src="/images/consorcio300-e1674133353916.png" alt="Logo Consorcio - aseguradora partner de RedAgrupa" width={120} height={32} className="h-8 w-auto object-contain" />
+                <Image src="/images/logo-consorcio.png" alt="Logo Consorcio - aseguradora partner de RedAgrupa" width={120} height={32} className="h-8 w-auto object-contain" />
                 <h2 className="text-lg font-semibold text-[#333333]">Consorcio</h2>
                 <div className="space-y-2 pt-2">
                   <a href="/formularios/consorcio-incorporacion.pdf" target="_blank" rel="noopener noreferrer" aria-label="Incorporación Consorcio" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
@@ -191,7 +173,7 @@ export default function FormulariosClient() {
 
               {/* MetLife */}
               <div className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col border border-gray-100 rounded-xl">
-                <Image src="/images/metlife-logo-e1674133505895.png" alt="Logo MetLife - aseguradora partner de RedAgrupa" width={120} height={32} className="h-8 w-auto object-contain" />
+                <Image src="/images/logo-metlife.png" alt="Logo MetLife - aseguradora partner de RedAgrupa" width={120} height={32} className="h-8 w-auto object-contain" />
                 <h2 className="text-lg font-semibold text-[#333333]">MetLife</h2>
                 <div className="space-y-2 pt-2">
                   <a href="/formularios/metlife-incorporacion.pdf" target="_blank" rel="noopener noreferrer" aria-label="Incorporación MetLife" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
@@ -208,7 +190,7 @@ export default function FormulariosClient() {
 
               {/* BCI */}
               <div className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col border border-gray-100 rounded-xl">
-                <Image src="/images/bci-seguros300.png" alt="Logo BCI Seguros - aseguradora partner de RedAgrupa" width={120} height={32} className="h-8 w-auto object-contain" />
+                <Image src="/images/logo-bci-seguros.png" alt="Logo BCI Seguros - aseguradora partner de RedAgrupa" width={120} height={32} className="h-8 w-auto object-contain" />
                 <h2 className="text-lg font-semibold text-[#333333]">BCI Seguros</h2>
                 <div className="space-y-2 pt-2">
                   <a href="/formularios/bci-incorporacion.pdf" target="_blank" rel="noopener noreferrer" aria-label="Incorporación BCI" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
@@ -225,7 +207,7 @@ export default function FormulariosClient() {
 
               {/* Vida Security */}
               <div className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col border border-gray-100 rounded-xl">
-                <Image src="/images/security.png" alt="Logo Vida Security - aseguradora partner de RedAgrupa" width={120} height={32} className="h-8 w-auto object-contain" />
+                <Image src="/images/logo-vida-security.png" alt="Logo Vida Security - aseguradora partner de RedAgrupa" width={120} height={32} className="h-8 w-auto object-contain" />
                 <h2 className="text-lg font-semibold text-[#333333]">Vida Security</h2>
                 <div className="space-y-2 pt-2">
                   <a href="/formularios/vidasecurity-incorporacion.pdf" target="_blank" rel="noopener noreferrer" aria-label="Incorporación Vida Security" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
@@ -245,7 +227,7 @@ export default function FormulariosClient() {
 
               {/* Help */}
               <div className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col border border-gray-100 rounded-xl">
-                <Image src="/images/logo-help1-e1674133566493.png" alt="Logo Help Seguros - aseguradora partner de RedAgrupa" width={120} height={32} className="h-8 w-auto object-contain" />
+                <Image src="/images/logo-help-seguros.png" alt="Logo Help Seguros - aseguradora partner de RedAgrupa" width={120} height={32} className="h-8 w-auto object-contain" />
                 <h2 className="text-lg font-semibold text-[#333333]">Help Seguros</h2>
                 <div className="space-y-2 pt-2">
                   <a href="/formularios/help-incorporacion.pdf" target="_blank" rel="noopener noreferrer" aria-label="Incorporación Help" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">
@@ -262,7 +244,7 @@ export default function FormulariosClient() {
 
               {/* Chilena Consolidada */}
               <div className="bg-white p-6 space-y-4 min-h-0 md:min-h-[280px] flex flex-col border border-gray-100 rounded-xl">
-                <Image src="/images/logo-chilena-consolidada2-e1674133731697.png" alt="Logo Chilena Consolidada - aseguradora partner de RedAgrupa" width={120} height={32} className="h-8 w-auto object-contain" />
+                <Image src="/images/logo-chilena-consolidada.png" alt="Logo Chilena Consolidada - aseguradora partner de RedAgrupa" width={120} height={32} className="h-8 w-auto object-contain" />
                 <h2 className="text-lg font-semibold text-[#333333]">Chilena Consolidada</h2>
                 <div className="space-y-2 pt-2">
                   <a href="/formularios/chilenaconsolidada-incorporacion.pdf" target="_blank" rel="noopener noreferrer" aria-label="Incorporación Chilena Consolidada" className="flex items-center gap-2 text-[#cc0033] text-sm hover:gap-3 transition-all">

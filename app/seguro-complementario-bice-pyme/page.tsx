@@ -97,6 +97,7 @@ const jsonLd = [
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "Planes BICE Vida para Pymes",
+    inLanguage: "es-CL",
     itemListElement: [
       {
         "@type": "ListItem",

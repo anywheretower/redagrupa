@@ -7,10 +7,12 @@ export interface BlogPost {
   slug: string
   title: string
   date: string
+  lastModified: string
   excerpt: string
   description: string
   heroImage: string
   content: string
+  wordCount: number
 }
 
 interface PostIndex {
@@ -43,9 +45,12 @@ function parseMarkdown(slug: string): {
   content: string
   excerpt: string
   description: string
+  lastModified: string
+  wordCount: number
 } {
   const filePath = path.join(BLOG_DIR, `${slug}.md`)
   const raw = fs.readFileSync(filePath, "utf-8")
+  const lastModified = fs.statSync(filePath).mtime.toISOString()
   const lines = raw.split("\n")
 
   // First line: hero image ![...](./images/slug.ext)
@@ -97,22 +102,29 @@ function parseMarkdown(slug: string): {
   const contentLines = lines.slice(1)
   const content = contentLines.join("\n").trim()
 
-  return { title, heroImage, content, excerpt, description }
+  const plainText = content
+    .replace(/!\[.*?\]\(.*?\)/g, " ")
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+    .replace(/[#>*_`~|\-]+/g, " ")
+    .replace(/<!--[\s\S]*?-->/g, " ")
+  const wordCount = plainText.split(/\s+/).filter(Boolean).length
+
+  return { title, heroImage, content, excerpt, description, lastModified, wordCount }
 }
 
 export function getAllPosts(): BlogPost[] {
   const index = parseIndex()
   return index.map(({ slug, date }) => {
-    const { title, heroImage, content, excerpt, description } = parseMarkdown(slug)
-    return { slug, date, title, heroImage, content, excerpt, description }
+    const { title, heroImage, content, excerpt, description, lastModified, wordCount } = parseMarkdown(slug)
+    return { slug, date, lastModified, title, heroImage, content, excerpt, description, wordCount }
   })
 }
 
 export function getLatestPosts(count: number): BlogPost[] {
   const index = parseIndex().slice(0, count)
   return index.map(({ slug, date }) => {
-    const { title, heroImage, content, excerpt, description } = parseMarkdown(slug)
-    return { slug, date, title, heroImage, content, excerpt, description }
+    const { title, heroImage, content, excerpt, description, lastModified, wordCount } = parseMarkdown(slug)
+    return { slug, date, lastModified, title, heroImage, content, excerpt, description, wordCount }
   })
 }
 
@@ -121,8 +133,8 @@ export function getPostBySlug(slug: string): BlogPost | null {
   const entry = index.find((p) => p.slug === slug)
   if (!entry) return null
 
-  const { title, heroImage, content, excerpt, description } = parseMarkdown(slug)
-  return { slug, date: entry.date, title, heroImage, content, excerpt, description }
+  const { title, heroImage, content, excerpt, description, lastModified, wordCount } = parseMarkdown(slug)
+  return { slug, date: entry.date, lastModified, title, heroImage, content, excerpt, description, wordCount }
 }
 
 export function getRelatedPosts(slug: string, count = 4): BlogPost[] {
@@ -141,8 +153,8 @@ export function getRelatedPosts(slug: string, count = 4): BlogPost[] {
   }
 
   return candidates.map(({ slug: s, date }) => {
-    const { title, heroImage, content, excerpt, description } = parseMarkdown(s)
-    return { slug: s, date, title, heroImage, content, excerpt, description }
+    const { title, heroImage, content, excerpt, description, lastModified, wordCount } = parseMarkdown(s)
+    return { slug: s, date, lastModified, title, heroImage, content, excerpt, description, wordCount }
   })
 }
 

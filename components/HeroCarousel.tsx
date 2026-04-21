@@ -10,7 +10,7 @@ const slides = [
     image: "/images/hero-redagrupa.webp",
     alt: "Equipo de trabajo protegido con seguro complementario de salud RedAgrupa",
     mobileObjectPos: "object-[60%_30%]",
-    headline: "Tu equipo protegido desde UF\u00a00,52/mes. Sin trámites, sin papeleo",
+    headline: "Seguro complementario de salud para pymes, desde UF\u00a00,52/mes. Sin trámites, sin papeleo",
     subtitle: "Seguro complementario de salud para pymes desde 5 trabajadores. Comparamos las principales aseguradoras, elegimos el mejor plan y gestionamos todo: cotización, contratación y reembolsos.",
     ctaPrimary: { text: "Cotiza Gratis", href: "#formulario-contacto" },
     ctaSecondary: { text: "Ver Coberturas y Planes", href: "/seguro-complementario", isLink: true },
@@ -211,8 +211,8 @@ export default function HeroCarousel() {
           />
         ))}
       </div>
-      {/* Desktop: Dot indicators + Badge EQUOS */}
-      <div className="absolute bottom-8 left-0 right-0 z-20 hidden lg:flex items-center justify-end gap-6 container mx-auto px-6">
+      {/* Desktop: Dot indicators + Badges EQUOS y CMF */}
+      <div className="absolute bottom-8 left-0 right-0 z-20 hidden lg:flex items-center justify-end gap-3 container mx-auto px-6">
         <a
           href="https://www.segurosequos.com"
           target="_blank"
@@ -220,6 +220,15 @@ export default function HeroCarousel() {
           className="inline-flex items-center text-xs text-white hover:text-white transition-colors"
         >
           <span className="bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">Socio Estratégico: <span className="font-semibold text-white">EQUOS Seguros</span></span>
+        </a>
+        <a
+          href="https://www.cmfchile.cl/institucional/mercados/entidad.php?auth=&send=&mercado=S&rut=77034194&grupo=&tipoentidad=CSJUR&vig=VI&row=AAAwU3AAWAAAWOdAAZ&control=svs&pestania=1"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Ficha de CJW Seguros en la Comisión para el Mercado Financiero de Chile"
+          className="inline-flex items-center text-xs text-white hover:text-white transition-colors"
+        >
+          <span className="bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">Socio Estratégico: <span className="font-semibold text-white">CJW Seguros</span></span>
         </a>
         <div className="flex gap-2">
           {slides.map((_, i) => (

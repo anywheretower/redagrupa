@@ -4,14 +4,14 @@ export const metadata = {
   title: "Seguro Complementario de Salud para Empresas",
   keywords: ["seguro complementario de salud", "seguro salud empresas", "cobertura Fonasa Isapre", "copago médico Chile"],
   description:
-    "Seguro complementario de salud para empresas en Chile. Cubre gastos que exceden Fonasa o Isapre. +300 pymes confían en RedAgrupa. Cotiza sin costo.",
+    "RedAgrupa, corredor de seguros complementarios de salud para empresas en Chile. Comparamos planes de las principales aseguradoras y gestionamos reembolsos sin costo.",
   alternates: {
     canonical: "https://www.redagrupa.cl/seguro-complementario",
   },
   openGraph: {
     title: "Seguro Complementario de Salud para Empresas",
     description:
-      "Seguro complementario de salud para empresas en Chile. Cubre gastos que exceden Fonasa o Isapre. +300 pymes confían en RedAgrupa. Cotiza sin costo.",
+      "RedAgrupa, corredor de seguros complementarios de salud para empresas en Chile. Comparamos planes de las principales aseguradoras y gestionamos reembolsos sin costo.",
     url: "https://www.redagrupa.cl/seguro-complementario",
     siteName: "RedAgrupa",
     locale: "es_CL",
@@ -55,6 +55,38 @@ const faqJsonLd = {
         text: "Contratar un Seguro Complementario de Salud permite a las empresas: reducir el impacto financiero de gastos médicos en sus colaboradores, mejorar el bienestar y la percepción del beneficio laboral, aumentar la fidelización y retención de trabajadores, ofrecer un beneficio competitivo frente al mercado laboral, y ajustar coberturas y capitales a la realidad de la empresa.",
       },
     },
+    {
+      "@type": "Question",
+      name: "¿Cuántos trabajadores necesita mi pyme para contratar un seguro complementario?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "El mínimo para planes colectivos es 5 trabajadores. Para empresas más pequeñas o personas que buscan cobertura individual existe el Seguro BICE Personas, disponible para personas entre 18 y 64 años en Fonasa o Isapre.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Tiene algún costo la asesoría de RedAgrupa?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. La asesoría de RedAgrupa es 100% gratuita y sin compromiso. Como corredora de seguros, RedAgrupa es compensada directamente por las aseguradoras, no por los clientes. El precio del seguro es el mismo si se contrata por RedAgrupa o directo con la aseguradora.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Qué diferencia hay entre contratar directo con una aseguradora y usar un corredor como RedAgrupa?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Un corredor compara planes de múltiples aseguradoras (RedAgrupa trabaja con las principales del mercado chileno), negocia condiciones en base al volumen de su cartera, gestiona toda la administración, incorporaciones, exclusiones y reembolsos, y brinda asesoría continua sin costo adicional. Contratar directo limita las opciones a una sola aseguradora y deja la administración a cargo de la empresa.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "¿Cuánto demora el proceso de contratación?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "El proceso es rápido: en pocos días hábiles tu equipo puede estar cubierto. RedAgrupa se encarga de cotizar con las aseguradoras, comparar planes, preparar la propuesta, tramitar la documentación y poner la póliza en vigencia.",
+      },
+    },
   ],
 }
 
@@ -64,6 +96,7 @@ const serviceJsonLd = {
   "@id": "https://www.redagrupa.cl/seguro-complementario/#service",
   name: "Seguro Complementario de Salud para Empresas",
   url: "https://www.redagrupa.cl/seguro-complementario",
+  inLanguage: "es-CL",
   description: "Asesoría gratuita y gestión integral de seguros complementarios de salud para pymes en Chile. Comparamos planes de las principales aseguradoras.",
   provider: {
     "@type": "Organization",

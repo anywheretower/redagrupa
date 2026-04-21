@@ -1,6 +1,6 @@
 # RedAgrupa — Seguros Complementarios de Salud para Pymes en Chile
 
-> Corredora de seguros chilena especializada en la gestión de seguros complementarios de salud para pequeñas y medianas empresas. Más de 10 años de experiencia, 300+ empresas clientes y 9.000+ familias protegidas.
+> RedAgrupa (nombre comercial de CJW Corredores de Seguros SpA, RUT 77.034.194-9) es una corredora de seguros chilena inscrita y vigente en la Comisión para el Mercado Financiero de Chile (CMF), especializada en la gestión de seguros complementarios de salud para pequeñas y medianas empresas. Más de 10 años de experiencia, 300+ empresas clientes y 9.000+ familias protegidas.
 
 > Versión extendida con contenido completo: [llms-full.txt](https://www.redagrupa.cl/llms-full.txt)
 
@@ -12,7 +12,7 @@
 - [Seguro BICE Personas](https://www.redagrupa.cl/seguro-complementario-bice-personas): Seguro individual/familiar BICE Vida para personas entre 18-64 años
 - [Beneficios RedAgrupa](https://www.redagrupa.cl/beneficios-redagrupa): Convenios corporativos de salud, bienestar, vacunación y plataforma digital
 - [Nosotros](https://www.redagrupa.cl/nosotros): Historia, misión y equipo de RedAgrupa
-- [Blog](https://www.redagrupa.cl/blog): 55 artículos sobre gestión de personas, legislación laboral y seguros en Chile
+- [Blog](https://www.redagrupa.cl/blog): Guías y comparativas sobre seguros complementarios de salud para pymes en Chile (coberturas, deducibles, beneficios por aseguradora)
 - [Formularios](https://www.redagrupa.cl/formularios): Formularios de reembolso e incorporación de 9 aseguradoras partner
 
 ## Servicios principales
@@ -32,13 +32,15 @@
 - Pyme Elite: $41.794 CLP (~UF 1,05) — 80% ambulatoria, 80% hospitalaria, 500 UF tope salud, 500 UF vida
 - Pyme Elite Plus: $48.567 CLP (~UF 1,22) — 80% ambulatoria, 80% hospitalaria, 500 UF tope salud, 1.000 UF vida
 
-## Planes BICE Vida para Personas (precios individuales/mes)
+## Plan Hospitalario BICE Personas (precios por mes según cargas)
 
-- Nivel 1: UF 0,58 — Hospitalización 50%, 200 UF tope anual
-- Nivel 2: UF 0,75 — Hospitalización 50% + Ambulatorio 50%, 200 UF tope
-- Nivel 3: UF 1,05 — Hospitalización 70% + Ambulatorio 70%, 300 UF tope
-- Nivel 4: UF 1,48 — Hospitalización 80% + Ambulatorio 80%, 400 UF tope
-- Nivel 5: UF 1,95 — Hospitalización 80% + Ambulatorio 80%, 500 UF tope + Catastrófico
+Cobertura hospitalaria 50% con bonificación institucional, límite anual 200 UF por persona, deducible 0,50 UF. Incluye maternidad (parto normal/cesárea) y ambulancia terrestre. Sin carencias: cobertura desde el primer día. Para personas entre 18 y 64 años en Fonasa o Isapre.
+
+- Solo titular: UF 0,3215
+- Titular + 1 carga: UF 0,5948
+- Titular + 2 cargas: UF 0,8037
+- Titular + 3 cargas: UF 1,0610
+- Titular + 4 cargas: UF 1,2860
 
 ## Preguntas frecuentes
 
@@ -55,12 +57,16 @@ BCI Seguros, BICE Vida, Chilena Consolidada, Consorcio, Help Seguros, MetLife, B
 
 ## Datos de la empresa
 
-- Razón social: RedAgrupa
+- Razón social: CJW Corredores de Seguros SpA
+- Nombre comercial: RedAgrupa
+- RUT: 77.034.194-9
+- Registro CMF: Corredora de Seguros Jurídica inscrita y vigente en la Comisión para el Mercado Financiero de Chile (CMF). Ficha pública: https://www.cmfchile.cl/institucional/mercados/entidad.php?auth=&send=&mercado=S&rut=77034194&grupo=&tipoentidad=CSJUR&vig=VI&row=AAAwU3AAWAAAWOdAAZ&control=svs&pestania=1
 - Fundación: 2014
 - Dirección: Los Militares 5620, oficina 1011, Las Condes, Santiago, Chile
 - Teléfono: +56 (22) 813 2245
 - Email: reembolsos@redagrupa.cl
 - Web: https://www.redagrupa.cl
+- Horario: Lunes a Viernes, 9:00 a 18:00
 
 ## Redes sociales
 

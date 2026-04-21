@@ -26,16 +26,41 @@ const testimonios = [
 
 export default function TestimonialCarousel() {
   const [current, setCurrent] = useState(0)
+  const [paused, setPaused] = useState(false)
 
   useEffect(() => {
+    if (typeof window !== "undefined") {
+      const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      if (prefersReduced) setPaused(true)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (paused) return
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % testimonios.length)
     }, 6000)
     return () => clearInterval(timer)
-  }, [])
+  }, [paused])
 
   return (
-    <div role="region" aria-label="Testimonios de clientes" aria-roledescription="carrusel">
+    <div role="region" aria-label="Testimonios de clientes" aria-roledescription="carrusel" className="relative">
+      <button
+        type="button"
+        onClick={() => setPaused((p) => !p)}
+        aria-label={paused ? "Reanudar rotación de testimonios" : "Pausar rotación de testimonios"}
+        className="absolute top-0 right-0 z-10 flex items-center justify-center w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 text-[#333333] transition-colors"
+      >
+        {paused ? (
+          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        ) : (
+          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 4h4v16H6zM14 4h4v16h-4z" />
+          </svg>
+        )}
+      </button>
       <div className="relative min-h-[280px]" aria-live="polite">
         {testimonios.map((t, i) => (
           <div
