@@ -13,7 +13,7 @@ function pushEvent(data: Record<string, unknown>) {
   window.dataLayer?.push(data)
 }
 
-const EXCLUDED_PATH_PREFIXES = ["/blog", "/politicas-de-privacidad"]
+const EXCLUDED_PATH_PREFIXES = ["/blog", "/politicas-de-privacidad", "/seguro-complementario-bice-personas"]
 
 export default function ExitIntentPopup() {
   const pathname = usePathname()

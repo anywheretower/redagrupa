@@ -15,29 +15,23 @@ import {
   Smile,
   PawPrint,
   ArrowRightLeft,
+  ArrowRight,
   FileCheck,
   ShieldCheck,
   Users,
   Heart,
-  MapPin,
-  Mail,
-  Phone,
   ChevronDown,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import MobileMenu from "@/components/MobileMenu"
 import DropdownBICE from "@/components/DropdownBICE"
 import Footer from "@/components/Footer"
-import dynamic from "next/dynamic"
-const ContactForm = dynamic(() => import("@/components/ContactForm"), { ssr: false })
 import RevealOnScroll from "@/components/RevealOnScroll"
 import Breadcrumbs from "@/components/Breadcrumbs"
 
-export default function BicePersonasClient() {
-  const scrollToForm = () => {
-    document.getElementById("formulario-contacto")?.scrollIntoView({ behavior: "smooth" })
-  }
+const BICE_URL = "https://segurocomplementariosalud.bicevida.cl/?negocio=aEd0TFolRnQjQzY17OVzwP1NaCN6_V6AdjkZ9TXI5bnYVyiV0rM"
 
+export default function BicePersonasClient() {
   return (
     <main id="contenido-principal" className="min-h-screen bg-white">
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#cc0033] text-white shadow-md">
@@ -72,11 +66,14 @@ export default function BicePersonasClient() {
           </nav>
           <div className="hidden lg:flex items-center gap-3">
             <Button
+              asChild
               variant="outline"
               className="bg-transparent border-white text-white hover:bg-white/10 w-[180px]"
-              onClick={scrollToForm}
             >
-              Solicitar Asesoría
+              <a href={BICE_URL} target="_blank" rel="noopener noreferrer">
+                Contrata Aquí
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
             </Button>
             <Button
               variant="outline"
@@ -158,18 +155,12 @@ export default function BicePersonasClient() {
                 <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-[#cc0033]" />Cobertura nacional</span>
                 <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-[#cc0033]" />Respaldo BICE Vida</span>
               </div>
-              <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="pt-4 flex justify-center">
                 <Button asChild className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3 w-full sm:w-64">
-                  <a href="https://segurocomplementariosalud.bicevida.cl/?negocio=aEd0TFolRnQjQzY17OVzwP1NaCN6_V6AdjkZ9TXI5bnYVyiV0rM" target="_blank" rel="noopener noreferrer">
+                  <a href={BICE_URL} target="_blank" rel="noopener noreferrer">
                     Contrata Aquí
+                    <ArrowRight className="ml-2 h-5 w-5" />
                   </a>
-                </Button>
-                <Button
-                  variant="outline"
-                  className="border-[#cc0033] text-[#cc0033] hover:bg-red-50 px-8 py-3 w-full sm:w-64"
-                  onClick={scrollToForm}
-                >
-                  Solicitar Asesoría
                 </Button>
               </div>
             </RevealOnScroll>
@@ -515,18 +506,12 @@ export default function BicePersonasClient() {
                 Cotiza rapido y asegurate con el respaldo de BICE Vida. Da el paso a la
                 tranquilidad para ti y tu familia.
               </p>
-              <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="pt-4 flex justify-center">
                 <Button asChild className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3 w-full sm:w-64">
-                  <a href="https://segurocomplementariosalud.bicevida.cl/?negocio=aEd0TFolRnQjQzY17OVzwP1NaCN6_V6AdjkZ9TXI5bnYVyiV0rM" target="_blank" rel="noopener noreferrer">
+                  <a href={BICE_URL} target="_blank" rel="noopener noreferrer">
                     Contrata Aquí
+                    <ArrowRight className="ml-2 h-5 w-5" />
                   </a>
-                </Button>
-                <Button
-                  variant="outline"
-                  className="border-[#cc0033] text-[#cc0033] hover:bg-red-50 px-8 py-3 w-full sm:w-64"
-                  onClick={scrollToForm}
-                >
-                  Solicitar Asesoría
                 </Button>
               </div>
             </RevealOnScroll>
@@ -616,32 +601,6 @@ export default function BicePersonasClient() {
                     El Plan Hospitalario cubre exclusivamente hospitalización, maternidad y ambulancia terrestre. Para cobertura ambulatoria (consultas, exámenes, medicamentos), existen los planes colectivos para empresas desde 5 trabajadores a través de RedAgrupa.
                   </p>
                 </details>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Section */}
-        <section className="py-32 bg-[#cc0033]" id="formulario-contacto">
-          <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto items-center">
-              <RevealOnScroll className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 lg:p-8 shadow-2xl">
-                <ContactForm
-                  pagina="bice-personas"
-                  heading="Solicita más información sobre el seguro complementario BICE Vida"
-                  variant="personas"
-                />
-              </RevealOnScroll>
-
-              <div className="space-y-6">
-                <h2 className="text-4xl font-bold text-white">
-                  Protege tu salud y la de tu familia con el respaldo de BICE Vida
-                </h2>
-                <p className="text-base text-white leading-[1.1]">
-                  Nuestro equipo de asesores te orienta sin costo para que elijas la cobertura
-                  que mejor se adapte a ti y a tu familia. Sencillo, transparente y sin tramites
-                  complicados.
-                </p>
               </div>
             </div>
           </div>
