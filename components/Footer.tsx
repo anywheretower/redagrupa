@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { MapPin, Mail, Phone } from "lucide-react"
+import OpenContactModalButton from "@/components/OpenContactModalButton"
 
 export default function Footer() {
   return (
@@ -91,12 +92,12 @@ export default function Footer() {
 
           {/* Col 4: Contacto + CTA */}
           <div className="space-y-4 text-center lg:text-left flex flex-col items-center lg:items-start">
-            <Link
-              href="/#formulario-contacto"
+            <OpenContactModalButton
+              pagina="footer"
               className="inline-block bg-white text-[#cc0033] font-semibold text-sm px-6 py-2.5 rounded-full hover:bg-white/90 transition-colors"
             >
               Cotiza tu seguro →
-            </Link>
+            </OpenContactModalButton>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Contacto</h3>
             <address className="not-italic space-y-3">
               <div className="flex items-center gap-3 max-w-[280px] w-full">

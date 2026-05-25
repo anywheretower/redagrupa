@@ -14,8 +14,10 @@ import MobileMenu from "@/components/MobileMenu"
 import DropdownBICE from "@/components/DropdownBICE"
 import Footer from "@/components/Footer"
 import Breadcrumbs from "@/components/Breadcrumbs"
+import { useContactModal } from "@/components/ContactModalProvider"
 
 export default function FormulariosClient() {
+  const { openContactModal } = useContactModal()
   return (
     <main id="contenido-principal" className="min-h-screen bg-white">
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#cc0033] text-white shadow-md">
@@ -52,11 +54,9 @@ export default function FormulariosClient() {
             <Button
               variant="outline"
               className="bg-transparent border-white text-white hover:bg-white/10 w-[180px]"
-              asChild
+              onClick={() => openContactModal({ pagina: "formularios" })}
             >
-              <Link href="/#formulario-contacto">
-                Solicitar Asesoría
-              </Link>
+              Solicitar Asesoría
             </Button>
             <Button
               variant="outline"

@@ -17,8 +17,15 @@ import dynamic from "next/dynamic"
 const ContactForm = dynamic(() => import("@/components/ContactForm"), { ssr: false })
 import RevealOnScroll from "@/components/RevealOnScroll"
 import Breadcrumbs from "@/components/Breadcrumbs"
+import { useContactModal } from "@/components/ContactModalProvider"
 
 export default function NosotrosClient() {
+  const { openContactModal } = useContactModal()
+  const scrollToForm = () =>
+    openContactModal({
+      pagina: "nosotros",
+      heading: "Conversemos sobre cómo proteger a tu equipo",
+    })
   return (
     <main id="contenido-principal" className="min-h-screen bg-white">
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#cc0033] text-white shadow-md">
@@ -57,9 +64,7 @@ export default function NosotrosClient() {
             <Button
               variant="outline"
               className="bg-transparent border-white text-white hover:bg-white/10 w-[180px]"
-              onClick={() => {
-                document.getElementById("formulario-contacto")?.scrollIntoView({ behavior: "smooth" })
-              }}
+              onClick={scrollToForm}
             >
               Solicitar Asesoría
             </Button>
@@ -139,9 +144,7 @@ export default function NosotrosClient() {
               </p>
               <div className="pt-4">
                 <Button
-                  onClick={() => {
-                    document.getElementById("formulario-contacto")?.scrollIntoView({ behavior: "smooth" })
-                  }}
+                  onClick={scrollToForm}
                   className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3"
                 >
                   Solicitar Asesoría
@@ -335,9 +338,7 @@ export default function NosotrosClient() {
               </p>
               <div className="pt-4">
                 <Button
-                  onClick={() => {
-                    document.getElementById("formulario-contacto")?.scrollIntoView({ behavior: "smooth" })
-                  }}
+                  onClick={scrollToForm}
                   className="bg-[#cc0033] hover:bg-[#a30029] text-white px-8 py-3"
                 >
                   Solicitar Asesoría

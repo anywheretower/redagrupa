@@ -16,6 +16,7 @@ import MobileMenu from "@/components/MobileMenu"
 import DropdownBICE from "@/components/DropdownBICE"
 import Footer from "@/components/Footer"
 import Breadcrumbs from "@/components/Breadcrumbs"
+import { useContactModal } from "@/components/ContactModalProvider"
 
 const POSTS_PER_PAGE = 12
 
@@ -28,6 +29,7 @@ interface BlogPost {
 }
 
 export default function BlogClient({ posts, initialPage = 1 }: { posts: BlogPost[]; initialPage?: number }) {
+  const { openContactModal } = useContactModal()
   const [page, setPage] = useState(initialPage)
   const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE)
   const paginatedPosts = posts.slice((page - 1) * POSTS_PER_PAGE, page * POSTS_PER_PAGE)
@@ -80,11 +82,9 @@ export default function BlogClient({ posts, initialPage = 1 }: { posts: BlogPost
             <Button
               variant="outline"
               className="bg-transparent border-white text-white hover:bg-white/10 w-[180px]"
-              asChild
+              onClick={() => openContactModal({ pagina: "blog-index" })}
             >
-              <Link href="/#formulario-contacto">
-                Solicitar Asesoría
-              </Link>
+              Solicitar Asesoría
             </Button>
             <Button
               variant="outline"

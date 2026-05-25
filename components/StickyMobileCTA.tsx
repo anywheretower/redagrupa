@@ -1,41 +1,21 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useContactModal } from "@/components/ContactModalProvider"
 
 export default function StickyMobileCTA() {
-  const [hidden, setHidden] = useState(false)
-
-  useEffect(() => {
-    const target = document.getElementById("formulario-contacto")
-    if (!target || typeof IntersectionObserver === "undefined") return
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0]
-        setHidden(entry.isIntersecting)
-      },
-      { threshold: 0.1 }
-    )
-
-    observer.observe(target)
-    return () => observer.disconnect()
-  }, [])
+  const { openContactModal } = useContactModal()
 
   return (
-    <div
-      aria-hidden={hidden ? "true" : undefined}
-      className={`fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-white border-t border-gray-200 shadow-[0_-4px_12px_rgba(0,0,0,0.1)] px-4 py-3 transition-transform duration-300 ${
-        hidden ? "translate-y-full pointer-events-none" : "translate-y-0"
-      }`}
-    >
+    <div className="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-white border-t border-gray-200 shadow-[0_-4px_12px_rgba(0,0,0,0.1)] px-4 py-3">
       <div className="flex items-center gap-3">
-        <a
-          href="#formulario-contacto"
+        <button
+          type="button"
+          onClick={() => openContactModal({ pagina: "sticky-mobile" })}
           className="flex-1 bg-[#cc0033] text-white py-3 rounded-full text-sm font-medium hover:bg-[#a30029] transition-colors shadow-lg flex items-center justify-center gap-2"
         >
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
           Solicitar Asesoría Gratis
-        </a>
+        </button>
         <a
           href="https://wa.me/56982414614"
           target="_blank"

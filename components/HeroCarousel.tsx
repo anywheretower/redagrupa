@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { useContactModal } from "@/components/ContactModalProvider"
 
 const slides = [
   {
@@ -12,7 +13,7 @@ const slides = [
     mobileObjectPos: "object-[60%_30%]",
     headline: "Seguro complementario de salud para pymes, desde UF\u00a00,52/mes. Sin trámites, sin papeleo",
     subtitle: "Seguro complementario de salud para pymes desde 5 trabajadores. Comparamos las principales aseguradoras, elegimos el mejor plan y gestionamos todo: cotización, contratación y reembolsos.",
-    ctaPrimary: { text: "Cotiza Gratis", href: "#formulario-contacto" },
+    ctaPrimary: { text: "Cotiza Gratis" },
     ctaSecondary: { text: "Ver Coberturas y Planes", href: "/seguro-complementario", isLink: true },
   },
   {
@@ -21,7 +22,7 @@ const slides = [
     mobileObjectPos: "object-[70%_25%]",
     headline: "Recupera hasta 40 horas al año en gestión de seguros",
     subtitle: "Nos integramos como el área de seguros de tu empresa. Gestionamos incorporaciones, reembolsos y consultas de tu equipo. +300 empresas ya nos eligen hace más de 10 años.",
-    ctaPrimary: { text: "Solicitar Asesoría Gratis", href: "#formulario-contacto" },
+    ctaPrimary: { text: "Solicitar Asesoría Gratis" },
     ctaSecondary: { text: "Conoce Nuestra Historia", href: "/nosotros", isLink: true },
   },
   {
@@ -30,12 +31,18 @@ const slides = [
     mobileObjectPos: "object-[60%_20%]",
     headline: "Mejor cobertura para tu equipo, cero gestión para ti",
     subtitle: "Tu equipo va al doctor sin preocuparse por el costo. El seguro cubre el copago que Fonasa o Isapre no cubren. Contratación en días, no meses. Proceso 100% gestionado por RedAgrupa.",
-    ctaPrimary: { text: "Cotiza Sin Costo", href: "#formulario-contacto" },
+    ctaPrimary: { text: "Cotiza Sin Costo" },
     ctaSecondary: { text: "Explorar Servicios", href: "#seccion-aseguradoras" },
   },
 ]
 
 export default function HeroCarousel() {
+  const { openContactModal } = useContactModal()
+  const openModal = () =>
+    openContactModal({
+      pagina: "landing",
+      heading: "Compara aseguradoras y encuentra el mejor plan para tu pyme",
+    })
   const [current, setCurrent] = useState(0)
   useEffect(() => {
     if (typeof window === "undefined") return
@@ -174,10 +181,10 @@ export default function HeroCarousel() {
                 </p>
                 <div className="flex flex-row gap-4 pt-2">
                   <Button
+                    onClick={openModal}
                     className="bg-white text-[#cc0033] hover:bg-gray-100 px-8 py-3 text-base font-semibold w-64 shadow-lg"
-                    asChild
                   >
-                    <a href={slide.ctaPrimary.href}>{slide.ctaPrimary.text}</a>
+                    {slide.ctaPrimary.text}
                   </Button>
                   <Button
                     variant="outline"

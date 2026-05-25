@@ -1,34 +1,43 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
+import { useId, useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Lock, Loader2, CheckCircle2, X } from "lucide-react"
-import { toast, Toaster } from "sonner"
+import { toast } from "sonner"
 import { contactoSchema, contactoPersonasSchema, type ContactoData, type ContactoPersonasData } from "@/lib/schemas/contacto"
 
 type ContactFormProps = {
   pagina: string
   heading: string
   variant?: "standard" | "personas"
+  onSuccess?: () => void
+  onSubmittingChange?: (submitting: boolean) => void
 }
 
 type FormData = ContactoData | ContactoPersonasData
 
-export default function ContactForm({ pagina, heading, variant = "standard" }: ContactFormProps) {
+export default function ContactForm({
+  pagina,
+  heading,
+  variant = "standard",
+  onSuccess,
+  onSubmittingChange,
+}: ContactFormProps) {
+  const baseId = useId()
+  const fid = (suffix: string) => `${baseId}-${suffix}`
+
   const [showSuccess, setShowSuccess] = useState(false)
   const [loadedAt] = useState(() => Date.now())
   const [honeypot, setHoneypot] = useState("")
   const dialogRef = useRef<HTMLDivElement>(null)
 
-  // A5: Focus trap + ESC key for success dialog
   useEffect(() => {
     if (!showSuccess) return
     const dialog = dialogRef.current
     if (!dialog) return
 
-    // Focus the close button on open
     const closeBtn = dialog.querySelector<HTMLButtonElement>("[data-close-dialog]")
     closeBtn?.focus()
 
@@ -63,6 +72,7 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
     document.addEventListener("keydown", handleKeyDown)
     return () => document.removeEventListener("keydown", handleKeyDown)
   }, [showSuccess])
+
   const isPersonas = variant === "personas"
   const schema = isPersonas ? contactoPersonasSchema : contactoSchema
 
@@ -75,6 +85,10 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
     resolver: zodResolver(schema),
     defaultValues: { pagina },
   })
+
+  useEffect(() => {
+    onSubmittingChange?.(isSubmitting)
+  }, [isSubmitting, onSubmittingChange])
 
   const onSubmit = async (data: FormData) => {
     try {
@@ -89,9 +103,7 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
       }
 
       reset()
-      setShowSuccess(true)
 
-      // C8: Disparar evento para GA4 (atribución de conversiones)
       if (typeof window !== "undefined" && window.dataLayer) {
         window.dataLayer.push({
           event: "formulario_contacto_enviado",
@@ -99,8 +111,13 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
         })
       }
 
-      // C9: Marcar envío para que ExitIntentPopup no aparezca post-conversión
       sessionStorage.setItem("redagrupa_form_submitted", "true")
+
+      if (onSuccess) {
+        onSuccess()
+      } else {
+        setShowSuccess(true)
+      }
     } catch {
       toast.error("Error al enviar el mensaje", {
         description: "Por favor intenta nuevamente.",
@@ -114,7 +131,6 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
 
   return (
     <>
-      <Toaster richColors position="top-center" />
       <h2 className="text-xl lg:text-2xl font-bold text-[#333333] text-center mb-2 leading-snug">
         {heading}
       </h2>
@@ -123,9 +139,9 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
       <form className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
         {/* Honeypot anti-bot — invisible para usuarios reales */}
         <div className="absolute opacity-0 h-0 w-0 -z-10 overflow-hidden" aria-hidden="true">
-          <label htmlFor="website">Website</label>
+          <label htmlFor={fid("website")}>Website</label>
           <input
-            id="website"
+            id={fid("website")}
             type="text"
             name="website"
             tabIndex={-1}
@@ -137,82 +153,82 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
 
         {/* Nombre completo */}
         <div>
-          <label htmlFor="nombre" className="sr-only">Nombre completo</label>
+          <label htmlFor={fid("nombre")} className="sr-only">Nombre completo</label>
           <input
-            id="nombre"
+            id={fid("nombre")}
             type="text"
             placeholder="Nombre Completo *"
             className={inputClass}
             aria-required="true"
             aria-invalid={!!errors.nombre}
-            aria-describedby={errors.nombre ? "nombre-error" : undefined}
+            aria-describedby={errors.nombre ? fid("nombre-error") : undefined}
             {...register("nombre")}
           />
-          {errors.nombre && <p id="nombre-error" role="alert" className={errorClass}>{errors.nombre.message}</p>}
+          {errors.nombre && <p id={fid("nombre-error")} role="alert" className={errorClass}>{errors.nombre.message}</p>}
         </div>
 
         {/* Email y Teléfono */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label htmlFor="email" className="sr-only">Email</label>
+            <label htmlFor={fid("email")} className="sr-only">Email</label>
             <input
-              id="email"
+              id={fid("email")}
               type="email"
               placeholder="Email *"
               className={inputClass}
               aria-required="true"
               aria-invalid={!!errors.email}
-              aria-describedby={errors.email ? "email-error" : undefined}
+              aria-describedby={errors.email ? fid("email-error") : undefined}
               {...register("email")}
             />
-            {errors.email && <p id="email-error" role="alert" className={errorClass}>{errors.email.message}</p>}
+            {errors.email && <p id={fid("email-error")} role="alert" className={errorClass}>{errors.email.message}</p>}
           </div>
           <div>
-            <label htmlFor="telefono" className="sr-only">Teléfono</label>
+            <label htmlFor={fid("telefono")} className="sr-only">Teléfono</label>
             <input
-              id="telefono"
+              id={fid("telefono")}
               type="tel"
               placeholder="Teléfono (Ej: +56 9 1234 5678) *"
               className={inputClass}
               aria-required="true"
               aria-invalid={!!errors.telefono}
-              aria-describedby={errors.telefono ? "telefono-error" : undefined}
+              aria-describedby={errors.telefono ? fid("telefono-error") : undefined}
               {...register("telefono")}
             />
-            {errors.telefono && <p id="telefono-error" role="alert" className={errorClass}>{errors.telefono.message}</p>}
+            {errors.telefono && <p id={fid("telefono-error")} role="alert" className={errorClass}>{errors.telefono.message}</p>}
           </div>
         </div>
 
         {/* Empresa */}
         <div>
-          <label htmlFor="empresa" className="sr-only">Nombre empresa{isPersonas ? " (opcional)" : ""}</label>
+          <label htmlFor={fid("empresa")} className="sr-only">Nombre empresa{isPersonas ? " (opcional)" : ""}</label>
           <input
-            id="empresa"
+            id={fid("empresa")}
             type="text"
             placeholder={isPersonas ? "Nombre Empresa (Opcional)" : "Nombre Empresa *"}
             className={inputClass}
             aria-required={!isPersonas}
             aria-invalid={!!(errors as Record<string, unknown>).empresa}
-            aria-describedby={(errors as Record<string, unknown>).empresa ? "empresa-error" : undefined}
+            aria-describedby={(errors as Record<string, unknown>).empresa ? fid("empresa-error") : undefined}
             {...register("empresa")}
           />
           {"empresa" in errors && errors.empresa && (
-            <p id="empresa-error" role="alert" className={errorClass}>{errors.empresa.message}</p>
+            <p id={fid("empresa-error")} role="alert" className={errorClass}>{errors.empresa.message}</p>
           )}
         </div>
 
         {/* Mensaje */}
         <div>
-          <label htmlFor="mensaje" className="sr-only">Mensaje (opcional)</label>
+          <label htmlFor={fid("mensaje")} className="sr-only">Mensaje (opcional)</label>
           <textarea
-            id="mensaje"
+            id={fid("mensaje")}
             placeholder="Mensaje (Opcional)"
             rows={2}
             className="w-full px-4 py-2.5 bg-gray-100 border-0 rounded-lg text-sm text-gray-900 placeholder-gray-500 resize-none focus:outline-none focus:ring-2 focus:ring-[#cc0033]"
             {...register("mensaje")}
           />
           {"mensaje" in errors && errors.mensaje && (
-            <p id="mensaje-error" role="alert" className={errorClass}>{errors.mensaje.message}</p>
+            <p id={fid("mensaje-error")} role="alert" className={errorClass}>{errors.mensaje.message}</p>
           )}
         </div>
 
@@ -255,7 +271,7 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
             ref={dialogRef}
             role="dialog"
             aria-modal="true"
-            aria-labelledby="success-heading"
+            aria-labelledby={fid("success-heading")}
             className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 text-center"
             onClick={(e) => e.stopPropagation()}
           >
@@ -272,7 +288,7 @@ export default function ContactForm({ pagina, heading, variant = "standard" }: C
               <CheckCircle2 className="w-8 h-8 text-white" />
             </div>
 
-            <h3 id="success-heading" className="text-2xl font-bold text-[#333333] mb-2">
+            <h3 id={fid("success-heading")} className="text-2xl font-bold text-[#333333] mb-2">
               ¡Mensaje enviado!
             </h3>
             <p className="text-gray-600 mb-6">

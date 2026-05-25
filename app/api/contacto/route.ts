@@ -80,12 +80,15 @@ export async function POST(request: Request) {
       </div>
     `
 
+    const testTo = process.env.CONTACT_TEST_TO
+    const isTestMode = Boolean(testTo)
+
     const { error } = await resend.emails.send({
       from: "RedAgrupa Web <contacto@redagrupa.cl>",
-      to: "cwinter@redagrupa.cl",
-      cc: ["mcostabal@redagrupa.cl", "pfuentes@dorigenes.cl"],
+      to: isTestMode ? testTo! : "cwinter@redagrupa.cl",
+      cc: isTestMode ? [] : ["mcostabal@redagrupa.cl", "pfuentes@dorigenes.cl"],
       replyTo: data.email,
-      subject: `Nuevo contacto desde ${data.pagina} - ${data.nombre}`,
+      subject: `${isTestMode ? "[TEST] " : ""}Nuevo contacto desde ${data.pagina} - ${data.nombre}`,
       html,
     })
 
@@ -98,8 +101,8 @@ export async function POST(request: Request) {
     }
 
     // Save to Supabase (non-blocking — don't fail the request if this errors)
-    try {
-      await getSupabaseAdmin().from("contactos_redagrupa").insert({
+    if (isTestMode) {
+      console.log("[CONTACT_TEST_TO] skip Supabase insert. Payload:", {
         nombre: data.nombre,
         email: data.email,
         telefono: data.telefono,
@@ -107,8 +110,19 @@ export async function POST(request: Request) {
         mensaje: "mensaje" in data ? data.mensaje || null : null,
         pagina: data.pagina,
       })
-    } catch (dbErr) {
-      console.error("Supabase insert error:", dbErr instanceof Error ? dbErr.message : "Unknown error")
+    } else {
+      try {
+        await getSupabaseAdmin().from("contactos_redagrupa").insert({
+          nombre: data.nombre,
+          email: data.email,
+          telefono: data.telefono,
+          empresa: "empresa" in data ? data.empresa || null : null,
+          mensaje: "mensaje" in data ? data.mensaje || null : null,
+          pagina: data.pagina,
+        })
+      } catch (dbErr) {
+        console.error("Supabase insert error:", dbErr instanceof Error ? dbErr.message : "Unknown error")
+      }
     }
 
     return NextResponse.json({ success: true })

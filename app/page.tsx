@@ -9,6 +9,7 @@ import HeroCarousel from "@/components/HeroCarousel"
 import HomeContent from "./HomeClient"
 import StickyMobileCTA from "@/components/StickyMobileCTA"
 import DropdownBICE from "@/components/DropdownBICE"
+import OpenContactModalButton from "@/components/OpenContactModalButton"
 import { getLatestPosts } from "@/lib/blog"
 
 export const metadata = {
@@ -189,13 +190,13 @@ export default function HomePage() {
               </Link>
             </nav>
             <div className="hidden lg:flex items-center gap-3">
-              <Button
-                variant="outline"
-                className="bg-transparent border-white text-white hover:bg-white/10 w-[180px]"
-                asChild
+              <OpenContactModalButton
+                pagina="landing"
+                heading="Compara aseguradoras y encuentra el mejor plan para tu pyme"
+                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all border bg-transparent border-white text-white hover:bg-white/10 w-[180px] h-9 px-4 py-2"
               >
-                <a href="#formulario-contacto">Solicitar Asesoría</a>
-              </Button>
+                Solicitar Asesoría
+              </OpenContactModalButton>
               <Button
                 variant="outline"
                 size="icon"
@@ -347,13 +348,14 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3 mt-8">
-                  <a
-                    href="#formulario-contacto"
+                  <OpenContactModalButton
+                    pagina="landing"
+                    heading="Compara aseguradoras y encuentra el mejor plan para tu pyme"
                     className="flex-1 inline-flex items-center justify-center gap-2 bg-[#cc0033] text-white hover:bg-[#a30029] px-6 py-3 rounded-lg text-sm font-medium transition-colors"
                   >
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
                     Solicitar Asesoría Gratis
-                  </a>
+                  </OpenContactModalButton>
                   <a
                     href="https://wa.me/56982414614"
                     target="_blank"

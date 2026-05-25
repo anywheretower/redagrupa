@@ -22,6 +22,7 @@ import dynamic from "next/dynamic"
 const ContactForm = dynamic(() => import("@/components/ContactForm"), { ssr: false })
 import RevealOnScroll from "@/components/RevealOnScroll"
 import Breadcrumbs from "@/components/Breadcrumbs"
+import { useContactModal } from "@/components/ContactModalProvider"
 
 const planes = [
   {
@@ -90,9 +91,12 @@ const CONTRATA_URL =
   "https://mipymesegura.bicevida.cl/cotizacion/numero-trabajadores?negocio=cjw"
 
 export default function BicePymeClient() {
-  const scrollToForm = () => {
-    document.getElementById("formulario-contacto")?.scrollIntoView({ behavior: "smooth" })
-  }
+  const { openContactModal } = useContactModal()
+  const scrollToForm = () =>
+    openContactModal({
+      pagina: "bice-pyme",
+      heading: "Cotiza tu plan BICE Vida para pymes",
+    })
 
   return (
     <main id="contenido-principal" className="min-h-screen bg-white">

@@ -3,7 +3,9 @@ import type { Metadata, Viewport } from "next"
 import Script from "next/script"
 import { Geist } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import { Toaster } from "sonner"
 import ExitIntentPopupLazy from "@/components/ExitIntentPopupLazy"
+import { ContactModalProvider } from "@/components/ContactModalProvider"
 import "./globals.css"
 
 const geist = Geist({ subsets: ["latin"], display: "swap" })
@@ -104,8 +106,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
-        {children}
-        <ExitIntentPopupLazy />
+        <ContactModalProvider>
+          {children}
+          <ExitIntentPopupLazy />
+        </ContactModalProvider>
+        <Toaster richColors position="top-center" />
         <Analytics />
         <script
           type="application/ld+json"

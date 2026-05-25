@@ -27,11 +27,15 @@ import dynamic from "next/dynamic"
 const ContactForm = dynamic(() => import("@/components/ContactForm"), { ssr: false })
 import RevealOnScroll from "@/components/RevealOnScroll"
 import Breadcrumbs from "@/components/Breadcrumbs"
+import { useContactModal } from "@/components/ContactModalProvider"
 
 export default function BeneficiosClient() {
-  const scrollToForm = () => {
-    document.getElementById("formulario-contacto")?.scrollIntoView({ behavior: "smooth" })
-  }
+  const { openContactModal } = useContactModal()
+  const scrollToForm = () =>
+    openContactModal({
+      pagina: "beneficios",
+      heading: "Diseña el paquete de beneficios ideal para tu empresa",
+    })
 
   return (
     <main id="contenido-principal" className="min-h-screen bg-white">

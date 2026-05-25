@@ -15,6 +15,7 @@ import MobileMenu from "@/components/MobileMenu"
 import DropdownBICE from "@/components/DropdownBICE"
 import Footer from "@/components/Footer"
 import Breadcrumbs from "@/components/Breadcrumbs"
+import { useContactModal } from "@/components/ContactModalProvider"
 
 interface BlogPost {
   slug: string
@@ -44,6 +45,7 @@ export default function BlogPostClient({
   relatedPosts: RelatedPost[]
   children: React.ReactNode
 }) {
+  const { openContactModal } = useContactModal()
   return (
     <main id="contenido-principal" className="min-h-screen bg-white">
       {/* Fixed Header */}
@@ -87,11 +89,9 @@ export default function BlogPostClient({
             <Button
               variant="outline"
               className="bg-transparent border-white text-white hover:bg-white/10 w-[180px]"
-              asChild
+              onClick={() => openContactModal({ pagina: "blog-post" })}
             >
-              <Link href="/#formulario-contacto">
-                Solicitar Asesoría
-              </Link>
+              Solicitar Asesoría
             </Button>
             <Button
               variant="outline"
@@ -220,12 +220,13 @@ export default function BlogPostClient({
                   Comparamos planes de las principales aseguradoras para encontrar la mejor cobertura al mejor precio. Asesoría gratuita, sin compromiso.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <Link
-                    href="/#formulario-contacto"
+                  <button
+                    type="button"
+                    onClick={() => openContactModal({ pagina: "blog-post" })}
                     className="inline-flex items-center justify-center gap-2 bg-white text-[#cc0033] font-semibold text-sm px-6 py-3 rounded-full hover:bg-white/90 transition-colors"
                   >
                     Solicitar Asesoría Gratis
-                  </Link>
+                  </button>
                   <a
                     href="https://wa.me/56982414614?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20complementario%20para%20mi%20empresa"
                     target="_blank"

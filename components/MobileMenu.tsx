@@ -4,9 +4,11 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { useContactModal } from '@/components/ContactModalProvider'
 
 export default function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false)
+  const { openContactModal } = useContactModal()
   const menuRef = useRef<HTMLDivElement>(null)
   const buttonRef = useRef<HTMLButtonElement>(null)
 
@@ -131,10 +133,12 @@ export default function MobileMenu() {
             <Button
               variant="outline"
               className="bg-transparent border-white text-white hover:bg-white/10 w-full py-3 mt-4"
-              asChild
-              onClick={() => setIsOpen(false)}
+              onClick={() => {
+                setIsOpen(false)
+                openContactModal({ pagina: "mobile-menu" })
+              }}
             >
-              <a href="#formulario-contacto">Solicitar Asesoría</a>
+              Solicitar Asesoría
             </Button>
           </div>
         </div>

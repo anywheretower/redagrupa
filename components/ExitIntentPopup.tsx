@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from "react"
 import { usePathname } from "next/navigation"
+import { useContactModal } from "@/components/ContactModalProvider"
 
 declare global {
   interface Window {
@@ -17,6 +18,7 @@ const EXCLUDED_PATH_PREFIXES = ["/blog", "/politicas-de-privacidad", "/seguro-co
 
 export default function ExitIntentPopup() {
   const pathname = usePathname()
+  const { openContactModal } = useContactModal()
   const [show, setShow] = useState(false)
   const [dismissed, setDismissed] = useState(false)
   const dialogRef = useRef<HTMLDivElement>(null)
@@ -220,12 +222,7 @@ export default function ExitIntentPopup() {
           <button
             onClick={() => {
               handleCTA("form")
-              const form = document.getElementById("formulario-contacto")
-              if (form) {
-                form.scrollIntoView({ behavior: "smooth" })
-              } else {
-                window.location.href = "/#formulario-contacto"
-              }
+              openContactModal({ pagina: "exit-intent" })
             }}
             className="mt-3 block w-full text-center rounded-full border border-gray-200 px-6 py-3 text-sm font-medium text-[#333333] hover:bg-gray-50 transition-colors"
           >

@@ -29,11 +29,15 @@ import dynamic from "next/dynamic"
 const ContactForm = dynamic(() => import("@/components/ContactForm"), { ssr: false })
 import RevealOnScroll from "@/components/RevealOnScroll"
 import Breadcrumbs from "@/components/Breadcrumbs"
+import { useContactModal } from "@/components/ContactModalProvider"
 
 export default function SegurosSaludClient() {
-  const scrollToForm = () => {
-    document.getElementById("formulario-contacto")?.scrollIntoView({ behavior: "smooth" })
-  }
+  const { openContactModal } = useContactModal()
+  const scrollToForm = () =>
+    openContactModal({
+      pagina: "seguro-complementario",
+      heading: "Cotiza tu seguro complementario de salud sin compromiso",
+    })
 
   return (
     <main id="contenido-principal" className="min-h-screen bg-white">

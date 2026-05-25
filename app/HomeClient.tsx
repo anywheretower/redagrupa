@@ -11,6 +11,7 @@ import {
 import { Button } from "@/components/ui/button"
 import dynamic from "next/dynamic"
 import { useState, useEffect, useCallback } from "react"
+import { useContactModal } from "@/components/ContactModalProvider"
 
 const ContactForm = dynamic(() => import("@/components/ContactForm"), {
   ssr: false,
@@ -144,6 +145,12 @@ function BlogCarousel({ posts }: { posts: LatestPost[] }) {
 }
 
 export default function HomeContent({ latestPosts = [] }: { latestPosts?: LatestPost[] }) {
+  const { openContactModal } = useContactModal()
+  const openModal = () =>
+    openContactModal({
+      pagina: "landing",
+      heading: "Compara aseguradoras y encuentra el mejor plan para tu pyme",
+    })
   return (
     <>
       {/* El Problema Section */}
@@ -200,9 +207,9 @@ export default function HomeContent({ latestPosts = [] }: { latestPosts?: Latest
               <div className="mt-6">
                 <Button
                   className="bg-[#cc0033] text-white px-8 py-3"
-                  asChild
+                  onClick={openModal}
                 >
-                  <a href="#formulario-contacto">Solicitar Asesoría</a>
+                  Solicitar Asesoría
                 </Button>
               </div>
             </div>
@@ -281,9 +288,9 @@ export default function HomeContent({ latestPosts = [] }: { latestPosts?: Latest
             </h2>
             <Button
               className="px-6 sm:px-8 py-3 bg-[#cc0033] text-white hover:bg-[#a30029] transition-colors rounded text-sm sm:text-base"
-              asChild
+              onClick={openModal}
             >
-              <a href="#formulario-contacto">Solicitar Asesoría</a>
+              Solicitar Asesoría
             </Button>
           </div>
 
