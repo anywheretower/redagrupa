@@ -141,7 +141,8 @@ export default async function BlogPostPage({
   const post = getPostBySlug(slug)
   if (!post) notFound()
 
-  const relatedPosts = getRelatedPosts(slug, 2)
+  // Sugerir TODOS los demás artículos (distintos), no solo los 2 vecinos
+  const relatedPosts = getRelatedPosts(slug, getAllSlugs().length - 1)
 
   const jsonLd = {
     "@context": "https://schema.org",
