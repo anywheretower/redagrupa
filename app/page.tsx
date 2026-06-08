@@ -87,7 +87,7 @@ const reviewsJsonLd = {
 }
 
 export default function HomePage() {
-  const latestPosts = getLatestPosts(5)
+  const latestPosts = getLatestPosts(6)
   return (
     <>
       <script
