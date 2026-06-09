@@ -131,7 +131,7 @@ export default function BlogClient({ posts, initialPage = 1 }: { posts: BlogPost
           <Linkedin className="w-4 h-4 text-white" strokeWidth={1.5} />
         </a>
         <a
-          href="https://wa.me/56982414614"
+          href="https://wa.me/56982414614?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20complementario%20de%20salud%20para%20mi%20empresa"
           target="_blank"
           rel="noopener noreferrer"
           className="w-11 h-11 rounded-full bg-[#25D366] hover:bg-[#1DA851] flex items-center justify-center shadow-lg transition-colors"

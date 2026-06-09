@@ -6,6 +6,7 @@ import { Analytics } from "@vercel/analytics/next"
 import { Toaster } from "sonner"
 import ExitIntentPopupLazy from "@/components/ExitIntentPopupLazy"
 import { ContactModalProvider } from "@/components/ContactModalProvider"
+import DesktopFloatingCTA from "@/components/DesktopFloatingCTA"
 import "./globals.css"
 
 const geist = Geist({ subsets: ["latin"], display: "swap" })
@@ -108,6 +109,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </noscript>
         <ContactModalProvider>
           {children}
+          <DesktopFloatingCTA />
           <ExitIntentPopupLazy />
         </ContactModalProvider>
         <Toaster richColors position="top-center" />

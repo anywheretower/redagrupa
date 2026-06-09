@@ -51,7 +51,7 @@ const reviewsJsonLd = {
         bestRating: 5,
       },
       reviewBody:
-        "Levábamos años encontrando un seguro que permitiese como empresa pequeña poder tener cobertura adicional. Hemos encontrado asesoría confiable, con profesionales atentos capacitados para resolver cualquier duda. Excelente servicio, recomiendo Redagrupa a ojos cerrados.",
+        "Llevábamos años buscando un seguro que nos permitiese, como empresa pequeña, tener cobertura adicional. Hemos encontrado asesoría confiable, con profesionales atentos y capacitados para resolver cualquier duda. Excelente servicio, recomiendo RedAgrupa a ojos cerrados.",
     },
     {
       "@type": "Review",
@@ -66,7 +66,7 @@ const reviewsJsonLd = {
         bestRating: 5,
       },
       reviewBody:
-        "Contratamos Redagrupa como beneficio extra para trabajadores, pero al poco tiempo nos dimos cuenta que es un gran aliado, tanto clientes como empleados. Es el agregado bien servicio indiscutible con ellos.",
+        "Contratamos RedAgrupa como beneficio extra para nuestros trabajadores, pero al poco tiempo nos dimos cuenta de que es un gran aliado, tanto para clientes como para empleados. Es un valor agregado de servicio indiscutible.",
     },
     {
       "@type": "Review",
@@ -242,7 +242,7 @@ export default function HomePage() {
             <Linkedin className="w-4 h-4 text-white" strokeWidth={1.5} />
           </Link>
           <a
-            href="https://wa.me/56982414614"
+            href="https://wa.me/56982414614?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20complementario%20de%20salud%20para%20mi%20empresa"
             target="_blank"
             rel="noopener noreferrer"
             className="w-11 h-11 rounded-full bg-[#25D366] hover:bg-[#1DA851] flex items-center justify-center shadow-lg transition-colors"
@@ -357,7 +357,7 @@ export default function HomePage() {
                     Solicitar Asesoría Gratis
                   </OpenContactModalButton>
                   <a
-                    href="https://wa.me/56982414614"
+                    href="https://wa.me/56982414614?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20complementario%20de%20salud%20para%20mi%20empresa"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 inline-flex items-center justify-center gap-2 bg-[#25D366] text-white hover:bg-[#1DA851] px-6 py-3 rounded-lg text-sm font-medium transition-colors"
@@ -366,6 +366,7 @@ export default function HomePage() {
                     Escríbenos Ahora
                   </a>
                 </div>
+                <p className="text-xs text-[#666666] mt-3 text-center sm:text-left">Te respondemos el mismo día hábil · Sin costo ni compromiso</p>
               </div>
               {/* Derecha: Servicios */}
               <div>

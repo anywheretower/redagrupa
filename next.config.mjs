@@ -75,6 +75,25 @@ const nextConfig = {
       { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
       { key: "Cross-Origin-Resource-Policy", value: "same-origin" },
       { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
+      {
+        // Report-Only: NO bloquea, solo reporta violaciones en la consola del
+        // navegador. Sirve para afinar la política (GTM/Vercel/inline) antes de
+        // pasarla a `Content-Security-Policy` enforce. Auditoría web 2026-06-09.
+        key: "Content-Security-Policy-Report-Only",
+        value: [
+          "default-src 'self'",
+          "base-uri 'self'",
+          "object-src 'none'",
+          "frame-ancestors 'none'",
+          "form-action 'self'",
+          "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://va.vercel-scripts.com https://*.vercel-insights.com",
+          "style-src 'self' 'unsafe-inline'",
+          "img-src 'self' data: blob: https:",
+          "font-src 'self' data:",
+          "connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.vercel-insights.com https://vitals.vercel-insights.com",
+          "frame-src https://www.googletagmanager.com",
+        ].join("; "),
+      },
     ]
     return [
       {

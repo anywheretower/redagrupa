@@ -15,6 +15,15 @@
 - [Blog](https://www.redagrupa.cl/blog): Guías y comparativas sobre seguros complementarios de salud para pymes en Chile (coberturas, deducibles, beneficios por aseguradora)
 - [Formularios](https://www.redagrupa.cl/formularios): Formularios de reembolso e incorporación de 9 aseguradoras partner
 
+## Blog / Guías
+
+- [Seguro Complementario de Salud para Empresas: cómo comparar coberturas, deducibles y beneficios](https://www.redagrupa.cl/blog/comparar-seguro-complementario-salud-empresas): Comparación práctica de SURA, Zurich y BICE (ambulatoria, hospitalaria, deducibles, medicamentos, maternidad, salud mental y catastrófico) con tabla resumen.
+- [Diferencias entre Isapre, Fonasa, Seguro Complementario, seguros de clínicas, CAEC, GES y Ley Ricarte Soto](https://www.redagrupa.cl/blog/isapre-fonasa-seguro-complementario-seguros-clinicas-caec-ges-ricarte-soto): Glosario claro del sistema de salud chileno y dónde encaja el seguro complementario.
+- [Me cambio de Isapre a Fonasa: ¿me cubre el seguro complementario y qué es el BMI?](https://www.redagrupa.cl/blog/cambiarme-isapre-a-fonasa-seguro-complementario-bmi): Qué pasa con el seguro complementario al cambiar de previsión y qué es el BMI.
+- [Cobertura de remedios y farmacia en seguros complementarios](https://www.redagrupa.cl/blog/cobertura-remedios-farmacia-seguro-complementario): Cómo funciona la cobertura de medicamentos (genéricos vs marca, topes).
+- [Cobertura dental en Seguro Complementario de Salud para empresas](https://www.redagrupa.cl/blog/cobertura-dental-seguro-complementario-empresas): Qué incluye la cobertura dental y cómo sumarla al beneficio del equipo.
+- [Cuánto tiempo pierde realmente su empresa gestionando el seguro complementario de salud](https://www.redagrupa.cl/blog/tiempo-gestion-seguro-complementario-salud-empresa): El costo oculto en horas de RR.HH. y cómo externalizar la gestión.
+
 ## Servicios principales
 
 - Asesoría en seguros complementarios de salud para empresas

@@ -163,7 +163,7 @@ export default function HomeContent({ latestPosts = [] }: { latestPosts?: Latest
               rel="noopener noreferrer"
               className="lg:hidden inline-flex items-center text-xs text-white hover:text-white transition-colors mb-3"
             >
-              <span className="bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">Socio Estratégico: <span className="font-semibold text-white">EQUOS Seguros</span></span>
+              <span className="bg-black/50 backdrop-blur-sm rounded-full px-3 py-1">Socio Estratégico: <span className="font-semibold text-white">EQUOS Seguros</span></span>
             </a>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal leading-[1.1] text-white mb-2">
               3 problemas que enfrentan las pymes con sus seguros

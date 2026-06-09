@@ -70,7 +70,7 @@ export default function NotFound() {
           <p className="text-sm text-gray-500 pt-4">
             ¿Necesitas ayuda?{" "}
             <a
-              href="https://wa.me/56982414614"
+              href="https://wa.me/56982414614?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20complementario%20de%20salud%20para%20mi%20empresa"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#25D366] font-medium hover:underline"

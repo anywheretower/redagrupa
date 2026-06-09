@@ -37,6 +37,20 @@ Salud mental, maternidad, óptica, dental, prótesis, cobertura catastrófica y 
 
 ## Comparación de Seguro Complementario de Salud: coberturas, topes, deducibles y beneficios
 
+El siguiente cuadro resume las diferencias clave entre las tres aseguradoras comparadas. Más abajo se detalla cada una:
+
+| Aspecto | SURA | Zurich | BICE |
+| --- | --- | --- | --- |
+| Enfoque | Equilibrio y simplicidad de uso | Mayor profundidad y amplitud de cobertura | Alto respaldo catastrófico + operación digital |
+| Deducible | Bajo | Competitivo (algo mayor que SURA) | El más exigente de los comparados |
+| Medicamentos | Genéricos 100% sin tope; marca con tope anual | Marca con tope amplio; genéricos 100% sin tope | Más fuerte en genéricos que en no genéricos |
+| Maternidad | Incluida | Especialmente sólida (parto, cesárea, complicaciones) | Incluida |
+| Salud mental | Incluida | Fuerte, con topes superiores | Incluida |
+| Catastrófico | Protección adicional al agotar el tope complementario | Incluye CAEC/GES y coberturas especiales | Respaldo catastrófico alto (su principal fortaleza) |
+| Preexistencias | Sí, salvo en catastrófico | Sí, salvo en catastrófico | Sí (con excepciones), salvo en catastrófico |
+
+> Las condiciones y cifras específicas dependen del plan y la fecha de cotización. En RedAgrupa las verificamos contra las pólizas vigentes de cada aseguradora antes de recomendar.
+
 ### SURA: equilibrio entre protección, claridad y buena experiencia de uso
 
 SURA presenta un esquema equilibrado para empresas que buscan una cobertura fácil de explicar y bien percibida por los colaboradores. Combina salud complementaria, salud catastrófica, dental y vida, con una estructura que favorece la comprensión del beneficio.
@@ -84,6 +98,8 @@ Zurich aparece como la opción más robusta en amplitud de beneficios, maternida
 ### Si la prioridad es fortalecer la capa catastrófica
 
 BICE toma ventaja cuando la empresa quiere mayor respaldo frente a eventos de alto costo y valora una estructura operativa más ágil.
+
+> **Fuente oficial:** las coberturas garantizadas por ley (GES/AUGE) y la protección financiera adicional para gastos catastróficos (CAEC) están reguladas por la [Superintendencia de Salud](https://www.superdesalud.gob.cl/). Conviene revisar ahí las definiciones y patologías vigentes antes de comparar planes.
 
 ## Conclusión
 

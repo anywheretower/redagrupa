@@ -143,17 +143,26 @@ export default function HeroCarousel() {
               <p className="text-base text-white leading-[1.3] max-w-2xl">
                 {slide.subtitle}
               </p>
-              <Button
-                variant="outline"
-                className="border-white text-white hover:bg-white/10 bg-transparent px-6 py-3 text-sm font-normal w-full"
-                asChild
-              >
-                {slide.ctaSecondary.isLink ? (
-                  <Link href={slide.ctaSecondary.href}>{slide.ctaSecondary.text}</Link>
-                ) : (
-                  <a href={slide.ctaSecondary.href}>{slide.ctaSecondary.text}</a>
-                )}
-              </Button>
+              <div className="flex flex-col gap-3">
+                <Button
+                  onClick={openModal}
+                  className="bg-white text-[#cc0033] hover:bg-gray-100 px-6 py-3 text-sm font-semibold w-full shadow-lg"
+                >
+                  {slide.ctaPrimary.text}
+                </Button>
+                <Button
+                  variant="outline"
+                  className="border-white text-white hover:bg-white/10 bg-transparent px-6 py-3 text-sm font-normal w-full"
+                  asChild
+                >
+                  {slide.ctaSecondary.isLink ? (
+                    <Link href={slide.ctaSecondary.href}>{slide.ctaSecondary.text}</Link>
+                  ) : (
+                    <a href={slide.ctaSecondary.href}>{slide.ctaSecondary.text}</a>
+                  )}
+                </Button>
+              </div>
+              <p className="text-xs text-white/90 pt-1">Te respondemos el mismo día hábil · Sin costo ni compromiso</p>
             </div>
           ))}
         </div>
@@ -198,6 +207,7 @@ export default function HeroCarousel() {
                     )}
                   </Button>
                 </div>
+                <p className="text-xs text-white/90 pt-1">Te respondemos el mismo día hábil · Sin costo ni compromiso</p>
               </div>
             ))}
           </div>
@@ -226,7 +236,7 @@ export default function HeroCarousel() {
           rel="noopener noreferrer"
           className="inline-flex items-center text-xs text-white hover:text-white transition-colors"
         >
-          <span className="bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">Socio Estratégico: <span className="font-semibold text-white">EQUOS Seguros</span></span>
+          <span className="bg-black/50 backdrop-blur-sm rounded-full px-3 py-1">Socio Estratégico: <span className="font-semibold text-white">EQUOS Seguros</span></span>
         </a>
         <a
           href="https://www.cmfchile.cl/institucional/mercados/entidad.php?auth=&send=&mercado=S&rut=77034194&grupo=&tipoentidad=CSJUR&vig=VI&row=AAAwU3AAWAAAWOdAAZ&control=svs&pestania=1"
@@ -235,7 +245,7 @@ export default function HeroCarousel() {
           aria-label="Ficha de CJW Seguros en la Comisión para el Mercado Financiero de Chile"
           className="inline-flex items-center text-xs text-white hover:text-white transition-colors"
         >
-          <span className="bg-white/20 backdrop-blur-sm rounded-full px-3 py-1">Socio Estratégico: <span className="font-semibold text-white">CJW Seguros</span></span>
+          <span className="bg-black/50 backdrop-blur-sm rounded-full px-3 py-1">Socio Estratégico: <span className="font-semibold text-white">CJW Seguros</span></span>
         </a>
         <div className="flex gap-2">
           {slides.map((_, i) => (
