@@ -59,6 +59,12 @@ const prunedBlogSlugs = [
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Fija la raíz del workspace a este proyecto. Sin esto, Next.js infiere la raíz
+  // a partir del package-lock.json de nora-v3 (padre) y termina tomando su
+  // middleware.ts, que falla al resolver "@/lib/supabase/middleware" (no existe acá).
+  turbopack: {
+    root: import.meta.dirname,
+  },
   typescript: {
     ignoreBuildErrors: true,
   },
