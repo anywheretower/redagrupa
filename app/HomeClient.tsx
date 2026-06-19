@@ -101,8 +101,10 @@ function BlogCarousel({ posts }: { posts: LatestPost[] }) {
           <Link
             key={post.slug}
             href={`/blog/${post.slug}`}
+            aria-hidden={i === current ? undefined : true}
+            tabIndex={i === current ? undefined : -1}
             className={`group block bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 transition-all duration-500 ${
-              i === current ? "opacity-100 relative" : "opacity-0 absolute inset-0"
+              i === current ? "opacity-100 relative pointer-events-auto" : "opacity-0 absolute inset-0 pointer-events-none"
             }`}
           >
             <div className="relative aspect-[16/9] overflow-hidden">
