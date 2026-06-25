@@ -18,6 +18,27 @@ Sitio enfocado en captacion de clientes (marketing + formulario de contacto).
 - **Deploy:** Vercel (redagrupa.vercel.app)
 - **Generado inicialmente con:** v0.app
 
+## Protocolo de imagenes del blog (OBLIGATORIO)
+
+**TODA imagen hero de un articulo del blog se genera con FLUX.2 [klein] — NUNCA con otro motor**
+(ni gpt-image-2, ni stock, ni v0). klein corre en ComfyUI sobre PC-2 (`http://192.168.1.26:8188`).
+
+- **Motor:** FLUX.2 klein **4B** (Apache 2.0, comercial-safe). El 9B es non-commercial → NO usar para
+  entregables del cliente salvo decision explicita.
+- **Herramienta canonica:** `node scripts/gen-blog-hero-klein.mjs --slug=<slug> --prompt-file=<txt> --seed=<N>`
+  (autocontenido: solo `sharp` + ComfyUI HTTP). Genera 16:9 **1536×864 webp q82**.
+- **Gate visual OBLIGATORIO:** sin `--final` escribe a `tmp-blog-hero/` para revisar con los ojos.
+  Recien tras aprobar, correr con `--final` (escribe a `public/blog/<slug>.webp` **y**
+  `blog-content/images/<slug>.webp` — las dos rutas, igual que el resto de los heros). Max 2 reseeds.
+- **Reproducibilidad:** el par (prompt, seed) regenera el mismo hero. El prompt se persiste en
+  `scripts/hero-prompts/<slug>.txt`; el seed se registra en el INDICE o el commit.
+- **Estilo de marca:** rojo `#cc0033` + blanco. Dos familias visuales ya usadas: (a) ejecutivo sobre
+  fondo rojo con formas abstractas; (b) iconos/objetos 3D glossy rojos sobre fondo claro con ondas
+  rojas (ej. "cobertura de remedios", "corredor vs directo"). klein es DEBIL en texto → pedir
+  "no text, no letters" salvo un simbolo simple (ej. un "?"); nunca depender de texto renderizado.
+- **Pre-requisito:** PC-2 encendido y ComfyUI accesible. Si esta offline/gpu busy, esperar — no caer
+  a otro motor (rompe el protocolo).
+
 ## Estructura del Proyecto
 ```
 app/
