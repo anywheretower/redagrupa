@@ -119,6 +119,28 @@ const nextConfig = {
         ],
       },
       {
+        // Los logos de /logo se referencian DESDE AFUERA (el sistema de mailing
+        // del cliente), así que necesitan dos cosas que el resto del sitio no:
+        //
+        // 1. `Cross-Origin-Resource-Policy: cross-origin`. La regla global de
+        //    arriba manda `same-origin`, que es exactamente la cabecera que le
+        //    dice al navegador "no permitas que otro origen cargue esto". Un
+        //    correo se renderiza en un origen ajeno (o en uno opaco, en las apps
+        //    nativas), así que con `same-origin` la imagen queda bloqueada SIN
+        //    error visible: el destinatario ve un hueco. Esta regla va después
+        //    de la global a propósito — la posterior gana.
+        //
+        // 2. Cache de 7 días, NO `immutable` como /images. La URL es la interfaz
+        //    pública con un tercero: si algún día cambia el logo sin cambiar de
+        //    nombre, con `immutable` quedaría congelado un año en los proxies de
+        //    Gmail y en cada navegador. Con 7 días se propaga solo.
+        source: "/logo/:path*",
+        headers: [
+          { key: "Cross-Origin-Resource-Policy", value: "cross-origin" },
+          { key: "Cache-Control", value: "public, max-age=604800, stale-while-revalidate=2592000" },
+        ],
+      },
+      {
         source: "/_next/static/:path*",
         headers: [
           { key: "Cache-Control", value: "public, max-age=31536000, immutable" },

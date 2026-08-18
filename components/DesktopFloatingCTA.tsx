@@ -1,5 +1,6 @@
 "use client"
 
+import { usePathname } from "next/navigation"
 import { Mail } from "lucide-react"
 import { useContactModal } from "@/components/ContactModalProvider"
 
@@ -10,13 +11,22 @@ import { useContactModal } from "@/components/ContactModalProvider"
 // lo mismo sin fijar un ancho a mano: la más larga manda.
 // Solo lg+ — en móvil la conversión la cubre StickyMobileCTA, que abre este mismo
 // modal. No se solapa con el sidebar de redes (right-6 top-1/2).
-// Montado una sola vez en el layout → aparece en todas las páginas.
+// Montado una sola vez en el layout → aparece en todas las páginas, salvo las
+// de EXCLUDED_PATH_PREFIXES: /logo es una página de recursos para el cliente y
+// su proveedor de mailing, no una landing — ahí las píldoras solo tapan
+// contenido. Mismo mecanismo que ExitIntentPopup.
+const EXCLUDED_PATH_PREFIXES = ["/logo"]
 
 const PILL =
   "inline-flex items-center justify-center gap-2 rounded-full bg-[#333333] px-5 py-3 text-sm font-semibold text-white shadow-lg transition-colors hover:bg-[#1a1a1a] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#cc0033]"
 
 export default function DesktopFloatingCTA() {
   const { openContactModal } = useContactModal()
+  const pathname = usePathname()
+
+  if (pathname && EXCLUDED_PATH_PREFIXES.some((p) => pathname === p || pathname.startsWith(`${p}/`))) {
+    return null
+  }
 
   return (
     <div className="hidden lg:flex fixed bottom-6 right-6 z-40 flex-col items-stretch gap-3">
