@@ -207,7 +207,7 @@ export default function ExitIntentPopup() {
           </div>
 
           <a
-            href="https://wa.me/56982414614?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20complementario%20para%20mi%20empresa"
+            href="https://wa.me/56967479789?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20complementario%20para%20mi%20empresa"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => handleCTA("whatsapp")}

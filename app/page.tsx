@@ -242,7 +242,7 @@ export default function HomePage() {
             <Linkedin className="w-4 h-4 text-white" strokeWidth={1.5} />
           </Link>
           <a
-            href="https://wa.me/56982414614?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20complementario%20de%20salud%20para%20mi%20empresa"
+            href="https://wa.me/56967479789?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20complementario%20de%20salud%20para%20mi%20empresa"
             target="_blank"
             rel="noopener noreferrer"
             className="w-11 h-11 rounded-full bg-[#25D366] hover:bg-[#1DA851] flex items-center justify-center shadow-lg transition-colors"
@@ -357,7 +357,7 @@ export default function HomePage() {
                     Solicitar Asesoría Gratis
                   </OpenContactModalButton>
                   <a
-                    href="https://wa.me/56982414614?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20complementario%20de%20salud%20para%20mi%20empresa"
+                    href="https://wa.me/56967479789?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20complementario%20de%20salud%20para%20mi%20empresa"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 inline-flex items-center justify-center gap-2 bg-[#25D366] text-white hover:bg-[#1DA851] px-6 py-3 rounded-lg text-sm font-medium transition-colors"
