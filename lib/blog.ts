@@ -88,8 +88,13 @@ function parseMarkdown(slug: string): {
     for (let i = titleIndex + 1; i < lines.length; i++) {
       const line = lines[i].trim()
       if (line && !line.startsWith("#") && !line.startsWith("!") && !line.startsWith("<!--")) {
-        excerpt = line.slice(0, 160)
-        if (line.length > 160) excerpt += "..."
+        // El extracto es texto plano: sin negritas, cursivas ni links de markdown.
+        const plano = line
+          .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+          .replace(/(\*\*|__)(.+?)\1/g, "$2")
+          .replace(/(\*|_)(.+?)\1/g, "$2")
+        excerpt = plano.slice(0, 160)
+        if (plano.length > 160) excerpt += "..."
         break
       }
     }

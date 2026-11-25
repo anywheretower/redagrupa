@@ -95,6 +95,15 @@ const mdComponents: Components = {
       </a>
     )
   },
+  img: ({ src, alt }) => (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={typeof src === "string" ? src : ""}
+      alt={alt ?? ""}
+      loading="lazy"
+      className="my-6 w-full h-auto rounded-lg border border-gray-200"
+    />
+  ),
   strong: ({ children }) => (
     <strong className="font-semibold text-[#333333]">{children}</strong>
   ),
